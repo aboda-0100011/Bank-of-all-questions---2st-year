@@ -1,1 +1,264 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "webprog_0001",
+      "q": "What is a Web Page?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "A document written in the HTML language"},
+        {"i": "2", "x": "A machine that hosts website files"},
+        {"i": "3", "x": "A browser used to view the internet"},
+        {"i": "4", "x": "A set of rules for communication"}
+      ],
+      "a": "1",
+      "e": "A Web Page is a World Wide Web document written in HTML form, used to build a website."
+    },
+    {
+      "id": "webprog_0002",
+      "q": "What is a Website?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "A single HTML file in a browser"},
+        {"i": "2", "x": "A collection of linked web pages"},
+        {"i": "3", "x": "A protocol for transferring files"},
+        {"i": "4", "x": "A software tool for writing code"}
+      ],
+      "a": "2",
+      "e": "A Website is a collection of inter-linked web pages that contains text, graphics, and multimedia elements, stored on a web server."
+    },
+    {
+      "id": "webprog_0003",
+      "q": "What is Hypertext?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "Text that contains links to other texts"},
+        {"i": "2", "x": "Text that is always written in bold"},
+        {"i": "3", "x": "A language used to program servers"},
+        {"i": "4", "x": "A common format used for images"}
+      ],
+      "a": "1",
+      "e": "Hypertext is a text which contains links to other texts, and is therefore usually non-linear."
+    },
+    {
+      "id": "webprog_0004",
+      "q": "What is a Protocol?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "Rules used to connect applications"},
+        {"i": "2", "x": "A browser used to view websites"},
+        {"i": "3", "x": "A tag placed inside an HTML page"},
+        {"i": "4", "x": "A template used to design pages"}
+      ],
+      "a": "1",
+      "e": "A protocol is a set of rules that is used to communicate applications to each other, such as HTTP, TCP/IP, FTP, and E-mail."
+    },
+    {
+      "id": "webprog_0005",
+      "q": "What is a Web Application?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "A static file with no interaction"},
+        {"i": "2", "x": "Web pages generated per user request"},
+        {"i": "3", "x": "A device connected to the internet"},
+        {"i": "4", "x": "A type of network address online"}
+      ],
+      "a": "2",
+      "e": "A web application consists of a set of web pages that are generated in response to user requests, such as search engines and online stores."
+    },
+    {
+      "id": "webprog_0006",
+      "q": "A page whose content stays exactly the same every time any user views it, and does not respond to user input, is best described as:",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "A dynamic web page"},
+        {"i": "2", "x": "A static web page"},
+        {"i": "3", "x": "A hosting server"},
+        {"i": "4", "x": "A web application"}
+      ],
+      "a": "2",
+      "e": "A static web page is an HTML document that is the same each time it's viewed and does not change in response to user input."
+    },
+    {
+      "id": "webprog_0007",
+      "q": "A page that contains server controls such as labels, text boxes, and buttons, and whose content is regenerated each time it is requested, is:",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "A static web page"},
+        {"i": "2", "x": "A dynamic web page"},
+        {"i": "3", "x": "A hypertext link"},
+        {"i": "4", "x": "A host address"}
+      ],
+      "a": "2",
+      "e": "Dynamic web pages are pages whose content is dynamically regenerated each time the page is requested, and they contain server controls that users interact with."
+    },
+    {
+      "id": "webprog_0008",
+      "q": "If two different users view the same web page and both see identical content with no change over time, this page is:",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "A dynamic page"},
+        {"i": "2", "x": "A static page"},
+        {"i": "3", "x": "A protocol type"},
+        {"i": "4", "x": "A server type"}
+      ],
+      "a": "2",
+      "e": "Everyone who views a static web page sees exactly the same content, since it doesn't change in response to user input."
+    },
+    {
+      "id": "webprog_0009",
+      "q": "What is the purpose of the bgcolor attribute in the body tag?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "To set the font size of text"},
+        {"i": "2", "x": "To set the background color"},
+        {"i": "3", "x": "To add a link to the page"},
+        {"i": "4", "x": "To align text on the page"}
+      ],
+      "a": "2",
+      "e": "The bgcolor attribute is used to add color to the background of the site, as in <body bgcolor=\"yellow\">."
+    },
+    {
+      "id": "webprog_0010",
+      "q": "What is the purpose of the background attribute in the body tag?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "To show an image as background"},
+        {"i": "2", "x": "To set the color of the text"},
+        {"i": "3", "x": "To insert a break in a line"},
+        {"i": "4", "x": "To underline a word or phrase"}
+      ],
+      "a": "1",
+      "e": "The background attribute is used to add an image to the site's background, as in <body background=\"logo.gif\">."
+    },
+    {
+      "id": "webprog_0011",
+      "q": "What is the purpose of the ALIGN attribute when used with the paragraph tag?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "To change the color of the text"},
+        {"i": "2", "x": "To align the paragraph on the page"},
+        {"i": "3", "x": "To start a brand new paragraph"},
+        {"i": "4", "x": "To underline the paragraph text"}
+      ],
+      "a": "2",
+      "e": "The ALIGN attribute is used to align the paragraph on the web page, with possible values CENTER, LEFT, and RIGHT."
+    },
+    {
+      "id": "webprog_0012",
+      "q": "What is the purpose of the FACE attribute inside the Font tag?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "To set the font of the text"},
+        {"i": "2", "x": "To set the size of the text"},
+        {"i": "3", "x": "To set the color of the text"},
+        {"i": "4", "x": "To align the text on the page"}
+      ],
+      "a": "1",
+      "e": "The FACE attribute of the Font tag is used to set the font of the text."
+    },
+    {
+      "id": "webprog_0013",
+      "q": "Which tag would you use to make a word appear underlined?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "<i>"},
+        {"i": "2", "x": "<u>"},
+        {"i": "3", "x": "<s>"},
+        {"i": "4", "x": "<tt>"}
+      ],
+      "a": "2",
+      "e": "The <u> element is used to underline text."
+    },
+    {
+      "id": "webprog_0014",
+      "q": "Which tag would you use to make a word appear with a strikethrough?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "<sup>"},
+        {"i": "2", "x": "<sub>"},
+        {"i": "3", "x": "<s>"},
+        {"i": "4", "x": "<b>"}
+      ],
+      "a": "3",
+      "e": "The <s> element (or <strike>) is used to display text with a strikethrough."
+    },
+    {
+      "id": "webprog_0015",
+      "q": "Which tag would you use to display a number like 31st with the 'st' raised above the line?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "<sub>"},
+        {"i": "2", "x": "<sup>"},
+        {"i": "3", "x": "<tt>"},
+        {"i": "4", "x": "<u>"}
+      ],
+      "a": "2",
+      "e": "The <sup> element displays text as superscript, raised above the normal line, as in 31st."
+    },
+    {
+      "id": "webprog_0016",
+      "q": "Which tag would you use to display the '2' in H2O below the normal line?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "<sup>"},
+        {"i": "2", "x": "<i>"},
+        {"i": "3", "x": "<sub>"},
+        {"i": "4", "x": "<s>"}
+      ],
+      "a": "3",
+      "e": "The <sub> element displays text as subscript, lowered below the normal line, as in H2O."
+    },
+    {
+      "id": "webprog_0017",
+      "q": "Which tag would you use to display text in a monospaced (typewriter-style) font?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "<tt>"},
+        {"i": "2", "x": "<b>"},
+        {"i": "3", "x": "<em>"},
+        {"i": "4", "x": "<sup>"}
+      ],
+      "a": "1",
+      "e": "The <tt> element is used to display text in a monospaced font."
+    },
+    {
+      "id": "webprog_0018",
+      "q": "Given the URL http://www.wrox.com/index.html, what does the part 'http' represent?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "The host address"},
+        {"i": "2", "x": "The scheme"},
+        {"i": "3", "x": "The file path"},
+        {"i": "4", "x": "The IP address"}
+      ],
+      "a": "2",
+      "e": "In a URL, the part before '://' such as 'http' represents the scheme."
+    },
+    {
+      "id": "webprog_0019",
+      "q": "Given the URL http://www.wrox.com/index.html, what does 'www.wrox.com' represent?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "The scheme"},
+        {"i": "2", "x": "The file path"},
+        {"i": "3", "x": "The host address"},
+        {"i": "4", "x": "The protocol"}
+      ],
+      "a": "3",
+      "e": "In a URL, the part such as 'www.wrox.com' represents the host address."
+    },
+    {
+      "id": "webprog_0020",
+      "q": "Given the URL http://www.wrox.com/index.html, what does '/index.html' represent?",
+      "t": ["1"],
+      "c": [
+        {"i": "1", "x": "The scheme"},
+        {"i": "2", "x": "The host address"},
+        {"i": "3", "x": "The file path"},
+        {"i": "4", "x": "The IP number"}
+      ],
+      "a": "3",
+      "e": "In a URL, the last part such as '/index.html' represents the file path."
+    }
+  ]
+}
