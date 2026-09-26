@@ -1,0 +1,394 @@
+{
+  "qs": [
+    {
+      "id": "os_0001",
+      "q": "What is the main role of an Operating System in a computer system?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It controls the hardware and coordinates its use among programs"},
+        {"i": "2", "x": "It manages internet connectivity for the user"},
+        {"i": "3", "x": "It compiles the source code of application programs"},
+        {"i": "4", "x": "It supplies electrical power to the hardware"}
+      ],
+      "a": "1",
+      "e": "The operating system controls the hardware and coordinates its use among the application programs."
+    },
+    {
+      "id": "os_0002",
+      "q": "Which of the following provides basic computing resources such as the CPU, memory, and I/O devices?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Hardware"},
+        {"i": "2", "x": "Application programs"},
+        {"i": "3", "x": "The operating system"},
+        {"i": "4", "x": "System calls"}
+      ],
+      "a": "1",
+      "e": "Hardware provides the basic computing resources, while the operating system controls it and application programs use it."
+    },
+    {
+      "id": "os_0003",
+      "q": "What is the main function of application programs in a computer system?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "They define how resources are used to solve user problems"},
+        {"i": "2", "x": "They control the hardware directly at all times"},
+        {"i": "3", "x": "They allocate memory among running processes"},
+        {"i": "4", "x": "They initialize the system when it is powered on"}
+      ],
+      "a": "1",
+      "e": "Application programs define the ways in which resources are used to solve user problems, unlike the OS which controls the hardware."
+    },
+    {
+      "id": "os_0004",
+      "q": "When the operating system is viewed as a resource allocator, what is its main focus?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Deciding how resources are allocated among programs and users"},
+        {"i": "2", "x": "Preventing improper use of I/O devices by programs"},
+        {"i": "3", "x": "Compiling and running application source code"},
+        {"i": "4", "x": "Storing user files permanently on secondary storage"}
+      ],
+      "a": "1",
+      "e": "As a resource allocator, the OS acts as the manager of resources and decides how to allocate them to specific programs and users."
+    },
+    {
+      "id": "os_0005",
+      "q": "When the operating system is viewed as a control program, what is its main focus?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Deciding which programs receive more memory"},
+        {"i": "2", "x": "Controlling I/O devices and preventing improper use"},
+        {"i": "3", "x": "Scheduling which resources users can purchase"},
+        {"i": "4", "x": "Managing the physical wiring between devices"}
+      ],
+      "a": "2",
+      "e": "As a control program, the OS controls the I/O devices and manages the execution of user programs to prevent errors and improper use of the computer."
+    },
+    {
+      "id": "os_0006",
+      "q": "Which part of the operating system is the one program that runs at all times?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The kernel"},
+        {"i": "2", "x": "The system programs"},
+        {"i": "3", "x": "The application programs"},
+        {"i": "4", "x": "The bootstrap program"}
+      ],
+      "a": "1",
+      "e": "The operating system is made up of the kernel plus system programs, and the kernel is the one program running at all times."
+    },
+    {
+      "id": "os_0007",
+      "q": "Which of the following is NOT considered part of, or associated with, the operating system?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The kernel"},
+        {"i": "2", "x": "The system programs"},
+        {"i": "3", "x": "The application programs"},
+        {"i": "4", "x": "The interrupt handlers"}
+      ],
+      "a": "3",
+      "e": "The operating system consists of the kernel and system programs, while application programs are not associated with the operating system."
+    },
+    {
+      "id": "os_0008",
+      "q": "In a typical computer system organization, what connects the CPU, device controllers, and memory together?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The system bus"},
+        {"i": "2", "x": "The kernel"},
+        {"i": "3", "x": "The bootstrap program"},
+        {"i": "4", "x": "The interrupt vector"}
+      ],
+      "a": "1",
+      "e": "The CPU, disk controller, USB controller, graphics adapter, and memory are all connected through the system bus."
+    },
+    {
+      "id": "os_0009",
+      "q": "What is the main role of a device controller?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It controls a specific type of connected device"},
+        {"i": "2", "x": "It synchronizes access to shared memory"},
+        {"i": "3", "x": "It decodes instructions fetched by the CPU"},
+        {"i": "4", "x": "It initializes the system when powered on"}
+      ],
+      "a": "1",
+      "e": "Each device controller controls a specific type of devices, such as a disk controller for disks or a USB controller for USB devices."
+    },
+    {
+      "id": "os_0010",
+      "q": "What is the main role of the memory controller?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It synchronizes access to the shared memory"},
+        {"i": "2", "x": "It executes application program instructions"},
+        {"i": "3", "x": "It controls printers and other output devices"},
+        {"i": "4", "x": "It stores the interrupt vector permanently"}
+      ],
+      "a": "1",
+      "e": "The memory controller synchronizes access to the shared memory, while device controllers and the CPU can execute in parallel."
+    },
+    {
+      "id": "os_0011",
+      "q": "What is a bootstrap program?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A simple program stored in ROM or EEPROM"},
+        {"i": "2", "x": "A large program stored on the hard disk"},
+        {"i": "3", "x": "A user application stored in main memory"},
+        {"i": "4", "x": "A routine stored inside the interrupt vector"}
+      ],
+      "a": "1",
+      "e": "A bootstrap program is a simple program stored in ROM or EEPROM, also known as firmware."
+    },
+    {
+      "id": "os_0012",
+      "q": "What does the bootstrap program do when the computer is powered up or rebooted?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It initializes the system and loads the kernel into memory"},
+        {"i": "2", "x": "It manages user files stored on secondary storage"},
+        {"i": "3", "x": "It allocates CPU time among running processes"},
+        {"i": "4", "x": "It handles hardware interrupts during normal operation"}
+      ],
+      "a": "1",
+      "e": "The bootstrap program initializes all aspects of the system, then locates the kernel, loads it into memory, and starts its execution."
+    },
+    {
+      "id": "os_0013",
+      "q": "What is another common name for the bootstrap program?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Firmware"},
+        {"i": "2", "x": "Middleware"},
+        {"i": "3", "x": "A device driver"},
+        {"i": "4", "x": "A system call"}
+      ],
+      "a": "1",
+      "e": "The bootstrap program is also known by the general term firmware."
+    },
+    {
+      "id": "os_0014",
+      "q": "What is an interrupt?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A signal that is generated when some event occurs"},
+        {"i": "2", "x": "A type of nonvolatile secondary storage device"},
+        {"i": "3", "x": "A fixed memory address used by all programs"},
+        {"i": "4", "x": "A data structure used to store user files"}
+      ],
+      "a": "1",
+      "e": "An interrupt is a signal that is generated when some event occurs, and each computer architecture has a predefined set of them."
+    },
+    {
+      "id": "os_0015",
+      "q": "A software-generated interrupt that occurs by executing a system call is also known as:",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A trap"},
+        {"i": "2", "x": "A bootstrap"},
+        {"i": "3", "x": "A handler"},
+        {"i": "4", "x": "A controller"}
+      ],
+      "a": "1",
+      "e": "A software-generated interrupt occurs by executing a system call, and is also called a trap."
+    },
+    {
+      "id": "os_0016",
+      "q": "What distinguishes a hardware-generated interrupt from a software-generated interrupt?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "A hardware interrupt sends a signal to the CPU, a software one runs a system call"},
+        {"i": "2", "x": "A hardware interrupt runs a system call, a software one sends a CPU signal"},
+        {"i": "3", "x": "A hardware interrupt only occurs during bootstrapping of the system"},
+        {"i": "4", "x": "A software interrupt only occurs when the system is powered off"}
+      ],
+      "a": "1",
+      "e": "A hardware-generated interrupt occurs by sending a signal to the CPU, while a software-generated interrupt (a trap) occurs by executing a system call."
+    },
+    {
+      "id": "os_0017",
+      "q": "What is stored in the interrupt vector?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The addresses of the interrupt service routines"},
+        {"i": "2", "x": "The contents of all CPU registers"},
+        {"i": "3", "x": "The list of currently running application programs"},
+        {"i": "4", "x": "The data currently held in the system cache"}
+      ],
+      "a": "1",
+      "e": "The interrupt vector is stored in low memory and holds the addresses of the interrupt service routines (interrupt handlers)."
+    },
+    {
+      "id": "os_0018",
+      "q": "When an interrupt occurs, which component is responsible for handling it?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The interrupt service routine for that interrupt"},
+        {"i": "2", "x": "The bootstrap program stored in ROM"},
+        {"i": "3", "x": "The memory controller of the system"},
+        {"i": "4", "x": "The device controller of any connected device"}
+      ],
+      "a": "1",
+      "e": "Each interrupt has a corresponding service routine (or handler) that must be executed when that interrupt occurs."
+    },
+    {
+      "id": "os_0019",
+      "q": "Which of the following best describes ROM?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A storage type whose content cannot be changed"},
+        {"i": "2", "x": "A storage type that can be changed but not often"},
+        {"i": "3", "x": "A volatile storage type used for running programs"},
+        {"i": "4", "x": "A storage type used only for tertiary archiving"}
+      ],
+      "a": "1",
+      "e": "ROM cannot be changed, unlike EEPROM which can be changed but not frequently."
+    },
+    {
+      "id": "os_0020",
+      "q": "Which of the following best describes EEPROM?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A storage type whose content can never change"},
+        {"i": "2", "x": "A storage type that can be changed but not often"},
+        {"i": "3", "x": "A volatile storage type used for running programs"},
+        {"i": "4", "x": "A high-speed cache used to hold recent data"}
+      ],
+      "a": "2",
+      "e": "EEPROM can be changed but not frequently, unlike ROM which cannot be changed at all."
+    },
+    {
+      "id": "os_0021",
+      "q": "What does the CPU's load instruction do?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It moves a word from RAM to a CPU register"},
+        {"i": "2", "x": "It moves a word from a CPU register to RAM"},
+        {"i": "3", "x": "It moves data from disk directly to cache"},
+        {"i": "4", "x": "It moves data between two locations in RAM"}
+      ],
+      "a": "1",
+      "e": "The load instruction moves a word from RAM to a CPU register."
+    },
+    {
+      "id": "os_0022",
+      "q": "What does the CPU's store instruction do?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It moves a word from RAM to a CPU register"},
+        {"i": "2", "x": "It moves the content of a CPU register to RAM"},
+        {"i": "3", "x": "It moves data from disk directly into RAM"},
+        {"i": "4", "x": "It initializes the CPU registers at startup"}
+      ],
+      "a": "2",
+      "e": "The store instruction moves the content of a CPU register to RAM."
+    },
+    {
+      "id": "os_0023",
+      "q": "What is the correct order of the three main stages of the instruction execution cycle?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Fetch, then Decode, then Execute"},
+        {"i": "2", "x": "Decode, then Fetch, then Execute"},
+        {"i": "3", "x": "Execute, then Fetch, then Decode"},
+        {"i": "4", "x": "Decode, then Execute, then Fetch"}
+      ],
+      "a": "1",
+      "e": "The instruction execution cycle proceeds as Fetch, then Decode, then Execute."
+    },
+    {
+      "id": "os_0024",
+      "q": "What happens during the Fetch stage of the instruction execution cycle?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The instruction is retrieved and stored in the instruction register"},
+        {"i": "2", "x": "The instruction's operands are stored back in memory"},
+        {"i": "3", "x": "The instruction is interpreted and its meaning is determined"},
+        {"i": "4", "x": "The system is initialized and the kernel is located"}
+      ],
+      "a": "1",
+      "e": "In the Fetch stage, the instruction is fetched from memory and stored in the CPU's instruction register."
+    },
+    {
+      "id": "os_0025",
+      "q": "What happens during the Decode stage of the instruction execution cycle?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "The instruction is interpreted and its operands may be fetched into registers"},
+        {"i": "2", "x": "The instruction is retrieved from memory for the first time"},
+        {"i": "3", "x": "The final result is stored back into main memory"},
+        {"i": "4", "x": "The bootstrap program loads the kernel into memory"}
+      ],
+      "a": "1",
+      "e": "In the Decode stage, the instruction is decoded, which may require fetching operands from memory and storing them in CPU internal registers."
+    },
+    {
+      "id": "os_0026",
+      "q": "Why do most computer systems need secondary storage in addition to main memory?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Because main memory is volatile and often too small"},
+        {"i": "2", "x": "Because main memory cannot execute any instructions"},
+        {"i": "3", "x": "Because main memory cannot be reached by the CPU"},
+        {"i": "4", "x": "Because main memory is slower than a hard disk"}
+      ],
+      "a": "1",
+      "e": "RAM is usually too small to store all needed programs and data, and it is volatile, losing its contents when power is off, so secondary storage is needed."
+    },
+    {
+      "id": "os_0027",
+      "q": "In the storage hierarchy, which type of storage generally has the smallest capacity but the fastest access time?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Registers"},
+        {"i": "2", "x": "Magnetic tapes"},
+        {"i": "3", "x": "Hard-disk drives"},
+        {"i": "4", "x": "Optical disks"}
+      ],
+      "a": "1",
+      "e": "In the storage hierarchy, registers sit at the top with the smallest capacity and fastest access time, while tapes sit at the bottom with the largest capacity and slowest access time."
+    },
+    {
+      "id": "os_0028",
+      "q": "Which of the following is classified as tertiary storage in the storage hierarchy?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Magnetic tapes"},
+        {"i": "2", "x": "CPU registers"},
+        {"i": "3", "x": "The system cache"},
+        {"i": "4", "x": "The main memory"}
+      ],
+      "a": "1",
+      "e": "Optical disks and magnetic tapes are classified as tertiary storage, while registers, cache, and main memory are primary storage."
+    },
+    {
+      "id": "os_0029",
+      "q": "What is the main purpose of caching in a computer system?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "To hold a copy of recently-accessed data for faster access"},
+        {"i": "2", "x": "To permanently store all of the user's files and data"},
+        {"i": "3", "x": "To increase the total storage capacity of the disk"},
+        {"i": "4", "x": "To control the input and output devices directly"}
+      ],
+      "a": "1",
+      "e": "Caching refers to the use of high-speed memory to hold a copy of recently-accessed data, assuming it will be needed again soon."
+    },
+    {
+      "id": "os_0030",
+      "q": "What does cache coherency ensure in a computer system?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "An update to cached data is reflected in other copies immediately"},
+        {"i": "2", "x": "All secondary storage devices share the same physical address"},
+        {"i": "3", "x": "The bootstrap program always runs before the kernel loads"},
+        {"i": "4", "x": "Every interrupt is handled by exactly one device controller"}
+      ],
+      "a": "1",
+      "e": "Cache coherency ensures that an update to some data in a cache is reflected immediately in other caches containing a copy of that data."
+    }
+  ]
+}
