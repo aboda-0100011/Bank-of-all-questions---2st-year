@@ -1,1 +1,844 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "queue_0001",
+      "q": "Which principle governs how elements are inserted and removed in a queue?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "First-in, first-out"
+        },
+        {
+          "i": "2",
+          "x": "Last-in, first-out"
+        },
+        {
+          "i": "3",
+          "x": "Smallest value first"
+        },
+        {
+          "i": "4",
+          "x": "Random selection order"
+        }
+      ],
+      "a": "1",
+      "e": "A queue is a collection of objects inserted and removed according to the first-in, first-out (FIFO) principle."
+    },
+    {
+      "id": "queue_0002",
+      "q": "In a queue, where do new elements enter and from where are elements removed?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Enter at the back, removed from the front"
+        },
+        {
+          "i": "2",
+          "x": "Enter at the front, removed from the back"
+        },
+        {
+          "i": "3",
+          "x": "Enter and are removed both at the front"
+        },
+        {
+          "i": "4",
+          "x": "Enter and are removed both at the back"
+        }
+      ],
+      "a": "1",
+      "e": "Elements enter a queue at the back and are removed from the front."
+    },
+    {
+      "id": "queue_0003",
+      "q": "What is a deque?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A structure supporting insertion and removal at both ends"
+        },
+        {
+          "i": "2",
+          "x": "A queue that only supports removal at the front"
+        },
+        {
+          "i": "3",
+          "x": "A stack that only supports removal at the top"
+        },
+        {
+          "i": "4",
+          "x": "A fixed array that supports no insertion at all"
+        }
+      ],
+      "a": "1",
+      "e": "A deque is a double-ended queue, supporting insertion and deletion at both the front and the back."
+    },
+    {
+      "id": "queue_0004",
+      "q": "What does the enqueue(e) operation do on a queue Q?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Adds element e to the back of queue Q"
+        },
+        {
+          "i": "2",
+          "x": "Removes the first element of queue Q"
+        },
+        {
+          "i": "3",
+          "x": "Returns the front element of queue Q"
+        },
+        {
+          "i": "4",
+          "x": "Returns the number of elements in Q"
+        }
+      ],
+      "a": "1",
+      "e": "Q.enqueue(e) adds element e to the back of queue Q."
+    },
+    {
+      "id": "queue_0005",
+      "q": "What does the dequeue() operation do on a queue Q?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Adds a new element to the back of queue Q"
+        },
+        {
+          "i": "2",
+          "x": "Removes and returns the first element of Q"
+        },
+        {
+          "i": "3",
+          "x": "Returns the first element without removing it"
+        },
+        {
+          "i": "4",
+          "x": "Checks whether queue Q is currently empty"
+        }
+      ],
+      "a": "2",
+      "e": "Q.dequeue() removes and returns the first element from queue Q."
+    },
+    {
+      "id": "queue_0006",
+      "q": "What does the first() operation do on a queue Q?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Removes and returns the first element of Q"
+        },
+        {
+          "i": "2",
+          "x": "Adds a new element to the back of queue Q"
+        },
+        {
+          "i": "3",
+          "x": "Returns the front element without removing it"
+        },
+        {
+          "i": "4",
+          "x": "Returns the number of elements in Q"
+        }
+      ],
+      "a": "3",
+      "e": "Q.first() returns a reference to the element at the front of queue Q, without removing it."
+    },
+    {
+      "id": "queue_0007",
+      "q": "What does Q.is_empty() return for a queue Q?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "True if queue Q contains no elements at all"
+        },
+        {
+          "i": "2",
+          "x": "The total number of elements in queue Q"
+        },
+        {
+          "i": "3",
+          "x": "The front element currently stored in Q"
+        },
+        {
+          "i": "4",
+          "x": "True if queue Q has at least one element"
+        }
+      ],
+      "a": "1",
+      "e": "Q.is_empty() returns True if queue Q does not contain any elements."
+    },
+    {
+      "id": "queue_0008",
+      "q": "Given the following calls:\n\n```python\nQ = ArrayQueue()\nQ.enqueue(5)\nQ.enqueue(3)\n```\n\nWhat does len(Q) return at this point?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "2"
+        },
+        {
+          "i": "2",
+          "x": "1"
+        },
+        {
+          "i": "3",
+          "x": "3"
+        },
+        {
+          "i": "4",
+          "x": "0"
+        }
+      ],
+      "a": "1",
+      "e": "After enqueuing 5 and then 3, the queue holds two elements, so len(Q) returns 2."
+    },
+    {
+      "id": "queue_0009",
+      "q": "Given the following calls:\n\n```python\nQ = ArrayQueue()\nQ.enqueue(5)\nQ.enqueue(3)\nQ.dequeue()\n```\n\nWhat value does the Q.dequeue() call above return?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "5"
+        },
+        {
+          "i": "2",
+          "x": "3"
+        },
+        {
+          "i": "3",
+          "x": "8"
+        },
+        {
+          "i": "4",
+          "x": "error"
+        }
+      ],
+      "a": "1",
+      "e": "Since 5 was enqueued first, it sits at the front, so a FIFO dequeue() removes and returns 5 first."
+    },
+    {
+      "id": "queue_0010",
+      "q": "Given the following calls:\n\n```python\nQ = ArrayQueue()\nQ.enqueue(7)\nQ.enqueue(9)\n```\n\nWhat does Q.first() return at this point?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "7"
+        },
+        {
+          "i": "2",
+          "x": "9"
+        },
+        {
+          "i": "3",
+          "x": "16"
+        },
+        {
+          "i": "4",
+          "x": "error"
+        }
+      ],
+      "a": "1",
+      "e": "Since 7 was enqueued first, it sits at the front of the queue, so Q.first() returns 7 without removing it."
+    },
+    {
+      "id": "queue_0011",
+      "q": "Given this implementation:\n\n```python\n    def first(self):\n        \"\"\"Return (but do not remove) the element at the front of the queue.\n\n        Raise Empty exception if the queue is empty.\n        \"\"\"\n        if self.is_empty():\n            raise Empty('Queue is empty')\n        return self._data[self._front]\n\n    def dequeue(self):\n        \"\"\"Remove and return the first element of the queue (i.e., FIFO).\n\n        Raise Empty exception if the queue is empty.\n        \"\"\"\n        if self.is_empty():\n            raise Empty('Queue is empty')\n        answer = self._data[self._front]\n        self._data[self._front] = None                  # help garbage collection\n        self._front = (self._front + 1) % len(self._data)\n        self._size -= 1\n        return answer\n```\n\nWhat happens when dequeue() is called on an empty ArrayQueue?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "An Empty exception is raised"
+        },
+        {
+          "i": "2",
+          "x": "The method returns None silently"
+        },
+        {
+          "i": "3",
+          "x": "The method returns zero by default"
+        },
+        {
+          "i": "4",
+          "x": "The method waits until an item arrives"
+        }
+      ],
+      "a": "1",
+      "e": "The dequeue method checks is_empty() first, and if the queue is empty it raises an Empty exception."
+    },
+    {
+      "id": "queue_0012",
+      "q": "In a naive array-based queue implementation using a Python list, which list method call is used to dequeue an element?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "pop(0)"
+        },
+        {
+          "i": "2",
+          "x": "pop()"
+        },
+        {
+          "i": "3",
+          "x": "append(e)"
+        },
+        {
+          "i": "4",
+          "x": "insert(e)"
+        }
+      ],
+      "a": "1",
+      "e": "The naive approach enqueues with append(e) and uses pop(0) to remove the first element when dequeuing."
+    },
+    {
+      "id": "queue_0013",
+      "q": "Why is using pop(0) to dequeue from a Python list considered inefficient?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It shifts every remaining element one position left"
+        },
+        {
+          "i": "2",
+          "x": "It permanently deletes the entire underlying list"
+        },
+        {
+          "i": "3",
+          "x": "It always doubles the size of the list first"
+        },
+        {
+          "i": "4",
+          "x": "It converts the list into a different data type"
+        }
+      ],
+      "a": "1",
+      "e": "When pop(0) is called, a loop is executed to shift all remaining elements to the left, causing worst-case Θ(n) time."
+    },
+    {
+      "id": "queue_0014",
+      "q": "What solution avoids the inefficiency of calling pop(0) when dequeuing?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Replace the entry with None and track a front index"
+        },
+        {
+          "i": "2",
+          "x": "Convert the entire list into a linked list first"
+        },
+        {
+          "i": "3",
+          "x": "Sort the list before every dequeue operation"
+        },
+        {
+          "i": "4",
+          "x": "Always shrink the list to size zero after use"
+        }
+      ],
+      "a": "1",
+      "e": "The improved approach replaces the dequeued entry with None and maintains an explicit variable to store the index of the front element."
+    },
+    {
+      "id": "queue_0015",
+      "q": "What technique allows the front of a queue to drift rightward and lets its contents wrap around the end of the underlying array?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Using the array circularly"
+        },
+        {
+          "i": "2",
+          "x": "Doubling the array on every enqueue"
+        },
+        {
+          "i": "3",
+          "x": "Sorting the array after each dequeue"
+        },
+        {
+          "i": "4",
+          "x": "Storing the queue as a nested list"
+        }
+      ],
+      "a": "1",
+      "e": "Using an array circularly allows the front to drift rightward, with the contents wrapping around the end of the underlying array."
+    },
+    {
+      "id": "queue_0016",
+      "q": "In a circular array queue with underlying array length N, which formula is used to advance the front index f after a dequeue?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "f = (f + 1) % N"
+        },
+        {
+          "i": "2",
+          "x": "f = (f - 1) % N"
+        },
+        {
+          "i": "3",
+          "x": "f = f * 2 % N"
+        },
+        {
+          "i": "4",
+          "x": "f = N - f"
+        }
+      ],
+      "a": "1",
+      "e": "When dequeuing, the front index is advanced using f = (f + 1) % N, wrapping back to 0 once it passes N - 1."
+    },
+    {
+      "id": "queue_0017",
+      "q": "In a circular array of length 10, if the current front index is 9, what does f = (f + 1) % N evaluate to?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "0"
+        },
+        {
+          "i": "2",
+          "x": "10"
+        },
+        {
+          "i": "3",
+          "x": "9"
+        },
+        {
+          "i": "4",
+          "x": "1"
+        }
+      ],
+      "a": "1",
+      "e": "(9 + 1) % 10 evaluates to 0, since 10 divided by 10 leaves a remainder of 0, wrapping the index back to the start."
+    },
+    {
+      "id": "queue_0018",
+      "q": "Given this implementation:\n\n```python\nclass ArrayQueue:\n    \"\"\"FIFO queue implementation using a Python list as underlying storage.\"\"\"\n    DEFAULT_CAPACITY = 10           # moderate capacity for all new queues\n\n    def __init__(self):\n        \"\"\"Create an empty queue.\"\"\"\n        self._data = [None] * ArrayQueue.DEFAULT_CAPACITY\n        self._size = 0\n        self._front = 0\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the queue.\"\"\"\n        return self._size\n\n    def is_empty(self):\n        \"\"\"Return True if the queue is empty.\"\"\"\n        return self._size == 0\n```\n\nWhat does the instance variable self._size represent?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The current number of elements stored in the queue"
+        },
+        {
+          "i": "2",
+          "x": "The fixed length of the underlying list"
+        },
+        {
+          "i": "3",
+          "x": "The index of the front element in the list"
+        },
+        {
+          "i": "4",
+          "x": "The maximum capacity the queue can ever reach"
+        }
+      ],
+      "a": "1",
+      "e": "self._size is an integer representing the current number of elements stored in the queue, as opposed to the length of the data list."
+    },
+    {
+      "id": "queue_0019",
+      "q": "Given this implementation:\n\n```python\nclass ArrayQueue:\n    \"\"\"FIFO queue implementation using a Python list as underlying storage.\"\"\"\n    DEFAULT_CAPACITY = 10           # moderate capacity for all new queues\n\n    def __init__(self):\n        \"\"\"Create an empty queue.\"\"\"\n        self._data = [None] * ArrayQueue.DEFAULT_CAPACITY\n        self._size = 0\n        self._front = 0\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the queue.\"\"\"\n        return self._size\n\n    def is_empty(self):\n        \"\"\"Return True if the queue is empty.\"\"\"\n        return self._size == 0\n```\n\nWhat does the instance variable self._front represent?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The index within _data of the first element"
+        },
+        {
+          "i": "2",
+          "x": "The total number of elements in the queue"
+        },
+        {
+          "i": "3",
+          "x": "The fixed capacity of the underlying list"
+        },
+        {
+          "i": "4",
+          "x": "The index of the most recently added element"
+        }
+      ],
+      "a": "1",
+      "e": "self._front is an integer that represents the index within _data of the first element of the queue."
+    },
+    {
+      "id": "queue_0020",
+      "q": "Given this implementation:\n\n```python\n    def first(self):\n        \"\"\"Return (but do not remove) the element at the front of the queue.\n\n        Raise Empty exception if the queue is empty.\n        \"\"\"\n        if self.is_empty():\n            raise Empty('Queue is empty')\n        return self._data[self._front]\n\n    def dequeue(self):\n        \"\"\"Remove and return the first element of the queue (i.e., FIFO).\n\n        Raise Empty exception if the queue is empty.\n        \"\"\"\n        if self.is_empty():\n            raise Empty('Queue is empty')\n        answer = self._data[self._front]\n        self._data[self._front] = None                  # help garbage collection\n        self._front = (self._front + 1) % len(self._data)\n        self._size -= 1\n        return answer\n```\n\nWhat is stored at self._data[self._front] immediately after dequeue() successfully executes?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "None"
+        },
+        {
+          "i": "2",
+          "x": "The dequeued element itself"
+        },
+        {
+          "i": "3",
+          "x": "The value zero"
+        },
+        {
+          "i": "4",
+          "x": "An Empty exception object"
+        }
+      ],
+      "a": "1",
+      "e": "The dequeue method sets self._data[self._front] = None before advancing the front index, helping garbage collection."
+    },
+    {
+      "id": "queue_0021",
+      "q": "Given this implementation:\n\n```python\n    def enqueue(self, e):\n        \"\"\"Add an element to the back of queue.\"\"\"\n        if self._size == len(self._data):\n            self._resize(2 * len(self._data))    # double the array size\n        avail = (self._front + self._size) % len(self._data)\n        self._data[avail] = e\n        self._size += 1\n\n    def _resize(self, cap):               # we assume cap >= len(self)\n        \"\"\"Resize to a new list of capacity >= len(self).\"\"\"\n        old = self._data                      # keep track of existing list\n        self._data = [None] * cap             # allocate list with new capacity\n        walk = self._front\n        for k in range(self._size):           # only consider existing elements\n            self._data[k] = old[walk]           # intentionally shift indices\n            walk = (1 + walk) % len(old)        # use old size as modulus\n        self._front = 0                       # front has been realigned\n```\n\nWhat does the variable avail represent in the enqueue method?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The index where the new element will be placed"
+        },
+        {
+          "i": "2",
+          "x": "The number of elements currently in the queue"
+        },
+        {
+          "i": "3",
+          "x": "The index of the front element of the queue"
+        },
+        {
+          "i": "4",
+          "x": "The new capacity after doubling the array"
+        }
+      ],
+      "a": "1",
+      "e": "avail is computed as (self._front + self._size) % len(self._data), giving the index just past the current back of the queue where the new element is stored."
+    },
+    {
+      "id": "queue_0022",
+      "q": "Given this implementation:\n\n```python\n    def enqueue(self, e):\n        \"\"\"Add an element to the back of queue.\"\"\"\n        if self._size == len(self._data):\n            self._resize(2 * len(self._data))    # double the array size\n        avail = (self._front + self._size) % len(self._data)\n        self._data[avail] = e\n        self._size += 1\n\n    def _resize(self, cap):               # we assume cap >= len(self)\n        \"\"\"Resize to a new list of capacity >= len(self).\"\"\"\n        old = self._data                      # keep track of existing list\n        self._data = [None] * cap             # allocate list with new capacity\n        walk = self._front\n        for k in range(self._size):           # only consider existing elements\n            self._data[k] = old[walk]           # intentionally shift indices\n            walk = (1 + walk) % len(old)        # use old size as modulus\n        self._front = 0                       # front has been realigned\n```\n\nFor a queue with capacity 10, current size 3, and front index 5, at which index will the next enqueued element be placed?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "8"
+        },
+        {
+          "i": "2",
+          "x": "5"
+        },
+        {
+          "i": "3",
+          "x": "3"
+        },
+        {
+          "i": "4",
+          "x": "10"
+        }
+      ],
+      "a": "1",
+      "e": "avail = (front + size) % len(data) = (5 + 3) % 10 = 8, so the new element is placed at index 8."
+    },
+    {
+      "id": "queue_0023",
+      "q": "Given this implementation:\n\n```python\n    def enqueue(self, e):\n        \"\"\"Add an element to the back of queue.\"\"\"\n        if self._size == len(self._data):\n            self._resize(2 * len(self._data))    # double the array size\n        avail = (self._front + self._size) % len(self._data)\n        self._data[avail] = e\n        self._size += 1\n\n    def _resize(self, cap):               # we assume cap >= len(self)\n        \"\"\"Resize to a new list of capacity >= len(self).\"\"\"\n        old = self._data                      # keep track of existing list\n        self._data = [None] * cap             # allocate list with new capacity\n        walk = self._front\n        for k in range(self._size):           # only consider existing elements\n            self._data[k] = old[walk]           # intentionally shift indices\n            walk = (1 + walk) % len(old)        # use old size as modulus\n        self._front = 0                       # front has been realigned\n```\n\nUnder what condition does enqueue trigger a call to _resize?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "When the queue's size equals the length of _data"
+        },
+        {
+          "i": "2",
+          "x": "Every single time enqueue is called at all"
+        },
+        {
+          "i": "3",
+          "x": "When the front index reaches exactly zero"
+        },
+        {
+          "i": "4",
+          "x": "When the queue has never been used before"
+        }
+      ],
+      "a": "1",
+      "e": "enqueue checks if self._size == len(self._data), and only then calls _resize to double the array size."
+    },
+    {
+      "id": "queue_0024",
+      "q": "Given this implementation:\n\n```python\n    def enqueue(self, e):\n        \"\"\"Add an element to the back of queue.\"\"\"\n        if self._size == len(self._data):\n            self._resize(2 * len(self._data))    # double the array size\n        avail = (self._front + self._size) % len(self._data)\n        self._data[avail] = e\n        self._size += 1\n\n    def _resize(self, cap):               # we assume cap >= len(self)\n        \"\"\"Resize to a new list of capacity >= len(self).\"\"\"\n        old = self._data                      # keep track of existing list\n        self._data = [None] * cap             # allocate list with new capacity\n        walk = self._front\n        for k in range(self._size):           # only consider existing elements\n            self._data[k] = old[walk]           # intentionally shift indices\n            walk = (1 + walk) % len(old)        # use old size as modulus\n        self._front = 0                       # front has been realigned\n```\n\nWhen _resize is triggered from within enqueue, what happens to the capacity of the underlying list?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It is doubled"
+        },
+        {
+          "i": "2",
+          "x": "It is reduced by half"
+        },
+        {
+          "i": "3",
+          "x": "It stays exactly the same size"
+        },
+        {
+          "i": "4",
+          "x": "It is reset to the default capacity"
+        }
+      ],
+      "a": "1",
+      "e": "enqueue calls self._resize(2 * len(self._data)), doubling the capacity of the underlying list."
+    },
+    {
+      "id": "queue_0025",
+      "q": "Given this implementation:\n\n```python\n    def enqueue(self, e):\n        \"\"\"Add an element to the back of queue.\"\"\"\n        if self._size == len(self._data):\n            self._resize(2 * len(self._data))    # double the array size\n        avail = (self._front + self._size) % len(self._data)\n        self._data[avail] = e\n        self._size += 1\n\n    def _resize(self, cap):               # we assume cap >= len(self)\n        \"\"\"Resize to a new list of capacity >= len(self).\"\"\"\n        old = self._data                      # keep track of existing list\n        self._data = [None] * cap             # allocate list with new capacity\n        walk = self._front\n        for k in range(self._size):           # only consider existing elements\n            self._data[k] = old[walk]           # intentionally shift indices\n            walk = (1 + walk) % len(old)        # use old size as modulus\n        self._front = 0                       # front has been realigned\n```\n\nWhy does _resize reset self._front to 0 after copying the elements?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Because elements are copied starting at index 0 in the new list"
+        },
+        {
+          "i": "2",
+          "x": "Because the new list is always smaller than the old one"
+        },
+        {
+          "i": "3",
+          "x": "Because Python requires all lists to start at index 0"
+        },
+        {
+          "i": "4",
+          "x": "Because the queue is always emptied during a resize"
+        }
+      ],
+      "a": "1",
+      "e": "During _resize, the walk pointer copies existing elements starting from the old front into the new list beginning at index 0, so the front is realigned to 0."
+    },
+    {
+      "id": "queue_0026",
+      "q": "Under a robust shrinking strategy added to the dequeue method, when should the underlying array's capacity be reduced to half?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "When the elements stored fall below one fourth of capacity"
+        },
+        {
+          "i": "2",
+          "x": "When the elements stored exceed half of the capacity"
+        },
+        {
+          "i": "3",
+          "x": "Every time a single element is dequeued"
+        },
+        {
+          "i": "4",
+          "x": "Only when the queue becomes completely empty"
+        }
+      ],
+      "a": "1",
+      "e": "A robust approach reduces the array to half its current size whenever the number of stored elements falls below one fourth of its capacity."
+    },
+    {
+      "id": "queue_0027",
+      "q": "What is the running time of the enqueue and dequeue operations in the array-based queue implementation?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Amortized O(1)"
+        },
+        {
+          "i": "2",
+          "x": "Guaranteed worst-case O(1)"
+        },
+        {
+          "i": "3",
+          "x": "O(n) in every single case"
+        },
+        {
+          "i": "4",
+          "x": "O(log n) on average"
+        }
+      ],
+      "a": "1",
+      "e": "The O(1) bounds for enqueue and dequeue are amortized, due to the occasional resizing of the underlying array."
+    },
+    {
+      "id": "queue_0028",
+      "q": "What is the running time of the first(), is_empty(), and len() operations in the array-based queue implementation?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Worst-case O(1)"
+        },
+        {
+          "i": "2",
+          "x": "Amortized O(1) only"
+        },
+        {
+          "i": "3",
+          "x": "O(n) in the worst case"
+        },
+        {
+          "i": "4",
+          "x": "O(n log n) on average"
+        }
+      ],
+      "a": "1",
+      "e": "The first, is_empty, and len operations use constant time in the worst case."
+    },
+    {
+      "id": "queue_0029",
+      "q": "Why is collections.deque considered ideal for implementing queues in Python?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It offers efficient O(1) operations at both ends"
+        },
+        {
+          "i": "2",
+          "x": "It automatically sorts all inserted elements"
+        },
+        {
+          "i": "3",
+          "x": "It stores elements using key-value pairs only"
+        },
+        {
+          "i": "4",
+          "x": "It has an unlimited, non-resizable fixed capacity"
+        }
+      ],
+      "a": "1",
+      "e": "The collections.deque module is ideal for implementing queues thanks to its efficient O(1) time complexity for operations at both ends."
+    },
+    {
+      "id": "queue_0030",
+      "q": "Given this code:\n\n```python\nfrom collections import deque\n\nqueue = deque()\nqueue.append(\"Alice\")\nqueue.append(\"Bob\")\nqueue.append(\"Charlie\")\n```\n\nIf queue.popleft() is called right after these lines run, what does it return, and what remains in the queue afterward?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Returns 'Alice'; ['Bob', 'Charlie'] remain"
+        },
+        {
+          "i": "2",
+          "x": "Returns 'Charlie'; ['Alice', 'Bob'] remain"
+        },
+        {
+          "i": "3",
+          "x": "Returns 'Alice'; all three items remain"
+        },
+        {
+          "i": "4",
+          "x": "Returns 'Bob'; ['Alice', 'Charlie'] remain"
+        }
+      ],
+      "a": "1",
+      "e": "append() adds to the back, so 'Alice' is at the front; popleft() removes and returns the front element, leaving ['Bob', 'Charlie']."
+    }
+  ]
+}
