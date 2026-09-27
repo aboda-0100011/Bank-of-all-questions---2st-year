@@ -1,1 +1,844 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "datarep_0001",
+      "q": "How many bits make up one nibble?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "4 bits"
+        },
+        {
+          "i": "2",
+          "x": "8 bits"
+        },
+        {
+          "i": "3",
+          "x": "16 bits"
+        },
+        {
+          "i": "4",
+          "x": "2 bits"
+        }
+      ],
+      "a": "1",
+      "e": "A nibble is made up of 4 bits, which is half of a byte."
+    },
+    {
+      "id": "datarep_0002",
+      "q": "How many bits make up one byte?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "8 bits"
+        },
+        {
+          "i": "2",
+          "x": "4 bits"
+        },
+        {
+          "i": "3",
+          "x": "16 bits"
+        },
+        {
+          "i": "4",
+          "x": "2 bits"
+        }
+      ],
+      "a": "1",
+      "e": "A byte is made up of 8 bits, which is two nibbles."
+    },
+    {
+      "id": "datarep_0003",
+      "q": "What mainly determines how an image is represented digitally?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "What the output device is able to display"
+        },
+        {
+          "i": "2",
+          "x": "The size of the file on the hard disk"
+        },
+        {
+          "i": "3",
+          "x": "The programming language used to build it"
+        },
+        {
+          "i": "4",
+          "x": "The brand of the monitor showing the image"
+        }
+      ],
+      "a": "1",
+      "e": "Image representation depends on what the output device can display, such as a seven-segment display needing only 7 bits."
+    },
+    {
+      "id": "datarep_0004",
+      "q": "How many bits are used to represent each pixel in a binary (monochrome) image?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "1 bit"
+        },
+        {
+          "i": "2",
+          "x": "8 bits"
+        },
+        {
+          "i": "3",
+          "x": "24 bits"
+        },
+        {
+          "i": "4",
+          "x": "4 bits"
+        }
+      ],
+      "a": "1",
+      "e": "A binary image represents each pixel using a single bit."
+    },
+    {
+      "id": "datarep_0005",
+      "q": "Why is a binary image also called a monochrome image?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Because it contains no color information at all"
+        },
+        {
+          "i": "2",
+          "x": "Because it is always displayed in a blue tint"
+        },
+        {
+          "i": "3",
+          "x": "Because it requires no storage space to save"
+        },
+        {
+          "i": "4",
+          "x": "Because it is always compressed before saving"
+        }
+      ],
+      "a": "1",
+      "e": "A binary image is called a 1-bit monochrome image since it contains no color, only black or white per pixel."
+    },
+    {
+      "id": "datarep_0006",
+      "q": "How many bits are used to represent each pixel in a grayscale image?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "8 bits"
+        },
+        {
+          "i": "2",
+          "x": "1 bit"
+        },
+        {
+          "i": "3",
+          "x": "16 bits"
+        },
+        {
+          "i": "4",
+          "x": "24 bits"
+        }
+      ],
+      "a": "1",
+      "e": "A grayscale image represents each pixel using 8 bits, stored as one byte."
+    },
+    {
+      "id": "datarep_0007",
+      "q": "What is the value range of a single pixel in an 8-bit grayscale image?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "0 to 255"
+        },
+        {
+          "i": "2",
+          "x": "0 to 128"
+        },
+        {
+          "i": "3",
+          "x": "1 to 256"
+        },
+        {
+          "i": "4",
+          "x": "0 to 511"
+        }
+      ],
+      "a": "1",
+      "e": "Each pixel in a grayscale image has a gray value between 0 and 255."
+    },
+    {
+      "id": "datarep_0008",
+      "q": "Approximately how much storage does a 640x480 grayscale image require, given each pixel is stored as one byte?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "300 KB"
+        },
+        {
+          "i": "2",
+          "x": "100 KB"
+        },
+        {
+          "i": "3",
+          "x": "600 KB"
+        },
+        {
+          "i": "4",
+          "x": "921 KB"
+        }
+      ],
+      "a": "1",
+      "e": "A 640x480 grayscale image, with one byte per pixel, requires about 300 KB of storage."
+    },
+    {
+      "id": "datarep_0009",
+      "q": "How many bits are used to represent each pixel in a 24-bit color image?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "24 bits"
+        },
+        {
+          "i": "2",
+          "x": "8 bits"
+        },
+        {
+          "i": "3",
+          "x": "16 bits"
+        },
+        {
+          "i": "4",
+          "x": "32 bits"
+        }
+      ],
+      "a": "1",
+      "e": "A color image represents each pixel using 24 bits."
+    },
+    {
+      "id": "datarep_0010",
+      "q": "Which three color components together make up each pixel in a 24-bit color image?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Red, Green, and Blue"
+        },
+        {
+          "i": "2",
+          "x": "Red, Green, and Yellow"
+        },
+        {
+          "i": "3",
+          "x": "Cyan, Magenta, and Yellow"
+        },
+        {
+          "i": "4",
+          "x": "Black, White, and Gray"
+        }
+      ],
+      "a": "1",
+      "e": "Each pixel in a 24-bit color image is composed of three values: Red, Green, and Blue."
+    },
+    {
+      "id": "datarep_0011",
+      "q": "How many distinct colors can a 24-bit color image represent in total?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "16,777,216"
+        },
+        {
+          "i": "2",
+          "x": "65,536"
+        },
+        {
+          "i": "3",
+          "x": "256"
+        },
+        {
+          "i": "4",
+          "x": "4,294,967,296"
+        }
+      ],
+      "a": "1",
+      "e": "With 256 x 256 x 256 combinations of Red, Green, and Blue, a 24-bit color image supports 16,777,216 possible colors."
+    },
+    {
+      "id": "datarep_0012",
+      "q": "Approximately how much storage does an uncompressed 640x480 24-bit color image require?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "921.6 KB"
+        },
+        {
+          "i": "2",
+          "x": "300 KB"
+        },
+        {
+          "i": "3",
+          "x": "460.8 KB"
+        },
+        {
+          "i": "4",
+          "x": "1.8 MB"
+        }
+      ],
+      "a": "1",
+      "e": "A 640x480 24-bit color image without compression requires about 921.6 KB of storage."
+    },
+    {
+      "id": "datarep_0013",
+      "q": "Which two properties are used to characterize a simple sound wave?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Amplitude and frequency"
+        },
+        {
+          "i": "2",
+          "x": "Voltage and resistance"
+        },
+        {
+          "i": "3",
+          "x": "Wavelength and color"
+        },
+        {
+          "i": "4",
+          "x": "Pitch and volume level"
+        }
+      ],
+      "a": "1",
+      "e": "A simple sound wave can be characterized by its amplitude and frequency."
+    },
+    {
+      "id": "datarep_0014",
+      "q": "What happens to a sound as its amplitude increases?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It becomes louder"
+        },
+        {
+          "i": "2",
+          "x": "It becomes higher in pitch"
+        },
+        {
+          "i": "3",
+          "x": "It becomes quieter"
+        },
+        {
+          "i": "4",
+          "x": "It becomes shorter in duration"
+        }
+      ],
+      "a": "1",
+      "e": "The larger the amplitude, the louder the sound."
+    },
+    {
+      "id": "datarep_0015",
+      "q": "What happens to a sound's tone as its frequency increases?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The tone becomes higher"
+        },
+        {
+          "i": "2",
+          "x": "The tone becomes louder"
+        },
+        {
+          "i": "3",
+          "x": "The tone becomes lower"
+        },
+        {
+          "i": "4",
+          "x": "The tone disappears completely"
+        }
+      ],
+      "a": "1",
+      "e": "The higher the frequency, the higher the tone."
+    },
+    {
+      "id": "datarep_0016",
+      "q": "What is the process called in which the voltage of a sound wave is measured at frequent intervals?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Sampling"
+        },
+        {
+          "i": "2",
+          "x": "Decoding"
+        },
+        {
+          "i": "3",
+          "x": "Compression"
+        },
+        {
+          "i": "4",
+          "x": "Rendering"
+        }
+      ],
+      "a": "1",
+      "e": "Sampling is the process of measuring the voltage of a sound wave at frequent intervals."
+    },
+    {
+      "id": "datarep_0017",
+      "q": "What is the process called in which sampled sound values are stored as a binary code?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Decoding"
+        },
+        {
+          "i": "2",
+          "x": "Sampling"
+        },
+        {
+          "i": "3",
+          "x": "Framing"
+        },
+        {
+          "i": "4",
+          "x": "Rasterizing"
+        }
+      ],
+      "a": "1",
+      "e": "Decoding is the process of storing the sampled values as a binary code."
+    },
+    {
+      "id": "datarep_0018",
+      "q": "What is a typical sampling rate mentioned for digitizing a sound wave?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "48 kHz per second"
+        },
+        {
+          "i": "2",
+          "x": "48 Hz per second"
+        },
+        {
+          "i": "3",
+          "x": "480 kHz per second"
+        },
+        {
+          "i": "4",
+          "x": "4.8 kHz per second"
+        }
+      ],
+      "a": "1",
+      "e": "The voltage is typically sampled at 48 kHz per second when digitizing sound."
+    },
+    {
+      "id": "datarep_0019",
+      "q": "How many bits per sample are typically used when decoding a digitized sound wave?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "16 or 32 bits"
+        },
+        {
+          "i": "2",
+          "x": "1 or 2 bits"
+        },
+        {
+          "i": "3",
+          "x": "8 bits only"
+        },
+        {
+          "i": "4",
+          "x": "64 or 128 bits"
+        }
+      ],
+      "a": "1",
+      "e": "Decoding typically stores each sample as a binary code of 16 or 32 bits."
+    },
+    {
+      "id": "datarep_0020",
+      "q": "What is each individual image in a video sequence called?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A frame"
+        },
+        {
+          "i": "2",
+          "x": "A sample"
+        },
+        {
+          "i": "3",
+          "x": "A pixel"
+        },
+        {
+          "i": "4",
+          "x": "A byte"
+        }
+      ],
+      "a": "1",
+      "e": "A video is composed of a sequence of continuous images, and each image is called a frame."
+    },
+    {
+      "id": "datarep_0021",
+      "q": "Roughly how fast must frames be displayed for a video to appear as continuous movement?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Faster than 50 frames per second"
+        },
+        {
+          "i": "2",
+          "x": "Slower than 5 frames per second"
+        },
+        {
+          "i": "3",
+          "x": "Exactly 1 frame per second"
+        },
+        {
+          "i": "4",
+          "x": "Faster than 5,000 frames per second"
+        }
+      ],
+      "a": "1",
+      "e": "Each frame is flashed on the screen for a short time, faster than 50 per second, creating the impression of continuous movement."
+    },
+    {
+      "id": "datarep_0022",
+      "q": "Why is a standard code needed for representing characters digitally?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "To ensure the same code is used on every computer"
+        },
+        {
+          "i": "2",
+          "x": "To automatically make every file smaller"
+        },
+        {
+          "i": "3",
+          "x": "To allow only a single language to be typed"
+        },
+        {
+          "i": "4",
+          "x": "To increase the processing speed of the CPU"
+        }
+      ],
+      "a": "1",
+      "e": "A standard is needed to ensure that the code used on your computer is the same as the code used on any other computer."
+    },
+    {
+      "id": "datarep_0023",
+      "q": "What does the abbreviation ASCII stand for?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "American Standard Code for Information Interchange"
+        },
+        {
+          "i": "2",
+          "x": "Advanced System Code for Information Interchange"
+        },
+        {
+          "i": "3",
+          "x": "American Standard Code for Internal Indexing"
+        },
+        {
+          "i": "4",
+          "x": "Automated Symbol Coding for Information Input"
+        }
+      ],
+      "a": "1",
+      "e": "ASCII stands for American Standard Code for Information Interchange."
+    },
+    {
+      "id": "datarep_0024",
+      "q": "What does the abbreviation EBCDIC stand for?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Extended Binary Coded Decimal Interchange Code"
+        },
+        {
+          "i": "2",
+          "x": "Enhanced Binary Character Data Input Code"
+        },
+        {
+          "i": "3",
+          "x": "External Byte Coded Decimal Indexing Code"
+        },
+        {
+          "i": "4",
+          "x": "Extended Basic Compressed Digital Interchange"
+        }
+      ],
+      "a": "1",
+      "e": "EBCDIC stands for Extended Binary Coded Decimal Interchange Code."
+    },
+    {
+      "id": "datarep_0025",
+      "q": "Which company historically used the EBCDIC code on its mainframe computers?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "IBM"
+        },
+        {
+          "i": "2",
+          "x": "Microsoft"
+        },
+        {
+          "i": "3",
+          "x": "Apple"
+        },
+        {
+          "i": "4",
+          "x": "Intel"
+        }
+      ],
+      "a": "1",
+      "e": "EBCDIC was used in the past by IBM mainframes."
+    },
+    {
+      "id": "datarep_0026",
+      "q": "Why can't ASCII or EBCDIC represent character sets such as Chinese, Arabic, or Japanese?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "They are limited to only 256 possible combinations"
+        },
+        {
+          "i": "2",
+          "x": "These languages have no written characters at all"
+        },
+        {
+          "i": "3",
+          "x": "These codes only support numbers, not letters"
+        },
+        {
+          "i": "4",
+          "x": "These languages require sound instead of text"
+        }
+      ],
+      "a": "1",
+      "e": "ASCII and EBCDIC are limited to 256 possible combinations, so certain character sets like Chinese, Arabic, and Japanese cannot be represented using them."
+    },
+    {
+      "id": "datarep_0027",
+      "q": "In ASCII, what is the decimal value of the character 'A'?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "65"
+        },
+        {
+          "i": "2",
+          "x": "41"
+        },
+        {
+          "i": "3",
+          "x": "97"
+        },
+        {
+          "i": "4",
+          "x": "1"
+        }
+      ],
+      "a": "1",
+      "e": "The character 'A' has a value of 65 in decimal in ASCII."
+    },
+    {
+      "id": "datarep_0028",
+      "q": "In ASCII, how is the character 'A' (decimal value 65) stored in binary?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "01000001"
+        },
+        {
+          "i": "2",
+          "x": "01000010"
+        },
+        {
+          "i": "3",
+          "x": "01100001"
+        },
+        {
+          "i": "4",
+          "x": "00100001"
+        }
+      ],
+      "a": "1",
+      "e": "The character 'A', with decimal value 65, is stored in memory as the binary code 01000001."
+    },
+    {
+      "id": "datarep_0029",
+      "q": "How many bytes does Unicode use to represent each character?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "2 bytes"
+        },
+        {
+          "i": "2",
+          "x": "1 byte"
+        },
+        {
+          "i": "3",
+          "x": "4 bytes"
+        },
+        {
+          "i": "4",
+          "x": "8 bytes"
+        }
+      ],
+      "a": "1",
+      "e": "Unicode uses 2 bytes for each character."
+    },
+    {
+      "id": "datarep_0030",
+      "q": "What is the main disadvantage of Unicode compared to single-byte codes like ASCII?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It takes twice as much space to store characters"
+        },
+        {
+          "i": "2",
+          "x": "It cannot represent any special symbols at all"
+        },
+        {
+          "i": "3",
+          "x": "It only supports English letters and digits"
+        },
+        {
+          "i": "4",
+          "x": "It requires an internet connection to render"
+        }
+      ],
+      "a": "1",
+      "e": "Unicode's disadvantage is that it takes twice as much space to store the same number of characters as a single-byte code."
+    }
+  ]
+}
