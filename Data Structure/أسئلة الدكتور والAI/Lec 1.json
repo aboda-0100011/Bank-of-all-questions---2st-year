@@ -2,52 +2,112 @@
   "qs": [
     {
       "id": "ds_0001",
-      "q": "What is the main focus of the Data Structures topic in this course?",
-      "t": ["1", "easy"],
+      "q": "Which stack operation is also known as the 'Peek' operation?",
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Organizing and storing data for efficient access"},
-        {"i": "2", "x": "Writing correct syntax in a programming language"},
-        {"i": "3", "x": "Designing the physical layout of computer hardware"},
-        {"i": "4", "x": "Managing user permissions across a network"}
+        {
+          "i": "1",
+          "x": "top()"
+        },
+        {
+          "i": "2",
+          "x": "push()"
+        },
+        {
+          "i": "3",
+          "x": "pop()"
+        },
+        {
+          "i": "4",
+          "x": "is_empty()"
+        }
       ],
       "a": "1",
-      "e": "Data structures are techniques for organizing and storing data so that it can be accessed and modified efficiently."
+      "e": "The top operation, used to view the top element of the stack without removing it, is also called the Peek operation."
     },
     {
       "id": "ds_0002",
-      "q": "What is the main focus of the Algorithms topic in this course?",
-      "t": ["1", "easy"],
+      "q": "Besides browser history and undo functionality, which of the following is also listed as a real-world stack use case?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "Step-by-step procedures to solve problems or manipulate data"},
-        {"i": "2", "x": "Physical storage layouts of files on a hard disk"},
-        {"i": "3", "x": "Rules for formatting text inside a document"},
-        {"i": "4", "x": "Methods for connecting devices over a network"}
+        {
+          "i": "1",
+          "x": "Checking whether delimiters like parentheses are balanced"
+        },
+        {
+          "i": "2",
+          "x": "Sorting a collection of records by their size"
+        },
+        {
+          "i": "3",
+          "x": "Compressing files before they are stored"
+        },
+        {
+          "i": "4",
+          "x": "Indexing entries inside a database table"
+        }
       ],
       "a": "1",
-      "e": "Algorithms are step-by-step procedures used to solve problems or manipulate data."
+      "e": "A stack can be used to check whether parentheses, braces, and brackets in an expression are balanced."
     },
     {
       "id": "ds_0003",
-      "q": "Which of the following notations is used for asymptotic analysis of an algorithm's time and space complexity?",
-      "t": ["1", "medium"],
+      "q": "Which of the following relies on a stack to keep track of active function calls?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "Big-O notation"},
-        {"i": "2", "x": "HTML tag syntax"},
-        {"i": "3", "x": "SQL query syntax"},
-        {"i": "4", "x": "Regular expression syntax"}
+        {
+          "i": "1",
+          "x": "The function call stack"
+        },
+        {
+          "i": "2",
+          "x": "The browser bookmark list"
+        },
+        {
+          "i": "3",
+          "x": "The routing table of a router"
+        },
+        {
+          "i": "4",
+          "x": "The cache memory of the CPU"
+        }
       ],
       "a": "1",
-      "e": "Big-O, along with Omega and Theta, is used for asymptotic analysis to measure time and space complexity."
+      "e": "The function call stack is listed as a use case where a stack keeps track of active function calls."
     },
     {
       "id": "ds_0004",
       "q": "Which ordering principle does a queue data structure follow?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "First-in, first-out"},
-        {"i": "2", "x": "Last-in, first-out"},
-        {"i": "3", "x": "Random access order"},
-        {"i": "4", "x": "Priority-based order"}
+        {
+          "i": "1",
+          "x": "First-in, first-out"
+        },
+        {
+          "i": "2",
+          "x": "Last-in, first-out"
+        },
+        {
+          "i": "3",
+          "x": "Random access order"
+        },
+        {
+          "i": "4",
+          "x": "Priority-based order"
+        }
       ],
       "a": "1",
       "e": "A queue follows the first-in, first-out (FIFO) principle, in contrast to a stack's last-in, first-out (LIFO) principle."
@@ -55,12 +115,27 @@
     {
       "id": "ds_0005",
       "q": "What principle governs how elements are inserted and removed in a stack?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Last-in, first-out"},
-        {"i": "2", "x": "First-in, first-out"},
-        {"i": "3", "x": "Smallest value first"},
-        {"i": "4", "x": "Random selection order"}
+        {
+          "i": "1",
+          "x": "Last-in, first-out"
+        },
+        {
+          "i": "2",
+          "x": "First-in, first-out"
+        },
+        {
+          "i": "3",
+          "x": "Smallest value first"
+        },
+        {
+          "i": "4",
+          "x": "Random selection order"
+        }
       ],
       "a": "1",
       "e": "A stack is a collection of objects inserted and removed according to the last-in, first-out (LIFO) principle."
@@ -68,12 +143,27 @@
     {
       "id": "ds_0006",
       "q": "Which element can a user directly access or remove from a stack at any given time?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Only the most recently inserted element"},
-        {"i": "2", "x": "Any element at any position in the stack"},
-        {"i": "3", "x": "Only the very first element ever inserted"},
-        {"i": "4", "x": "Only elements stored at even positions"}
+        {
+          "i": "1",
+          "x": "Only the most recently inserted element"
+        },
+        {
+          "i": "2",
+          "x": "Any element at any position in the stack"
+        },
+        {
+          "i": "3",
+          "x": "Only the very first element ever inserted"
+        },
+        {
+          "i": "4",
+          "x": "Only elements stored at even positions"
+        }
       ],
       "a": "1",
       "e": "A user may only access or remove the most recently inserted object, which is the top of the stack."
@@ -81,12 +171,27 @@
     {
       "id": "ds_0007",
       "q": "What does it mean to describe stacks and queues as 'restricted access' structures?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "Only one item can be read or removed at a time"},
-        {"i": "2", "x": "Any number of items can be changed at once"},
-        {"i": "3", "x": "Items must always be stored in sorted order"},
-        {"i": "4", "x": "Items are limited to a single fixed data type"}
+        {
+          "i": "1",
+          "x": "Only one item can be read or removed at a time"
+        },
+        {
+          "i": "2",
+          "x": "Any number of items can be changed at once"
+        },
+        {
+          "i": "3",
+          "x": "Items must always be stored in sorted order"
+        },
+        {
+          "i": "4",
+          "x": "Items are limited to a single fixed data type"
+        }
       ],
       "a": "1",
       "e": "In a stack or queue, access is restricted: only one item can be read or removed at a time."
@@ -94,12 +199,27 @@
     {
       "id": "ds_0008",
       "q": "Why are stacks and queues considered more abstract than arrays?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "They are defined primarily by their interface"},
-        {"i": "2", "x": "They can only be built using linked lists"},
-        {"i": "3", "x": "They can never be implemented using an array"},
-        {"i": "4", "x": "They must always store a fixed number of items"}
+        {
+          "i": "1",
+          "x": "They are defined primarily by their interface"
+        },
+        {
+          "i": "2",
+          "x": "They can only be built using linked lists"
+        },
+        {
+          "i": "3",
+          "x": "They can never be implemented using an array"
+        },
+        {
+          "i": "4",
+          "x": "They must always store a fixed number of items"
+        }
       ],
       "a": "1",
       "e": "Stacks and queues are defined primarily by their interface; their underlying mechanism can be an array, a linked list, or something else."
@@ -107,12 +227,27 @@
     {
       "id": "ds_0009",
       "q": "What does the push(e) operation do on a stack S?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Adds element e to the top of stack S"},
-        {"i": "2", "x": "Removes the top element of stack S"},
-        {"i": "3", "x": "Returns the top element of stack S"},
-        {"i": "4", "x": "Returns the size of stack S"}
+        {
+          "i": "1",
+          "x": "Adds element e to the top of stack S"
+        },
+        {
+          "i": "2",
+          "x": "Removes the top element of stack S"
+        },
+        {
+          "i": "3",
+          "x": "Returns the top element of stack S"
+        },
+        {
+          "i": "4",
+          "x": "Returns the size of stack S"
+        }
       ],
       "a": "1",
       "e": "S.push(e) adds element e to the top of stack S."
@@ -120,12 +255,27 @@
     {
       "id": "ds_0010",
       "q": "What does the pop() operation do on a stack S?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Adds a new element to the top of stack S"},
-        {"i": "2", "x": "Removes and returns the top element of S"},
-        {"i": "3", "x": "Returns the top element without removing it"},
-        {"i": "4", "x": "Checks whether stack S is currently empty"}
+        {
+          "i": "1",
+          "x": "Adds a new element to the top of stack S"
+        },
+        {
+          "i": "2",
+          "x": "Removes and returns the top element of S"
+        },
+        {
+          "i": "3",
+          "x": "Returns the top element without removing it"
+        },
+        {
+          "i": "4",
+          "x": "Checks whether stack S is currently empty"
+        }
       ],
       "a": "2",
       "e": "S.pop() removes and returns the top element from stack S."
@@ -133,12 +283,27 @@
     {
       "id": "ds_0011",
       "q": "What does the top() operation do on a stack S?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Removes and returns the top element of S"},
-        {"i": "2", "x": "Adds a new element to the top of stack S"},
-        {"i": "3", "x": "Returns the top element without removing it"},
-        {"i": "4", "x": "Returns the number of elements in S"}
+        {
+          "i": "1",
+          "x": "Removes and returns the top element of S"
+        },
+        {
+          "i": "2",
+          "x": "Adds a new element to the top of stack S"
+        },
+        {
+          "i": "3",
+          "x": "Returns the top element without removing it"
+        },
+        {
+          "i": "4",
+          "x": "Returns the number of elements in S"
+        }
       ],
       "a": "3",
       "e": "S.top() returns a reference to the top element of stack S, without removing it."
@@ -146,168 +311,363 @@
     {
       "id": "ds_0012",
       "q": "What does S.is_empty() return for a stack S?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "True if stack S contains no elements at all"},
-        {"i": "2", "x": "The total number of elements in stack S"},
-        {"i": "3", "x": "The top element currently stored in S"},
-        {"i": "4", "x": "True if stack S has at least one element"}
+        {
+          "i": "1",
+          "x": "True if stack S contains no elements at all"
+        },
+        {
+          "i": "2",
+          "x": "The total number of elements in stack S"
+        },
+        {
+          "i": "3",
+          "x": "The top element currently stored in S"
+        },
+        {
+          "i": "4",
+          "x": "True if stack S has at least one element"
+        }
       ],
       "a": "1",
       "e": "S.is_empty() returns True if stack S does not contain any elements."
     },
     {
       "id": "ds_0013",
-      "q": "Starting from an empty stack S, after calling S.push(5) followed by S.push(3), what does len(S) return?",
-      "t": ["1", "medium"],
+      "q": "Given the following calls:\n\n```python\nS = ArrayStack()\nS.push(5)\nS.push(3)\n```\n\nWhat does len(S) return at this point?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "2"},
-        {"i": "2", "x": "1"},
-        {"i": "3", "x": "3"},
-        {"i": "4", "x": "0"}
+        {
+          "i": "1",
+          "x": "2"
+        },
+        {
+          "i": "2",
+          "x": "1"
+        },
+        {
+          "i": "3",
+          "x": "3"
+        },
+        {
+          "i": "4",
+          "x": "0"
+        }
       ],
       "a": "1",
       "e": "After pushing 5 and then 3, the stack holds two elements, so len(S) returns 2."
     },
     {
       "id": "ds_0014",
-      "q": "Starting from an empty stack S, calls are made in this order: S.push(5), S.push(3), S.pop(). What value is returned by the S.pop() call?",
-      "t": ["1", "medium"],
+      "q": "Given the following calls:\n\n```python\nS = ArrayStack()\nS.push(5)\nS.push(3)\nS.pop()\n```\n\nWhat value does the S.pop() call above return?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "3"},
-        {"i": "2", "x": "5"},
-        {"i": "3", "x": "8"},
-        {"i": "4", "x": "error"}
+        {
+          "i": "1",
+          "x": "3"
+        },
+        {
+          "i": "2",
+          "x": "5"
+        },
+        {
+          "i": "3",
+          "x": "8"
+        },
+        {
+          "i": "4",
+          "x": "error"
+        }
       ],
       "a": "1",
       "e": "Since 3 was pushed last, it is on top of the stack, so S.pop() removes and returns 3."
     },
     {
       "id": "ds_0015",
-      "q": "Starting from an empty stack S, calls are made in this order: S.push(7), S.push(9). What value does S.top() return?",
-      "t": ["1", "medium"],
+      "q": "Given the following calls:\n\n```python\nS = ArrayStack()\nS.push(7)\nS.push(9)\n```\n\nWhat does S.top() return at this point?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "9"},
-        {"i": "2", "x": "7"},
-        {"i": "3", "x": "16"},
-        {"i": "4", "x": "error"}
+        {
+          "i": "1",
+          "x": "9"
+        },
+        {
+          "i": "2",
+          "x": "7"
+        },
+        {
+          "i": "3",
+          "x": "16"
+        },
+        {
+          "i": "4",
+          "x": "error"
+        }
       ],
       "a": "1",
       "e": "Since 9 was pushed last, it sits on top of the stack, so S.top() returns 9 without removing it."
     },
     {
       "id": "ds_0016",
-      "q": "What happens when S.pop() is called on a stack S that currently has no elements?",
-      "t": ["1", "medium"],
+      "q": "Given the following state:\n\n```python\nS = ArrayStack()\n```\n\nWhat happens if S.pop() is called at this point?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "An error occurs, since there is nothing to remove"},
-        {"i": "2", "x": "It returns zero as a default empty value"},
-        {"i": "3", "x": "It first pushes a default element automatically"},
-        {"i": "4", "x": "It silently does nothing and returns nothing"}
+        {
+          "i": "1",
+          "x": "An error occurs, since there is nothing to remove"
+        },
+        {
+          "i": "2",
+          "x": "It returns zero as a default empty value"
+        },
+        {
+          "i": "3",
+          "x": "It first pushes a default element automatically"
+        },
+        {
+          "i": "4",
+          "x": "It silently does nothing and returns nothing"
+        }
       ],
       "a": "1",
       "e": "Calling pop() on an empty stack results in an error, since there is no top element to remove."
     },
     {
       "id": "ds_0017",
-      "q": "In the simple array-based stack implementation, where is the top of the stack stored within the underlying Python list?",
-      "t": ["1", "medium"],
+      "q": "Given this implementation:\n\n```python\nclass ArrayStack:\n    \"\"\"LIFO Stack implementation using a Python list as underlying storage.\"\"\"\n\n    def __init__(self):\n        \"\"\"Create an empty stack.\"\"\"\n        self._data = []                          # nonpublic list instance\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the stack.\"\"\"\n        return len(self._data)\n\n    def is_empty(self):\n        \"\"\"Return True if the stack is empty.\"\"\"\n        return len(self._data) == 0\n\n    def push(self, e):\n        \"\"\"Add element e to the top of the stack.\"\"\"\n        self._data.append(e)                     # new item stored at end of list\n```\n\nWhere is the top of the stack stored within the underlying Python list?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "In the rightmost cell of the list"},
-        {"i": "2", "x": "In the leftmost cell of the list"},
-        {"i": "3", "x": "In the middle cell of the list"},
-        {"i": "4", "x": "In a cell separate from the list"}
+        {
+          "i": "1",
+          "x": "In the rightmost cell of the list"
+        },
+        {
+          "i": "2",
+          "x": "In the leftmost cell of the list"
+        },
+        {
+          "i": "3",
+          "x": "In the middle cell of the list"
+        },
+        {
+          "i": "4",
+          "x": "In a cell separate from the list"
+        }
       ],
       "a": "1",
-      "e": "The stack is implemented with a Python list, storing the top element in the rightmost cell of the list."
+      "e": "Since push() calls self._data.append(e), new items are added to the end of the list, so the top element sits in the rightmost cell."
     },
     {
       "id": "ds_0018",
       "q": "What is the main idea behind the adapter design pattern used for this stack implementation?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "Wrap an existing class and implement methods using it"},
-        {"i": "2", "x": "Rewrite the Python list class entirely from scratch"},
-        {"i": "3", "x": "Store every stack element in a separate database"},
-        {"i": "4", "x": "Replace all list methods with new global functions"}
+        {
+          "i": "1",
+          "x": "Wrap an existing class and implement methods using it"
+        },
+        {
+          "i": "2",
+          "x": "Rewrite the Python list class entirely from scratch"
+        },
+        {
+          "i": "3",
+          "x": "Store every stack element in a separate database"
+        },
+        {
+          "i": "4",
+          "x": "Replace all list methods with new global functions"
+        }
       ],
       "a": "1",
       "e": "The adapter pattern defines a new class containing an instance of the existing class as a hidden field, implementing each method using that hidden instance."
     },
     {
       "id": "ds_0019",
-      "q": "Using the Python list adapter, which list operation realizes the stack's push(e) method?",
-      "t": ["1", "medium"],
+      "q": "Given this implementation:\n\n```python\nclass ArrayStack:\n    \"\"\"LIFO Stack implementation using a Python list as underlying storage.\"\"\"\n\n    def __init__(self):\n        \"\"\"Create an empty stack.\"\"\"\n        self._data = []                          # nonpublic list instance\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the stack.\"\"\"\n        return len(self._data)\n\n    def is_empty(self):\n        \"\"\"Return True if the stack is empty.\"\"\"\n        return len(self._data) == 0\n\n    def push(self, e):\n        \"\"\"Add element e to the top of the stack.\"\"\"\n        self._data.append(e)                     # new item stored at end of list\n```\n\nWhich Python list operation is used to realize the stack's push(e) method?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "L.append(e)"},
-        {"i": "2", "x": "L.insert(0, e)"},
-        {"i": "3", "x": "L[-1]"},
-        {"i": "4", "x": "len(L)"}
+        {
+          "i": "1",
+          "x": "L.append(e)"
+        },
+        {
+          "i": "2",
+          "x": "L.insert(0, e)"
+        },
+        {
+          "i": "3",
+          "x": "L[-1]"
+        },
+        {
+          "i": "4",
+          "x": "len(L)"
+        }
       ],
       "a": "1",
-      "e": "S.push(e) is realized as L.append(e), adding the new item to the end of the list."
+      "e": "The push method calls self._data.append(e), so push(e) is realized using the list's append(e) operation."
     },
     {
       "id": "ds_0020",
-      "q": "Using the Python list adapter, which expression realizes the stack's top() method?",
-      "t": ["1", "medium"],
+      "q": "Given this partial implementation:\n\n```python\nclass ArrayStack:\n    \"\"\"LIFO Stack implementation using a Python list as underlying storage.\"\"\"\n\n    def __init__(self):\n        \"\"\"Create an empty stack.\"\"\"\n        self._data = []\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the stack.\"\"\"\n        return len(self._data)\n```\n\nIf a top() method were added to this class following the same adapter pattern, which list expression would realize it?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "L[-1]"},
-        {"i": "2", "x": "L.append(e)"},
-        {"i": "3", "x": "L.pop(0)"},
-        {"i": "4", "x": "len(L)"}
+        {
+          "i": "1",
+          "x": "self._data[-1]"
+        },
+        {
+          "i": "2",
+          "x": "self._data.append(e)"
+        },
+        {
+          "i": "3",
+          "x": "self._data.pop(0)"
+        },
+        {
+          "i": "4",
+          "x": "len(self._data)"
+        }
       ],
       "a": "1",
-      "e": "S.top() is realized as L[-1], returning the last item of the list without removing it."
+      "e": "Following the adapter pattern, S.top() is realized as L[-1], returning the last item of the list without removing it."
     },
     {
       "id": "ds_0021",
-      "q": "Using the Python list adapter, which expression realizes the stack's is_empty() method?",
-      "t": ["1", "medium"],
+      "q": "Given this partial implementation:\n\n```python\nclass ArrayStack:\n    \"\"\"LIFO Stack implementation using a Python list as underlying storage.\"\"\"\n\n    def __init__(self):\n        \"\"\"Create an empty stack.\"\"\"\n        self._data = []\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the stack.\"\"\"\n        return len(self._data)\n```\n\nIf an is_empty() method were added to this class following the same adapter pattern, which list expression would realize it?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "len(L) == 0"},
-        {"i": "2", "x": "L[-1] == 0"},
-        {"i": "3", "x": "L.append(e) == 0"},
-        {"i": "4", "x": "len(L) == 1"}
+        {
+          "i": "1",
+          "x": "len(self._data) == 0"
+        },
+        {
+          "i": "2",
+          "x": "self._data[-1] == 0"
+        },
+        {
+          "i": "3",
+          "x": "self._data.append(e) == 0"
+        },
+        {
+          "i": "4",
+          "x": "len(self._data) == 1"
+        }
       ],
       "a": "1",
-      "e": "S.is_empty() is realized as len(L) == 0, checking whether the underlying list has zero elements."
+      "e": "Following the adapter pattern, S.is_empty() is realized as len(L) == 0, checking whether the underlying list has zero elements."
     },
     {
       "id": "ds_0022",
-      "q": "What is the running time of the push and pop operations in the array-based stack implementation?",
-      "t": ["1", "hard"],
+      "q": "Given this implementation:\n\n```python\nclass ArrayStack:\n    \"\"\"LIFO Stack implementation using a Python list as underlying storage.\"\"\"\n\n    def __init__(self):\n        \"\"\"Create an empty stack.\"\"\"\n        self._data = []                          # nonpublic list instance\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the stack.\"\"\"\n        return len(self._data)\n\n    def is_empty(self):\n        \"\"\"Return True if the stack is empty.\"\"\"\n        return len(self._data) == 0\n\n    def push(self, e):\n        \"\"\"Add element e to the top of the stack.\"\"\"\n        self._data.append(e)                     # new item stored at end of list\n```\n\nWhat is the running time of the push operation shown here?",
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "Amortized O(1)"},
-        {"i": "2", "x": "Guaranteed worst-case O(1)"},
-        {"i": "3", "x": "O(n) in every single case"},
-        {"i": "4", "x": "O(log n) on average"}
+        {
+          "i": "1",
+          "x": "Amortized O(1)"
+        },
+        {
+          "i": "2",
+          "x": "Guaranteed worst-case O(1)"
+        },
+        {
+          "i": "3",
+          "x": "O(n) in every single case"
+        },
+        {
+          "i": "4",
+          "x": "O(log n) on average"
+        }
       ],
       "a": "1",
-      "e": "The O(1) time for push and pop are amortized bounds, not guaranteed on every single call."
+      "e": "Since append() occasionally triggers an internal resize of the list, the O(1) time for push is an amortized bound, not guaranteed on every single call."
     },
     {
       "id": "ds_0023",
-      "q": "What is the running time of the top(), is_empty(), and len() operations in the array-based stack implementation?",
-      "t": ["1", "medium"],
+      "q": "Given this implementation:\n\n```python\nclass ArrayStack:\n    \"\"\"LIFO Stack implementation using a Python list as underlying storage.\"\"\"\n\n    def __init__(self):\n        \"\"\"Create an empty stack.\"\"\"\n        self._data = []                          # nonpublic list instance\n\n    def __len__(self):\n        \"\"\"Return the number of elements in the stack.\"\"\"\n        return len(self._data)\n\n    def is_empty(self):\n        \"\"\"Return True if the stack is empty.\"\"\"\n        return len(self._data) == 0\n\n    def push(self, e):\n        \"\"\"Add element e to the top of the stack.\"\"\"\n        self._data.append(e)                     # new item stored at end of list\n```\n\nWhat is the running time of the is_empty() and __len__() methods shown here?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "Worst-case O(1)"},
-        {"i": "2", "x": "Amortized O(1) only"},
-        {"i": "3", "x": "O(n) in the worst case"},
-        {"i": "4", "x": "O(n log n) on average"}
+        {
+          "i": "1",
+          "x": "Worst-case O(1)"
+        },
+        {
+          "i": "2",
+          "x": "Amortized O(1) only"
+        },
+        {
+          "i": "3",
+          "x": "O(n) in the worst case"
+        },
+        {
+          "i": "4",
+          "x": "O(n log n) on average"
+        }
       ],
       "a": "1",
-      "e": "The implementations for top, is_empty, and len use constant time in the worst case."
+      "e": "Both methods only call len(self._data), which Python performs in constant time in the worst case."
     },
     {
       "id": "ds_0024",
       "q": "Which of the following is described as a typical real-world use case for a stack?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "Undo functionality in a text editor"},
-        {"i": "2", "x": "Sorting a list of numbers by value"},
-        {"i": "3", "x": "Storing records in alphabetical order"},
-        {"i": "4", "x": "Scheduling packets by network priority"}
+        {
+          "i": "1",
+          "x": "Undo functionality in a text editor"
+        },
+        {
+          "i": "2",
+          "x": "Sorting a list of numbers by value"
+        },
+        {
+          "i": "3",
+          "x": "Storing records in alphabetical order"
+        },
+        {
+          "i": "4",
+          "x": "Scheduling packets by network priority"
+        }
       ],
       "a": "1",
       "e": "Undo functionality in text editors is a listed use case, where actions are stored in a stack and undo means popping the latest action."
@@ -315,80 +675,170 @@
     {
       "id": "ds_0025",
       "q": "In an undo feature implemented with a stack, how is the most recent action undone?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "By popping the latest action off the stack"},
-        {"i": "2", "x": "By pushing a brand new action onto the stack"},
-        {"i": "3", "x": "By checking whether the stack is empty"},
-        {"i": "4", "x": "By reading the bottom element of the stack"}
+        {
+          "i": "1",
+          "x": "By popping the latest action off the stack"
+        },
+        {
+          "i": "2",
+          "x": "By pushing a brand new action onto the stack"
+        },
+        {
+          "i": "3",
+          "x": "By checking whether the stack is empty"
+        },
+        {
+          "i": "4",
+          "x": "By reading the bottom element of the stack"
+        }
       ],
       "a": "1",
       "e": "Undo is implemented by popping the latest action from the stack that stores the sequence of actions."
     },
     {
       "id": "ds_0026",
-      "q": "In the reverse_file function, why does writing the popped lines back to the file produce a reversed order?",
-      "t": ["1", "hard"],
+      "q": "Given this implementation:\n\n```python\ndef reverse_file(filename):\n    \"\"\"Overwrite given file with its contents line-by-line reversed.\"\"\"\n    S = ArrayStack()\n    original = open(filename)\n    for line in original:\n        S.push(line.rstrip('\\n'))    # we will re-insert newlines when writing\n    original.close()\n\n    output = open(filename, 'w')      # reopening file overwrites original\n    while not S.is_empty():\n        output.write(S.pop() + '\\n') # re-insert newline characters\n    output.close()\n```\n\nWhy does writing the popped lines back to the file produce a reversed order?",
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "Because a stack removes elements in last-in, first-out order"},
-        {"i": "2", "x": "Because the file is read twice from start to end"},
-        {"i": "3", "x": "Because Python lists are automatically kept sorted"},
-        {"i": "4", "x": "Because lines are resorted alphabetically before writing"}
+        {
+          "i": "1",
+          "x": "Because a stack removes elements in last-in, first-out order"
+        },
+        {
+          "i": "2",
+          "x": "Because the file is read twice from start to end"
+        },
+        {
+          "i": "3",
+          "x": "Because Python lists are automatically kept sorted"
+        },
+        {
+          "i": "4",
+          "x": "Because lines are resorted alphabetically before writing"
+        }
       ],
       "a": "1",
       "e": "Each line is pushed while reading, then popped while writing, and since a stack pops in last-in, first-out order, the lines come out reversed."
     },
     {
       "id": "ds_0027",
-      "q": "While scanning an expression in the matching parentheses example, what gets pushed onto the stack?",
-      "t": ["1", "medium"],
+      "q": "Given this implementation:\n\n```python\ndef is_matched(expr):\n    \"\"\"Return True if all delimiters are properly matched; False otherwise.\"\"\"\n    lefty = '({['                          # opening delimiters\n    righty = ')}]'                         # respective closing delims\n    S = ArrayStack()\n    for c in expr:\n        if c in lefty:\n            S.push(c)                      # push left delimiter on stack\n        elif c in righty:\n            if S.is_empty():\n                return False                # nothing to match with\n            if righty.index(c) != lefty.index(S.pop()):\n                return False                # mismatched\n    return S.is_empty()                    # were all symbols matched?\n```\n\nWhile scanning the expression, what gets pushed onto the stack S?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "Each opening delimiter encountered"},
-        {"i": "2", "x": "Each closing delimiter encountered"},
-        {"i": "3", "x": "Every single character in the expression"},
-        {"i": "4", "x": "Only delimiters that fail to match"}
+        {
+          "i": "1",
+          "x": "Each opening delimiter encountered"
+        },
+        {
+          "i": "2",
+          "x": "Each closing delimiter encountered"
+        },
+        {
+          "i": "3",
+          "x": "Every single character in the expression"
+        },
+        {
+          "i": "4",
+          "x": "Only delimiters that fail to match"
+        }
       ],
       "a": "1",
-      "e": "Each opening symbol is pushed onto the stack, while each closing symbol is popped and checked against it."
+      "e": "The code pushes c onto S whenever c is found in lefty, meaning each opening symbol is pushed onto the stack."
     },
     {
       "id": "ds_0028",
-      "q": "In the is_matched function, what happens if a closing delimiter is found while the stack is empty?",
-      "t": ["1", "hard"],
+      "q": "Given this implementation:\n\n```python\ndef is_matched(expr):\n    \"\"\"Return True if all delimiters are properly matched; False otherwise.\"\"\"\n    lefty = '({['                          # opening delimiters\n    righty = ')}]'                         # respective closing delims\n    S = ArrayStack()\n    for c in expr:\n        if c in lefty:\n            S.push(c)                      # push left delimiter on stack\n        elif c in righty:\n            if S.is_empty():\n                return False                # nothing to match with\n            if righty.index(c) != lefty.index(S.pop()):\n                return False                # mismatched\n    return S.is_empty()                    # were all symbols matched?\n```\n\nWhat does is_matched return if a closing delimiter is found while S is empty?",
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "The function returns False immediately"},
-        {"i": "2", "x": "The function returns True immediately"},
-        {"i": "3", "x": "The closing delimiter is pushed instead"},
-        {"i": "4", "x": "The scan restarts from the first character"}
+        {
+          "i": "1",
+          "x": "False"
+        },
+        {
+          "i": "2",
+          "x": "True"
+        },
+        {
+          "i": "3",
+          "x": "The closing delimiter itself"
+        },
+        {
+          "i": "4",
+          "x": "None, and scanning restarts"
+        }
       ],
       "a": "1",
-      "e": "If the stack is empty when a closing delimiter appears, there is nothing to match it with, so the function returns False."
+      "e": "If S.is_empty() is True when a closing delimiter is found, the function returns False immediately, since there is nothing to match it with."
     },
     {
       "id": "ds_0029",
-      "q": "Why is the expression 'a[b{c}d]e}' considered an incorrect delimiter match?",
-      "t": ["1", "hard"],
+      "q": "Given this implementation:\n\n```python\ndef is_matched(expr):\n    \"\"\"Return True if all delimiters are properly matched; False otherwise.\"\"\"\n    lefty = '({['                          # opening delimiters\n    righty = ')}]'                         # respective closing delims\n    S = ArrayStack()\n    for c in expr:\n        if c in lefty:\n            S.push(c)                      # push left delimiter on stack\n        elif c in righty:\n            if S.is_empty():\n                return False                # nothing to match with\n            if righty.index(c) != lefty.index(S.pop()):\n                return False                # mismatched\n    return S.is_empty()                    # were all symbols matched?\n```\n\nWhat does is_matched('a[b{c}d]e}') return, and why?",
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "The final } has no matching opening delimiter"},
-        {"i": "2", "x": "The ] symbol appears before any [ symbol"},
-        {"i": "3", "x": "The letter c is repeated inside the brackets"},
-        {"i": "4", "x": "There are too many letters between the delimiters"}
+        {
+          "i": "1",
+          "x": "False, because the final } has nothing left to match"
+        },
+        {
+          "i": "2",
+          "x": "True, because every bracket type appears in the string"
+        },
+        {
+          "i": "3",
+          "x": "False, because ] appears before any [ in the string"
+        },
+        {
+          "i": "4",
+          "x": "True, because the stack is empty at the very start"
+        }
       ],
       "a": "1",
-      "e": "All delimiters up to 'e' match correctly, but the final } has nothing left on the stack to pair with, since the stack is already empty."
+      "e": "All delimiters up to 'e' match and get popped correctly, leaving S empty; when the final } is reached, S.is_empty() is True, so the function returns False."
     },
     {
       "id": "ds_0030",
-      "q": "Why is the expression 'a{b(c)l' considered an incorrect delimiter match?",
-      "t": ["1", "hard"],
+      "q": "Given this implementation:\n\n```python\ndef is_matched(expr):\n    \"\"\"Return True if all delimiters are properly matched; False otherwise.\"\"\"\n    lefty = '({['                          # opening delimiters\n    righty = ')}]'                         # respective closing delims\n    S = ArrayStack()\n    for c in expr:\n        if c in lefty:\n            S.push(c)                      # push left delimiter on stack\n        elif c in righty:\n            if S.is_empty():\n                return False                # nothing to match with\n            if righty.index(c) != lefty.index(S.pop()):\n                return False                # mismatched\n    return S.is_empty()                    # were all symbols matched?\n```\n\nWhat does is_matched('a{b(c)l') return, and why?",
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "The opening { is never matched by a closing symbol"},
-        {"i": "2", "x": "The ( symbol is closed before it is ever opened"},
-        {"i": "3", "x": "There are two opening delimiters in a row"},
-        {"i": "4", "x": "The letter l is an invalid character to use"}
+        {
+          "i": "1",
+          "x": "False, because { is pushed but never popped"
+        },
+        {
+          "i": "2",
+          "x": "True, because ( and ) match each other correctly"
+        },
+        {
+          "i": "3",
+          "x": "False, because ( is closed before it is opened"
+        },
+        {
+          "i": "4",
+          "x": "True, because letters do not affect the result"
+        }
       ],
       "a": "1",
-      "e": "The ( and ) pair matches correctly, but the opening { pushed at the start is left on the stack with nothing to close it."
+      "e": "The ( and ) pair matches and gets popped, but the opening { pushed at the start is never popped, so S.is_empty() is False at the end and the function returns False."
     }
   ]
 }
