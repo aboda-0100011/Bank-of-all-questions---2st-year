@@ -197,34 +197,6 @@
       "e": "Each pixel in a grayscale image has a gray value between 0 and 255."
     },
     {
-      "id": "datarep_0008",
-      "q": "Approximately how much storage does a 640x480 grayscale image require, given each pixel is stored as one byte?",
-      "t": [
-        "1",
-        "hard"
-      ],
-      "c": [
-        {
-          "i": "1",
-          "x": "300 KB"
-        },
-        {
-          "i": "2",
-          "x": "100 KB"
-        },
-        {
-          "i": "3",
-          "x": "600 KB"
-        },
-        {
-          "i": "4",
-          "x": "921 KB"
-        }
-      ],
-      "a": "1",
-      "e": "A 640x480 grayscale image, with one byte per pixel, requires about 300 KB of storage."
-    },
-    {
       "id": "datarep_0009",
       "q": "How many bits are used to represent each pixel in a 24-bit color image?",
       "t": [
@@ -307,34 +279,6 @@
       ],
       "a": "1",
       "e": "With 256 x 256 x 256 combinations of Red, Green, and Blue, a 24-bit color image supports 16,777,216 possible colors."
-    },
-    {
-      "id": "datarep_0012",
-      "q": "Approximately how much storage does an uncompressed 640x480 24-bit color image require?",
-      "t": [
-        "1",
-        "hard"
-      ],
-      "c": [
-        {
-          "i": "1",
-          "x": "921.6 KB"
-        },
-        {
-          "i": "2",
-          "x": "300 KB"
-        },
-        {
-          "i": "3",
-          "x": "460.8 KB"
-        },
-        {
-          "i": "4",
-          "x": "1.8 MB"
-        }
-      ],
-      "a": "1",
-      "e": "A 640x480 24-bit color image without compression requires about 921.6 KB of storage."
     },
     {
       "id": "datarep_0013",
@@ -727,62 +671,6 @@
       ],
       "a": "1",
       "e": "ASCII and EBCDIC are limited to 256 possible combinations, so certain character sets like Chinese, Arabic, and Japanese cannot be represented using them."
-    },
-    {
-      "id": "datarep_0027",
-      "q": "In ASCII, what is the decimal value of the character 'A'?",
-      "t": [
-        "1",
-        "medium"
-      ],
-      "c": [
-        {
-          "i": "1",
-          "x": "65"
-        },
-        {
-          "i": "2",
-          "x": "41"
-        },
-        {
-          "i": "3",
-          "x": "97"
-        },
-        {
-          "i": "4",
-          "x": "1"
-        }
-      ],
-      "a": "1",
-      "e": "The character 'A' has a value of 65 in decimal in ASCII."
-    },
-    {
-      "id": "datarep_0028",
-      "q": "In ASCII, how is the character 'A' (decimal value 65) stored in binary?",
-      "t": [
-        "1",
-        "hard"
-      ],
-      "c": [
-        {
-          "i": "1",
-          "x": "01000001"
-        },
-        {
-          "i": "2",
-          "x": "01000010"
-        },
-        {
-          "i": "3",
-          "x": "01100001"
-        },
-        {
-          "i": "4",
-          "x": "00100001"
-        }
-      ],
-      "a": "1",
-      "e": "The character 'A', with decimal value 65, is stored in memory as the binary code 01000001."
     },
     {
       "id": "datarep_0029",
