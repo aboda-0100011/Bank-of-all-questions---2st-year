@@ -1,1 +1,1003 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "webprog_0101",
+      "q": "Which best describes the `<IMG>` tag in terms of its structure?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A container element"
+        },
+        {
+          "i": "2",
+          "x": "An empty element"
+        },
+        {
+          "i": "3",
+          "x": "A list element"
+        },
+        {
+          "i": "4",
+          "x": "A form element"
+        }
+      ],
+      "a": "2",
+      "e": "The `<IMG>` tag is an empty (standalone) document element, so it has no closing tag."
+    },
+    {
+      "id": "webprog_0102",
+      "q": "Which attribute of the `<IMG>` tag specifies the image file to display?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`SRC`"
+        },
+        {
+          "i": "2",
+          "x": "`ALT`"
+        },
+        {
+          "i": "3",
+          "x": "`ALIGN`"
+        },
+        {
+          "i": "4",
+          "x": "`WIDTH`"
+        }
+      ],
+      "a": "1",
+      "e": "The `SRC` attribute holds the image file, as in `<IMG SRC=\"Image file\">`."
+    },
+    {
+      "id": "webprog_0103",
+      "q": "What is the purpose of the `ALT` attribute of the `<IMG>` tag?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The file name of the image to load"
+        },
+        {
+          "i": "2",
+          "x": "Text shown for unsupported images"
+        },
+        {
+          "i": "3",
+          "x": "The position of the image on the page"
+        },
+        {
+          "i": "4",
+          "x": "The thickness of the image border"
+        }
+      ],
+      "a": "2",
+      "e": "The `ALT` attribute is used when the required image is not supported by the browser."
+    },
+    {
+      "id": "webprog_0104",
+      "q": "Which attribute of the `<IMG>` tag controls the position of the image, such as LEFT or RIGHT?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`SRC`"
+        },
+        {
+          "i": "2",
+          "x": "`ALT`"
+        },
+        {
+          "i": "3",
+          "x": "`ALIGN`"
+        },
+        {
+          "i": "4",
+          "x": "`BORDER`"
+        }
+      ],
+      "a": "3",
+      "e": "The `ALIGN` attribute aligns the image position using RIGHT, LEFT, TOP, MIDDLE, or BOTTOM."
+    },
+    {
+      "id": "webprog_0105",
+      "q": "Which pair of attributes sets the size of an image?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`SRC` and `ALT`"
+        },
+        {
+          "i": "2",
+          "x": "`WIDTH` and `HEIGHT`"
+        },
+        {
+          "i": "3",
+          "x": "`ALIGN` and `BORDER`"
+        },
+        {
+          "i": "4",
+          "x": "`SRC` and `BORDER`"
+        }
+      ],
+      "a": "2",
+      "e": "The `WIDTH` and `HEIGHT` attributes specify the dimensions of the image."
+    },
+    {
+      "id": "webprog_0106",
+      "q": "Consider the following tag:\n```html\n<IMG SRC=\"photo.gif\" BORDER=\"0\">\n```\nWhat is the effect of `BORDER=\"0\"`?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The image is hidden completely"
+        },
+        {
+          "i": "2",
+          "x": "The image has no border"
+        },
+        {
+          "i": "3",
+          "x": "The image is aligned to the left"
+        },
+        {
+          "i": "4",
+          "x": "The image width becomes zero"
+        }
+      ],
+      "a": "2",
+      "e": "The `BORDER` attribute sets the border around the image, and a value of 0 means no border."
+    },
+    {
+      "id": "webprog_0107",
+      "q": "Which element is used to create a hyperlink?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<href>`"
+        },
+        {
+          "i": "2",
+          "x": "`<hr>`"
+        },
+        {
+          "i": "3",
+          "x": "`<a>`"
+        },
+        {
+          "i": "4",
+          "x": "`<img>`"
+        }
+      ],
+      "a": "3",
+      "e": "A link is specified using the `<a>` element."
+    },
+    {
+      "id": "webprog_0108",
+      "q": "To link to another document, which attribute must the opening `<a>` tag carry?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`src`"
+        },
+        {
+          "i": "2",
+          "x": "`name`"
+        },
+        {
+          "i": "3",
+          "x": "`alt`"
+        },
+        {
+          "i": "4",
+          "x": "`href`"
+        }
+      ],
+      "a": "4",
+      "e": "The `href` attribute takes the page you are linking to as its value."
+    },
+    {
+      "id": "webprog_0109",
+      "q": "In the code `<a href=\"page.html\">Next</a>`, which part is clickable?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Next"
+        },
+        {
+          "i": "2",
+          "x": "page.html"
+        },
+        {
+          "i": "3",
+          "x": "`<a>`"
+        },
+        {
+          "i": "4",
+          "x": "`href`"
+        }
+      ],
+      "a": "1",
+      "e": "Whatever is between `<a>` and `</a>` forms the link and is clickable."
+    },
+    {
+      "id": "webprog_0110",
+      "q": "Which code links the text Home to `index.html`, which is located in the same folder as the current file?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<a src=\"index.html\">Home</a>`"
+        },
+        {
+          "i": "2",
+          "x": "`<a name=\"index.html\">Home</a>`"
+        },
+        {
+          "i": "3",
+          "x": "`<a href=\"index.html\">Home</a>`"
+        },
+        {
+          "i": "4",
+          "x": "`<a link=\"index.html\">Home</a>`"
+        }
+      ],
+      "a": "3",
+      "e": "The `href` attribute holds the target page. A file in the same folder can be referenced by its name only."
+    },
+    {
+      "id": "webprog_0111",
+      "q": "Which code makes the text Yahoo link to `http://www.yahoo.com/`?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<a href=\"Yahoo\">http://www.yahoo.com/</a>`"
+        },
+        {
+          "i": "2",
+          "x": "`<a src=\"http://www.yahoo.com/\">Yahoo</a>`"
+        },
+        {
+          "i": "3",
+          "x": "`<a name=\"http://www.yahoo.com/\">Yahoo</a>`"
+        },
+        {
+          "i": "4",
+          "x": "`<a href=\"http://www.yahoo.com/\">Yahoo</a>`"
+        }
+      ],
+      "a": "4",
+      "e": "The full URL goes in `href`, and the text between the tags is what the visitor clicks."
+    },
+    {
+      "id": "webprog_0112",
+      "q": "Which code makes the image `logo.gif` a link to `home.html`?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<a href=\"home.html\"><img src=\"logo.gif\"></a>`"
+        },
+        {
+          "i": "2",
+          "x": "`<img href=\"home.html\" src=\"logo.gif\">`"
+        },
+        {
+          "i": "3",
+          "x": "`<a src=\"logo.gif\"><img href=\"home.html\"></a>`"
+        },
+        {
+          "i": "4",
+          "x": "`<a name=\"home.html\"><img src=\"logo.gif\"></a>`"
+        }
+      ],
+      "a": "1",
+      "e": "Images can be links too: the `<img>` element is placed between `<a href=...>` and `</a>`."
+    },
+    {
+      "id": "webprog_0113",
+      "q": "Which attribute of the `<a>` element creates a target point inside a page for in-page navigation?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`href`"
+        },
+        {
+          "i": "2",
+          "x": "`src`"
+        },
+        {
+          "i": "3",
+          "x": "`alt`"
+        },
+        {
+          "i": "4",
+          "x": "`name`"
+        }
+      ],
+      "a": "4",
+      "e": "Named anchors such as `<a name=\"top\">` mark parts of a page that links can lead to."
+    },
+    {
+      "id": "webprog_0114",
+      "q": "A list of contents at the top of a long page that takes the user to sections of the same page is an example of:",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Linking within the page"
+        },
+        {
+          "i": "2",
+          "x": "Linking to another website"
+        },
+        {
+          "i": "3",
+          "x": "Linking to a download file"
+        },
+        {
+          "i": "4",
+          "x": "Linking to a picture file"
+        }
+      ],
+      "a": "1",
+      "e": "Linking to a specific part of a page is used for lists of contents and \"Back to top\" links."
+    },
+    {
+      "id": "webprog_0115",
+      "q": "Which of the following is <u>not</u> one of the three types of HTML lists?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Ordered list"
+        },
+        {
+          "i": "2",
+          "x": "Linked list"
+        },
+        {
+          "i": "3",
+          "x": "Unordered list"
+        },
+        {
+          "i": "4",
+          "x": "Definition list"
+        }
+      ],
+      "a": "2",
+      "e": "HTML provides unordered, ordered, and definition lists."
+    },
+    {
+      "id": "webprog_0116",
+      "q": "Which element is used to create a bulleted list?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<ol>`"
+        },
+        {
+          "i": "2",
+          "x": "`<dl>`"
+        },
+        {
+          "i": "3",
+          "x": "`<li>`"
+        },
+        {
+          "i": "4",
+          "x": "`<ul>`"
+        }
+      ],
+      "a": "4",
+      "e": "The `<ul>` element creates an unordered list, which is a list of bullet points."
+    },
+    {
+      "id": "webprog_0117",
+      "q": "Which element marks each item inside an ordered or unordered list?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<dt>`"
+        },
+        {
+          "i": "2",
+          "x": "`<li>`"
+        },
+        {
+          "i": "3",
+          "x": "`<dd>`"
+        },
+        {
+          "i": "4",
+          "x": "`<tr>`"
+        }
+      ],
+      "a": "2",
+      "e": "Each bullet point or numbered line is written with an `<li>` tag."
+    },
+    {
+      "id": "webprog_0118",
+      "q": "Which `TYPE` value makes an `<ol>` label its items a, b, c?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`A`"
+        },
+        {
+          "i": "2",
+          "x": "`i`"
+        },
+        {
+          "i": "3",
+          "x": "`a`"
+        },
+        {
+          "i": "4",
+          "x": "`1`"
+        }
+      ],
+      "a": "3",
+      "e": "The `TYPE` attribute of `<ol>` accepts 1, A, a, I, and i; lowercase `a` gives lowercase letters."
+    },
+    {
+      "id": "webprog_0119",
+      "q": "Consider the following code:\n```html\n<ol type=\"I\">\n<li>One</li>\n<li>Two\n<ol type=\"i\">\n<li>Alpha</li>\n<li>Beta</li>\n</ol>\n</li>\n</ol>\n```\nHow are the items of the inner list labeled?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "i, ii"
+        },
+        {
+          "i": "2",
+          "x": "I, II"
+        },
+        {
+          "i": "3",
+          "x": "a, b"
+        },
+        {
+          "i": "4",
+          "x": "1, 2"
+        }
+      ],
+      "a": "1",
+      "e": "Each nested list is numbered separately according to its own `TYPE`, and `i` gives lowercase Roman numerals."
+    },
+    {
+      "id": "webprog_0120",
+      "q": "Which attribute of `<ol>` sets the number that a numbered list starts at?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`TYPE`"
+        },
+        {
+          "i": "2",
+          "x": "`BEGIN`"
+        },
+        {
+          "i": "3",
+          "x": "`FIRST`"
+        },
+        {
+          "i": "4",
+          "x": "`START`"
+        }
+      ],
+      "a": "4",
+      "e": "The `START` attribute of `<ol>` specifies the starting number of the list."
+    },
+    {
+      "id": "webprog_0121",
+      "q": "Which set of elements is used to build a definition list?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<dl>`, `<li>`, `<dd>`"
+        },
+        {
+          "i": "2",
+          "x": "`<ul>`, `<dt>`, `<dd>`"
+        },
+        {
+          "i": "3",
+          "x": "`<dl>`, `<dt>`, `<li>`"
+        },
+        {
+          "i": "4",
+          "x": "`<dl>`, `<dt>`, `<dd>`"
+        }
+      ],
+      "a": "4",
+      "e": "The `<dl>` element contains alternating `<dt>` (term) and `<dd>` (definition) elements."
+    },
+    {
+      "id": "webprog_0122",
+      "q": "Where should a new list be placed when nesting it inside another list?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Inside a `<dd>` element"
+        },
+        {
+          "i": "2",
+          "x": "Directly inside `<ol>` only"
+        },
+        {
+          "i": "3",
+          "x": "Inside an `<li>` element"
+        },
+        {
+          "i": "4",
+          "x": "Inside the `<head>` section"
+        }
+      ],
+      "a": "3",
+      "e": "Each new nested list should be placed inside an `<li>` element of the outer list."
+    },
+    {
+      "id": "webprog_0123",
+      "q": "What is the purpose of the `<pre>` tag?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Preview the page before publishing"
+        },
+        {
+          "i": "2",
+          "x": "Show text exactly as typed"
+        },
+        {
+          "i": "3",
+          "x": "Prevent text from being edited"
+        },
+        {
+          "i": "4",
+          "x": "Make text appear in bold"
+        }
+      ],
+      "a": "2",
+      "e": "The `<pre>` tag displays a block of text as is, including all spaces and hard returns."
+    },
+    {
+      "id": "webprog_0124",
+      "q": "Which element defines a row in an HTML table?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<td>`"
+        },
+        {
+          "i": "2",
+          "x": "`<tr>`"
+        },
+        {
+          "i": "3",
+          "x": "`<th>`"
+        },
+        {
+          "i": "4",
+          "x": "`<table>`"
+        }
+      ],
+      "a": "2",
+      "e": "A table is written row by row, and each row is contained inside a `<tr>` element."
+    },
+    {
+      "id": "webprog_0125",
+      "q": "Which element is used for column or row headers in a table?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<td>`"
+        },
+        {
+          "i": "2",
+          "x": "`<tr>`"
+        },
+        {
+          "i": "3",
+          "x": "`<th>`"
+        },
+        {
+          "i": "4",
+          "x": "`<h1>`"
+        }
+      ],
+      "a": "3",
+      "e": "Table headings have their own element, `<th>`, used for either column or row headers."
+    },
+    {
+      "id": "webprog_0126",
+      "q": "Which code correctly builds a table with a single cell containing the letter A?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<table><td><tr>A</tr></td></table>`"
+        },
+        {
+          "i": "2",
+          "x": "`<table><tr>A</tr></table>`"
+        },
+        {
+          "i": "3",
+          "x": "`<tr><table><td>A</td></table></tr>`"
+        },
+        {
+          "i": "4",
+          "x": "`<table><tr><td>A</td></tr></table>`"
+        }
+      ],
+      "a": "4",
+      "e": "Cells (`<td>`) are written inside rows (`<tr>`), and rows are written inside `<table>`."
+    },
+    {
+      "id": "webprog_0127",
+      "q": "Which attribute of `<table>` sets the space between a cell's content and the inside of the cell?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`CELLPADDING`"
+        },
+        {
+          "i": "2",
+          "x": "`CELLSPACING`"
+        },
+        {
+          "i": "3",
+          "x": "`BORDER`"
+        },
+        {
+          "i": "4",
+          "x": "`WIDTH`"
+        }
+      ],
+      "a": "1",
+      "e": "`CELLPADDING` specifies the space between the content and the inside of the cell."
+    },
+    {
+      "id": "webprog_0128",
+      "q": "Which attribute of `<table>` sets the space between the cells of the table?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`CELLSPACING`"
+        },
+        {
+          "i": "2",
+          "x": "`CELLPADDING`"
+        },
+        {
+          "i": "3",
+          "x": "`BORDER`"
+        },
+        {
+          "i": "4",
+          "x": "`ALIGN`"
+        }
+      ],
+      "a": "1",
+      "e": "`CELLSPACING` specifies the space between cells in a table."
+    },
+    {
+      "id": "webprog_0129",
+      "q": "What does the `BORDER` attribute of `<table>` specify?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The space between the cells"
+        },
+        {
+          "i": "2",
+          "x": "The thickness of the table border"
+        },
+        {
+          "i": "3",
+          "x": "The space inside each cell"
+        },
+        {
+          "i": "4",
+          "x": "The horizontal alignment of the table"
+        }
+      ],
+      "a": "2",
+      "e": "The `BORDER` attribute takes values such as 1, 2, 3, which set the table border."
+    },
+    {
+      "id": "webprog_0130",
+      "q": "Which element adds a title to a table?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<title>`"
+        },
+        {
+          "i": "2",
+          "x": "`<tablehead>`"
+        },
+        {
+          "i": "3",
+          "x": "`<heading>`"
+        },
+        {
+          "i": "4",
+          "x": "`<caption>`"
+        }
+      ],
+      "a": "4",
+      "e": "A caption is added to a table using the `<caption>` element."
+    },
+    {
+      "id": "webprog_0131",
+      "q": "Which attribute makes a table cell stretch across two columns?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`ROWSPAN=\"2\"`"
+        },
+        {
+          "i": "2",
+          "x": "`CELLSPACING=\"2\"`"
+        },
+        {
+          "i": "3",
+          "x": "`COLSPAN=\"2\"`"
+        },
+        {
+          "i": "4",
+          "x": "`CELLPADDING=\"2\"`"
+        }
+      ],
+      "a": "3",
+      "e": "`COLSPAN` makes a cell span multiple columns, as used in the movie schedule table."
+    },
+    {
+      "id": "webprog_0132",
+      "q": "Which attribute makes a table cell stretch across two rows?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`ROWSPAN=\"2\"`"
+        },
+        {
+          "i": "2",
+          "x": "`COLSPAN=\"2\"`"
+        },
+        {
+          "i": "3",
+          "x": "`CELLSPACING=\"2\"`"
+        },
+        {
+          "i": "4",
+          "x": "`BORDER=\"2\"`"
+        }
+      ],
+      "a": "1",
+      "e": "`ROWSPAN` makes a cell span multiple rows."
+    },
+    {
+      "id": "webprog_0133",
+      "q": "What is the main purpose of an HTML form?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Collect information from visitors"
+        },
+        {
+          "i": "2",
+          "x": "Arrange content in rows and columns"
+        },
+        {
+          "i": "3",
+          "x": "Link pages together"
+        },
+        {
+          "i": "4",
+          "x": "Display images on a page"
+        }
+      ],
+      "a": "1",
+      "e": "A form is used when we want to collect information from a visitor to the website."
+    },
+    {
+      "id": "webprog_0134",
+      "q": "Which form control is used when a visitor can select several options at the same time?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Radio button"
+        },
+        {
+          "i": "2",
+          "x": "Text box"
+        },
+        {
+          "i": "3",
+          "x": "Submit button"
+        },
+        {
+          "i": "4",
+          "x": "Checkbox"
+        }
+      ],
+      "a": "4",
+      "e": "Checkboxes are used when there are multiple selections at a time."
+    },
+    {
+      "id": "webprog_0135",
+      "q": "Which form control is used when only one option can be selected from a group?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Checkbox"
+        },
+        {
+          "i": "2",
+          "x": "Text box"
+        },
+        {
+          "i": "3",
+          "x": "Radio button"
+        },
+        {
+          "i": "4",
+          "x": "Reset button"
+        }
+      ],
+      "a": "3",
+      "e": "Radio buttons are used when only one selection is needed."
+    },
+    {
+      "id": "webprog_0136",
+      "q": "Which statement about the `<form>` element is correct?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It may contain another `<form>`"
+        },
+        {
+          "i": "2",
+          "x": "It may hold only form controls"
+        },
+        {
+          "i": "3",
+          "x": "It can include headings too"
+        },
+        {
+          "i": "4",
+          "x": "It must be placed inside a table"
+        }
+      ],
+      "a": "3",
+      "e": "A `<form>` can contain other markup such as paragraphs and headings, but it must not contain another `<form>`."
+    },
+    {
+      "id": "webprog_0137",
+      "q": "Which form button clears all the entries a visitor has typed into the form?",
+      "t": [
+        "1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Reset"
+        },
+        {
+          "i": "2",
+          "x": "Submit"
+        },
+        {
+          "i": "3",
+          "x": "Checkbox"
+        },
+        {
+          "i": "4",
+          "x": "Text box"
+        }
+      ],
+      "a": "1",
+      "e": "Submit and Reset are the two button types; Reset clears the entries."
+    }
+  ]
+}
