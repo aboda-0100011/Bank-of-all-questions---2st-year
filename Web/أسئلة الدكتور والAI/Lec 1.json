@@ -241,7 +241,7 @@
         }
       ],
       "a": "2",
-      "e": "The bgcolor attribute is used to add color to the background of the site, as in <body bgcolor=\"yellow\">."
+      "e": "The bgcolor attribute is used to add color to the background of the site, as in `<body bgcolor=\"yellow\">`."
     },
     {
       "id": "webprog_0010",
@@ -268,7 +268,7 @@
         }
       ],
       "a": "1",
-      "e": "The background attribute is used to add an image to the site's background, as in <body background=\"logo.gif\">."
+      "e": "The background attribute is used to add an image to the site's background, as in `<body background=\"logo.gif\">`."
     },
     {
       "id": "webprog_0011",
@@ -326,138 +326,138 @@
     },
     {
       "id": "webprog_0013",
-      "q": "Which tag would you use to make a word appear underlined?",
+      "q": "How do we make the word Example look like this: <u>Example</u>?",
       "t": [
         "1"
       ],
       "c": [
         {
           "i": "1",
-          "x": "<i>"
+          "x": "`<i>`"
         },
         {
           "i": "2",
-          "x": "<u>"
+          "x": "`<u>`"
         },
         {
           "i": "3",
-          "x": "<s>"
+          "x": "`<s>`"
         },
         {
           "i": "4",
-          "x": "<tt>"
+          "x": "`<tt>`"
         }
       ],
       "a": "2",
-      "e": "The <u> element is used to underline text."
+      "e": "The `<u>` element is used to underline text."
     },
     {
       "id": "webprog_0014",
-      "q": "Which tag would you use to make a word appear with a strikethrough?",
+      "q": "How do we make the word Example look like this: <s>Example</s>?",
       "t": [
         "1"
       ],
       "c": [
         {
           "i": "1",
-          "x": "<sup>"
+          "x": "`<sup>`"
         },
         {
           "i": "2",
-          "x": "<sub>"
+          "x": "`<sub>`"
         },
         {
           "i": "3",
-          "x": "<s>"
+          "x": "`<s>`"
         },
         {
           "i": "4",
-          "x": "<b>"
+          "x": "`<b>`"
         }
       ],
       "a": "3",
-      "e": "The <s> element (or <strike>) is used to display text with a strikethrough."
+      "e": "The `<s>` element (or `<strike>`) is used to display text with a strikethrough."
     },
     {
       "id": "webprog_0015",
-      "q": "Which tag would you use to display a number like 31st with the 'st' raised above the line?",
+      "q": "How do we format the letters \"st\" so the text looks like this: 31<sup>st</sup>?",
       "t": [
         "1"
       ],
       "c": [
         {
           "i": "1",
-          "x": "<sub>"
+          "x": "`<sub>`"
         },
         {
           "i": "2",
-          "x": "<sup>"
+          "x": "`<sup>`"
         },
         {
           "i": "3",
-          "x": "<tt>"
+          "x": "`<tt>`"
         },
         {
           "i": "4",
-          "x": "<u>"
+          "x": "`<u>`"
         }
       ],
       "a": "2",
-      "e": "The <sup> element displays text as superscript, raised above the normal line, as in 31st."
+      "e": "The `<sup>` element displays text as superscript, raised above the normal line, as in 31st."
     },
     {
       "id": "webprog_0016",
-      "q": "Which tag would you use to display the '2' in H2O below the normal line?",
+      "q": "How do we format the digit \"2\" so the text looks like this: H<sub>2</sub>O?",
       "t": [
         "1"
       ],
       "c": [
         {
           "i": "1",
-          "x": "<sup>"
+          "x": "`<sup>`"
         },
         {
           "i": "2",
-          "x": "<i>"
+          "x": "`<i>`"
         },
         {
           "i": "3",
-          "x": "<sub>"
+          "x": "`<sub>`"
         },
         {
           "i": "4",
-          "x": "<s>"
+          "x": "`<s>`"
         }
       ],
       "a": "3",
-      "e": "The <sub> element displays text as subscript, lowered below the normal line, as in H2O."
+      "e": "The `<sub>` element displays text as subscript, lowered below the normal line, as in H2O."
     },
     {
       "id": "webprog_0017",
-      "q": "Which tag would you use to display text in a monospaced (typewriter-style) font?",
+      "q": "How do we make the word Example look like this (monospaced font): `Example`?",
       "t": [
         "1"
       ],
       "c": [
         {
           "i": "1",
-          "x": "<tt>"
+          "x": "`<tt>`"
         },
         {
           "i": "2",
-          "x": "<b>"
+          "x": "`<b>`"
         },
         {
           "i": "3",
-          "x": "<em>"
+          "x": "`<em>`"
         },
         {
           "i": "4",
-          "x": "<sup>"
+          "x": "`<sup>`"
         }
       ],
       "a": "1",
-      "e": "The <tt> element is used to display text in a monospaced font."
+      "e": "The `<tt>` element is used to display text in a monospaced font."
     },
     {
       "id": "webprog_0018",
@@ -596,34 +596,34 @@
     },
     {
       "id": "webprog_0023",
-      "q": "In the basic HTML document skeleton, which section appears between the opening <HTML> tag and the <BODY> section?",
+      "q": "In the basic HTML document skeleton, which section appears between the opening `<HTML>` tag and the `<BODY>` section?",
       "t": [
         "1"
       ],
       "c": [
         {
           "i": "1",
-          "x": "<TITLE>"
+          "x": "`<TITLE>`"
         },
         {
           "i": "2",
-          "x": "<HEAD>"
+          "x": "`<HEAD>`"
         },
         {
           "i": "3",
-          "x": "<FOOTER>"
+          "x": "`<FOOTER>`"
         },
         {
           "i": "4",
-          "x": "<SCRIPT>"
+          "x": "`<SCRIPT>`"
         }
       ],
       "a": "2",
-      "e": "The basic skeleton of an HTML document starts with <HTML>, followed by the <HEAD> section, then the <BODY> section, and ends with </HTML>."
+      "e": "The basic skeleton of an HTML document starts with `<HTML>`, followed by the `<HEAD>` section, then the `<BODY>` section, and ends with `</HTML>`."
     },
     {
       "id": "webprog_0024",
-      "q": "A tag that has both an opening tag and a matching closing tag, like <p> ... </p>, is called:",
+      "q": "A tag that has both an opening tag and a matching closing tag, like `<p> ... </p>`, is called:",
       "t": [
         "1"
       ],
@@ -646,7 +646,7 @@
         }
       ],
       "a": "1",
-      "e": "A container tag encloses content between an opening and a closing tag, unlike an empty tag which stands alone, such as <br>."
+      "e": "A container tag encloses content between an opening and a closing tag, unlike an empty tag which stands alone, such as `<br>`."
     },
     {
       "id": "webprog_0025",
@@ -657,23 +657,23 @@
       "c": [
         {
           "i": "1",
-          "x": "<br>"
+          "x": "`<br>`"
         },
         {
           "i": "2",
-          "x": "<p>"
+          "x": "`<p>`"
         },
         {
           "i": "3",
-          "x": "<hr>"
+          "x": "`<hr>`"
         },
         {
           "i": "4",
-          "x": "<div>"
+          "x": "`<div>`"
         }
       ],
       "a": "1",
-      "e": "The <br> tag is an empty tag used for a line break when the white space of a paragraph is not wanted."
+      "e": "The `<br>` tag is an empty tag used for a line break when the white space of a paragraph is not wanted."
     }
   ]
 }
