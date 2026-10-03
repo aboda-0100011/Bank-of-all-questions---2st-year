@@ -2,7 +2,7 @@
   "qs": [
     {
       "id": "datarep_0001",
-      "q": "How many bits make up one nibble?",
+      "q": "How many bits make up one <b>nibble</b>?",
       "t": [
         "1",
         "easy"
@@ -26,11 +26,11 @@
         }
       ],
       "a": "1",
-      "e": "A nibble is made up of 4 bits, which is half of a byte."
+      "e": "A nibble is made up of <mark>4 bits</mark>.\nIt is <b>half of a byte</b>."
     },
     {
       "id": "datarep_0002",
-      "q": "How many bits make up one byte?",
+      "q": "How many bits make up one <b>byte</b>?",
       "t": [
         "1",
         "easy"
@@ -54,11 +54,11 @@
         }
       ],
       "a": "1",
-      "e": "A byte is made up of 8 bits, which is two nibbles."
+      "e": "A byte is made up of <mark>8 bits</mark>.\nIt is <b>two nibbles</b>."
     },
     {
       "id": "datarep_0003",
-      "q": "What mainly determines how an image is represented digitally?",
+      "q": "What <b>mainly</b> determines how an image is represented digitally?",
       "t": [
         "1",
         "medium"
@@ -82,11 +82,11 @@
         }
       ],
       "a": "1",
-      "e": "Image representation depends on what the output device can display, such as a seven-segment display needing only 7 bits."
+      "e": "Image representation depends on <mark>what the output device can display</mark>.\n<b>Example:</b> a seven-segment display needs only 7 bits."
     },
     {
       "id": "datarep_0004",
-      "q": "How many bits are used to represent each pixel in a binary (monochrome) image?",
+      "q": "How many bits are used to represent <u>each pixel</u> in a <b>binary (monochrome)</b> image?",
       "t": [
         "1",
         "easy"
@@ -110,11 +110,11 @@
         }
       ],
       "a": "1",
-      "e": "A binary image represents each pixel using a single bit."
+      "e": "A binary image represents each pixel using a <mark>single bit</mark>."
     },
     {
       "id": "datarep_0005",
-      "q": "Why is a binary image also called a monochrome image?",
+      "q": "Why is a <b>binary</b> image also called a <b>monochrome</b> image?",
       "t": [
         "1",
         "medium"
@@ -138,11 +138,11 @@
         }
       ],
       "a": "1",
-      "e": "A binary image is called a 1-bit monochrome image since it contains no color, only black or white per pixel."
+      "e": "A binary image is a <b>1-bit</b> monochrome image.\nIt contains <mark>no color</mark>, only black or white per pixel."
     },
     {
       "id": "datarep_0006",
-      "q": "How many bits are used to represent each pixel in a grayscale image?",
+      "q": "How many bits are used to represent <u>each pixel</u> in a <b>grayscale</b> image?",
       "t": [
         "1",
         "easy"
@@ -166,11 +166,11 @@
         }
       ],
       "a": "1",
-      "e": "A grayscale image represents each pixel using 8 bits, stored as one byte."
+      "e": "A grayscale image represents each pixel using <mark>8 bits</mark>.\nThese 8 bits are stored as <b>one byte</b>."
     },
     {
       "id": "datarep_0007",
-      "q": "What is the value range of a single pixel in an 8-bit grayscale image?",
+      "q": "What is the <b>value range</b> of a single pixel in an <b>8-bit grayscale</b> image?",
       "t": [
         "1",
         "medium"
@@ -194,11 +194,15 @@
         }
       ],
       "a": "1",
-      "e": "Each pixel in a grayscale image has a gray value between 0 and 255."
+      "e": [
+        "Each pixel uses <b>8 bits</b>, so it can take 2<sup>8</sup> = <b>256</b> different values.",
+        "Counting starts from 0, so the values run from 0 to 255.",
+        "<b>Result:</b> <mark>0 to 255</mark>"
+      ]
     },
     {
       "id": "datarep_0009",
-      "q": "How many bits are used to represent each pixel in a 24-bit color image?",
+      "q": "How many bits are used to represent <u>each pixel</u> in a <b>24-bit color</b> image?",
       "t": [
         "1",
         "easy"
@@ -222,11 +226,11 @@
         }
       ],
       "a": "1",
-      "e": "A color image represents each pixel using 24 bits."
+      "e": "A color image represents each pixel using <mark>24 bits</mark>."
     },
     {
       "id": "datarep_0010",
-      "q": "Which three color components together make up each pixel in a 24-bit color image?",
+      "q": "Which <b>three</b> color components together make up each pixel in a 24-bit color image?",
       "t": [
         "1",
         "medium"
@@ -250,11 +254,11 @@
         }
       ],
       "a": "1",
-      "e": "Each pixel in a 24-bit color image is composed of three values: Red, Green, and Blue."
+      "e": "Each pixel in a 24-bit color image is composed of three values:\n<mark>Red, Green, and Blue</mark> (RGB)."
     },
     {
       "id": "datarep_0011",
-      "q": "How many distinct colors can a 24-bit color image represent in total?",
+      "q": "How many <b>distinct colors</b> can a 24-bit color image represent in total?",
       "t": [
         "1",
         "hard"
@@ -278,11 +282,16 @@
         }
       ],
       "a": "1",
-      "e": "With 256 x 256 x 256 combinations of Red, Green, and Blue, a 24-bit color image supports 16,777,216 possible colors."
+      "e": [
+        "Each pixel has three components: <b>Red, Green, and Blue</b>.",
+        "Each component has <b>256</b> possible values.",
+        "Total colors = 256 x 256 x 256 = 2<sup>24</sup>.",
+        "<b>Result:</b> <mark>16,777,216</mark> possible colors."
+      ]
     },
     {
       "id": "datarep_0013",
-      "q": "Which two properties are used to characterize a simple sound wave?",
+      "q": "Which <b>two</b> properties are used to characterize a simple <b>sound wave</b>?",
       "t": [
         "1",
         "easy"
@@ -306,11 +315,11 @@
         }
       ],
       "a": "1",
-      "e": "A simple sound wave can be characterized by its amplitude and frequency."
+      "e": "A simple sound wave can be characterized by its:\n<mark>amplitude</mark> and <mark>frequency</mark>."
     },
     {
       "id": "datarep_0014",
-      "q": "What happens to a sound as its amplitude increases?",
+      "q": "What happens to a sound as its <b>amplitude</b> increases?",
       "t": [
         "1",
         "medium"
@@ -334,11 +343,11 @@
         }
       ],
       "a": "1",
-      "e": "The larger the amplitude, the louder the sound."
+      "e": "The <b>larger</b> the amplitude, the <mark>louder</mark> the sound."
     },
     {
       "id": "datarep_0015",
-      "q": "What happens to a sound's tone as its frequency increases?",
+      "q": "What happens to a sound's <b>tone</b> as its <b>frequency</b> increases?",
       "t": [
         "1",
         "medium"
@@ -362,11 +371,11 @@
         }
       ],
       "a": "1",
-      "e": "The higher the frequency, the higher the tone."
+      "e": "The <b>higher</b> the frequency, the <mark>higher</mark> the tone."
     },
     {
       "id": "datarep_0016",
-      "q": "What is the process called in which the voltage of a sound wave is measured at frequent intervals?",
+      "q": "What is the process called in which the <b>voltage</b> of a sound wave is measured at <u>frequent intervals</u>?",
       "t": [
         "1",
         "medium"
@@ -390,11 +399,11 @@
         }
       ],
       "a": "1",
-      "e": "Sampling is the process of measuring the voltage of a sound wave at frequent intervals."
+      "e": "<mark>Sampling</mark> is the process of measuring the voltage of a sound wave at frequent intervals."
     },
     {
       "id": "datarep_0017",
-      "q": "What is the process called in which sampled sound values are stored as a binary code?",
+      "q": "What is the process called in which <b>sampled</b> sound values are stored as a <u>binary code</u>?",
       "t": [
         "1",
         "medium"
@@ -418,11 +427,11 @@
         }
       ],
       "a": "1",
-      "e": "Decoding is the process of storing the sampled values as a binary code."
+      "e": "<mark>Decoding</mark> is the process of storing the sampled values as a binary code."
     },
     {
       "id": "datarep_0018",
-      "q": "What is a typical sampling rate mentioned for digitizing a sound wave?",
+      "q": "What is a <b>typical sampling rate</b> mentioned for digitizing a sound wave?",
       "t": [
         "1",
         "medium"
@@ -446,11 +455,11 @@
         }
       ],
       "a": "1",
-      "e": "The voltage is typically sampled at 48 kHz per second when digitizing sound."
+      "e": "The voltage is typically sampled at <mark>48 kHz</mark> per second when digitizing sound."
     },
     {
       "id": "datarep_0019",
-      "q": "How many bits per sample are typically used when decoding a digitized sound wave?",
+      "q": "How many <b>bits per sample</b> are typically used when <b>decoding</b> a digitized sound wave?",
       "t": [
         "1",
         "medium"
@@ -474,11 +483,11 @@
         }
       ],
       "a": "1",
-      "e": "Decoding typically stores each sample as a binary code of 16 or 32 bits."
+      "e": "Decoding typically stores each sample as a binary code of <mark>16 or 32 bits</mark>."
     },
     {
       "id": "datarep_0020",
-      "q": "What is each individual image in a video sequence called?",
+      "q": "What is <u>each individual image</u> in a <b>video</b> sequence called?",
       "t": [
         "1",
         "easy"
@@ -502,11 +511,11 @@
         }
       ],
       "a": "1",
-      "e": "A video is composed of a sequence of continuous images, and each image is called a frame."
+      "e": "A video is composed of a <b>sequence of continuous images</b>.\nEach image is called a <mark>frame</mark>."
     },
     {
       "id": "datarep_0021",
-      "q": "Roughly how fast must frames be displayed for a video to appear as continuous movement?",
+      "q": "Roughly how fast must <b>frames</b> be displayed for a video to appear as <u>continuous movement</u>?",
       "t": [
         "1",
         "medium"
@@ -530,11 +539,11 @@
         }
       ],
       "a": "1",
-      "e": "Each frame is flashed on the screen for a short time, faster than 50 per second, creating the impression of continuous movement."
+      "e": "Each frame is flashed on the screen for a short time.\nWhen frames are displayed <mark>faster than 50 per second</mark>, they create the impression of continuous movement."
     },
     {
       "id": "datarep_0022",
-      "q": "Why is a standard code needed for representing characters digitally?",
+      "q": "Why is a <b>standard code</b> needed for representing characters digitally?",
       "t": [
         "1",
         "easy"
@@ -558,11 +567,11 @@
         }
       ],
       "a": "1",
-      "e": "A standard is needed to ensure that the code used on your computer is the same as the code used on any other computer."
+      "e": "A standard is needed to ensure that the code used on <b>your computer</b> is the <mark>same</mark> as the code used on <b>any other computer</b>."
     },
     {
       "id": "datarep_0023",
-      "q": "What does the abbreviation ASCII stand for?",
+      "q": "What does the abbreviation <b>ASCII</b> stand for?",
       "t": [
         "1",
         "medium"
@@ -586,11 +595,11 @@
         }
       ],
       "a": "1",
-      "e": "ASCII stands for American Standard Code for Information Interchange."
+      "e": "<b>ASCII</b> stands for <mark>American Standard Code for Information Interchange</mark>."
     },
     {
       "id": "datarep_0024",
-      "q": "What does the abbreviation EBCDIC stand for?",
+      "q": "What does the abbreviation <b>EBCDIC</b> stand for?",
       "t": [
         "1",
         "medium"
@@ -614,11 +623,11 @@
         }
       ],
       "a": "1",
-      "e": "EBCDIC stands for Extended Binary Coded Decimal Interchange Code."
+      "e": "<b>EBCDIC</b> stands for <mark>Extended Binary Coded Decimal Interchange Code</mark>."
     },
     {
       "id": "datarep_0025",
-      "q": "Which company historically used the EBCDIC code on its mainframe computers?",
+      "q": "Which company <u>historically</u> used the <b>EBCDIC</b> code on its <b>mainframe</b> computers?",
       "t": [
         "1",
         "medium"
@@ -642,11 +651,11 @@
         }
       ],
       "a": "1",
-      "e": "EBCDIC was used in the past by IBM mainframes."
+      "e": "EBCDIC was used in the past by <mark>IBM</mark> mainframes."
     },
     {
       "id": "datarep_0026",
-      "q": "Why can't ASCII or EBCDIC represent character sets such as Chinese, Arabic, or Japanese?",
+      "q": "Why can't <b>ASCII</b> or <b>EBCDIC</b> represent character sets such as Chinese, Arabic, or Japanese?",
       "t": [
         "1",
         "hard"
@@ -670,11 +679,11 @@
         }
       ],
       "a": "1",
-      "e": "ASCII and EBCDIC are limited to 256 possible combinations, so certain character sets like Chinese, Arabic, and Japanese cannot be represented using them."
+      "e": "ASCII and EBCDIC are limited to <mark>256 possible combinations</mark>.\nSo character sets like Chinese, Arabic, and Japanese <b>cannot</b> be represented using them."
     },
     {
       "id": "datarep_0029",
-      "q": "How many bytes does Unicode use to represent each character?",
+      "q": "How many <b>bytes</b> does <b>Unicode</b> use to represent <u>each character</u>?",
       "t": [
         "1",
         "medium"
@@ -698,11 +707,11 @@
         }
       ],
       "a": "1",
-      "e": "Unicode uses 2 bytes for each character."
+      "e": "Unicode uses <mark>2 bytes</mark> for each character."
     },
     {
       "id": "datarep_0030",
-      "q": "What is the main disadvantage of Unicode compared to single-byte codes like ASCII?",
+      "q": "What is the <b>main disadvantage</b> of <b>Unicode</b> compared to single-byte codes like ASCII?",
       "t": [
         "1",
         "medium"
@@ -726,11 +735,11 @@
         }
       ],
       "a": "1",
-      "e": "Unicode's disadvantage is that it takes twice as much space to store the same number of characters as a single-byte code."
+      "e": "Unicode takes <mark>twice as much space</mark> to store the same number of characters as a single-byte code."
     },
     {
       "id": "datarep_0031",
-      "q": "Represent the following code in UTF-8. Separate the bytes in your answer with a space.\n`1110 0111 01 011011 101011`",
+      "q": "Represent the following code in <b>UTF-8</b>. Separate the bytes in your answer with a <u>space</u>.\n`1110 0111 01 011011 101011`",
       "t": [
         "0",
         "hard"
@@ -755,16 +764,16 @@
       ],
       "a": "3",
       "e": [
-        "Join the groups into one code: `1110011101011011101011`, which has 22 bits.",
-        "Find the shortest template that can hold 22 data bits. A 4-byte template holds only 3 + 6 + 6 + 6 = 21 bits, so a 5-byte template is needed: `111110xx 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx` (2 + 6 + 6 + 6 + 6 = 26 data bits).",
-        "Fill the x positions starting from the right-most bit. Last byte: `101011`. Previous byte: `011011`. Previous byte: `011101`.",
-        "Only 4 bits remain (`1110`) for the second byte, so add two 0s on the left: `001110`. The first byte gets the remaining x bits `00`.",
-        "Result: `11111000 10001110 10011101 10011011 10101011`."
+        "<b>Join</b> the groups into one code: `1110011101011011101011` (22 bits).",
+        "<b>Choose the template.</b> A 4-byte template holds only 3 + 6 + 6 + 6 = 21 data bits, so a <mark>5-byte</mark> template is needed:\n`111110xx 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx` (2 + 6 + 6 + 6 + 6 = 26 data bits).",
+        "<b>Fill</b> the x positions starting from the <u>right-most</u> bit:\nLast byte: `101011`\nPrevious byte: `011011`\nPrevious byte: `011101`",
+        "Only 4 bits remain (`1110`) for the second byte, so <b>pad 0s on the left</b>: `001110`. The first byte gets the remaining x bits `00`.",
+        "<b>Result:</b> `11111000 10001110 10011101 10011011 10101011`"
       ]
     },
     {
       "id": "datarep_0032",
-      "q": "Is `11000000 10000000 10000000` a correct UTF-8 code?",
+      "q": "Is `11000000 10000000 10000000` a <b>correct</b> UTF-8 code?",
       "t": [
         "0",
         "medium"
@@ -781,14 +790,14 @@
       ],
       "a": "2",
       "e": [
-        "Look at the first byte: `110xxxxx` starts with two 1s, so the character is made of exactly 2 bytes.",
-        "A 2-byte character consists of this first byte followed by only one continuation byte (`10xxxxxx`), which is the second byte `10000000`.",
-        "The third byte `10000000` is a continuation byte that does not belong to any first byte, so the sequence is not a correct UTF-8 code."
+        "Look at the first byte: `110xxxxx` starts with <b>two 1s</b>, so the character is made of exactly <mark>2 bytes</mark>.",
+        "A 2-byte character is this first byte followed by only <b>one</b> continuation byte (`10xxxxxx`), which is the second byte `10000000`.",
+        "The third byte `10000000` is a continuation byte that belongs to <u>no first byte</u>.\n<b>Result:</b> the sequence is <mark>not</mark> a correct UTF-8 code."
       ]
     },
     {
       "id": "datarep_0033",
-      "q": "Encode the Unicode code point `U+1F603` using UTF-8. Which byte sequence is the result?",
+      "q": "Encode the Unicode code point `U+1F603` using <b>UTF-8</b>. Which byte sequence is the result?",
       "t": [
         "0",
         "hard"
@@ -813,16 +822,16 @@
       ],
       "a": "4",
       "e": [
-        "The code point value is `1F603` in hexadecimal. Converting to binary: `0001 1111 0110 0000 0011`, which is 17 significant bits (`11111011000000011`).",
-        "The value is above U+FFFF (and up to U+1FFFFF), so a 4-byte template is needed: `11110xxx 10xxxxxx 10xxxxxx 10xxxxxx` (3 + 6 + 6 + 6 = 21 data bits).",
-        "Fill the x positions from the right-most bit. Last byte: `000011`. Third byte: `011000`. Second byte: `011111`.",
-        "Only 3 bits remain for the first byte (`000`), and they are 0s, so the first byte is `11110000`. The remaining x positions are padded with 0s on the left.",
-        "Result: `11110000 10011111 10011000 10000011`."
+        "The code point value is `1F603` in hexadecimal. <b>Convert to binary:</b> `0001 1111 0110 0000 0011` (17 significant bits: `11111011000000011`).",
+        "<b>Choose the template.</b> The value is above U+FFFF (up to U+1FFFFF), so a <mark>4-byte</mark> template is needed:\n`11110xxx 10xxxxxx 10xxxxxx 10xxxxxx` (3 + 6 + 6 + 6 = 21 data bits).",
+        "<b>Fill</b> the x positions from the <u>right-most</u> bit:\nLast byte: `000011`\nThird byte: `011000`\nSecond byte: `011111`",
+        "Only 3 bits remain for the first byte (`000`), so it is `11110000`. The unused x positions are <b>padded with 0s on the left</b>.",
+        "<b>Result:</b> `11110000 10011111 10011000 10000011`"
       ]
     },
     {
       "id": "datarep_0034",
-      "q": "Represent the following 8-bit code in UTF-32. Write the bytes with the MSB on the left, separated by a space.\n`01000000`",
+      "q": "Represent the following <b>8-bit</b> code in <b>UTF-32</b>. Write the bytes with the <u>MSB on the left</u>, separated by a space.\n`01000000`",
       "t": [
         "0",
         "easy"
@@ -847,14 +856,14 @@
       ],
       "a": "2",
       "e": [
-        "UTF-32 encodes every character on exactly 4 bytes, \"as it is\".",
-        "The code has 8 bits, which is 1 byte, so 3 bytes of zeros must be added.",
-        "With the MSB on the left, the zero bytes go on the left: `00000000 00000000 00000000 01000000`."
+        "UTF-32 encodes every character on exactly <mark>4 bytes</mark>, \"as it is\".",
+        "The code has 8 bits (<b>1 byte</b>), so <b>3 bytes of zeros</b> must be added.",
+        "With the MSB on the left, the zero bytes go on the left.\n<b>Result:</b> `00000000 00000000 00000000 01000000`"
       ]
     },
     {
       "id": "datarep_0035",
-      "q": "Represent the following 17-bit code in UTF-32. Write the bytes with the MSB on the left, separated by a space. If it is impossible, choose x.\n`1 00000000 11111111`",
+      "q": "Represent the following <b>17-bit</b> code in <b>UTF-32</b>. Write the bytes with the <u>MSB on the left</u>, separated by a space. If it is impossible, choose <b>x</b>.\n`1 00000000 11111111`",
       "t": [
         "0",
         "medium"
@@ -879,16 +888,16 @@
       ],
       "a": "3",
       "e": [
-        "UTF-32 stores a character on exactly 4 bytes (32 bits), and 17 bits fit inside 32 bits, so it is possible.",
-        "Split the 17 bits from the right into bytes: `11111111` (last byte), `00000000` (second-to-last byte), and `1` (remaining bit).",
-        "Pad the remaining bit to a full byte: `00000001`.",
+        "UTF-32 stores a character on exactly <b>4 bytes</b> (32 bits). 17 bits fit inside 32 bits, so it is <mark>possible</mark>.",
+        "<b>Split</b> the 17 bits from the right into bytes: `11111111` (last byte), `00000000` (second-to-last byte), and `1` (remaining bit).",
+        "<b>Pad</b> the remaining bit to a full byte: `00000001`.",
         "Add one more byte of zeros on the left to reach 4 bytes: `00000000`.",
-        "Result with the MSB on the left: `00000000 00000001 00000000 11111111`."
+        "<b>Result</b> (MSB on the left): `00000000 00000001 00000000 11111111`"
       ]
     },
     {
       "id": "datarep_0036",
-      "q": "Represent the following 32-bit code in UTF-32. Write the bytes with the MSB on the left, separated by a space. If it is impossible, choose x.\n`01111111 11111111 11111111 11111111`",
+      "q": "Represent the following <b>32-bit</b> code in <b>UTF-32</b>. Write the bytes with the <u>MSB on the left</u>, separated by a space. If it is impossible, choose <b>x</b>.\n`01111111 11111111 11111111 11111111`",
       "t": [
         "0",
         "medium"
@@ -913,14 +922,14 @@
       ],
       "a": "2",
       "e": [
-        "UTF-32 encodes a character on exactly 4 bytes \"as it is\".",
-        "The code already has 32 bits (4 bytes), so no padding is needed and nothing changes.",
-        "With the MSB on the left, the result is the same as the input: `01111111 11111111 11111111 11111111`."
+        "UTF-32 encodes a character on exactly <mark>4 bytes</mark>, \"as it is\".",
+        "The code already has 32 bits (<b>4 bytes</b>), so no padding is needed and nothing changes.",
+        "<b>Result</b> (MSB on the left): the same as the input, `01111111 11111111 11111111 11111111`"
       ]
     },
     {
       "id": "datarep_0037",
-      "q": "A 64-bit word with the hexadecimal value `1122334455667788` is stored at address 9656 (decimal) in the memory of a little-endian computer with 8-bit bytes. What is the address of the byte containing the value `22`?",
+      "q": "A 64-bit word with the hexadecimal value `1122334455667788` is stored at address <b>9656</b> (decimal) in the memory of a <b>little-endian</b> computer with 8-bit bytes. What is the address of the byte containing the value `22`?",
       "t": [
         "0",
         "medium"
@@ -945,15 +954,15 @@
       ],
       "a": "3",
       "e": [
-        "Divide the hexadecimal value into bytes: `11 22 33 44 55 66 77 88`.",
-        "A little-endian computer stores the LSB first, at the lowest address, so the arrangement is `88 77 66 55 44 33 22 11`.",
-        "Assign addresses starting from 9656: 88 at 9656, 77 at 9657, 66 at 9658, 55 at 9659, 44 at 9660, 33 at 9661, 22 at 9662, 11 at 9663.",
-        "The byte containing `22` is at address 9662."
+        "<b>Divide</b> the hexadecimal value into bytes: `11 22 33 44 55 66 77 88`.",
+        "A little-endian computer stores the <mark>LSB first</mark>, at the lowest address, so the arrangement is:\n`88 77 66 55 44 33 22 11`",
+        "<b>Assign addresses</b> starting from 9656:\n88 at 9656, 77 at 9657, 66 at 9658, 55 at 9659,\n44 at 9660, 33 at 9661, 22 at 9662, 11 at 9663.",
+        "<b>Result:</b> the byte containing `22` is at address <mark>9662</mark>."
       ]
     },
     {
       "id": "datarep_0038",
-      "q": "In a UTF-8 multi-byte character, which part tells the decoder how many bytes the character occupies?",
+      "q": "In a UTF-8 multi-byte character, which part tells the decoder <b>how many bytes</b> the character occupies?",
       "t": [
         "1",
         "medium"
@@ -977,7 +986,7 @@
         }
       ],
       "a": "4",
-      "e": "The first byte works as a counter: `110xxxxx` means 2 bytes, `1110xxxx` means 3 bytes, `11110xxx` means 4 bytes, and so on. Every byte after the first starts with `10`, so it carries no length information."
+      "e": "The first byte works as a <b>counter</b>: `110xxxxx` means 2 bytes, `1110xxxx` means 3 bytes, `11110xxx` means 4 bytes, and so on.\nEvery byte <u>after</u> the first starts with `10`, so it carries <b>no</b> length information."
     },
     {
       "id": "datarep_0039",
@@ -1005,11 +1014,11 @@
         }
       ],
       "a": "2",
-      "e": "In a multi-byte UTF-8 encoding, every byte after the first one starts with `10`, so such a byte is a continuation byte. A first byte starts with `0` (one-byte character) or with two or more 1s (multi-byte character)."
+      "e": "In a multi-byte UTF-8 encoding, <b>every byte after the first one</b> starts with `10`, so such a byte is a <mark>continuation byte</mark>.\nA first byte starts with `0` (one-byte character) or with two or more 1s (multi-byte character)."
     },
     {
       "id": "datarep_0040",
-      "q": "The first byte of a UTF-8 character is `11110xxx`. How many bytes does the whole character occupy?",
+      "q": "The first byte of a UTF-8 character is `11110xxx`. How many bytes does the <b>whole</b> character occupy?",
       "t": [
         "1",
         "easy"
@@ -1034,13 +1043,13 @@
       ],
       "a": "3",
       "e": [
-        "Count the leading 1s of the first byte: `11110xxx` starts with four 1s.",
-        "The number of leading 1s equals the total number of bytes, so the character is made of 4 bytes: the first byte plus 3 continuation bytes (`10xxxxxx`)."
+        "<b>Count</b> the leading 1s of the first byte: `11110xxx` starts with <b>four</b> 1s.",
+        "The number of leading 1s equals the total number of bytes.\n<b>Result:</b> <mark>4 bytes</mark> = the first byte + 3 continuation bytes (`10xxxxxx`)."
       ]
     },
     {
       "id": "datarep_0041",
-      "q": "How many bits are available to hold the code point (the x positions) in a 3-byte UTF-8 character?",
+      "q": "How many bits are available to hold the <b>code point</b> (the x positions) in a <b>3-byte</b> UTF-8 character?",
       "t": [
         "1",
         "medium"
@@ -1066,14 +1075,14 @@
       "a": "4",
       "e": [
         "The 3-byte template is `1110xxxx 10xxxxxx 10xxxxxx`.",
-        "The first byte has 4 x positions, because `1110` uses 4 of its 8 bits.",
-        "Each of the two continuation bytes has 6 x positions, because `10` uses 2 of its 8 bits: 6 + 6 = 12.",
-        "Total data bits: 4 + 12 = 16 bits. The other 8 bits (`1110`, `10`, `10`) are control bits."
+        "<b>First byte:</b> `1110` uses 4 of its 8 bits, leaving <b>4</b> x positions.",
+        "<b>Each continuation byte:</b> `10` uses 2 of its 8 bits, leaving <b>6</b> x positions: 6 + 6 = 12.",
+        "<b>Total:</b> 4 + 12 = <mark>16 bits</mark>. The other 8 bits (`1110`, `10`, `10`) are control bits."
       ]
     },
     {
       "id": "datarep_0042",
-      "q": "Which of the following byte sequences is a valid UTF-8 encoding of a single character?",
+      "q": "Which of the following byte sequences is a <b>valid</b> UTF-8 encoding of a <u>single</u> character?",
       "t": [
         "1",
         "hard"
@@ -1098,16 +1107,16 @@
       ],
       "a": "2",
       "e": [
-        "Use the first byte to find the length: a first byte starting with `110` means 2 bytes in total, so exactly one continuation byte starting with `10` must follow.",
-        "`11010101 10000011`: first byte starts with `110`, the second starts with `10`, so it is valid.",
-        "`11010101 11000011`: the second byte starts with `11`, not `10`, so it is invalid.",
-        "`10010101 10000011`: the first byte starts with `10`, which is a continuation pattern and cannot start a character, so it is invalid.",
-        "`11010101 10000011 10000011`: after the single required continuation byte there is an extra `10xxxxxx` byte that belongs to no first byte, so it is invalid."
+        "Use the first byte to find the length: a first byte starting with `110` means <b>2 bytes</b> in total, so exactly one continuation byte starting with `10` must follow.",
+        "`11010101 10000011`: first byte starts with `110`, second starts with `10` → <mark>valid</mark>.",
+        "`11010101 11000011`: the second byte starts with `11`, not `10` → <b>invalid</b>.",
+        "`10010101 10000011`: the first byte starts with `10`, a continuation pattern that cannot start a character → <b>invalid</b>.",
+        "`11010101 10000011 10000011`: after the one required continuation byte there is an extra `10xxxxxx` byte that belongs to no first byte → <b>invalid</b>."
       ]
     },
     {
       "id": "datarep_0043",
-      "q": "Why is UTF-32 not compatible with ASCII?",
+      "q": "Why is <b>UTF-32</b> <u>not</u> compatible with <b>ASCII</b>?",
       "t": [
         "1",
         "medium"
@@ -1131,11 +1140,11 @@
         }
       ],
       "a": "4",
-      "e": "UTF-32 stores every character, including those in the ASCII range, on a full 4-byte unit, whereas ASCII uses one byte per character. Because of the different byte layout, ASCII data cannot be read as UTF-32, and the reverse is also true."
+      "e": "UTF-32 stores <b>every</b> character, including those in the ASCII range, on a full <mark>4-byte</mark> unit, whereas ASCII uses <mark>one byte</mark> per character.\nBecause of the different byte layout, ASCII data cannot be read as UTF-32, and the reverse is also true."
     },
     {
       "id": "datarep_0044",
-      "q": "Which problem comes from the fact that UTF-32 stores each character \"as it is\" on 4 bytes?",
+      "q": "Which problem comes from the fact that <b>UTF-32</b> stores each character \"as it is\" on <b>4 bytes</b>?",
       "t": [
         "1",
         "medium"
@@ -1159,11 +1168,11 @@
         }
       ],
       "a": "3",
-      "e": "The 4 bytes of a character can be written with the MSB first or with the LSB first. The same character therefore has two possible byte sequences, and the receiver must know which byte order was used."
+      "e": "The 4 bytes of a character can be written with the <b>MSB first</b> or with the <b>LSB first</b>.\nThe same character therefore has <u>two</u> possible byte sequences, and the receiver must know which byte order was used (<mark>endianness</mark>)."
     },
     {
       "id": "datarep_0045",
-      "q": "Which of the following is an advantage of UTF-32 compared with variable-length encodings such as UTF-8?",
+      "q": "Which of the following is an <b>advantage</b> of UTF-32 compared with variable-length encodings such as UTF-8?",
       "t": [
         "1",
         "medium"
@@ -1187,11 +1196,11 @@
         }
       ],
       "a": "3",
-      "e": "In UTF-32 every character has the same size (4 bytes), so operations such as counting characters or jumping to the n-th character are simple. The cost is that it is very wasteful in space, it is not ASCII compatible, and it has the endianness problem."
+      "e": "In UTF-32 every character has the <b>same size</b> (4 bytes), so operations such as <mark>counting characters</mark> or jumping to the n-th character are simple.\nThe cost: it is very <b>wasteful</b> in space, it is <b>not</b> ASCII compatible, and it has the endianness problem."
     },
     {
       "id": "datarep_0046",
-      "q": "Why is UTF-32 problematic in systems that expect null-terminated strings?",
+      "q": "Why is <b>UTF-32</b> problematic in systems that expect <b>null-terminated</b> strings?",
       "t": [
         "1",
         "hard"
@@ -1215,11 +1224,11 @@
         }
       ],
       "a": "4",
-      "e": "A null-terminated string ends at the first byte equal to `00000000`. In UTF-32 many characters contain such zero bytes (for example the upper bytes of any small code point), so a program may think the string ended in the middle of a character."
+      "e": "A null-terminated string ends at the first byte equal to `00000000`.\nIn UTF-32 many characters contain such <mark>zero bytes</mark> (for example the upper bytes of any small code point), so a program may think the string ended <u>in the middle</u> of a character."
     },
     {
       "id": "datarep_0047",
-      "q": "In the 4-byte value below, written with the most-significant byte on the left, which byte is the LSB (least-significant byte)?\n`10101001 01001010 10101011 10001100`",
+      "q": "In the 4-byte value below, written with the <u>most-significant byte on the left</u>, which byte is the <b>LSB</b> (least-significant byte)?\n`10101001 01001010 10101011 10001100`",
       "t": [
         "1",
         "easy"
@@ -1243,11 +1252,11 @@
         }
       ],
       "a": "1",
-      "e": "The LSB is the byte with the lowest significance, which is the right-most byte: `10001100`. The MSB is the left-most byte: `10101001`."
+      "e": "The LSB is the byte with the <b>lowest</b> significance, which is the <mark>right-most</mark> byte: `10001100`.\nThe MSB is the left-most byte: `10101001`."
     },
     {
       "id": "datarep_0048",
-      "q": "Which statement correctly distinguishes big-endian from little-endian when a multi-byte value is stored in memory? Here \"first\" means at the lowest address.",
+      "q": "Which statement correctly distinguishes <b>big-endian</b> from <b>little-endian</b> when a multi-byte value is stored in memory?\n<i>\"First\" means at the lowest address.</i>",
       "t": [
         "1",
         "easy"
@@ -1271,11 +1280,11 @@
         }
       ],
       "a": "1",
-      "e": "In big-endian, the most-significant byte (MSB) is stored first, at the lowest address. In little-endian, the least-significant byte (LSB) is stored first, at the lowest address. Neither order is superior to the other."
+      "e": "<b>Big-endian:</b> the most-significant byte (<mark>MSB</mark>) is stored first, at the lowest address.\n<b>Little-endian:</b> the least-significant byte (<mark>LSB</mark>) is stored first, at the lowest address.\nNeither order is superior to the other."
     },
     {
       "id": "datarep_0049",
-      "q": "The 32-bit hexadecimal value `12345678` is stored at address 100, and then only the single byte at address 100 is loaded. What is the loaded byte?",
+      "q": "The 32-bit hexadecimal value `12345678` is stored at address 100, and then <u>only the single byte</u> at address 100 is loaded. What is the loaded byte?",
       "t": [
         "1",
         "hard"
@@ -1300,15 +1309,15 @@
       ],
       "a": "2",
       "e": [
-        "Divide the value into bytes: `12 34 56 78`.",
-        "Big-endian stores the MSB first, so address 100 holds `12`, 101 holds `34`, 102 holds `56`, and 103 holds `78`.",
-        "Little-endian stores the LSB first, so address 100 holds `78`, 101 holds `56`, 102 holds `34`, and 103 holds `12`.",
-        "Loading only the byte at address 100 therefore gives `12` on a big-endian machine and `78` on a little-endian machine. This is why endianness matters when a multi-byte value is stored and then only a subset of its bytes is loaded."
+        "<b>Divide</b> the value into bytes: `12 34 56 78`.",
+        "<b>Big-endian</b> stores the MSB first: address 100 holds `12`, 101 holds `34`, 102 holds `56`, 103 holds `78`.",
+        "<b>Little-endian</b> stores the LSB first: address 100 holds `78`, 101 holds `56`, 102 holds `34`, 103 holds `12`.",
+        "<b>Result:</b> loading the byte at address 100 gives <mark>`12`</mark> on a big-endian machine and <mark>`78`</mark> on a little-endian machine. This is why endianness matters when a multi-byte value is stored and then only a <u>subset</u> of its bytes is loaded."
       ]
     },
     {
       "id": "datarep_0050",
-      "q": "In which situation must a programmer account for endianness?",
+      "q": "In which situation must a programmer account for <b>endianness</b>?",
       "t": [
         "1",
         "medium"
@@ -1332,7 +1341,7 @@
         }
       ],
       "a": "2",
-      "e": "Endianness matters when a multi-byte value is stored to memory and a subset of its bytes is loaded, or when such data is sent between machines with different byte orders (for example from a big-endian machine to a little-endian one). A single byte has no byte order, and operations inside one machine on whole values are not affected."
+      "e": "Endianness matters when a multi-byte value is stored to memory and a <b>subset of its bytes</b> is loaded, or when such data is <mark>sent between machines</mark> with different byte orders (for example big-endian to little-endian).\nA <b>single byte</b> has no byte order, and operations inside one machine on whole values are not affected."
     }
   ]
 }
