@@ -727,6 +727,612 @@
       ],
       "a": "1",
       "e": "Unicode's disadvantage is that it takes twice as much space to store the same number of characters as a single-byte code."
+    },
+    {
+      "id": "datarep_0031",
+      "q": "Represent the following code in UTF-8. Separate the bytes in your answer with a space.\n`1110 0111 01 011011 101011`",
+      "t": [
+        "0",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "11110110 10011101 10011011 10101011"
+        },
+        {
+          "i": "2",
+          "x": "11111011 10100111 10010110 10111010 10110000"
+        },
+        {
+          "i": "3",
+          "x": "11111000 10001110 10011101 10011011 10101011"
+        },
+        {
+          "i": "4",
+          "x": "11111100 10000000 10001110 10011101 10011011 10101011"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Join the groups into one code: `1110011101011011101011`, which has 22 bits.",
+        "Find the shortest template that can hold 22 data bits. A 4-byte template holds only 3 + 6 + 6 + 6 = 21 bits, so a 5-byte template is needed: `111110xx 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx` (2 + 6 + 6 + 6 + 6 = 26 data bits).",
+        "Fill the x positions starting from the right-most bit. Last byte: `101011`. Previous byte: `011011`. Previous byte: `011101`.",
+        "Only 4 bits remain (`1110`) for the second byte, so add two 0s on the left: `001110`. The first byte gets the remaining x bits `00`.",
+        "Result: `11111000 10001110 10011101 10011011 10101011`."
+      ]
+    },
+    {
+      "id": "datarep_0032",
+      "q": "Is `11000000 10000000 10000000` a correct UTF-8 code?",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Yes"
+        },
+        {
+          "i": "2",
+          "x": "No"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Look at the first byte: `110xxxxx` starts with two 1s, so the character is made of exactly 2 bytes.",
+        "A 2-byte character consists of this first byte followed by only one continuation byte (`10xxxxxx`), which is the second byte `10000000`.",
+        "The third byte `10000000` is a continuation byte that does not belong to any first byte, so the sequence is not a correct UTF-8 code."
+      ]
+    },
+    {
+      "id": "datarep_0033",
+      "q": "Encode the Unicode code point `U+1F603` using UTF-8. Which byte sequence is the result?",
+      "t": [
+        "0",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "11110000 10111110 10110000 10000110"
+        },
+        {
+          "i": "2",
+          "x": "10000011 10011000 10011111 11110000"
+        },
+        {
+          "i": "3",
+          "x": "00000000 00000001 11110110 00000011"
+        },
+        {
+          "i": "4",
+          "x": "11110000 10011111 10011000 10000011"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "The code point value is `1F603` in hexadecimal. Converting to binary: `0001 1111 0110 0000 0011`, which is 17 significant bits (`11111011000000011`).",
+        "The value is above U+FFFF (and up to U+1FFFFF), so a 4-byte template is needed: `11110xxx 10xxxxxx 10xxxxxx 10xxxxxx` (3 + 6 + 6 + 6 = 21 data bits).",
+        "Fill the x positions from the right-most bit. Last byte: `000011`. Third byte: `011000`. Second byte: `011111`.",
+        "Only 3 bits remain for the first byte (`000`), and they are 0s, so the first byte is `11110000`. The remaining x positions are padded with 0s on the left.",
+        "Result: `11110000 10011111 10011000 10000011`."
+      ]
+    },
+    {
+      "id": "datarep_0034",
+      "q": "Represent the following 8-bit code in UTF-32. Write the bytes with the MSB on the left, separated by a space.\n`01000000`",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "01000000 00000000 00000000 00000000"
+        },
+        {
+          "i": "2",
+          "x": "00000000 00000000 00000000 01000000"
+        },
+        {
+          "i": "3",
+          "x": "00000000 00000000 01000000 00000000"
+        },
+        {
+          "i": "4",
+          "x": "00000000 01000000 00000000 00000000"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "UTF-32 encodes every character on exactly 4 bytes, \"as it is\".",
+        "The code has 8 bits, which is 1 byte, so 3 bytes of zeros must be added.",
+        "With the MSB on the left, the zero bytes go on the left: `00000000 00000000 00000000 01000000`."
+      ]
+    },
+    {
+      "id": "datarep_0035",
+      "q": "Represent the following 17-bit code in UTF-32. Write the bytes with the MSB on the left, separated by a space. If it is impossible, choose x.\n`1 00000000 11111111`",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "x"
+        },
+        {
+          "i": "2",
+          "x": "00000000 00000000 00000001 11111111"
+        },
+        {
+          "i": "3",
+          "x": "00000000 00000001 00000000 11111111"
+        },
+        {
+          "i": "4",
+          "x": "11111111 00000000 00000001 00000000"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "UTF-32 stores a character on exactly 4 bytes (32 bits), and 17 bits fit inside 32 bits, so it is possible.",
+        "Split the 17 bits from the right into bytes: `11111111` (last byte), `00000000` (second-to-last byte), and `1` (remaining bit).",
+        "Pad the remaining bit to a full byte: `00000001`.",
+        "Add one more byte of zeros on the left to reach 4 bytes: `00000000`.",
+        "Result with the MSB on the left: `00000000 00000001 00000000 11111111`."
+      ]
+    },
+    {
+      "id": "datarep_0036",
+      "q": "Represent the following 32-bit code in UTF-32. Write the bytes with the MSB on the left, separated by a space. If it is impossible, choose x.\n`01111111 11111111 11111111 11111111`",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "x"
+        },
+        {
+          "i": "2",
+          "x": "01111111 11111111 11111111 11111111"
+        },
+        {
+          "i": "3",
+          "x": "11111111 11111111 11111111 01111111"
+        },
+        {
+          "i": "4",
+          "x": "01111111 11111111 11111111"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "UTF-32 encodes a character on exactly 4 bytes \"as it is\".",
+        "The code already has 32 bits (4 bytes), so no padding is needed and nothing changes.",
+        "With the MSB on the left, the result is the same as the input: `01111111 11111111 11111111 11111111`."
+      ]
+    },
+    {
+      "id": "datarep_0037",
+      "q": "A 64-bit word with the hexadecimal value `1122334455667788` is stored at address 9656 (decimal) in the memory of a little-endian computer with 8-bit bytes. What is the address of the byte containing the value `22`?",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "9661"
+        },
+        {
+          "i": "2",
+          "x": "9663"
+        },
+        {
+          "i": "3",
+          "x": "9662"
+        },
+        {
+          "i": "4",
+          "x": "9657"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Divide the hexadecimal value into bytes: `11 22 33 44 55 66 77 88`.",
+        "A little-endian computer stores the LSB first, at the lowest address, so the arrangement is `88 77 66 55 44 33 22 11`.",
+        "Assign addresses starting from 9656: 88 at 9656, 77 at 9657, 66 at 9658, 55 at 9659, 44 at 9660, 33 at 9661, 22 at 9662, 11 at 9663.",
+        "The byte containing `22` is at address 9662."
+      ]
+    },
+    {
+      "id": "datarep_0038",
+      "q": "In a UTF-8 multi-byte character, which part tells the decoder how many bytes the character occupies?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The run of trailing 0 bits in the last byte"
+        },
+        {
+          "i": "2",
+          "x": "A separate length field placed before the character"
+        },
+        {
+          "i": "3",
+          "x": "The first two bits of the last byte"
+        },
+        {
+          "i": "4",
+          "x": "The run of leading 1 bits in the first byte"
+        }
+      ],
+      "a": "4",
+      "e": "The first byte works as a counter: `110xxxxx` means 2 bytes, `1110xxxx` means 3 bytes, `11110xxx` means 4 bytes, and so on. Every byte after the first starts with `10`, so it carries no length information."
+    },
+    {
+      "id": "datarep_0039",
+      "q": "A byte inside a UTF-8 stream begins with the bits `10`. What does this tell the decoder?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It marks the end of the whole text"
+        },
+        {
+          "i": "2",
+          "x": "It continues a multi-byte character"
+        },
+        {
+          "i": "3",
+          "x": "It is the first byte of a two-byte character"
+        },
+        {
+          "i": "4",
+          "x": "It is an ASCII character stored in one byte"
+        }
+      ],
+      "a": "2",
+      "e": "In a multi-byte UTF-8 encoding, every byte after the first one starts with `10`, so such a byte is a continuation byte. A first byte starts with `0` (one-byte character) or with two or more 1s (multi-byte character)."
+    },
+    {
+      "id": "datarep_0040",
+      "q": "The first byte of a UTF-8 character is `11110xxx`. How many bytes does the whole character occupy?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "3 bytes"
+        },
+        {
+          "i": "2",
+          "x": "5 bytes"
+        },
+        {
+          "i": "3",
+          "x": "4 bytes"
+        },
+        {
+          "i": "4",
+          "x": "2 bytes"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Count the leading 1s of the first byte: `11110xxx` starts with four 1s.",
+        "The number of leading 1s equals the total number of bytes, so the character is made of 4 bytes: the first byte plus 3 continuation bytes (`10xxxxxx`)."
+      ]
+    },
+    {
+      "id": "datarep_0041",
+      "q": "How many bits are available to hold the code point (the x positions) in a 3-byte UTF-8 character?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "24 bits"
+        },
+        {
+          "i": "2",
+          "x": "21 bits"
+        },
+        {
+          "i": "3",
+          "x": "18 bits"
+        },
+        {
+          "i": "4",
+          "x": "16 bits"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "The 3-byte template is `1110xxxx 10xxxxxx 10xxxxxx`.",
+        "The first byte has 4 x positions, because `1110` uses 4 of its 8 bits.",
+        "Each of the two continuation bytes has 6 x positions, because `10` uses 2 of its 8 bits: 6 + 6 = 12.",
+        "Total data bits: 4 + 12 = 16 bits. The other 8 bits (`1110`, `10`, `10`) are control bits."
+      ]
+    },
+    {
+      "id": "datarep_0042",
+      "q": "Which of the following byte sequences is a valid UTF-8 encoding of a single character?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`11010101 10000011 10000011`"
+        },
+        {
+          "i": "2",
+          "x": "`11010101 10000011`"
+        },
+        {
+          "i": "3",
+          "x": "`11010101 11000011`"
+        },
+        {
+          "i": "4",
+          "x": "`10010101 10000011`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Use the first byte to find the length: a first byte starting with `110` means 2 bytes in total, so exactly one continuation byte starting with `10` must follow.",
+        "`11010101 10000011`: first byte starts with `110`, the second starts with `10`, so it is valid.",
+        "`11010101 11000011`: the second byte starts with `11`, not `10`, so it is invalid.",
+        "`10010101 10000011`: the first byte starts with `10`, which is a continuation pattern and cannot start a character, so it is invalid.",
+        "`11010101 10000011 10000011`: after the single required continuation byte there is an extra `10xxxxxx` byte that belongs to no first byte, so it is invalid."
+      ]
+    },
+    {
+      "id": "datarep_0043",
+      "q": "Why is UTF-32 not compatible with ASCII?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Each ASCII character takes 8 bytes instead of 1"
+        },
+        {
+          "i": "2",
+          "x": "UTF-32 cannot represent English letters"
+        },
+        {
+          "i": "3",
+          "x": "UTF-32 gives new numbers to ASCII characters"
+        },
+        {
+          "i": "4",
+          "x": "Each ASCII character takes 4 bytes instead of 1"
+        }
+      ],
+      "a": "4",
+      "e": "UTF-32 stores every character, including those in the ASCII range, on a full 4-byte unit, whereas ASCII uses one byte per character. Because of the different byte layout, ASCII data cannot be read as UTF-32, and the reverse is also true."
+    },
+    {
+      "id": "datarep_0044",
+      "q": "Which problem comes from the fact that UTF-32 stores each character \"as it is\" on 4 bytes?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Characters cannot be counted without scanning the text"
+        },
+        {
+          "i": "2",
+          "x": "Characters below 128 cannot be stored at all"
+        },
+        {
+          "i": "3",
+          "x": "The order of the 4 bytes (endianness) is ambiguous"
+        },
+        {
+          "i": "4",
+          "x": "Characters need a first byte that marks the length"
+        }
+      ],
+      "a": "3",
+      "e": "The 4 bytes of a character can be written with the MSB first or with the LSB first. The same character therefore has two possible byte sequences, and the receiver must know which byte order was used."
+    },
+    {
+      "id": "datarep_0045",
+      "q": "Which of the following is an advantage of UTF-32 compared with variable-length encodings such as UTF-8?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Less storage space needed for English text files"
+        },
+        {
+          "i": "2",
+          "x": "No byte-order problems when exchanging data between machines"
+        },
+        {
+          "i": "3",
+          "x": "Faster operations such as counting characters"
+        },
+        {
+          "i": "4",
+          "x": "Compatibility with existing ASCII files and tools"
+        }
+      ],
+      "a": "3",
+      "e": "In UTF-32 every character has the same size (4 bytes), so operations such as counting characters or jumping to the n-th character are simple. The cost is that it is very wasteful in space, it is not ASCII compatible, and it has the endianness problem."
+    },
+    {
+      "id": "datarep_0046",
+      "q": "Why is UTF-32 problematic in systems that expect null-terminated strings?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Its characters have no marker showing where each character ends"
+        },
+        {
+          "i": "2",
+          "x": "It stores every character with a variable number of bytes in total"
+        },
+        {
+          "i": "3",
+          "x": "It cannot encode the null character in any form at all"
+        },
+        {
+          "i": "4",
+          "x": "Zero bytes inside characters look like the string end"
+        }
+      ],
+      "a": "4",
+      "e": "A null-terminated string ends at the first byte equal to `00000000`. In UTF-32 many characters contain such zero bytes (for example the upper bytes of any small code point), so a program may think the string ended in the middle of a character."
+    },
+    {
+      "id": "datarep_0047",
+      "q": "In the 4-byte value below, written with the most-significant byte on the left, which byte is the LSB (least-significant byte)?\n`10101001 01001010 10101011 10001100`",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "10001100"
+        },
+        {
+          "i": "2",
+          "x": "10101001"
+        },
+        {
+          "i": "3",
+          "x": "01001010"
+        },
+        {
+          "i": "4",
+          "x": "10101011"
+        }
+      ],
+      "a": "1",
+      "e": "The LSB is the byte with the lowest significance, which is the right-most byte: `10001100`. The MSB is the left-most byte: `10101001`."
+    },
+    {
+      "id": "datarep_0048",
+      "q": "Which statement correctly distinguishes big-endian from little-endian when a multi-byte value is stored in memory? Here \"first\" means at the lowest address.",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Big-endian stores the MSB first and little-endian stores the LSB first"
+        },
+        {
+          "i": "2",
+          "x": "Big-endian is used for 64-bit words and little-endian for 32-bit words"
+        },
+        {
+          "i": "3",
+          "x": "Big-endian stores the LSB first and little-endian stores the MSB first"
+        },
+        {
+          "i": "4",
+          "x": "Big-endian reverses the bits inside each byte and little-endian does not"
+        }
+      ],
+      "a": "1",
+      "e": "In big-endian, the most-significant byte (MSB) is stored first, at the lowest address. In little-endian, the least-significant byte (LSB) is stored first, at the lowest address. Neither order is superior to the other."
+    },
+    {
+      "id": "datarep_0049",
+      "q": "The 32-bit hexadecimal value `12345678` is stored at address 100, and then only the single byte at address 100 is loaded. What is the loaded byte?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`78` on both a big-endian and a little-endian machine"
+        },
+        {
+          "i": "2",
+          "x": "`12` on a big-endian machine and `78` on a little-endian machine"
+        },
+        {
+          "i": "3",
+          "x": "`78` on a big-endian machine and `12` on a little-endian machine"
+        },
+        {
+          "i": "4",
+          "x": "`12` on both a big-endian and a little-endian machine"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Divide the value into bytes: `12 34 56 78`.",
+        "Big-endian stores the MSB first, so address 100 holds `12`, 101 holds `34`, 102 holds `56`, and 103 holds `78`.",
+        "Little-endian stores the LSB first, so address 100 holds `78`, 101 holds `56`, 102 holds `34`, and 103 holds `12`.",
+        "Loading only the byte at address 100 therefore gives `12` on a big-endian machine and `78` on a little-endian machine. This is why endianness matters when a multi-byte value is stored and then only a subset of its bytes is loaded."
+      ]
+    },
+    {
+      "id": "datarep_0050",
+      "q": "In which situation must a programmer account for endianness?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Comparing two values of the same size inside one machine's memory"
+        },
+        {
+          "i": "2",
+          "x": "Sending multi-byte data from a big-endian to a little-endian machine"
+        },
+        {
+          "i": "3",
+          "x": "Storing a single byte in memory and then loading the same byte back again"
+        },
+        {
+          "i": "4",
+          "x": "Adding two whole integers that are already held in the processor registers"
+        }
+      ],
+      "a": "2",
+      "e": "Endianness matters when a multi-byte value is stored to memory and a subset of its bytes is loaded, or when such data is sent between machines with different byte orders (for example from a big-endian machine to a little-endian one). A single byte has no byte order, and operations inside one machine on whole values are not affected."
     }
   ]
 }
