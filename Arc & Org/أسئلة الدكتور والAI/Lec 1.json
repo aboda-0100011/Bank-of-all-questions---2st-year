@@ -1342,6 +1342,128 @@
       ],
       "a": "2",
       "e": "Endianness matters when a multi-byte value is stored to memory and a <b>subset of its bytes</b> is loaded, or when such data is <mark>sent between machines</mark> with different byte orders (for example big-endian to little-endian).\nA <b>single byte</b> has no byte order, and operations inside one machine on whole values are not affected."
+    },
+    {
+      "id": "datarep_0051",
+      "q": "Which <b>first-byte</b> pattern identifies a UTF-8 character that is encoded <u>exactly like ASCII</u>?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`0xxxxxxx`"
+        },
+        {
+          "i": "2",
+          "x": "`10xxxxxx`"
+        },
+        {
+          "i": "3",
+          "x": "`110xxxxx`"
+        },
+        {
+          "i": "4",
+          "x": "`1xxxxxxx`"
+        }
+      ],
+      "a": "1",
+      "e": "A UTF-8 character that uses <b>1 byte</b> has the pattern <mark>`0xxxxxxx`</mark>, which covers U+0000 to U+007F and is the <b>same as ASCII</b>.\nThe pattern `10xxxxxx` is a continuation byte, and `110xxxxx` starts a 2-byte character."
+    },
+    {
+      "id": "datarep_0052",
+      "q": "Represent the following code in <b>UTF-8</b>. Separate the bytes in your answer with a <u>space</u>.\n`101 1010 1011`",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "11100000 10010110 10101011"
+        },
+        {
+          "i": "2",
+          "x": "11010110 10101011"
+        },
+        {
+          "i": "3",
+          "x": "10101011 11010110"
+        },
+        {
+          "i": "4",
+          "x": "11010110 11101011"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "<b>Join</b> the groups into one code: `10110101011` (11 bits).",
+        "<b>Choose the template.</b> A 1-byte template holds only 7 data bits, so a <mark>2-byte</mark> template is needed: `110xxxxx 10xxxxxx` (5 + 6 = 11 data bits).",
+        "<b>Fill</b> the x positions starting from the <u>right-most</u> bit:\nLast byte: `101011`\nFirst byte: the remaining 5 bits `10110`",
+        "<b>Result:</b> `11010110 10101011`"
+      ]
+    },
+    {
+      "id": "datarep_0053",
+      "q": "Which of the following processors can work in <b>both</b> big-endian and little-endian modes?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "PowerPC"
+        },
+        {
+          "i": "2",
+          "x": "NIOS"
+        },
+        {
+          "i": "3",
+          "x": "Intel x86/IA-32"
+        },
+        {
+          "i": "4",
+          "x": "Motorola 68k"
+        }
+      ],
+      "a": "1",
+      "e": "<mark>PowerPC</mark> is big-endian by default but supports both byte orders through a <b>mode</b> setting.\nMotorola 68k is big-endian, while Intel x86/IA-32 and NIOS are little-endian."
+    },
+    {
+      "id": "datarep_0054",
+      "q": "The 32-bit hexadecimal value `A1B2C3D4` is stored starting at address `0x20` in a <b>little-endian</b> memory. Which byte is stored at address `0x23`?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`C3`"
+        },
+        {
+          "i": "2",
+          "x": "`B2`"
+        },
+        {
+          "i": "3",
+          "x": "`A1`"
+        },
+        {
+          "i": "4",
+          "x": "`D4`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "<b>Divide</b> the value into bytes: `A1 B2 C3 D4` (MSB = `A1`, LSB = `D4`).",
+        "A little-endian memory stores the <mark>LSB first</mark>, at the lowest address, so the arrangement is: `D4 C3 B2 A1`.",
+        "<b>Assign addresses</b> starting from `0x20`:\n`0x20` holds `D4`, `0x21` holds `C3`,\n`0x22` holds `B2`, `0x23` holds `A1`.",
+        "<b>Result:</b> the byte at address `0x23` is <mark>`A1`</mark> (on a big-endian memory it would be `D4`)."
+      ]
     }
   ]
 }
