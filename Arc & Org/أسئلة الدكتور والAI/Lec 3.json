@@ -1,1 +1,749 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "Arc3_0001",
+      "q": "Convert the binary number `101100` to its decimal equivalent.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "45"},
+        {"i": "2", "x": "52"},
+        {"i": "3", "x": "44"},
+        {"i": "4", "x": "13"}
+      ],
+      "a": "3",
+      "e": [
+        "Write the place value (power of 2) under each bit, starting with $2^0$ at the <b>rightmost</b> bit: $2^5, 2^4, 2^3, 2^2, 2^1, 2^0$ for the digits `1 0 1 1 0 0`.",
+        "Multiply each bit by its place value and add the results:\n$$(101100)_2 = 1 \\times 2^5 + 0 \\times 2^4 + 1 \\times 2^3 + 1 \\times 2^2 + 0 \\times 2^1 + 0 \\times 2^0$$",
+        "Evaluate the powers: $$= 32 + 0 + 8 + 4 + 0 + 0 = 44$$",
+        "<mark>(101100)<sub>2</sub> = (44)<sub>10</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0002",
+      "q": "Convert the binary number `1101` to its decimal equivalent.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "11"},
+        {"i": "2", "x": "13"},
+        {"i": "3", "x": "12"},
+        {"i": "4", "x": "15"}
+      ],
+      "a": "2",
+      "e": [
+        "Write the place values from the right: $2^3, 2^2, 2^1, 2^0$ for the digits `1 1 0 1`.",
+        "Multiply each bit by its place value:\n$$(1101)_2 = 1 \\times 2^3 + 1 \\times 2^2 + 0 \\times 2^1 + 1 \\times 2^0$$",
+        "Evaluate: $$= 8 + 4 + 0 + 1 = 13$$",
+        "<mark>(1101)<sub>2</sub> = (13)<sub>10</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0003",
+      "q": "Convert the decimal number $(50)_{10}$ to its binary equivalent using repeated division by 2.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`110010`"},
+        {"i": "2", "x": "`010011`"},
+        {"i": "3", "x": "`110011`"},
+        {"i": "4", "x": "`101010`"}
+      ],
+      "a": "1",
+      "e": [
+        "Divide by 2 repeatedly and record the <b>remainder</b> of each division until the quotient becomes 0.",
+        "$50 \\div 2 = 25$ remainder $0$",
+        "$25 \\div 2 = 12$ remainder $1$",
+        "$12 \\div 2 = 6$ remainder $0$",
+        "$6 \\div 2 = 3$ remainder $0$",
+        "$3 \\div 2 = 1$ remainder $1$",
+        "$1 \\div 2 = 0$ remainder $1$",
+        "Read the remainders from <b>bottom to top</b>: `1 1 0 0 1 0`.",
+        "Check: $32 + 16 + 2 = 50$.",
+        "<mark>(50)<sub>10</sub> = (110010)<sub>2</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0004",
+      "q": "Convert the decimal number $(23)_{10}$ to its binary equivalent using repeated division by 2.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`10101`"},
+        {"i": "2", "x": "`10011`"},
+        {"i": "3", "x": "`11101`"},
+        {"i": "4", "x": "`10111`"}
+      ],
+      "a": "4",
+      "e": [
+        "Divide by 2 repeatedly and record the remainders:",
+        "$23 \\div 2 = 11$ remainder $1$",
+        "$11 \\div 2 = 5$ remainder $1$",
+        "$5 \\div 2 = 2$ remainder $1$",
+        "$2 \\div 2 = 1$ remainder $0$",
+        "$1 \\div 2 = 0$ remainder $1$",
+        "Read the remainders from <b>bottom to top</b>: `1 0 1 1 1` (reading top to bottom would wrongly give `11101`).",
+        "Check: $16 + 4 + 2 + 1 = 23$.",
+        "<mark>(23)<sub>10</sub> = (10111)<sub>2</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0005",
+      "q": "Convert the hexadecimal number `1A5F` to its decimal equivalent.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "6752"},
+        {"i": "2", "x": "6751"},
+        {"i": "3", "x": "6736"},
+        {"i": "4", "x": "7007"}
+      ],
+      "a": "2",
+      "e": [
+        "Convert the hex letters to decimal values: $A = 10$ and $F = 15$.",
+        "Write the place values $16^3, 16^2, 16^1, 16^0$ under the digits `1 A 5 F`.",
+        "Multiply each digit by its place value:\n$$(1A5F)_{16} = 1 \\times 16^3 + 10 \\times 16^2 + 5 \\times 16^1 + 15 \\times 16^0$$",
+        "Evaluate the powers: $$= 4096 + 2560 + 80 + 15$$",
+        "Add: $$= 6751$$",
+        "<mark>(1A5F)<sub>16</sub> = (6751)<sub>10</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0006",
+      "q": "Convert the hexadecimal number `234` to its decimal equivalent.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "1074"},
+        {"i": "2", "x": "234"},
+        {"i": "3", "x": "564"},
+        {"i": "4", "x": "546"}
+      ],
+      "a": "3",
+      "e": [
+        "Write the place values from the right: $16^2, 16^1, 16^0$ for the digits `2 3 4`.",
+        "Multiply each digit by its place value:\n$$(234)_{16} = 2 \\times 16^2 + 3 \\times 16^1 + 4 \\times 16^0$$",
+        "Evaluate: $$= 2 \\times 256 + 3 \\times 16 + 4 \\times 1 = 512 + 48 + 4$$",
+        "Add: $$= 564$$",
+        "<mark>(234)<sub>16</sub> = (564)<sub>10</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0007",
+      "q": "Convert the decimal number $(56)_{10}$ to its hexadecimal equivalent using repeated division by 16.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`38`"},
+        {"i": "2", "x": "`83`"},
+        {"i": "3", "x": "`34`"},
+        {"i": "4", "x": "`3A`"}
+      ],
+      "a": "1",
+      "e": [
+        "Divide by 16 repeatedly and record the remainders:",
+        "$56 \\div 16 = 3$ remainder $8$",
+        "$3 \\div 16 = 0$ remainder $3$",
+        "Read the remainders from <b>bottom to top</b> (written left to right): `3 8`.",
+        "Check: $3 \\times 16 + 8 = 56$.",
+        "<mark>(56)<sub>10</sub> = (38)<sub>16</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0008",
+      "q": "Convert the decimal number $(145)_{10}$ to its hexadecimal equivalent using repeated division by 16.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`19`"},
+        {"i": "2", "x": "`9A`"},
+        {"i": "3", "x": "`81`"},
+        {"i": "4", "x": "`91`"}
+      ],
+      "a": "4",
+      "e": [
+        "Divide by 16 repeatedly and record the remainders:",
+        "$145 \\div 16 = 9$ remainder $1$",
+        "$9 \\div 16 = 0$ remainder $9$",
+        "Read the remainders from <b>bottom to top</b>: `9 1`.",
+        "Check: $9 \\times 16 + 1 = 145$.",
+        "<mark>(145)<sub>10</sub> = (91)<sub>16</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0009",
+      "q": "Why do we split a binary number into groups of <u>four</u> bits (starting from the right) when converting it to hexadecimal?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Because $16 = 2^3$, so each hex digit corresponds to exactly three bits"},
+        {"i": "2", "x": "Because $16 = 2^4$, so each hex digit corresponds to exactly four bits"},
+        {"i": "3", "x": "Because four bits always give a value from 0 to 9, which hex copies unchanged"},
+        {"i": "4", "x": "Because every hex number must contain a multiple of four digits in total"}
+      ],
+      "a": "2",
+      "e": "Each hexadecimal digit represents one of 16 values (`0` to `F`), and $16 = 2^4$, so exactly <b>four bits</b> are needed per hex digit (the conversion table runs from `0000` to `1111`). Grouping starts from the <b>right</b>, and the leftmost group is padded with zeros if it has fewer than four bits. <mark>1 hex digit = 4 bits</mark>"
+    },
+    {
+      "id": "Arc3_0010",
+      "q": "Convert the binary number `1001001010` to its hexadecimal equivalent.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`928`"},
+        {"i": "2", "x": "`A42`"},
+        {"i": "3", "x": "`24A`"},
+        {"i": "4", "x": "`25A`"}
+      ],
+      "a": "3",
+      "e": [
+        "Split the bits into groups of four starting from the <b>right</b>: `10 0100 1010`.",
+        "Pad the leftmost group with zeros to complete four bits: `0010 0100 1010`.",
+        "Convert each group using the table: `0010` = 2, `0100` = 4, `1010` = A.",
+        "Write the digits in the same order: `2 4 A`. (Grouping from the left would give the wrong answer `928`.)",
+        "<mark>(1001001010)<sub>2</sub> = (24A)<sub>16</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0011",
+      "q": "Convert the hexadecimal number `A5` to its binary equivalent.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`10100101`"},
+        {"i": "2", "x": "`01011010`"},
+        {"i": "3", "x": "`10100110`"},
+        {"i": "4", "x": "`11000101`"}
+      ],
+      "a": "1",
+      "e": [
+        "Replace each hex digit by its 4-bit group from the table: `A` = 10 = `1010`.",
+        "`5` = `0101` (keep the leading zero so the group still has four bits).",
+        "Join the groups in the same order: `1010` followed by `0101`.",
+        "<mark>(A5)<sub>16</sub> = (10100101)<sub>2</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0012",
+      "q": "Convert the binary number `110111101011` to its hexadecimal equivalent.",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`BED`"},
+        {"i": "2", "x": "`DEA`"},
+        {"i": "3", "x": "`CEB`"},
+        {"i": "4", "x": "`DEB`"}
+      ],
+      "a": "4",
+      "e": [
+        "The number has 12 bits, so it splits exactly into three groups of four: `1101 1110 1011`.",
+        "Convert each group: `1101` = 13 = D, `1110` = 14 = E, `1011` = 11 = B.",
+        "Write the digits in order: `D E B`.",
+        "<mark>(110111101011)<sub>2</sub> = (DEB)<sub>16</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0013",
+      "q": "Convert the hexadecimal number `1C3` to its decimal equivalent.",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "467"},
+        {"i": "2", "x": "223"},
+        {"i": "3", "x": "451"},
+        {"i": "4", "x": "961"}
+      ],
+      "a": "3",
+      "e": [
+        "Convert the hex letter: $C = 12$.",
+        "Multiply each digit by its place value:\n$$(1C3)_{16} = 1 \\times 16^2 + 12 \\times 16^1 + 3 \\times 16^0$$",
+        "Evaluate: $$= 256 + 192 + 3 = 451$$",
+        "<mark>(1C3)<sub>16</sub> = (451)<sub>10</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0014",
+      "q": "Using <b>sign-magnitude</b> representation with 8 bits, where $+18 = $ `00010010`, what is the representation of $-18$?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`00010010`"},
+        {"i": "2", "x": "`10010010`"},
+        {"i": "3", "x": "`11101110`"},
+        {"i": "4", "x": "`11101101`"}
+      ],
+      "a": "2",
+      "e": [
+        "Write the magnitude of 18 in 8 bits: $18 = 16 + 2$, so `00010010`.",
+        "In sign-magnitude, the leftmost bit (<b>MSB</b>) is the sign: `0` for positive and `1` for negative.",
+        "Keep the magnitude bits unchanged and only set the sign bit to `1`: `1 0010010`.",
+        "<mark>-18 = 10010010 (sign-magnitude)</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0015",
+      "q": "The decimal value of the byte `#E8` (given in hex) when it is interpreted in <b>sign-magnitude</b> code is:",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "-104"},
+        {"i": "2", "x": "104"},
+        {"i": "3", "x": "-24"},
+        {"i": "4", "x": "-23"}
+      ],
+      "a": "1",
+      "e": [
+        "Convert hex to binary: `E` = `1110` and `8` = `1000`, so the byte is `1110 1000`.",
+        "The MSB is `1`, so the number is <b>negative</b>.",
+        "The remaining 7 bits are the magnitude: `1101000`.",
+        "Convert the magnitude to decimal:\n$$1 \\times 2^6 + 1 \\times 2^5 + 0 \\times 2^4 + 1 \\times 2^3 + 0 + 0 + 0 = 64 + 32 + 8 = 104$$",
+        "Apply the sign: <mark>#E8 = -104</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0016",
+      "q": "The byte `#96` is interpreted in <b>sign-magnitude</b> code. What is its decimal value?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "22"},
+        {"i": "2", "x": "-106"},
+        {"i": "3", "x": "-105"},
+        {"i": "4", "x": "-22"}
+      ],
+      "a": "4",
+      "e": [
+        "Convert hex to binary: `9` = `1001` and `6` = `0110`, so the byte is `1001 0110`.",
+        "The MSB is `1`, so the number is <b>negative</b>.",
+        "The magnitude bits are `0010110`:\n$$0 \\times 2^6 + 0 \\times 2^5 + 1 \\times 2^4 + 0 \\times 2^3 + 1 \\times 2^2 + 1 \\times 2^1 + 0 \\times 2^0 = 16 + 4 + 2 = 22$$",
+        "Apply the sign: <mark>#96 = -22</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0017",
+      "q": "In the 4-bit <b>1's complement</b> table, the lecture points out the problem $0 \\neq -0$. What does this problem mean?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Zero has no representation because `0000` and `1111` are both unused"},
+        {"i": "2", "x": "The range is not symmetric, because there is one extra negative value"},
+        {"i": "3", "x": "Zero has two representations: `0000` as +0 and `1111` as -0"},
+        {"i": "4", "x": "The negation rule needs an extra addition step that can overflow"}
+      ],
+      "a": "3",
+      "e": "In 1's complement, negation is done by <b>inverting all bits</b>. Inverting `0000` (+0) gives `1111`, which is read as -0. So zero has <u>two</u> different patterns, which wastes one pattern and complicates comparison with zero. <mark>Two representations of zero</mark>"
+    },
+    {
+      "id": "Arc3_0018",
+      "q": "Find the <b>1's complement</b> of the binary number `10001.001`.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`01110.111`"},
+        {"i": "2", "x": "`01110.110`"},
+        {"i": "3", "x": "`10001.110`"},
+        {"i": "4", "x": "`01110.001`"}
+      ],
+      "a": "2",
+      "e": [
+        "The 1's complement rule is to <b>invert every bit</b> (0 becomes 1, 1 becomes 0), including the fractional bits. The binary point stays in the same place.",
+        "Integer part: `10001` becomes `01110`.",
+        "Fractional part: `001` becomes `110`.",
+        "Do <u>not</u> add 1 (that step belongs to 2's complement only).",
+        "<mark>1's complement of 10001.001 = 01110.110</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0019",
+      "q": "Which 8-bit pattern represents $-45$ in <b>1's complement</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`10101101`"},
+        {"i": "2", "x": "`11010011`"},
+        {"i": "3", "x": "`00101101`"},
+        {"i": "4", "x": "`11010010`"}
+      ],
+      "a": "4",
+      "e": [
+        "Write +45 in 8 bits: $45 = 32 + 8 + 4 + 1$, so `00101101`.",
+        "To negate in 1's complement, invert all bits: `00101101` becomes `11010010`.",
+        "Check with the weights $-127, 64, 32, 16, 8, 4, 2, 1$: $$-127 + 64 + 16 + 2 = -45$$",
+        "<mark>-45 = 11010010 (1's complement)</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0020",
+      "q": "An 8-bit 1's complement register uses the bit weights $-127, 64, 32, 16, 8, 4, 2, 1$. What is the decimal value of `10011010`?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "-102"},
+        {"i": "2", "x": "-26"},
+        {"i": "3", "x": "154"},
+        {"i": "4", "x": "-101"}
+      ],
+      "a": "4",
+      "e": [
+        "Match the bits `1 0 0 1 1 0 1 0` with the weights $-127, 64, 32, 16, 8, 4, 2, 1$.",
+        "Only the weights under the `1` bits are added: $-127$, $16$, $8$ and $2$.",
+        "Add them: $$-127 + 16 + 8 + 2 = -127 + 26 = -101$$",
+        "Check by inversion: inverting `10011010` gives `01100101` $= 64 + 32 + 4 + 1 = 101$, so the value is $-101$.",
+        "<mark>(10011010) in 1's complement = -101</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0021",
+      "q": "According to the 4-bit <b>2's complement</b> table, the negation rule is: invert the bits and add 1. Applying this rule to `0100` (+4) gives:",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`1011`"},
+        {"i": "2", "x": "`1100`"},
+        {"i": "3", "x": "`1101`"},
+        {"i": "4", "x": "`0101`"}
+      ],
+      "a": "2",
+      "e": [
+        "Start with +4: `0100`.",
+        "<b>Invert</b> all bits: `0100` becomes `1011` (this is the 1's complement).",
+        "<b>Add 1</b>: $1011 + 0001 = 1100$ in binary.",
+        "Check with the weights $-8, 4, 2, 1$: $$-8 + 4 = -4$$",
+        "<mark>-4 = 1100 (2's complement)</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0022",
+      "q": "Find the <b>2's complement</b> of the binary number `11100011`.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`00011100`"},
+        {"i": "2", "x": "`00011110`"},
+        {"i": "3", "x": "`00011101`"},
+        {"i": "4", "x": "`11100100`"}
+      ],
+      "a": "3",
+      "e": [
+        "<b>Invert</b> all bits: `11100011` becomes `00011100`.",
+        "<b>Add 1</b> to the result:\n```\n  00011100\n+        1\n----------\n  00011101\n```",
+        "Check: `11100011` in 2's complement is $-128 + 64 + 32 + 2 + 1 = -29$, and `00011101` is $16 + 8 + 4 + 1 = 29$, so the two numbers are negatives of each other.",
+        "<mark>2's complement of 11100011 = 00011101</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0023",
+      "q": "Which 8-bit pattern represents $-20$ in <b>2's complement</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`11101100`"},
+        {"i": "2", "x": "`11101011`"},
+        {"i": "3", "x": "`10010100`"},
+        {"i": "4", "x": "`00010100`"}
+      ],
+      "a": "1",
+      "e": [
+        "Write +20 in 8 bits: $20 = 16 + 4$, so `00010100`.",
+        "<b>Invert</b> all bits: `00010100` becomes `11101011`.",
+        "<b>Add 1</b>: $11101011 + 1 = 11101100$.",
+        "Check with the weights $-128, 64, 32, 16, 8, 4, 2, 1$: $$-128 + 64 + 32 + 8 + 4 = -20$$",
+        "<mark>-20 = 11101100 (2's complement)</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0024",
+      "q": "What is the decimal value of the 8-bit <b>2's complement</b> number `11110110`?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "-9"},
+        {"i": "2", "x": "-118"},
+        {"i": "3", "x": "246"},
+        {"i": "4", "x": "-10"}
+      ],
+      "a": "4",
+      "e": [
+        "The MSB is `1`, so the number is <b>negative</b>. To find its magnitude, negate it again using the same rule (invert and add 1).",
+        "<b>Invert</b>: `11110110` becomes `00001001`.",
+        "<b>Add 1</b>: $00001001 + 1 = 00001010$.",
+        "Convert the magnitude: $00001010 = 8 + 2 = 10$.",
+        "Check with the weights: $$-128 + 64 + 32 + 16 + 4 + 2 = -10$$",
+        "<mark>(11110110) in 2's complement = -10</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0025",
+      "q": "The 3-bit pattern `100` has a different meaning in each of the three signed representations. What is its value in <b>1's complement</b>?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "-0"},
+        {"i": "2", "x": "-3"},
+        {"i": "3", "x": "-4"},
+        {"i": "4", "x": "-1"}
+      ],
+      "a": "2",
+      "e": [
+        "The MSB of `100` is `1`, so the number is negative.",
+        "In 1's complement, find the magnitude by inverting all bits: `100` becomes `011` $= 3$.",
+        "So `100` in 1's complement is $-3$ (this matches the 1's complement table: `100 = -3`).",
+        "For comparison, the same pattern is $-0$ in sign-magnitude and $-4$ in 2's complement.",
+        "<mark>100 = -3 (1's complement)</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0026",
+      "q": "Looking at the three 3-bit tables (sign-magnitude, 1's complement and 2's complement), which feature makes <b>2's complement</b> the <u>preferred</u> representation?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It has two representations of zero, so comparisons with zero are faster"},
+        {"i": "2", "x": "It stores the sign in a separate bit that is never part of the value"},
+        {"i": "3", "x": "It has a single representation of zero, so no bit pattern is wasted"},
+        {"i": "4", "x": "It represents an equal number of positive and negative non-zero values"}
+      ],
+      "a": "3",
+      "e": "In the 3-bit 2's complement table, `000` is the only zero and the eight patterns map to eight distinct values from $-4$ to $+3$. Sign-magnitude (`000` and `100`) and 1's complement (`000` and `111`) both waste a pattern on a second zero. <mark>2's complement has only one zero</mark>"
+    },
+    {
+      "id": "Arc3_0027",
+      "q": "Extend the 4-bit <b>sign-magnitude</b> number `1101` ($-5$) to 8 bits.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`10000101`"},
+        {"i": "2", "x": "`11111101`"},
+        {"i": "3", "x": "`00001101`"},
+        {"i": "4", "x": "`10001101`"}
+      ],
+      "a": "1",
+      "e": [
+        "Split the 4-bit number: sign bit `1` and magnitude `101` $(= 5)$.",
+        "In sign-magnitude, keep the sign bit at the far left and <b>fill the missing places with zeros</b> between the sign bit and the magnitude.",
+        "Four new places are needed: `1` + `0000` + `101` gives `10000101`. (The positive case works the same way: `0101` becomes `00000101`.)",
+        "Check: the magnitude `0000101` $= 5$ and the sign bit is `1`, so the value is $-5$.",
+        "<mark>1101 extended to 8 bits = 10000101</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0028",
+      "q": "Extend the 4-bit <b>1's complement</b> number `1101` ($-2$) to 8 bits.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`10000010`"},
+        {"i": "2", "x": "`00001101`"},
+        {"i": "3", "x": "`11111110`"},
+        {"i": "4", "x": "`11111101`"}
+      ],
+      "a": "4",
+      "e": [
+        "Verify the 4-bit value: invert `1101` to get `0010` $= 2$, so the number is $-2$.",
+        "For 1's complement, extend by <b>copying the sign bit</b> into the new left-most places. The sign bit is `1`, so add four `1`s: `1111` + `1101`.",
+        "Check the 8-bit result: inverting `11111101` gives `00000010` $= 2$, so the value is still $-2$.",
+        "<mark>1101 extended to 8 bits = 11111101</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0029",
+      "q": "Extend the 4-bit <b>2's complement</b> number `1101` ($-3$) to 8 bits.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`11111100`"},
+        {"i": "2", "x": "`10000011`"},
+        {"i": "3", "x": "`11111101`"},
+        {"i": "4", "x": "`00001101`"}
+      ],
+      "a": "3",
+      "e": [
+        "Verify the 4-bit value with the weights $-8, 4, 2, 1$: $$-8 + 4 + 0 + 1 = -3$$",
+        "For 2's complement, extend by <b>copying the sign bit</b> into the new left-most places: `1111` + `1101`.",
+        "Check the 8-bit result: invert `11111101` to get `00000010`, then add 1 to get `00000011` $= 3$, so the value is still $-3$.",
+        "Note: the pattern `11111101` means $-2$ in 1's complement but $-3$ in 2's complement.",
+        "<mark>1101 extended to 8 bits = 11111101</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0030",
+      "q": "Which statement about extending a <u>negative</u> number from 4 to 8 bits is correct?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Sign-magnitude copies the sign bit into new places; 1's and 2's complement insert zeros"},
+        {"i": "2", "x": "Sign-magnitude inserts zeros after the sign bit; 1's and 2's complement copy the sign bit"},
+        {"i": "3", "x": "All three formats fill the new places with ones whenever the number is negative"},
+        {"i": "4", "x": "All three formats fill the new places with zeros whatever the sign of the number"}
+      ],
+      "a": "2",
+      "e": "In sign-magnitude the sign bit stays at the far left and zeros are inserted between it and the magnitude (`1101` becomes `10000101`). In 1's and 2's complement the <b>sign bit is copied</b> into the new places (`1101` becomes `11111101`). <mark>Sign-magnitude uses zero-fill after the sign; complements use sign copying</mark>"
+    },
+    {
+      "id": "Arc3_0031",
+      "q": "The fractional binary number `0.1101` is equal to a proper irreducible decimal fraction $A/B$. What is $A/B$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "13/16"},
+        {"i": "2", "x": "7/8"},
+        {"i": "3", "x": "11/16"},
+        {"i": "4", "x": "9/16"}
+      ],
+      "a": "1",
+      "e": [
+        "Fractional bits have weights $2^{-1}, 2^{-2}, 2^{-3}, 2^{-4}$, i.e. $\\frac{1}{2}, \\frac{1}{4}, \\frac{1}{8}, \\frac{1}{16}$.",
+        "Multiply each bit of `0.1101` by its weight:\n$$0.1101 = \\frac{1}{2} \\times 1 + \\frac{1}{4} \\times 1 + \\frac{1}{8} \\times 0 + \\frac{1}{16} \\times 1$$",
+        "Use a common denominator: $$= \\frac{8 + 4 + 0 + 1}{16} = \\frac{13}{16}$$",
+        "13 is prime and does not divide 16, so the fraction is already irreducible.",
+        "<mark>(0.1101)<sub>2</sub> = 13/16</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0032",
+      "q": "Convert $(0.45)_{10}$ to binary using repeated multiplication by 2. Which are the first six fractional bits?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`011001`"},
+        {"i": "2", "x": "`001110`"},
+        {"i": "3", "x": "`111000`"},
+        {"i": "4", "x": "`011100`"}
+      ],
+      "a": "4",
+      "e": [
+        "Multiply the <b>fractional part</b> by 2 each time. The integer part of the product is the next bit, written from left to right.",
+        "$0.45 \\times 2 = 0.9$ gives bit `0`.",
+        "$0.9 \\times 2 = 1.8$ gives bit `1` (continue with $0.8$).",
+        "$0.8 \\times 2 = 1.6$ gives bit `1` (continue with $0.6$).",
+        "$0.6 \\times 2 = 1.2$ gives bit `1` (continue with $0.2$).",
+        "$0.2 \\times 2 = 0.4$ gives bit `0`.",
+        "$0.4 \\times 2 = 0.8$ gives bit `0`.",
+        "The value $0.8$ has appeared before, so the pattern repeats forever. This is why binary fractions are <b>not accurate</b> and cause rounding errors.",
+        "<mark>(0.45)<sub>10</sub> ≈ (0.011100)<sub>2</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0033",
+      "q": "Convert $(0.625)_{10}$ to binary using repeated multiplication by 2.",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`0.110`"},
+        {"i": "2", "x": "`0.011`"},
+        {"i": "3", "x": "`0.101`"},
+        {"i": "4", "x": "`0.111`"}
+      ],
+      "a": "3",
+      "e": [
+        "$0.625 \\times 2 = 1.25$ gives bit `1` (continue with $0.25$).",
+        "$0.25 \\times 2 = 0.5$ gives bit `0` (continue with $0.5$).",
+        "$0.5 \\times 2 = 1.0$ gives bit `1`, and the fractional part is now $0$, so we stop.",
+        "Check using weights: $$2^{-1} + 2^{-3} = 0.5 + 0.125 = 0.625$$",
+        "<mark>(0.625)<sub>10</sub> = (0.101)<sub>2</sub></mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0034",
+      "q": "Using the repeated multiplication by 2 method, which decimal fraction can be written <u>exactly</u> with a finite number of binary fractional bits?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "0.425"},
+        {"i": "2", "x": "0.375"},
+        {"i": "3", "x": "0.325"},
+        {"i": "4", "x": "0.475"}
+      ],
+      "a": "2",
+      "e": [
+        "A fraction has a finite binary expansion only when the multiplication process reaches a fractional part of exactly $0$ (this is the case when the value is a sum of powers $2^{-n}$).",
+        "$0.375 \\times 2 = 0.75$ gives `0`; $0.75 \\times 2 = 1.5$ gives `1`; $0.5 \\times 2 = 1.0$ gives `1` and the process stops. So $0.375 = 0.011$ exactly (check: $0.25 + 0.125$).",
+        "$0.425$: the fractional parts go $0.85, 0.7, 0.4, 0.8, 0.6, 0.2, 0.4, \\dots$, so $0.4$ repeats and the process never stops.",
+        "$0.325$ and $0.475$ also repeat forever, like the lecture's example $0.45$, so they can only be approximated (rounding error).",
+        "<mark>Only 0.375 is exact in binary</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0035",
+      "q": "A fixed-point type is described by `fixed<w,b>`, where $w$ is the total width in bits and $b$ is the binary point position. How many integer bits and fractional bits does `Fixed<8,2>` = `xxxxxx.xx` have?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "6 integer bits and 2 fractional bits"},
+        {"i": "2", "x": "2 integer bits and 6 fractional bits"},
+        {"i": "3", "x": "8 integer bits and 2 fractional bits"},
+        {"i": "4", "x": "4 integer bits and 4 fractional bits"}
+      ],
+      "a": "1",
+      "e": [
+        "$w = 8$ is the <b>total</b> number of bits and $b = 2$ is the position of the binary point, i.e. the number of bits after the point.",
+        "Fractional bits $= 2$, so integer bits $= 8 - 2 = 6$.",
+        "This matches the pattern `xxxxxx.xx` (six bits, a point, then two bits).",
+        "<mark>6 integer bits + 2 fractional bits</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0036",
+      "q": "In the fixed-point format `fixed<8,3>`, what is the unsigned decimal value of `01101.100`?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "13.25"},
+        {"i": "2", "x": "3.375"},
+        {"i": "3", "x": "108"},
+        {"i": "4", "x": "13.5"}
+      ],
+      "a": "4",
+      "e": [
+        "In `fixed<8,3>`, there are 3 fractional bits, so there are $8 - 3 = 5$ integer bits: `01101.100`.",
+        "Integer part: $$0 \\times 2^4 + 1 \\times 2^3 + 1 \\times 2^2 + 0 \\times 2^1 + 1 \\times 2^0 = 8 + 4 + 1 = 13$$",
+        "Fractional part: $$1 \\times 2^{-1} + 0 \\times 2^{-2} + 0 \\times 2^{-3} = 0.5$$",
+        "Add both parts: $13 + 0.5 = 13.5$.",
+        "<mark>01101.100 = 13.5</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0037",
+      "q": "What is the fixed-point representation of $6.75$ using 4 integer bits and 4 fraction bits?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`0110.0110`"},
+        {"i": "2", "x": "`0110.0011`"},
+        {"i": "3", "x": "`0110.1100`"},
+        {"i": "4", "x": "`0111.1100`"}
+      ],
+      "a": "3",
+      "e": [
+        "Integer part: $6 = 4 + 2$, so with 4 bits it is `0110`.",
+        "Fractional part $0.75$: $0.75 \\times 2 = 1.5$ gives `1`; then $0.5 \\times 2 = 1.0$ gives `1`. So $0.75 = 0.11$.",
+        "Pad the fraction to 4 bits with zeros on the right: `1100`.",
+        "Combine the parts: `0110.1100` (stored as `01101100`).",
+        "Check: $$2^2 + 2^1 + 2^{-1} + 2^{-2} = 4 + 2 + 0.5 + 0.25 = 6.75$$",
+        "<mark>6.75 = 0110.1100</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0038",
+      "q": "Represent $-2.375$ using 8 bits (4 bits for the integer part and 4 bits for the fractional part) in <b>sign-magnitude</b> notation.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`1101 1010`"},
+        {"i": "2", "x": "`1010 0110`"},
+        {"i": "3", "x": "`0010 0110`"},
+        {"i": "4", "x": "`1010 1001`"}
+      ],
+      "a": "2",
+      "e": [
+        "Convert the integer part: $2 = 0010$ (4 bits).",
+        "Convert the fractional part $0.375$: $0.375 \\times 2 = 0.75$ gives `0`; $0.75 \\times 2 = 1.5$ gives `1`; $0.5 \\times 2 = 1.0$ gives `1`. So $0.375 = 0.011$, padded to 4 bits: `0110`.",
+        "So $2.375 = $ `0010.0110`.",
+        "In sign-magnitude, keep the magnitude bits and only change the sign bit (the MSB) to `1`: `1010 0110`.",
+        "<mark>-2.375 = 1010 0110 (sign-magnitude)</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0039",
+      "q": "Represent $-2.375$ using 8 bits (4 bits for the integer part and 4 bits for the fractional part) in <b>two's complement</b> notation.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`1101 1010`"},
+        {"i": "2", "x": "`1101 1001`"},
+        {"i": "3", "x": "`1101 1011`"},
+        {"i": "4", "x": "`0010 0110`"}
+      ],
+      "a": "1",
+      "e": [
+        "Write the positive number in the same format: $2.375 = $ `0010.0110`, i.e. `0010 0110`.",
+        "<b>Flip all the bits</b>: `0010 0110` becomes `1101 1001`.",
+        "<b>Add 1</b> at the last bit position:\n```\n  1101 1001\n+         1\n-----------\n  1101 1010\n```",
+        "Check with the weights $-8, 4, 2, 1$ for the integer part and $\\frac{1}{2}, \\frac{1}{4}, \\frac{1}{8}, \\frac{1}{16}$ for the fraction: $$(-8 + 4 + 1) + (0.5 + 0.125) = -3 + 0.625 = -2.375$$",
+        "<mark>-2.375 = 1101 1010 (two's complement)</mark>"
+      ]
+    },
+    {
+      "id": "Arc3_0040",
+      "q": "Represent $-1.5$ using 8 bits (4 integer bits and 4 fractional bits) in <b>two's complement</b> notation.",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "`1110 0111`"},
+        {"i": "2", "x": "`1001 1000`"},
+        {"i": "3", "x": "`0001 1000`"},
+        {"i": "4", "x": "`1110 1000`"}
+      ],
+      "a": "4",
+      "e": [
+        "Convert the integer part: $1 = 0001$ (4 bits).",
+        "Convert the fractional part: $0.5 \\times 2 = 1.0$ gives `1`, so $0.5 = 0.1$, padded to 4 bits: `1000`.",
+        "So $1.5 = $ `0001.1000`, i.e. `0001 1000`.",
+        "<b>Flip all the bits</b>: `0001 1000` becomes `1110 0111`.",
+        "<b>Add 1</b> at the last bit position: `1110 0111` + `1` = `1110 1000`.",
+        "Check: the integer bits `1110` $= -8 + 4 + 2 = -2$ and the fraction `.1000` $= 0.5$, so $-2 + 0.5 = -1.5$.",
+        "<mark>-1.5 = 1110 1000 (two's complement)</mark>"
+      ]
+    }
+  ]
+}
