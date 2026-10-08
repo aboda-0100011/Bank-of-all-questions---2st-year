@@ -1,1 +1,508 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "DSA3_0001",
+      "q": "Why can a very large array fail to be allocated even when the total amount of free memory is sufficient?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Free memory may be fragmented, and an array needs one contiguous block"},
+        {"i": "2", "x": "Arrays must store a pointer to the next element, which doubles their size"},
+        {"i": "3", "x": "Arrays can only be allocated when their size is a power of two"},
+        {"i": "4", "x": "Arrays are stored in non-contiguous blocks, which are scarce in memory"}
+      ],
+      "a": "1",
+      "e": "An array requires <b>contiguous memory</b>. If the free memory is split into small separate pieces, no single piece may be large enough, even though the total free space is enough. <mark>Linked lists avoid this problem because their nodes can be stored anywhere in memory.</mark>"
+    },
+    {
+      "id": "DSA3_0002",
+      "q": "In a singly linked list, why is accessing the element at position $k$ an $O(n)$ operation, unlike in an array where it is $O(1)$?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Each node stores its own index, which must be recomputed on every access"},
+        {"i": "2", "x": "The list must first be copied into contiguous memory before indexing"},
+        {"i": "3", "x": "Nodes can only be reached by following next references from the head one by one"},
+        {"i": "4", "x": "The nodes are stored in sorted order and need a binary search to be found"}
+      ],
+      "a": "3",
+      "e": [
+        "An array stores elements contiguously, so the address of element $k$ is computed directly (random access) in $O(1)$.",
+        "A linked list stores nodes in non-contiguous locations, so there is no formula that gives the address of node $k$.",
+        "The only way to reach node $k$ is to start at the head and follow the <b>next</b> reference $k$ times.",
+        "<mark>This sequential access costs $O(n)$ in the worst case.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0003",
+      "q": "Which pair of components makes up a single node of a singly linked list?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "An index and the value of the element"},
+        {"i": "2", "x": "The element's data and a reference to the next node"},
+        {"i": "3", "x": "The element's data and a reference to the previous node"},
+        {"i": "4", "x": "A reference to the head and a reference to the tail"}
+      ],
+      "a": "2",
+      "e": "Each node of a singly linked list holds the <b>data</b> (the element) and a <b>reference</b> that stores the address of the next node. <mark>A reference to the previous node exists only in doubly linked lists.</mark>"
+    },
+    {
+      "id": "DSA3_0004",
+      "q": "While traversing a singly linked list from its head, how can the <b>tail</b> be identified?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It is the node whose data field is `None`"},
+        {"i": "2", "x": "It is the node that the head references directly"},
+        {"i": "3", "x": "It is the node whose next reference points back to the head"},
+        {"i": "4", "x": "It is the node whose next reference is `None`"}
+      ],
+      "a": "4",
+      "e": "Starting at the head and following each next reference eventually reaches a node whose next reference is `None`. <mark>That node is the tail.</mark> (Pointing back to the head is the property of a <i>circularly</i> linked list.)"
+    },
+    {
+      "id": "DSA3_0005",
+      "q": "A singly linked list keeps only a head reference. What is the main benefit of also storing an explicit <b>tail</b> reference?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Elements can be accessed by index in $O(1)$ time"},
+        {"i": "2", "x": "Nodes no longer need to store a next reference"},
+        {"i": "3", "x": "The last node is reached directly, without traversing the list"},
+        {"i": "4", "x": "Insertion at the head becomes faster than before"}
+      ],
+      "a": "3",
+      "e": [
+        "With only a head reference, reaching the last node requires following $n-1$ next references.",
+        "An explicit tail reference gives direct access to the last node, so operations such as <b>add_last</b> do not need to traverse the list.",
+        "Insertion at the head was already $O(1)$, and the nodes still need their next references.",
+        "<mark>The tail reference avoids traversing the list to find the last node.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0006",
+      "q": "In <b>add_first</b>, the lecture runs `newest.next = L.head` first and only then `L.head = newest`. What happens if these two statements are <u>swapped</u>?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "The new node's next references itself, so the old nodes are lost"},
+        {"i": "2", "x": "The new node is inserted at the tail instead of the head"},
+        {"i": "3", "x": "The list works normally, because the order does not matter"},
+        {"i": "4", "x": "The size counter becomes wrong, but all links stay correct"}
+      ],
+      "a": "1",
+      "e": [
+        "After the swap, `L.head = newest` runs first, so the head now references the new node.",
+        "Then `newest.next = L.head` reads the head, which is now `newest` itself.",
+        "So the new node's next references itself, and the old first node is no longer reachable from the head.",
+        "<mark>The order matters: first link the new node to the old head, then move the head.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0007",
+      "q": "A singly linked list (with head, tail and size) holds `MSP -> ATL -> BOS` with `size = 3`. The operations `add_first(L, 'LAX')` and then `add_last(L, 'MIA')` are performed. What are the final order of nodes and the size?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`MIA -> LAX -> MSP -> ATL -> BOS`, size 5"},
+        {"i": "2", "x": "`LAX -> MSP -> ATL -> BOS -> MIA`, size 5"},
+        {"i": "3", "x": "`LAX -> MSP -> ATL -> BOS -> MIA`, size 4"},
+        {"i": "4", "x": "`MSP -> ATL -> BOS -> LAX -> MIA`, size 5"}
+      ],
+      "a": "2",
+      "e": [
+        "Initial list: `MSP -> ATL -> BOS`, `size = 3`.",
+        "`add_first(L, 'LAX')`: the new node points to the old head `MSP` and becomes the head, so the list is `LAX -> MSP -> ATL -> BOS` and `size = 4`.",
+        "`add_last(L, 'MIA')`: the old tail `BOS` points to the new node, which becomes the tail, so the list is `LAX -> MSP -> ATL -> BOS -> MIA` and `size = 5`.",
+        "<mark>Final list: `LAX -> MSP -> ATL -> BOS -> MIA`, with size 5.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0008",
+      "q": "Why does LinkedStack place the top of the stack at the <u>head</u> of the list rather than at the tail?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Nodes at the tail of a list cannot store data elements"},
+        {"i": "2", "x": "A singly linked list cannot be modified at its tail at all"},
+        {"i": "3", "x": "The head node is always allocated before all other nodes"},
+        {"i": "4", "x": "Constant-time insertion and deletion are possible only at the head"}
+      ],
+      "a": "4",
+      "e": [
+        "Insertion at the head is $O(1)$: create a node and make it point to the old head.",
+        "Deletion at the head is $O(1)$: move the head to the next node.",
+        "Deleting the tail would require finding the node before it, and a singly linked list cannot move backwards, so a traversal of $O(n)$ would be needed.",
+        "<mark>So the top of the stack is kept at the head, where push and pop take constant time.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0009",
+      "q": "Why can a linked list grow without declaring its size in advance?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It reserves a large contiguous block and doubles it when full"},
+        {"i": "2", "x": "It shifts all existing elements to make room for a new one"},
+        {"i": "3", "x": "Nodes are allocated one at a time and linked as elements are added"},
+        {"i": "4", "x": "Each node reserves space for all the elements that may come later"}
+      ],
+      "a": "3",
+      "e": "A linked list allocates memory <b>one node at a time</b>, only when an element is added, and connects the new node using references. <mark>Therefore its size is dynamic and no space is wasted in advance.</mark>"
+    },
+    {
+      "id": "DSA3_0010",
+      "q": "Consider the following code:\n```python\ns = LinkedStack()\ns.push(5)\ns.push(8)\ns.push(3)\ns.pop()\n```\nWhat does `s.top()` return now, and what is `len(s)`?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`3` and `2`"},
+        {"i": "2", "x": "`8` and `2`"},
+        {"i": "3", "x": "`5` and `2`"},
+        {"i": "4", "x": "`8` and `3`"}
+      ],
+      "a": "2",
+      "e": [
+        "`push(5)`: the stack is `5` (top), size 1.",
+        "`push(8)`: the new node becomes the head, so the stack is `8, 5` (top first), size 2.",
+        "`push(3)`: the stack is `3, 8, 5`, size 3.",
+        "`pop()`: removes and returns the top element `3`; the head moves to the node holding `8`, and size becomes 2.",
+        "<mark>`s.top()` returns `8` and `len(s)` is `2`.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0011",
+      "q": "How do the time bounds of LinkedStack operations compare with those of ArrayStack?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "LinkedStack operations are amortized $O(1)$, while ArrayStack gives worst-case $O(1)$"},
+        {"i": "2", "x": "Both structures take $O(n)$ in the worst case for every `push`"},
+        {"i": "3", "x": "LinkedStack operations are worst-case $O(1)$, while ArrayStack gives amortized $O(1)$"},
+        {"i": "4", "x": "LinkedStack `pop` takes $O(n)$ because it must traverse to the tail"}
+      ],
+      "a": "3",
+      "e": [
+        "Every LinkedStack method (`push`, `pop`, `top`, `len`, `is_empty`) does a fixed number of steps, so each runs in <b>worst-case</b> $O(1)$.",
+        "ArrayStack occasionally has to resize its underlying array, which costs $O(n)$ for that single operation, so its bound is only <b>amortized</b> $O(1)$.",
+        "<mark>LinkedStack: worst-case constant time; ArrayStack: amortized constant time.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0012",
+      "q": "What does the single statement `self._head = self._Node(e, self._head)` do inside `push`?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It creates a node whose next is the old head, then makes it the new head"},
+        {"i": "2", "x": "It creates a node at the tail and links the old head after it"},
+        {"i": "3", "x": "It replaces the data stored in the current head node with `e`"},
+        {"i": "4", "x": "It creates a node whose next is `None` and discards the old head"}
+      ],
+      "a": "1",
+      "e": [
+        "The right side `self._Node(e, self._head)` creates a node storing `e` whose next reference is the <b>old head</b>.",
+        "The assignment then makes `self._head` reference this new node.",
+        "<mark>The new node is linked in front of the old nodes, which is exactly what a push at the top of the stack needs.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0013",
+      "q": "Why does LinkedQueue maintain <u>both</u> `_head` and `_tail` references, while LinkedStack needs only `_head`?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Queue nodes need two references to store their elements"},
+        {"i": "2", "x": "A queue must be traversed from tail to head on every operation"},
+        {"i": "3", "x": "A stack cannot keep a reference to a tail node"},
+        {"i": "4", "x": "Queue operations work on both ends: enqueue at the tail, dequeue at the head"}
+      ],
+      "a": "4",
+      "e": [
+        "A stack inserts and removes at the same end (the head), so a head reference is enough.",
+        "A queue is FIFO: <b>dequeue</b> removes from the head and <b>enqueue</b> adds at the tail.",
+        "Without a tail reference, every enqueue would have to traverse the list to find the last node.",
+        "<mark>Keeping both references makes both queue operations $O(1)$.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0014",
+      "q": "A new `LinkedQueue` is empty. After `enqueue(7)`, which description of its state is correct?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`_head` references the new node, but `_tail` remains `None`"},
+        {"i": "2", "x": "`_head` and `_tail` both reference the new node, and `_size` is 1"},
+        {"i": "3", "x": "`_tail` references the new node, but `_head` remains `None`"},
+        {"i": "4", "x": "`_head` and `_tail` both stay `None` until a second element arrives"}
+      ],
+      "a": "2",
+      "e": [
+        "`enqueue` creates `newest = self._Node(7, None)`.",
+        "Since the queue is empty, the special case runs: `self._head = newest`.",
+        "Then `self._tail = newest` runs (for every enqueue) and `self._size` becomes 1.",
+        "<mark>The single node is both the head and the tail.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0015",
+      "q": "Starting from an empty `LinkedQueue`, these operations are executed: `enqueue('A')`, `enqueue('B')`, `enqueue('C')`, `dequeue()`, `dequeue()`. What is the final state?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Front is `'B'`, size is 2, and `_head` and `_tail` reference the same node"},
+        {"i": "2", "x": "Front is `'B'`, size is 1, and `_tail` is `None`"},
+        {"i": "3", "x": "Front is `'C'`, size is 1, and `_head` and `_tail` reference the same node"},
+        {"i": "4", "x": "Front is `'C'`, size is 2, and `_head` is `None`"}
+      ],
+      "a": "3",
+      "e": [
+        "After the three enqueues the queue is `A, B, C` (front to back), size 3.",
+        "First `dequeue()`: returns `'A'`, the head moves to `B`, size 2.",
+        "Second `dequeue()`: returns `'B'`, the head moves to `C`, size 1. The queue is not empty, so `_tail` is not reset.",
+        "Now only `C` remains, and it is both the head and the tail.",
+        "<mark>Front is `'C'`, size is 1, and `_head` and `_tail` reference the same node.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0016",
+      "q": "In `LinkedQueue.dequeue`, the code sets `self._tail = None` when the queue becomes empty. Why is this special case needed?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Setting `_tail` to `None` is what decrements `_size`"},
+        {"i": "2", "x": "Without it, `_head` would keep referencing the removed node"},
+        {"i": "3", "x": "Without it, the next `enqueue` would raise an `Empty` exception"},
+        {"i": "4", "x": "The removed head was also the tail, so `_tail` would still reference a removed node"}
+      ],
+      "a": "4",
+      "e": [
+        "`dequeue` only updates the head: `self._head = self._head._next`.",
+        "If the queue had a single node, that node was both the head and the tail, and the new head becomes `None`.",
+        "The tail is not touched by that statement, so it would still reference the node that was just removed.",
+        "<mark>Setting `_tail = None` keeps the state consistent: an empty queue has both `_head` and `_tail` equal to `None`.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0017",
+      "q": "What distinguishes a <b>circularly</b> linked list from an ordinary singly linked list?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The tail's next reference points back to the head, not to `None`"},
+        {"i": "2", "x": "Every node stores both a next and a previous reference"},
+        {"i": "3", "x": "The head's next reference is `None`, which marks the list start"},
+        {"i": "4", "x": "The list can only hold a fixed number of nodes"}
+      ],
+      "a": "1",
+      "e": "In a circularly linked list the tail uses its next reference to point back to the head, so the list forms a circle and no node has `None` as its next reference. <mark>Following next references never ends unless you stop on purpose.</mark>"
+    },
+    {
+      "id": "DSA3_0018",
+      "q": "A `CircularQueue` stores only `_tail` and `_size`. How does it reach the front of the queue in constant time?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "By reading `self._head`, which is updated on every enqueue"},
+        {"i": "2", "x": "By reading `self._tail._next`, since the tail points back to the head"},
+        {"i": "3", "x": "By traversing from the tail until a `None` reference is found"},
+        {"i": "4", "x": "By reading `self._tail._previous`, the node just before the tail"}
+      ],
+      "a": "2",
+      "e": [
+        "In a circular list the tail's next reference points to the head.",
+        "So the front of the queue is `self._tail._next`, reached in one step.",
+        "<mark>One reference (`_tail`) gives access to both ends: the tail directly and the head through `_tail._next`.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0019",
+      "q": "In round-robin scheduling, the steps are: dequeue the next element, service it, then enqueue it again. Which action in `CircularQueue` achieves the dequeue-and-re-enqueue effect without creating or removing any node?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Calling `dequeue()` and then `enqueue()` with the returned element"},
+        {"i": "2", "x": "Calling `first()` twice and then `dequeue()` once"},
+        {"i": "3", "x": "Calling `rotate()`, which only moves the `_tail` reference"},
+        {"i": "4", "x": "Calling `enqueue()` first and then `dequeue()` once"}
+      ],
+      "a": "3",
+      "e": [
+        "`rotate()` runs `self._tail = self._tail._next`.",
+        "The old head becomes the new tail, so the front element moves to the back of the queue.",
+        "No node is created or deleted; only one reference changes, so it takes $O(1)$.",
+        "<mark>`rotate()` is the efficient way to give each process its turn in round-robin order.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0020",
+      "q": "A `CircularQueue` holds `A, B, C, D` from front to back. After one call to `rotate()`, what are the front and the tail?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Front `A`, tail `D`"},
+        {"i": "2", "x": "Front `D`, tail `C`"},
+        {"i": "3", "x": "Front `C`, tail `B`"},
+        {"i": "4", "x": "Front `B`, tail `A`"}
+      ],
+      "a": "4",
+      "e": [
+        "Before: tail is `D`, so the front is `D._next = A`.",
+        "`rotate()` sets `_tail = _tail._next`, so the tail becomes `A`.",
+        "The new front is `A._next = B`, so the order becomes `B, C, D, A`.",
+        "<mark>Front is `B` and tail is `A`.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0021",
+      "q": "A `CircularQueue` holds `P1, P2, P3` from front to back. After <b>5</b> consecutive calls to `rotate()`, which process is at the front?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`P3`"},
+        {"i": "2", "x": "`P1`"},
+        {"i": "3", "x": "`P2`"},
+        {"i": "4", "x": "No process, because the queue becomes empty"}
+      ],
+      "a": "1",
+      "e": [
+        "Each `rotate()` moves the front element to the back, so the order cycles every 3 calls.",
+        "After 1 rotate: `P2, P3, P1`. After 2: `P3, P1, P2`. After 3: `P1, P2, P3`.",
+        "After 4: `P2, P3, P1`. After 5: `P3, P1, P2`.",
+        "Shortcut: the front after $k$ rotations is the element at index $k \\bmod 3$, and $5 \\bmod 3 = 2$, which is `P3` (index 2, counting from 0).",
+        "<mark>The front is `P3`.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0022",
+      "q": "In `CircularQueue.enqueue` on a non-empty queue, the code runs `newest._next = self._tail._next` <u>before</u> `self._tail._next = newest`. What goes wrong if the two lines are swapped?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "The new node becomes the head instead of the tail"},
+        {"i": "2", "x": "The new node references itself, so the old head becomes unreachable"},
+        {"i": "3", "x": "The size counter is incremented twice"},
+        {"i": "4", "x": "The old tail's next reference becomes `None`"}
+      ],
+      "a": "2",
+      "e": [
+        "After the swap, `self._tail._next = newest` runs first, so the old tail now points to the new node.",
+        "Then `newest._next = self._tail._next` reads `self._tail._next`, which is now `newest` itself.",
+        "So the new node points to itself, and nothing references the old head any more (the head was only reachable through the tail's next).",
+        "<mark>The new node must first copy the old head reference, and only then be linked after the old tail.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0023",
+      "q": "When `enqueue` is called on an <u>empty</u> `CircularQueue`, why does the code set `newest._next = newest`?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "To mark the queue as empty using a self-reference"},
+        {"i": "2", "x": "To make the new node reference the old tail"},
+        {"i": "3", "x": "To store the element twice for extra safety"},
+        {"i": "4", "x": "A one-node circular list must have its next point back to itself"}
+      ],
+      "a": "4",
+      "e": [
+        "In a circular list the tail's next reference must point to the head.",
+        "When there is only one node, it is both the head and the tail.",
+        "<mark>So its next reference must point back to itself, and the node then becomes `_tail`.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0024",
+      "q": "A `CircularQueue` holds `A, B, C` from front to back, so `_tail` references `C`. After `dequeue()`, what is returned and what does `_tail._next` reference?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Returns `A`; `_tail._next` references `A`"},
+        {"i": "2", "x": "Returns `A`; `_tail._next` references `B`"},
+        {"i": "3", "x": "Returns `C`; `_tail._next` references `B`"},
+        {"i": "4", "x": "Returns `B`; `_tail._next` references `C`"}
+      ],
+      "a": "2",
+      "e": [
+        "`oldhead = self._tail._next`, which is `A`.",
+        "The size is 3 (not 1), so the else branch runs: `self._tail._next = oldhead._next`, which is `B`.",
+        "The size becomes 2 and the method returns `oldhead._element`, which is `A`.",
+        "<mark>Returns `A`, and the tail now points to `B` as the new head.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0025",
+      "q": "Which operation is generally more efficient on a linked list than on an array?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Reading the $i$-th element directly by index"},
+        {"i": "2", "x": "Inserting a new element at the front without shifting elements"},
+        {"i": "3", "x": "Storing all elements in a single contiguous block"},
+        {"i": "4", "x": "Using less memory for each stored element"}
+      ],
+      "a": "2",
+      "e": "Inserting at the front of an array requires shifting all elements, which is costly. In a linked list only a few references change, so it is $O(1)$. <mark>Index access is better in arrays, and linked lists use extra memory for references.</mark>"
+    },
+    {
+      "id": "DSA3_0026",
+      "q": "A program receives an unpredictable number of items, inserts most of them at the front, and rarely reads an item by position. Which structure fits best?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A fixed-size array, allocated for the largest expected number of items"},
+        {"i": "2", "x": "An ordered array, kept sorted after every insertion"},
+        {"i": "3", "x": "A singly linked list, which inserts at the head in constant time"},
+        {"i": "4", "x": "An array that is completely re-created after each insertion"}
+      ],
+      "a": "3",
+      "e": [
+        "The number of items is unknown, so a dynamic size is needed; arrays are fixed in size or must be re-allocated.",
+        "Frequent insertion at the front would force an array to shift all elements each time, costing $O(n)$.",
+        "Index access is rare, so the $O(n)$ sequential access of a linked list is not a problem.",
+        "<mark>A singly linked list fits best: dynamic size and $O(1)$ insertion at the head.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0027",
+      "q": "Why does `remove_first(L)` first check whether `L.head` is `None`?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "To reset the size counter to zero before removing"},
+        {"i": "2", "x": "To avoid accessing `L.head.next` when the list is empty"},
+        {"i": "3", "x": "To find the tail before the head is removed"},
+        {"i": "4", "x": "To confirm that the list is sorted before removal"}
+      ],
+      "a": "2",
+      "e": "If the list is empty, `L.head` is `None`, so evaluating `L.head.next` would fail. <mark>The algorithm therefore reports an error for an empty list before trying to remove anything.</mark>"
+    },
+    {
+      "id": "DSA3_0028",
+      "q": "A singly linked list has $n$ nodes and a reference only to the head. How many `next` hops are needed to reach the last node, and what does this imply?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$1$ hop, so reaching the tail is $O(1)$"},
+        {"i": "2", "x": "$n$ hops, so reaching the tail is $O(\\log n)$"},
+        {"i": "3", "x": "$n+1$ hops, so reaching the tail is $O(n^2)$"},
+        {"i": "4", "x": "$n-1$ hops, so reaching the tail is $O(n)$"}
+      ],
+      "a": "4",
+      "e": [
+        "The head is node 1 and the tail is node $n$.",
+        "Each hop moves forward by one node, so going from node 1 to node $n$ takes $n-1$ hops.",
+        "The number of hops grows linearly with $n$.",
+        "<mark>$n-1$ hops, so reaching the tail is $O(n)$, which is why storing an explicit tail reference is useful.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0029",
+      "q": "The head references address `1000`. Memory holds these nodes: address `1000` stores (data `5`, next `2400`); address `2400` stores (data `9`, next `1800`); address `1800` stores (data `2`, next `NULL`). In what order does a traversal visit the data?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`5, 9, 2`"},
+        {"i": "2", "x": "`5, 2, 9`"},
+        {"i": "3", "x": "`2, 9, 5`"},
+        {"i": "4", "x": "`9, 5, 2`"}
+      ],
+      "a": "1",
+      "e": [
+        "Start at the head, address `1000`: visit data `5`; its next is `2400`.",
+        "Go to address `2400`: visit data `9`; its next is `1800`.",
+        "Go to address `1800`: visit data `2`; its next is `NULL`, so this is the tail and the traversal stops.",
+        "<mark>The traversal order is `5, 9, 2`, which follows the links and not the memory addresses.</mark>"
+      ]
+    },
+    {
+      "id": "DSA3_0030",
+      "q": "In <b>add_last</b>, suppose `L.tail = newest` runs <u>before</u> `L.tail.next = newest`. What is the result?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "The new node is appended correctly and only `size` is wrong"},
+        {"i": "2", "x": "The new node is inserted at the head instead of the tail"},
+        {"i": "3", "x": "The old tail is never linked to the new node, which points to itself"},
+        {"i": "4", "x": "The old tail is removed from the list"}
+      ],
+      "a": "3",
+      "e": [
+        "After the swap, `L.tail = newest` runs first, so the tail variable now references the new node.",
+        "Then `L.tail.next = newest` sets the next of the <i>new</i> node (the current tail) to itself.",
+        "The old tail's next is never updated, so the new node is not reachable from the head, and it points to itself.",
+        "<mark>The old tail must be linked to the new node first, and only then should the tail variable be updated.</mark>"
+      ]
+    }
+  ]
+}

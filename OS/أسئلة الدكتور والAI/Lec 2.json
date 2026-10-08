@@ -1,1 +1,541 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "OS2_0001",
+      "q": "Which OS service is provided by a command-line interpreter or a graphical desktop?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Resource allocation"},
+        {"i": "2", "x": "User interface"},
+        {"i": "3", "x": "Error detection"},
+        {"i": "4", "x": "Logging"}
+      ],
+      "a": "2",
+      "e": "The <b>user interface</b> service lets users interact with the OS through a graphical user interface (GUI) or a command-line interface (CLI). <mark>User interface = GUI or CLI</mark>"
+    },
+    {
+      "id": "OS2_0002",
+      "q": "Which statement correctly describes the <b>program execution</b> service?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The OS loads programs into memory and runs them, and a program may end normally or abnormally"},
+        {"i": "2", "x": "The OS loads programs into memory and runs them, but a program can end only normally"},
+        {"i": "3", "x": "The OS runs programs directly from disk without loading them, and ends them abnormally only"},
+        {"i": "4", "x": "The OS loads programs into memory but leaves the running of them to the user process"}
+      ],
+      "a": "1",
+      "e": "The program execution service must load a program into memory and run it, and the program must be able to end its execution either normally or abnormally. <mark>Load, run, end (normally or abnormally)</mark>"
+    },
+    {
+      "id": "OS2_0003",
+      "q": "Why must the OS provide processes with some means to perform I/O?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Because I/O devices can be used only during the boot process"},
+        {"i": "2", "x": "Because user processes can perform I/O only on files, not on devices"},
+        {"i": "3", "x": "Because user processes cannot execute I/O operations directly"},
+        {"i": "4", "x": "Because I/O operations are executed only by the user interface service"}
+      ],
+      "a": "3",
+      "e": "User processes cannot execute I/O operations directly, so the OS provides the I/O operations service as the means through which they perform I/O. <mark>No direct I/O for user processes</mark>"
+    },
+    {
+      "id": "OS2_0004",
+      "q": "A text editor saves a document to disk and later deletes an old backup file. Which OS service does it rely on?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Communications"},
+        {"i": "2", "x": "Error detection"},
+        {"i": "3", "x": "Resource allocation"},
+        {"i": "4", "x": "File-system manipulation"}
+      ],
+      "a": "4",
+      "e": "Reading, writing, creating and deleting files are the operations offered by the <b>file-system manipulation</b> service. <mark>File-system manipulation</mark>"
+    },
+    {
+      "id": "OS2_0005",
+      "q": "Two processes need to exchange information. Which pair lists the two ways the OS can implement this <b>communications</b> service?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Message passing or file locking"},
+        {"i": "2", "x": "Shared memory or message passing"},
+        {"i": "3", "x": "Shared memory or device drivers"},
+        {"i": "4", "x": "Message passing or program loading"}
+      ],
+      "a": "2",
+      "e": "The communications service lets user processes exchange information, and it is implemented via <b>shared memory</b> or <b>message passing</b>. <mark>Shared memory or message passing</mark>"
+    },
+    {
+      "id": "OS2_0006",
+      "q": "What is the purpose of the <b>error detection</b> service?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "To record which process uses how much of each kind of resource"},
+        {"i": "2", "x": "To allocate processor time and memory to every running process"},
+        {"i": "3", "x": "To ensure correct computing by detecting hardware and program errors"},
+        {"i": "4", "x": "To control all access to the resources of the whole system"}
+      ],
+      "a": "3",
+      "e": "Error detection ensures correct computing by detecting errors in the hardware or in user programs. The other options describe logging, resource allocation and protection. <mark>Detect hardware and program errors</mark>"
+    },
+    {
+      "id": "OS2_0007",
+      "q": "A company bills each department according to how much and what kinds of resources its processes used. Which OS function supplies the data needed for billing?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Logging"},
+        {"i": "2", "x": "Protection"},
+        {"i": "3", "x": "Resource allocation"},
+        {"i": "4", "x": "Error detection"}
+      ],
+      "a": "1",
+      "e": "<b>Logging</b> records which process uses how much and what kinds of resources; this record may be used for account billing or for accumulating usage statistics. <mark>Logging</mark>"
+    },
+    {
+      "id": "OS2_0008",
+      "q": "Which statement correctly distinguishes <b>protection</b> from <b>security</b>?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Protection records resource usage, while security allocates resources to processes"},
+        {"i": "2", "x": "Protection defends against outsiders, while security controls all access to resources"},
+        {"i": "3", "x": "Protection detects hardware errors, while security detects errors in user programs"},
+        {"i": "4", "x": "Protection controls all access to resources, while security defends against outsiders"}
+      ],
+      "a": "4",
+      "e": "Protection ensures that all access to system resources is controlled, whereas security concerns defending the system from outsiders. <mark>Protection = controlled access; security = defence from outsiders</mark>"
+    },
+    {
+      "id": "OS2_0009",
+      "q": "Which additional OS function gives resources such as CPU time and memory to the running processes?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Logging"},
+        {"i": "2", "x": "Resource allocation"},
+        {"i": "3", "x": "Protection"},
+        {"i": "4", "x": "Communications"}
+      ],
+      "a": "2",
+      "e": "<b>Resource allocation</b> is the function that allocates resources to the running processes. <mark>Resource allocation</mark>"
+    },
+    {
+      "id": "OS2_0010",
+      "q": "What is a <b>system call</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A function that lets the OS call user processes directly"},
+        {"i": "2", "x": "A hardware instruction that lets programs bypass the kernel"},
+        {"i": "3", "x": "An interface through which user processes request OS services"},
+        {"i": "4", "x": "A command typed in the CLI to start a new program"}
+      ],
+      "a": "3",
+      "e": "System calls provide an interface to the services of the OS; user processes use them to call those services. <mark>System call = interface to OS services</mark>"
+    },
+    {
+      "id": "OS2_0011",
+      "q": "Which statement about how system calls are made available to programmers is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "They are C and C++ functions, and some low-level tasks may use assembly language"},
+        {"i": "2", "x": "They are written only in assembly language, so C and C++ cannot invoke them"},
+        {"i": "3", "x": "They are C and C++ functions, and assembly language is never used for them"},
+        {"i": "4", "x": "They are available only through the GUI, with no functions for programmers"}
+      ],
+      "a": "1",
+      "e": "System calls are available as functions written in C and C++, while some low-level tasks may be written in assembly language. <mark>C and C++ functions, plus assembly for low-level tasks</mark>"
+    },
+    {
+      "id": "OS2_0012",
+      "q": "What happens when a process executes a system call?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The process switches itself to kernel mode and runs the service on its own"},
+        {"i": "2", "x": "The OS terminates the process and restarts it once the service finishes"},
+        {"i": "3", "x": "The CPU skips the OS and runs the service while staying in user mode"},
+        {"i": "4", "x": "The system traps to the OS, which then performs the requested service"}
+      ],
+      "a": "4",
+      "e": "When a process executes a system call, the system <b>traps to the OS</b>, which carries out the requested service. <mark>Trap to the OS</mark>"
+    },
+    {
+      "id": "OS2_0013",
+      "q": "What does <b>API</b> stand for, and what is it used for?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Application Process Interface, used to schedule the processes of the system"},
+        {"i": "2", "x": "Application Programming Interface, used by programmers to invoke OS services"},
+        {"i": "3", "x": "Automatic Programming Interface, used to compile programs written in C and C++"},
+        {"i": "4", "x": "Application Program Instruction, used to load the kernel into memory at boot"}
+      ],
+      "a": "2",
+      "e": "API stands for Application Programming Interface; the OS provides it to application programmers to invoke its services. <mark>API = Application Programming Interface</mark>"
+    },
+    {
+      "id": "OS2_0014",
+      "q": "In the lecture's `open()` example, the system call interface uses the index <i>i</i> to look up the System Call Table. What does the table entry provide?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "The parameters that the user application passed to `open()`"},
+        {"i": "2", "x": "The value that is finally returned to the user application"},
+        {"i": "3", "x": "A pointer to the implementation of the system call in the kernel"},
+        {"i": "4", "x": "The code of the user application that called `open()`"}
+      ],
+      "a": "3",
+      "e": "The system call interface uses the index <i>i</i> to find the entry in the <b>System Call Table</b>, and that entry holds a pointer to the implementation of `open()` inside the kernel. <mark>Table entry = pointer to the implementation</mark>"
+    },
+    {
+      "id": "OS2_0015",
+      "q": "Which sequence correctly describes how a call to `open()` is handled in the lecture's example?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Application → system call interface → System Call Table → implementation in kernel mode → return to the application"},
+        {"i": "2", "x": "Application → System Call Table → system call interface → implementation in kernel mode → return to the application"},
+        {"i": "3", "x": "Application → implementation in kernel mode → System Call Table → system call interface → return to the application"},
+        {"i": "4", "x": "Application → system call interface → implementation in kernel mode → System Call Table → return to the application"}
+      ],
+      "a": "1",
+      "e": [
+        "The user application, running in user mode, calls `open()`.",
+        "The call enters the <b>system call interface</b>, which uses the index <i>i</i> to look in the System Call Table.",
+        "The table entry points to the implementation of `open()` in kernel mode, which runs and then returns.",
+        "The result goes back through the system call interface to the user application.",
+        "<mark>Application → interface → table → implementation → return</mark>"
+      ]
+    },
+    {
+      "id": "OS2_0016",
+      "q": "In the lecture's `open()` example, in which mode does each part run?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Application in kernel mode; implementation in user mode"},
+        {"i": "2", "x": "Application and implementation both in user mode"},
+        {"i": "3", "x": "Application and implementation both in kernel mode"},
+        {"i": "4", "x": "Application in user mode; implementation in kernel mode"}
+      ],
+      "a": "4",
+      "e": "The user application runs in <b>user mode</b>, while the System Call Table and the implementation of `open()` are in <b>kernel mode</b>. <mark>User mode → kernel mode</mark>"
+    },
+    {
+      "id": "OS2_0017",
+      "q": "In the lecture's <b>Method 2</b> example for passing parameters, what does the user program load into a CPU register before executing `system call 13`?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "The parameters themselves, one value in each register"},
+        {"i": "2", "x": "The address X of the block that stores the parameters"},
+        {"i": "3", "x": "The size of the parameter table X in memory"},
+        {"i": "4", "x": "A pointer to the code for system call 13 in the OS"}
+      ],
+      "a": "2",
+      "e": "In Method 2 the parameters are stored in a table (block) in memory, and only the <b>address X of that block</b> is passed in a CPU register. <mark>Register holds the address of the block</mark>"
+    },
+    {
+      "id": "OS2_0018",
+      "q": "How does the <b>stack</b> method pass parameters to the OS?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The OS pushes them onto the stack, and the process pops them off later"},
+        {"i": "2", "x": "The process stores them in a memory table and passes its address in a register"},
+        {"i": "3", "x": "The process pushes them onto the stack, and the OS pops them off later"},
+        {"i": "4", "x": "The process loads them directly into CPU registers before the system call"}
+      ],
+      "a": "3",
+      "e": "In Method 3 the process pushes the parameters onto the stack and the operating system later pops them off. <mark>Process pushes, OS pops</mark>"
+    },
+    {
+      "id": "OS2_0019",
+      "q": "Which option correctly matches the three methods of passing parameters to system calls?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "1: CPU registers; 2: memory block whose address is in a register; 3: stack"},
+        {"i": "2", "x": "1: stack; 2: CPU registers; 3: memory block whose address is in a register"},
+        {"i": "3", "x": "1: memory block whose address is in a register; 2: stack; 3: CPU registers"},
+        {"i": "4", "x": "1: CPU registers; 2: stack; 3: memory block whose address is in a register"}
+      ],
+      "a": "1",
+      "e": "Method 1 passes the parameters in CPU registers, Method 2 stores them in a memory block and passes its address in a register, and Method 3 uses the stack. <mark>1: registers, 2: memory block, 3: stack</mark>"
+    },
+    {
+      "id": "OS2_0020",
+      "q": "In the Method 2 example, the user program has loaded the address X into a register and then executes `system call 13`. How does the OS get the parameters?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "It pops the parameters off the stack that the process prepared"},
+        {"i": "2", "x": "It reads the parameters directly from the CPU registers"},
+        {"i": "3", "x": "It receives the parameters in a message from the user program"},
+        {"i": "4", "x": "It reads address X from the register and uses the parameters in table X"}
+      ],
+      "a": "4",
+      "e": [
+        "The user program stores the parameters in table X in memory and loads the address X into a register.",
+        "The OS code for system call 13 reads the address X from the register.",
+        "It then uses the parameters stored in table X.",
+        "<mark>Register gives the address; the parameters are read from table X</mark>"
+      ]
+    },
+    {
+      "id": "OS2_0021",
+      "q": "Which type of system call includes <i>wait event</i>, <i>signal event</i>, and <i>allocate and free memory</i>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "File management"},
+        {"i": "2", "x": "Process control"},
+        {"i": "3", "x": "Device management"},
+        {"i": "4", "x": "Information maintenance"}
+      ],
+      "a": "2",
+      "e": "<b>Process control</b> covers creating, loading, executing, terminating and aborting processes, plus waiting for time or events, signaling events and allocating or freeing memory. <mark>Process control</mark>"
+    },
+    {
+      "id": "OS2_0022",
+      "q": "A program asks the OS to reposition within a file and then close it. Which type of system call is it using?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Device management"},
+        {"i": "2", "x": "Information maintenance"},
+        {"i": "3", "x": "File management"},
+        {"i": "4", "x": "Communications"}
+      ],
+      "a": "3",
+      "e": "Opening, closing, reading, writing and repositioning a file are <b>file management</b> system calls. <mark>File management</mark>"
+    },
+    {
+      "id": "OS2_0023",
+      "q": "A process asks for exclusive use of a device and later gives it back. Which type of system call is this?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Device management"},
+        {"i": "2", "x": "File management"},
+        {"i": "3", "x": "Process control"},
+        {"i": "4", "x": "Communications"}
+      ],
+      "a": "1",
+      "e": "Requesting a device and releasing it are <b>device management</b> system calls. <mark>Device management</mark>"
+    },
+    {
+      "id": "OS2_0024",
+      "q": "Which type of system call includes <i>get time/date</i> and <i>set time/date</i>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Process control"},
+        {"i": "2", "x": "Device management"},
+        {"i": "3", "x": "Communications"},
+        {"i": "4", "x": "Information maintenance"}
+      ],
+      "a": "4",
+      "e": "Getting and setting the time/date or system data are <b>information maintenance</b> system calls. <mark>Information maintenance</mark>"
+    },
+    {
+      "id": "OS2_0025",
+      "q": "Which of the following is <u>not</u> a communications system call?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Send message"},
+        {"i": "2", "x": "Reposition file"},
+        {"i": "3", "x": "Transfer status information"},
+        {"i": "4", "x": "Attach remote device"}
+      ],
+      "a": "2",
+      "e": "Sending messages, transferring status information and attaching remote devices are communications calls, while repositioning a file belongs to <b>file management</b>. <mark>Reposition file is not a communications call</mark>"
+    },
+    {
+      "id": "OS2_0026",
+      "q": "What is a <b>system boot</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The process of installing the kernel onto the root file system"},
+        {"i": "2", "x": "The process of copying user programs from disk into memory"},
+        {"i": "3", "x": "The process of starting a computer by loading the kernel"},
+        {"i": "4", "x": "The process of restarting the kernel after a system call fails"}
+      ],
+      "a": "3",
+      "e": "System boot is the process of starting a computer by loading the kernel. <mark>Boot = starting the computer by loading the kernel</mark>"
+    },
+    {
+      "id": "OS2_0027",
+      "q": "Which sequence correctly lists the steps of the boot process on most systems?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Locate the kernel → load and start it → initialize hardware → mount the root file system"},
+        {"i": "2", "x": "Load and start the kernel → locate it → initialize hardware → mount the root file system"},
+        {"i": "3", "x": "Locate the kernel → load and start it → mount the root file system → initialize hardware"},
+        {"i": "4", "x": "Initialize hardware → locate the kernel → load and start it → mount the root file system"}
+      ],
+      "a": "1",
+      "e": [
+        "The bootstrap program <b>locates the kernel</b>.",
+        "The kernel is <b>loaded into memory and started</b>.",
+        "The kernel <b>initializes the hardware</b>.",
+        "The <b>root file system is mounted</b>.",
+        "<mark>Locate → load and start → initialize hardware → mount root file system</mark>"
+      ]
+    },
+    {
+      "id": "OS2_0028",
+      "q": "Which statement about the boot process is correct?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "The kernel locates itself, and then the bootstrap program initializes the hardware"},
+        {"i": "2", "x": "The bootstrap program mounts the root file system before the kernel is loaded"},
+        {"i": "3", "x": "The kernel is loaded into memory only after the root file system is mounted"},
+        {"i": "4", "x": "The bootstrap program locates the kernel, and then the kernel initializes the hardware"}
+      ],
+      "a": "4",
+      "e": "The bootstrap program is responsible for locating the kernel; once the kernel is loaded and started, it initializes the hardware, and the root file system is mounted afterwards. <mark>Bootstrap locates; kernel initializes hardware</mark>"
+    },
+    {
+      "id": "OS2_0029",
+      "q": "Which statement describes the <b>monolithic</b> approach?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The kernel is divided into layers, and each layer uses only the lower layers"},
+        {"i": "2", "x": "The kernel is a single static binary that runs in a single address space"},
+        {"i": "3", "x": "The kernel keeps only core functions, and services run as system programs"},
+        {"i": "4", "x": "The kernel links additional services in as LKMs at boot or run time"}
+      ],
+      "a": "2",
+      "e": "A monolithic kernel has no internal structure: it is a single, static binary file running in a single address space. The other options describe the layered, micro-kernel and modules approaches. <mark>Single static binary in one address space</mark>"
+    },
+    {
+      "id": "OS2_0030",
+      "q": "Why is communication inside a monolithic kernel fast, with very little system-call overhead?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Because every service runs as a separate user process and uses message passing"},
+        {"i": "2", "x": "Because each layer calls only the layer directly beneath it in the structure"},
+        {"i": "3", "x": "Because all kernel functionality is in one binary in a single address space"},
+        {"i": "4", "x": "Because services are loaded dynamically only when they are actually needed"}
+      ],
+      "a": "3",
+      "e": "Everything is in one binary running in a single address space, so kernel parts communicate quickly and the system-call interface adds very little overhead. The price is tight coupling, which makes the kernel hard to extend. <mark>One binary, one address space = fast</mark>"
+    },
+    {
+      "id": "OS2_0031",
+      "q": "Which statement about the <b>layered</b> approach is correct?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "It is loosely coupled, because changes in one layer do not affect the others"},
+        {"i": "2", "x": "It is tightly coupled, because changes in one layer affect all of the others"},
+        {"i": "3", "x": "It is loosely coupled, because every layer may call every other layer directly"},
+        {"i": "4", "x": "It is tightly coupled, because it is a single binary in a single address space"}
+      ],
+      "a": "1",
+      "e": "The layered approach divides the OS into layers and is loosely coupled: a change in one layer does not affect the others. Tight coupling describes the monolithic approach. <mark>Layered = loosely coupled</mark>"
+    },
+    {
+      "id": "OS2_0032",
+      "q": "Why is it difficult to define the functionality of each layer in the layered approach?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Because every layer must be able to call every other layer directly"},
+        {"i": "2", "x": "Because the layers are loaded and removed dynamically at run time as LKMs"},
+        {"i": "3", "x": "Because every layer runs as a separate user process and uses message passing"},
+        {"i": "4", "x": "Because each layer may use the functions of only the lower-level layers"}
+      ],
+      "a": "4",
+      "e": "Since a layer can use only the functions of the layers below it, the functionality has to be assigned very carefully to the right layer, which makes defining each layer difficult. <mark>Lower layers only → hard to define layers</mark>"
+    },
+    {
+      "id": "OS2_0033",
+      "q": "In a layered OS, a service call has to pass through several layers. What is the result?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Better performance, because each layer adds optimizations"},
+        {"i": "2", "x": "Poor performance, because many layers must be traversed"},
+        {"i": "3", "x": "Tighter coupling, because the layers become dependent"},
+        {"i": "4", "x": "Less flexibility, because the kernel becomes one binary"}
+      ],
+      "a": "2",
+      "e": "Traversing multiple layers to call services results in poor performance. <mark>Many layers → poor performance</mark>"
+    },
+    {
+      "id": "OS2_0034",
+      "q": "In the lecture's micro-kernel diagram, which components are inside the <b>microkernel</b> running in kernel mode?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "File system, device driver, and interprocess communication"},
+        {"i": "2", "x": "Application program, file system, and memory management"},
+        {"i": "3", "x": "Interprocess communication, memory management, and CPU scheduling"},
+        {"i": "4", "x": "Application program, device driver, and CPU scheduling"}
+      ],
+      "a": "3",
+      "e": "The microkernel keeps only interprocess communication, memory management and CPU scheduling. The application program, file system and device driver run in user mode. <mark>IPC, memory management, CPU scheduling</mark>"
+    },
+    {
+      "id": "OS2_0035",
+      "q": "In a micro-kernel system, how do the application program, file system, and device driver communicate?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "By exchanging messages between the user-mode components"},
+        {"i": "2", "x": "By calling each other directly inside a single address space"},
+        {"i": "3", "x": "By sharing one System Call Table located in the kernel"},
+        {"i": "4", "x": "By loading one another as LKMs while the system runs"}
+      ],
+      "a": "1",
+      "e": "In the diagram, the user-mode components (application program, file system, device driver) communicate by <b>messages</b>. <mark>Message passing</mark>"
+    },
+    {
+      "id": "OS2_0036",
+      "q": "Why does the micro-kernel approach provide more security and reliability?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Because all services run in kernel mode, where the kernel can protect them"},
+        {"i": "2", "x": "Because the kernel is one static binary that is hard to modify or attack"},
+        {"i": "3", "x": "Because each layer can use only the functions of the lower-level layers"},
+        {"i": "4", "x": "Because most services run as user processes, so one failing leaves the rest intact"}
+      ],
+      "a": "4",
+      "e": "Most services run as user rather than kernel processes, so if a service fails, the rest of the operating system remains untouched. <mark>User-mode services isolate failures</mark>"
+    },
+    {
+      "id": "OS2_0037",
+      "q": "What is the <b>modules approach</b> to OS structure?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The kernel keeps only core functions, and everything else runs in user mode"},
+        {"i": "2", "x": "The kernel has core components and can link in extra services via LKMs"},
+        {"i": "3", "x": "The kernel is split into layers that may call only the layers below them"},
+        {"i": "4", "x": "The kernel is one binary with no structure that runs in one address space"}
+      ],
+      "a": "2",
+      "e": "The kernel has a set of core components and links in additional services via LKMs (Loadable Kernel Modules), at boot time or during run time, which is preferable to recompiling the kernel after every change. <mark>Core components + LKMs</mark>"
+    },
+    {
+      "id": "OS2_0038",
+      "q": "How does the modules approach differ from the micro-kernel approach?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Modules must use message passing, while micro-kernel services call each other directly"},
+        {"i": "2", "x": "Modules run in user mode, while micro-kernel services run in kernel mode"},
+        {"i": "3", "x": "Modules do not need message passing to communicate, unlike micro-kernel services"},
+        {"i": "4", "x": "Modules keep only core functions, while micro-kernel services include everything"}
+      ],
+      "a": "3",
+      "e": "Both approaches keep only core functions in the primary module, but modules do not need message passing to communicate. <mark>Modules communicate without message passing</mark>"
+    },
+    {
+      "id": "OS2_0039",
+      "q": "Compared with the layered approach, why is the modules approach more flexible?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Because any module can call any other module directly"},
+        {"i": "2", "x": "Because each module may call only the modules below it"},
+        {"i": "3", "x": "Because modules have no defined interface to protect them"},
+        {"i": "4", "x": "Because the whole kernel is recompiled after every change"}
+      ],
+      "a": "1",
+      "e": "Like the layered approach, each kernel section has a defined and protected interface, but any module can call any other module, which makes the design more flexible. <mark>Any module can call any other module</mark>"
+    },
+    {
+      "id": "OS2_0040",
+      "q": "Linux is described as both monolithic and modular. What is the reason for each?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Monolithic to add functionality dynamically; modular for efficient performance"},
+        {"i": "2", "x": "Monolithic for strict layering; modular for message passing between services"},
+        {"i": "3", "x": "Monolithic for better security; modular for easier porting to new hardware"},
+        {"i": "4", "x": "Monolithic for efficient performance; modular to add functionality dynamically"}
+      ],
+      "a": "4",
+      "e": "Linux is monolithic to provide very efficient performance and modular to add new functionality to the kernel dynamically, which is an example of a <b>hybrid</b> OS. <mark>Monolithic = performance; modular = dynamic functionality</mark>"
+    }
+  ]
+}
