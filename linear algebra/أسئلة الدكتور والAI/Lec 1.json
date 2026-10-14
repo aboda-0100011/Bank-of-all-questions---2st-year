@@ -1,1 +1,379 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "LA1_0001",
+      "q": "Consider the following five equations:\n$x + 3\\sqrt{y} = 5$\n$x^2 + 4 = 2$\n$x + 3y - xz = 2$\n$y = \\sin x$\n$x + 5y - \\sqrt{2}\\,z = 1$\nHow many of them are <b>linear</b> equations?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Exactly 1 equation"},
+        {"i": "2", "x": "Exactly 2 equations"},
+        {"i": "3", "x": "Exactly 3 equations"},
+        {"i": "4", "x": "Exactly 4 equations"}
+      ],
+      "a": "1",
+      "e": [
+        "Recall the properties of a linear equation: it has no roots of variables, every variable has power 1 only, and no variable appears as an argument of a trigonometric, logarithmic, or exponential function.",
+        "$x + 3\\sqrt{y} = 5$ is <u>not</u> linear: it contains a root of a variable ($\\sqrt{y}$).",
+        "$x^2 + 4 = 2$ is <u>not</u> linear: the variable $x$ has power 2.",
+        "$x + 3y - xz = 2$ is <u>not</u> linear: the term $xz$ is a product of two variables (degree 2).",
+        "$y = \\sin x$ is <u>not</u> linear: $x$ is the argument of a trigonometric function.",
+        "$x + 5y - \\sqrt{2}\\,z = 1$ <u>is</u> linear: $\\sqrt{2}$ is only a constant coefficient, not a root of a variable.",
+        "<mark>Only 1 equation (the last one) is linear.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0002",
+      "q": "Which of the following is a <b>linear</b> equation in $x$, $y$, and $z$?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$3x + \\ln y - z = 7$"},
+        {"i": "2", "x": "$3x + 2y - \\sqrt{5}\\,z = 7$"},
+        {"i": "3", "x": "$3x + 2y - e^{z} = 7$"},
+        {"i": "4", "x": "$3x + 2\\sqrt{y} - z = 7$"}
+      ],
+      "a": "2",
+      "e": [
+        "Check each equation against the three properties of a linear equation.",
+        "$3x + \\ln y - z = 7$ is not linear: $y$ is the argument of a logarithmic function.",
+        "$3x + 2y - e^{z} = 7$ is not linear: $z$ is the exponent of an exponential function.",
+        "$3x + 2\\sqrt{y} - z = 7$ is not linear: it contains the root of a variable ($\\sqrt{y}$).",
+        "In $3x + 2y - \\sqrt{5}\\,z = 7$, the number $\\sqrt{5}$ is a constant coefficient, and all variables have power 1.",
+        "<mark>Therefore $3x + 2y - \\sqrt{5}\\,z = 7$ is the only linear equation.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0003",
+      "q": "Which sequence correctly describes the procedure for solving a linear system using matrices?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "System → augmented matrix → Gaussian or Gauss-Jordan elimination → solution"},
+        {"i": "2", "x": "System → Gauss-Jordan elimination → augmented matrix → solution"},
+        {"i": "3", "x": "System → Gaussian elimination → coefficient matrix → solution"},
+        {"i": "4", "x": "System → row-echelon form → augmented matrix → solution"}
+      ],
+      "a": "1",
+      "e": "First the linear system is converted into a matrix (the augmented matrix), then Gaussian elimination (giving Row-Echelon Form) or Gauss-Jordan elimination (giving Reduced Row-Echelon Form) is applied, and finally the solution is read from the resulting matrix."
+    },
+    {
+      "id": "LA1_0004",
+      "q": "What is the <b>augmented matrix</b> of the following linear system?\n$$\\begin{aligned}2x_2 + x_3 &= -8\\\\x_1 - 2x_2 - 3x_3 &= 0\\\\-x_1 + x_2 + 2x_3 &= 3\\end{aligned}$$",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$\\left[\\begin{array}{ccc|c}2&1&0&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$"},
+        {"i": "2", "x": "$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$"},
+        {"i": "3", "x": "$\\left[\\begin{array}{ccc|c}0&2&1&8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$"},
+        {"i": "4", "x": "$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\1&-1&-2&-3\\end{array}\\right]$"}
+      ],
+      "a": "2",
+      "e": [
+        "Write the coefficients of $x_1$, $x_2$, $x_3$ in each equation, in the same column order, and the constants after a vertical bar.",
+        "Equation 1: $x_1$ is missing, so its coefficient is $0$. The row is $[\\,0\\;\\;2\\;\\;1\\mid -8\\,]$.",
+        "Equation 2: the row is $[\\,1\\;\\;-2\\;\\;-3\\mid 0\\,]$.",
+        "Equation 3: the row is $[\\,-1\\;\\;1\\;\\;2\\mid 3\\,]$.",
+        "<mark>$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0005",
+      "q": "A linear system has <b>3 equations</b> and <b>4 unknowns</b>. What is the size (rows × columns) of its augmented matrix?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "$3 \\times 4$"},
+        {"i": "2", "x": "$4 \\times 4$"},
+        {"i": "3", "x": "$3 \\times 5$"},
+        {"i": "4", "x": "$4 \\times 5$"}
+      ],
+      "a": "3",
+      "e": [
+        "Each equation gives one row, so the matrix has $3$ rows.",
+        "Each unknown gives one coefficient column, so there are $4$ coefficient columns.",
+        "The augmented matrix has one extra column for the constants, so $4 + 1 = 5$ columns.",
+        "<mark>The size is $3 \\times 5$.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0006",
+      "q": "The matrix\n$$\\begin{bmatrix}1&0&0\\\\0&0&0\\\\0&0&1\\end{bmatrix}$$\nis <u>not</u> in Row-Echelon Form. Which condition does it violate?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "A nonzero row must start with a leading 1"},
+        {"i": "2", "x": "Zero rows must be placed at the bottom"},
+        {"i": "3", "x": "A lower leading 1 must be to the right of the upper one"},
+        {"i": "4", "x": "A column with a leading 1 must have zeros elsewhere"}
+      ],
+      "a": "2",
+      "e": [
+        "Check the nonzero rows: row 1 starts with a leading 1 and row 3 starts with a leading 1, so the first condition holds.",
+        "The leading 1 of row 3 (column 3) is to the right of the leading 1 of row 1 (column 1), so the staircase condition holds.",
+        "Row 2 is a zero row, but it appears <u>above</u> the nonzero row 3.",
+        "The last option describes Reduced Row-Echelon Form, not a requirement of Row-Echelon Form.",
+        "<mark>The violated condition is: zero rows must be at the bottom of the matrix.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0007",
+      "q": "The matrix\n$$\\begin{bmatrix}1&0&0\\\\0&1&0\\\\0&2&0\\end{bmatrix}$$\nis <u>not</u> in Row-Echelon Form. Which statement explains why?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Row 3 starts with the entry 2 instead of a leading 1"},
+        {"i": "2", "x": "A zero row appears above a nonzero row in the matrix"},
+        {"i": "3", "x": "Row 1 does not start with a leading 1 as required"},
+        {"i": "4", "x": "Row 2 starts to the right of the first nonzero entry in row 3"}
+      ],
+      "a": "1",
+      "e": [
+        "Row 1 starts with a leading 1 and row 2 starts with a leading 1, so these rows are fine.",
+        "There is no zero row in the matrix, so no zero row can be above a nonzero row.",
+        "Row 3 is nonzero, and its first nonzero entry is $2$, not $1$.",
+        "<mark>The first condition (a leading 1 in every nonzero row) is violated by row 3.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0008",
+      "q": "The matrix\n$$\\begin{bmatrix}1&3&0&2&0\\\\1&0&2&2&0\\\\0&0&0&0&1\\\\0&0&0&0&0\\end{bmatrix}$$\nis <u>not</u> in Row-Echelon Form. Which statement explains why?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "The leading 1 of row 2 is not to the right of the leading 1 of row 1"},
+        {"i": "2", "x": "The zero row is not located at the bottom of the matrix"},
+        {"i": "3", "x": "Row 3 does not start with a leading 1 as its first nonzero entry"},
+        {"i": "4", "x": "Row 2 starts with a first nonzero entry that is different from 1"}
+      ],
+      "a": "1",
+      "e": [
+        "Locate the leading 1 of each nonzero row: row 1 in column 1, row 2 in column 1, row 3 in column 5.",
+        "The zero row (row 4) is at the bottom, and every nonzero row starts with a leading 1, so those conditions hold.",
+        "For two consecutive leading 1s, the lower one must be strictly to the <u>right</u> of the upper one.",
+        "Rows 1 and 2 have their leading 1s in the <u>same</u> column (column 1), so this condition fails.",
+        "<mark>The leading 1 of row 2 is not to the right of the leading 1 of row 1.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0009",
+      "q": "Which of the following matrices is in <b>Row-Echelon Form</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}1&2&3\\\\0&0&0\\\\0&0&1\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}1&2&3\\\\0&2&4\\\\0&0&1\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}1&0&3\\\\0&0&1\\\\0&0&0\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}0&1&2\\\\1&0&3\\\\0&0&0\\end{bmatrix}$"}
+      ],
+      "a": "3",
+      "e": [
+        "Test each matrix against the three conditions: a leading 1 in every nonzero row, zero rows at the bottom, and each lower leading 1 strictly to the right of the one above.",
+        "Matrix 1: the zero row is above a nonzero row, so it fails.",
+        "Matrix 2: row 2 starts with $2$ instead of a leading 1, so it fails.",
+        "Matrix 4: the leading 1 of row 2 (column 1) is to the left of the leading 1 of row 1 (column 2), so it fails.",
+        "Matrix 3: the leading 1s are in columns 1 and 3 (a staircase to the right) and the zero row is at the bottom, so all conditions hold.",
+        "<mark>Matrix 3 is in Row-Echelon Form.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0010",
+      "q": "Which of the following matrices is in <b>Row-Echelon Form</b> but <u>not</u> in <b>Reduced Row-Echelon Form</b>?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}1&0&3\\\\0&1&2\\\\0&0&0\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}1&2&0\\\\0&1&0\\\\0&0&0\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}0&1&0\\\\0&0&1\\\\0&0&0\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}1&0&0\\\\0&1&0\\\\0&0&1\\end{bmatrix}$"}
+      ],
+      "a": "2",
+      "e": [
+        "Reduced Row-Echelon Form requires Row-Echelon Form <u>and</u> zeros above and below every leading 1.",
+        "Matrix 1: leading 1s in columns 1 and 2, and each of those columns has zeros elsewhere, so it is in Reduced Row-Echelon Form.",
+        "Matrix 3: leading 1s in columns 2 and 3, each with zeros elsewhere, so it is in Reduced Row-Echelon Form.",
+        "Matrix 4: the identity matrix is in Reduced Row-Echelon Form.",
+        "Matrix 2: it is in Row-Echelon Form (leading 1s in columns 1 and 2, zero row at the bottom), but column 2 contains the leading 1 of row 2 and a nonzero entry $2$ above it.",
+        "<mark>Matrix 2 is in Row-Echelon Form but not in Reduced Row-Echelon Form.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0011",
+      "q": "Which of the following is <u>not</u> an elementary row operation?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Multiplying a row by the constant $0$"},
+        {"i": "2", "x": "Multiplying a row by the non-zero constant $-5$"},
+        {"i": "3", "x": "Interchanging two different rows of the matrix"},
+        {"i": "4", "x": "Adding a multiple of one row to another row"}
+      ],
+      "a": "1",
+      "e": "The elementary row operations are: multiply a row by a <u>non-zero</u> constant, interchange two rows, and add a multiple of one row to another row. Multiplying a row by $0$ is not allowed because it destroys the equation (it turns the row into a zero row)."
+    },
+    {
+      "id": "LA1_0012",
+      "q": "In Example 1, the augmented matrix is\n$$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$$\nIn Gaussian elimination, the first nonzero column is column 1, but its first entry is $0$. Which operation should be used to make it nonzero?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "Multiply $R_1$ by a non-zero constant"},
+        {"i": "2", "x": "Interchange $R_1$ with $R_2$"},
+        {"i": "3", "x": "Add $R_1$ to $R_3$ and store it in $R_3$"},
+        {"i": "4", "x": "Divide $R_2$ by $2$ and store it in $R_2$"}
+      ],
+      "a": "2",
+      "e": [
+        "Step 2 of Gaussian elimination: make the first entry of the chosen column nonzero using the <b>interchange</b> operation.",
+        "Multiplying $R_1$ by a non-zero constant keeps the entry $0$, since $c \\cdot 0 = 0$.",
+        "Adding $R_1$ to $R_3$ changes only $R_3$, not the first entry of $R_1$.",
+        "Dividing $R_2$ by $2$ does not change $R_1$ at all.",
+        "Interchanging $R_1$ with $R_2$ puts the entry $1$ in the top-left position.",
+        "<mark>$R_1 \\leftrightarrow R_2$ gives $\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&2&1&-8\\\\-1&1&2&3\\end{array}\\right]$</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0013",
+      "q": "In Example 1, after interchanging $R_1$ and $R_2$, we have\n$$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&2&1&-8\\\\-1&1&2&3\\end{array}\\right]$$\nThe following operations are then applied in order: $R_1 + R_3 \\to R_3$, then $R_2/2 \\to R_2$, then $R_2 + R_3 \\to R_3$. What is the final third row?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\left[\\,0\\;\\;0\\;\\;-\\frac{3}{2}\\;\\middle|\\;-1\\,\\right]$"},
+        {"i": "2", "x": "$\\left[\\,0\\;\\;0\\;\\;-\\frac{1}{2}\\;\\middle|\\;-1\\,\\right]$"},
+        {"i": "3", "x": "$\\left[\\,0\\;\\;0\\;\\;-\\frac{1}{2}\\;\\middle|\\;7\\,\\right]$"},
+        {"i": "4", "x": "$\\left[\\,0\\;\\;0\\;\\;\\frac{1}{2}\\;\\middle|\\;-1\\,\\right]$"}
+      ],
+      "a": "2",
+      "e": [
+        "Start with $R_3 = [-1\\;\\;1\\;\\;2\\mid 3]$ and $R_1 = [1\\;\\;-2\\;\\;-3\\mid 0]$.",
+        "$R_1 + R_3 \\to R_3$: $[-1+1\\;\\;\\;1-2\\;\\;\\;2-3\\mid 3+0] = [0\\;\\;-1\\;\\;-1\\mid 3]$.",
+        "$R_2 / 2 \\to R_2$: $[0\\;\\;2\\;\\;1\\mid -8]/2 = [0\\;\\;1\\;\\;\\frac{1}{2}\\mid -4]$.",
+        "$R_2 + R_3 \\to R_3$: $[0+0\\;\\;\\;1-1\\;\\;\\;\\frac{1}{2}-1\\mid -4+3] = [0\\;\\;0\\;\\;-\\frac{1}{2}\\mid -1]$.",
+        "<mark>The third row is $\\left[\\,0\\;\\;0\\;\\;-\\frac{1}{2}\\;\\middle|\\;-1\\,\\right]$.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0014",
+      "q": "In Example 1, Gaussian elimination gives the Row-Echelon Form\n$$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&1&\\frac{1}{2}&-4\\\\0&0&1&2\\end{array}\\right]$$\nWhat is the solution $(x_1, x_2, x_3)$ of the system?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$(0,\\,-3,\\,2)$"},
+        {"i": "2", "x": "$(-2,\\,-4,\\,2)$"},
+        {"i": "3", "x": "$(-4,\\,-5,\\,2)$"},
+        {"i": "4", "x": "$(4,\\,-5,\\,2)$"}
+      ],
+      "a": "3",
+      "e": [
+        "Convert the rows back into equations: $x_1 - 2x_2 - 3x_3 = 0$, $\\;x_2 + \\frac{1}{2}x_3 = -4$, $\\;x_3 = 2$.",
+        "From the last row: $x_3 = 2$.",
+        "Substitute into the second equation: $x_2 + \\frac{1}{2}(2) = -4$, so $x_2 + 1 = -4$ and $x_2 = -5$.",
+        "Substitute into the first equation: $x_1 - 2(-5) - 3(2) = 0$, so $x_1 + 10 - 6 = 0$ and $x_1 = -4$.",
+        "<mark>$(x_1, x_2, x_3) = (-4,\\,-5,\\,2)$</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0015",
+      "q": "Solve the following system using Gaussian elimination:\n$$\\begin{aligned}x_1 + 2x_2 &= 5\\\\3x_1 + 5x_2 &= 13\\end{aligned}$$\nWhat is the solution $(x_1, x_2)$?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$(-1,\\,3)$"},
+        {"i": "2", "x": "$(1,\\,2)$"},
+        {"i": "3", "x": "$(3,\\,1)$"},
+        {"i": "4", "x": "$(5,\\,0)$"}
+      ],
+      "a": "2",
+      "e": [
+        "Write the augmented matrix: $\\left[\\begin{array}{cc|c}1&2&5\\\\3&5&13\\end{array}\\right]$. The first entry is already a leading 1.",
+        "Make the entry below the leading 1 equal to zero using $-3R_1 + R_2 \\to R_2$: $[3-3\\;\\;\\;5-6\\mid 13-15] = [0\\;\\;-1\\mid -2]$.",
+        "The matrix becomes $\\left[\\begin{array}{cc|c}1&2&5\\\\0&-1&-2\\end{array}\\right]$.",
+        "Make the second leading entry equal to 1 using $-R_2 \\to R_2$: $[0\\;\\;1\\mid 2]$.",
+        "The Row-Echelon Form is $\\left[\\begin{array}{cc|c}1&2&5\\\\0&1&2\\end{array}\\right]$, which means $x_2 = 2$.",
+        "Back-substitute into the first equation: $x_1 + 2(2) = 5$, so $x_1 = 1$.",
+        "Check in the second original equation: $3(1) + 5(2) = 13$ ✓.",
+        "<mark>$(x_1, x_2) = (1,\\,2)$</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0016",
+      "q": "In Example 2, solved by Gauss-Jordan elimination, the augmented matrix is\n$$\\left[\\begin{array}{ccc|c}1&2&3&9\\\\2&-1&1&8\\\\3&0&-1&3\\end{array}\\right]$$\nThe operations $-2R_1 + R_2 \\to R_2$ and $-3R_1 + R_3 \\to R_3$ are applied. What is the new third row?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$[\\,0\\;\\;-6\\;\\;-8\\mid -24\\,]$"},
+        {"i": "2", "x": "$[\\,0\\;\\;-6\\;\\;-10\\mid -30\\,]$"},
+        {"i": "3", "x": "$[\\,0\\;\\;6\\;\\;10\\mid 24\\,]$"},
+        {"i": "4", "x": "$[\\,0\\;\\;-6\\;\\;-10\\mid -24\\,]$"}
+      ],
+      "a": "4",
+      "e": [
+        "Start with $R_1 = [1\\;\\;2\\;\\;3\\mid 9]$ and $R_3 = [3\\;\\;0\\;\\;-1\\mid 3]$.",
+        "Compute $-3R_1 = [-3\\;\\;-6\\;\\;-9\\mid -27]$.",
+        "Add it to $R_3$: $[3-3\\;\\;\\;0-6\\;\\;\\;-1-9\\mid 3-27] = [0\\;\\;-6\\;\\;-10\\mid -24]$.",
+        "<mark>The new third row is $[\\,0\\;\\;-6\\;\\;-10\\mid -24\\,]$.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0017",
+      "q": "In Example 2, after $R_2 / -5 \\to R_2$ the matrix is\n$$\\left[\\begin{array}{ccc|c}1&2&3&9\\\\0&1&1&2\\\\0&-6&-10&-24\\end{array}\\right]$$\nThe operations $-2R_2 + R_1 \\to R_1$ and $6R_2 + R_3 \\to R_3$ are applied. What are the new $R_1$ and $R_3$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$R_1 = [1\\;\\;0\\;\\;1\\mid 13]$ and $R_3 = [0\\;\\;0\\;\\;-4\\mid -12]$"},
+        {"i": "2", "x": "$R_1 = [1\\;\\;0\\;\\;1\\mid 5]$ and $R_3 = [0\\;\\;0\\;\\;-4\\mid -36]$"},
+        {"i": "3", "x": "$R_1 = [1\\;\\;0\\;\\;1\\mid 5]$ and $R_3 = [0\\;\\;0\\;\\;-16\\mid -12]$"},
+        {"i": "4", "x": "$R_1 = [1\\;\\;0\\;\\;1\\mid 5]$ and $R_3 = [0\\;\\;0\\;\\;-4\\mid -12]$"}
+      ],
+      "a": "4",
+      "e": [
+        "Here $R_2 = [0\\;\\;1\\;\\;1\\mid 2]$ is the row containing the leading 1 of column 2, so it is used to clear column 2 both above and below.",
+        "Compute $-2R_2 = [0\\;\\;-2\\;\\;-2\\mid -4]$ and add it to $R_1 = [1\\;\\;2\\;\\;3\\mid 9]$: $[1\\;\\;\\;0\\;\\;\\;1\\mid 5]$.",
+        "Compute $6R_2 = [0\\;\\;6\\;\\;6\\mid 12]$ and add it to $R_3 = [0\\;\\;-6\\;\\;-10\\mid -24]$: $[0\\;\\;\\;0\\;\\;\\;-4\\mid -12]$.",
+        "<mark>$R_1 = [1\\;\\;0\\;\\;1\\mid 5]$ and $R_3 = [0\\;\\;0\\;\\;-4\\mid -12]$</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0018",
+      "q": "In Example 2, Gauss-Jordan elimination reaches\n$$\\left[\\begin{array}{ccc|c}1&0&1&5\\\\0&1&1&2\\\\0&0&1&3\\end{array}\\right]$$\nAfter applying $-R_3 + R_1 \\to R_1$ and $-R_3 + R_2 \\to R_2$, what is the solution $(x_1, x_2, x_3)$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$(2,\\,1,\\,3)$"},
+        {"i": "2", "x": "$(8,\\,5,\\,3)$"},
+        {"i": "3", "x": "$(5,\\,2,\\,3)$"},
+        {"i": "4", "x": "$(2,\\,-1,\\,3)$"}
+      ],
+      "a": "4",
+      "e": [
+        "The leading 1 of column 3 is in $R_3 = [0\\;\\;0\\;\\;1\\mid 3]$, so it is used to clear the entries above it.",
+        "$-R_3 + R_1 \\to R_1$: $[1\\;\\;\\;0\\;\\;\\;1-1\\mid 5-3] = [1\\;\\;0\\;\\;0\\mid 2]$.",
+        "$-R_3 + R_2 \\to R_2$: $[0\\;\\;\\;1\\;\\;\\;1-1\\mid 2-3] = [0\\;\\;1\\;\\;0\\mid -1]$.",
+        "The matrix is now $\\left[\\begin{array}{ccc|c}1&0&0&2\\\\0&1&0&-1\\\\0&0&1&3\\end{array}\\right]$ (Reduced Row-Echelon Form), so the solution can be read directly.",
+        "Check in the original system: $2 + 2(-1) + 3(3) = 9$ ✓, $\\;2(2) - (-1) + 3 = 8$ ✓, $\\;3(2) - 3 = 3$ ✓.",
+        "<mark>$(x_1, x_2, x_3) = (2,\\,-1,\\,3)$</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0019",
+      "q": "What is the main difference between <b>Gaussian elimination</b> and <b>Gauss-Jordan elimination</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Gauss-Jordan also makes the entries above each leading 1 equal to zero"},
+        {"i": "2", "x": "Gauss-Jordan avoids using row interchange and row addition operations"},
+        {"i": "3", "x": "Gaussian elimination also makes the entries above each leading 1 zero"},
+        {"i": "4", "x": "Gaussian elimination produces a matrix with no leading 1s in any row"}
+      ],
+      "a": "1",
+      "e": [
+        "Gaussian elimination creates zeros only <u>below</u> each leading 1, and it ends in Row-Echelon Form.",
+        "Gauss-Jordan elimination creates zeros both <u>below and above</u> each leading 1, and it ends in Reduced Row-Echelon Form.",
+        "Both methods use the same three elementary row operations and both create leading 1s.",
+        "<mark>Gauss-Jordan additionally clears the entries above each leading 1.</mark>"
+      ]
+    },
+    {
+      "id": "LA1_0020",
+      "q": "Use Gauss-Jordan elimination on the system\n$$\\begin{aligned}2x_1 + x_2 &= 7\\\\x_1 - x_2 &= 2\\end{aligned}$$\nWhat is the Reduced Row-Echelon Form of its augmented matrix?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\left[\\begin{array}{cc|c}1&0&1\\\\0&1&3\\end{array}\\right]$"},
+        {"i": "2", "x": "$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&-1\\end{array}\\right]$"},
+        {"i": "3", "x": "$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&1\\end{array}\\right]$"},
+        {"i": "4", "x": "$\\left[\\begin{array}{cc|c}1&0&2\\\\0&1&7\\end{array}\\right]$"}
+      ],
+      "a": "3",
+      "e": [
+        "Write the augmented matrix: $\\left[\\begin{array}{cc|c}2&1&7\\\\1&-1&2\\end{array}\\right]$.",
+        "Interchange $R_1$ and $R_2$ to get a leading 1 in the top-left corner: $\\left[\\begin{array}{cc|c}1&-1&2\\\\2&1&7\\end{array}\\right]$.",
+        "Clear the entry below the leading 1 using $-2R_1 + R_2 \\to R_2$: $[2-2\\;\\;\\;1+2\\mid 7-4] = [0\\;\\;3\\mid 3]$.",
+        "Make the second leading entry 1 using $R_2 / 3 \\to R_2$: $[0\\;\\;1\\mid 1]$.",
+        "Clear the entry above the second leading 1 using $R_2 + R_1 \\to R_1$: $[1\\;\\;\\;-1+1\\mid 2+1] = [1\\;\\;0\\mid 3]$.",
+        "<mark>$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&1\\end{array}\\right]$, i.e. $x_1 = 3$ and $x_2 = 1$.</mark>",
+        "Check: $2(3) + 1 = 7$ ✓ and $3 - 1 = 2$ ✓."
+      ]
+    }
+  ]
+}
