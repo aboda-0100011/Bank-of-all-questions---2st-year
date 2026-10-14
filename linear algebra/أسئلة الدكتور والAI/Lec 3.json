@@ -1,1 +1,555 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "LA3_0001",
+      "q": "Consider the matrices\n$$A = \\begin{bmatrix}-8&-4\\\\23&12\\\\18&10\\end{bmatrix}, \\qquad B = \\begin{bmatrix}-2&9\\end{bmatrix}$$\nWhat are the sizes (rows × columns) of $A$ and $B$?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$A$ is $2 \\times 3$ and $B$ is $1 \\times 2$"},
+        {"i": "2", "x": "$A$ is $2 \\times 3$ and $B$ is $2 \\times 1$"},
+        {"i": "3", "x": "$A$ is $3 \\times 2$ and $B$ is $2 \\times 1$"},
+        {"i": "4", "x": "$A$ is $3 \\times 2$ and $B$ is $1 \\times 2$"}
+      ],
+      "a": "4",
+      "e": [
+        "The size of a matrix is $M \\times N$, where $M$ is the number of <b>rows</b> and $N$ is the number of <b>columns</b>.",
+        "$A$ has 3 rows and 2 columns, so its size is $3 \\times 2$.",
+        "$B$ has 1 row and 2 columns, so its size is $1 \\times 2$.",
+        "<mark>$A$ is $3 \\times 2$ and $B$ is $1 \\times 2$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0002",
+      "q": "Let\n$$B = \\begin{bmatrix}4&14&-7\\\\18&5&13\\\\-20&4&22\\end{bmatrix}$$\nWhat are the elements $b_{21}$ and $b_{13}$?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$b_{21} = 14$ and $b_{13} = -20$"},
+        {"i": "2", "x": "$b_{21} = 18$ and $b_{13} = -7$"},
+        {"i": "3", "x": "$b_{21} = -7$ and $b_{13} = 18$"},
+        {"i": "4", "x": "$b_{21} = 18$ and $b_{13} = 13$"}
+      ],
+      "a": "2",
+      "e": [
+        "The element $b_{ij}$ is located in row $i$ and column $j$ (the row number comes first).",
+        "$b_{21}$ is in row 2, column 1, so $b_{21} = 18$.",
+        "$b_{13}$ is in row 1, column 3, so $b_{13} = -7$.",
+        "<mark>$b_{21} = 18$ and $b_{13} = -7$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0003",
+      "q": "Let\n$$A = \\begin{bmatrix}-7&\\sqrt{16}&13\\\\\\frac{1}{2}&2&8\\end{bmatrix}, \\qquad B = \\begin{bmatrix}-7&4&13\\\\0.5&2&8\\end{bmatrix}$$\nIs $A = B$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "No, because $\\sqrt{16}$ is not written in the same form as $4$"},
+        {"i": "2", "x": "No, because $\\frac{1}{2}$ is not written in the same form as $0.5$"},
+        {"i": "3", "x": "Yes, but only because both matrices have the same size"},
+        {"i": "4", "x": "Yes, because the sizes are equal and corresponding elements are equal"}
+      ],
+      "a": "4",
+      "e": [
+        "Two matrices are equal when (1) they have the same size and (2) $a_{ij} = b_{ij}$ for all corresponding elements.",
+        "Both matrices are $2 \\times 3$, so the first condition holds.",
+        "Compare the elements by value: $\\sqrt{16} = 4$ and $\\frac{1}{2} = 0.5$, and all other entries are identical.",
+        "<mark>Both conditions hold, so $A = B$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0004",
+      "q": "Using equal matrices, find $x$ and $y$ if\n$$\\begin{bmatrix}3&4\\\\-7&4\\end{bmatrix} = \\begin{bmatrix}x&y+2\\\\-7&4\\end{bmatrix}$$",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$x = 3$ and $y = 4$"},
+        {"i": "2", "x": "$x = 3$ and $y = 2$"},
+        {"i": "3", "x": "$x = 2$ and $y = 3$"},
+        {"i": "4", "x": "$x = 3$ and $y = 6$"}
+      ],
+      "a": "2",
+      "e": [
+        "Equal matrices have equal corresponding elements.",
+        "Position $(1,1)$: $x = 3$.",
+        "Position $(1,2)$: $y + 2 = 4$, so $y = 4 - 2 = 2$.",
+        "The remaining entries $-7$ and $4$ already match.",
+        "<mark>$x = 3$ and $y = 2$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0005",
+      "q": "Let\n$$A = \\begin{bmatrix}4&5&2\\\\-3&6&0\\end{bmatrix}, \\qquad B = \\begin{bmatrix}0&3&-5\\\\4&-5&7\\end{bmatrix}$$\nWhat is $A - B$?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}4&8&-3\\\\1&1&7\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}-4&-2&-7\\\\7&-11&7\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}4&2&-3\\\\-7&11&-7\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}4&2&7\\\\-7&11&-7\\end{bmatrix}$"}
+      ],
+      "a": "4",
+      "e": [
+        "Both matrices are $2 \\times 3$, so subtraction is defined. Subtract corresponding elements.",
+        "Row 1: $4 - 0 = 4$, $\\;5 - 3 = 2$, $\\;2 - (-5) = 7$.",
+        "Row 2: $-3 - 4 = -7$, $\\;6 - (-5) = 11$, $\\;0 - 7 = -7$.",
+        "<mark>$A - B = \\begin{bmatrix}4&2&7\\\\-7&11&-7\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0006",
+      "q": "Let $A$ and $B$ be $2 \\times 3$ matrices and let $C$ be a $2 \\times 2$ matrix. Which of the following expressions is <u>defined</u>?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$A - C$"},
+        {"i": "2", "x": "$B + C$"},
+        {"i": "3", "x": "$A + B$"},
+        {"i": "4", "x": "$C - B$"}
+      ],
+      "a": "3",
+      "e": [
+        "Addition and subtraction require both matrices to have the <u>same size</u>.",
+        "$A$ and $C$ have sizes $2 \\times 3$ and $2 \\times 2$, so $A - C$ is undefined. The same holds for $B + C$ and $C - B$.",
+        "$A$ and $B$ are both $2 \\times 3$.",
+        "<mark>Only $A + B$ is defined.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0007",
+      "q": "For two matrices $A$ and $B$ of the same size, which statement is correct?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$A + B = B + A$ and $A - B = B - A$ always hold"},
+        {"i": "2", "x": "$A + B \\neq B + A$ and $A - B \\neq B - A$ in general"},
+        {"i": "3", "x": "$A + B = B + A$, but $A - B \\neq B - A$ in general"},
+        {"i": "4", "x": "$A + B \\neq B + A$, but $A - B = B - A$ in general"}
+      ],
+      "a": "3",
+      "e": [
+        "Addition is done element by element, and $a_{ij} + b_{ij} = b_{ij} + a_{ij}$, so $A + B = B + A$.",
+        "Subtraction is not commutative: $a_{ij} - b_{ij}$ is generally different from $b_{ij} - a_{ij}$ (it has the opposite sign).",
+        "<mark>$A + B = B + A$, but $A - B \\neq B - A$ in general.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0008",
+      "q": "Let\n$$A = \\begin{bmatrix}2&3&4\\\\1&3&1\\end{bmatrix},\\quad B = \\begin{bmatrix}0&2&7\\\\-1&3&-5\\end{bmatrix},\\quad C = \\begin{bmatrix}9&-6&3\\\\3&0&12\\end{bmatrix}$$\nFind $2A - B + \\frac{1}{3}C$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}7&6&16\\\\2&9&1\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}13&-2&4\\\\6&3&19\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}7&2&2\\\\4&3&11\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}1&6&0\\\\2&3&3\\end{bmatrix}$"}
+      ],
+      "a": "3",
+      "e": [
+        "Multiply each matrix by its scalar: $2A = \\begin{bmatrix}4&6&8\\\\2&6&2\\end{bmatrix}$.",
+        "$(-1)B = \\begin{bmatrix}0&-2&-7\\\\1&-3&5\\end{bmatrix}$.",
+        "$\\frac{1}{3}C = \\begin{bmatrix}3&-2&1\\\\1&0&4\\end{bmatrix}$.",
+        "Add the three matrices element by element. Row 1: $4 + 0 + 3 = 7$, $\\;6 - 2 - 2 = 2$, $\\;8 - 7 + 1 = 2$.",
+        "Row 2: $2 + 1 + 1 = 4$, $\\;6 - 3 + 0 = 3$, $\\;2 + 5 + 4 = 11$.",
+        "<mark>$2A - B + \\frac{1}{3}C = \\begin{bmatrix}7&2&2\\\\4&3&11\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0009",
+      "q": "Let $A$ be a $2 \\times 3$ matrix and $B$ be a $3 \\times 4$ matrix. Which statement is correct?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$AB$ is defined and its size is $2 \\times 4$"},
+        {"i": "2", "x": "$BA$ is defined and its size is $4 \\times 2$"},
+        {"i": "3", "x": "$AB$ is defined and its size is $3 \\times 3$"},
+        {"i": "4", "x": "$AB$ is defined and its size is $3 \\times 4$"}
+      ],
+      "a": "1",
+      "e": [
+        "$AB$ is defined only if the number of <b>columns of $A$</b> equals the number of <b>rows of $B$</b>.",
+        "Columns of $A = 3$ and rows of $B = 3$, so $AB$ is defined.",
+        "The size of $AB$ is (rows of $A$) × (columns of $B$) $= 2 \\times 4$.",
+        "For $BA$: columns of $B = 4$ but rows of $A = 2$, so $BA$ is <u>not</u> defined.",
+        "<mark>$AB$ is defined and is $2 \\times 4$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0010",
+      "q": "Find $AB$ for\n$$A = \\begin{bmatrix}1&2&4\\\\2&6&0\\end{bmatrix}, \\qquad B = \\begin{bmatrix}4&1&4&3\\\\0&-1&3&1\\\\2&7&5&2\\end{bmatrix}$$",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}12&27&30&13\\\\8&8&26&12\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}12&31&30&13\\\\8&-4&26&12\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}12&8\\\\27&-4\\\\30&26\\\\13&12\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}12&27&30&13\\\\8&-4&26&12\\end{bmatrix}$"}
+      ],
+      "a": "4",
+      "e": [
+        "$A$ is $2 \\times 3$ and $B$ is $3 \\times 4$, so $AB$ is defined and has size $2 \\times 4$.",
+        "Each entry is (row of $A$) · (column of $B$). Row 1 of $A$ is $[1\\;\\;2\\;\\;4]$:",
+        "$(1\\cdot4)+(2\\cdot0)+(4\\cdot2) = 12$, $\\;(1\\cdot1)+(2\\cdot(-1))+(4\\cdot7) = 27$, $\\;(1\\cdot4)+(2\\cdot3)+(4\\cdot5) = 30$, $\\;(1\\cdot3)+(2\\cdot1)+(4\\cdot2) = 13$.",
+        "Row 2 of $A$ is $[2\\;\\;6\\;\\;0]$:",
+        "$(2\\cdot4)+(6\\cdot0)+(0\\cdot2) = 8$, $\\;(2\\cdot1)+(6\\cdot(-1))+(0\\cdot7) = -4$, $\\;(2\\cdot4)+(6\\cdot3)+(0\\cdot5) = 26$, $\\;(2\\cdot3)+(6\\cdot1)+(0\\cdot2) = 12$.",
+        "<mark>$AB = \\begin{bmatrix}12&27&30&13\\\\8&-4&26&12\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0011",
+      "q": "Suppose the sizes are $A(4 \\times 5)$, $B(4 \\times 5)$, $C(5 \\times 2)$, $D(4 \\times 2)$, $E(5 \\times 4)$. How many of the following four expressions are <b>defined</b>?\n$$BA, \\qquad AC + D, \\qquad AE + B, \\qquad E(A + B)$$",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "Exactly 1 expression"},
+        {"i": "2", "x": "Exactly 2 expressions"},
+        {"i": "3", "x": "Exactly 3 expressions"},
+        {"i": "4", "x": "All 4 expressions"}
+      ],
+      "a": "2",
+      "e": [
+        "$BA$: $B$ is $4 \\times 5$ and $A$ is $4 \\times 5$. Columns of $B = 5 \\neq 4 =$ rows of $A$, so it is <u>undefined</u>.",
+        "$AC + D$: $AC$ is $(4 \\times 5)(5 \\times 2) = 4 \\times 2$, and $D$ is $4 \\times 2$, so the sum is <b>defined</b>.",
+        "$AE + B$: $AE$ is $(4 \\times 5)(5 \\times 4) = 4 \\times 4$, but $B$ is $4 \\times 5$, so the sum is <u>undefined</u>.",
+        "$E(A + B)$: $A + B$ is $4 \\times 5$, and $E(A+B)$ is $(5 \\times 4)(4 \\times 5) = 5 \\times 5$, so it is <b>defined</b>.",
+        "<mark>Exactly 2 expressions are defined: $AC + D$ and $E(A + B)$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0012",
+      "q": "Suppose $A$ and $B$ are both $4 \\times 5$ matrices and $E$ is a $5 \\times 4$ matrix. What is the size of $E(A + B)$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$4 \\times 4$"},
+        {"i": "2", "x": "$4 \\times 5$"},
+        {"i": "3", "x": "$5 \\times 4$"},
+        {"i": "4", "x": "$5 \\times 5$"}
+      ],
+      "a": "4",
+      "e": [
+        "First, $A + B$ is defined because $A$ and $B$ have the same size, and its size is $4 \\times 5$.",
+        "Now multiply $E$ ($5 \\times 4$) by $(A + B)$ ($4 \\times 5$). The inner dimensions match ($4 = 4$).",
+        "The size of the product is (rows of $E$) × (columns of $A + B$) $= 5 \\times 5$.",
+        "<mark>$E(A + B)$ is $5 \\times 5$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0013",
+      "q": "Let\n$$A = \\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}, \\qquad B = \\begin{bmatrix}0&1\\\\1&0\\end{bmatrix}$$\nWhich statement is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$AB = BA = \\begin{bmatrix}2&1\\\\1&0\\end{bmatrix}$"},
+        {"i": "2", "x": "$AB = \\begin{bmatrix}0&1\\\\1&2\\end{bmatrix}$ and $BA = \\begin{bmatrix}2&1\\\\1&0\\end{bmatrix}$"},
+        {"i": "3", "x": "$AB = \\begin{bmatrix}2&1\\\\1&0\\end{bmatrix}$ and $BA = \\begin{bmatrix}0&1\\\\1&2\\end{bmatrix}$"},
+        {"i": "4", "x": "$AB = BA = \\begin{bmatrix}0&1\\\\1&2\\end{bmatrix}$"}
+      ],
+      "a": "3",
+      "e": [
+        "Compute $AB$: row 1 of $A$ is $[1\\;\\;2]$, and the columns of $B$ are $(0,1)$ and $(1,0)$. Entries: $1\\cdot0+2\\cdot1 = 2$ and $1\\cdot1+2\\cdot0 = 1$.",
+        "Row 2 of $A$ is $[0\\;\\;1]$: $0\\cdot0+1\\cdot1 = 1$ and $0\\cdot1+1\\cdot0 = 0$. So $AB = \\begin{bmatrix}2&1\\\\1&0\\end{bmatrix}$.",
+        "Compute $BA$: row 1 of $B$ is $[0\\;\\;1]$, and the columns of $A$ are $(1,0)$ and $(2,1)$. Entries: $0\\cdot1+1\\cdot0 = 0$ and $0\\cdot2+1\\cdot1 = 1$.",
+        "Row 2 of $B$ is $[1\\;\\;0]$: $1\\cdot1+0\\cdot0 = 1$ and $1\\cdot2+0\\cdot1 = 2$. So $BA = \\begin{bmatrix}0&1\\\\1&2\\end{bmatrix}$.",
+        "<mark>$AB \\neq BA$: matrix multiplication is not commutative.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0014",
+      "q": "Which of the following matrices is a <b>diagonal</b> matrix?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}4&3\\\\0&1\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}0&4&3\\\\-7&0&6\\\\5&-2&0\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}4&0&0&0\\\\0&0&0&0\\\\0&0&-2&0\\\\0&0&0&0\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}1&0&0\\\\0&2&0\\end{bmatrix}$"}
+      ],
+      "a": "3",
+      "e": [
+        "A diagonal matrix is a <u>square</u> matrix in which all entries that are not on the main diagonal are zero.",
+        "$\\begin{bmatrix}4&3\\\\0&1\\end{bmatrix}$ has the nonzero entry $3$ off the main diagonal.",
+        "The $3 \\times 3$ matrix with entries $4, 3, -7, 6, 5, -2$ off the diagonal has several nonzero off-diagonal entries.",
+        "$\\begin{bmatrix}1&0&0\\\\0&2&0\\end{bmatrix}$ is $2 \\times 3$, so it is not square.",
+        "The $4 \\times 4$ matrix is square and every off-diagonal entry is $0$ (zeros on the main diagonal are allowed).",
+        "<mark>The $4 \\times 4$ matrix is diagonal.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0015",
+      "q": "Which statement about the identity matrix $I$ and diagonal matrices is correct?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "Every diagonal matrix is an identity matrix"},
+        {"i": "2", "x": "Every identity matrix is diagonal, but not every diagonal matrix is an identity matrix"},
+        {"i": "3", "x": "Every identity matrix is square, but no identity matrix is diagonal"},
+        {"i": "4", "x": "Identity matrices and diagonal matrices are exactly the same set"}
+      ],
+      "a": "2",
+      "e": [
+        "The identity matrix is a diagonal matrix whose main diagonal entries are all equal to $1$.",
+        "So every identity matrix is diagonal.",
+        "The converse is false: for example $\\begin{bmatrix}6&0\\\\0&7\\end{bmatrix}$ is diagonal but its diagonal entries are not all $1$.",
+        "<mark>Every identity matrix is diagonal, but not every diagonal matrix is an identity matrix.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0016",
+      "q": "Let $A$ be a $2 \\times 3$ matrix. Which identity matrices make $IA = A$ and $AI = A$, respectively?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$I_3$ for $IA = A$, and $I_2$ for $AI = A$"},
+        {"i": "2", "x": "$I_2$ for $IA = A$, and $I_3$ for $AI = A$"},
+        {"i": "3", "x": "$I_2$ for both $IA = A$ and $AI = A$"},
+        {"i": "4", "x": "$I_3$ for both $IA = A$ and $AI = A$"}
+      ],
+      "a": "2",
+      "e": [
+        "For $IA$ to be defined, the columns of $I$ must equal the rows of $A$, which is $2$. So $I = I_2$, and then $I_2 A$ is $2 \\times 3$.",
+        "For $AI$ to be defined, the rows of $I$ must equal the columns of $A$, which is $3$. So $I = I_3$, and then $A I_3$ is $2 \\times 3$.",
+        "<mark>$I_2$ is used for $IA = A$ and $I_3$ is used for $AI = A$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0017",
+      "q": "How is the matrix $\\begin{bmatrix}1&-9&-3\\end{bmatrix}$ classified?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "A column vector of size $3 \\times 1$"},
+        {"i": "2", "x": "A row vector of size $1 \\times 3$"},
+        {"i": "3", "x": "A square matrix of size $3 \\times 3$"},
+        {"i": "4", "x": "A zero matrix of size $1 \\times 3$"}
+      ],
+      "a": "2",
+      "e": [
+        "A vector matrix has only one row or only one column.",
+        "This matrix has 1 row and 3 columns, so it is a <b>row vector</b> of size $1 \\times 3$.",
+        "It is not a zero matrix, because its entries are not all zero.",
+        "<mark>It is a row vector of size $1 \\times 3$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0018",
+      "q": "Let $O$ be the zero matrix of the same size as a matrix $A$. Which statement is correct?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$A + O = O + A = A - O = A$"},
+        {"i": "2", "x": "$A + O = O$ for every matrix $A$"},
+        {"i": "3", "x": "$A - O = -A$ for every matrix $A$"},
+        {"i": "4", "x": "$A + O = 2A$ for every matrix $A$"}
+      ],
+      "a": "1",
+      "e": [
+        "Adding or subtracting $0$ from each element does not change the element.",
+        "So $A + O = A$, $\\;O + A = A$, and $A - O = A$.",
+        "<mark>$A + O = O + A = A - O = A$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0019",
+      "q": "Let\n$$B = \\begin{bmatrix}2&3\\\\1&4\\\\5&6\\end{bmatrix}$$\nWhat is $B^T$?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}2&1&5\\\\3&4&6\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}5&1&2\\\\6&4&3\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}2&3&1\\\\4&5&6\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}2&3\\\\1&4\\\\5&6\\end{bmatrix}$"}
+      ],
+      "a": "1",
+      "e": [
+        "$B$ is $3 \\times 2$, so $B^T$ is $2 \\times 3$.",
+        "The rows of $B$ become the columns of $B^T$.",
+        "Row 1 of $B$ is $[2\\;\\;3]$, so column 1 of $B^T$ is $(2, 3)$. Row 2 is $[1\\;\\;4]$, so column 2 is $(1, 4)$. Row 3 is $[5\\;\\;6]$, so column 3 is $(5, 6)$.",
+        "<mark>$B^T = \\begin{bmatrix}2&1&5\\\\3&4&6\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0020",
+      "q": "Let $A$ be a $2 \\times 3$ matrix and $B$ be a $3 \\times 4$ matrix. Which expression equals $(AB)^T$?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$A^T B^T$"},
+        {"i": "2", "x": "$B^T A^T$"},
+        {"i": "3", "x": "$A B^T$"},
+        {"i": "4", "x": "$B A$"}
+      ],
+      "a": "2",
+      "e": [
+        "The transpose rule for products is $(AB)^T = B^T A^T$ (the order is reversed).",
+        "Check the sizes: $B^T$ is $4 \\times 3$ and $A^T$ is $3 \\times 2$, so $B^T A^T$ is defined and is $4 \\times 2$, which matches the size of $(AB)^T$ (since $AB$ is $2 \\times 4$).",
+        "$A^T B^T$ is $(3 \\times 2)(4 \\times 3)$, which is undefined. The same problem occurs with $AB^T$ and $BA$.",
+        "<mark>$(AB)^T = B^T A^T$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0021",
+      "q": "Which of the following matrices is <b>symmetric</b>?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}4&-3&0\\\\3&5&2\\\\0&2&7\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}4&-3&0\\\\-3&5&-2\\\\0&2&7\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}4&-3&1\\\\-3&5&2\\\\0&2&7\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}4&-3&0\\\\-3&5&2\\\\0&2&7\\end{bmatrix}$"}
+      ],
+      "a": "4",
+      "e": [
+        "A square matrix is symmetric when $A = A^T$, i.e. $a_{ij} = a_{ji}$ for all entries.",
+        "Option 1: $a_{12} = -3$ but $a_{21} = 3$, so it is not symmetric.",
+        "Option 2: $a_{23} = -2$ but $a_{32} = 2$, so it is not symmetric.",
+        "Option 3: $a_{13} = 1$ but $a_{31} = 0$, so it is not symmetric.",
+        "Option 4: $a_{12} = a_{21} = -3$, $\\;a_{13} = a_{31} = 0$, $\\;a_{23} = a_{32} = 2$, so $A = A^T$.",
+        "<mark>Option 4 is symmetric.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0022",
+      "q": "Let\n$$A = \\begin{bmatrix}1&2\\\\1&3\\end{bmatrix}, \\qquad B = \\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$$\nIs $B$ the inverse of $A$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "No, because $B$ contains negative entries"},
+        {"i": "2", "x": "No, because $A$ and $B$ do not have the same size"},
+        {"i": "3", "x": "Yes, because $AB = A$ and $BA = B$"},
+        {"i": "4", "x": "Yes, because $AB = BA = I$"}
+      ],
+      "a": "4",
+      "e": [
+        "Square matrices $A$ and $B$ of the same size satisfy $B = A^{-1}$ when $AB = BA = I$.",
+        "$AB$: $\\begin{bmatrix}1\\cdot3+2\\cdot(-1)&1\\cdot(-2)+2\\cdot1\\\\1\\cdot3+3\\cdot(-1)&1\\cdot(-2)+3\\cdot1\\end{bmatrix} = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} = I$.",
+        "$BA$: $\\begin{bmatrix}3\\cdot1+(-2)\\cdot1&3\\cdot2+(-2)\\cdot3\\\\-1\\cdot1+1\\cdot1&-1\\cdot2+1\\cdot3\\end{bmatrix} = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} = I$.",
+        "<mark>$AB = BA = I$, so $B$ is the inverse of $A$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0023",
+      "q": "Using the $2 \\times 2$ inverse formula, find $A^{-1}$ for\n$$A = \\begin{bmatrix}1&4\\\\2&7\\end{bmatrix}$$",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}7&-4\\\\-2&1\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}-7&-4\\\\-2&-1\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}1&-4\\\\-2&7\\end{bmatrix}$"}
+      ],
+      "a": "3",
+      "e": [
+        "For $A = \\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}$, the inverse is $A^{-1} = \\frac{1}{ad - bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$.",
+        "Here $a = 1$, $b = 4$, $c = 2$, $d = 7$, so $ad - bc = 1\\cdot7 - 4\\cdot2 = -1$ (nonzero, so $A$ is invertible).",
+        "Swap $a$ and $d$, and change the signs of $b$ and $c$: $\\begin{bmatrix}7&-4\\\\-2&1\\end{bmatrix}$.",
+        "Multiply by $\\frac{1}{-1} = -1$: $A^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
+        "<mark>$A^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0024",
+      "q": "Let\n$$A = \\begin{bmatrix}3&6\\\\2&4\\end{bmatrix}$$\nWhich statement about $A$ is correct?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$ad - bc = 24$, so $A$ is invertible"},
+        {"i": "2", "x": "$ad - bc = 12$, so $A$ is invertible"},
+        {"i": "3", "x": "$ad - bc = 0$, so its inverse is the zero matrix"},
+        {"i": "4", "x": "$ad - bc = 0$, so $A$ is singular (it has no inverse)"}
+      ],
+      "a": "4",
+      "e": [
+        "Compute $ad - bc = (3)(4) - (6)(2) = 12 - 12 = 0$.",
+        "If $ad - bc = 0$, the matrix has no inverse (it is singular). The formula would require dividing by $0$.",
+        "<mark>$A$ is singular (not invertible).</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0025",
+      "q": "To find $A^{-1}$ in Example 1, we reduce $[A \\mid I]$. After $-2R_1 + R_2 \\to R_2$ and $-3R_1 + R_3 \\to R_3$ we get\n$$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\0&0&-1&-2&1&0\\\\0&-1&-3&-3&0&1\\end{array}\\right]$$\nWhich operation should be applied next?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Multiply $R_2$ by $-1$"},
+        {"i": "2", "x": "Interchange $R_2$ with $R_3$"},
+        {"i": "3", "x": "Add $R_2$ to $R_1$"},
+        {"i": "4", "x": "Divide $R_3$ by $-3$"}
+      ],
+      "a": "2",
+      "e": [
+        "The next leading 1 should be in column 2, row 2, but the entry in row 2, column 2 is $0$.",
+        "Multiplying $R_2$ by $-1$ keeps that entry equal to $0$, and adding $R_2$ to $R_1$ does not change row 2.",
+        "$R_3$ has a nonzero entry ($-1$) in column 2, so interchange $R_2$ with $R_3$.",
+        "<mark>Interchange $R_2$ with $R_3$.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0026",
+      "q": "Find $A^{-1}$ for\n$$A = \\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&5&6\\end{bmatrix}$$",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}-5&0&2\\\\3&0&-1\\\\2&-1&0\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}1&-3&2\\\\-3&3&-1\\\\2&-1&0\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}1&-3&2\\\\-3&3&1\\\\2&-1&0\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}1&-3&2\\\\3&-3&1\\\\-2&1&0\\end{bmatrix}$"}
+      ],
+      "a": "2",
+      "e": [
+        "Form $[A \\mid I]$ and reduce the left half to $I$.",
+        "$-2R_1 + R_2 \\to R_2$ and $-3R_1 + R_3 \\to R_3$ give rows $[0\\;\\;0\\;\\;-1 \\mid -2\\;\\;1\\;\\;0]$ and $[0\\;\\;-1\\;\\;-3 \\mid -3\\;\\;0\\;\\;1]$.",
+        "Interchange $R_2$ with $R_3$, then apply $-R_2 \\to R_2$ and $-R_3 \\to R_3$: $R_2 = [0\\;\\;1\\;\\;3 \\mid 3\\;\\;0\\;\\;-1]$ and $R_3 = [0\\;\\;0\\;\\;1 \\mid 2\\;\\;-1\\;\\;0]$.",
+        "$-2R_2 + R_1 \\to R_1$ gives $R_1 = [1\\;\\;0\\;\\;-3 \\mid -5\\;\\;0\\;\\;2]$.",
+        "$3R_3 + R_1 \\to R_1$ gives $R_1 = [1\\;\\;0\\;\\;0 \\mid 1\\;\\;-3\\;\\;2]$, and $-3R_3 + R_2 \\to R_2$ gives $R_2 = [0\\;\\;1\\;\\;0 \\mid -3\\;\\;3\\;\\;-1]$.",
+        "The right half is now $A^{-1}$.",
+        "<mark>$A^{-1} = \\begin{bmatrix}1&-3&2\\\\-3&3&-1\\\\2&-1&0\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0027",
+      "q": "To show that\n$$A = \\begin{bmatrix}1&6&4\\\\2&4&-1\\\\-1&2&5\\end{bmatrix}$$\nis not invertible, we reduce $[A \\mid I]$ and obtain\n$$\\left[\\begin{array}{ccc|ccc}1&6&4&1&0&0\\\\0&1&\\frac{9}{8}&\\frac{1}{4}&-\\frac{1}{8}&0\\\\0&0&0&-1&1&1\\end{array}\\right]$$\nWhich observation proves that $A$ is not invertible?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "The left half has a zero row, so it cannot be reduced to $I$"},
+        {"i": "2", "x": "The right half contains fractions such as $\\frac{1}{4}$ and $-\\frac{1}{8}$"},
+        {"i": "3", "x": "The right half has a nonzero third row, which is not allowed"},
+        {"i": "4", "x": "The left half has the entry $\\frac{9}{8}$, which is not an integer"}
+      ],
+      "a": "1",
+      "e": [
+        "$A$ is invertible only if $[A \\mid I]$ can be reduced to $[I \\mid A^{-1}]$.",
+        "Here the third row of the left half is $[0\\;\\;0\\;\\;0]$ (it came from $-8R_2 + R_3 \\to R_3$).",
+        "A zero row in the left half means the left half can never become the identity matrix.",
+        "Fractions in the matrix are allowed during row operations, and a nonzero right half does not prevent invertibility by itself.",
+        "<mark>The zero row in the left half shows that $A$ is not invertible.</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0028",
+      "q": "Let $A$ and $B$ be invertible matrices of the same size. Which expression equals $(AB)^{-1}$?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$A^{-1}B^{-1}$"},
+        {"i": "2", "x": "$A^{-1} + B^{-1}$"},
+        {"i": "3", "x": "$B^{-1}A^{-1}$"},
+        {"i": "4", "x": "$(AB)^T$"}
+      ],
+      "a": "3",
+      "e": [
+        "For invertible matrices of the same size, $AB$ is invertible and $(AB)^{-1} = B^{-1}A^{-1}$ (the order is reversed).",
+        "Check: $(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AIA^{-1} = AA^{-1} = I$.",
+        "<mark>$(AB)^{-1} = B^{-1}A^{-1}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0029",
+      "q": "Let $A$ be an invertible matrix with\n$$A^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$$\nWhat is $(2A)^{-1}$?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}-14&8\\\\4&-2\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}-\\frac{7}{2}&2\\\\1&-\\frac{1}{2}\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}\\frac{7}{2}&-2\\\\-1&\\frac{1}{2}\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$"}
+      ],
+      "a": "2",
+      "e": [
+        "The property is $(KA)^{-1} = \\frac{1}{K}A^{-1}$ for a nonzero constant $K$.",
+        "With $K = 2$: $(2A)^{-1} = \\frac{1}{2}A^{-1}$.",
+        "Multiply every element of $A^{-1}$ by $\\frac{1}{2}$: $-7 \\to -\\frac{7}{2}$, $\\;4 \\to 2$, $\\;2 \\to 1$, $\\;-1 \\to -\\frac{1}{2}$.",
+        "<mark>$(2A)^{-1} = \\begin{bmatrix}-\\frac{7}{2}&2\\\\1&-\\frac{1}{2}\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA3_0030",
+      "q": "Let $A$ and $B$ be square matrices of the same size, and suppose the product $AB$ is <u>not</u> invertible. Which statement must be true?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Both $A$ and $B$ are invertible"},
+        {"i": "2", "x": "Both $A$ and $B$ are not invertible"},
+        {"i": "3", "x": "$A$ or $B$ is not invertible"},
+        {"i": "4", "x": "$A + B$ is not invertible"}
+      ],
+      "a": "3",
+      "e": [
+        "If $A$ and $B$ were both invertible, then $AB$ would be invertible, with $(AB)^{-1} = B^{-1}A^{-1}$.",
+        "Since $AB$ is not invertible, at least one of the two matrices must be non-invertible. It is not required that both are.",
+        "<mark>$A$ or $B$ is not invertible.</mark>"
+      ]
+    }
+  ]
+}
