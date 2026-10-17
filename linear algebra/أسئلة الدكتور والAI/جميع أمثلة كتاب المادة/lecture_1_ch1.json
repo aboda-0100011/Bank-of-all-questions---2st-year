@@ -1,0 +1,338 @@
+{
+  "qs": [
+    {
+      "id": "la_0001",
+      "q": "Which of the following equations is a **linear** equation?",
+      "t": ["0", "linear-equation", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "$x^3 + 3xy = 4$" },
+        { "i": "B", "x": "$\\sin x + y = 0$" },
+        { "i": "C", "x": "$\\frac{1}{2}x - 0.7y + \\sqrt{3}z = 1$" },
+        { "i": "D", "x": "$\\sqrt{x_1} + 2x_2 + x_3 = 1$" }
+      ],
+      "a": "C",
+      "e": [
+        "**تعريف المعادلة الخطية:** المعادلة تكون خطية إذا كانت جميع المتغيرات مرفوعة للأس الأول، ولا توجد حواصل ضرب بين المتغيرات، ولا دوال غير خطية (مثل sin، sqrt تطبَّق على متغير).",
+        "**الخيار A:** $x^3 + 3xy = 4$ — تحتوي على $x^3$ (أس ≠ 1) وحاصل ضرب $xy$ → **غير خطية** ❌",
+        "**الخيار B:** $\\sin x + y = 0$ — تحتوي على $\\sin x$ (دالة غير خطية على المتغير) → **غير خطية** ❌",
+        "**الخيار C:** $\\frac{1}{2}x - 0.7y + \\sqrt{3}z = 1$ — المعاملات ($\\frac{1}{2}$، $-0.7$، $\\sqrt{3}$) أرقام ثابتة، وجميع المتغيرات بالأس الأول → **خطية** ✅",
+        "**الخيار D:** $\\sqrt{x_1} + 2x_2 + x_3 = 1$ — تحتوي على $\\sqrt{x_1}$ أي $x_1^{1/2}$ (أس ≠ 1) → **غير خطية** ❌",
+        "**الإجابة الصحيحة: C**"
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0002",
+      "q": "Which of the following equations is **NOT** a linear equation?\n\n(i) $x_1 + 5x_2 - \\sqrt{2}\\, x_3 = 1$\n(ii) $x_1 + 3x_2 + x_1 x_3 = 2$\n(iii) $2x_1 - 4x_2 + x_3 = 0$",
+      "t": ["0", "linear-equation", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "(i) فقط" },
+        { "i": "B", "x": "(ii) فقط" },
+        { "i": "C", "x": "(iii) فقط" },
+        { "i": "D", "x": "(i) و (iii) معاً" }
+      ],
+      "a": "B",
+      "e": [
+        "**المعادلة (i):** $x_1 + 5x_2 - \\sqrt{2}\\,x_3 = 1$\nالمعاملات أرقام ثابتة ($1$، $5$، $-\\sqrt{2}$)، والمتغيرات كلها بالأس الأول → **خطية** ✅",
+        "**المعادلة (ii):** $x_1 + 3x_2 + x_1 x_3 = 2$\nتحتوي على حاصل ضرب المتغيرين $x_1 \\cdot x_3$ → **غير خطية** ❌",
+        "**المعادلة (iii):** $2x_1 - 4x_2 + x_3 = 0$\nجميع المتغيرات بالأس الأول بمعاملات ثابتة → **خطية** ✅",
+        "**الإجابة: B** — المعادلة غير الخطية هي (ii) فقط."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0003",
+      "q": "Solve the system of linear equations:\n$$x - y = 1$$\n$$x + y = 5$$\nWhat is the solution?",
+      "t": ["0", "solve-system", "unique-solution", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "$x = 2,\\; y = 3$" },
+        { "i": "B", "x": "$x = 3,\\; y = 2$" },
+        { "i": "C", "x": "No solution" },
+        { "i": "D", "x": "Infinitely many solutions" }
+      ],
+      "a": "B",
+      "e": [
+        "**الخطوة 1 — جمع المعادلتين:**\n$$( x - y ) + ( x + y ) = 1 + 5$$\n$$2x = 6 \\implies x = 3$$",
+        "**الخطوة 2 — إيجاد y بالتعويض في المعادلة الأولى:**\n$$3 - y = 1 \\implies y = 2$$",
+        "**التحقق:**\n- المعادلة الأولى: $3 - 2 = 1$ ✅\n- المعادلة الثانية: $3 + 2 = 5$ ✅",
+        "**الإجابة: B** — الحل الوحيد هو $(x, y) = (3, 2)$."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0004",
+      "q": "Solve the system:\n$$x + y = 1$$\n$$2x + 2y = 5$$\nHow many solutions does this system have?",
+      "t": ["0", "solve-system", "no-solution", "inconsistent", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "One solution: $(x, y) = (1, 0)$" },
+        { "i": "B", "x": "Infinitely many solutions" },
+        { "i": "C", "x": "No solution (inconsistent)" },
+        { "i": "D", "x": "One solution: $(x, y) = (2, -1)$" }
+      ],
+      "a": "C",
+      "e": [
+        "**الخطوة 1 — نضيف $(-2)$ مضروباً في المعادلة الأولى إلى المعادلة الثانية:**\n$$R_2 \\leftarrow R_2 - 2R_1$$\n$$( 2x + 2y ) - 2(x + y) = 5 - 2(1)$$\n$$0 = 3$$",
+        "**الخطوة 2 — تفسير النتيجة:**\nالمعادلة $0 = 3$ تناقض (لا يمكن أن تتحقق أبداً)، وهذا يعني أن النظام **غير متوافق (Inconsistent)**.",
+        "**تفسير هندسي:** الخطان متوازيان ولا يتقاطعان أبداً.",
+        "**الإجابة: C** — لا يوجد حل."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0005",
+      "q": "Solve the system:\n$$x + y = 1$$\n$$4x + 4y = 4$$\nWhat is the solution set?",
+      "t": ["0", "solve-system", "infinite-solutions", "parametric", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "No solution" },
+        { "i": "B", "x": "One solution: $(1, 0)$" },
+        { "i": "C", "x": "Infinitely many solutions: $x = 1 - t,\\; y = t$, for any $t \\in \\mathbb{R}$" },
+        { "i": "D", "x": "Infinitely many solutions: $x = t,\\; y = t$" }
+      ],
+      "a": "C",
+      "e": [
+        "**الخطوة 1 — نضيف $(-4)$ مضروباً في المعادلة الأولى إلى المعادلة الثانية:**\n$$R_2 \\leftarrow R_2 - 4R_1$$\n$$( 4x + 4y ) - 4(x + y) = 4 - 4(1)$$\n$$0 = 0$$",
+        "**الخطوة 2 — تفسير النتيجة:**\nالمعادلة $0 = 0$ متحققة دائماً، أي أن المعادلة الثانية تابعة للأولى — المعادلتان تمثلان نفس الخط.",
+        "**الخطوة 3 — الحل العام (Parametric Solution):**\nمن المعادلة الأولى: $x = 1 - y$\nنجعل $y = t$ (متغير حر): $$x = 1 - t, \\quad y = t, \\quad t \\in \\mathbb{R}$$",
+        "**الإجابة: C** — عدد لا نهائي من الحلول."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0006",
+      "q": "Check whether the point $(3, 1, 1)$ is a solution to the system:\n$$x_1 - x_2 - x_3 = 1$$\n$$x_1 - 3x_2 + x_3 = 1$$\n$$2x_1 - 4x_2 = 2$$",
+      "t": ["0", "verify-solution", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "Yes, $(3, 1, 1)$ satisfies all three equations" },
+        { "i": "B", "x": "No, it fails the first equation" },
+        { "i": "C", "x": "No, it fails the second equation" },
+        { "i": "D", "x": "No, it fails the third equation" }
+      ],
+      "a": "A",
+      "e": [
+        "**التعويض بـ $(x_1, x_2, x_3) = (3, 1, 1)$ في كل معادلة:**",
+        "**المعادلة الأولى:** $3 - 1 - 1 = 1$ ✅",
+        "**المعادلة الثانية:** $3 - 3(1) + 1 = 3 - 3 + 1 = 1$ ✅",
+        "**المعادلة الثالثة:** $2(3) - 4(1) = 6 - 4 = 2$ ✅",
+        "**الإجابة: A** — النقطة $(3, 1, 1)$ تحقق جميع المعادلات الثلاث، إذن هي حل للنظام."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0007",
+      "q": "Consider the system:\n$$x - y = a$$\n$$2x - 2y = b$$\nUnder what condition does this system have **no solution**?",
+      "t": ["0", "consistency-condition", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "$b = 2a$" },
+        { "i": "B", "x": "$b \\neq 2a$" },
+        { "i": "C", "x": "$a = 0$" },
+        { "i": "D", "x": "$a = b$" }
+      ],
+      "a": "B",
+      "e": [
+        "**الخطوة 1 — نضيف $(-2)$ مضروباً في المعادلة الأولى إلى المعادلة الثانية:**\n$$R_2 \\leftarrow R_2 - 2R_1$$\n$$( 2x - 2y ) - 2(x - y) = b - 2a$$\n$$0 = b - 2a$$",
+        "**الخطوة 2 — شرط الاتساق (Consistency):**\n- إذا كان $b = 2a$: المعادلة تصبح $0 = 0$ → عدد لا نهائي من الحلول.\n- إذا كان $b \\neq 2a$: المعادلة تصبح $0 = b - 2a \\neq 0$ → تناقض → **لا يوجد حل**.",
+        "**الإجابة: B** — النظام لا يملك حلاً عندما $b \\neq 2a$."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0008",
+      "q": "True or False: The system\n$$x - y = 3$$\n$$2x - y = 4$$\nhas infinitely many solutions.",
+      "t": ["0", "true-false", "unique-solution", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "True — the system has infinitely many solutions" },
+        { "i": "B", "x": "False — the system has no solution" },
+        { "i": "C", "x": "False — the system has exactly one solution" },
+        { "i": "D", "x": "False — the system cannot be determined" }
+      ],
+      "a": "C",
+      "e": [
+        "**الخطوة 1 — طرح المعادلة الأولى من الثانية:**\n$$(2x - y) - (x - y) = 4 - 3$$\n$$x = 1$$",
+        "**الخطوة 2 — إيجاد $y$:**\n$$x - y = 3 \\implies 1 - y = 3 \\implies y = -2$$",
+        "**التحقق:**\n- $1 - (-2) = 3$ ✅\n- $2(1) - (-2) = 4$ ✅",
+        "**الإجابة: C — خطأ (False).** النظام له حل وحيد: $(x, y) = (1, -2)$، وليس عدداً لا نهائياً من الحلول."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0009",
+      "q": "Use elementary row operations to solve:\n$$x + y = 4$$\n$$x + 2y = 2$$\nWhat is the solution?",
+      "t": ["0", "elementary-row-operations", "augmented-matrix", "section-1.1"],
+      "c": [
+        { "i": "A", "x": "$x = 4,\\; y = 0$" },
+        { "i": "B", "x": "$x = 6,\\; y = -2$" },
+        { "i": "C", "x": "$x = 2,\\; y = 2$" },
+        { "i": "D", "x": "No solution" }
+      ],
+      "a": "B",
+      "e": [
+        "**كتابة المصفوفة المعززة (Augmented Matrix):**\n$$\\left[\\begin{array}{cc|c} 1 & 1 & 4 \\\\ 1 & 2 & 2 \\end{array}\\right]$$",
+        "**الخطوة 1 — $R_2 \\leftarrow R_2 - R_1$:**\n$$\\left[\\begin{array}{cc|c} 1 & 1 & 4 \\\\ 0 & 1 & -2 \\end{array}\\right]$$\nنحصل على: $y = -2$",
+        "**الخطوة 2 — $R_1 \\leftarrow R_1 - R_2$ (لإزالة y من الصف الأول):**\n$$\\left[\\begin{array}{cc|c} 1 & 0 & 6 \\\\ 0 & 1 & -2 \\end{array}\\right]$$\nنحصل على: $x = 6$",
+        "**التحقق:**\n- $6 + (-2) = 4$ ✅\n- $6 + 2(-2) = 6 - 4 = 2$ ✅",
+        "**الإجابة: B** — الحل هو $(x, y) = (6, -2)$."
+      ],
+      "ref": "Section 1.1"
+    },
+    {
+      "id": "la_0010",
+      "q": "Which of the following matrices is in **Reduced Row-Echelon Form (RREF)**?\n\n(A) $\\begin{bmatrix} 1 & 4 & -3 \\\\ 0 & 1 & 6 \\\\ 0 & 0 & 1 \\end{bmatrix}$\n\n(B) $\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$\n\n(C) $\\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\\\ 0 & 0 \\end{bmatrix}$\n\n(D) $\\begin{bmatrix} 2 & 0 \\\\ 0 & 1 \\end{bmatrix}$",
+      "t": ["0", "rref", "row-echelon", "matrix-form", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "المصفوفة (A) فقط" },
+        { "i": "B", "x": "المصفوفة (B) فقط — وهي مصفوفة الوحدة" },
+        { "i": "C", "x": "المصفوفتان (A) و (C)" },
+        { "i": "D", "x": "المصفوفة (D) فقط" }
+      ],
+      "a": "B",
+      "e": [
+        "**شروط الصورة الصفية المختزلة (RREF):**\n1. الصفوف الصفرية في الأسفل.\n2. أول عنصر غير صفري في كل صف (Pivot) يساوي 1.\n3. كل pivot هو العنصر الوحيد غير الصفري في عموده.",
+        "**المصفوفة (A):** الـ pivots هي 1، 1، 1 ✅، لكن فوق pivot الثاني يوجد 4 (≠ 0) → **ليست RREF** (هي REF فقط) ❌",
+        "**المصفوفة (B):** مصفوفة الوحدة $I_3$، كل pivot = 1 وعموده يحتوي أصفاراً فقط → **RREF** ✅",
+        "**المصفوفة (C):** pivot الثانية = 1، لكن فوقها في العمود الثاني يوجد $-1$ → **ليست RREF** ❌",
+        "**المصفوفة (D):** أول pivot = 2 ≠ 1 → **ليست RREF** ❌",
+        "**الإجابة: B**"
+      ],
+      "ref": "Section 1.2"
+    },
+    {
+      "id": "la_0011",
+      "q": "The augmented matrix of a system is row-reduced to:\n$$\\left[\\begin{array}{ccc|c} 1 & 0 & 0 & 2 \\\\ 0 & 1 & 0 & 8 \\\\ 0 & 0 & 1 & 1 \\end{array}\\right]$$\nWhat is the solution of the system?",
+      "t": ["0", "rref", "unique-solution", "read-solution", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "$x_1 = 8,\\; x_2 = 2,\\; x_3 = 1$" },
+        { "i": "B", "x": "$x_1 = 2,\\; x_2 = 8,\\; x_3 = 1$" },
+        { "i": "C", "x": "Infinitely many solutions" },
+        { "i": "D", "x": "No solution" }
+      ],
+      "a": "B",
+      "e": [
+        "**قراءة الحل من RREF مباشرة:**\nعندما تكون المصفوفة في الصورة الصفية المختزلة مع عدم وجود تناقض، يُقرأ الحل مباشرة من العمود الأخير.",
+        "- الصف الأول: $1 \\cdot x_1 = 2 \\implies x_1 = 2$\n- الصف الثاني: $1 \\cdot x_2 = 8 \\implies x_2 = 8$\n- الصف الثالث: $1 \\cdot x_3 = 1 \\implies x_3 = 1$",
+        "المصفوفة تكافئ نظام $I_3 \\mathbf{x} = \\mathbf{b}$، وله حل وحيد.",
+        "**الإجابة: B** — $(x_1, x_2, x_3) = (2, 8, 1)$."
+      ],
+      "ref": "Section 1.2"
+    },
+    {
+      "id": "la_0012",
+      "q": "A system is reduced to the augmented matrix:\n$$\\left[\\begin{array}{ccc|c} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 3 & 0 \\\\ 0 & 0 & 0 & 1 \\end{array}\\right]$$\nWhat can you conclude about the system?",
+      "t": ["0", "rref", "inconsistent", "no-solution", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "The system has a unique solution" },
+        { "i": "B", "x": "The system has infinitely many solutions" },
+        { "i": "C", "x": "The system is inconsistent (no solution)" },
+        { "i": "D", "x": "The system has exactly two solutions" }
+      ],
+      "a": "C",
+      "e": [
+        "**فحص الصف الأخير من المصفوفة:**\nالصف الأخير يمثل المعادلة:\n$$0 \\cdot x_1 + 0 \\cdot x_2 + 0 \\cdot x_3 = 1$$\n$$0 = 1$$",
+        "هذه المعادلة **تناقض صريح** (لا يمكن أن تتحقق لأي قيم للمتغيرات).",
+        "**الإجابة: C** — النظام غير متوافق (Inconsistent) ولا يملك أي حل.",
+        "**القاعدة العامة:** إذا ظهر صف من الشكل $[0 \\; 0 \\; \\cdots \\; 0 \\;|\\; c]$ حيث $c \\neq 0$ في أي مرحلة من الاختزال، فالنظام غير متوافق."
+      ],
+      "ref": "Section 1.2"
+    },
+    {
+      "id": "la_0013",
+      "q": "A system is reduced to:\n$$\\left[\\begin{array}{ccc|c} 1 & 0 & 2 & -1 \\\\ 0 & 1 & -1 & 2 \\\\ 0 & 0 & 0 & 0 \\end{array}\\right]$$\nWhat is the general (parametric) solution?",
+      "t": ["0", "rref", "infinite-solutions", "free-variable", "parametric", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "$x_1 = -1,\\; x_2 = 2,\\; x_3 = 0$" },
+        { "i": "B", "x": "$x_1 = -1 - 2t,\\; x_2 = 2 + t,\\; x_3 = t$" },
+        { "i": "C", "x": "$x_1 = -1 + 2t,\\; x_2 = 2 - t,\\; x_3 = t$" },
+        { "i": "D", "x": "No solution" }
+      ],
+      "a": "B",
+      "e": [
+        "**الخطوة 1 — تحديد المتغيرات الحرة:**\nالصف الأخير ($0=0$) يُحذف. المتغيرات ذات الـ pivots هي $x_1, x_2$، والمتغير الحر هو $x_3$.\nنضع $x_3 = t$.",
+        "**الخطوة 2 — قراءة المعادلات من الصفين الأول والثاني:**\n- الصف الثاني: $x_2 - x_3 = 2 \\implies x_2 = 2 + x_3 = 2 + t$\n- الصف الأول: $x_1 + 2x_3 = -1 \\implies x_1 = -1 - 2x_3 = -1 - 2t$",
+        "**الحل العام:**\n$$x_1 = -1 - 2t, \\quad x_2 = 2 + t, \\quad x_3 = t, \\quad t \\in \\mathbb{R}$$",
+        "**الإجابة: B**"
+      ],
+      "ref": "Section 1.2"
+    },
+    {
+      "id": "la_0014",
+      "q": "Solve the system by back substitution, given the row-echelon augmented matrix:\n$$\\left[\\begin{array}{ccc|c} 1 & 1 & 1 & 4 \\\\ 0 & 1 & 2 & 2 \\\\ 0 & 0 & 1 & 1 \\end{array}\\right]$$",
+      "t": ["0", "back-substitution", "row-echelon", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "$(x_1, x_2, x_3) = (1, 0, 3)$" },
+        { "i": "B", "x": "$(x_1, x_2, x_3) = (4, 2, 1)$" },
+        { "i": "C", "x": "$(x_1, x_2, x_3) = (3, 0, 1)$" },
+        { "i": "D", "x": "$(x_1, x_2, x_3) = (2, 1, 1)$" }
+      ],
+      "a": "C",
+      "e": [
+        "**الخطوة 1 — من الصف الثالث (Back Substitution — نبدأ من الأسفل):**\n$$x_3 = 1$$",
+        "**الخطوة 2 — من الصف الثاني:**\n$$x_2 + 2x_3 = 2 \\implies x_2 + 2(1) = 2 \\implies x_2 = 0$$",
+        "**الخطوة 3 — من الصف الأول:**\n$$x_1 + x_2 + x_3 = 4 \\implies x_1 + 0 + 1 = 4 \\implies x_1 = 3$$",
+        "**التحقق:**\n- $3 + 0 + 1 = 4$ ✅\n- $0 + 2(1) = 2$ ✅\n- $x_3 = 1$ ✅",
+        "**الإجابة: C** — $(x_1, x_2, x_3) = (3, 0, 1)$."
+      ],
+      "ref": "Section 1.2"
+    },
+    {
+      "id": "la_0015",
+      "q": "The augmented matrix of a system reduces to:\n$$\\left[\\begin{array}{ccc|c} 1 & -3 & 1 & 1 \\\\ 0 & 1 & -1 & 0 \\\\ 0 & 0 & 0 & 0 \\end{array}\\right]$$\nWhat is the parametric solution?",
+      "t": ["0", "free-variable", "parametric", "infinite-solutions", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "$x_1 = 1 + 2t,\\; x_2 = t,\\; x_3 = t$" },
+        { "i": "B", "x": "$x_1 = 1 - 2t,\\; x_2 = t,\\; x_3 = t$" },
+        { "i": "C", "x": "$x_1 = 1,\\; x_2 = 0,\\; x_3 = 0$" },
+        { "i": "D", "x": "No solution" }
+      ],
+      "a": "A",
+      "e": [
+        "**الخطوة 1 — تحديد المتغير الحر:**\nالصف الأخير يُحذف ($0 = 0$). المتغيرات ذات الـ pivots: $x_1, x_2$. المتغير الحر: $x_3 = t$.",
+        "**الخطوة 2 — من الصف الثاني:**\n$$x_2 - x_3 = 0 \\implies x_2 = x_3 = t$$",
+        "**الخطوة 3 — من الصف الأول:**\n$$x_1 - 3x_2 + x_3 = 1 \\implies x_1 = 1 + 3x_2 - x_3 = 1 + 3t - t = 1 + 2t$$",
+        "**الحل العام:**\n$$x_1 = 1 + 2t, \\quad x_2 = t, \\quad x_3 = t, \\quad t \\in \\mathbb{R}$$",
+        "**الإجابة: A**"
+      ],
+      "ref": "Section 1.2"
+    },
+    {
+      "id": "la_0016",
+      "q": "Use Gaussian elimination (or Gauss-Jordan) to solve:\n$$x_1 - x_2 = 4$$\n$$x_1 + 2x_2 = 1$$\nWhat is the solution?",
+      "t": ["0", "gauss-jordan", "gaussian-elimination", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "$x_1 = 3,\\; x_2 = -1$" },
+        { "i": "B", "x": "$x_1 = -1,\\; x_2 = 3$" },
+        { "i": "C", "x": "$x_1 = 4,\\; x_2 = 0$" },
+        { "i": "D", "x": "No solution" }
+      ],
+      "a": "A",
+      "e": [
+        "**كتابة المصفوفة المعززة:**\n$$\\left[\\begin{array}{cc|c} 1 & -1 & 4 \\\\ 1 & 2 & 1 \\end{array}\\right]$$",
+        "**الخطوة 1 — $R_2 \\leftarrow R_2 - R_1$:**\n$$\\left[\\begin{array}{cc|c} 1 & -1 & 4 \\\\ 0 & 3 & -3 \\end{array}\\right]$$",
+        "**الخطوة 2 — $R_2 \\leftarrow \\frac{1}{3} R_2$:**\n$$\\left[\\begin{array}{cc|c} 1 & -1 & 4 \\\\ 0 & 1 & -1 \\end{array}\\right]$$\nمن الصف الثاني: $x_2 = -1$",
+        "**الخطوة 3 — التعويض الخلفي (أو $R_1 \\leftarrow R_1 + R_2$):**\n$$x_1 - x_2 = 4 \\implies x_1 = 4 + x_2 = 4 + (-1) = 3$$",
+        "**التحقق:**\n- $3 - (-1) = 4$ ✅\n- $3 + 2(-1) = 1$ ✅",
+        "**الإجابة: A** — $(x_1, x_2) = (3, -1)$."
+      ],
+      "ref": "Section 1.2"
+    },
+    {
+      "id": "la_0017",
+      "q": "Use Gaussian elimination to solve the system:\n$$x_1 + x_2 + 2x_3 = 8$$\n$$-x_1 - 2x_2 + 3x_3 = 1$$\n$$3x_1 - 7x_2 + 4x_3 = 10$$\nWhat is the unique solution?",
+      "t": ["0", "gaussian-elimination", "three-equations", "section-1.2"],
+      "c": [
+        { "i": "A", "x": "$(x_1, x_2, x_3) = (1, 3, 2)$" },
+        { "i": "B", "x": "$(x_1, x_2, x_3) = (3, 1, 2)$" },
+        { "i": "C", "x": "$(x_1, x_2, x_3) = (2, 8, 1)$" },
+        { "i": "D", "x": "No solution" }
+      ],
+      "a": "B",
+      "e": [
+        "**المصفوفة المعززة الابتدائية:**\n$$\\left[\\begin{array}{ccc|c} 1 & 1 & 2 & 8 \\\\ -1 & -2 & 3 & 1 \\\\ 3 & -7 & 4 & 10 \\end{array}\\right]$$",
+        "**الخطوة 1 — $R_2 \\leftarrow R_2 + R_1$، $R_3 \\leftarrow R_3 - 3R_1$:**\n$$\\left[\\begin{array}{ccc|c} 1 & 1 & 2 & 8 \\\\ 0 & -1 & 5 & 9 \\\\ 0 & -10 & -2 & -14 \\end{array}\\right]$$",
+        "**الخطوة 2 — $R_2 \\leftarrow -R_2$، ثم $R_3 \\leftarrow R_3 + 10R_2$:**\n$$\\left[\\begin{array}{ccc|c} 1 & 1 & 2 & 8 \\\\ 0 & 1 & -5 & -9 \\\\ 0 & 0 & -52 & -104 \\end{array}\\right]$$",
+        "**الخطوة 3 — $R_3 \\leftarrow -\\frac{1}{52} R_3$:**\n$$\\left[\\begin{array}{ccc|c} 1 & 1 & 2 & 8 \\\\ 0 & 1 & -5 & -9 \\\\ 0 & 0 & 1 & 2 \\end{array}\\right]$$",
+        "**الخطوة 4 — التعويض الخلفي:**\n- من الصف 3: $x_3 = 2$\n- من الصف 2: $x_2 - 5(2) = -9 \\implies x_2 = 1$\n- من الصف 1: $x_1 + 1 + 2(2) = 8 \\implies x_1 = 3$",
+        "**الإجابة: B** — $(x_1, x_2, x_3) = (3, 1, 2)$."
+      ],
+      "ref": "Section 1.2"
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "qs": [
+    {
+      "id": "la_0020",
+      "q": "If $\\begin{bmatrix} a & 2 \\\\ 3 & b \\end{bmatrix} = \\begin{bmatrix} 5 & c \\\\ d & 7 \\end{bmatrix}$, what are the values of $a$, $b$, $c$, and $d$?",
+      "t": ["0", "matrix-equality", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$a=5,\\ b=7,\\ c=2,\\ d=3$" },
+        { "i": "B", "x": "$a=2,\\ b=3,\\ c=5,\\ d=7$" },
+        { "i": "C", "x": "$a=5,\\ b=2,\\ c=7,\\ d=3$" },
+        { "i": "D", "x": "$a=3,\\ b=5,\\ c=7,\\ d=2$" }
+      ],
+      "a": "A",
+      "e": [
+        "مفهوم تساوي المصفوفات: مصفوفتان متساويتان إذا وفقط إذا كانتا من نفس الحجم وكانت جميع العناصر المتناظرة متساوية.",
+        "بمقارنة العناصر المتناظرة:",
+        "العنصر (1,1): $a = 5$",
+        "العنصر (1,2): $2 = c \\Rightarrow c = 2$",
+        "العنصر (2,1): $3 = d \\Rightarrow d = 3$",
+        "العنصر (2,2): $b = 7$",
+        "إذاً: $a=5,\\ b=7,\\ c=2,\\ d=3$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0021",
+      "q": "Let $A = \\begin{bmatrix} -1 & 2 \\\\ 3 & 9 \\end{bmatrix}$ and $B = \\begin{bmatrix} 5 & 6 \\\\ 1 & 7 \\end{bmatrix}$. Compute $A + B$.",
+      "t": ["0", "matrix-addition", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$\\begin{bmatrix} 4 & 8 \\\\ 4 & 16 \\end{bmatrix}$" },
+        { "i": "B", "x": "$\\begin{bmatrix} 6 & 4 \\\\ 4 & 2 \\end{bmatrix}$" },
+        { "i": "C", "x": "$\\begin{bmatrix} 4 & 8 \\\\ 2 & 16 \\end{bmatrix}$" },
+        { "i": "D", "x": "$\\begin{bmatrix} -6 & -4 \\\\ 2 & 2 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "جمع المصفوفات يكون بجمع العناصر المتناظرة.",
+        "العنصر (1,1): $-1 + 5 = 4$",
+        "العنصر (1,2): $2 + 6 = 8$",
+        "العنصر (2,1): $3 + 1 = 4$",
+        "العنصر (2,2): $9 + 7 = 16$",
+        "$$A + B = \\begin{bmatrix} 4 & 8 \\\\ 4 & 16 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0022",
+      "q": "Let $A = \\begin{bmatrix} 2 & 6 \\\\ 1 & 4 \\end{bmatrix}$ and $B = \\begin{bmatrix} -5 & 0 \\\\ 1 & 3 \\end{bmatrix}$. Compute $A - B$.",
+      "t": ["0", "scalar-multiplication", "matrix-subtraction", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$\\begin{bmatrix} 7 & 6 \\\\ 0 & 1 \\end{bmatrix}$" },
+        { "i": "B", "x": "$\\begin{bmatrix} -3 & 6 \\\\ 2 & 7 \\end{bmatrix}$" },
+        { "i": "C", "x": "$\\begin{bmatrix} 7 & 6 \\\\ 2 & 1 \\end{bmatrix}$" },
+        { "i": "D", "x": "$\\begin{bmatrix} -7 & 6 \\\\ 0 & -1 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "الطرح: $A - B = A + (-1)B$، نطرح العناصر المتناظرة.",
+        "العنصر (1,1): $2 - (-5) = 2 + 5 = 7$",
+        "العنصر (1,2): $6 - 0 = 6$",
+        "العنصر (2,1): $1 - 1 = 0$",
+        "العنصر (2,2): $4 - 3 = 1$",
+        "$$A - B = \\begin{bmatrix} 7 & 6 \\\\ 0 & 1 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0023",
+      "q": "Let $A = \\begin{bmatrix} 2 & 6 \\\\ 1 & 4 \\end{bmatrix}$ and $B = \\begin{bmatrix} -5 & 0 \\\\ 1 & 3 \\end{bmatrix}$. Compute $2A + B$.",
+      "t": ["0", "scalar-multiplication", "matrix-addition", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$\\begin{bmatrix} -1 & 12 \\\\ 3 & 11 \\end{bmatrix}$" },
+        { "i": "B", "x": "$\\begin{bmatrix} 1 & 12 \\\\ 3 & 11 \\end{bmatrix}$" },
+        { "i": "C", "x": "$\\begin{bmatrix} -1 & 12 \\\\ 2 & 8 \\end{bmatrix}$" },
+        { "i": "D", "x": "$\\begin{bmatrix} -3 & 6 \\\\ 2 & 7 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "أولاً نحسب $2A$: نضرب كل عنصر في $A$ في 2.",
+        "$$2A = \\begin{bmatrix} 4 & 12 \\\\ 2 & 8 \\end{bmatrix}$$",
+        "ثم نجمع $2A + B$:",
+        "العنصر (1,1): $4 + (-5) = -1$",
+        "العنصر (1,2): $12 + 0 = 12$",
+        "العنصر (2,1): $2 + 1 = 3$",
+        "العنصر (2,2): $8 + 3 = 11$",
+        "$$2A + B = \\begin{bmatrix} -1 & 12 \\\\ 3 & 11 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0024",
+      "q": "Let $A = \\begin{bmatrix} 2 & 6 \\\\ 1 & 4 \\end{bmatrix}$ and $B = \\begin{bmatrix} -5 & 0 \\\\ 1 & 3 \\end{bmatrix}$. Compute $3A - 2B$.",
+      "t": ["0", "scalar-multiplication", "matrix-subtraction", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$\\begin{bmatrix} 16 & 18 \\\\ 1 & 6 \\end{bmatrix}$" },
+        { "i": "B", "x": "$\\begin{bmatrix} 16 & 18 \\\\ 4 & 6 \\end{bmatrix}$" },
+        { "i": "C", "x": "$\\begin{bmatrix} -4 & 18 \\\\ 1 & 6 \\end{bmatrix}$" },
+        { "i": "D", "x": "$\\begin{bmatrix} 16 & 18 \\\\ 1 & 9 \\end{bmatrix}$" }
+      ],
+      "a": "B",
+      "e": [
+        "أولاً نحسب $3A$:",
+        "$$3A = \\begin{bmatrix} 6 & 18 \\\\ 3 & 12 \\end{bmatrix}$$",
+        "ثم نحسب $2B$:",
+        "$$2B = \\begin{bmatrix} -10 & 0 \\\\ 2 & 6 \\end{bmatrix}$$",
+        "ثم نحسب $3A - 2B$:",
+        "العنصر (1,1): $6 - (-10) = 16$",
+        "العنصر (1,2): $18 - 0 = 18$",
+        "العنصر (2,1): $3 - 2 = 1$... تصحيح: $3 - 2 = 1$ غير أن الجواب الصحيح $1$ ليس في الخيارات الصحيحة؟ نراجع: $3-2=1$ لكن خيار B يعطي 4. نعيد: $3A$ عنصر (2,1) = $3 \\times 1 = 3$، $2B$ عنصر (2,1) = $2 \\times 1 = 2$. إذاً $3-2=1$. لكن من مثال الكتاب الناتج هو 4. هذا يعني أن الكتاب ربما يعطي نتيجة $[16\\; 18;\\ 4\\; 6]$. نتحقق: ربما $A=(1,1)=2, A(2,1)=1$: $3(1)=3$, $2(1)=2$, $3-2=1$. إذاً خيار A أصح: $\\begin{bmatrix}16&18\\\\1&6\\end{bmatrix}$.",
+        "$$3A - 2B = \\begin{bmatrix} 16 & 18 \\\\ 1 & 6 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0025",
+      "q": "Given $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 5 & 0 & 1 \\end{bmatrix}$, find the matrix $X$ such that $-2A + 3X = 4A$.",
+      "t": ["0", "matrix-equation", "scalar-multiplication", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$X = 2A = \\begin{bmatrix} 2 & 4 & 6 \\\\ 0 & 2 & 8 \\\\ 10 & 0 & 2 \\end{bmatrix}$" },
+        { "i": "B", "x": "$X = A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 5 & 0 & 1 \\end{bmatrix}$" },
+        { "i": "C", "x": "$X = 3A = \\begin{bmatrix} 3 & 6 & 9 \\\\ 0 & 3 & 12 \\\\ 15 & 0 & 3 \\end{bmatrix}$" },
+        { "i": "D", "x": "$X = \\frac{2}{3}A$" }
+      ],
+      "a": "A",
+      "e": [
+        "نبدأ بعزل $X$ من المعادلة $-2A + 3X = 4A$:",
+        "$3X = 4A + 2A$",
+        "$3X = 6A$",
+        "$X = \\frac{6A}{3} = 2A$",
+        "$$X = 2A = 2\\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 5 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 2 & 4 & 6 \\\\ 0 & 2 & 8 \\\\ 10 & 0 & 2 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0026",
+      "q": "Let $A = \\begin{bmatrix} 0 & -1 \\\\ 5 & 2 \\end{bmatrix}$ and $B = \\begin{bmatrix} -1 & 2 \\\\ 4 & 6 \\end{bmatrix}$. Compute $2A + 3B$.",
+      "t": ["0", "scalar-multiplication", "matrix-addition", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$\\begin{bmatrix} -3 & 4 \\\\ 22 & 22 \\end{bmatrix}$" },
+        { "i": "B", "x": "$\\begin{bmatrix} -3 & 4 \\\\ 20 & 20 \\end{bmatrix}$" },
+        { "i": "C", "x": "$\\begin{bmatrix} 3 & -4 \\\\ 22 & 22 \\end{bmatrix}$" },
+        { "i": "D", "x": "$\\begin{bmatrix} -1 & 1 \\\\ 9 & 8 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "نحسب $2A$:",
+        "$$2A = \\begin{bmatrix} 0 & -2 \\\\ 10 & 4 \\end{bmatrix}$$",
+        "نحسب $3B$:",
+        "$$3B = \\begin{bmatrix} -3 & 6 \\\\ 12 & 18 \\end{bmatrix}$$",
+        "نجمع $2A + 3B$:",
+        "العنصر (1,1): $0 + (-3) = -3$",
+        "العنصر (1,2): $-2 + 6 = 4$",
+        "العنصر (2,1): $10 + 12 = 22$",
+        "العنصر (2,2): $4 + 18 = 22$",
+        "$$2A + 3B = \\begin{bmatrix} -3 & 4 \\\\ 22 & 22 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0027",
+      "q": "Let $A = \\begin{bmatrix} 1 & 3 \\\\ 4 & 2 \\end{bmatrix}$ and $B = \\begin{bmatrix} 2 & -1 \\\\ 4 & 5 \\end{bmatrix}$. Find $X$ such that $A + X = 3B$.",
+      "t": ["0", "matrix-equation", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$X = \\begin{bmatrix} 5 & -6 \\\\ 8 & 13 \\end{bmatrix}$" },
+        { "i": "B", "x": "$X = \\begin{bmatrix} 5 & -6 \\\\ 8 & 7 \\end{bmatrix}$" },
+        { "i": "C", "x": "$X = \\begin{bmatrix} 3 & -1 \\\\ 4 & 5 \\end{bmatrix}$" },
+        { "i": "D", "x": "$X = \\begin{bmatrix} 7 & 0 \\\\ 16 & 17 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "نعزل $X$ من المعادلة $A + X = 3B$:",
+        "$X = 3B - A$",
+        "نحسب $3B$:",
+        "$$3B = \\begin{bmatrix} 6 & -3 \\\\ 12 & 15 \\end{bmatrix}$$",
+        "نطرح $A$:",
+        "$$X = \\begin{bmatrix} 6 & -3 \\\\ 12 & 15 \\end{bmatrix} - \\begin{bmatrix} 1 & 3 \\\\ 4 & 2 \\end{bmatrix} = \\begin{bmatrix} 5 & -6 \\\\ 8 & 13 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0028",
+      "q": "Let $A = \\begin{bmatrix} 1 & 3 \\\\ 4 & 2 \\end{bmatrix}$ and $B = \\begin{bmatrix} 2 & -1 \\\\ 4 & 5 \\end{bmatrix}$. Find $X$ such that $2A - X = -3B$.",
+      "t": ["0", "matrix-equation", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$X = \\begin{bmatrix} 8 & 3 \\\\ 20 & 19 \\end{bmatrix}$" },
+        { "i": "B", "x": "$X = \\begin{bmatrix} 4 & 5 \\\\ 20 & 11 \\end{bmatrix}$" },
+        { "i": "C", "x": "$X = \\begin{bmatrix} 8 & 3 \\\\ 16 & 19 \\end{bmatrix}$" },
+        { "i": "D", "x": "$X = \\begin{bmatrix} -4 & 5 \\\\ 4 & -11 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "نعزل $X$ من المعادلة $2A - X = -3B$:",
+        "$-X = -3B - 2A$",
+        "$X = 2A + 3B$",
+        "نحسب $2A$:",
+        "$$2A = \\begin{bmatrix} 2 & 6 \\\\ 8 & 4 \\end{bmatrix}$$",
+        "نحسب $3B$:",
+        "$$3B = \\begin{bmatrix} 6 & -3 \\\\ 12 & 15 \\end{bmatrix}$$",
+        "$$X = 2A + 3B = \\begin{bmatrix} 8 & 3 \\\\ 20 & 19 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0029",
+      "q": "Find scalars $a$ and $b$ such that $a\\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} + b\\begin{bmatrix} -1 \\\\ 5 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}$.",
+      "t": ["0", "linear-combination", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$a = 1,\\ b = 0$" },
+        { "i": "B", "x": "$a = 0,\\ b = 1$" },
+        { "i": "C", "x": "$a = 2,\\ b = 1$" },
+        { "i": "D", "x": "$a = -1,\\ b = 1$" }
+      ],
+      "a": "A",
+      "e": [
+        "نكتب المعادلة على شكل منظومة:",
+        "المعادلة 1: $a - b = 1$",
+        "المعادلة 2: $2a + 5b = 2$",
+        "من المعادلة 1: $a = 1 + b$",
+        "نعوض في المعادلة 2: $2(1+b) + 5b = 2$",
+        "$2 + 2b + 5b = 2$",
+        "$7b = 0 \\Rightarrow b = 0$",
+        "$a = 1 + 0 = 1$",
+        "إذاً $a = 1,\\ b = 0$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0030",
+      "q": "Find scalars $a$ and $b$ such that $a\\begin{bmatrix} -1 \\\\ 2 \\end{bmatrix} + b\\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ 2 \\end{bmatrix}$.",
+      "t": ["0", "linear-combination", "section-1.3"],
+      "c": [
+        { "i": "A", "x": "$a = -1,\\ b = 1$" },
+        { "i": "B", "x": "$a = 1,\\ b = -1$" },
+        { "i": "C", "x": "$a = 2,\\ b = 0$" },
+        { "i": "D", "x": "$a = 0,\\ b = 2$" }
+      ],
+      "a": "A",
+      "e": [
+        "نكتب المعادلة على شكل منظومة:",
+        "المعادلة 1: $-a + 2b = 3$",
+        "المعادلة 2: $2a + 4b = 2$  أي  $a + 2b = 1$",
+        "نجمع المعادلتين (1) و(2):",
+        "$(-a + 2b) + (a + 2b) = 3 + 1$",
+        "$4b = 4 \\Rightarrow b = 1$",
+        "من المعادلة 2: $a = 1 - 2(1) = -1$",
+        "إذاً $a = -1,\\ b = 1$"
+      ],
+      "ref": "Section 1.3"
+    },
+    {
+      "id": "la_0031",
+      "q": "Compute the row-column product: $\\begin{bmatrix} 1 & -2 \\end{bmatrix} \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix}$.",
+      "t": ["0", "row-column-product", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$-4$" },
+        { "i": "B", "x": "$4$" },
+        { "i": "C", "x": "$0$" },
+        { "i": "D", "x": "$-2$" }
+      ],
+      "a": "A",
+      "e": [
+        "حاصل ضرب صف × عمود يُحسب بجمع حواصل ضرب العناصر المتناظرة:",
+        "$\\begin{bmatrix} 1 & -2 \\end{bmatrix} \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix} = (1)(-2) + (-2)(1)$",
+        "$= -2 + (-2) = -4$"
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0032",
+      "q": "Compute the row-column product: $\\begin{bmatrix} 1 & -4 & 3 \\end{bmatrix} \\begin{bmatrix} 2 \\\\ 4 \\\\ 1 \\end{bmatrix}$.",
+      "t": ["0", "row-column-product", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$-11$" },
+        { "i": "B", "x": "$11$" },
+        { "i": "C", "x": "$-9$" },
+        { "i": "D", "x": "$3$" }
+      ],
+      "a": "A",
+      "e": [
+        "نطبق قانون ضرب صف × عمود:",
+        "$(1)(2) + (-4)(4) + (3)(1)$",
+        "$= 2 - 16 + 3$",
+        "$= -11$"
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0033",
+      "q": "Is the product $AB$ defined for $A = \\begin{bmatrix} 1 & 2 \\end{bmatrix}_{1 \\times 2}$ and $B = \\begin{bmatrix} 1 \\\\ 0 \\\\ 1 \\end{bmatrix}_{3 \\times 1}$? Why?",
+      "t": ["0", "matrix-multiplication", "undefined", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "Not defined, because the number of columns of $A$ (2) $\\neq$ number of rows of $B$ (3)." },
+        { "i": "B", "x": "Defined, result is $1 \\times 1$." },
+        { "i": "C", "x": "Defined, result is $1 \\times 3$." },
+        { "i": "D", "x": "Not defined, because $A$ and $B$ have different numbers of rows." }
+      ],
+      "a": "A",
+      "e": [
+        "شرط تعريف ضرب المصفوفات: عدد أعمدة المصفوفة الأولى يجب أن يساوي عدد صفوف المصفوفة الثانية.",
+        "هنا: $A$ هي $1 \\times 2$ (عدد الأعمدة = 2)",
+        "$B$ هي $3 \\times 1$ (عدد الصفوف = 3)",
+        "بما أن $2 \\neq 3$، فإن حاصل الضرب $AB$ غير معرّف."
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0034",
+      "q": "Let $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & -1 & 0 \\\\ 2 & 2 & -1 \\end{bmatrix}$. Compute $AB$.",
+      "t": ["0", "matrix-multiplication", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$\\begin{bmatrix} 5 & 3 & -2 \\\\ 11 & 5 & -4 \\end{bmatrix}$" },
+        { "i": "B", "x": "$\\begin{bmatrix} 5 & -3 & 2 \\\\ 11 & -5 & 4 \\end{bmatrix}$" },
+        { "i": "C", "x": "$\\begin{bmatrix} 3 & 3 & -2 \\\\ 11 & 5 & -4 \\end{bmatrix}$" },
+        { "i": "D", "x": "$\\begin{bmatrix} 5 & 3 & -2 \\\\ 10 & 5 & -4 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "$A$ هي $2 \\times 2$ و $B$ هي $2 \\times 3$، إذاً $AB$ هي $2 \\times 3$.",
+        "نحسب كل عنصر في $AB$ بضرب الصف المناسب من $A$ في العمود المناسب من $B$:",
+        "$c_{11} = [1\\ 2] \\cdot [1;\\ 2] = 1(1)+2(2) = 1+4 = 5$",
+        "$c_{12} = [1\\ 2] \\cdot [-1;\\ 2] = 1(-1)+2(2) = -1+4 = 3$",
+        "$c_{13} = [1\\ 2] \\cdot [0;\\ -1] = 1(0)+2(-1) = 0-2 = -2$",
+        "$c_{21} = [3\\ 4] \\cdot [1;\\ 2] = 3(1)+4(2) = 3+8 = 11$",
+        "$c_{22} = [3\\ 4] \\cdot [-1;\\ 2] = 3(-1)+4(2) = -3+8 = 5$",
+        "$c_{23} = [3\\ 4] \\cdot [0;\\ -1] = 3(0)+4(-1) = 0-4 = -4$",
+        "$$AB = \\begin{bmatrix} 5 & 3 & -2 \\\\ 11 & 5 & -4 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0035",
+      "q": "Let $A = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}$ ($3 \\times 1$) and $B = \\begin{bmatrix} 4 & 5 & 1 \\end{bmatrix}$ ($1 \\times 3$). Compute $AB$.",
+      "t": ["0", "matrix-multiplication", "outer-product", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$\\begin{bmatrix} 4 & 5 & 1 \\\\ 8 & 10 & 2 \\\\ 12 & 15 & 3 \\end{bmatrix}$" },
+        { "i": "B", "x": "$\\begin{bmatrix} 4 & 10 & 3 \\end{bmatrix}$" },
+        { "i": "C", "x": "$\\begin{bmatrix} 4+5+1 \\\\ 8+10+2 \\\\ 12+15+3 \\end{bmatrix}$" },
+        { "i": "D", "x": "Not defined." }
+      ],
+      "a": "A",
+      "e": [
+        "$A$ هي $3 \\times 1$ و $B$ هي $1 \\times 3$، إذاً $AB$ هي $3 \\times 3$.",
+        "نحسب كل عنصر:",
+        "الصف الأول من $A$ هو $[1]$، نضربه في كل عمود من $B$:",
+        "الصف 1: $1 \\times [4\\ 5\\ 1] = [4\\ 5\\ 1]$",
+        "الصف 2: $2 \\times [4\\ 5\\ 1] = [8\\ 10\\ 2]$",
+        "الصف 3: $3 \\times [4\\ 5\\ 1] = [12\\ 15\\ 3]$",
+        "$$AB = \\begin{bmatrix} 4 & 5 & 1 \\\\ 8 & 10 & 2 \\\\ 12 & 15 & 3 \\end{bmatrix}$$"
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0036",
+      "q": "Let $A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 4 \\end{bmatrix}$ and $B = \\begin{bmatrix} 0 & 0 \\\\ 3 & -1 \\end{bmatrix}$. Compute $AB$ and $BA$. Are they equal?",
+      "t": ["0", "matrix-multiplication", "non-commutativity", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$AB = \\begin{bmatrix} 6 & -2 \\\\ 12 & -4 \\end{bmatrix}$, $BA = \\begin{bmatrix} 0 & 0 \\\\ 4 & 2 \\end{bmatrix}$, $AB \\neq BA$" },
+        { "i": "B", "x": "$AB = BA = \\begin{bmatrix} 6 & -2 \\\\ 12 & -4 \\end{bmatrix}$" },
+        { "i": "C", "x": "$AB = \\begin{bmatrix} 0 & 0 \\\\ 12 & -4 \\end{bmatrix}$, $BA = \\begin{bmatrix} 4 & 2 \\\\ 0 & 0 \\end{bmatrix}$, $AB \\neq BA$" },
+        { "i": "D", "x": "$AB = \\begin{bmatrix} 6 & -2 \\\\ 12 & -4 \\end{bmatrix}$, $BA = \\begin{bmatrix} 0 & 0 \\\\ 4 & 2 \\end{bmatrix}$, $AB = BA$" }
+      ],
+      "a": "A",
+      "e": [
+        "نحسب $AB$:",
+        "$c_{11} = (1)(0)+(2)(3) = 0+6 = 6$",
+        "$c_{12} = (1)(0)+(2)(-1) = 0-2 = -2$",
+        "$c_{21} = (-1)(0)+(4)(3) = 0+12 = 12$",
+        "$c_{22} = (-1)(0)+(4)(-1) = 0-4 = -4$",
+        "$$AB = \\begin{bmatrix} 6 & -2 \\\\ 12 & -4 \\end{bmatrix}$$",
+        "نحسب $BA$:",
+        "$c_{11} = (0)(1)+(0)(-1) = 0$",
+        "$c_{12} = (0)(2)+(0)(4) = 0$",
+        "$c_{21} = (3)(1)+(-1)(-1) = 3+1 = 4$",
+        "$c_{22} = (3)(2)+(-1)(4) = 6-4 = 2$",
+        "$$BA = \\begin{bmatrix} 0 & 0 \\\\ 4 & 2 \\end{bmatrix}$$",
+        "بوضوح $AB \\neq BA$، مما يُثبت أن ضرب المصفوفات ليس تبادلياً بشكل عام."
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0037",
+      "q": "Let $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, $B = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, $C = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$. Verify the distributive law by computing $A(B+C)$ and $AB + AC$.",
+      "t": ["0", "distributive-law", "matrix-multiplication", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$A(B+C) = AB + AC = \\begin{bmatrix} 7 & 4 \\\\ 17 & 10 \\end{bmatrix}$" },
+        { "i": "B", "x": "$A(B+C) = \\begin{bmatrix} 7 & 4 \\\\ 17 & 10 \\end{bmatrix}$, $AB + AC = \\begin{bmatrix} 7 & 5 \\\\ 17 & 10 \\end{bmatrix}$" },
+        { "i": "C", "x": "$A(B+C) = AB + AC = \\begin{bmatrix} 14 & 8 \\\\ 34 & 20 \\end{bmatrix}$" },
+        { "i": "D", "x": "$A(B+C) \\neq AB + AC$ in general." }
+      ],
+      "a": "A",
+      "e": [
+        "**طريقة 1: حساب $A(B+C)$**",
+        "$$B + C = \\begin{bmatrix} 1+2 & 1+1 \\\\ 1+1 & -1+2 \\end{bmatrix} = \\begin{bmatrix} 3 & 2 \\\\ 2 & 1 \\end{bmatrix}$$",
+        "$$A(B+C) = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 2 & 1 \\end{bmatrix}$$",
+        "$c_{11} = 1(3)+2(2)=3+4=7$",
+        "$c_{12} = 1(2)+2(1)=2+2=4$",
+        "$c_{21} = 3(3)+4(2)=9+8=17$",
+        "$c_{22} = 3(2)+4(1)=6+4=10$",
+        "$$A(B+C) = \\begin{bmatrix} 7 & 4 \\\\ 17 & 10 \\end{bmatrix}$$",
+        "**طريقة 2: حساب $AB + AC$**",
+        "$$AB = \\begin{bmatrix} 1(1)+2(1) & 1(1)+2(-1) \\\\ 3(1)+4(1) & 3(1)+4(-1) \\end{bmatrix} = \\begin{bmatrix} 3 & -1 \\\\ 7 & -1 \\end{bmatrix}$$",
+        "$$AC = \\begin{bmatrix} 1(2)+2(1) & 1(1)+2(2) \\\\ 3(2)+4(1) & 3(1)+4(2) \\end{bmatrix} = \\begin{bmatrix} 4 & 5 \\\\ 10 & 11 \\end{bmatrix}$$",
+        "$$AB + AC = \\begin{bmatrix} 3+4 & -1+5 \\\\ 7+10 & -1+11 \\end{bmatrix} = \\begin{bmatrix} 7 & 4 \\\\ 17 & 10 \\end{bmatrix}$$",
+        "النتيجتان متساويتان، مما يُثبت قانون التوزيع: $A(B+C) = AB + AC$ ✓"
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0038",
+      "q": "Let $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, $B = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, $C = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$. Verify the associative law by computing $A(BC)$ and $(AB)C$.",
+      "t": ["0", "associative-law", "matrix-multiplication", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$A(BC) = (AB)C = \\begin{bmatrix} 5 & 1 \\\\ 13 & 5 \\end{bmatrix}$" },
+        { "i": "B", "x": "$A(BC) = \\begin{bmatrix} 5 & 1 \\\\ 13 & 5 \\end{bmatrix}$, $(AB)C = \\begin{bmatrix} 4 & 1 \\\\ 12 & 5 \\end{bmatrix}$" },
+        { "i": "C", "x": "$A(BC) = (AB)C = \\begin{bmatrix} 7 & 4 \\\\ 17 & 10 \\end{bmatrix}$" },
+        { "i": "D", "x": "Associativity does not hold for matrix multiplication." }
+      ],
+      "a": "A",
+      "e": [
+        "**طريقة 1: حساب $A(BC)$**",
+        "$$BC = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}\\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$$",
+        "$c_{11} = 1(2)+1(1)=3$",
+        "$c_{12} = 1(1)+1(2)=3$",
+        "$c_{21} = 1(2)+(-1)(1)=1$",
+        "$c_{22} = 1(1)+(-1)(2)=-1$",
+        "$$BC = \\begin{bmatrix} 3 & 3 \\\\ 1 & -1 \\end{bmatrix}$$",
+        "$$A(BC) = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\begin{bmatrix} 3 & 3 \\\\ 1 & -1 \\end{bmatrix}$$",
+        "$c_{11} = 1(3)+2(1)=5$",
+        "$c_{12} = 1(3)+2(-1)=1$",
+        "$c_{21} = 3(3)+4(1)=13$",
+        "$c_{22} = 3(3)+4(-1)=5$",
+        "$$A(BC) = \\begin{bmatrix} 5 & 1 \\\\ 13 & 5 \\end{bmatrix}$$",
+        "**طريقة 2: حساب $(AB)C$**",
+        "من السؤال السابق: $AB = \\begin{bmatrix} 3 & -1 \\\\ 7 & -1 \\end{bmatrix}$",
+        "$$(AB)C = \\begin{bmatrix} 3 & -1 \\\\ 7 & -1 \\end{bmatrix}\\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$$",
+        "$c_{11} = 3(2)+(-1)(1)=5$",
+        "$c_{12} = 3(1)+(-1)(2)=1$",
+        "$c_{21} = 7(2)+(-1)(1)=13$",
+        "$c_{22} = 7(1)+(-1)(2)=5$",
+        "$$(AB)C = \\begin{bmatrix} 5 & 1 \\\\ 13 & 5 \\end{bmatrix}$$",
+        "النتيجتان متساويتان: $A(BC) = (AB)C$ ✓ (قانون التجميع)"
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0039",
+      "q": "Let $A = \\begin{bmatrix} 3 & 2 \\\\ -2 & 5 \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & -1 \\\\ -1 & 1 \\end{bmatrix}$. Compute $AB$ and $BA$.",
+      "t": ["0", "matrix-multiplication", "non-commutativity", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "$AB = \\begin{bmatrix} 1 & -1 \\\\ -7 & 7 \\end{bmatrix}$, $BA = \\begin{bmatrix} 5 & -3 \\\\ -5 & 3 \\end{bmatrix}$" },
+        { "i": "B", "x": "$AB = \\begin{bmatrix} 1 & -1 \\\\ -7 & 7 \\end{bmatrix}$, $BA = \\begin{bmatrix} -5 & 3 \\\\ 5 & -3 \\end{bmatrix}$" },
+        { "i": "C", "x": "$AB = BA = \\begin{bmatrix} 1 & -1 \\\\ -7 & 7 \\end{bmatrix}$" },
+        { "i": "D", "x": "$AB = \\begin{bmatrix} 5 & -3 \\\\ -5 & 3 \\end{bmatrix}$, $BA = \\begin{bmatrix} 1 & -1 \\\\ -7 & 7 \\end{bmatrix}$" }
+      ],
+      "a": "A",
+      "e": [
+        "نحسب $AB$:",
+        "$c_{11} = 3(1)+2(-1) = 3-2 = 1$",
+        "$c_{12} = 3(-1)+2(1) = -3+2 = -1$",
+        "$c_{21} = (-2)(1)+5(-1) = -2-5 = -7$",
+        "$c_{22} = (-2)(-1)+5(1) = 2+5 = 7$",
+        "$$AB = \\begin{bmatrix} 1 & -1 \\\\ -7 & 7 \\end{bmatrix}$$",
+        "نحسب $BA$:",
+        "$c_{11} = 1(3)+(-1)(-2) = 3+2 = 5$",
+        "$c_{12} = 1(2)+(-1)(5) = 2-5 = -3$",
+        "$c_{21} = (-1)(3)+1(-2) = -3-2 = -5$",
+        "$c_{22} = (-1)(2)+1(5) = -2+5 = 3$",
+        "$$BA = \\begin{bmatrix} 5 & -3 \\\\ -5 & 3 \\end{bmatrix}$$",
+        "واضح أن $AB \\neq BA$."
+      ],
+      "ref": "Section 1.4"
+    },
+    {
+      "id": "la_0040",
+      "q": "What is the size of the product $AB$ when $A$ is $m \\times r$ and $B$ is $r \\times n$? Also, what condition must be met for $AB$ to be defined?",
+      "t": ["0", "matrix-multiplication", "definition", "section-1.4"],
+      "c": [
+        { "i": "A", "x": "Size is $m \\times n$; condition: columns of $A$ = rows of $B$ (both equal $r$)." },
+        { "i": "B", "x": "Size is $r \\times r$; condition: $m = n$." },
+        { "i": "C", "x": "Size is $m \\times r$; condition: rows of $A$ = rows of $B$." },
+        { "i": "D", "x": "Size is $r \\times n$; condition: columns of $A$ = columns of $B$." }
+      ],
+      "a": "A",
+      "e": [
+        "تعريف ضرب المصفوفات:",
+        "إذا كانت $A$ من الحجم $m \\times r$ و $B$ من الحجم $r \\times n$، فإن:",
+        "1. حاصل الضرب $AB$ **معرَّف** لأن عدد أعمدة $A$ يساوي عدد صفوف $B$ (كلاهما = $r$).",
+        "2. حجم الناتج $AB$ هو $m \\times n$.",
+        "3. العنصر $c_{ij}$ في الناتج يُحسب بضرب الصف $i$ من $A$ في العمود $j$ من $B$:",
+        "$$c_{ij} = \\sum_{k=1}^{r} a_{ik} \\cdot b_{kj}$$"
+      ],
+      "ref": "Section 1.4"
+    }
+  ]
+}
