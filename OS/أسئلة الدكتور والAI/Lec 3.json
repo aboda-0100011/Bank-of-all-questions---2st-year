@@ -1,0 +1,728 @@
+{
+  "qs": [
+    {
+      "id": "OS3_0001",
+      "q": "What is a <b>process</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A program stored on disk that has not been loaded yet"},
+        {"i": "2", "x": "A program in execution, historically also known as a job"},
+        {"i": "3", "x": "A data structure that stores information about a program"},
+        {"i": "4", "x": "A system program that is associated with the operating system"}
+      ],
+      "a": "2",
+      "e": "A process is a <b>program in execution</b> (historically called a job). The OS keeps the information about each process in a data structure called the PCB. <mark>Process = program in execution</mark>",
+      "ref": "Slide 3"
+    },
+    {
+      "id": "OS3_0002",
+      "q": "Which pair of items represents the <b>current status</b> of a process?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The value of the program counter and the contents of the processor's registers"},
+        {"i": "2", "x": "The contents of the text section and the contents of the heap section"},
+        {"i": "3", "x": "The contents of the ready queue and the contents of the wait queue"},
+        {"i": "4", "x": "The value of the process number and the list of open files"}
+      ],
+      "a": "1",
+      "e": "The current status of a process is represented by the value of the <b>program counter (PC)</b> and the contents of the <b>processor's registers</b>. <mark>PC + registers</mark>",
+      "ref": "Slide 3"
+    },
+    {
+      "id": "OS3_0003",
+      "q": "Which option correctly matches each section of a process with what it stores?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Text: global variables; data: executable code; heap: dynamically allocated variables; stack: local variables"},
+        {"i": "2", "x": "Text: executable code; data: dynamically allocated variables; heap: global variables; stack: local variables"},
+        {"i": "3", "x": "Text: executable code; data: global variables; heap: dynamically allocated variables; stack: local variables"},
+        {"i": "4", "x": "Text: executable code; data: global variables; heap: local variables; stack: dynamically allocated variables"}
+      ],
+      "a": "3",
+      "e": "The <b>text</b> section holds the executable code, the <b>data</b> section holds global variables, the <b>heap</b> holds dynamically allocated variables, and the <b>stack</b> holds temporary (local) variables. <mark>Text = code, data = globals, heap = dynamic, stack = locals</mark>",
+      "ref": "Slide 5"
+    },
+    {
+      "id": "OS3_0004",
+      "q": "A variable is allocated dynamically while the program is running. Which section of the process holds it?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Text section"},
+        {"i": "2", "x": "Data section"},
+        {"i": "3", "x": "Stack section"},
+        {"i": "4", "x": "Heap section"}
+      ],
+      "a": "4",
+      "e": "Dynamically allocated variables live in the <b>heap</b> section. Global variables are in the data section, and local (temporary) variables are in the stack section. <mark>Heap section</mark>",
+      "ref": "Slide 5"
+    },
+    {
+      "id": "OS3_0005",
+      "q": "In the process memory layout, which sections are placed at the highest address and at the lowest address?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Text at the highest address; stack at the lowest address"},
+        {"i": "2", "x": "Stack at the highest address; text at the lowest address"},
+        {"i": "3", "x": "Heap at the highest address; data at the lowest address"},
+        {"i": "4", "x": "Data at the highest address; heap at the lowest address"}
+      ],
+      "a": "2",
+      "e": "In the layout diagram the <b>stack</b> is at the top (max) and the <b>text</b> section is at the bottom (0), with the data and heap sections above the text. The stack and the heap grow toward each other. <mark>Stack at the top, text at the bottom</mark>",
+      "ref": "Slide 5"
+    },
+    {
+      "id": "OS3_0006",
+      "q": "In which state is a process that is waiting to be assigned to a processor?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "New"},
+        {"i": "2", "x": "Waiting"},
+        {"i": "3", "x": "Ready"},
+        {"i": "4", "x": "Terminated"}
+      ],
+      "a": "3",
+      "e": "A <b>ready</b> process is waiting to be assigned to a processor. A <b>waiting</b> process is waiting for some event to occur. <mark>Ready</mark>",
+      "ref": "Slide 7"
+    },
+    {
+      "id": "OS3_0007",
+      "q": "A process has requested data from the disk and cannot continue until the transfer completes. In which state is it?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Waiting"},
+        {"i": "2", "x": "Ready"},
+        {"i": "3", "x": "Running"},
+        {"i": "4", "x": "Terminated"}
+      ],
+      "a": "1",
+      "e": "The process is waiting for an I/O event to occur, so it is in the <b>waiting</b> state. It is not ready, because even with a free CPU it could not make progress. <mark>Waiting</mark>",
+      "ref": "Slides 7-8"
+    },
+    {
+      "id": "OS3_0008",
+      "q": "Which event moves a process from the running state to the ready state?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Scheduler dispatch"},
+        {"i": "2", "x": "I/O or event wait"},
+        {"i": "3", "x": "Admitted"},
+        {"i": "4", "x": "Interrupt"}
+      ],
+      "a": "4",
+      "e": "In the state diagram, an <b>interrupt</b> moves a process from running to ready. Scheduler dispatch moves it from ready to running, and I/O or event wait moves it from running to waiting. <mark>Interrupt: running → ready</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS3_0009",
+      "q": "A process in the waiting state receives the I/O or event it was waiting for. What happens next?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It moves directly to the running state"},
+        {"i": "2", "x": "It moves to the ready state"},
+        {"i": "3", "x": "It moves to the terminated state"},
+        {"i": "4", "x": "It returns to the new state"}
+      ],
+      "a": "2",
+      "e": "On I/O or event completion the process goes from waiting to <b>ready</b>. It must then wait for the scheduler to dispatch it before it runs again. <mark>Waiting → ready</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS3_0010",
+      "q": "A process is admitted, gets the CPU, requests I/O, completes the I/O, gets the CPU again, and then finishes. Which sequence of states is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "new → running → waiting → ready → running → terminated"},
+        {"i": "2", "x": "new → ready → waiting → running → ready → terminated"},
+        {"i": "3", "x": "new → ready → running → waiting → ready → running → terminated"},
+        {"i": "4", "x": "new → ready → running → waiting → running → terminated"}
+      ],
+      "a": "3",
+      "e": [
+        "<b>Admitted</b>: new → ready.",
+        "<b>Scheduler dispatch</b>: ready → running.",
+        "<b>I/O or event wait</b>: running → waiting.",
+        "<b>I/O or event completion</b>: waiting → ready (never directly to running).",
+        "<b>Scheduler dispatch</b> again: ready → running.",
+        "<b>Exit</b>: running → terminated.",
+        "<mark>new → ready → running → waiting → ready → running → terminated</mark>"
+      ],
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS3_0011",
+      "q": "Which of the following transitions is <u>not</u> shown in the process state diagram?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "New to ready (admitted)"},
+        {"i": "2", "x": "Running to waiting (I/O or event wait)"},
+        {"i": "3", "x": "Ready to running (scheduler dispatch)"},
+        {"i": "4", "x": "Waiting to running (scheduler dispatch)"}
+      ],
+      "a": "4",
+      "e": "A waiting process must first return to the ready state; there is no direct arrow from waiting to running. <mark>Waiting → running does not exist</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS3_0012",
+      "q": "Which statement correctly describes a <b>PCB</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A data structure that stores information about one process and is kept by the OS"},
+        {"i": "2", "x": "A region in the process address space that stores its local variables"},
+        {"i": "3", "x": "A queue that holds all processes waiting to execute on a CPU"},
+        {"i": "4", "x": "A system call that a parent process uses to create a child process"}
+      ],
+      "a": "1",
+      "e": "Each process is represented in the OS by a <b>process control block (PCB)</b>, also known as a task control block: a data structure that stores information about that process. <mark>PCB = per-process information record</mark>",
+      "ref": "Slide 10"
+    },
+    {
+      "id": "OS3_0013",
+      "q": "A running process is stopped by the OS and must later continue exactly where it left off. Where does the OS find the data needed to restart it?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "In the text section of the process"},
+        {"i": "2", "x": "In the PCB of the process"},
+        {"i": "3", "x": "In the header of the ready queue"},
+        {"i": "4", "x": "In the mailbox of the process"}
+      ],
+      "a": "2",
+      "e": "The OS uses the process's <b>PCB</b> to store all the data needed to start (or restart) the process, along with accounting data. <mark>PCB</mark>",
+      "ref": "Slide 10"
+    },
+    {
+      "id": "OS3_0014",
+      "q": "Which option correctly matches PCB fields with their contents?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Program counter: state saved when an interrupt occurs; CPU registers: address of the next instruction; memory-management information: process location in memory"},
+        {"i": "2", "x": "Program counter: address of the next instruction; CPU registers: process location in memory; memory-management information: state saved when an interrupt occurs"},
+        {"i": "3", "x": "Program counter: address of the next instruction; CPU registers: state saved when an interrupt occurs; memory-management information: process location in memory"},
+        {"i": "4", "x": "Program counter: process location in memory; CPU registers: address of the next instruction; memory-management information: state saved when an interrupt occurs"}
+      ],
+      "a": "3",
+      "e": "The <b>program counter</b> holds the address of the next instruction, the <b>CPU registers</b> store state information when an interrupt occurs, and the <b>memory-management information</b> gives the process location in memory. <mark>PC = next instruction, registers = saved state, memory info = location</mark>",
+      "ref": "Slide 11"
+    },
+    {
+      "id": "OS3_0015",
+      "q": "The OS needs to know which I/O devices are allocated to a process and which files it has open. Which PCB field provides this?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Accounting information"},
+        {"i": "2", "x": "CPU-scheduling information"},
+        {"i": "3", "x": "Process state"},
+        {"i": "4", "x": "I/O status information"}
+      ],
+      "a": "4",
+      "e": "<b>I/O status information</b> contains the allocated I/O devices, open files, and so on. <mark>I/O status information</mark>",
+      "ref": "Slide 11"
+    },
+    {
+      "id": "OS3_0016",
+      "q": "Which of the following is <u>not</u> stored in a PCB?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The executable code of the process"},
+        {"i": "2", "x": "Scheduling parameters such as priority"},
+        {"i": "3", "x": "Accounting information such as time limits"},
+        {"i": "4", "x": "The process state such as new or ready"}
+      ],
+      "a": "1",
+      "e": "A PCB stores the process state, program counter, CPU registers, scheduling, memory-management, accounting and I/O status information. The executable code belongs to the <b>text section</b> of the process. <mark>Executable code is not in the PCB</mark>",
+      "ref": "Slides 5, 11"
+    },
+    {
+      "id": "OS3_0017",
+      "q": "What does the <b>degree of multiprogramming</b> mean?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The number of cores available in the system"},
+        {"i": "2", "x": "The number of processes waiting for I/O to complete"},
+        {"i": "3", "x": "The number of processes in memory"},
+        {"i": "4", "x": "The number of processes that terminate each second"}
+      ],
+      "a": "3",
+      "e": "The degree of multiprogramming is the number of processes in memory. <mark>Number of processes in memory</mark>",
+      "ref": "Slide 13"
+    },
+    {
+      "id": "OS3_0018",
+      "q": "Which statement correctly compares <b>I/O-bound</b> and <b>CPU-bound</b> processes?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "An I/O-bound process spends more time computing; a CPU-bound process spends more time doing I/O"},
+        {"i": "2", "x": "An I/O-bound process spends more time doing I/O; a CPU-bound process spends more time computing"},
+        {"i": "3", "x": "Both spend most of their time doing I/O, but a CPU-bound process uses more cores"},
+        {"i": "4", "x": "Both spend most of their time computing, but an I/O-bound process has a larger PCB"}
+      ],
+      "a": "2",
+      "e": "An <b>I/O-bound</b> process spends more of its time doing I/O, while a <b>CPU-bound</b> process uses more of its time doing computations. <mark>I/O-bound = mostly I/O; CPU-bound = mostly computation</mark>",
+      "ref": "Slide 13"
+    },
+    {
+      "id": "OS3_0019",
+      "q": "A system has 4 cores and 9 ready processes. What happens to the 5 excess processes?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "They are terminated by the CPU scheduler to save memory"},
+        {"i": "2", "x": "They are moved to an I/O wait queue until devices are free"},
+        {"i": "3", "x": "They run in parallel by sharing the registers of the 4 cores"},
+        {"i": "4", "x": "They wait in the ready queue until a core is free"}
+      ],
+      "a": "4",
+      "e": "If there are more ready processes than cores, the excess processes have to wait (in the ready queue) until a core is free and they can be rescheduled. <mark>Excess processes wait until a core is free</mark>",
+      "ref": "Slides 13-14"
+    },
+    {
+      "id": "OS3_0020",
+      "q": "Which statement correctly compares the <b>ready queue</b> and the <b>wait queue</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Ready queue: processes waiting to execute on a CPU; wait queue: processes waiting for an event to occur"},
+        {"i": "2", "x": "Ready queue: processes waiting for an event to occur; wait queue: processes waiting to execute on a CPU"},
+        {"i": "3", "x": "Ready queue: processes that have finished execution; wait queue: processes that are still being created"},
+        {"i": "4", "x": "Ready queue: only the process that is now running; wait queue: all other processes in memory"}
+      ],
+      "a": "1",
+      "e": "The <b>ready queue</b> contains processes waiting to execute on a CPU, and the <b>wait queue</b> contains processes waiting for a certain event to occur. <mark>Ready queue = waiting for CPU; wait queue = waiting for an event</mark>",
+      "ref": "Slide 14"
+    },
+    {
+      "id": "OS3_0021",
+      "q": "According to the queuing diagram, where does a running process go after it issues an I/O request?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The ready queue"},
+        {"i": "2", "x": "The I/O wait queue"},
+        {"i": "3", "x": "The child termination wait queue"},
+        {"i": "4", "x": "The interrupt wait queue"}
+      ],
+      "a": "2",
+      "e": "After an I/O request the process is placed in the <b>I/O wait queue</b>. When the I/O completes, it returns to the ready queue. <mark>I/O request → I/O wait queue</mark>",
+      "ref": "Slide 15"
+    },
+    {
+      "id": "OS3_0022",
+      "q": "In the queuing diagram, a running process creates a child process. Where does it wait until the child terminates?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The I/O wait queue"},
+        {"i": "2", "x": "The interrupt wait queue"},
+        {"i": "3", "x": "The child termination wait queue"},
+        {"i": "4", "x": "The ready queue"}
+      ],
+      "a": "3",
+      "e": "After creating a child, the process waits in the <b>child termination wait queue</b>; when the child terminates it goes back to the ready queue. <mark>Create child → child termination wait queue</mark>",
+      "ref": "Slide 15"
+    },
+    {
+      "id": "OS3_0023",
+      "q": "In the queuing diagram, the time slice of a running process expires. Where does the process go?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The I/O wait queue"},
+        {"i": "2", "x": "The interrupt wait queue"},
+        {"i": "3", "x": "The child termination wait queue"},
+        {"i": "4", "x": "The ready queue"}
+      ],
+      "a": "4",
+      "e": "When the time slice expires, the process is not waiting for any event, so it goes straight back to the <b>ready queue</b>. <mark>Time slice expired → ready queue</mark>",
+      "ref": "Slide 15"
+    },
+    {
+      "id": "OS3_0024",
+      "q": "In the lecture's context-switch example, process $P_0$ is executing when an interrupt or system call occurs, and the CPU then switches to process $P_1$. What does the OS do in between?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "It saves the state of $P_0$ into $PCB_0$, then reloads the state from $PCB_1$"},
+        {"i": "2", "x": "It saves the state of $P_0$ into $PCB_1$, then reloads the state from $PCB_0$"},
+        {"i": "3", "x": "It reloads the state from $PCB_1$, then saves the state of $P_0$ into $PCB_0$"},
+        {"i": "4", "x": "It saves the state of $P_1$ into $PCB_0$, then reloads the state from $PCB_1$"}
+      ],
+      "a": "1",
+      "e": [
+        "An interrupt or system call occurs while $P_0$ is executing, and the OS takes control.",
+        "The OS <b>saves the current state</b> of $P_0$ into its own PCB, $PCB_0$.",
+        "The OS <b>reloads the saved state</b> of $P_1$ from $PCB_1$.",
+        "$P_1$ executes, and later the same steps run in the opposite direction ($PCB_1$ saved, $PCB_0$ reloaded).",
+        "<mark>Save into PCB<sub>0</sub>, then reload from PCB<sub>1</sub></mark>"
+      ],
+      "ref": "Slides 16-17"
+    },
+    {
+      "id": "OS3_0025",
+      "q": "Why is context-switch time considered pure overhead?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Because each switch terminates the running process and creates a new PCB"},
+        {"i": "2", "x": "Because the CPU registers are cleared during the switch and never restored"},
+        {"i": "3", "x": "Because the system does no useful work for any process while it switches"},
+        {"i": "4", "x": "Because the switch can happen only after the running process has finished"}
+      ],
+      "a": "3",
+      "e": "During a context switch the OS only saves one context and loads another, so no useful work is done for any process. <mark>No useful work while switching</mark>",
+      "ref": "Slide 16"
+    },
+    {
+      "id": "OS3_0026",
+      "q": "In the process tree shown on the slide, which process is a <u>direct child</u> of `logind` (pid 8415)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`ps` (pid 9298)"},
+        {"i": "2", "x": "`bash` (pid 8416)"},
+        {"i": "3", "x": "`python` (pid 2808)"},
+        {"i": "4", "x": "`tcsh` (pid 4005)"}
+      ],
+      "a": "2",
+      "e": "In the tree, `logind` created `bash`, and `bash` created `ps` and `vim` (so `ps` is a grandchild). `python` is another child of `systemd`, and `tcsh` is in the `sshd` branch. <mark>bash is the direct child of logind</mark>",
+      "ref": "Slide 19"
+    },
+    {
+      "id": "OS3_0027",
+      "q": "A process creates several new processes. What are the creating process and the new processes called?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The creating process is the child; the new processes are its parents"},
+        {"i": "2", "x": "The creating process is the owner; the new processes are its users"},
+        {"i": "3", "x": "The creating process is the client; the new processes are its servers"},
+        {"i": "4", "x": "The creating process is the parent; the new processes are its children"}
+      ],
+      "a": "4",
+      "e": "The creating process is the <b>parent</b>, and the new processes are its <b>children</b>. Each child may in turn create other processes, which forms a tree. <mark>Parent creates children</mark>",
+      "ref": "Slide 19"
+    },
+    {
+      "id": "OS3_0028",
+      "q": "In terms of <b>address space</b>, which two possibilities exist for a newly created child process?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Either the child is a duplicate of the parent, or a new program is loaded into the child"},
+        {"i": "2", "x": "Either the child shares the address space of the parent, or the parent is loaded into the child"},
+        {"i": "3", "x": "Either the parent waits until its children terminate, or it executes concurrently with them"},
+        {"i": "4", "x": "Either the parent and child share no resources, or they share all of the resources"}
+      ],
+      "a": "1",
+      "e": "For the address space, the child is either a <b>duplicate of the parent</b> or has a <b>new program loaded</b> into it. The other options describe the execution possibilities and the resource-sharing possibilities. <mark>Duplicate of the parent, or a new program</mark>",
+      "ref": "Slide 20"
+    },
+    {
+      "id": "OS3_0029",
+      "q": "A parent process creates a child and then blocks until the child terminates. Which execution possibility is this?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The parent continues to execute concurrently with its children"},
+        {"i": "2", "x": "The child process is a duplicate of the parent process"},
+        {"i": "3", "x": "The parent waits until some or all of its children have terminated"},
+        {"i": "4", "x": "The children share a subset of the parent's resources"}
+      ],
+      "a": "3",
+      "e": "In terms of execution, the parent either runs concurrently with its children or <b>waits until some or all of its children have terminated</b>. Blocking until the child ends is the second case. <mark>Parent waits for its children</mark>",
+      "ref": "Slide 20"
+    },
+    {
+      "id": "OS3_0030",
+      "q": "A process finishes executing and asks the OS to delete it. Which system call does it use, and what does the OS do afterwards?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It uses abort, and the OS deallocates all of its resources"},
+        {"i": "2", "x": "It uses exit, and the OS deallocates all of its resources"},
+        {"i": "3", "x": "It uses exit, and the OS leaves its resources allocated until its parent terminates"},
+        {"i": "4", "x": "It uses abort, and the OS leaves its resources allocated until its parent terminates"}
+      ],
+      "a": "2",
+      "e": "A process that finishes execution asks the OS to delete it with the <b>exit</b> system call, and the OS then deallocates all of its resources. The <b>abort</b> call is used by a parent to terminate its child. <mark>exit, then resources deallocated</mark>",
+      "ref": "Slides 21-22"
+    },
+    {
+      "id": "OS3_0031",
+      "q": "Which of the following is <u>not</u> a case in which a parent may terminate its child using the abort system call?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The task assigned to the child is no longer required"},
+        {"i": "2", "x": "The child has exceeded the usage of the resources allocated to it"},
+        {"i": "3", "x": "The parent is exiting in a cascading termination system"},
+        {"i": "4", "x": "The child has finished its task and has called exit"}
+      ],
+      "a": "4",
+      "e": "A parent may abort a child when its task is no longer required, when it exceeds its allocated resources, or when the parent is exiting in a cascading termination system. A child that finishes and calls exit terminates normally. <mark>Normal exit is not an abort case</mark>",
+      "ref": "Slide 22"
+    },
+    {
+      "id": "OS3_0032",
+      "q": "In a system that uses <b>cascading termination</b>, a process $A$ terminates. $A$ has a child $B$, and $B$ has its own child $C$. What happens?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Both $B$ and $C$ are terminated as well"},
+        {"i": "2", "x": "Only $B$ is terminated, and $C$ continues to run"},
+        {"i": "3", "x": "Neither is terminated, and both become independent"},
+        {"i": "4", "x": "Only $C$ is terminated, and $B$ continues to run"}
+      ],
+      "a": "1",
+      "e": [
+        "In cascading termination, if a process terminates, <b>all of its children must be terminated</b> as well.",
+        "When $A$ terminates, its child $B$ must be terminated.",
+        "Since $B$ terminates, its own child $C$ must also be terminated.",
+        "<mark>Both B and C are terminated</mark>"
+      ],
+      "ref": "Slide 22"
+    },
+    {
+      "id": "OS3_0033",
+      "q": "Which statement correctly compares <b>independent</b> and <b>cooperating</b> processes?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "An independent process shares data with other processes; a cooperating one shares no data with them"},
+        {"i": "2", "x": "Both share data with other processes, but only a cooperating one needs an IPC mechanism"},
+        {"i": "3", "x": "An independent process shares no data with other processes; a cooperating one shares data with them"},
+        {"i": "4", "x": "Neither shares data, but a cooperating process can create children while an independent one cannot"}
+      ],
+      "a": "3",
+      "e": "An <b>independent</b> process does not share data with other processes, whereas a <b>cooperating</b> process shares data with other executing processes and therefore needs an IPC mechanism. <mark>Cooperating processes share data</mark>",
+      "ref": "Slide 24"
+    },
+    {
+      "id": "OS3_0034",
+      "q": "A large task is broken into sub-tasks that run in parallel as separate cooperating processes. Which reason for process cooperation does this illustrate?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Information sharing"},
+        {"i": "2", "x": "Computation speedup"},
+        {"i": "3", "x": "Modularity"},
+        {"i": "4", "x": "Resource allocation"}
+      ],
+      "a": "2",
+      "e": "Breaking a task into sub-tasks that run in parallel is <b>computation speedup</b>. Information sharing is, for example, copying and pasting, and modularity means dividing the functions of a system into separate processes. <mark>Computation speedup</mark>",
+      "ref": "Slide 24"
+    },
+    {
+      "id": "OS3_0035",
+      "q": "Which statement about <b>shared-memory</b> communication is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A process creates a shared-memory region in its address space, and other processes attach it to theirs"},
+        {"i": "2", "x": "The OS creates the region and copies each message between the communicating processes"},
+        {"i": "3", "x": "Processes exchange data only through send and receive operations managed by the OS"},
+        {"i": "4", "x": "Each process stays restricted to its own memory and copies data through the kernel"}
+      ],
+      "a": "1",
+      "e": "Normally the OS restricts a process to its own memory, but communicating processes agree to remove this restriction: one creates a shared region in its address space, others attach it, and they read and write data in it. <mark>Create a region, attach it, read and write</mark>",
+      "ref": "Slide 26"
+    },
+    {
+      "id": "OS3_0036",
+      "q": "In shared-memory communication, which task is the responsibility of the communicating processes themselves?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Creating the message queue that holds the data in the kernel"},
+        {"i": "2", "x": "Blocking the sender until the message is received"},
+        {"i": "3", "x": "Choosing which process the CPU executes next"},
+        {"i": "4", "x": "Ensuring that they do not write to the same location simultaneously"}
+      ],
+      "a": "4",
+      "e": "With shared memory the processes are responsible for determining the form of the data and its location, and for making sure they are <u>not</u> writing to the same location simultaneously. <mark>The processes must avoid simultaneous writes</mark>",
+      "ref": "Slide 26"
+    },
+    {
+      "id": "OS3_0037",
+      "q": "Which statement correctly compares <b>shared memory</b> and <b>message passing</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Shared memory is managed by the OS and suits distributed environments; message passing needs a shared region"},
+        {"i": "2", "x": "Both need a shared region, but only message passing uses a message queue in the kernel"},
+        {"i": "3", "x": "Shared memory uses a region the processes read and write; message passing needs no shared memory and is managed by the OS"},
+        {"i": "4", "x": "Message passing uses a region the processes read and write; shared memory uses send and receive operations"}
+      ],
+      "a": "3",
+      "e": "In shared memory the processes read and write data in a common region. Message passing allows processes to communicate <b>without sharing memory</b>, is managed by the OS, and is useful in a distributed environment. <mark>Shared region vs OS-managed messages</mark>",
+      "ref": "Slides 25-27"
+    },
+    {
+      "id": "OS3_0038",
+      "q": "Which option correctly describes the trade-off between fixed-sized and variable-sized messages?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Fixed-sized: complex to implement but flexible for programmers; variable-sized: easy to implement but restrictive"},
+        {"i": "2", "x": "Fixed-sized: easy to implement but restricts programmers; variable-sized: complex to implement but more flexible"},
+        {"i": "3", "x": "Both are easy to implement, but only variable-sized messages restrict programmers"},
+        {"i": "4", "x": "Both are complex to implement, but only fixed-sized messages are flexible for programmers"}
+      ],
+      "a": "2",
+      "e": "Fixed-sized messages are easier to implement at the system level but restrict the application programmer. Variable-sized messages are more complex at the system level but make application programming easier and more flexible. <mark>System-level simplicity vs programmer flexibility</mark>",
+      "ref": "Slide 28"
+    },
+    {
+      "id": "OS3_0039",
+      "q": "Which of the following is <u>not</u> one of the logical implementation choices for a communication link?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Direct or indirect communication"},
+        {"i": "2", "x": "Synchronous or asynchronous communication"},
+        {"i": "3", "x": "Automatic or explicit buffering"},
+        {"i": "4", "x": "Hardware bus or network connection"}
+      ],
+      "a": "4",
+      "e": "A hardware bus or a network is a form of the <b>physical</b> implementation of a link. The logical choices are direct or indirect communication, synchronous or asynchronous communication, and automatic or explicit buffering. <mark>Bus and network are physical, not logical</mark>",
+      "ref": "Slide 29"
+    },
+    {
+      "id": "OS3_0040",
+      "q": "Process $P$ calls `send(Q, message)` and process $Q$ calls `receive(P, message)`. Which kind of communication is this?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Direct communication with symmetric addressing"},
+        {"i": "2", "x": "Direct communication with asymmetric addressing"},
+        {"i": "3", "x": "Indirect communication using a mailbox"},
+        {"i": "4", "x": "Indirect communication using a port"}
+      ],
+      "a": "1",
+      "e": "Both the sender and the receiver name each other, which is <b>symmetric addressing</b> in direct communication. In asymmetric addressing only the sender names the receiver, and the receiver accepts a message from any process. <mark>Direct, symmetric addressing</mark>",
+      "ref": "Slide 30"
+    },
+    {
+      "id": "OS3_0041",
+      "q": "Which of the following is <u>not</u> a property of a direct communication link?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A link is established automatically"},
+        {"i": "2", "x": "A link is associated with exactly two processes"},
+        {"i": "3", "x": "A link may be associated with more than two processes"},
+        {"i": "4", "x": "Between each pair of processes there exists exactly one link"}
+      ],
+      "a": "3",
+      "e": "A direct link is established automatically, is associated with exactly two processes, and there is exactly one link between each pair. A link that can involve more than two processes is an <b>indirect</b> (mailbox) link. <mark>More than two processes = indirect link</mark>",
+      "ref": "Slides 30-31"
+    },
+    {
+      "id": "OS3_0042",
+      "q": "Several processes communicate through a named object $A$ using `send(A, message)` and `receive(A, message)`. Which kind of communication is this, and what is $A$?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Direct communication, and A is a process"},
+        {"i": "2", "x": "Indirect communication, and A is a mailbox (or port)"},
+        {"i": "3", "x": "Direct communication, and A is a socket"},
+        {"i": "4", "x": "Indirect communication, and A is a stub"}
+      ],
+      "a": "2",
+      "e": "In <b>indirect communication</b> messages are sent to and received from <b>mailboxes</b> (or ports), and the link is established by creating and sharing a mailbox. <mark>Indirect communication through a mailbox</mark>",
+      "ref": "Slide 31"
+    },
+    {
+      "id": "OS3_0043",
+      "q": "Which statement correctly compares direct and indirect communication links?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A direct link joins exactly two processes; an indirect link may join more than two"},
+        {"i": "2", "x": "A direct link may join more than two processes; an indirect link joins exactly two"},
+        {"i": "3", "x": "A pair may have several direct links; an indirect link is created automatically"},
+        {"i": "4", "x": "A direct link needs a mailbox; an indirect link is established automatically"}
+      ],
+      "a": "1",
+      "e": "A direct link is established automatically between exactly two processes, with exactly one link per pair. An indirect link is created by sharing a mailbox, may involve more than two processes, and a pair may have several mailboxes. <mark>Direct: exactly two processes; indirect: possibly more</mark>",
+      "ref": "Slides 30-31"
+    },
+    {
+      "id": "OS3_0044",
+      "q": "A sending process hands over its message and resumes execution immediately, without waiting for the receiver. Which operation is this?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Blocking (synchronous) send"},
+        {"i": "2", "x": "Blocking (synchronous) receive"},
+        {"i": "3", "x": "Non-blocking (asynchronous) receive"},
+        {"i": "4", "x": "Non-blocking (asynchronous) send"}
+      ],
+      "a": "4",
+      "e": "A <b>non-blocking (asynchronous) send</b> sends the message and resumes operation immediately. A blocking send waits until the message is received by the receiver or by the mailbox. <mark>Non-blocking send</mark>",
+      "ref": "Slide 32"
+    },
+    {
+      "id": "OS3_0045",
+      "q": "Which option correctly describes when the <b>sender blocks</b> for each buffering capacity?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Zero: never blocks; bounded: blocks until the recipient receives; unbounded: blocks only when the queue is full"},
+        {"i": "2", "x": "Zero: blocks only when the queue is full; bounded: never blocks; unbounded: blocks until the recipient receives"},
+        {"i": "3", "x": "Zero: blocks until the recipient receives; bounded: blocks only when the queue is full; unbounded: never blocks"},
+        {"i": "4", "x": "Zero: blocks until the recipient receives; bounded: never blocks; unbounded: blocks only when the queue is full"}
+      ],
+      "a": "3",
+      "e": [
+        "<b>Zero capacity</b>: the link cannot hold any waiting message, so the sender must block until the recipient receives it.",
+        "<b>Bounded capacity</b>: the queue holds at most $n$ messages, so the sender blocks only if the queue is full, until space is available.",
+        "<b>Unbounded capacity</b>: the queue length is infinite, so the sender never blocks.",
+        "<mark>Zero: blocks until received; bounded: blocks when full; unbounded: never blocks</mark>"
+      ],
+      "ref": "Slide 33"
+    },
+    {
+      "id": "OS3_0046",
+      "q": "How is a <b>socket</b> identified?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "By a process number concatenated with a mailbox name"},
+        {"i": "2", "x": "By an IP address concatenated with a port number"},
+        {"i": "3", "x": "By a stub identifier concatenated with a function identifier"},
+        {"i": "4", "x": "By a host name concatenated with a PCB number"}
+      ],
+      "a": "2",
+      "e": "A socket is an endpoint for communication, identified by an <b>IP address concatenated with a port number</b>. A pair of communicating processes employs a pair of sockets. <mark>IP address + port number</mark>",
+      "ref": "Slide 35"
+    },
+    {
+      "id": "OS3_0047",
+      "q": "In the lecture's sockets example, host $X$ (146.86.5.20) communicates with a web server (161.25.19.8). Which pair of sockets identifies this connection?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "146.86.5.20:1625 and 161.25.19.8:80"},
+        {"i": "2", "x": "146.86.5.20:80 and 161.25.19.8:1625"},
+        {"i": "3", "x": "146.86.5.20:1625 and 146.86.5.20:80"},
+        {"i": "4", "x": "161.25.19.8:1625 and 161.25.19.8:80"}
+      ],
+      "a": "1",
+      "e": "Each socket is an IP address concatenated with a port number. Host $X$ uses the socket `146.86.5.20:1625`, and the web server uses the socket `161.25.19.8:80`, so the connection is identified by this pair. <mark>146.86.5.20:1625 ↔ 161.25.19.8:80</mark>",
+      "ref": "Slide 36"
+    },
+    {
+      "id": "OS3_0048",
+      "q": "How does a server handle client requests when it uses sockets?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It repeatedly connects to each client address to check whether a request is pending"},
+        {"i": "2", "x": "It creates a mailbox for every client and waits for the clients to receive from it"},
+        {"i": "3", "x": "It calls a remote procedure on the client through a stub on the client side"},
+        {"i": "4", "x": "It listens to a specified port and accepts a connection when a request is received"}
+      ],
+      "a": "4",
+      "e": "The server waits for client requests by <b>listening</b> to a specified port; when a request is received, it <b>accepts</b> a connection from the client socket. <mark>Listen on a port, then accept the connection</mark>",
+      "ref": "Slide 35"
+    },
+    {
+      "id": "OS3_0049",
+      "q": "What is the role of the <b>stub</b> on the client side of a remote procedure call (RPC)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It listens to a port on the remote system and waits for incoming calls"},
+        {"i": "2", "x": "It executes the remote function and returns the output to the client"},
+        {"i": "3", "x": "It hides the communication details so the remote procedure is called like a local one"},
+        {"i": "4", "x": "It guarantees that the remote procedure executes exactly once"}
+      ],
+      "a": "3",
+      "e": "The client-side <b>stub</b> hides the communication details and allows the remote procedure to be called like a local one. Listening to a port is the job of the RPC daemon on the remote system. <mark>The stub hides the communication details</mark>",
+      "ref": "Slide 37"
+    },
+    {
+      "id": "OS3_0050",
+      "q": "Which of the following statements about RPC is <u>not</u> true?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "An RPC daemon listens to a port on the remote system"},
+        {"i": "2", "x": "An RPC is guaranteed to run exactly once despite network errors"},
+        {"i": "3", "x": "The messages are well structured and carry the function identifier and parameters"},
+        {"i": "4", "x": "The output of the executed function is returned to the client as a message"}
+      ],
+      "a": "2",
+      "e": "RPCs may <u>fail</u> or execute multiple times because of network errors, so exactly-once execution is not guaranteed. The other statements match the lecture: a daemon listens on a port, messages contain the function identifier and parameters, and the output is returned as a message. <mark>RPCs may fail or run multiple times</mark>",
+      "ref": "Slide 37"
+    }
+  ]
+}
