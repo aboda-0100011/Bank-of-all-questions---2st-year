@@ -1,0 +1,445 @@
+{
+  "qs": [
+    {
+      "id": "OS1_0001",
+      "q": "A new USB device is plugged in, and the OS needs a <b>uniform interface</b> to talk to it without dealing with its hardware details. Which component provides this interface?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Device controller"},
+        {"i": "2", "x": "Device driver"},
+        {"i": "3", "x": "System bus"},
+        {"i": "4", "x": "Bootstrap program"}
+      ],
+      "a": "2",
+      "e": "The operating system provides a <b>device driver</b> that understands the device controller and gives the rest of the OS a uniform interface to the device. <mark>Device driver</mark>",
+      "ref": "Slide 18"
+    },
+    {
+      "id": "OS1_0002",
+      "q": "Which statement correctly compares the <b>device controller</b> and the <b>device driver</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The driver moves data between the device and its local buffer; the controller is OS software"},
+        {"i": "2", "x": "The controller is OS software for a uniform interface; the driver is hardware with registers"},
+        {"i": "3", "x": "The controller moves data between the device and its local buffer; the driver is OS software"},
+        {"i": "4", "x": "Both are hardware units, and only the controller is connected to the common bus"}
+      ],
+      "a": "3",
+      "e": "The device controller is hardware with a local buffer and a set of registers, and it moves data between its peripheral device and that buffer. The device driver is operating-system software that understands the controller and provides a uniform interface. <mark>Controller = hardware, driver = OS software</mark>",
+      "ref": "Slide 18"
+    },
+    {
+      "id": "OS1_0003",
+      "q": "Which sequence correctly lists the steps of an I/O operation?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Driver loads controller registers → controller decides the action → controller transfers data to its buffer → controller raises an interrupt → driver returns control to the OS"},
+        {"i": "2", "x": "Controller decides the action → driver loads controller registers → controller transfers data to its buffer → controller raises an interrupt → driver returns control to the OS"},
+        {"i": "3", "x": "Driver loads controller registers → controller decides the action → controller raises an interrupt → controller transfers data to its buffer → driver returns control to the OS"},
+        {"i": "4", "x": "Driver loads controller registers → controller transfers data to its buffer → controller decides the action → controller raises an interrupt → driver returns control to the OS"}
+      ],
+      "a": "1",
+      "e": [
+        "The <b>device driver</b> loads the registers within the device controller.",
+        "The device controller determines the action to take based on those registers.",
+        "The device controller transfers data between the device and its local buffer.",
+        "The device controller generates an interrupt to inform the device driver.",
+        "The device driver returns control to the OS (returning the data for a read, or status information for other operations).",
+        "<mark>Load registers → decide action → transfer data → interrupt → return control</mark>"
+      ],
+      "ref": "Slide 19"
+    },
+    {
+      "id": "OS1_0004",
+      "q": "A system must move a large block of data between a controller's local buffer and main memory while the CPU keeps running other work, with only <u>one</u> interrupt for the whole block. Which mechanism is being used?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Interrupt-driven I/O"},
+        {"i": "2", "x": "Cache coherency"},
+        {"i": "3", "x": "Timer-based scheduling"},
+        {"i": "4", "x": "Direct memory access"}
+      ],
+      "a": "4",
+      "e": "In <b>DMA</b> the device controller transfers an entire block directly between its local buffer and main memory with no CPU intervention, generates one interrupt per block, and leaves the CPU free for other work. <mark>Direct memory access</mark>",
+      "ref": "Slide 20"
+    },
+    {
+      "id": "OS1_0005",
+      "q": "How does <b>DMA</b> differ from the ordinary I/O operation when moving bulk data?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "DMA generates one interrupt per byte, while ordinary I/O generates one interrupt per block"},
+        {"i": "2", "x": "DMA generates one interrupt per block, while ordinary I/O generates one per byte moved"},
+        {"i": "3", "x": "DMA needs the CPU to copy every byte, while ordinary I/O bypasses the CPU entirely"},
+        {"i": "4", "x": "DMA suits only small transfers, while ordinary I/O is designed for bulk data movement"}
+      ],
+      "a": "2",
+      "e": "Ordinary interrupt-driven I/O is fine for small amounts of data but gives high CPU overhead for bulk movement. With DMA the controller moves a whole block directly to memory and raises one interrupt per block rather than one per byte. <mark>DMA: one interrupt per block, CPU stays free</mark>",
+      "ref": "Slides 19-20"
+    },
+    {
+      "id": "OS1_0006",
+      "q": "A computer has one general-purpose CPU, plus a disk controller, a keyboard controller, and a graphics processor that each execute only a limited instruction set. How is it classified?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Symmetric multiprocessor system"},
+        {"i": "2", "x": "Asymmetric multiprocessor system"},
+        {"i": "3", "x": "Single-processor system"},
+        {"i": "4", "x": "Clustered system"}
+      ],
+      "a": "3",
+      "e": "A single-processor system has only one general-purpose processor. Special-purpose processors (disk, keyboard and graphics controllers) support a limited instruction set, cannot execute user processes, and do <u>not</u> turn the system into a multiprocessor. <mark>Single-processor system</mark>",
+      "ref": "Slide 23"
+    },
+    {
+      "id": "OS1_0007",
+      "q": "Which of the following is <u>not</u> a characteristic of a <b>multiprocessor system</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Its processors are loosely coupled nodes that communicate only over a LAN"},
+        {"i": "2", "x": "It is also known as a parallel system or a tightly-coupled system"},
+        {"i": "3", "x": "It has two or more general-purpose processors in close communication"},
+        {"i": "4", "x": "Its processors share the bus, clock, memory, and peripheral devices"}
+      ],
+      "a": "1",
+      "e": "A multiprocessor system is a parallel, <b>tightly-coupled</b> system whose processors share the bus, clock, memory and peripherals. Loosely-coupled nodes linked via a LAN describe a <b>clustered</b> system. <mark>Loosely coupled nodes over a LAN = clustered, not multiprocessor</mark>",
+      "ref": "Slides 24, 31"
+    },
+    {
+      "id": "OS1_0008",
+      "q": "Which of the following is <u>not</u> an advantage of multiprocessor systems?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "More work is done in less time"},
+        {"i": "2", "x": "Peripherals and power supplies are shared, which lowers the cost"},
+        {"i": "3", "x": "A failed processor only slows the system down instead of halting it"},
+        {"i": "4", "x": "The speed-up ratio with $N$ processors is always exactly $N$"}
+      ],
+      "a": "4",
+      "e": "The advantages are increased throughput, economy of scale, and increased reliability. The speed-up ratio with $N$ processors is <u>less than</u> $N$, not equal to it. <mark>The speed-up with N processors is less than N</mark>",
+      "ref": "Slide 25"
+    },
+    {
+      "id": "OS1_0009",
+      "q": "A server's CPU fails, but the system keeps providing service at a lower level that is proportional to the surviving hardware. Which term describes this ability?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Cache coherency"},
+        {"i": "2", "x": "Graceful degradation"},
+        {"i": "3", "x": "Parallelization"},
+        {"i": "4", "x": "Hot-standby mode"}
+      ],
+      "a": "2",
+      "e": "<b>Graceful degradation</b> is the ability to continue providing service proportional to the level of surviving hardware. <mark>Graceful degradation</mark>",
+      "ref": "Slide 26"
+    },
+    {
+      "id": "OS1_0010",
+      "q": "Which statement correctly compares <b>asymmetric</b> and <b>symmetric</b> multiprocessing?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Asymmetric treats all processors as peers; symmetric has a boss that schedules the workers"},
+        {"i": "2", "x": "Both have a boss processor, but only symmetric lets the workers perform any task"},
+        {"i": "3", "x": "Asymmetric has a boss that schedules and allocates work; symmetric has peers that perform any task"},
+        {"i": "4", "x": "Symmetric gives workers predefined tasks and is used by few systems; asymmetric is used by most"}
+      ],
+      "a": "3",
+      "e": "In asymmetric multiprocessing there is a boss-worker relationship: the boss schedules and allocates work, and the workers follow its instructions or have predefined tasks. In symmetric multiprocessing (SMP), used by most systems, all processors are peers and each can perform any task. <mark>Asymmetric = boss-worker; SMP = peers</mark>",
+      "ref": "Slide 27"
+    },
+    {
+      "id": "OS1_0011",
+      "q": "A single chip contains two CPU cores, each with its own registers and L1 cache, and both cores share an L2 cache that connects to main memory. What kind of system is this?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A multicore system, which is also a multiprocessor system"},
+        {"i": "2", "x": "A clustered system with two nodes sharing storage"},
+        {"i": "3", "x": "An asymmetric clustering system in hot-standby mode"},
+        {"i": "4", "x": "A single-processor system with special-purpose processors"}
+      ],
+      "a": "1",
+      "e": "Multiple computing cores on a single chip form a <b>multicore</b> system (here a dual-core design with private registers and L1 caches and a shared L2 cache). Multicore systems are multiprocessor systems. <mark>Multicore (dual-core) system</mark>",
+      "ref": "Slides 29-30"
+    },
+    {
+      "id": "OS1_0012",
+      "q": "Which statement correctly relates <b>multicore</b> and <b>multiprocessor</b> systems?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Every multiprocessor system is multicore, but not every multicore system is multiprocessor"},
+        {"i": "2", "x": "Multicore and multiprocessor systems are unrelated designs with no overlap"},
+        {"i": "3", "x": "Multicore chips use more power than several single-core chips because of on-chip links"},
+        {"i": "4", "x": "Every multicore system is multiprocessor, but not every multiprocessor system is multicore"}
+      ],
+      "a": "4",
+      "e": "Multicore systems are multiprocessor systems, but a multiprocessor system may use several separate single-core chips, so <u>not all</u> multiprocessor systems are multicore. On-chip communication is also faster, and one multicore chip uses less power than several single-core chips. <mark>Multicore is a kind of multiprocessor</mark>",
+      "ref": "Slide 29"
+    },
+    {
+      "id": "OS1_0013",
+      "q": "Which statement correctly compares a <b>multiprocessor</b> system with a <b>clustered</b> system?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Multiprocessor systems are loosely coupled and share storage via a LAN; clustered systems are tightly coupled"},
+        {"i": "2", "x": "Multiprocessor systems are tightly coupled and share memory; clustered systems are loosely coupled and share storage"},
+        {"i": "3", "x": "Both are tightly coupled, but only clustered systems share a clock and main memory"},
+        {"i": "4", "x": "Both are loosely coupled, but only multiprocessor systems have two or more nodes"}
+      ],
+      "a": "2",
+      "e": "A multiprocessor system is tightly coupled: its processors share the bus, clock, memory and peripherals. A clustered system is loosely coupled: separate nodes share storage and are linked via a LAN. <mark>Tightly coupled vs loosely coupled</mark>",
+      "ref": "Slides 24, 31"
+    },
+    {
+      "id": "OS1_0014",
+      "q": "A company runs its service on one active server, while a second node only monitors it and takes over if it fails. Which type of clustering is this?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Symmetric clustering"},
+        {"i": "2", "x": "Asymmetric multiprocessing"},
+        {"i": "3", "x": "Asymmetric clustering"},
+        {"i": "4", "x": "Symmetric multiprocessing"}
+      ],
+      "a": "3",
+      "e": "In <b>asymmetric clustering</b> one node is in hot-standby mode monitoring the active server and becomes the active server if it fails, which supports high availability. <mark>Asymmetric clustering</mark>",
+      "ref": "Slide 32"
+    },
+    {
+      "id": "OS1_0015",
+      "q": "Which statement correctly compares <b>asymmetric</b> and <b>symmetric</b> clustering?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Asymmetric keeps one node on hot standby; symmetric has all nodes running applications and monitoring each other"},
+        {"i": "2", "x": "Asymmetric has all nodes running applications and monitoring each other; symmetric keeps one node on hot standby"},
+        {"i": "3", "x": "Asymmetric requires shared memory between the nodes; symmetric needs no shared storage at all"},
+        {"i": "4", "x": "Asymmetric is used for parallelizing applications; symmetric is used only for hot standby"}
+      ],
+      "a": "1",
+      "e": "In asymmetric clustering one node waits in hot-standby mode and monitors the active server (high availability). In symmetric clustering two or more nodes run applications and monitor each other, which supports high-performance computing better than multiprocessor systems through parallelization. <mark>Standby node vs all nodes working</mark>",
+      "ref": "Slide 32"
+    },
+    {
+      "id": "OS1_0016",
+      "q": "Which of the following is <u>not</u> a characteristic of <b>clustered systems</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "They are composed of two or more individual systems (nodes)"},
+        {"i": "2", "x": "Each node may be a single-processor or a multicore system"},
+        {"i": "3", "x": "The nodes share storage and are closely linked via a LAN"},
+        {"i": "4", "x": "The nodes share one bus, one clock, and one main memory"}
+      ],
+      "a": "4",
+      "e": "Clustered systems are loosely-coupled sets of nodes that share storage and are linked via a LAN. Sharing one bus, one clock and one memory is a feature of <b>multiprocessor</b> systems. <mark>Shared bus, clock and memory = multiprocessor</mark>",
+      "ref": "Slide 31"
+    },
+    {
+      "id": "OS1_0017",
+      "q": "The mode bit of the CPU is currently 1. Which statement is correct?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The CPU is in kernel mode, so privileged instructions cannot execute"},
+        {"i": "2", "x": "The CPU is in user mode, so privileged instructions cannot execute"},
+        {"i": "3", "x": "The CPU is in user mode, so privileged instructions can execute"},
+        {"i": "4", "x": "The CPU is in kernel mode, so privileged instructions can execute"}
+      ],
+      "a": "2",
+      "e": "The mode bit indicates kernel (0) or user (1). A value of 1 means <b>user mode</b>, and privileged instructions can execute only in kernel mode (by the OS). <mark>Mode bit 1 = user mode, so no privileged instructions</mark>",
+      "ref": "Slide 35"
+    },
+    {
+      "id": "OS1_0018",
+      "q": "Which sequence correctly shows what happens when a user process makes a system call, including the mode bit?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Process calls system call → trap, mode bit = 1 → system call executes in kernel mode → return, mode bit = 0 → process continues"},
+        {"i": "2", "x": "Process calls system call → system call executes in kernel mode → trap, mode bit = 0 → return, mode bit = 1 → process continues"},
+        {"i": "3", "x": "Process calls system call → trap, mode bit = 0 → system call executes in kernel mode → return, mode bit = 1 → process continues"},
+        {"i": "4", "x": "Process calls system call → trap, mode bit = 0 → return, mode bit = 1 → system call executes in kernel mode → process continues"}
+      ],
+      "a": "3",
+      "e": [
+        "A user process executing in user mode (mode bit = 1) calls a system call.",
+        "The call <b>traps</b> to the kernel and the mode bit becomes 0 (kernel mode).",
+        "The system call executes in kernel mode.",
+        "On return, the mode bit goes back to 1 (user mode).",
+        "The user process continues after the return from the system call.",
+        "<mark>Call → trap (mode bit 0) → execute in kernel → return (mode bit 1)</mark>"
+      ],
+      "ref": "Slide 36"
+    },
+    {
+      "id": "OS1_0019",
+      "q": "Which of the following statements about dual-mode operation is <u>not</u> correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A mode bit of 0 indicates user mode, and a mode bit of 1 indicates kernel mode"},
+        {"i": "2", "x": "Kernel mode is also called supervisor mode, system mode, or privileged mode"},
+        {"i": "3", "x": "Instructions that may cause harm are designated as privileged instructions"},
+        {"i": "4", "x": "User-defined code must execute in user mode to protect the OS from errant users"}
+      ],
+      "a": "1",
+      "e": "The mode bit is 0 for <b>kernel</b> mode and 1 for <b>user</b> mode, so the first statement reverses them. <mark>Kernel = 0, user = 1</mark>",
+      "ref": "Slide 35"
+    },
+    {
+      "id": "OS1_0020",
+      "q": "A CPU supports virtualization and needs a mode with more privileges than user mode but fewer than kernel mode, so that the software that creates and manages virtual machines can run. Which mode is this?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Supervisor mode"},
+        {"i": "2", "x": "System mode"},
+        {"i": "3", "x": "Guest mode"},
+        {"i": "4", "x": "VMM mode"}
+      ],
+      "a": "4",
+      "e": "The concept of modes can be extended: a CPU that supports virtualization can have a third mode for the <b>VMM</b> (virtual machine manager), with more privileges than user mode but fewer than kernel mode. Supervisor and system mode are other names for kernel mode. <mark>VMM mode</mark>",
+      "ref": "Slide 37"
+    },
+    {
+      "id": "OS1_0021",
+      "q": "Which sequence correctly describes how the OS uses a <b>timer</b> to stop a user program from running too long?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Control goes to the user program → OS sets the counter → each tick decrements it → counter reaches 0 and an interrupt occurs → control returns to the OS"},
+        {"i": "2", "x": "OS sets the counter → control goes to the user program → each tick decrements it → counter reaches 0 and an interrupt occurs → control returns to the OS"},
+        {"i": "3", "x": "OS sets the counter → control goes to the user program → counter reaches 0 and an interrupt occurs → each tick decrements it → control returns to the OS"},
+        {"i": "4", "x": "OS sets the counter → control goes to the user program → each tick increments it → counter reaches 0 and an interrupt occurs → control returns to the OS"}
+      ],
+      "a": "2",
+      "e": [
+        "The OS sets the counter <b>before</b> turning control over to the user program.",
+        "Control goes to the user program.",
+        "Every time the clock ticks, the counter is decremented.",
+        "When the counter reaches 0, an interrupt occurs.",
+        "Control returns to the OS, which may treat the interrupt as a fatal error or give the program more time.",
+        "<mark>Set counter → run program → decrement on ticks → interrupt at 0 → back to OS</mark>"
+      ],
+      "ref": "Slide 38"
+    },
+    {
+      "id": "OS1_0022",
+      "q": "A user program tries to reload the timer counter with a very large value so that it can keep the CPU forever. How does the OS prevent this?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "By making the clock rate fixed, so the counter can never be changed"},
+        {"i": "2", "x": "By decrementing the counter only when the program makes a system call"},
+        {"i": "3", "x": "By making instructions that modify the timer privileged, so only the OS can run them"},
+        {"i": "4", "x": "By terminating every program as soon as the counter is set"}
+      ],
+      "a": "3",
+      "e": "The timer lets the OS regain control from a program that runs too long, so instructions that modify the content of the timer are <b>privileged</b> and can execute only in kernel mode. <mark>Timer-modifying instructions are privileged</mark>",
+      "ref": "Slide 38"
+    },
+    {
+      "id": "OS1_0023",
+      "q": "Which statement correctly compares <b>batch</b> and <b>multiprogramming</b> systems when the running job waits for an I/O operation?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Batch leaves the CPU idle until the job continues; multiprogramming lets the OS pick another job in memory"},
+        {"i": "2", "x": "Batch picks another job from memory; multiprogramming leaves the CPU idle until the job continues"},
+        {"i": "3", "x": "Both leave the CPU idle, but only multiprogramming offers direct interaction with the user"},
+        {"i": "4", "x": "Both pick another job, but only batch keeps several jobs in main memory at once"}
+      ],
+      "a": "1",
+      "e": "In a batch system the CPU remains idle while the running job waits for I/O (low CPU utilization). In a multiprogramming system several jobs are kept in main memory, so the OS picks another job to start or continue, and the CPU is always executing a job. <mark>Batch: CPU idles; multiprogramming: another job runs</mark>",
+      "ref": "Slides 41-42"
+    },
+    {
+      "id": "OS1_0024",
+      "q": "Many users work with their own programs at the same time, and the CPU switches between jobs so frequently that each user can interact with a running program. Which type of system is this?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Batch system"},
+        {"i": "2", "x": "Multiprogramming system"},
+        {"i": "3", "x": "Real-time embedded system"},
+        {"i": "4", "x": "Time-sharing system"}
+      ],
+      "a": "4",
+      "e": "A <b>time-sharing</b> (multitasking) system is an interactive extension of multiprogramming: the CPU switches between jobs so frequently that the user can interact with each program while it runs. Multiprogramming alone still has no direct interaction. <mark>Time-sharing system</mark>",
+      "ref": "Slide 43"
+    },
+    {
+      "id": "OS1_0025",
+      "q": "Which of the following is <u>not</u> a feature the OS must provide to support a <b>multiprogramming</b> system?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "I/O routines performed only by the OS"},
+        {"i": "2", "x": "Direct interaction between user and job"},
+        {"i": "3", "x": "Memory management for several jobs"},
+        {"i": "4", "x": "CPU scheduling to select a job"}
+      ],
+      "a": "2",
+      "e": "Multiprogramming needs I/O routines, CPU scheduling, memory management and resource allocation. It increases CPU utilization, but there is <u>still no</u> direct interaction between the user and the system. <mark>No direct interaction in multiprogramming</mark>",
+      "ref": "Slide 42"
+    },
+    {
+      "id": "OS1_0026",
+      "q": "Which statement correctly compares <b>client-server</b> and <b>peer-to-peer</b> computing?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "In P2P a server is a bottleneck, while in client-server several nodes can provide the service"},
+        {"i": "2", "x": "In client-server every node must first join the system, while P2P nodes need no joining"},
+        {"i": "3", "x": "In client-server a server can be a bottleneck, while in P2P several nodes can provide the service"},
+        {"i": "4", "x": "In client-server each node acts as both server and client, while P2P has fixed servers"}
+      ],
+      "a": "3",
+      "e": "In client-server systems the server satisfies the clients' requests and can become a bottleneck. In P2P systems all nodes are peers (each may act as a server or a client), so several nodes can provide the service. <mark>Server bottleneck vs several service providers</mark>",
+      "ref": "Slides 47-48"
+    },
+    {
+      "id": "OS1_0027",
+      "q": "A company keeps sensitive workloads on a cloud used only by the company, and runs other workloads on a cloud that is available to anyone via the Internet. Which cloud model does it use?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Hybrid cloud"},
+        {"i": "2", "x": "Private cloud"},
+        {"i": "3", "x": "Public cloud"},
+        {"i": "4", "x": "Federated cloud"}
+      ],
+      "a": "1",
+      "e": "A <b>hybrid cloud</b> includes both private cloud components (used only by the company that owns it) and public cloud components (available to anyone via the Internet). <mark>Hybrid cloud</mark>",
+      "ref": "Slide 51"
+    },
+    {
+      "id": "OS1_0028",
+      "q": "One physical computer runs three guest virtual machines, each with its own OS. Which component runs the guests, manages their resource use, and protects each guest from the others?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Device driver"},
+        {"i": "2", "x": "Load balancer"},
+        {"i": "3", "x": "Bootstrap program"},
+        {"i": "4", "x": "Virtual machine manager"}
+      ],
+      "a": "4",
+      "e": "The <b>virtual machine manager</b> runs the guest machines, manages their resource use, and protects each guest from the others, while the host and the guests share the hardware. <mark>Virtual machine manager</mark>",
+      "ref": "Slide 49"
+    },
+    {
+      "id": "OS1_0029",
+      "q": "Which option correctly matches the cloud service models with what they provide?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "SaaS: servers or storage; PaaS: applications; IaaS: a software stack"},
+        {"i": "2", "x": "SaaS: applications; PaaS: a software stack; IaaS: servers or storage"},
+        {"i": "3", "x": "SaaS: a software stack; PaaS: servers or storage; IaaS: applications"},
+        {"i": "4", "x": "SaaS: applications; PaaS: servers or storage; IaaS: a software stack"}
+      ],
+      "a": "2",
+      "e": "<b>Software</b> as a service provides applications (e.g. Google Docs), <b>platform</b> as a service provides a software stack (e.g. Google Firebase), and <b>infrastructure</b> as a service provides servers or storage over the Internet. <mark>SaaS = applications, PaaS = software stack, IaaS = servers or storage</mark>",
+      "ref": "Slide 51"
+    },
+    {
+      "id": "OS1_0030",
+      "q": "A medical imaging system must finish its processing within well-defined, fixed time limits, or the system fails. Which kind of system is this?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Time-sharing system"},
+        {"i": "2", "x": "Batch system"},
+        {"i": "3", "x": "Real-time embedded system"},
+        {"i": "4", "x": "Desktop system"}
+      ],
+      "a": "3",
+      "e": "A <b>real-time</b> system has well-defined, fixed time constraints, and processing must be done within them or the system fails. Embedded systems almost always run real-time operating systems. <mark>Real-time embedded system</mark>",
+      "ref": "Slide 53"
+    }
+  ]
+}
