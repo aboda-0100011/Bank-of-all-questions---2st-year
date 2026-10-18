@@ -1,0 +1,154 @@
+{
+ "qs": [
+  {
+   "id": "la2_0001",
+   "q": "Let $A=\\begin{bmatrix}\\lambda-1&6&0\\\\1&\\lambda-2&0\\end{bmatrix}$ be the augmented matrix of a linear system. If the system has infinitely many solutions, then $\\lambda\\neq$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q3"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$-1$"
+    },
+    {
+     "i": "2",
+     "x": "$1$"
+    },
+    {
+     "i": "3",
+     "x": "$4$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "The last column is zero, so the system is homogeneous: it is always consistent, and it has infinitely many solutions exactly when it has a nontrivial solution.",
+    "Swap $R_1\\leftrightarrow R_2$: $\\begin{bmatrix}1&\\lambda-2&0\\\\\\lambda-1&6&0\\end{bmatrix}$.",
+    "$R_2\\to R_2-(\\lambda-1)R_1$: second row becomes $[\\,0\\ \\ 6-(\\lambda-1)(\\lambda-2)\\ \\ 0\\,]$.",
+    "$6-(\\lambda-1)(\\lambda-2)=-(\\lambda^2-3\\lambda-4)=-(\\lambda-4)(\\lambda+1)$.",
+    "The system has a free variable (infinitely many solutions) only if this entry is $0$, i.e. $\\lambda=4$ or $\\lambda=-1$.",
+    "For $\\lambda=1$ the entry equals $6\\neq0$, so only the trivial solution exists. Hence $\\lambda$ can never be $1$: $\\lambda\\neq1$."
+   ]
+  },
+  {
+   "id": "la2_0002",
+   "q": "If $A=\\begin{bmatrix}3&6c&0\\\\1&2&0\\end{bmatrix}$ is the augmented matrix of a linear system and $c\\neq1$, then the system has ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q1"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "only one solution"
+    },
+    {
+     "i": "2",
+     "x": "no solution"
+    },
+    {
+     "i": "3",
+     "x": "infinitely many solutions"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "The last column is zero, so the system is homogeneous and always has the trivial solution (it can never be inconsistent).",
+    "Swap $R_1\\leftrightarrow R_2$: $\\begin{bmatrix}1&2&0\\\\3&6c&0\\end{bmatrix}$.",
+    "$R_2\\to R_2-3R_1$: $\\begin{bmatrix}1&2&0\\\\0&6c-6&0\\end{bmatrix}$.",
+    "Since $c\\neq1$, $6c-6\\neq0$, so row 2 gives $y=0$ and then row 1 gives $x=0$.",
+    "Only the trivial solution exists, so the system has exactly one solution."
+   ]
+  },
+  {
+   "id": "la2_0003",
+   "q": "$A=\\begin{bmatrix}1&2&5\\\\-2&3&6\\end{bmatrix}$ is the augmented matrix of a linear system. If the system is solved by <b>Gaussian elimination</b>, then <u>in step 2</u> $a_{22}=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q2"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$1$"
+    },
+    {
+     "i": "2",
+     "x": "$3$"
+    },
+    {
+     "i": "3",
+     "x": "$-1$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "Gaussian elimination steps: (1) find the leftmost nonzero column, (2) interchange rows if the top entry of that column is zero, (3) scale the top row to get a leading 1, (4) clear the entries below the leading 1.",
+    "Step 1: the leftmost nonzero column is column 1.",
+    "Step 2: the top entry is already $1\\neq0$, so no interchange is needed and the matrix does not change.",
+    "After step 2 the matrix is still $\\begin{bmatrix}1&2&5\\\\-2&3&6\\end{bmatrix}$, so $a_{22}=3$.",
+    "(The entry changes only in step 4, where $R_2\\to R_2+2R_1$ gives $a_{22}=7$.)"
+   ]
+  },
+  {
+   "id": "la2_0004",
+   "q": "If $A=\\begin{bmatrix}1&2\\\\0&d\\end{bmatrix}$ is in <b>row-echelon form</b>, then $d=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q3"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$1$"
+    },
+    {
+     "i": "2",
+     "x": "$0$"
+    },
+    {
+     "i": "3",
+     "x": "$0$ or $1$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "In row-echelon form every nonzero row must begin with a leading 1, and any all-zero rows must be at the bottom.",
+    "If $d\\neq0$, row 2 is a nonzero row, so its first nonzero entry $d$ must be a leading 1, hence $d=1$.",
+    "If $d=0$, row 2 is a zero row at the bottom, which is allowed.",
+    "Any other value, such as $d=2$, violates the leading-1 condition. So $d=0$ or $d=1$."
+   ]
+  },
+  {
+   "id": "la2_0007",
+   "q": "$A=\\begin{bmatrix}1&2&5\\\\-3&1&6\\end{bmatrix}$ is the augmented matrix of a linear system. If the system is solved by <u>Gaussian elimination</u>, then in <u>step 3</u> the second row of the matrix is ----",
+   "t": [
+    "2",
+    "2024 P1 Q7"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$[-3\\ \\ 1\\ \\ 6]$"
+    },
+    {
+     "i": "2",
+     "x": "$[-3\\ \\ 7\\ \\ 21]$"
+    },
+    {
+     "i": "3",
+     "x": "$[0\\ \\ 7\\ \\ 21]$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "Step 1: the leftmost nonzero column is column 1.",
+    "Step 2: the top entry is $1\\neq0$, so no row interchange is needed.",
+    "Step 3: the top entry is $a=1$, so multiplying the first row by $1/a=1$ changes nothing.",
+    "Rows 1 and 2 are unchanged after step 3, so row 2 is still $[-3\\ \\ 1\\ \\ 6]$.",
+    "Only in step 4 ($R_2\\to R_2+3R_1$) does row 2 become $[0\\ \\ 7\\ \\ 21]$."
+   ]
+  }
+ ]
+}

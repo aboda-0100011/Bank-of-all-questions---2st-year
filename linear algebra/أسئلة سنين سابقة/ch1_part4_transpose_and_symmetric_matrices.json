@@ -1,0 +1,433 @@
+{
+ "qs": [
+  {
+   "id": "la4_0001",
+   "q": "If $AB$ is defined where $A$ is symmetric and $B$ is not symmetric, then $AB$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q8"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "may be symmetric"
+    },
+    {
+     "i": "2",
+     "x": "is symmetric"
+    },
+    {
+     "i": "3",
+     "x": "is not symmetric"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$AB$ is symmetric exactly when $(AB)^T=B^TA^T=AB$, which is not forced by the given information.",
+    "Example where it is symmetric: $A=\\begin{bmatrix}0&0\\\\0&0\\end{bmatrix}$ (symmetric), $B=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$ (not symmetric): $AB=0$ is symmetric.",
+    "Example where it is not symmetric: $A=I$, $B$ as above: $AB=B$ is not symmetric.",
+    "Both cases occur, so $AB$ may be symmetric."
+   ]
+  },
+  {
+   "id": "la4_0002",
+   "q": "Suppose that $A_{3\\times2}$ and $B_{2\\times4}$ are two matrices. Then $AB$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q3"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "may be symmetric"
+    },
+    {
+     "i": "2",
+     "x": "is symmetric"
+    },
+    {
+     "i": "3",
+     "x": "is not symmetric"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$AB$ is $(3\\times2)(2\\times4)=3\\times4$.",
+    "A symmetric matrix must satisfy $M=M^T$, which forces $M$ to be square (a $3\\times4$ matrix has a $4\\times3$ transpose).",
+    "Since $AB$ is not square, it can never be symmetric."
+   ]
+  },
+  {
+   "id": "la4_0003",
+   "q": "If $A_{2\\times2}$ is a matrix, then $(2A)^T=$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q6"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$4A^T$"
+    },
+    {
+     "i": "2",
+     "x": "$2A^T$"
+    },
+    {
+     "i": "3",
+     "x": "$(0.5)A^T$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "Transposing swaps rows and columns without changing entry values, so scalar multiples pass through: $(kA)^T=kA^T$.",
+    "With $k=2$: $(2A)^T=2A^T$. (The factor $4=2^2$ appears in $\\det(2A)$, not in the transpose.)"
+   ]
+  },
+  {
+   "id": "la4_0004",
+   "q": "If $A$ is a square matrix, then ---- is <b>not</b> a symmetric matrix.",
+   "t": [
+    "2",
+    "3",
+    "Credit Final 2025 Q7",
+    "Jan 2022 Q5"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$AA^T$"
+    },
+    {
+     "i": "2",
+     "x": "$A^T+A$"
+    },
+    {
+     "i": "3",
+     "x": "$A^T-A$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$(AA^T)^T=(A^T)^TA^T=AA^T$, so $AA^T$ is always symmetric.",
+    "$(A^T+A)^T=A+A^T=A^T+A$, so it is always symmetric.",
+    "$(A^T-A)^T=A-A^T=-(A^T-A)$, which equals $A^T-A$ only if $A^T=A$. In general it is skew-symmetric, not symmetric.",
+    "Example: $A=\\begin{bmatrix}0&1\\\\0&0\\end{bmatrix}$ gives $A^T-A=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}$, which is not symmetric."
+   ]
+  },
+  {
+   "id": "la4_0005",
+   "q": "If $A$ is a symmetric matrix, then $kA$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q14"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "may be symmetric"
+    },
+    {
+     "i": "2",
+     "x": "is symmetric"
+    },
+    {
+     "i": "3",
+     "x": "is not symmetric"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "Since $A$ is symmetric, $A^T=A$.",
+    "$(kA)^T=kA^T=kA$ for every scalar $k$.",
+    "So $kA$ equals its own transpose: it is always symmetric."
+   ]
+  },
+  {
+   "id": "la4_0006",
+   "q": "If $A$ is <b>not</b> a symmetric matrix, then $AA^T$ ----",
+   "t": [
+    "2",
+    "3",
+    "Credit Final 2025 Q29",
+    "Mar 2021 Q12"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is symmetric"
+    },
+    {
+     "i": "2",
+     "x": "is not symmetric"
+    },
+    {
+     "i": "3",
+     "x": "may be symmetric"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "Use $(XY)^T=Y^TX^T$ and $(X^T)^T=X$.",
+    "$(AA^T)^T=(A^T)^TA^T=AA^T$.",
+    "So $AA^T$ equals its own transpose for every matrix $A$, symmetric or not. It is always symmetric."
+   ]
+  },
+  {
+   "id": "la4_0007",
+   "q": "If $A=\\begin{bmatrix}1&3\\\\2&4\\end{bmatrix}$ and $B=\\begin{bmatrix}b_1&b_2\\\\b_3&b_4\\end{bmatrix}=3A^T$, then $b_1=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q4"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$3$"
+    },
+    {
+     "i": "2",
+     "x": "$12$"
+    },
+    {
+     "i": "3",
+     "x": "$6$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$A^T=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$.",
+    "$3A^T=\\begin{bmatrix}3&6\\\\9&12\\end{bmatrix}$.",
+    "$b_1$ is the (1,1) entry, so $b_1=3$."
+   ]
+  },
+  {
+   "id": "la4_0008",
+   "q": "If $A$, $B$ and $C$ are three matrices such that $C=AB$, then $C^T=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q9"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A^TB^T$"
+    },
+    {
+     "i": "2",
+     "x": "$B^TA^T$"
+    },
+    {
+     "i": "3",
+     "x": "$A^T+B^T$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "The transpose of a product reverses the order: $(AB)^T=B^TA^T$.",
+    "Size check: if $A$ is $m\\times n$ and $B$ is $n\\times p$, then $B^T$ is $p\\times n$ and $A^T$ is $n\\times m$, so $B^TA^T$ is $p\\times m$, the size of $C^T$.",
+    "$A^TB^T$ is generally not even defined, and $A^T+B^T$ has no relation to a product."
+   ]
+  },
+  {
+   "id": "la4_0009",
+   "q": "If $A$ and $B$ are symmetric matrices, then $(AB)^T=$ ----",
+   "t": [
+    "2",
+    "Jan 2022 Q20"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$(AB)^T=AB$"
+    },
+    {
+     "i": "2",
+     "x": "$AB=BA$"
+    },
+    {
+     "i": "3",
+     "x": "$(AB)^T=BA$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "Reverse-order law: $(AB)^T=B^TA^T$.",
+    "$A$ and $B$ are symmetric, so $A^T=A$ and $B^T=B$.",
+    "Therefore $(AB)^T=BA$.",
+    "(a) and (b) hold only if $AB=BA$, which is not guaranteed for symmetric matrices."
+   ]
+  },
+  {
+   "id": "la4_0010",
+   "q": "If $A$, $B$ and $C$ are symmetric matrices, then $(ABC)^T=$ ----",
+   "t": [
+    "2",
+    "May 2023 P1 Q5"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A(CB)^T$"
+    },
+    {
+     "i": "2",
+     "x": "$(AC)^TB$"
+    },
+    {
+     "i": "3",
+     "x": "$C(AB)^T$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$(ABC)^T=C^TB^TA^T=CBA$ (reverse order, and each matrix is symmetric).",
+    "(a) $A(CB)^T=A\\,B^TC^T=ABC$ (not $CBA$ in general).",
+    "(b) $(AC)^TB=C^TA^TB=CAB$ (not $CBA$ in general).",
+    "(c) $C(AB)^T=C\\,B^TA^T=CBA$, which matches."
+   ]
+  },
+  {
+   "id": "la4_0011",
+   "q": "If $A=\\begin{bmatrix}1&2\\\\-1&3\\end{bmatrix}$ and $(AA^T)^T=\\begin{bmatrix}b_1&b_2\\\\b_3&b_4\\end{bmatrix}$, then $b_2=$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q4"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$3$"
+    },
+    {
+     "i": "2",
+     "x": "$5$"
+    },
+    {
+     "i": "3",
+     "x": "$6$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$(AA^T)^T=AA^T$ because $AA^T$ is symmetric.",
+    "$A^T=\\begin{bmatrix}1&-1\\\\2&3\\end{bmatrix}$.",
+    "$AA^T=\\begin{bmatrix}1\\cdot1+2\\cdot2&1\\cdot(-1)+2\\cdot3\\\\-1\\cdot1+3\\cdot2&(-1)(-1)+3\\cdot3\\end{bmatrix}=\\begin{bmatrix}5&5\\\\5&10\\end{bmatrix}$.",
+    "$b_2$ is the (1,2) entry, so $b_2=5$."
+   ]
+  },
+  {
+   "id": "la4_0012",
+   "q": "If $A$, $B$ and $C$ are three matrices such that $C=(\\mu A)B$ and $\\mu\\neq0$, then $C^T=$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q9"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$(\\mu B)^TA^T$"
+    },
+    {
+     "i": "2",
+     "x": "$\\frac1\\mu B^TA^T$"
+    },
+    {
+     "i": "3",
+     "x": "$\\mu A^TB^T$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$C=(\\mu A)B=\\mu(AB)$.",
+    "$C^T=\\mu(AB)^T=\\mu B^TA^T$.",
+    "Since $(\\mu B)^T=\\mu B^T$, we get $C^T=(\\mu B)^TA^T$.",
+    "(b) has the wrong factor $\\frac1\\mu$ and (c) has the wrong order."
+   ]
+  },
+  {
+   "id": "la4_0013",
+   "q": "If $A$, $B$ and $AB$ are symmetric matrices, then $AB$ ---- $BA$",
+   "t": [
+    "2",
+    "2024 P1 Q11"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is equal to"
+    },
+    {
+     "i": "2",
+     "x": "is not equal to"
+    },
+    {
+     "i": "3",
+     "x": "may be equal to"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$AB$ is symmetric, so $AB=(AB)^T$.",
+    "$(AB)^T=B^TA^T=BA$ because $A$ and $B$ are symmetric.",
+    "Therefore $AB=BA$: they are always equal."
+   ]
+  },
+  {
+   "id": "la4_0014",
+   "q": "If $A_{2\\times2}$ is a <b>not</b> symmetric matrix, then $A+A^T$ ---- symmetric.",
+   "t": [
+    "2",
+    "2024 P1 Q12"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is"
+    },
+    {
+     "i": "2",
+     "x": "is not"
+    },
+    {
+     "i": "3",
+     "x": "may be"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$(A+A^T)^T=A^T+(A^T)^T=A^T+A=A+A^T$.",
+    "So $A+A^T$ equals its own transpose for every square $A$, whether or not $A$ is symmetric."
+   ]
+  },
+  {
+   "id": "la4_0015",
+   "q": "If $A$ is an invertible matrix and $KA^T=(5A)^T$, then $K=$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q13"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$0.5$"
+    },
+    {
+     "i": "2",
+     "x": "$5$"
+    },
+    {
+     "i": "3",
+     "x": "$0.2$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$(5A)^T=5A^T$.",
+    "So $KA^T=5A^T$, i.e. $(K-5)A^T=0$.",
+    "$A$ is invertible, so $A^T$ is invertible and in particular nonzero, hence $K-5=0$.",
+    "$K=5$."
+   ]
+  }
+ ]
+}

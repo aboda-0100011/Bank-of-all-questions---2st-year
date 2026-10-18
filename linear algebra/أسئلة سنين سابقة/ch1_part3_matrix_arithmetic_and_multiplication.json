@@ -1,0 +1,235 @@
+{
+ "qs": [
+  {
+   "id": "la3_0001",
+   "q": "Suppose that $A$ and $B$ are two matrices such that $AB=BA$. Then ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q4"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A$ and $B$ have the same size"
+    },
+    {
+     "i": "2",
+     "x": "$A$ and $B$ are square matrices"
+    },
+    {
+     "i": "3",
+     "x": "(a) and (b)"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "Let $A$ be $m\\times n$ and $B$ be $p\\times q$.",
+    "$AB$ defined requires $n=p$; $BA$ defined requires $q=m$. So $B$ is $n\\times m$.",
+    "Then $AB$ is $m\\times m$ and $BA$ is $n\\times n$.",
+    "Equal matrices must have the same size, so $m=n$.",
+    "Hence $A$ and $B$ are both $n\\times n$: square and of the same size, so both (a) and (b) hold."
+   ]
+  },
+  {
+   "id": "la3_0002",
+   "q": "If $A=\\begin{bmatrix}1&2\\\\0&3\\end{bmatrix}$, $B=\\begin{bmatrix}1&0\\\\2&3\\end{bmatrix}$ and $AB=\\begin{bmatrix}c_1&c_2\\\\c_3&c_4\\end{bmatrix}$, then $c_1=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q5"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$5$"
+    },
+    {
+     "i": "2",
+     "x": "$6$"
+    },
+    {
+     "i": "3",
+     "x": "$1$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$c_1$ is the entry in row 1, column 1 of $AB$: (row 1 of $A$) $\\cdot$ (column 1 of $B$).",
+    "Row 1 of $A$ is $(1,2)$ and column 1 of $B$ is $(1,2)^T$.",
+    "$c_1=1\\cdot1+2\\cdot2=5$."
+   ]
+  },
+  {
+   "id": "la3_0003",
+   "q": "Suppose that $A_{3\\times2}$ and $B_{2\\times3}$ are two matrices. Which of the following expressions is defined?",
+   "t": [
+    "2",
+    "Mar 2021 Q13"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$AB$"
+    },
+    {
+     "i": "2",
+     "x": "$A+B$"
+    },
+    {
+     "i": "3",
+     "x": "$A-B$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$AB$: inner dimensions are $2$ and $2$ (equal), so the product is defined and is $3\\times3$.",
+    "$A+B$ and $A-B$ require equal sizes, but $A$ is $3\\times2$ and $B$ is $2\\times3$, so they are not defined.",
+    "Only $AB$ is defined."
+   ]
+  },
+  {
+   "id": "la3_0004",
+   "q": "Suppose that $A$, $B$ and $C$ are three matrices such that $AB=AC$. Which of the following statements is true?",
+   "t": [
+    "2",
+    "3",
+    "Jan 2022 Q8",
+    "May 2023 P1 Q4"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$B$ may be equal to $C$"
+    },
+    {
+     "i": "2",
+     "x": "$B=C$"
+    },
+    {
+     "i": "3",
+     "x": "$A$ is invertible"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "Cancelling $A$ is only allowed when $A^{-1}$ exists: $A^{-1}(AB)=A^{-1}(AC)\\Rightarrow B=C$.",
+    "The problem does not say $A$ is invertible, so (b) and (c) are not guaranteed.",
+    "Counter-example: $A=\\begin{bmatrix}1&0\\\\0&0\\end{bmatrix}$, $B=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$, $C=\\begin{bmatrix}1&2\\\\5&6\\end{bmatrix}$ give $AB=AC=\\begin{bmatrix}1&2\\\\0&0\\end{bmatrix}$ but $B\\neq C$.",
+    "Of course $B=C$ also satisfies $AB=AC$, so $B$ may or may not equal $C$."
+   ]
+  },
+  {
+   "id": "la3_0005",
+   "q": "Suppose that $A_{1\\times2}$, $B_{2\\times3}$ and $C_{3\\times2}$ are three matrices. Which of the following expressions is defined?",
+   "t": [
+    "2",
+    "Jan 2022 Q9"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$ABC$"
+    },
+    {
+     "i": "2",
+     "x": "$ACB$"
+    },
+    {
+     "i": "3",
+     "x": "$CAB$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$AB$: $(1\\times2)(2\\times3)$, inner sizes match, result $1\\times3$.",
+    "$(AB)C$: $(1\\times3)(3\\times2)$, inner sizes match, result $1\\times2$. So $ABC$ is defined.",
+    "$ACB$: $AC$ is $(1\\times2)(3\\times2)$, inner sizes $2\\neq3$, not defined.",
+    "$CAB$: $CA$ is $(3\\times2)(1\\times2)$, inner sizes $2\\neq1$, not defined."
+   ]
+  },
+  {
+   "id": "la3_0006",
+   "q": "Suppose that $A_{3\\times2}$, $B_{2\\times3}$ and $C_{3\\times2}$ are three matrices. Which of the following expressions is <b>not</b> defined?",
+   "t": [
+    "2",
+    "May 2023 P1 Q3"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$ABC$"
+    },
+    {
+     "i": "2",
+     "x": "$(A+C)B$"
+    },
+    {
+     "i": "3",
+     "x": "$(A+B)C$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$ABC$: $AB$ is $3\\times3$, then $(3\\times3)(3\\times2)$ is defined, giving $3\\times2$.",
+    "$(A+C)B$: $A$ and $C$ are both $3\\times2$, so $A+C$ is $3\\times2$; then $(3\\times2)(2\\times3)$ is defined.",
+    "$(A+B)C$: $A$ is $3\\times2$ but $B$ is $2\\times3$; different sizes, so $A+B$ is not defined.",
+    "Therefore (c) is the expression that is not defined."
+   ]
+  },
+  {
+   "id": "la3_0007",
+   "q": "If $A=\\begin{bmatrix}1&2\\\\0&3\\end{bmatrix}$, $B=\\begin{bmatrix}1&0\\\\2&3\\end{bmatrix}$ and $A-3B=\\begin{bmatrix}c_1&c_2\\\\c_3&c_4\\end{bmatrix}$, then $c_2=$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q1"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$5$"
+    },
+    {
+     "i": "2",
+     "x": "$2$"
+    },
+    {
+     "i": "3",
+     "x": "$0$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$3B=\\begin{bmatrix}3&0\\\\6&9\\end{bmatrix}$.",
+    "$A-3B=\\begin{bmatrix}1-3&2-0\\\\0-6&3-9\\end{bmatrix}=\\begin{bmatrix}-2&2\\\\-6&-6\\end{bmatrix}$.",
+    "$c_2$ is the entry in row 1, column 2, so $c_2=2$."
+   ]
+  },
+  {
+   "id": "la3_0008",
+   "q": "Suppose that $A_{3\\times2}$ and $B_{2\\times3}$ are two matrices. Which of the following expressions is defined?",
+   "t": [
+    "2",
+    "2024 P1 Q6"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$(AB)^2$"
+    },
+    {
+     "i": "2",
+     "x": "$A^3B$"
+    },
+    {
+     "i": "3",
+     "x": "$AB^3$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$AB$ is $(3\\times2)(2\\times3)=3\\times3$, a square matrix, so $(AB)^2=(AB)(AB)$ is defined.",
+    "Powers $A^k$ ($k\\ge2$) require $A$ to be square. $A$ is $3\\times2$, so $A^3$ is not defined, hence $A^3B$ is not defined.",
+    "Likewise $B$ is $2\\times3$ (not square), so $B^3$ is not defined, hence $AB^3$ is not defined."
+   ]
+  }
+ ]
+}

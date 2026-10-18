@@ -1,0 +1,177 @@
+{
+ "qs": [
+  {
+   "id": "la1_0001",
+   "q": "Let $A=\\begin{bmatrix}\\cos\\theta&-\\sin\\theta&1\\\\\\sin\\theta&\\cos\\theta&3\\end{bmatrix}$ be the augmented matrix of a linear system. This system ----",
+   "t": [
+    "2",
+    "Jan 2025 Q10"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is consistent"
+    },
+    {
+     "i": "2",
+     "x": "is not consistent"
+    },
+    {
+     "i": "3",
+     "x": "may be consistent"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "The coefficient matrix is $C=\\begin{bmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{bmatrix}$.",
+    "$\\det C=\\cos^2\\theta+\\sin^2\\theta=1\\neq 0$ for every $\\theta$, so $C$ is invertible.",
+    "By the Invertible Matrix Theorem, $CX=b$ has exactly one solution $X=C^{-1}b$ for every $b$ (here $b=(1,3)^T$).",
+    "A system that has a solution is consistent, for every value of $\\theta$."
+   ]
+  },
+  {
+   "id": "la1_0002",
+   "q": "Let $A=\\begin{bmatrix}1&-2&1\\\\-3&6&3\\end{bmatrix}$ be the augmented matrix of a linear system. This system has ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q12"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "only one solution"
+    },
+    {
+     "i": "2",
+     "x": "no solution"
+    },
+    {
+     "i": "3",
+     "x": "infinitely many solutions"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "Apply $R_2\\to R_2+3R_1$: $\\begin{bmatrix}1&-2&1\\\\0&0&6\\end{bmatrix}$.",
+    "The second row represents the equation $0x+0y=6$, which is impossible.",
+    "A row of the form $[0\\ 0\\ |\\ c]$ with $c\\neq 0$ means the system is inconsistent, so it has no solution."
+   ]
+  },
+  {
+   "id": "la1_0003",
+   "q": "If $A=\\begin{bmatrix}1&3&1\\\\2&7&3\\end{bmatrix}$ is the augmented matrix of a linear system, then the system has ----",
+   "t": [
+    "2",
+    "Mar 2021 Q1"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "one solution"
+    },
+    {
+     "i": "2",
+     "x": "no solution"
+    },
+    {
+     "i": "3",
+     "x": "infinitely many solutions"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "Apply $R_2\\to R_2-2R_1$: $\\begin{bmatrix}1&3&1\\\\0&1&1\\end{bmatrix}$.",
+    "The matrix is already in row-echelon form: both columns of the coefficient part have a leading 1 and there is no contradictory row.",
+    "From row 2: $y=1$. Back-substitute in row 1: $x+3(1)=1\\Rightarrow x=-2$.",
+    "There is exactly one solution, $(x,y)=(-2,1)$."
+   ]
+  },
+  {
+   "id": "la1_0004",
+   "q": "Let $A=\\begin{bmatrix}2&1&1\\\\4&2&2\\end{bmatrix}$ be the augmented matrix of a linear system. This system has ----",
+   "t": [
+    "2",
+    "Jan 2022 Q7"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "only one solution"
+    },
+    {
+     "i": "2",
+     "x": "no solution"
+    },
+    {
+     "i": "3",
+     "x": "infinitely many solutions"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "Apply $R_2\\to R_2-2R_1$: $\\begin{bmatrix}2&1&1\\\\0&0&0\\end{bmatrix}$.",
+    "The zero row means the second equation is redundant (it is just twice the first).",
+    "Only one equation remains, $2x+y=1$, for two unknowns, so $y=t$ is a free parameter and $x=\\frac{1-t}{2}$.",
+    "A consistent system with a free variable has infinitely many solutions."
+   ]
+  },
+  {
+   "id": "la1_0005",
+   "q": "Let $A=\\begin{bmatrix}-2&3&-4\\\\-1&-2&2\\\\3&6&6\\end{bmatrix}$ be the augmented matrix of a linear system. This system has ----",
+   "t": [
+    "2",
+    "May 2023 P2 Q1"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "only one solution"
+    },
+    {
+     "i": "2",
+     "x": "infinitely many solutions"
+    },
+    {
+     "i": "3",
+     "x": "no solution"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$R_1\\to-\\frac12R_1$: $\\begin{bmatrix}1&-\\frac32&2\\\\-1&-2&2\\\\3&6&6\\end{bmatrix}$.",
+    "$R_2\\to R_2+R_1$ and $R_3\\to R_3-3R_1$: $\\begin{bmatrix}1&-\\frac32&2\\\\0&-\\frac72&4\\\\0&\\frac{21}{2}&0\\end{bmatrix}$.",
+    "Row 2 gives $-\\frac72y=4\\Rightarrow y=-\\frac87$, while row 3 gives $\\frac{21}{2}y=0\\Rightarrow y=0$.",
+    "These two requirements contradict each other, so the system is inconsistent and has no solution."
+   ]
+  },
+  {
+   "id": "la1_0006",
+   "q": "If $A=\\begin{bmatrix}1&3&b_1\\\\2&5&b_2\\end{bmatrix}$ is the augmented matrix of a linear system and $\\begin{bmatrix}1\\\\0\\end{bmatrix}$ is a solution of it, then $\\begin{bmatrix}b_1\\\\b_2\\end{bmatrix}=$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q5"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$\\begin{bmatrix}1\\\\-2\\end{bmatrix}$"
+    },
+    {
+     "i": "2",
+     "x": "$\\begin{bmatrix}1\\\\2\\end{bmatrix}$"
+    },
+    {
+     "i": "3",
+     "x": "$\\begin{bmatrix}-1\\\\2\\end{bmatrix}$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "The system is $x+3y=b_1$ and $2x+5y=b_2$.",
+    "A solution must satisfy both equations: substitute $x=1,\\ y=0$.",
+    "Equation 1: $b_1=1+3(0)=1$. Equation 2: $b_2=2(1)+5(0)=2$.",
+    "So $\\begin{bmatrix}b_1\\\\b_2\\end{bmatrix}=\\begin{bmatrix}1\\\\2\\end{bmatrix}$."
+   ]
+  }
+ ]
+}
