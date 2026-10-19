@@ -1,0 +1,136 @@
+{
+  "qs": [
+    {
+      "id": "dsa4_0001",
+      "q": "To add a new node to an empty doubly linked list, you would ...",
+      "t": ["2", "2025 Jan (M2) Q16"],
+      "c": [
+        {"i": "1", "x": "Set the first link equal to the new node and the last link to None."},
+        {"i": "2", "x": "Set the last link equal to the new node and the first link to None."},
+        {"i": "3", "x": "Set both the first and the last links equal to the new node."},
+        {"i": "4", "x": "None of the above."}
+      ],
+      "a": "3",
+      "e": [
+        "In an empty list there is no node, so the new node is at the same time the first and the last node.",
+        "Both end references (first/head and last/tail) must therefore point to the new node, and the size becomes 1.",
+        "This is the same special case as enqueue on an empty linked queue (head = newest and tail = newest).",
+        "Leaving either end as None would make the list lose access to the new node from that end."
+      ]
+    },
+    {
+      "id": "dsa4_0002",
+      "q": "The last node in a doubly linked list is often known as ____",
+      "t": ["2", "2023 (A) Q2-4"],
+      "c": [
+        {"i": "1", "x": "first"},
+        {"i": "2", "x": "head"},
+        {"i": "3", "x": "tail"},
+        {"i": "4", "x": "master"}
+      ],
+      "a": "3",
+      "e": [
+        "The first and last nodes of a linked list are known as the head and the tail of the list.",
+        "In the doubly linked list of the lecture, sentinel nodes called header and trailer mark the two ends."
+      ]
+    },
+    {
+      "id": "dsa4_0003",
+      "q": "In a doubly linked list, a node consists of ____",
+      "t": ["2", "2023 (A) Q2-19"],
+      "c": [
+        {"i": "1", "x": "A data item only"},
+        {"i": "2", "x": "A data item and a next pointer only"},
+        {"i": "3", "x": "A previous pointer and a next pointer only"},
+        {"i": "4", "x": "A data item, a next pointer and a previous pointer"}
+      ],
+      "a": "4",
+      "e": [
+        "In a doubly linked list each node keeps an explicit reference to the node before it and to the node after it.",
+        "The lecture's _Node class has three fields: _element, _prev and _next.",
+        "This lets us delete a node at the tail or in the interior efficiently, which a singly linked list cannot do."
+      ]
+    },
+    {
+      "id": "dsa4_0004",
+      "q": "The DoublyLinkedList class must maintain a reference to the ____ node.",
+      "t": ["2", "2022 (A) Q3-13"],
+      "c": [
+        {"i": "1", "x": "first"},
+        {"i": "2", "x": "last"},
+        {"i": "3", "x": "first and last"},
+        {"i": "4", "x": "all nodes"}
+      ],
+      "a": "3",
+      "e": [
+        "The list must be reachable from both ends: in the lecture this is done with the header (before the first element) and trailer (after the last element) sentinels.",
+        "Keeping only one end would make operations on the other end require traversal, and keeping references to all nodes is unnecessary because nodes are linked."
+      ]
+    },
+    {
+      "id": "dsa4_0005",
+      "q": "<b>True or False:</b> A priority queue operates like any other queue according to the first-in-first-out (FIFO) principle, even when its items have different priority levels.",
+      "t": ["2", "2024 (B) Q1-27"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "A priority queue removes the element with the first priority (the minimum key), not the one that arrived first.",
+        "Example from the lecture: after add(5,A), add(9,C), add(3,B), remove_min() returns (3,B) even though it was inserted last.",
+        "So the statement is False."
+      ]
+    },
+    {
+      "id": "dsa4_0006",
+      "q": "The min heap is a binary heap in which the smallest key is always at the ____",
+      "t": ["2", "2022 (A) Q3-6"],
+      "c": [
+        {"i": "1", "x": "front"},
+        {"i": "2", "x": "rear"},
+        {"i": "3", "x": "either front or rear"},
+        {"i": "4", "x": "none"}
+      ],
+      "a": "1",
+      "e": [
+        "Heap-order property (min-heap): every key is greater than or equal to its parent's key, so the minimum is stored at the root.",
+        "The root is the front of the heap (index 0 in the array representation), which is why min() runs in $O(1)$.",
+        "The rear (last position) holds a leaf, which has no guarantee to be the smallest."
+      ]
+    },
+    {
+      "id": "dsa4_0007",
+      "q": "A binary heap will allow us both enqueue and dequeue items in ____",
+      "t": ["2", "2022 (A) Q3-7"],
+      "c": [
+        {"i": "1", "x": "$O(n)$"},
+        {"i": "2", "x": "$O(\\log n)$"},
+        {"i": "3", "x": "$O(n \\log n)$"},
+        {"i": "4", "x": "$O(1)$"}
+      ],
+      "a": "2",
+      "e": [
+        "A heap is a complete binary tree, so its height is $\\lfloor \\log n \\rfloor$.",
+        "add (up-heap bubbling) and remove_min (down-heap bubbling) perform at most one swap per level, i.e. at most $\\lfloor \\log n \\rfloor$ swaps.",
+        "So both operations take $O(\\log n)$, better than the list-based priority queues where one of them is $O(n)$."
+      ]
+    },
+    {
+      "id": "dsa4_0008",
+      "q": "In a ____, the logical order of items inside a queue is determined by their priority.",
+      "t": ["2", "2022 (A) Q3-8"],
+      "c": [
+        {"i": "1", "x": "stack"},
+        {"i": "2", "x": "queue"},
+        {"i": "3", "x": "priority queue"},
+        {"i": "4", "x": "tree"}
+      ],
+      "a": "3",
+      "e": [
+        "In a priority queue each element is added with a key and the element with the minimum key (highest priority) is removed first, regardless of insertion order.",
+        "A stack orders by LIFO and an ordinary queue by FIFO."
+      ]
+    }
+  ]
+}

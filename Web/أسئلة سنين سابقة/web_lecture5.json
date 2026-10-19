@@ -1,0 +1,178 @@
+{
+  "qs": [
+    {
+      "id": "web5_0001",
+      "q": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+      "t": [
+        "2",
+        "2025-M2-Q19"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<script src=\"xxx.js\">`"
+        },
+        {
+          "i": "2",
+          "x": "`<script href=\"xxx.js\">`"
+        },
+        {
+          "i": "3",
+          "x": "`<script name=\"xxx.js\">`"
+        },
+        {
+          "i": "4",
+          "x": "`<script link=\"xxx.js\">`"
+        }
+      ],
+      "a": "1",
+      "e": "External JavaScript files have the extension .js. To use one, the name of the file is put in the `src` (source) attribute of a `<script>` tag, e.g. `<script src=\"myScript.js\"></script>`. The reference may be placed in the `<head>` or the `<body>`, and the script behaves as if it were written exactly where the `<script>` tag is. `href` is used by `<a>` and `<link>`, while `name` and `link` are not valid attributes of `<script>`.",
+      "ref": "Lecture 5 - External JavaScript"
+    },
+    {
+      "id": "web5_0003",
+      "q": "Why are event handlers needed in JavaScript?",
+      "t": [
+        "2",
+        "2025-M2-Q4"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "To change the behaviour of browser windows only"
+        },
+        {
+          "i": "2",
+          "x": "To add innerHTML to the page code"
+        },
+        {
+          "i": "3",
+          "x": "To change the server location"
+        },
+        {
+          "i": "4",
+          "x": "To respond to occurrences (events) such as clicks and page loads"
+        }
+      ],
+      "a": "4",
+      "e": "HTML events are things that happen to HTML elements, either caused by the browser (the page finished loading) or by the user (a button was clicked, an input field was changed). Event handler attributes such as `onclick` or `onchange` let JavaScript code run when these occurrences are detected, so the page can react to them. Event handlers have nothing to do with changing the server location, and they are not limited to browser windows.",
+      "ref": "Lecture 5 - JavaScript Events"
+    },
+    {
+      "id": "web5_0004",
+      "q": "Which operator is used to check whether two values are equal <b>and</b> of the same data type?",
+      "t": [
+        "2",
+        "2020-M2-Q26"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`=`"
+        },
+        {
+          "i": "2",
+          "x": "`===`"
+        },
+        {
+          "i": "3",
+          "x": "`==`"
+        },
+        {
+          "i": "4",
+          "x": "`!==`"
+        }
+      ],
+      "a": "2",
+      "e": "`===` is the strict equality operator: it is true only when both the value and the type are equal. `==` compares only the values, `=` is the assignment operator, and `!==` means not equal in value or not equal in type.",
+      "ref": "Lecture 5 - Comparison Operators"
+    },
+    {
+      "id": "web5_0005",
+      "q": "What does this code do?\n```js\nvar str = \"Visit CIS!\";\nvar n = str.search(/cis/i);\n```",
+      "t": [
+        "2",
+        "2025-M2-Q1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Searches for \"cis\" as a case-sensitive match"
+        },
+        {
+          "i": "2",
+          "x": "Searches for \"i\""
+        },
+        {
+          "i": "3",
+          "x": "Searches for \"cis\" and \"i\""
+        },
+        {
+          "i": "4",
+          "x": "Searches for \"cis\" as a case-insensitive match"
+        }
+      ],
+      "a": "4",
+      "e": "`search()` looks for a value (here a regular expression) in a string and returns the position of the match. The `/i` modifier makes the regular expression case-insensitive, so `/cis/i` matches \"CIS\" in \"Visit CIS!\" and `n` becomes 6 (the position of the match). Without `/i` the search would be case-sensitive, would not find \"cis\" and would return -1.",
+      "ref": "Lecture 5 - JavaScript String Search"
+    },
+    {
+      "id": "web5_0006",
+      "q": "Which is the correct way to write a JavaScript array?",
+      "t": [
+        "2",
+        "2022-B-Q5"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`var txt = new Array(1:\"tamer\",2:\"kamal\",3:\"ali\")`"
+        },
+        {
+          "i": "2",
+          "x": "`var txt = new Array:1=(\"tamer\")2=(\"kamal\")3=(\"ali\")`"
+        },
+        {
+          "i": "3",
+          "x": "`var txt = new Array(\"tamer\",\"kamal\",\"ali\")`"
+        },
+        {
+          "i": "4",
+          "x": "`var txt = new Array=\"tamer\",\"kamal\",\"ali\"`"
+        }
+      ],
+      "a": "3",
+      "e": "An array can be created with the `new Array()` constructor by passing the elements, separated by commas, inside parentheses, as in the lecture example `new Array(\"Saab\", \"Volvo\", \"BMW\")`. The other options use invalid syntax: index:value pairs, colons and equal signs are not allowed in the argument list, and `new Array=` is not a constructor call.",
+      "ref": "Lecture 5 - JavaScript Arrays"
+    },
+    {
+      "id": "web5_0007",
+      "q": "Which of the following built-in methods is used to remove the last element from an array and return that element?",
+      "t": [
+        "2",
+        "2025-M2-Q5"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`last()`"
+        },
+        {
+          "i": "2",
+          "x": "`pop()`"
+        },
+        {
+          "i": "3",
+          "x": "`get()`"
+        },
+        {
+          "i": "4",
+          "x": "`push()`"
+        }
+      ],
+      "a": "2",
+      "e": "The `pop()` method removes the last element of an array and returns the value that was \"popped out\". `push()` does the opposite: it adds a new element at the end and returns the new array length. `last()` and `get()` are not array methods.",
+      "ref": "Lecture 5 - Popping and Pushing"
+    }
+  ]
+}
