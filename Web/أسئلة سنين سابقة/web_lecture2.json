@@ -1,0 +1,581 @@
+{
+  "qs": [
+    {
+      "id": "web2_0001",
+      "q": "The `href` attribute in the link tag specifies the:",
+      "t": [
+        "2",
+        "4",
+        "2020-M2-Q1",
+        "2021-A-Q13",
+        "2022-B-Q7"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Destination of a link"
+        },
+        {
+          "i": "2",
+          "x": "Text of the link"
+        },
+        {
+          "i": "3",
+          "x": "Hypertext"
+        },
+        {
+          "i": "4",
+          "x": "Window in which the link opens"
+        }
+      ],
+      "a": "1",
+      "e": "The `href` attribute of the `<a>` element holds the value of the page (URL) you are linking to, i.e. the destination of the link. The clickable text is the content between `<a>` and `</a>`.",
+      "ref": "Lecture 2 - Links"
+    },
+    {
+      "id": "web2_0002",
+      "q": "What is the correct HTML for creating a hyperlink?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q1",
+        "2024-B-Q9"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<a href=\"http://www.example.com\">example</a>`"
+        },
+        {
+          "i": "2",
+          "x": "`<a name=\"http://www.example.com\">example</a>`"
+        },
+        {
+          "i": "3",
+          "x": "`<a>example</a>`"
+        },
+        {
+          "i": "4",
+          "x": "`<a url=\"http://www.example.com\">example</a>`"
+        }
+      ],
+      "a": "1",
+      "e": "A link is made with the `<a>` element carrying an `href` attribute whose value is the target URL. The `name` attribute only creates an anchor point inside a page, `<a>` with no attribute links nowhere, and `url` is not a valid attribute.",
+      "ref": "Lecture 2 - Links"
+    },
+    {
+      "id": "web2_0003",
+      "q": "How can you create an e-mail link?",
+      "t": [
+        "2",
+        "5",
+        "2020-M2-Q45",
+        "2021-A-Q2",
+        "2022-B-Q27",
+        "2025-M2-Q22"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<mail href=\"a@b\">`"
+        },
+        {
+          "i": "2",
+          "x": "`<mail>a@b</mail>`"
+        },
+        {
+          "i": "3",
+          "x": "`<a href=\"a@b\">`"
+        },
+        {
+          "i": "4",
+          "x": "`<a href=\"mailto:a@b.com\">`"
+        }
+      ],
+      "a": "4",
+      "e": "An e-mail link is an ordinary anchor whose `href` value starts with `mailto:` followed by the address, e.g. `<a href=\"mailto:a@b.com\">E-mail us</a>`. Without `mailto:` the browser treats the value as a page address, and `<mail>` is not an HTML tag.",
+      "ref": "Lecture 2 - Links"
+    },
+    {
+      "id": "web2_0004",
+      "q": "Which attribute is used to display text if the picture could not be loaded in the browser?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q9",
+        "2025-M2-Q21"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`src`"
+        },
+        {
+          "i": "2",
+          "x": "`track`"
+        },
+        {
+          "i": "3",
+          "x": "`alt`"
+        },
+        {
+          "i": "4",
+          "x": "`img`"
+        }
+      ],
+      "a": "3",
+      "e": "The `alt` attribute of the `<img>` tag provides alternative text that is shown when the image is not supported or cannot be loaded. `src` gives the image file location, and `track` and `img` are not image attributes.",
+      "ref": "Lecture 2 - Images"
+    },
+    {
+      "id": "web2_0005",
+      "q": "Which attribute is used to specify the file of the image to display on the web page?",
+      "t": [
+        "2",
+        "2020-M2-Q53"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`src`"
+        },
+        {
+          "i": "2",
+          "x": "`alt`"
+        },
+        {
+          "i": "3",
+          "x": "`track`"
+        },
+        {
+          "i": "4",
+          "x": "`img`"
+        }
+      ],
+      "a": "1",
+      "e": "In `<img src=\"Image file\">` the `src` attribute gives the path of the image file. `alt` is only the fallback text, and `img` is the tag itself, not an attribute.",
+      "ref": "Lecture 2 - Images"
+    },
+    {
+      "id": "web2_0006",
+      "q": "Which HTML tag is used to display a picture in an HTML page?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q21",
+        "2024-B-Q12"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<picture>`"
+        },
+        {
+          "i": "2",
+          "x": "`<image>`"
+        },
+        {
+          "i": "3",
+          "x": "`<img>`"
+        },
+        {
+          "i": "4",
+          "x": "`<src>`"
+        }
+      ],
+      "a": "3",
+      "e": "Images are inserted with the empty tag `<img>`, written as `<img src=\"file\" />`. `src` is an attribute of `<img>`, not a tag, and `<image>` and `<picture>` are not the standard tag for inserting an image in the lecture syntax.",
+      "ref": "Lecture 2 - Images"
+    },
+    {
+      "id": "web2_0007",
+      "q": "Which of these tags are all table tags?",
+      "t": [
+        "2",
+        "4",
+        "2020-M2-Q56",
+        "2021-A-Q4",
+        "2025-M2-Q24"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<table><head><tfoot>`"
+        },
+        {
+          "i": "2",
+          "x": "`<table><tr><td>`"
+        },
+        {
+          "i": "3",
+          "x": "`<table><tr><tt>`"
+        },
+        {
+          "i": "4",
+          "x": "`<thead><body><tr>`"
+        }
+      ],
+      "a": "2",
+      "e": "A table is built with `<table>` containing rows `<tr>`, and each row contains cells `<td>` (or heading cells `<th>`). The other groups each include a tag that is not a table tag: `<head>`, `<tt>` (monospaced text) or `<body>`.",
+      "ref": "Lecture 2 - Tables"
+    },
+    {
+      "id": "web2_0008",
+      "q": "The tag which allows you to provide a title (description) for a table is ______.",
+      "t": [
+        "2",
+        "4",
+        "2020-M2-Q7",
+        "2021-A-Q37",
+        "2025-M2-Q29"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<th>`"
+        },
+        {
+          "i": "2",
+          "x": "`<td>`"
+        },
+        {
+          "i": "3",
+          "x": "`<tr>`"
+        },
+        {
+          "i": "4",
+          "x": "`<caption>`"
+        }
+      ],
+      "a": "4",
+      "e": "`<caption>` adds a caption to a table. `<th>` is a heading cell, `<td>` is a data cell and `<tr>` is a table row.",
+      "ref": "Lecture 2 - Tables"
+    },
+    {
+      "id": "web2_0009",
+      "q": "Which attribute is used with the `<td>` tag to merge two cells horizontally?",
+      "t": [
+        "2",
+        "5",
+        "2020-M2-Q51",
+        "2021-A-Q32",
+        "2024-B-Q17",
+        "2025-M2-Q38"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`merge=\"colspan2\"`"
+        },
+        {
+          "i": "2",
+          "x": "`rowspan=\"2\"`"
+        },
+        {
+          "i": "3",
+          "x": "`colspan=\"2\"`"
+        },
+        {
+          "i": "4",
+          "x": "`merge=\"rowspan2\"`"
+        }
+      ],
+      "a": "3",
+      "e": "`colspan=\"2\"` makes a cell span two columns, which merges two cells horizontally (as in the Classic Movie Day table, where one movie occupies two time slots). `rowspan` merges cells vertically, and `merge` is not an attribute.",
+      "ref": "Lecture 2 - Tables"
+    },
+    {
+      "id": "web2_0010",
+      "q": "What is cell padding?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q10",
+        "2022-B-Q6"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Used to separate cell walls from their contents"
+        },
+        {
+          "i": "2",
+          "x": "Used to set space between cells"
+        },
+        {
+          "i": "3",
+          "x": "Used to provide width to a cell"
+        },
+        {
+          "i": "4",
+          "x": "Used to merge two cells"
+        }
+      ],
+      "a": "1",
+      "e": "The `cellpadding` attribute specifies the space between the content of a cell and the inside of the cell wall. The space between the cells themselves is `cellspacing`.",
+      "ref": "Lecture 2 - Tables"
+    },
+    {
+      "id": "web2_0011",
+      "q": "The main container for `<tr>`, `<td>` and `<th>` is:",
+      "t": [
+        "2",
+        "2021-A-Q39"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<table>`"
+        },
+        {
+          "i": "2",
+          "x": "`<group>`"
+        },
+        {
+          "i": "3",
+          "x": "`<data>`"
+        },
+        {
+          "i": "4",
+          "x": "`<form>`"
+        }
+      ],
+      "a": "1",
+      "e": "A table is written inside the `<table>` element, row by row with `<tr>`, and each row contains `<td>` cells or `<th>` heading cells. `<group>` and `<data>` are not table tags, and `<form>` is used to collect user input.",
+      "ref": "Lecture 2 - Tables"
+    },
+    {
+      "id": "web2_0012",
+      "q": "Can a data cell (`<td>`) contain images?",
+      "t": [
+        "2",
+        "2020-M2-Q29"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Yes"
+        },
+        {
+          "i": "2",
+          "x": "No"
+        }
+      ],
+      "a": "1",
+      "e": "A table cell can hold any content, including text, images and other markup, as in the quiz table whose cells contain building photographs with captions.",
+      "ref": "Lecture 2 - Tables"
+    },
+    {
+      "id": "web2_0013",
+      "q": "Which tag does a description (definition) list start with?",
+      "t": [
+        "2",
+        "4",
+        "2020-M2-Q58",
+        "2021-A-Q31",
+        "2025-M2-Q50"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<ll>`"
+        },
+        {
+          "i": "2",
+          "x": "`<dd>`"
+        },
+        {
+          "i": "3",
+          "x": "`<ds>`"
+        },
+        {
+          "i": "4",
+          "x": "`<dl>`"
+        }
+      ],
+      "a": "4",
+      "e": "A definition list is contained inside the `<dl>` element, which holds alternating `<dt>` (term) and `<dd>` (definition) elements.",
+      "ref": "Lecture 2 - Lists"
+    },
+    {
+      "id": "web2_0014",
+      "q": "How can you make a bulleted list with numbers?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q20",
+        "2022-B-Q11"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<ol>`"
+        },
+        {
+          "i": "2",
+          "x": "`<dl>`"
+        },
+        {
+          "i": "3",
+          "x": "`<list>`"
+        },
+        {
+          "i": "4",
+          "x": "`<ul>`"
+        }
+      ],
+      "a": "1",
+      "e": "An ordered list `<ol>` prefixes each `<li>` item with numbers, letters or Roman numerals. `<ul>` gives bullet points, `<dl>` is a definition list and `<list>` does not exist.",
+      "ref": "Lecture 2 - Lists"
+    },
+    {
+      "id": "web2_0015",
+      "q": "How can you make a bulleted list?",
+      "t": [
+        "2",
+        "2024-B-Q8"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<list>`"
+        },
+        {
+          "i": "2",
+          "x": "`<nl>`"
+        },
+        {
+          "i": "3",
+          "x": "`<ul>`"
+        },
+        {
+          "i": "4",
+          "x": "`<ol>`"
+        }
+      ],
+      "a": "3",
+      "e": "The `<ul>` (unordered list) element creates a list of bullet points, with each point written in an `<li>` tag. `<ol>` creates a numbered list, and `<list>` and `<nl>` are not HTML tags.",
+      "ref": "Lecture 2 - Lists"
+    },
+    {
+      "id": "web2_0016",
+      "q": "Which tag is used to create a numbered list?",
+      "t": [
+        "2",
+        "2021-A-Q29"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<ol>`"
+        },
+        {
+          "i": "2",
+          "x": "`<li>`"
+        },
+        {
+          "i": "3",
+          "x": "`<dl>`"
+        },
+        {
+          "i": "4",
+          "x": "`<ul>`"
+        }
+      ],
+      "a": "1",
+      "e": "`<ol>` (ordered list) creates the numbered list; `<li>` only defines each item inside any list. `<ul>` produces bullets and `<dl>` produces terms with definitions.",
+      "ref": "Lecture 2 - Lists"
+    },
+    {
+      "id": "web2_0017",
+      "q": "The tag used to create a new list item is ______.",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q28",
+        "2022-B-Q16"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<li>`"
+        },
+        {
+          "i": "2",
+          "x": "`<dl>`"
+        },
+        {
+          "i": "3",
+          "x": "`<dd>`"
+        },
+        {
+          "i": "4",
+          "x": "`<ul>`"
+        }
+      ],
+      "a": "1",
+      "e": "Each bullet or number in a `<ul>` or `<ol>` list is written with an `<li>` tag. `<dl>` and `<dd>` belong to definition lists, and `<ul>` is the list container.",
+      "ref": "Lecture 2 - Lists"
+    },
+    {
+      "id": "web2_0018",
+      "q": "Which is the correct way to start an ordered list at the number 3?",
+      "t": [
+        "2",
+        "2022-B-Q13"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<ol type=\"1\" initial=\"3\">`"
+        },
+        {
+          "i": "2",
+          "x": "`<ol type=\"1\" begin=\"3\">`"
+        },
+        {
+          "i": "3",
+          "x": "`<ol type=\"1\" num=\"3\">`"
+        },
+        {
+          "i": "4",
+          "x": "`<ol type=\"1\" start=\"3\">`"
+        }
+      ],
+      "a": "4",
+      "e": "The `start` attribute of `<ol>` specifies the number a numbered list should start at, while `type` selects the numbering style (\"1\", \"A\", \"a\", \"I\", \"i\"). `initial`, `begin` and `num` are not valid attributes.",
+      "ref": "Lecture 2 - Ordered Lists"
+    },
+    {
+      "id": "web2_0019",
+      "q": "The `<dt>` tag is designed to fit a single line of the web page, but the `<dd>` tag will accept a ______.",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q36",
+        "2022-B-Q18"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "full paragraph"
+        },
+        {
+          "i": "2",
+          "x": "line of text only"
+        },
+        {
+          "i": "3",
+          "x": "single word"
+        },
+        {
+          "i": "4",
+          "x": "request"
+        }
+      ],
+      "a": "1",
+      "e": "In a definition list `<dt>` holds the short term, while `<dd>` holds its definition or description, which can be a full paragraph of text.",
+      "ref": "Lecture 2 - Definition Lists"
+    }
+  ]
+}

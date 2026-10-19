@@ -1,0 +1,372 @@
+{
+  "qs": [
+    {
+      "id": "web1_0001",
+      "q": "HTML tags are ______.",
+      "t": [
+        "2",
+        "2024-B-Q4"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "case-sensitive"
+        },
+        {
+          "i": "2",
+          "x": "written in upper case only"
+        },
+        {
+          "i": "3",
+          "x": "not case-sensitive"
+        },
+        {
+          "i": "4",
+          "x": "written in lower case only"
+        }
+      ],
+      "a": "3",
+      "e": "HTML tags are not case-sensitive: `<HTML>`, `<Html>` and `<html>` are treated as the same tag (the lecture examples even mix upper- and lower-case tags). So tags are neither required to be upper case only, nor lower case only, nor case-sensitive.",
+      "ref": "Lecture 1 - HTML Structure"
+    },
+    {
+      "id": "web1_0002",
+      "q": "What should be the first tag in any HTML document?",
+      "t": [
+        "2",
+        "2022-B-Q29"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<head>`"
+        },
+        {
+          "i": "2",
+          "x": "`<title>`"
+        },
+        {
+          "i": "3",
+          "x": "`<html>`"
+        },
+        {
+          "i": "4",
+          "x": "`<document>`"
+        }
+      ],
+      "a": "3",
+      "e": "The skeleton of an HTML document starts with `<html>` and ends with `</html>`. Inside it come the `<head>` section (heading information such as the title) and the `<body>` section (the actual page content). `<document>` is not an HTML tag.",
+      "ref": "Lecture 1 - HTML Skeleton"
+    },
+    {
+      "id": "web1_0003",
+      "q": "Tags and text that are not directly displayed on the page are written in the ______ section.",
+      "t": [
+        "2",
+        "3",
+        "2020-M2-Q34",
+        "2021-A-Q23"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<html>`"
+        },
+        {
+          "i": "2",
+          "x": "`<head>`"
+        },
+        {
+          "i": "3",
+          "x": "`<body>`"
+        },
+        {
+          "i": "4",
+          "x": "`<title>`"
+        }
+      ],
+      "a": "2",
+      "e": "The `<head>` section (called the Heading Section in the lecture skeleton) holds information about the page, such as its `<title>`, which appears in the browser title bar and not in the page content. Everything displayed in the browser window is written inside `<body>`. `<html>` is the root element that contains both, and `<title>` is only one element inside the head.",
+      "ref": "Lecture 1 - HTML Skeleton"
+    },
+    {
+      "id": "web1_0004",
+      "q": "The `<title>` ... `</title>` tag must be placed within:",
+      "t": [
+        "2",
+        "4",
+        "2020-M2-Q36",
+        "2021-A-Q34",
+        "2025-M2-Q46"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<form>`"
+        },
+        {
+          "i": "2",
+          "x": "`<table>`"
+        },
+        {
+          "i": "3",
+          "x": "`<head>`"
+        },
+        {
+          "i": "4",
+          "x": "`<script>`"
+        }
+      ],
+      "a": "3",
+      "e": "In the HTML skeleton the page title is written inside the `<head>` section, as in the lecture example: `<head><title>Title bar text</title></head>`. It is not written inside the body, a form, a table or a script.",
+      "ref": "Lecture 1 - HTML Components"
+    },
+    {
+      "id": "web1_0005",
+      "q": "Which tag is used to insert a line break (blank line) in an HTML page?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q6",
+        "2024-B-Q1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<br />`"
+        },
+        {
+          "i": "2",
+          "x": "`<break />`"
+        },
+        {
+          "i": "3",
+          "x": "`<lb />`"
+        },
+        {
+          "i": "4",
+          "x": "`<b>`"
+        }
+      ],
+      "a": "1",
+      "e": "`<br />` is an empty tag (it has no closing tag) used when the normal white space of HTML is not wanted and the text must break right there. `<break>` and `<lb>` do not exist in HTML, and `<b>` makes text bold.",
+      "ref": "Lecture 1 - Text Tags"
+    },
+    {
+      "id": "web1_0006",
+      "q": "Which HTML tag is used to display a power, as in (A+B)<sup>2</sup>?",
+      "t": [
+        "2",
+        "5",
+        "2020-M2-Q35",
+        "2021-A-Q5",
+        "2024-B-Q5",
+        "2025-M2-Q25"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<script>`"
+        },
+        {
+          "i": "2",
+          "x": "`<sup>`"
+        },
+        {
+          "i": "3",
+          "x": "`<sub>`"
+        },
+        {
+          "i": "4",
+          "x": "`<style>`"
+        }
+      ],
+      "a": "2",
+      "e": "`<sup>` produces superscript text (raised above the baseline), as in 31<sup>st</sup> or (A+B)<sup>2</sup>. `<sub>` produces subscript (lowered), as in H<sub>2</sub>O. `<script>` and `<style>` are not text-formatting tags.",
+      "ref": "Lecture 1 - Presentational Elements"
+    },
+    {
+      "id": "web1_0007",
+      "q": "Text inside `<em>` ... `</em>` is displayed as:",
+      "t": [
+        "2",
+        "4",
+        "2020-M2-Q42",
+        "2021-A-Q8",
+        "2025-M2-Q28"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "bold"
+        },
+        {
+          "i": "2",
+          "x": "italic"
+        },
+        {
+          "i": "3",
+          "x": "a list"
+        },
+        {
+          "i": "4",
+          "x": "indented"
+        }
+      ],
+      "a": "2",
+      "e": "The `<em>` (emphasis) element renders text in italic, exactly like `<i>`. Bold is produced by `<b>` or `<strong>`. `<em>` has nothing to do with lists or indentation.",
+      "ref": "Lecture 1 - Presentational Elements"
+    },
+    {
+      "id": "web1_0008",
+      "q": "Apart from the `<b>` tag, which other tag makes text bold?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q19",
+        "2022-B-Q10"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<fat>`"
+        },
+        {
+          "i": "2",
+          "x": "`<strong>`"
+        },
+        {
+          "i": "3",
+          "x": "`<black>`"
+        },
+        {
+          "i": "4",
+          "x": "`<emp>`"
+        }
+      ],
+      "a": "2",
+      "e": "`<strong>` is the alternative to `<b>` for bold text, just as `<em>` is the alternative to `<i>` for italic. `<fat>`, `<black>` and `<emp>` are not valid HTML tags.",
+      "ref": "Lecture 1 - Presentational Elements"
+    },
+    {
+      "id": "web1_0009",
+      "q": "Which of the following is <b>not</b> a paired tag (it has no closing tag)?",
+      "t": [
+        "2",
+        "3",
+        "2020-M2-Q38",
+        "2021-A-Q26"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<p>`"
+        },
+        {
+          "i": "2",
+          "x": "`<b>`"
+        },
+        {
+          "i": "3",
+          "x": "`<i>`"
+        },
+        {
+          "i": "4",
+          "x": "`<img>`"
+        }
+      ],
+      "a": "4",
+      "e": "HTML has container tags, which come as a pair (opening and closing tag), and empty tags, which have no content and no closing tag. `<img>` is an empty tag, while `<p>`, `<b>` and `<i>` enclose content and need a closing tag.",
+      "ref": "Lecture 1 - HTML Document Layout"
+    },
+    {
+      "id": "web1_0010",
+      "q": "Which is the correct way to write a comment in HTML?",
+      "t": [
+        "2",
+        "2024-B-Q10"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`##` and `#`"
+        },
+        {
+          "i": "2",
+          "x": "`<!--` and `-->`"
+        },
+        {
+          "i": "3",
+          "x": "`</--` and `--/>`"
+        },
+        {
+          "i": "4",
+          "x": "`<!--` and `-!>`"
+        }
+      ],
+      "a": "2",
+      "e": "An HTML comment starts with `<!--` and ends with `-->`; anything between them is not displayed by the browser. The other syntaxes are not recognized by HTML.",
+      "ref": "Lecture 1 - Comments"
+    },
+    {
+      "id": "web1_0011",
+      "q": "Which HTML tag produces the biggest heading?",
+      "t": [
+        "2",
+        "3",
+        "2021-A-Q24",
+        "2025-M2-Q44"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`<h3>`"
+        },
+        {
+          "i": "2",
+          "x": "`<h5>`"
+        },
+        {
+          "i": "3",
+          "x": "`<h6>`"
+        },
+        {
+          "i": "4",
+          "x": "`<h1>`"
+        }
+      ],
+      "a": "4",
+      "e": "Heading levels run from `<h1>` to `<h6>`, and the number is inverse to the text size: `<h1>` is the largest and `<h6>` is the smallest.",
+      "ref": "Lecture 1 - Heading Tags"
+    },
+    {
+      "id": "web1_0012",
+      "q": "The World Wide Web (WWW) is based on which model?",
+      "t": [
+        "2",
+        "2021-A-Q33"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Local-server"
+        },
+        {
+          "i": "2",
+          "x": "Client-server"
+        },
+        {
+          "i": "3",
+          "x": "3-tier"
+        },
+        {
+          "i": "4",
+          "x": "Peer-to-peer"
+        }
+      ],
+      "a": "2",
+      "e": "The web works on the client-server model: the client computer runs a web browser and sends requests over the Internet, and the server computer (web server and database management system) responds. This is the structure of a web application shown in the lecture.",
+      "ref": "Lecture 1 - How the Web Works"
+    }
+  ]
+}
