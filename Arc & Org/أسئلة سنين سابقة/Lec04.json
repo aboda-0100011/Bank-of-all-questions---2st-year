@@ -1,0 +1,136 @@
+{
+  "qs": [
+    {
+      "id": "arc04_0001",
+      "q": "Overflow can be detected by <b>XOR</b>-ing the two bits of carry-in and carry-out.",
+      "t": ["2", "3", "Exam 2022 Model 2 - Q1.8", "Exam 2023 Model 1 - Q1.28"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "Overflow occurs only when two positive numbers give a negative result, or two negative numbers give a positive result.",
+        "In hardware this is detected by comparing the carry into the sign (MSB) column (c-in) with the carry out of it (c-out).",
+        "If they are different, overflow occurs; if they are the same, there is no overflow. 'Different' is exactly what XOR computes, so the statement is True."
+      ]
+    },
+    {
+      "id": "arc04_0002",
+      "q": "The flag V is set to one when ____.",
+      "t": ["2", "Exam 2026 - Q24"],
+      "c": [
+        {"i": "1", "x": "The operation result is zero"},
+        {"i": "2", "x": "The operation requests an interrupt"},
+        {"i": "3", "x": "The operation result is one"},
+        {"i": "4", "x": "The operation result causes overflow"}
+      ],
+      "a": "4",
+      "e": [
+        "The condition code register has four bits: N, Z, V and C.",
+        "N is set if the result is negative (MSB = 1). Z is set if the result is zero (all bits 0).",
+        "V is set if the operation produced an overflow. C is set if the operation produced a carry (borrow on subtraction).",
+        "So V is set when the result causes overflow."
+      ]
+    },
+    {
+      "id": "arc04_0003",
+      "q": "Each shift to the right ____ the number by ____.",
+      "t": ["2", "Exam 2026 - Q28"],
+      "c": [
+        {"i": "1", "x": "magnifies, double"},
+        {"i": "2", "x": "reduces, double"},
+        {"i": "3", "x": "magnifies, half"},
+        {"i": "4", "x": "reduces, half"}
+      ],
+      "a": "4",
+      "e": [
+        "Shifting right moves every bit one position to a lower weight (power of 2), so the value is divided by 2.",
+        "Example: 1000 (8) shifted right becomes 0100 (4), then 0010 (2).",
+        "So each right shift reduces the number by half (a left shift doubles it)."
+      ]
+    },
+    {
+      "id": "arc04_0004",
+      "q": "To multiply 8 times 5, this can be done as ____.",
+      "t": ["2", "Exam 2020 Model B - Q5"],
+      "c": [
+        {"i": "1", "x": "shift left 5 by 3"},
+        {"i": "2", "x": "shift left 8 by 5"},
+        {"i": "3", "x": "shift right 5 by 3"},
+        {"i": "4", "x": "shift right 8 by 5"}
+      ],
+      "a": "1",
+      "e": [
+        "Each left shift multiplies a number by 2, so shifting left by n positions multiplies it by $2^n$.",
+        "8 = $2^3$, so 5 x 8 = 5 x $2^3$ = shift 5 left by 3 positions.",
+        "Check: 5 = 101; shifting left 3 positions gives 101000 = 40 = 5 x 8.",
+        "Right shifts divide the number, so they cannot be used for multiplication."
+      ]
+    },
+    {
+      "id": "arc04_0005",
+      "q": "An unsigned number operation uses the ____ to verify the result.",
+      "t": ["2", "Exam 2020 Model B - Q15"],
+      "c": [
+        {"i": "1", "x": "carry-in"},
+        {"i": "2", "x": "carry-out"},
+        {"i": "3", "x": "overflow"},
+        {"i": "4", "x": "underflow"}
+      ],
+      "a": "2",
+      "e": [
+        "For unsigned numbers there is no sign bit, so every bit is magnitude.",
+        "If the addition produces a carry out of the MSB (the C flag is set), the result does not fit in the available bits, so it is wrong.",
+        "The overflow flag V is meant for signed (2's complement) numbers, which is why the unsigned check uses the carry-out."
+      ]
+    },
+    {
+      "id": "arc04_0006",
+      "q": "In a normal n-bit adder, to find out whether an overflow has occurred we make use of a(n) ____ gate.",
+      "t": ["2", "Exam 2022 Oral - Q1.1"],
+      "c": [
+        {"i": "1", "x": "OR"},
+        {"i": "2", "x": "XOR"},
+        {"i": "3", "x": "AND"},
+        {"i": "4", "x": "NAND"}
+      ],
+      "a": "2",
+      "e": [
+        "Overflow occurs when the carry into the MSB column (c-in) and the carry out of the MSB column (c-out) are different.",
+        "A gate whose output is 1 only when its two inputs differ is the XOR gate.",
+        "So V = c-in XOR c-out."
+      ]
+    },
+    {
+      "id": "arc04_0007",
+      "q": "Carry flag: this flag is set to 1 when there is a <b>signed</b> overflow.",
+      "t": ["2", "Exam 2022 Practical - Q8"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "The C (carry) bit is set when the operation produces a carry out of the MSB (a borrow on subtraction), which indicates an unsigned out-of-range result.",
+        "Signed overflow is indicated by a different flag, V.",
+        "So the statement is False. Note: the source exam key marks True, which contradicts the lecture."
+      ]
+    },
+    {
+      "id": "arc04_0008",
+      "q": "Sign flag: this flag is set to 1 when the result is negative.",
+      "t": ["2", "Exam 2022 Practical - Q9"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "The sign flag corresponds to the N bit of the condition code register.",
+        "N is set if the result of the operation is negative, i.e. its MSB = 1.",
+        "So the statement is True."
+      ]
+    }
+  ]
+}

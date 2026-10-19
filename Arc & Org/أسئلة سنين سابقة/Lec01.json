@@ -1,0 +1,124 @@
+{
+  "qs": [
+    {
+      "id": "arc01_0001",
+      "q": "Which type of image is called a <b>1-bit monochrome</b> image since it contains no color?",
+      "t": ["2", "3", "Exam 2024 - Q20", "Exam 2025 - Q1"],
+      "c": [
+        {"i": "1", "x": "Gray image"},
+        {"i": "2", "x": "Binary image"},
+        {"i": "3", "x": "RGB image"},
+        {"i": "4", "x": "CMY image"}
+      ],
+      "a": "2",
+      "e": [
+        "In a binary image each pixel is represented by exactly one bit (0 = black, 1 = white).",
+        "Because one bit can only encode two states, no gray levels or colors exist, so it is called a 1-bit monochrome image.",
+        "A gray image uses 8 bits per pixel (0-255) and an RGB image uses 24 bits per pixel, so they are not 1-bit images.",
+        "CMY images are also color images, so they need more than one bit per pixel."
+      ]
+    },
+    {
+      "id": "arc01_0002",
+      "q": "By reducing the sound wave <b>sample rate</b>, the amount of data you need to store is ____.",
+      "t": ["2", "3", "Exam 2024 - Q5", "Exam 2025 - Q2"],
+      "c": [
+        {"i": "1", "x": "reduced"},
+        {"i": "2", "x": "increased"},
+        {"i": "3", "x": "compressed"},
+        {"i": "4", "x": "decoded"}
+      ],
+      "a": "1",
+      "e": [
+        "To store sound digitally, the voltage of the analog wave is sampled at frequent intervals (typically 48 kHz, i.e. 48,000 samples per second).",
+        "Each sample is stored as a binary code (typically 16 or 32 bits).",
+        "Data size = number of samples x bits per sample. Fewer samples per second means fewer codes to store, so the data is reduced.",
+        "The trade-off is lower sound quality, because the digital approximation follows the wave less closely."
+      ]
+    },
+    {
+      "id": "arc01_0003",
+      "q": "A color image (24 bits per pixel) supports $256 \\times 256 \\times 256$ possible combined colors.",
+      "t": ["2", "Exam 2026 - Q11"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "In a color image each pixel is represented by 24 bits, made of three values: Red, Green and Blue.",
+        "Each of the three values uses 8 bits, so it has 256 possible levels.",
+        "Total combinations = 256 x 256 x 256 = $2^{24}$ = 16,777,216 possible colors, so the statement is True."
+      ]
+    },
+    {
+      "id": "arc01_0004",
+      "q": "When a sound wave is stored digitally, the voltage samples are stored as a binary code, typically 16 or 32 bits per sample. This step is called ____.",
+      "t": ["2", "Exam 2026 - Q13"],
+      "c": [
+        {"i": "1", "x": "Decoding"},
+        {"i": "2", "x": "Sampling"},
+        {"i": "3", "x": "Frequency"},
+        {"i": "4", "x": "Amplitude"}
+      ],
+      "a": "1",
+      "e": [
+        "Storing a sound wave digitally has two steps.",
+        "Sampling: the voltage is measured at frequent intervals, typically 48 kHz (48,000 times per second).",
+        "Decoding (as named in the lecture): each sample is stored as a binary code, typically 16 or 32 bits per sample.",
+        "Frequency (the pitch of the tone) and amplitude (the loudness) are properties of the wave itself, not storage steps."
+      ]
+    },
+    {
+      "id": "arc01_0005",
+      "q": "An image on a seven-segment display can be represented by ____ bits.",
+      "t": ["2", "Exam 2025 - Q38"],
+      "c": [
+        {"i": "1", "x": "4 bits"},
+        {"i": "2", "x": "7 bits"},
+        {"i": "3", "x": "8 bits"},
+        {"i": "4", "x": "16 bits"}
+      ],
+      "a": "2",
+      "e": [
+        "Image representation depends on what the output device can display.",
+        "A seven-segment display has 7 segments (a to g), and each segment is either ON (1) or OFF (0).",
+        "So one bit per segment is enough: 7 bits. Example: digit 0 = 1111110, digit 1 = 0110000."
+      ]
+    },
+    {
+      "id": "arc01_0006",
+      "q": "In a ____ image, a pixel is represented by <b>one bit</b>.",
+      "t": ["2", "Exam 2025 - Q37"],
+      "c": [
+        {"i": "1", "x": "Gray scale"},
+        {"i": "2", "x": "RGB"},
+        {"i": "3", "x": "Binary"},
+        {"i": "4", "x": "Gif"}
+      ],
+      "a": "3",
+      "e": [
+        "Raster images store pixels, and the pixel size depends on the image type.",
+        "Binary image: 1 bit per pixel. Gray image: 8 bits per pixel (values 0-255). Color (RGB) image: 24 bits per pixel.",
+        "Therefore the image type that uses one bit per pixel is the binary image."
+      ]
+    },
+    {
+      "id": "arc01_0007",
+      "q": "A ____ is a collection of <b>four bits</b>, which is a particularly interesting data structure for hexadecimal numbers.",
+      "t": ["2", "Exam 2024 - Q16"],
+      "c": [
+        {"i": "1", "x": "Bit"},
+        {"i": "2", "x": "Byte"},
+        {"i": "3", "x": "Nibble"},
+        {"i": "4", "x": "Word"}
+      ],
+      "a": "3",
+      "e": [
+        "Data representation units: bit = 1 binary digit, nibble = 4 bits, byte = 8 bits (2 nibbles), word = larger group (e.g. 16 bits = 2 bytes).",
+        "A nibble is 4 bits and each hexadecimal digit corresponds to exactly one nibble (0000 to 1111 = 0 to F).",
+        "That is why nibbles are convenient for hexadecimal numbers."
+      ]
+    }
+  ]
+}

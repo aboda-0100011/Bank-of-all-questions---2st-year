@@ -1,0 +1,137 @@
+{
+  "qs": [
+    {
+      "id": "arc02_0001",
+      "q": "ASCII code uses ____ bits to represent each character.",
+      "t": ["2", "3", "Exam 2022 Model 2 - Q1.6", "Exam 2023 Model 1 - Q1.31"],
+      "c": [
+        {"i": "1", "x": "7"},
+        {"i": "2", "x": "8"},
+        {"i": "3", "x": "16"},
+        {"i": "4", "x": "32"}
+      ],
+      "a": "1",
+      "e": [
+        "ASCII (American Standard Code for Information Interchange) defines 128 characters (codes 0 to 127), which need 7 bits.",
+        "It is stored in one byte (8 bits) and the left-most bit is always kept 0.",
+        "Example: 'A' = 65 = 1000001 (7 bits), stored as 01000001."
+      ]
+    },
+    {
+      "id": "arc02_0002",
+      "q": "UTF-8 is a variable-width character encoding, while Unicode (as presented in the lecture, 2 bytes per character) is a fixed-width character encoding.",
+      "t": ["2", "3", "Exam 2022 Model 2 - Q1.10", "Exam 2023 Model 1 - Q1.32"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "UTF-8 uses 1 to 6 bytes per character depending on the code point (1 byte for U+0000 to U+007F, 2 bytes up to U+07FF, 3 bytes up to U+FFFF, and so on), so it is variable width.",
+        "Unicode as presented in the lecture uses 2 bytes for every character ($2^{16}$ = 65,536 symbols), so it is fixed width.",
+        "The statement is therefore True."
+      ]
+    },
+    {
+      "id": "arc02_0003",
+      "q": "For characters in the ASCII range (0-127), how is UTF-8 different from ASCII?",
+      "t": ["2", "Exam 2026 - Q25"],
+      "c": [
+        {"i": "1", "x": "UTF-8 uses 2 bytes, while ASCII uses 1 byte."},
+        {"i": "2", "x": "UTF-8 uses a different set of bytes for these characters."},
+        {"i": "3", "x": "UTF-8 is identical to ASCII for these characters."},
+        {"i": "4", "x": "UTF-8 is not compatible with ASCII."}
+      ],
+      "a": "3",
+      "e": [
+        "In UTF-8, code points U+0000 to U+007F are encoded in 1 byte with the pattern 0xxxxxxx.",
+        "This is exactly the ASCII encoding, so UTF-8 is backward compatible with ASCII for these characters.",
+        "Multi-byte sequences start with 110, 1110, ... and every following byte starts with 10, so they never clash with ASCII bytes."
+      ]
+    },
+    {
+      "id": "arc02_0004",
+      "q": "In a ____ system, the multi-byte value is loaded/stored with the <b>MSB first</b>.",
+      "t": ["2", "Exam 2026 - Q19"],
+      "c": [
+        {"i": "1", "x": "Unicode"},
+        {"i": "2", "x": "Little Endian"},
+        {"i": "3", "x": "Big Endian"},
+        {"i": "4", "x": "UTF-8"}
+      ],
+      "a": "3",
+      "e": [
+        "Endianness defines in which order the bytes of a multi-byte value are stored in memory.",
+        "Big Endian: the most significant byte (MSB) is stored first, i.e. at the lowest address.",
+        "Little Endian: the least significant byte (LSB) is stored first, i.e. at the lowest address.",
+        "Example: storing 0xA1B2C3D4 at address 0x20: Big Endian gives A1 B2 C3 D4; Little Endian gives D4 C3 B2 A1. Unicode and UTF-8 are character encodings, not byte-order schemes."
+      ]
+    },
+    {
+      "id": "arc02_0005",
+      "q": "UTF-8 encoding is ____ length.",
+      "t": ["2", "Exam 2020 Model B - Q4"],
+      "c": [
+        {"i": "1", "x": "fixed"},
+        {"i": "2", "x": "variable"},
+        {"i": "3", "x": "stable"},
+        {"i": "4", "x": "rigid"}
+      ],
+      "a": "2",
+      "e": [
+        "UTF-8 encodes each character in 1 to 6 bytes depending on its code point.",
+        "ASCII characters take 1 byte (0xxxxxxx); larger code points take 2, 3, 4 bytes or more, with a first byte such as 110xxxxx / 1110xxxx and continuation bytes 10xxxxxx.",
+        "Therefore UTF-8 is a variable-length encoding. (UTF-32, in contrast, is fixed at 4 bytes.) Note: the key in the source exam marks 'fixed', which contradicts the lecture; 'variable' is the correct answer."
+      ]
+    },
+    {
+      "id": "arc02_0006",
+      "q": "The character set that uses 7 bits is called ____.",
+      "t": ["2", "Exam 2020 Model B - Q16"],
+      "c": [
+        {"i": "1", "x": "ASCII"},
+        {"i": "2", "x": "Latin-1"},
+        {"i": "3", "x": "ANSI"},
+        {"i": "4", "x": "Unicode"}
+      ],
+      "a": "1",
+      "e": [
+        "ASCII uses 7 bits per character, giving 128 possible codes (0 to 127); the 8th bit of the byte is kept 0.",
+        "Unicode uses 2 bytes (16 bits) per character, so it can represent $2^{16}$ = 65,536 symbols."
+      ]
+    },
+    {
+      "id": "arc02_0007",
+      "q": "The type of memory byte order used in Intel processors (x86) is ____ endian.",
+      "t": ["2", "Exam 2020 Model B - Q25"],
+      "c": [
+        {"i": "1", "x": "medium"},
+        {"i": "2", "x": "big"},
+        {"i": "3", "x": "little"},
+        {"i": "4", "x": "tiny"}
+      ],
+      "a": "3",
+      "e": [
+        "Intel x86/IA-32 (and NIOS) processors are little endian: the least significant byte is stored at the lowest address.",
+        "Big endian examples are Motorola 68k and PowerPC (by default). There is no 'medium' or 'tiny' endian. Note: the key in the source exam marks 'medium', which is wrong; 'little' is correct."
+      ]
+    },
+    {
+      "id": "arc02_0008",
+      "q": "In ____ endian, the least significant byte is stored at the memory location with the <b>highest</b> address.",
+      "t": ["2", "Exam 2022 Model 2 - Q1.4"],
+      "c": [
+        {"i": "1", "x": "little"},
+        {"i": "2", "x": "big"},
+        {"i": "3", "x": "medium"},
+        {"i": "4", "x": "short"}
+      ],
+      "a": "2",
+      "e": [
+        "Big endian stores the MSB at the lowest address, so the bytes follow in decreasing significance and the LSB ends up at the highest address.",
+        "Little endian is the opposite: the LSB is at the lowest address.",
+        "Example with 0xA1B2C3D4 at 0x20: in big endian 0x23 holds D4 (the LSB), the highest address. Note: the source exam key marks 'little', which contradicts the lecture; 'big' is correct."
+      ]
+    }
+  ]
+}

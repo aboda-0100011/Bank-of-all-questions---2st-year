@@ -1,0 +1,199 @@
+{
+  "qs": [
+    {
+      "id": "arc03_0001",
+      "q": "The binary equivalent of $(233)_{10}$ is ____.",
+      "t": ["2", "3", "Exam 2024 - Q13", "Exam 2025 - Q4"],
+      "c": [
+        {"i": "1", "x": "00100101"},
+        {"i": "2", "x": "11101001"},
+        {"i": "3", "x": "00101100"},
+        {"i": "4", "x": "10101010"}
+      ],
+      "a": "2",
+      "e": [
+        "Divide by 2 repeatedly and record the remainders: 233/2 = 116 r 1; 116/2 = 58 r 0; 58/2 = 29 r 0; 29/2 = 14 r 1.",
+        "14/2 = 7 r 0; 7/2 = 3 r 1; 3/2 = 1 r 1; 1/2 = 0 r 1.",
+        "Read the remainders from bottom to top: 11101001.",
+        "Check: 128 + 64 + 32 + 8 + 1 = 233."
+      ]
+    },
+    {
+      "id": "arc03_0002",
+      "q": "The hexadecimal equivalent of $(125)_{10}$ is ____.",
+      "t": ["2", "3", "Exam 2024 - Q6", "Exam 2025 - Q14"],
+      "c": [
+        {"i": "1", "x": "7D"},
+        {"i": "2", "x": "D7"},
+        {"i": "3", "x": "77"},
+        {"i": "4", "x": "DD"}
+      ],
+      "a": "1",
+      "e": [
+        "Divide by 16 repeatedly: 125 / 16 = 7 remainder 13; 7 / 16 = 0 remainder 7.",
+        "Remainder 13 is the hex digit D and remainder 7 is 7.",
+        "Read the remainders from bottom to top: 7D.",
+        "Check: 7 x 16 + 13 = 125."
+      ]
+    },
+    {
+      "id": "arc03_0003",
+      "q": "The binary equivalent of $(0.625)_{10}$ is ____.",
+      "t": ["2", "Exam 2024 - Q19"],
+      "c": [
+        {"i": "1", "x": "0.11"},
+        {"i": "2", "x": "0.1"},
+        {"i": "3", "x": "0.101"},
+        {"i": "4", "x": "0.001"}
+      ],
+      "a": "3",
+      "e": [
+        "To convert a decimal fraction to binary, multiply the fraction by 2 repeatedly and record the integral part each time.",
+        "0.625 x 2 = 1.25, integral part 1.",
+        "0.25 x 2 = 0.5, integral part 0.",
+        "0.5 x 2 = 1.0, integral part 1, and the fraction is now 0, so we stop.",
+        "Reading the integral parts from top to bottom gives 0.101.",
+        "Check: 1/2 + 0/4 + 1/8 = 0.5 + 0.125 = 0.625."
+      ]
+    },
+    {
+      "id": "arc03_0004",
+      "q": "Which of the following can be used as methods to represent negative integer numbers?",
+      "t": ["2", "Exam 2026 - Q14"],
+      "c": [
+        {"i": "1", "x": "Sign magnitude only"},
+        {"i": "2", "x": "1's complement only"},
+        {"i": "3", "x": "2's complement only"},
+        {"i": "4", "x": "Sign magnitude, 1's complement and 2's complement"}
+      ],
+      "a": "4",
+      "e": [
+        "Signed integers can be represented in three ways covered in the lecture.",
+        "Sign magnitude: the MSB is the sign (0 positive, 1 negative) and the rest is the magnitude, e.g. +18 = 00010010, -18 = 10010010.",
+        "1's complement: negation inverts all bits (has the problem 0 differs from -0).",
+        "2's complement: negation inverts all bits and adds 1; it is the preferred method since it has a single zero."
+      ]
+    },
+    {
+      "id": "arc03_0005",
+      "q": "To define a fixed-point type conceptually, all we need are two parameters. They are ____.",
+      "t": ["2", "Exam 2026 - Q27"],
+      "c": [
+        {"i": "1", "x": "Width of the number representation and binary point position within the number"},
+        {"i": "2", "x": "Rounding errors and width of the number representation"},
+        {"i": "3", "x": "Binary point position within the number and rounding errors"},
+        {"i": "4", "x": "U2 and rounding errors"}
+      ],
+      "a": "1",
+      "e": [
+        "A fixed-point number simply fixes the binary point at some position of the numeral.",
+        "So it is defined by fixed<w,b>: w = the width (total number of bits) and b = the position of the binary point.",
+        "Example: Fixed<8,2> = xxxxxx.xx (8 bits in total, 2 of them after the binary point).",
+        "Rounding errors are a consequence of the representation, not a defining parameter."
+      ]
+    },
+    {
+      "id": "arc03_0006",
+      "q": "Which of the following is a characteristic of two's complement representation?",
+      "t": ["2", "Exam 2026 - Q38"],
+      "c": [
+        {"i": "1", "x": "It can represent both positive and negative numbers"},
+        {"i": "2", "x": "It can only represent negative numbers"},
+        {"i": "3", "x": "It has two different representations of zero"},
+        {"i": "4", "x": "It can only represent positive numbers"}
+      ],
+      "a": "1",
+      "e": [
+        "Two's complement is a signed-integer representation: the MSB has negative weight (e.g. in 4 bits the weights are -8, 4, 2, 1).",
+        "For 4 bits it covers -8 to +7, so both positive and negative numbers are represented.",
+        "It has only one zero (0000), unlike sign-magnitude and 1's complement, which have +0 and -0.",
+        "Negation is done by inverting the bits and adding 1."
+      ]
+    },
+    {
+      "id": "arc03_0007",
+      "q": "In signed integers, if the highest bit is 1 then the number is ____.",
+      "t": ["2", "Exam 2025 - Q31"],
+      "c": [
+        {"i": "1", "x": "Positive"},
+        {"i": "2", "x": "Negative"},
+        {"i": "3", "x": "Not important (does not matter)"},
+        {"i": "4", "x": "Invalid"}
+      ],
+      "a": "2",
+      "e": [
+        "In signed representations (sign-magnitude, 1's complement, 2's complement) the left-most bit (MSB) acts as the sign bit.",
+        "MSB = 0 means positive and MSB = 1 means negative.",
+        "Example: 0101 = +5 while 1011 (2's complement) = -5."
+      ]
+    },
+    {
+      "id": "arc03_0008",
+      "q": "The 2's complement representation of the 8-bit number 10000001 refers to the decimal value ____.",
+      "t": ["2", "Exam 2022 Model 2 - Q1.9"],
+      "c": [
+        {"i": "1", "x": "-1"},
+        {"i": "2", "x": "65"},
+        {"i": "3", "x": "-126"},
+        {"i": "4", "x": "-127"}
+      ],
+      "a": "4",
+      "e": [
+        "The MSB is 1, so the number is negative.",
+        "To find its magnitude, negate it: invert the bits 10000001 to get 01111110, then add 1 to get 01111111.",
+        "01111111 = 127, so the value is -127.",
+        "Alternative check: -128 + 1 = -127. (-1 is sign-magnitude and -126 is 1's complement.)"
+      ]
+    },
+    {
+      "id": "arc03_0009",
+      "q": "The sign-magnitude representation of the 8-bit number 10000001 refers to the decimal value ____.",
+      "t": ["2", "Exam 2023 Model 1 - Q1.27"],
+      "c": [
+        {"i": "1", "x": "-1"},
+        {"i": "2", "x": "65"},
+        {"i": "3", "x": "-126"},
+        {"i": "4", "x": "-127"}
+      ],
+      "a": "1",
+      "e": [
+        "In sign-magnitude the left-most bit is the sign: 1 means negative.",
+        "The remaining 7 bits 0000001 are the magnitude = 1.",
+        "So the value is -1. (-127 would be 2's complement and -126 would be 1's complement of the same bit pattern.)"
+      ]
+    },
+    {
+      "id": "arc03_0010",
+      "q": "A fixed-point representation of a real number has a specific number of digits reserved for the integer part and the fractional part.",
+      "t": ["2", "Exam 2023 Model 1 - Q1.26"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "In fixed-point representation the binary point is fixed at a given position, so the number of bits for the integer part and for the fractional part never changes.",
+        "Example: 6.75 with 4 integer bits and 4 fraction bits = 0110.1100.",
+        "Hence the statement is True."
+      ]
+    },
+    {
+      "id": "arc03_0011",
+      "q": "The 8-bit number 10000001B is equivalent to -1 if it is represented as ____.",
+      "t": ["2", "Exam 2020 Model B - Q14"],
+      "c": [
+        {"i": "1", "x": "sign-magnitude"},
+        {"i": "2", "x": "1's complement"},
+        {"i": "3", "x": "2's complement"},
+        {"i": "4", "x": "floating-point"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign-magnitude: sign bit 1 (negative) and magnitude 0000001 = 1, giving -1.",
+        "1's complement: invert the bits to get 01111110 = 126, giving -126.",
+        "2's complement: invert and add 1 to get 01111111 = 127, giving -127.",
+        "So only sign-magnitude gives -1. Note: the source exam key marks 1's complement, which is wrong."
+      ]
+    }
+  ]
+}
