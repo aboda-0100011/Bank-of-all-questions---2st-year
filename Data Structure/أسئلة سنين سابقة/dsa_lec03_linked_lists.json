@@ -1,0 +1,332 @@
+{
+  "qs": [
+    {
+      "id": "dsa3_0001",
+      "q": "To delete the first node in a single linked list, you would",
+      "t": ["2", "2025 Jan (M2) Q13"],
+      "c": [
+        {"i": "1", "x": "Set the first link to None"},
+        {"i": "2", "x": "Modify the first link to equal the link followed by the first one"},
+        {"i": "3", "x": "Traverse the list until you reach None"},
+        {"i": "4", "x": "Update the first link to a new node's reference"}
+      ],
+      "a": "2",
+      "e": [
+        "The lecture's remove_first(L) algorithm: if L.head is None the list is empty (error); otherwise L.head = L.head.next, then decrement the size.",
+        "So the head must be moved to the node that follows it (the next reference of the first node).",
+        "Setting head to None would delete the whole list, traversal is not needed, and a new node is not involved in a removal."
+      ]
+    },
+    {
+      "id": "dsa3_0002",
+      "q": "Consider an example of an unsorted singly linked list in practice (assume only a reference to the head node is kept). Given the representation, which action can be carried out in $O(1)$ time?",
+      "t": ["2", "2025 Jan (M2) Q14"],
+      "c": [
+        {"i": "1", "x": "Insertion at the middle of the linked list"},
+        {"i": "2", "x": "Insertion at the end of the linked list"},
+        {"i": "3", "x": "Deletion of the front node of the linked list"},
+        {"i": "4", "x": "Deletion of the last node of the linked list"}
+      ],
+      "a": "3",
+      "e": [
+        "With only a head reference, deleting the front node needs just head = head.next: one step, $O(1)$.",
+        "Insertion at the middle needs a traversal to reach the position: $O(n)$.",
+        "Insertion at the end needs a traversal to find the last node (it is $O(1)$ only if an explicit tail reference is stored, which is not assumed here).",
+        "Deleting the last node of a singly linked list needs the node before it, and nodes have no previous reference, so it takes $O(n)$."
+      ]
+    },
+    {
+      "id": "dsa3_0003",
+      "q": "Having two singly linked lists, list1 and list2. How would you efficiently concatenate them to produce a whole single list?",
+      "t": ["2", "2025 Jan (M2) Q15"],
+      "c": [
+        {"i": "1", "x": "Set the last node link's next of list1 equal to the first node of list2."},
+        {"i": "2", "x": "Traverse list2; add one node to list1 at each iteration."},
+        {"i": "3", "x": "Traverse list1; add one node to list2 at each iteration."},
+        {"i": "4", "x": "Update the first link of list1 to reference the first link of list2."}
+      ],
+      "a": "1",
+      "e": [
+        "Linking is only a reference update: list1.tail.next = list2.head, and the tail of the result becomes list2's tail.",
+        "This needs no copying of nodes, so it is very efficient (constant time with a tail reference).",
+        "Options 2 and 3 copy every node one by one ($O(n)$ work), and option 4 would make the first node of list1 point away and lose the rest of list1."
+      ]
+    },
+    {
+      "id": "dsa3_0004",
+      "q": "Which of the following is a 'Linear' data structure?",
+      "t": ["2", "2025/26 Credits Q33"],
+      "c": [
+        {"i": "1", "x": "Linked List"},
+        {"i": "2", "x": "Tree"},
+        {"i": "3", "x": "Graph"},
+        {"i": "4", "x": "Map"}
+      ],
+      "a": "1",
+      "e": [
+        "A linked list is a linear data structure whose nodes form a single sequence, each node pointing to the next one.",
+        "Trees (hierarchical) and graphs (network) are non-linear structures, and a map stores key-value pairs rather than a sequence."
+      ]
+    },
+    {
+      "id": "dsa3_0005",
+      "q": "In a <b>Linked List</b>, each node contains the data and a reference to the:",
+      "t": ["2", "2025/26 Credits Q19"],
+      "c": [
+        {"i": "1", "x": "Previous node only"},
+        {"i": "2", "x": "Next node"},
+        {"i": "3", "x": "Root"},
+        {"i": "4", "x": "Middle element"}
+      ],
+      "a": "2",
+      "e": [
+        "In a singly linked list each node holds an element and a next reference to the following node; the last node's next is None.",
+        "A previous reference exists only in doubly linked lists, and the root belongs to trees."
+      ]
+    },
+    {
+      "id": "dsa3_0006",
+      "q": "A Python List is different from a standard <b>Array</b> because:",
+      "t": ["2", "2025/26 Credits Q26"],
+      "c": [
+        {"i": "1", "x": "Array is dynamic"},
+        {"i": "2", "x": "Array has a fixed size"},
+        {"i": "3", "x": "List is faster in all cases"},
+        {"i": "4", "x": "List is stored in Stack"}
+      ],
+      "a": "2",
+      "e": [
+        "One main disadvantage of arrays is fixed size: once allocated, the size cannot easily be increased or decreased.",
+        "A Python list grows dynamically (its underlying array is resized when full), so the difference is that a standard array has a fixed size.",
+        "Arrays are not dynamic, a list is not faster in all cases, and storage location is not the difference."
+      ]
+    },
+    {
+      "id": "dsa3_0007",
+      "q": "What is the time complexity of accessing an element in an <b>Array</b> by its index?",
+      "t": ["2", "5", "2025/26 Credits Q38", "2022 (A) Q1-12", "2022 (A) Q3-16", "2024 (B) Q1-10"],
+      "c": [
+        {"i": "1", "x": "$O(n)$"},
+        {"i": "2", "x": "$O(1)$"},
+        {"i": "3", "x": "$O(\\log n)$"},
+        {"i": "4", "x": "$O(n^2)$"}
+      ],
+      "a": "2",
+      "e": [
+        "Arrays use contiguous memory, so the address of any element is computed directly from its index: random access in $O(1)$.",
+        "The lecture's comparison: array access is $O(1)$ (random access), while a linked list needs $O(n)$ sequential access.",
+        "So 'accessing any element of an array takes $O(n)$' (2022 True/False) is False and 'accessing an array element is $O(1)$' (2024 True/False) is True."
+      ]
+    },
+    {
+      "id": "dsa3_0008",
+      "q": "<b>True or False:</b> It is best to use an Array rather than a Linked List if I know the maximum number of items I need in advance.",
+      "t": ["2", "2024 (B) Q1-8"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "The drawbacks of arrays are their fixed size (wasted memory if over-allocated, no growth if under-allocated).",
+        "If the maximum number of items is known in advance, these drawbacks disappear, and the array keeps its advantages: $O(1)$ random access and no per-node pointer overhead.",
+        "So the statement is True."
+      ]
+    },
+    {
+      "id": "dsa3_0009",
+      "q": "<b>True or False:</b> A common shortcoming of using sequential (array-like) structures is that they force allocating chunks of contiguous free memory, which may be hard to find for large requests.",
+      "t": ["2", "2024 (B) Q1-20"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "Arrays require contiguous memory blocks, and a very large array may be hard to fit in a single free block.",
+        "A linked list stores nodes in non-contiguous locations, allocated one by one, so it avoids this problem.",
+        "So the statement is True."
+      ]
+    },
+    {
+      "id": "dsa3_0010",
+      "q": "<b>True or False:</b> If a singly linked list is not empty, updating only two links is required for the insert operation.",
+      "t": ["2", "2024 (B) Q1-22"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "Insert at the head: newest.next = L.head, then L.head = newest. That is two reference updates.",
+        "Insert at the tail: L.tail.next = newest, then L.tail = newest. Again two updates.",
+        "No existing node needs to be moved, so the statement is True."
+      ]
+    },
+    {
+      "id": "dsa3_0011",
+      "q": "<b>True or False:</b> Accessing an element of a single linked list may take up to $O(n \\log n)$ in the worst case.",
+      "t": ["2", "2022 (A) Q1-11"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "Access in a linked list is sequential: start at the head and follow next references.",
+        "In the worst case (the last element) this visits all n nodes, i.e. $O(n)$.",
+        "There is no sorting or logarithmic step involved, so $O(n \\log n)$ is False."
+      ]
+    },
+    {
+      "id": "dsa3_0012",
+      "q": "<b>True or False:</b> The last element of a single linked list always points to null (None).",
+      "t": ["2", "2022 (A) Q1-13"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "The tail of a singly linked list is identified as the node whose next reference is None.",
+        "This is how traversal knows where to stop. (Only in a circularly linked list does the tail point back to the head.)"
+      ]
+    },
+    {
+      "id": "dsa3_0013",
+      "q": "<b>True or False:</b> A linked list is a fixed data structure.",
+      "t": ["2", "2022 (A) Q1-14"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "A linked list does not have a predetermined fixed size: nodes are allocated one by one as needed and added or removed freely.",
+        "Fixed size is the problem of arrays, not of linked lists."
+      ]
+    },
+    {
+      "id": "dsa3_0014",
+      "q": "<b>True or False:</b> An array structure is the building block of a linked list data structure.",
+      "t": ["2", "2022 (A) Q1-15"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "The building block of a linked list is the node, which stores an element and a reference to the next node.",
+        "Linked lists are specifically used where arrays are inadequate: nodes live in non-contiguous memory, unlike an array's contiguous block."
+      ]
+    },
+    {
+      "id": "dsa3_0015",
+      "q": "List ____ refers to the process of systematically visiting each node.",
+      "t": ["2", "2022 (A) Q3-15"],
+      "c": [
+        {"i": "1", "x": "add"},
+        {"i": "2", "x": "remove"},
+        {"i": "3", "x": "search"},
+        {"i": "4", "x": "traversal"}
+      ],
+      "a": "4",
+      "e": [
+        "Accessing each element of the list one by one, starting at the head and following the next references, is called traversing the linked list.",
+        "Add and remove change the list, and search looks for a specific item (it uses traversal but is not the visiting process itself)."
+      ]
+    },
+    {
+      "id": "dsa3_0016",
+      "q": "A/An ____ is a linear data structure that can grow or shrink in size.",
+      "t": ["2", "2022 (A) Q3-17"],
+      "c": [
+        {"i": "1", "x": "array"},
+        {"i": "2", "x": "linked list"},
+        {"i": "3", "x": "tree"},
+        {"i": "4", "x": "graph"}
+      ],
+      "a": "2",
+      "e": [
+        "A linked list is linear and dynamic: it has no predetermined size and nodes are added or removed as needed.",
+        "An array is linear but has a fixed size; a tree and a graph are non-linear."
+      ]
+    },
+    {
+      "id": "dsa3_0017",
+      "q": "<b>True or False:</b> One disadvantage of using arrays to store data is that arrays are static structures and therefore cannot be easily extended or reduced to fit the data set.",
+      "t": ["2", "2023 (A) Q1-17"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "Fixed size is the first array disadvantage listed in the lecture: the size cannot easily be increased or decreased after allocation.",
+        "Over-allocating wastes memory and under-allocating cannot be fixed easily, so the statement is True."
+      ]
+    },
+    {
+      "id": "dsa3_0018",
+      "q": "<b>True or False:</b> In a 1-D array, elements are stored in contiguous bytes of memory.",
+      "t": ["2", "2020 T/F Q30"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "Arrays require contiguous memory blocks, which is exactly what allows $O(1)$ random access by index.",
+        "This contrasts with linked lists, whose nodes are placed in non-contiguous memory locations."
+      ]
+    },
+    {
+      "id": "dsa3_0019",
+      "q": "<b>True or False:</b> The size of an array is not fixed.",
+      "t": ["2", "2020 T/F Q33"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "Arrays have a fixed size: once allocated it cannot easily be increased or decreased.",
+        "So 'the size of an array is not fixed' is False."
+      ]
+    },
+    {
+      "id": "dsa3_0020",
+      "q": "Figure (1) shows a singly linked list: head -> 93 -> 17 -> 77 -> 31 -> null, and a new node 26 referenced by `temp`. <b>Step 1:</b> the new node's next is set to point to node 93 (the old first node). <b>Step 2:</b> head is set to point to node 26. Which operation of a single linked list structure does Figure (1) describe?",
+      "t": ["2", "2022 (A) Q3-1"],
+      "c": [
+        {"i": "1", "x": "addAtBeginning"},
+        {"i": "2", "x": "addAtEnd"},
+        {"i": "3", "x": "search"},
+        {"i": "4", "x": "remove"}
+      ],
+      "a": "1",
+      "e": [
+        "The new node is linked in front of the old head (newest.next = L.head), then head is moved to it (L.head = newest).",
+        "These are exactly the steps of the lecture's add_first(L, e) algorithm.",
+        "addAtEnd would change the tail's next reference, search only reads nodes, and remove would bypass a node."
+      ]
+    },
+    {
+      "id": "dsa3_0021",
+      "q": "Figure (2) shows a singly linked list head -> 54 -> 26 -> 93 -> 17 -> 77 -> 31 -> null, where a pointer named `current` starts at node 54 and moves one node at a time (26, 93, 17, 77, 31) until it reaches null. Figure (2) is an illustration of the single linked list ____ process.",
+      "t": ["2", "2022 (A) Q3-2"],
+      "c": [
+        {"i": "1", "x": "addition"},
+        {"i": "2", "x": "is_empty"},
+        {"i": "3", "x": "traversal"},
+        {"i": "4", "x": "initialization"}
+      ],
+      "a": "3",
+      "e": [
+        "Moving a pointer from the head along the next references until None is reached is traversing the list.",
+        "Nothing is inserted or removed, so it is not an addition, and is_empty only checks whether the head is None.",
+        "Initialization would only create an empty list."
+      ]
+    }
+  ]
+}

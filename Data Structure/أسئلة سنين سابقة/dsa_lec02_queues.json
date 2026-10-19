@@ -1,0 +1,300 @@
+{
+  "qs": [
+    {
+      "id": "dsa2_0001",
+      "q": "Which data structure uses the <b>FIFO</b> principle?",
+      "t": ["2", "3", "2025 Jan (M2) Q27", "2025/26 Credits Q23"],
+      "c": [
+        {"i": "1", "x": "stack"},
+        {"i": "2", "x": "queue"},
+        {"i": "3", "x": "set"},
+        {"i": "4", "x": "dictionary"}
+      ],
+      "a": "2",
+      "e": [
+        "A queue is a collection of objects inserted and removed according to the first-in, first-out (FIFO) principle: elements enter at the back (enqueue) and leave from the front (dequeue).",
+        "A stack is LIFO. A set and a dictionary are not ordered by arrival at all.",
+        "The 2025/26 exam asked the same idea as 'A queue works based on which principle?', whose answer is FIFO."
+      ]
+    },
+    {
+      "id": "dsa2_0002",
+      "q": "Using Python lists, we can implement the 'dequeue' operation of a Queue ADT using the ____ method.",
+      "t": ["2", "2025 Jan (M2) Q24"],
+      "c": [
+        {"i": "1", "x": "`insert`"},
+        {"i": "2", "x": "`add`"},
+        {"i": "3", "x": "`pop`"},
+        {"i": "4", "x": "`len`"}
+      ],
+      "a": "3",
+      "e": [
+        "In the simple array-based queue, enqueue(e) is append(e) and dequeue is pop(0), which removes and returns the first element.",
+        "insert only adds an element, a Python list has no add method, and len only returns the size.",
+        "Note: pop(0) shifts all elements left, so it always costs $\\Theta(n)$; that is why the lecture moves to a circular array."
+      ]
+    },
+    {
+      "id": "dsa2_0003",
+      "q": "What will `alist.pop(0)` do in a Python list?",
+      "t": ["2", "2025 Jan (M2) Q28"],
+      "c": [
+        {"i": "1", "x": "Remove the last element"},
+        {"i": "2", "x": "Remove the first element"},
+        {"i": "3", "x": "Insert an element at the start"},
+        {"i": "4", "x": "Return an error"}
+      ],
+      "a": "2",
+      "e": [
+        "pop(index) removes and returns the element at that index; index 0 is the first element.",
+        "This is how a naive queue removes from the front (dequeue).",
+        "Removing the last element is pop() with no argument. The call is valid on a non-empty list, so it does not return an error."
+      ]
+    },
+    {
+      "id": "dsa2_0004",
+      "q": "All of the following is a valid Queue operation, except ____",
+      "t": ["2", "2023 (A) Q2-3"],
+      "c": [
+        {"i": "1", "x": "`push()`"},
+        {"i": "2", "x": "`enqueue()`"},
+        {"i": "3", "x": "`dequeue()`"},
+        {"i": "4", "x": "`size()`"}
+      ],
+      "a": "1",
+      "e": [
+        "The queue ADT supports enqueue(e), dequeue(), first(), is_empty() and len(Q).",
+        "push() is a stack operation (add to the top), not a queue operation.",
+        "size()/len returns the number of elements, which is a valid supporting method."
+      ]
+    },
+    {
+      "id": "dsa2_0005",
+      "q": "A ____ would be a logical choice for a data structure to handle printing tasks of a networked printer.",
+      "t": ["2", "2023 (A) Q2-8"],
+      "c": [
+        {"i": "1", "x": "list"},
+        {"i": "2", "x": "stack"},
+        {"i": "3", "x": "queue"},
+        {"i": "4", "x": "tree"}
+      ],
+      "a": "3",
+      "e": [
+        "Print jobs must be served in the order they arrive: first come, first served.",
+        "FIFO queues are used by networked printers and by web servers responding to requests (lecture example).",
+        "A stack would print the newest job first, which is unfair."
+      ]
+    },
+    {
+      "id": "dsa2_0006",
+      "q": "A ____ would be a logical choice for a data structure that handles calls of a customer service center.",
+      "t": ["2", "2022 (A) Q2-10"],
+      "c": [
+        {"i": "1", "x": "list"},
+        {"i": "2", "x": "queue"},
+        {"i": "3", "x": "stack"},
+        {"i": "4", "x": "tree"}
+      ],
+      "a": "2",
+      "e": [
+        "Callers are served in the order they called, like a line of people waiting.",
+        "This is the first-in, first-out policy of a queue.",
+        "A stack would serve the latest caller first, which does not match a waiting line."
+      ]
+    },
+    {
+      "id": "dsa2_0007",
+      "q": "Using Python lists to implement a Queue ADT, we can position the 'rear' at index ____ in the list.",
+      "t": ["2", "3", "2023 (A) Q2-13", "2022 (A) Q3-19"],
+      "c": [
+        {"i": "1", "x": "`len()`"},
+        {"i": "2", "x": "`len() - 1`"},
+        {"i": "3", "x": "`len() + 1`"},
+        {"i": "4", "x": "0"}
+      ],
+      "a": "2",
+      "e": [
+        "With the list-based queue, enqueue uses append(e), so new elements are stored at the end of the list.",
+        "A list of length len() has valid indices 0 to len()-1, so the last element (the rear) is at index len()-1.",
+        "The front is at index 0, because dequeue uses pop(0). Index len() does not exist yet."
+      ]
+    },
+    {
+      "id": "dsa2_0008",
+      "q": "Suppose q is a Queue with the following ordered operations: `q.queue()`, `q.enqueue(100)`, `q.enqueue(102)`, `q.size()`, `q.dequeue()`, `q.enqueue(105)`. The last operation's return value is:",
+      "t": ["2", "2023 (A) Q2-14"],
+      "c": [
+        {"i": "1", "x": "False"},
+        {"i": "2", "x": "True"},
+        {"i": "3", "x": "105"},
+        {"i": "4", "x": "No return value"}
+      ],
+      "a": "4",
+      "e": [
+        "q.queue() creates an empty queue; the two enqueues give [100, 102]; size() returns 2; dequeue() removes and returns 100, leaving [102].",
+        "enqueue(105) simply adds 105 to the back, giving [102, 105].",
+        "In the queue ADT table, enqueue has no return value (shown as a dash), so the last operation returns nothing."
+      ]
+    },
+    {
+      "id": "dsa2_0009",
+      "q": "Using Python lists we can implement the 'add to rear' operation of a Deque ADT using the ____ method.",
+      "t": ["2", "2023 (A) Q2-15"],
+      "c": [
+        {"i": "1", "x": "`append`"},
+        {"i": "2", "x": "`insert`"},
+        {"i": "3", "x": "`pop`"},
+        {"i": "4", "x": "`len`"}
+      ],
+      "a": "1",
+      "e": [
+        "The rear of a list-based deque is the end of the list, and append(e) adds an element at the end.",
+        "insert needs an explicit position, pop removes an element, and len only returns the size."
+      ]
+    },
+    {
+      "id": "dsa2_0010",
+      "q": "Using Python lists, we can implement the 'enqueue' operation of a Queue ADT using ____ method.",
+      "t": ["2", "2023 (A) Q2-17"],
+      "c": [
+        {"i": "1", "x": "`insert`"},
+        {"i": "2", "x": "`add`"},
+        {"i": "3", "x": "`pop`"},
+        {"i": "4", "x": "`len`"}
+      ],
+      "a": "1",
+      "e": [
+        "Enqueue must add an element at the back of the queue; in the lecture this is done by appending to the end of the list (insert at position len, i.e. at the end).",
+        "Among the given options only insert adds an element to a Python list.",
+        "add does not exist for lists, pop removes an element, and len only returns the size."
+      ]
+    },
+    {
+      "id": "dsa2_0011",
+      "q": "Using Python lists, the 'remove from rear' operation of a Deque ADT is implemented using the ____ method.",
+      "t": ["2", "3", "2023 (A) Q2-10", "2022 (A) Q1-16"],
+      "c": [
+        {"i": "1", "x": "`append`"},
+        {"i": "2", "x": "`pop(0)`"},
+        {"i": "3", "x": "`pop`"},
+        {"i": "4", "x": "`remove`"}
+      ],
+      "a": "3",
+      "e": [
+        "The rear of the deque is the end of the list, and pop() with no argument removes and returns the last element.",
+        "pop(0) removes the first element, so it implements 'remove from front'. This is why the 2022 True/False statement (remove from rear using pop(0)) is False.",
+        "append adds an element and remove deletes by value."
+      ]
+    },
+    {
+      "id": "dsa2_0012",
+      "q": "Data items are removed from a deque data structure at ____ end.",
+      "t": ["2", "3", "2023 (A) Q2-12", "2022 (A) Q3-18"],
+      "c": [
+        {"i": "1", "x": "rear"},
+        {"i": "2", "x": "front"},
+        {"i": "3", "x": "both"},
+        {"i": "4", "x": "none"}
+      ],
+      "a": "3",
+      "e": [
+        "A deque is a double-ended queue: it supports insertion and deletion at both the front and the back.",
+        "In collections.deque: popleft() removes from the beginning and pop() removes from the end, both in $O(1)$.",
+        "A plain queue removes only at the front, but a deque removes at both ends."
+      ]
+    },
+    {
+      "id": "dsa2_0013",
+      "q": "Given the following array implementation of a circular queue of capacity 5, with FRONT and REAR pointing to the physical front and rear of the queue, FRONT at [2] and REAR at [3]:\n```\nindex : [0] [1] [2] [3] [4]\nvalue :      Y   Z   S\n                 ^   ^\n               FRONT REAR\n```\nExecution of the operations ENQUEUE(Q, 'H'), ENQUEUE(Q, 'T') done in a sequence would result in",
+      "t": ["2", "3", "2025 Jan (M2) Q30", "2024 (B) Q2-11"],
+      "c": [
+        {"i": "1", "x": "Invoking Queue full condition soon after ENQUEUE(Q, 'H') operation"},
+        {"i": "2", "x": "Aborting the ENQUEUE(Q, 'T') operation"},
+        {"i": "3", "x": "Yielding FRONT = 0 and REAR = 4, after the operations"},
+        {"i": "4", "x": "Yielding FRONT = 2 and REAR = 0, after the operations"}
+      ],
+      "a": "4",
+      "e": [
+        "The queue holds Z (index 2) and S (index 3); Y at index 1 was already dequeued, so size = 2 and capacity N = 5.",
+        "ENQUEUE(H): the next free cell is (FRONT + size) % N = (2 + 2) % 5 = 4, so H goes to index 4 and REAR = 4.",
+        "ENQUEUE(T): the next free cell is (2 + 3) % 5 = 0 (wrap-around), so T goes to index 0 and REAR = 0.",
+        "After both operations the queue holds Z, S, H, T (4 of 5 cells), so it was never full: options 1 and 2 are wrong.",
+        "FRONT does not move on enqueue, so FRONT = 2 and REAR = 0. Option 3 is wrong because REAR is 0, not 4."
+      ]
+    },
+    {
+      "id": "dsa2_0014",
+      "q": "<b>True or False:</b> A circular queue algorithm should use the mod function to implement the recursive (wrap-around) movement of the FRONT and REAR variables.",
+      "t": ["2", "2024 (B) Q1-26"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "In the circular array queue, indices wrap around the end of the array.",
+        "Advancing the front uses f = (f + 1) % N, and the next free position uses (front + size) % N.",
+        "When the index passes N-1, the modulo brings it back to 0, so the statement is True (the 'recursive' movement here means the cyclic wrap-around)."
+      ]
+    },
+    {
+      "id": "dsa2_0015",
+      "q": "<b>True or False:</b> The Deque ADT supports a `remove_front()` operation to remove an item from the rear of the deque.",
+      "t": ["2", "2022 (A) Q1-17"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "A deque removes from the front with one operation (popleft / delete_first) and from the rear with a different one (pop / delete_last).",
+        "An operation that works on the front cannot remove from the rear, so the statement is False."
+      ]
+    },
+    {
+      "id": "dsa2_0016",
+      "q": "<b>True or False:</b> A hash-table is known as a double-ended queue.",
+      "t": ["2", "2022 (A) Q1-18"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "The double-ended queue is the deque, a structure supporting insertion and deletion at both ends.",
+        "A hash table (map) stores key-value pairs and is unrelated to a deque, so the statement is False."
+      ]
+    },
+    {
+      "id": "dsa2_0017",
+      "q": "<b>True or False:</b> The Queue ADT supports an `is_empty()` operation to create an empty queue.",
+      "t": ["2", "2022 (A) Q1-19"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "is_empty() returns True if the queue does not contain any elements; it only checks and does not create anything.",
+        "An empty queue is created by the constructor of the class (e.g. ArrayQueue()), so the statement is False."
+      ]
+    },
+    {
+      "id": "dsa2_0018",
+      "q": "`['C', 'JavaScript', 'Python', 'Java', 'PHP'].pop(4)` returns the following result:",
+      "t": ["2", "3", "2022 (A) Q2-3", "2024 (B) Q2-29"],
+      "c": [
+        {"i": "1", "x": "PHP"},
+        {"i": "2", "x": "Java"},
+        {"i": "3", "x": "JavaScript"},
+        {"i": "4", "x": "Python"}
+      ],
+      "a": "1",
+      "e": [
+        "pop(index) removes and returns the element at the given index (as in pop(0) for dequeue).",
+        "The indices are 0:'C', 1:'JavaScript', 2:'Python', 3:'Java', 4:'PHP'.",
+        "Index 4 is the last element, so the result is PHP."
+      ]
+    }
+  ]
+}

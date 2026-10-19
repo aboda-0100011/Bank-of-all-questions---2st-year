@@ -1,0 +1,357 @@
+{
+  "qs": [
+    {
+      "id": "dsa1_0001",
+      "q": "Which data structure works based on the <b>Last-In, First-Out (LIFO)</b> principle?",
+      "t": ["2", "3", "2025/26 Credits Q2", "2024 (B) Q1-16"],
+      "c": [
+        {"i": "1", "x": "Queue"},
+        {"i": "2", "x": "Stack"},
+        {"i": "3", "x": "List"},
+        {"i": "4", "x": "Linked List"}
+      ],
+      "a": "2",
+      "e": [
+        "A stack is a collection of objects that are inserted and removed according to the last-in, first-out (LIFO) principle: only the most recently inserted item (the top) can be accessed or removed.",
+        "A queue is FIFO (first-in, first-out), so it is wrong.",
+        "A general list or a linked list allows access/insertion at other positions, so it is not defined by the LIFO rule.",
+        "The same fact answers the 2024 True/False statement 'The stack data structure strictly follows the Last In, First Out (LIFO) principle', which is True."
+      ]
+    },
+    {
+      "id": "dsa1_0002",
+      "q": "A text editor's 'undo' mechanism, that cancels recent editing operations and reverts to former states of a document, is a real application of the ____ structure.",
+      "t": ["2", "2023 (A) Q2-1"],
+      "c": [
+        {"i": "1", "x": "list"},
+        {"i": "2", "x": "stack"},
+        {"i": "3", "x": "queue"},
+        {"i": "4", "x": "tree"}
+      ],
+      "a": "2",
+      "e": [
+        "Every editing action is stored on a stack as it happens.",
+        "Undo = pop the latest action, so the most recent action is cancelled first. This is exactly LIFO behavior.",
+        "A queue would undo the oldest action first (FIFO), which is wrong. A list or a tree has no such restricted access rule."
+      ]
+    },
+    {
+      "id": "dsa1_0003",
+      "q": "The 'back' button that stores a web browser's history is a real application of a ____ structure.",
+      "t": ["2", "2022 (A) Q2-9"],
+      "c": [
+        {"i": "1", "x": "list"},
+        {"i": "2", "x": "queue"},
+        {"i": "3", "x": "stack"},
+        {"i": "4", "x": "deque"}
+      ],
+      "a": "3",
+      "e": [
+        "Browser history is one of the stack use cases in the lecture.",
+        "Each visited page is pushed; pressing 'back' pops the most recently visited page and returns to the one before it.",
+        "This last-visited-first-returned behavior is LIFO, so the structure is a stack."
+      ]
+    },
+    {
+      "id": "dsa1_0004",
+      "q": "Using a stack structure, a user may only access the item at ____ of the stack.",
+      "t": ["2", "2023 (A) Q2-2"],
+      "c": [
+        {"i": "1", "x": "left"},
+        {"i": "2", "x": "right"},
+        {"i": "3", "x": "top"},
+        {"i": "4", "x": "bottom"}
+      ],
+      "a": "3",
+      "e": [
+        "A stack has restricted access: a user may only access or remove the most recently inserted object, which is the top of the stack.",
+        "After removing it, the next-to-last inserted item becomes the new top, and so on.",
+        "Left, right and bottom positions are not accessible through the stack interface."
+      ]
+    },
+    {
+      "id": "dsa1_0005",
+      "q": "Back to the parentheses checker problem, having an expression, if the current symbol is '(' we use a/an ____ stack operation.",
+      "t": ["2", "2023 (A) Q2-16"],
+      "c": [
+        {"i": "1", "x": "`push()`"},
+        {"i": "2", "x": "`pop()`"},
+        {"i": "3", "x": "`peek()`"},
+        {"i": "4", "x": "`size()`"}
+      ],
+      "a": "1",
+      "e": [
+        "The matching algorithm scans the expression from left to right.",
+        "Each opening symbol such as '(' , '{' or '[' is pushed onto the stack.",
+        "Each closing symbol pops the stack and the popped symbol must be its valid pair; at the end the stack must be empty.",
+        "So an opening parenthesis requires push()."
+      ]
+    },
+    {
+      "id": "dsa1_0006",
+      "q": "Suppose s is a stack with the following ordered operations: `s.stack()`, `s.push('a')`, `s.push('b')`, `s.push('c')`, `s.peek()`, `s.pop()`, `s.push('d')`. Calling the `s.peek()` method now would result in ____",
+      "t": ["2", "2023 (A) Q2-18"],
+      "c": [
+        {"i": "1", "x": "'a'"},
+        {"i": "2", "x": "'b'"},
+        {"i": "3", "x": "'c'"},
+        {"i": "4", "x": "'d'"}
+      ],
+      "a": "4",
+      "e": [
+        "s.stack() creates an empty stack: [ ].",
+        "After push('a'), push('b'), push('c') the stack is [a, b, c] (top = c).",
+        "peek() only returns the top (c) without removing it, so the stack is unchanged.",
+        "pop() removes and returns c, leaving [a, b].",
+        "push('d') gives [a, b, d]. Now peek() returns the top element, which is 'd'."
+      ]
+    },
+    {
+      "id": "dsa1_0007",
+      "q": "Given a stack s with the ordered operations: `s.stack()`, `s.push('x')`, `s.push('y')`, `s.push('z')`, `s.peek()`, `s.pop()`, `s.push('k')`. Calling the `s.pop()` method now would result in ____",
+      "t": ["2", "2022 (A) Q3-20"],
+      "c": [
+        {"i": "1", "x": "x"},
+        {"i": "2", "x": "y"},
+        {"i": "3", "x": "z"},
+        {"i": "4", "x": "k"}
+      ],
+      "a": "4",
+      "e": [
+        "s.stack() creates an empty stack.",
+        "After the three pushes the stack is [x, y, z] (top = z).",
+        "peek() returns z without removing it. pop() then removes z, leaving [x, y].",
+        "push('k') gives [x, y, k], so the top is k.",
+        "The next pop() removes and returns the top element, which is k."
+      ]
+    },
+    {
+      "id": "dsa1_0008",
+      "q": "Which Python method retrieves <b>and removes</b> the last element of a list?",
+      "t": ["2", "2025 Jan (M2) Q23"],
+      "c": [
+        {"i": "1", "x": "`remove()`"},
+        {"i": "2", "x": "`insert()`"},
+        {"i": "3", "x": "`pop()`"},
+        {"i": "4", "x": "`del()`"}
+      ],
+      "a": "3",
+      "e": [
+        "In the array-based stack, S.pop() is realized by L.pop() on the underlying Python list: it removes the last element and returns it.",
+        "remove(e) deletes the first element equal to e by value and does not return the last element.",
+        "insert() adds an element at a position; del is a statement, not a method that returns the removed element."
+      ]
+    },
+    {
+      "id": "dsa1_0009",
+      "q": "Which Python data type is best suited for implementing a stack?",
+      "t": ["2", "2025 Jan (M2) Q25"],
+      "c": [
+        {"i": "1", "x": "tuple"},
+        {"i": "2", "x": "dictionary"},
+        {"i": "3", "x": "list"},
+        {"i": "4", "x": "set"}
+      ],
+      "a": "3",
+      "e": [
+        "The lecture implements the stack by storing its elements in a Python list, with the top in the rightmost cell.",
+        "push uses L.append(e), pop uses L.pop(), and top uses L[-1].",
+        "A tuple is immutable so items cannot be pushed or popped; a dictionary stores key-value pairs; a set is unordered and has no notion of a top."
+      ]
+    },
+    {
+      "id": "dsa1_0010",
+      "q": "In Python, which method is used to add an element at the end of a list?",
+      "t": ["2", "2025 Jan (M2) Q26"],
+      "c": [
+        {"i": "1", "x": "`insert()`"},
+        {"i": "2", "x": "`remove()`"},
+        {"i": "3", "x": "`append()`"},
+        {"i": "4", "x": "`pop()`"}
+      ],
+      "a": "3",
+      "e": [
+        "append(e) adds e at the end of the list.",
+        "In the ArrayStack adapter, S.push(e) is implemented as L.append(e): the new item is stored at the end of the list.",
+        "remove() deletes an element, pop() removes the last element, and insert() needs an explicit position."
+      ]
+    },
+    {
+      "id": "dsa1_0011",
+      "q": "What will `stack[-1]` return if stack is a Python list?",
+      "t": ["2", "2025 Jan (M2) Q36"],
+      "c": [
+        {"i": "1", "x": "The first element"},
+        {"i": "2", "x": "The last element"},
+        {"i": "3", "x": "The second element"},
+        {"i": "4", "x": "An error"}
+      ],
+      "a": "2",
+      "e": [
+        "Negative indices count from the end of a list, so index -1 is the last element.",
+        "In the lecture, S.top() is realized as L[-1]: it returns the top element without removing it.",
+        "It raises an error only when the list is empty."
+      ]
+    },
+    {
+      "id": "dsa1_0012",
+      "q": "In Python, what does the `isEmpty()` method typically check in a stack or queue?",
+      "t": ["2", "2025 Jan (M2) Q22"],
+      "c": [
+        {"i": "1", "x": "If the data structure has one element"},
+        {"i": "2", "x": "If the data structure has more than one element"},
+        {"i": "3", "x": "If the data structure is empty"},
+        {"i": "4", "x": "It does not check anything about the contents"}
+      ],
+      "a": "3",
+      "e": [
+        "is_empty() returns True if the stack (or queue) does not contain any elements.",
+        "In the list-based implementation it is realized as len(L) == 0.",
+        "It is used before pop/top/dequeue to avoid an error on an empty structure."
+      ]
+    },
+    {
+      "id": "dsa1_0013",
+      "q": "<b>True or False:</b> The `peek()` method of the Stack ADT returns the number of stack items.",
+      "t": ["2", "2022 (A) Q1-20"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "Top (peek) returns a reference to the top element without removing it.",
+        "The number of elements is returned by len(S).",
+        "So the statement is False."
+      ]
+    },
+    {
+      "id": "dsa1_0014",
+      "q": "<b>True or False:</b> The time complexity of a single push/pop operation in an array-based stack is $O(n)$.",
+      "t": ["2", "2024 (B) Q1-18"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "In the array-based stack, push and pop run in $O(1)$ amortized time (append/pop at the end of the list), and top, is_empty and len are $O(1)$ in the worst case.",
+        "The 'amortized' qualifier is only because the underlying array sometimes has to be resized.",
+        "So claiming $O(n)$ per operation is False."
+      ]
+    },
+    {
+      "id": "dsa1_0015",
+      "q": "`['C', 'JavaScript', 'Python', 'Java', 'PHP'].pop()` returns the following result:",
+      "t": ["2", "3", "2022 (A) Q2-2", "2024 (B) Q2-28"],
+      "c": [
+        {"i": "1", "x": "PHP"},
+        {"i": "2", "x": "Java"},
+        {"i": "3", "x": "JavaScript"},
+        {"i": "4", "x": "Python"}
+      ],
+      "a": "1",
+      "e": [
+        "pop() without an argument removes and returns the last element of the list.",
+        "The last element is 'PHP', so the result is PHP and the list becomes ['C', 'JavaScript', 'Python', 'Java'].",
+        "This is the same operation used by the stack adapter: S.pop() = L.pop()."
+      ]
+    },
+    {
+      "id": "dsa1_0016",
+      "q": "What is the time complexity of the `append()` operation for a Python list with an empty space at the end?",
+      "t": ["2", "2025 Jan (M2) Q31"],
+      "c": [
+        {"i": "1", "x": "$O(\\log n)$"},
+        {"i": "2", "x": "$O(n \\log n)$"},
+        {"i": "3", "x": "$O(1)$"},
+        {"i": "4", "x": "$O(n)$"}
+      ],
+      "a": "3",
+      "e": [
+        "If there is free space at the end, append just stores the new item in that cell: constant time $O(1)$.",
+        "Only when the array is full must it be resized (copying all elements), which is why push in an array-based stack is called $O(1)$ amortized.",
+        "No shifting or searching is needed, so it is not logarithmic or linear."
+      ]
+    },
+    {
+      "id": "dsa1_0017",
+      "q": "<b>True or False:</b> Abstraction focuses on the 'how' not on the 'what'.",
+      "t": ["2", "4", "2022 (A) Q1-10", "2023 (A) Q1-5", "2024 (B) Q1-2"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "Stacks and queues are abstract structures defined primarily by their interface (what operations they support), not by how they are implemented.",
+        "The underlying mechanism of a stack can be an array or a linked list.",
+        "So abstraction focuses on the 'what', not the 'how'. The 2024 exam asked the reversed statement ('what' not 'how'), which is True."
+      ]
+    },
+    {
+      "id": "dsa1_0018",
+      "q": "<b>True or False:</b> We can use an ADT without knowing how it is implemented.",
+      "t": ["2", "4", "2022 (A) Q1-7", "2023 (A) Q1-3", "2024 (B) Q1-12"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "An abstract data type is defined by the operations it supports (for a stack: push, pop, top, is_empty, len).",
+        "A user only needs these methods; the stack can be built on a Python list or a singly linked list without changing how it is used.",
+        "So the statement is True. The 2024 exam asked the negated form ('We can't use the ADT without knowing how it is implemented'), which is False."
+      ]
+    },
+    {
+      "id": "dsa1_0019",
+      "q": "<b>True or False:</b> Complex abstract data types are implemented using a Data Structure.",
+      "t": ["2", "5", "2020 T/F Q25", "2022 (A) Q1-9", "2023 (A) Q1-4", "2024 (B) Q1-1"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "An ADT only specifies behavior (the interface); a data structure supplies the actual organization of the data that realizes it.",
+        "Example: the Stack ADT is implemented with a Python list (ArrayStack) or with a singly linked list (LinkedStack).",
+        "So the statement is True."
+      ]
+    },
+    {
+      "id": "dsa1_0020",
+      "q": "The concept of 'separating what a data structure does from how it is implemented' is:",
+      "t": ["2", "2025/26 Credits Q21"],
+      "c": [
+        {"i": "1", "x": "Encapsulation"},
+        {"i": "2", "x": "Abstraction"},
+        {"i": "3", "x": "Recursion"},
+        {"i": "4", "x": "Complexity"}
+      ],
+      "a": "2",
+      "e": [
+        "Abstraction means exposing only the interface (what operations do) and hiding the implementation (how they work).",
+        "The stack ADT is defined by its methods, while its underlying storage may be a list or a linked list.",
+        "Recursion is a function calling itself and complexity measures cost, so neither fits."
+      ]
+    },
+    {
+      "id": "dsa1_0021",
+      "q": "Which of the following is defined as a sequence of clear and precise step-by-step instructions for solving a problem?",
+      "t": ["2", "3", "2025/26 Credits Q6", "2024 (B) Q2-22"],
+      "c": [
+        {"i": "1", "x": "Programming"},
+        {"i": "2", "x": "Data Structure"},
+        {"i": "3", "x": "Algorithm"},
+        {"i": "4", "x": "Abstraction"}
+      ],
+      "a": "3",
+      "e": [
+        "The introduction of the course defines algorithms as step-by-step procedures used to solve problems or manipulate data.",
+        "A data structure, in contrast, is a technique for organizing and storing data so it can be accessed and modified efficiently.",
+        "Programming is the act of writing code and abstraction is hiding implementation details, so the answer is Algorithm."
+      ]
+    }
+  ]
+}
