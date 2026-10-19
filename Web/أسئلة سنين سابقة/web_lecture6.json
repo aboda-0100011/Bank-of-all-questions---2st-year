@@ -1,0 +1,178 @@
+{
+  "qs": [
+    {
+      "id": "web6_0001",
+      "q": "______ is a model for representing and interacting with an XML, XHTML, or HTML document.",
+      "t": [
+        "2",
+        "2020-M2-Q57"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "DOM"
+        },
+        {
+          "i": "2",
+          "x": "JavaScript"
+        },
+        {
+          "i": "3",
+          "x": "PHP"
+        },
+        {
+          "i": "4",
+          "x": "jQuery"
+        }
+      ],
+      "a": "1",
+      "e": "When a web page is loaded, the browser creates a Document Object Model (DOM) of the page. The HTML DOM is constructed as a tree of objects (document, root element `<html>`, `<head>`, `<body>`, their child elements, attributes and text), and with it JavaScript can access and change all the elements of the document. JavaScript is the language that uses the DOM, PHP is a server-side language, and jQuery is a library built on top of JavaScript; none of them is the model itself.",
+      "ref": "Lecture 6 - JavaScript HTML DOM"
+    },
+    {
+      "id": "web6_0002",
+      "q": "What is the correct JavaScript syntax to change the content of the following HTML element?\n```html\n<p id=\"demo\">This is a demonstration.</p>\n```",
+      "t": [
+        "2",
+        "2025-M2-Q3"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`document.getElement(\"p\").innerHTML = \"Hello World!\";`"
+        },
+        {
+          "i": "2",
+          "x": "`document.getElementById(\"demo\").innerHTML = \"Hello World!\";`"
+        },
+        {
+          "i": "3",
+          "x": "`#demo.innerHTML = \"Hello World!\";`"
+        },
+        {
+          "i": "4",
+          "x": "`document.getElementByName(\"p\").innerHTML = \"Hello World!\";`"
+        }
+      ],
+      "a": "2",
+      "e": "With the HTML DOM, the most common way to access an element is by its id: the method `getElementById(\"demo\")` finds the element whose id is \"demo\", and the property `innerHTML` is then used to set its content. In the lecture's words, `getElementById` is a method while `innerHTML` is a property. `getElement()` and `getElementByName()` are not DOM methods in the lecture's list (finding methods are `getElementById`, `getElementsByTagName` and `getElementsByClassName`), and `#demo` is a CSS selector, not JavaScript syntax.",
+      "ref": "Lecture 6 - HTML DOM Methods"
+    },
+    {
+      "id": "web6_0003",
+      "q": "In JavaScript, to create a class inheritance, use the ______ keyword.",
+      "t": [
+        "2",
+        "2025-M2-Q2"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`extracts`"
+        },
+        {
+          "i": "2",
+          "x": "`executes`"
+        },
+        {
+          "i": "3",
+          "x": "`extends`"
+        },
+        {
+          "i": "4",
+          "x": "`inherits`"
+        }
+      ],
+      "a": "3",
+      "e": "A class inheritance is created with the `extends` keyword. The child class then inherits all the methods of the parent class, as in the lecture example `class Model extends Car`, where the child constructor calls `super(brand)` to reach the parent's constructor, properties and methods. `extracts`, `executes` and `inherits` are not JavaScript keywords for this purpose.",
+      "ref": "Lecture 6 - Class Inheritance"
+    },
+    {
+      "id": "web6_0004",
+      "q": "When you animate an element using JavaScript, use ______ which calls a function after a given duration.",
+      "t": [
+        "2",
+        "2025-M2-Q6"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`setTimeout(function, duration)`"
+        },
+        {
+          "i": "2",
+          "x": "`setInterval(function, duration)`"
+        },
+        {
+          "i": "3",
+          "x": "`clearTimeout(setTimeout_variable)`"
+        },
+        {
+          "i": "4",
+          "x": "`setAnimation(function, duration)`"
+        }
+      ],
+      "a": "1",
+      "e": "`setTimeout(function, duration)` calls the function once, after the given duration in milliseconds from now. `setInterval(function, duration)` is different: it calls the function again and again, after every duration. `clearTimeout()` only clears a timer that was set by `setTimeout()`, and `setAnimation()` is not a JavaScript function.",
+      "ref": "Lecture 6 - JavaScript Animation"
+    },
+    {
+      "id": "web6_0005",
+      "q": "jQuery is a library of ______.",
+      "t": [
+        "2",
+        "2020-M2-Q2"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "JavaScript"
+        },
+        {
+          "i": "2",
+          "x": "CSS"
+        },
+        {
+          "i": "3",
+          "x": "server scripting"
+        },
+        {
+          "i": "4",
+          "x": "database queries"
+        }
+      ],
+      "a": "1",
+      "e": "jQuery was created in 2006 by John Resig and, for more than 10 years, it has been the most popular JavaScript library in the world. It was designed to handle browser incompatibilities and to simplify HTML DOM manipulation, event handling and animations. It is therefore a library of JavaScript, not of CSS, not a server-side scripting tool and not a database tool.",
+      "ref": "Lecture 6 - jQuery DOM Selectors"
+    },
+    {
+      "id": "web6_0006",
+      "q": "jQuery uses CSS-like ______ to select elements.",
+      "t": [
+        "2",
+        "2020-M2-Q37"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "script"
+        },
+        {
+          "i": "2",
+          "x": "selectors"
+        },
+        {
+          "i": "3",
+          "x": "style"
+        },
+        {
+          "i": "4",
+          "x": "loops"
+        }
+      ],
+      "a": "2",
+      "e": "jQuery selects HTML elements with CSS-like selectors: for example `$(\"#id01\")` returns the element with id=\"id01\", exactly like the CSS id selector `#id01`, and it does the same job as the plain JavaScript `document.getElementById(\"id01\")`. That is why the lecture calls this topic jQuery DOM Selectors.",
+      "ref": "Lecture 6 - jQuery DOM Selectors"
+    }
+  ]
+}
