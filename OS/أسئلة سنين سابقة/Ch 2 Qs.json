@@ -1,0 +1,294 @@
+{
+  "qs": [
+    {
+      "id": "os_ch2_0001",
+      "q": "_____ refers to recording which process uses how much and what kinds of resources:",
+      "t": [
+        "2",
+        "Final 2024 - Q13"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "allocation"
+        },
+        {
+          "i": "2",
+          "x": "execution"
+        },
+        {
+          "i": "3",
+          "x": "protection"
+        },
+        {
+          "i": "4",
+          "x": "logging"
+        }
+      ],
+      "a": "4",
+      "e": "<b>Logging</b> is an additional OS function that records which process uses how much and what kinds of resources; the record may be used for account billing or for accumulating usage statistics. Allocation assigns resources to running processes, and protection ensures that all access to system resources is controlled."
+    },
+    {
+      "id": "os_ch2_0002",
+      "q": "The _____ approach is tightly coupled as changes to one part can affect other parts.",
+      "t": [
+        "2",
+        "3",
+        "Final 2023 - Q11",
+        "Final 2024 - Q6"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "monolithic"
+        },
+        {
+          "i": "2",
+          "x": "layered"
+        },
+        {
+          "i": "3",
+          "x": "modules"
+        },
+        {
+          "i": "4",
+          "x": "micro-kernel"
+        }
+      ],
+      "a": "1",
+      "e": "The <b>monolithic</b> approach has no structure: the whole kernel is a single, static binary running in a single address space. It is fast (very little overhead in the system-call interface and fast communication inside the kernel) but tightly coupled, so a change to one part can affect other parts, and it is difficult to implement and extend. The layered approach is loosely coupled (a change in one layer does not affect the others)."
+    },
+    {
+      "id": "os_ch2_0003",
+      "q": "Using the _____ allows the OS to link in additional services via LKMs, either at boot time or during runtime.",
+      "t": [
+        "2",
+        "3",
+        "Final 2023 - Q9",
+        "Final 2024 - Q8"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "monolithic"
+        },
+        {
+          "i": "2",
+          "x": "layered"
+        },
+        {
+          "i": "3",
+          "x": "modules"
+        },
+        {
+          "i": "4",
+          "x": "micro-kernel"
+        }
+      ],
+      "a": "3",
+      "e": "In the <b>modules approach</b> the kernel has a set of core components and can link in additional services through Loadable Kernel Modules (LKMs), either at boot time or at run time. This is preferable to recompiling the kernel every time a change is made, and it is common in Linux, macOS, Solaris, and Windows."
+    },
+    {
+      "id": "os_ch2_0004",
+      "q": "The _____ approach removes non-essential components from the kernel and implements them as system programs.",
+      "t": [
+        "2",
+        "4",
+        "Final 2020 - Q12",
+        "Final 2022 - Q8",
+        "Final 2024 - Q24"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "monolithic"
+        },
+        {
+          "i": "2",
+          "x": "layered"
+        },
+        {
+          "i": "3",
+          "x": "modules"
+        },
+        {
+          "i": "4",
+          "x": "micro-kernel"
+        }
+      ],
+      "a": "4",
+      "e": "The <b>micro-kernel approach</b> removes all nonessential components from the kernel and implements them as system programs that run in user mode and communicate through message passing. This makes the OS easier to extend and port, and more secure and reliable, since a failing service does not affect the rest of the OS."
+    },
+    {
+      "id": "os_ch2_0005",
+      "q": "_____ system calls support request device, release device, read, write, and reposition operations.",
+      "t": [
+        "2",
+        "Final 2023 - Q8"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Process control"
+        },
+        {
+          "i": "2",
+          "x": "File management"
+        },
+        {
+          "i": "3",
+          "x": "Device management"
+        },
+        {
+          "i": "4",
+          "x": "Information maintenance"
+        }
+      ],
+      "a": "3",
+      "e": "<b>Device management</b> system calls include: request device, release device, read, write, reposition, get/set device attributes, and logically attach or detach devices. Process control deals with create/terminate/wait, file management with files (create, delete, open, close...), and information maintenance with time/date and system data."
+    },
+    {
+      "id": "os_ch2_0006",
+      "q": "_____ provide an interface to the services provided by the operating system.",
+      "t": [
+        "2",
+        "4",
+        "Final 2020 - Q11",
+        "Final 2022 - Q30",
+        "Final 2023 - Q10"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Sockets"
+        },
+        {
+          "i": "2",
+          "x": "Ports"
+        },
+        {
+          "i": "3",
+          "x": "System calls"
+        },
+        {
+          "i": "4",
+          "x": "I/O operations"
+        }
+      ],
+      "a": "3",
+      "e": "<b>System calls</b> provide an interface to the services provided by the OS. User processes use them to call OS services (they are available as C/C++ functions, and some low-level ones in assembly), and when a process executes a system call the system traps to the OS. Sockets and ports are communication endpoints, and I/O operations are one of the services, not the interface."
+    },
+    {
+      "id": "os_ch2_0007",
+      "q": "_____ is an operating system service that provides a GUI or a CLI.",
+      "t": [
+        "2",
+        "Final 2022 - Q6"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "User interface"
+        },
+        {
+          "i": "2",
+          "x": "Program execution"
+        },
+        {
+          "i": "3",
+          "x": "I/O operations"
+        },
+        {
+          "i": "4",
+          "x": "File-system manipulation"
+        }
+      ],
+      "a": "1",
+      "e": "The <b>user interface</b> service provides a graphical user interface (GUI) or a command-line interface (CLI). Program execution loads and runs programs, I/O operations let processes perform I/O through the OS, and file-system manipulation allows reading, writing, creating, and deleting files."
+    },
+    {
+      "id": "os_ch2_0008",
+      "q": "The _____ is responsible for loading a program into memory and starting its execution.",
+      "t": [
+        "2",
+        "Final 2022 - Q7"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "memory loader"
+        },
+        {
+          "i": "2",
+          "x": "operating system"
+        },
+        {
+          "i": "3",
+          "x": "memory controller"
+        },
+        {
+          "i": "4",
+          "x": "dispatcher"
+        }
+      ],
+      "a": "2",
+      "e": "<b>Program execution</b> is an OS service: the operating system loads programs into memory and runs them, and a program must be able to end its execution normally or abnormally. 'Memory loader' and 'memory controller' are not the OS service responsible here (the memory controller only synchronizes access to the shared memory)."
+    },
+    {
+      "id": "os_ch2_0009",
+      "q": "Constructing the operating system using the _____ approach results in poor system performance.",
+      "t": [
+        "2",
+        "Final 2020 - Q9"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "layered"
+        },
+        {
+          "i": "2",
+          "x": "micro-kernel"
+        },
+        {
+          "i": "3",
+          "x": "monolithic"
+        },
+        {
+          "i": "4",
+          "x": "modules"
+        }
+      ],
+      "a": "1",
+      "e": "In the <b>layered approach</b>, each layer uses the functions of only the lower-level layers, so a service call has to traverse several layers, which results in poor performance. On the other hand, it is loosely coupled and easy to implement and extend. In contrast, the monolithic approach has very little overhead, and the modules approach lets any module call any other module directly, so neither is described as slow."
+    },
+    {
+      "id": "os_ch2_0010",
+      "q": "The _____ is responsible for starting the computer by loading the kernel.",
+      "t": [
+        "2",
+        "Final 2020 - Q10"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Mode bit"
+        },
+        {
+          "i": "2",
+          "x": "root file"
+        },
+        {
+          "i": "3",
+          "x": "bootstrap program"
+        },
+        {
+          "i": "4",
+          "x": "power manager"
+        }
+      ],
+      "a": "3",
+      "e": "System boot is the process of starting a computer by loading the kernel, and it is done by the <b>bootstrap program</b>. It locates the kernel, loads it into memory and starts it, then the kernel initializes hardware and the root file system is mounted. The bootstrap program is stored in ROM/EEPROM (firmware). The mode bit indicates user/kernel mode, and the other options are not boot components."
+    }
+  ]
+}

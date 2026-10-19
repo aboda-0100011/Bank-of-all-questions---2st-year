@@ -1,0 +1,435 @@
+{
+  "qs": [
+    {
+      "id": "os_ch3_0001",
+      "q": "Process context includes _____ value:",
+      "t": [
+        "2",
+        "3",
+        "Final 2023 - Q12",
+        "Final 2024 - Q5"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "device buffer"
+        },
+        {
+          "i": "2",
+          "x": "bootstrap value"
+        },
+        {
+          "i": "3",
+          "x": "program counter"
+        },
+        {
+          "i": "4",
+          "x": "kernel"
+        }
+      ],
+      "a": "3",
+      "e": "The context of a process is represented in its PCB and includes the values of the CPU registers, the <b>program counter</b> (address of the next instruction), the memory location, and similar information. A context switch saves the context of the current process in its PCB and loads the saved context of the next process. Device buffers, bootstrap values and the kernel are not part of a process context."
+    },
+    {
+      "id": "os_ch3_0002",
+      "q": "A process that is waiting for the CPU is in _____ state:",
+      "t": [
+        "2",
+        "4",
+        "Final 2022 - Q10",
+        "Final 2023 - Q13",
+        "Final 2024 - Q7"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "ready"
+        },
+        {
+          "i": "2",
+          "x": "running"
+        },
+        {
+          "i": "3",
+          "x": "waiting"
+        },
+        {
+          "i": "4",
+          "x": "terminated"
+        }
+      ],
+      "a": "1",
+      "e": "A process in the <b>ready</b> state is waiting to be assigned to a processor (it sits in the ready queue). Running means its instructions are being executed, waiting means it is waiting for some event (e.g., I/O completion), and terminated means it has finished execution."
+    },
+    {
+      "id": "os_ch3_0003",
+      "q": "Processes can communicate using _____ or message passing:",
+      "t": [
+        "2",
+        "3",
+        "Final 2023 - Q14",
+        "Final 2024 - Q10"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "device buffer"
+        },
+        {
+          "i": "2",
+          "x": "PCB"
+        },
+        {
+          "i": "3",
+          "x": "shared memory"
+        },
+        {
+          "i": "4",
+          "x": "DMA"
+        }
+      ],
+      "a": "3",
+      "e": "Cooperating processes need an IPC mechanism, and the two fundamental IPC mechanisms are <b>shared memory</b> and <b>message passing</b>. With shared memory, a process creates a region in its address space and other processes attach it to theirs; with message passing, processes communicate through send() and receive() without sharing memory. A device buffer, the PCB and DMA are not IPC mechanisms."
+    },
+    {
+      "id": "os_ch3_0004",
+      "q": "In _____ addressing, both sender and receiver processes must name each other:",
+      "t": [
+        "2",
+        "Final 2024 - Q19"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "multicore"
+        },
+        {
+          "i": "2",
+          "x": "cluster"
+        },
+        {
+          "i": "3",
+          "x": "asymmetric"
+        },
+        {
+          "i": "4",
+          "x": "symmetric"
+        }
+      ],
+      "a": "4",
+      "e": "In direct communication with <b>symmetric addressing</b>, both sender and receiver name each other: send(P, message) and receive(Q, message). In asymmetric addressing only the sender names the receiver, while the receiver can receive from any process: receive(id, message). 'Multicore' and 'cluster' are architecture terms, unrelated to addressing."
+    },
+    {
+      "id": "os_ch3_0005",
+      "q": "In a process, the _____ contains the dynamically allocated variables:",
+      "t": [
+        "2",
+        "3",
+        "Final 2022 - Q9",
+        "Final 2024 - Q22"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "text section"
+        },
+        {
+          "i": "2",
+          "x": "data section"
+        },
+        {
+          "i": "3",
+          "x": "heap section"
+        },
+        {
+          "i": "4",
+          "x": "stack section"
+        }
+      ],
+      "a": "3",
+      "e": "A process in memory has four sections: text (executable code), data (global variables), <b>heap</b> (dynamically allocated variables) and stack (temporary/local variables)."
+    },
+    {
+      "id": "os_ch3_0006",
+      "q": "In _____ buffering, the sender must block until the recipient receives the message:",
+      "t": [
+        "2",
+        "3",
+        "Final 2022 - Q12",
+        "Final 2024 - Q23"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "zero capacity"
+        },
+        {
+          "i": "2",
+          "x": "one capacity"
+        },
+        {
+          "i": "3",
+          "x": "bounded"
+        },
+        {
+          "i": "4",
+          "x": "unbounded"
+        }
+      ],
+      "a": "1",
+      "e": "With <b>zero capacity</b> (no buffering) the link cannot hold any waiting message, so the sender must block until the recipient receives the message. With bounded capacity the sender blocks only when the queue of length n is full, and with unbounded capacity the sender never blocks. 'One capacity' is not one of the lecture's buffering types."
+    },
+    {
+      "id": "os_ch3_0007",
+      "q": "In indirect communication, a process that can send messages to a mailbox is called the mailbox _____.",
+      "t": [
+        "2",
+        "Final 2023 - Q15"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "user"
+        },
+        {
+          "i": "2",
+          "x": "owner"
+        },
+        {
+          "i": "3",
+          "x": "sender"
+        },
+        {
+          "i": "4",
+          "x": "receiver"
+        }
+      ],
+      "a": "1",
+      "e": "In indirect communication, messages are sent to and received from mailboxes (ports). The <b>mailbox user</b> is the process that can send messages to a mailbox, while the <b>mailbox owner</b> is the process that can receive messages from it."
+    },
+    {
+      "id": "os_ch3_0008",
+      "q": "In a process, the _____ contains the local variables.",
+      "t": [
+        "2",
+        "Final 2023 - Q16"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "text section"
+        },
+        {
+          "i": "2",
+          "x": "data section"
+        },
+        {
+          "i": "3",
+          "x": "heap section"
+        },
+        {
+          "i": "4",
+          "x": "stack section"
+        }
+      ],
+      "a": "4",
+      "e": "The <b>stack section</b> holds temporary variables such as local variables (and function parameters). The text section holds the code, the data section holds global variables, and the heap holds dynamically allocated memory."
+    },
+    {
+      "id": "os_ch3_0009",
+      "q": "Which process can be affected by other processes executing in the system?",
+      "t": [
+        "2",
+        "Final 2023 - Q21"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "independent process"
+        },
+        {
+          "i": "2",
+          "x": "child process"
+        },
+        {
+          "i": "3",
+          "x": "parent process"
+        },
+        {
+          "i": "4",
+          "x": "cooperating process"
+        }
+      ],
+      "a": "4",
+      "e": "A <b>cooperating process</b> shares data with other executing processes, so it can affect or be affected by them. An independent process does not share data with other processes, so it cannot be affected. Parent and child describe a creation relationship, not data sharing."
+    },
+    {
+      "id": "os_ch3_0010",
+      "q": "A parent process may terminate its child using the _____ system call.",
+      "t": [
+        "2",
+        "Final 2022 - Q11"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "exit"
+        },
+        {
+          "i": "2",
+          "x": "terminate"
+        },
+        {
+          "i": "3",
+          "x": "abort"
+        },
+        {
+          "i": "4",
+          "x": "quit"
+        }
+      ],
+      "a": "3",
+      "e": "A parent may terminate its child using the <b>abort</b> system call, for example when the child's task is no longer required, when the parent is exiting in a cascading termination system, or when the child exceeded its allocated resources. A process asks the OS to delete itself using exit."
+    },
+    {
+      "id": "os_ch3_0011",
+      "q": "A process can communicate with another process running on another computer using _____.",
+      "t": [
+        "2",
+        "Final 2022 - Q31"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "shared memory only"
+        },
+        {
+          "i": "2",
+          "x": "message passing only"
+        },
+        {
+          "i": "3",
+          "x": "shared memory or message passing"
+        },
+        {
+          "i": "4",
+          "x": "shared memory and message passing"
+        }
+      ],
+      "a": "2",
+      "e": "Shared memory requires the communicating processes to attach a region of the same physical memory, which is impossible for processes running on different computers. <b>Message passing</b> allows processes to communicate without sharing memory and is useful in a distributed environment, so it is the only valid mechanism across computers. Therefore the other choices, which include shared memory, are wrong."
+    },
+    {
+      "id": "os_ch3_0012",
+      "q": "The address of the next instruction to be executed by the current process is provided by the _____.",
+      "t": [
+        "2",
+        "Final 2020 - Q13"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "CPU registers"
+        },
+        {
+          "i": "2",
+          "x": "program counter"
+        },
+        {
+          "i": "3",
+          "x": "process stack"
+        },
+        {
+          "i": "4",
+          "x": "text section"
+        }
+      ],
+      "a": "2",
+      "e": "The <b>program counter</b> (PC) holds the address of the next instruction to be executed, and it is saved in the PCB when the process is switched out. The text section only contains the code itself, the stack contains temporary data, and the CPU registers (general registers) store other state information."
+    },
+    {
+      "id": "os_ch3_0013",
+      "q": "A process in memory does not include _____.",
+      "t": [
+        "2",
+        "Final 2020 - Q14"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "data section"
+        },
+        {
+          "i": "2",
+          "x": "stack section"
+        },
+        {
+          "i": "3",
+          "x": "text section"
+        },
+        {
+          "i": "4",
+          "x": "program counter"
+        }
+      ],
+      "a": "4",
+      "e": "A process in memory consists of the text, data, heap and stack sections. The <b>program counter</b> is not one of these memory sections; it is part of the process's current status (together with the processor registers) and is saved in the PCB. Hence the data, stack and text sections are all included."
+    },
+    {
+      "id": "os_ch3_0014",
+      "q": "_____ is not a state of a process.",
+      "t": [
+        "2",
+        "Final 2020 - Q15"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Running"
+        },
+        {
+          "i": "2",
+          "x": "New"
+        },
+        {
+          "i": "3",
+          "x": "Old"
+        },
+        {
+          "i": "4",
+          "x": "Waiting"
+        }
+      ],
+      "a": "3",
+      "e": "The five process states are New, Ready, Running, Waiting and Terminated. <b>Old</b> is not a process state."
+    },
+    {
+      "id": "os_ch3_0015",
+      "q": "A _____ is identified by an IP address concatenated with a port number.",
+      "t": [
+        "2",
+        "Final 2020 - Q16"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "socket"
+        },
+        {
+          "i": "2",
+          "x": "network controller"
+        },
+        {
+          "i": "3",
+          "x": "mailbox"
+        },
+        {
+          "i": "4",
+          "x": "network protocol"
+        }
+      ],
+      "a": "1",
+      "e": "A <b>socket</b> is an endpoint for communication, identified by an IP address concatenated with a port number (e.g., 161.25.19.8:80). A pair of communicating processes employs a pair of sockets. A mailbox is an indirect-communication object used for message passing, not identified this way."
+    }
+  ]
+}

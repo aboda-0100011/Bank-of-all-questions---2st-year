@@ -1,0 +1,268 @@
+{
+  "qs": [
+    {
+      "id": "os_ch4_0001",
+      "q": "In _____ programmers identify tasks (not threads) that can run in parallel.",
+      "t": [
+        "2",
+        "3",
+        "Final 2022 - Q15",
+        "Final 2024 - Q4"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "explicit threading"
+        },
+        {
+          "i": "2",
+          "x": "implicit threading"
+        },
+        {
+          "i": "3",
+          "x": "data threading"
+        },
+        {
+          "i": "4",
+          "x": "code threading"
+        }
+      ],
+      "a": "2",
+      "e": "In <b>implicit threading</b>, programmers only identify tasks (written as functions) that can run in parallel, and run-time libraries (not programmers) create and manage the threads, mapping each task to a thread (many-to-many). Two approaches are thread pools and fork-join. In explicit threading the programmer creates and manages threads directly (e.g., one thread per request)."
+    },
+    {
+      "id": "os_ch4_0002",
+      "q": "_____ involves the distribution of tasks across multiple cores.",
+      "t": [
+        "2",
+        "3",
+        "Final 2023 - Q17",
+        "Final 2024 - Q9"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Data parallelism"
+        },
+        {
+          "i": "2",
+          "x": "Data distribution"
+        },
+        {
+          "i": "3",
+          "x": "Task parallelism"
+        },
+        {
+          "i": "4",
+          "x": "Task distribution"
+        }
+      ],
+      "a": "3",
+      "e": "<b>Task parallelism</b> is the distribution of tasks (threads) across multiple cores, where each core performs a different operation. Data parallelism distributes the data across the cores, with each core performing the same operation on its subset. 'Data distribution' and 'Task distribution' are not the standard terms."
+    },
+    {
+      "id": "os_ch4_0003",
+      "q": "Process threads share _____, data section, and resources.",
+      "t": [
+        "2",
+        "4",
+        "Final 2022 - Q32",
+        "Final 2023 - Q18",
+        "Final 2024 - Q17"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "stack section"
+        },
+        {
+          "i": "2",
+          "x": "program counter"
+        },
+        {
+          "i": "3",
+          "x": "register values"
+        },
+        {
+          "i": "4",
+          "x": "code section"
+        }
+      ],
+      "a": "4",
+      "e": "Threads of the same process share the <b>code section</b>, the data section and the resources (such as open files). Each thread has its own thread ID, program counter, register set and stack, so those cannot be the shared items."
+    },
+    {
+      "id": "os_ch4_0004",
+      "q": "In the _____ model, only one user thread can access the kernel at a time:",
+      "t": [
+        "2",
+        "3",
+        "Final 2022 - Q14",
+        "Final 2024 - Q20"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "many-to-one"
+        },
+        {
+          "i": "2",
+          "x": "one-to-one"
+        },
+        {
+          "i": "3",
+          "x": "many-to-many"
+        },
+        {
+          "i": "4",
+          "x": "one-to-many"
+        }
+      ],
+      "a": "1",
+      "e": "In the <b>many-to-one</b> model many user threads are mapped to one kernel thread, so only one user thread can access the kernel at a time. Threads cannot run in parallel on multi-core systems, and the entire process blocks if one thread makes a blocking system call. In one-to-one and many-to-many, multiple threads can access the kernel at the same time, and one-to-many is not a model in the lecture."
+    },
+    {
+      "id": "os_ch4_0005",
+      "q": "In the _____ model, the entire process will block if a thread makes a blocking system call.",
+      "t": [
+        "2",
+        "Final 2023 - Q20"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "many-to-one"
+        },
+        {
+          "i": "2",
+          "x": "one-to-one"
+        },
+        {
+          "i": "3",
+          "x": "many-to-many"
+        },
+        {
+          "i": "4",
+          "x": "one-to-many"
+        }
+      ],
+      "a": "1",
+      "e": "In the <b>many-to-one</b> model, thread management is done in user space by a thread library, and the kernel sees only a single kernel thread. So when one user thread makes a blocking system call, the only kernel thread blocks and therefore the entire process blocks. In one-to-one and many-to-many another thread can run when one thread blocks."
+    },
+    {
+      "id": "os_ch4_0006",
+      "q": "In _____ thread cancellation, one thread immediately terminates the target thread.",
+      "t": [
+        "2",
+        "4",
+        "Final 2020 - Q19",
+        "Final 2022 - Q16",
+        "Final 2023 - Q19"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "asynchronous"
+        },
+        {
+          "i": "2",
+          "x": "cascading"
+        },
+        {
+          "i": "3",
+          "x": "deferred"
+        },
+        {
+          "i": "4",
+          "x": "synchronous"
+        }
+      ],
+      "a": "1",
+      "e": "Thread cancellation means terminating a thread (the target thread) before it completes. In <b>asynchronous cancellation</b>, one thread immediately terminates the target thread. In <b>deferred cancellation</b>, the target thread periodically checks whether it should terminate, so it can terminate itself in an orderly fashion. Cascading and synchronous are not cancellation types in the lecture."
+    },
+    {
+      "id": "os_ch4_0007",
+      "q": "In multithreaded programming, _____ refers to the distribution of data across multiple cores.",
+      "t": [
+        "2",
+        "Final 2022 - Q13"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "data parallelism"
+        },
+        {
+          "i": "2",
+          "x": "task parallelism"
+        },
+        {
+          "i": "3",
+          "x": "core parallelism"
+        },
+        {
+          "i": "4",
+          "x": "thread parallelism"
+        }
+      ],
+      "a": "1",
+      "e": "<b>Data parallelism</b> distributes subsets of the same data across multiple cores and performs the same operation on each subset. Task parallelism instead distributes tasks (different operations) across cores. 'Core parallelism' and 'thread parallelism' are not standard types of parallelism."
+    },
+    {
+      "id": "os_ch4_0008",
+      "q": "The model in which one kernel thread is mapped to many user-level threads is called _____.",
+      "t": [
+        "2",
+        "Final 2020 - Q17"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Many-to-One model"
+        },
+        {
+          "i": "2",
+          "x": "One-to-Many model"
+        },
+        {
+          "i": "3",
+          "x": "Many-to-Many model"
+        },
+        {
+          "i": "4",
+          "x": "One-to-One model"
+        }
+      ],
+      "a": "1",
+      "e": "In the <b>many-to-one model</b>, many user-level threads are mapped to a single kernel thread. In one-to-one each user thread has its own kernel thread, in many-to-many a set of kernel threads (less than or equal to the number of user threads) serves the user threads, and one-to-many is not one of the models."
+    },
+    {
+      "id": "os_ch4_0009",
+      "q": "Instead of starting a new thread for every task to execute concurrently, the task can be passed to a _____.",
+      "t": [
+        "2",
+        "Final 2020 - Q18"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "process"
+        },
+        {
+          "i": "2",
+          "x": "dispatcher"
+        },
+        {
+          "i": "3",
+          "x": "thread pool"
+        },
+        {
+          "i": "4",
+          "x": "thread queue"
+        }
+      ],
+      "a": "3",
+      "e": "A <b>thread pool</b> creates a set of threads at startup. When a request arrives it is submitted to the pool: it is served immediately if a thread is available, otherwise it is queued until a thread becomes free. It is faster than creating a new thread per request and limits the number of threads so system resources are not exhausted."
+    }
+  ]
+}

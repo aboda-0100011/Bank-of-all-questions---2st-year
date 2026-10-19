@@ -1,0 +1,655 @@
+{
+  "qs": [
+    {
+      "id": "os_ch1_0001",
+      "q": "In multiprocessor systems, the fact that the failure of one processor will not halt the system (it only slows it down) is an advantage called:",
+      "t": [
+        "2",
+        "Final 2024 - Q1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "more throughput"
+        },
+        {
+          "i": "2",
+          "x": "economy of scale"
+        },
+        {
+          "i": "3",
+          "x": "increased reliability"
+        },
+        {
+          "i": "4",
+          "x": "works in parallel"
+        }
+      ],
+      "a": "3",
+      "e": "A multiprocessor system (parallel / tightly-coupled system) has three advantages: <b>increased throughput</b> (more work in less time, although the speed-up with N processors is less than N), <b>economy of scale</b> (peripherals, mass storage and power supplies are shared, so the cost is lower) and <b>increased reliability</b>. Increased reliability means that if one processor fails the system keeps running, only more slowly (graceful degradation). The question describes exactly this behavior, so the answer is <b>increased reliability</b>. Throughput is about the amount of work done per unit time, economy of scale is about cost, and 'works in parallel' is just how the system operates, not the advantage related to failures."
+    },
+    {
+      "id": "os_ch1_0002",
+      "q": "An operating system consists of _____ and system programs:",
+      "t": [
+        "2",
+        "Final 2024 - Q2"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "application"
+        },
+        {
+          "i": "2",
+          "x": "system hardware"
+        },
+        {
+          "i": "3",
+          "x": "Kernel"
+        },
+        {
+          "i": "4",
+          "x": "system software"
+        }
+      ],
+      "a": "3",
+      "e": "Operating system = <b>kernel</b> + system programs. The kernel is the one program that runs at all times, and system programs are associated with the operating system. Application programs are NOT associated with the OS, and hardware is the physical layer the OS manages, not a part of the OS. 'System software' is too general: system programs are themselves part of system software, so it cannot be the missing piece in this equation."
+    },
+    {
+      "id": "os_ch1_0003",
+      "q": "_____ is a table stored in main memory and holds the addresses of the interrupt handlers:",
+      "t": [
+        "2",
+        "Final 2024 - Q3"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "interrupt vector"
+        },
+        {
+          "i": "2",
+          "x": "trap"
+        },
+        {
+          "i": "3",
+          "x": "interrupt service"
+        },
+        {
+          "i": "4",
+          "x": "system call"
+        }
+      ],
+      "a": "1",
+      "e": "The <b>interrupt vector</b> is stored in low memory and holds the addresses of the interrupt service routines (interrupt handlers). When an interrupt occurs, the CPU uses the vector to find and run the proper handler. A trap is a software-generated interrupt caused by executing a system call, an interrupt service routine is the handler code itself (not the table of addresses), and a system call is the interface to OS services."
+    },
+    {
+      "id": "os_ch1_0004",
+      "q": "_____ is a collection of physically separate computer systems that are networked together:",
+      "t": [
+        "2",
+        "Final 2024 - Q11"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "distributed system"
+        },
+        {
+          "i": "2",
+          "x": "cluster system"
+        },
+        {
+          "i": "3",
+          "x": "multiprocessor system"
+        },
+        {
+          "i": "4",
+          "x": "multicore system"
+        }
+      ],
+      "a": "1",
+      "e": "A <b>distributed system</b> is a collection of physically separate, possibly heterogeneous, computer systems that are networked together (it may follow the client-server or the peer-to-peer model). A clustered system is composed of nodes that share storage and are closely linked via a LAN, while multiprocessor and multicore systems are located inside a single machine (or chip) and share bus, clock, and memory, so they are not physically separate systems."
+    },
+    {
+      "id": "os_ch1_0005",
+      "q": "In dual mode operation, privileged instructions can execute only in _____ mode:",
+      "t": [
+        "2",
+        "3",
+        "Final 2022 - Q5",
+        "Final 2024 - Q12"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "asymmetric mode"
+        },
+        {
+          "i": "2",
+          "x": "application mode"
+        },
+        {
+          "i": "3",
+          "x": "kernel mode"
+        },
+        {
+          "i": "4",
+          "x": "user mode"
+        }
+      ],
+      "a": "3",
+      "e": "Dual-mode operation protects the OS from errant users by providing two modes: user mode and kernel mode (also called supervisor, system, or privileged mode). Instructions that may cause harm are designated as <b>privileged</b>, and they can execute only in <b>kernel mode</b> (i.e., by the OS). The mode bit is 0 for kernel mode and 1 for user mode. 'Asymmetric mode' and 'application mode' are not modes of operation in this context, and user mode is where user code runs, so privileged instructions are not allowed there."
+    },
+    {
+      "id": "os_ch1_0006",
+      "q": "Operating systems of _____ provide limited features with little or no user interface:",
+      "t": [
+        "2",
+        "3",
+        "Final 2023 - Q1",
+        "Final 2024 - Q14"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "distributed systems"
+        },
+        {
+          "i": "2",
+          "x": "single-processor systems"
+        },
+        {
+          "i": "3",
+          "x": "multiprocessor systems"
+        },
+        {
+          "i": "4",
+          "x": "embedded systems"
+        }
+      ],
+      "a": "4",
+      "e": "Embedded computers are primitive and perform very specific tasks. Their operating systems provide <b>limited features</b> with little or no user interface, and they almost always run real-time operating systems (e.g., weapons systems, nuclear plant systems, medical imaging systems, industrial control systems). Distributed, single-processor, and multiprocessor systems are general-purpose architectures and do not have this limitation."
+    },
+    {
+      "id": "os_ch1_0007",
+      "q": "_____ ensures that an update to a cache is reflected immediately in other caches:",
+      "t": [
+        "2",
+        "Final 2024 - Q16"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Cache update"
+        },
+        {
+          "i": "2",
+          "x": "Cache reflection"
+        },
+        {
+          "i": "3",
+          "x": "Cache decoding"
+        },
+        {
+          "i": "4",
+          "x": "Cache coherency"
+        }
+      ],
+      "a": "4",
+      "e": "<b>Cache coherency</b> ensures that an update to some data in a cache is reflected immediately in all other caches that contain a copy of that data. This matters mainly in multiprocessor systems, where each CPU has its own cache. The other options are not standard terms."
+    },
+    {
+      "id": "os_ch1_0008",
+      "q": "In _____ one node is in hot standby mode monitoring the active server:",
+      "t": [
+        "2",
+        "Final 2024 - Q21"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "asymmetric clustering"
+        },
+        {
+          "i": "2",
+          "x": "symmetric clustering"
+        },
+        {
+          "i": "3",
+          "x": "asymmetric multiprocessing"
+        },
+        {
+          "i": "4",
+          "x": "symmetric multiprocessing"
+        }
+      ],
+      "a": "1",
+      "e": "In <b>asymmetric clustering</b>, one node runs in hot-standby mode and only monitors the active server. If the active server fails, the hot-standby node becomes the active server, which supports high-availability service. In symmetric clustering all nodes run applications and monitor each other. Asymmetric/symmetric multiprocessing concern processors inside one machine (boss-worker vs. peers), not nodes of a cluster."
+    },
+    {
+      "id": "os_ch1_0009",
+      "q": "In a multiprocessor system, the speedup ratio with N processors is _____ N.",
+      "t": [
+        "2",
+        "Final 2023 - Q2"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "divided by"
+        },
+        {
+          "i": "2",
+          "x": "equal to"
+        },
+        {
+          "i": "3",
+          "x": "more than"
+        },
+        {
+          "i": "4",
+          "x": "less than"
+        }
+      ],
+      "a": "4",
+      "e": "Although more processors means more work in less time, the speed-up ratio with N processors is <b>less than N</b>. When multiple processors cooperate on a task, a certain amount of overhead is incurred in keeping all the parts working correctly, and they contend for shared resources (bus, memory), so the speed-up can never reach (or exceed) N."
+    },
+    {
+      "id": "os_ch1_0010",
+      "q": "In _____, the device controller transfers data directly between its local buffer and main memory.",
+      "t": [
+        "2",
+        "Final 2023 - Q4"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "direct memory access"
+        },
+        {
+          "i": "2",
+          "x": "direct buffer access"
+        },
+        {
+          "i": "3",
+          "x": "controller-based access"
+        },
+        {
+          "i": "4",
+          "x": "buffer data transfer"
+        }
+      ],
+      "a": "1",
+      "e": "In <b>Direct Memory Access (DMA)</b>, the device controller transfers an entire block of data directly between its local buffer and main memory with no intervention by the CPU. Only one interrupt is generated per block (rather than one per byte), and the CPU is free to do other work while the transfer is in progress. The other options are not real I/O techniques."
+    },
+    {
+      "id": "os_ch1_0011",
+      "q": "_____ refers to the use of high-speed memory to hold a copy of recently accessed data.",
+      "t": [
+        "2",
+        "4",
+        "Final 2020 - Q8",
+        "Final 2022 - Q29",
+        "Final 2023 - Q5"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Caching"
+        },
+        {
+          "i": "2",
+          "x": "Fetching"
+        },
+        {
+          "i": "3",
+          "x": "Loading"
+        },
+        {
+          "i": "4",
+          "x": "Speeding"
+        }
+      ],
+      "a": "1",
+      "e": "<b>Caching</b> is the use of high-speed memory to hold a copy of recently accessed data, assuming it will be needed again soon. Caches are installed to improve access time or transfer rate. Fetching is a step of the instruction cycle, and loading/speeding are not terms for this technique."
+    },
+    {
+      "id": "os_ch1_0012",
+      "q": "A _____ system can have only one job (process) in memory at a time.",
+      "t": [
+        "2",
+        "Final 2023 - Q6"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "batch"
+        },
+        {
+          "i": "2",
+          "x": "multiprogramming"
+        },
+        {
+          "i": "3",
+          "x": "timesharing"
+        },
+        {
+          "i": "4",
+          "x": "multitasking"
+        }
+      ],
+      "a": "1",
+      "e": "A <b>batch system</b> processes jobs in bulk, one job after another, so the user program area holds only one job at a time. If that job waits for I/O the CPU stays idle, which gives low CPU utilization. Multiprogramming keeps several jobs in memory, and time-sharing (multitasking) is an extension of multiprogramming."
+    },
+    {
+      "id": "os_ch1_0013",
+      "q": "_____ is a signal that is generated when some event occurs.",
+      "t": [
+        "2",
+        "Final 2023 - Q7"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "An interrupt vector"
+        },
+        {
+          "i": "2",
+          "x": "An interrupt"
+        },
+        {
+          "i": "3",
+          "x": "An interrupt handler"
+        },
+        {
+          "i": "4",
+          "x": "An interrupt tracer"
+        }
+      ],
+      "a": "2",
+      "e": "An <b>interrupt</b> is a signal generated when some event occurs. A hardware interrupt is sent to the CPU as a signal, while a software interrupt (trap) is generated by executing a system call. The interrupt vector is a table of handler addresses and the interrupt handler is the routine executed in response, so neither is the signal itself."
+    },
+    {
+      "id": "os_ch1_0014",
+      "q": "_____ controls the hardware and coordinates its use among the application programs.",
+      "t": [
+        "2",
+        "Final 2022 - Q1"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Hardware"
+        },
+        {
+          "i": "2",
+          "x": "An application program"
+        },
+        {
+          "i": "3",
+          "x": "The operating system"
+        },
+        {
+          "i": "4",
+          "x": "A system program"
+        }
+      ],
+      "a": "3",
+      "e": "The computer system has hardware (basic computing resources), application programs (use the resources to solve user problems), and the <b>operating system</b>, which controls the hardware and coordinates its use among the application programs (it acts as a resource allocator and a control program)."
+    },
+    {
+      "id": "os_ch1_0015",
+      "q": "In the instruction execution cycle, the _____ step may store the execution result back in memory.",
+      "t": [
+        "2",
+        "Final 2022 - Q2"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "fetch"
+        },
+        {
+          "i": "2",
+          "x": "decode"
+        },
+        {
+          "i": "3",
+          "x": "execute"
+        },
+        {
+          "i": "4",
+          "x": "encode"
+        }
+      ],
+      "a": "3",
+      "e": "The instruction execution cycle has three steps: <b>fetch</b> (get the instruction from memory into the instruction register), <b>decode</b> (interpret it, possibly fetching operands into internal registers), and <b>execute</b> (carry it out, which may store the result back in memory). 'Encode' is not a step of the cycle."
+    },
+    {
+      "id": "os_ch1_0016",
+      "q": "In a _____ system, computers share storage and are closely linked via a LAN.",
+      "t": [
+        "2",
+        "Final 2022 - Q3"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "peer-to-peer"
+        },
+        {
+          "i": "2",
+          "x": "distributed"
+        },
+        {
+          "i": "3",
+          "x": "multiprocessor"
+        },
+        {
+          "i": "4",
+          "x": "clustered"
+        }
+      ],
+      "a": "4",
+      "e": "A <b>clustered system</b> (loosely-coupled system) is composed of two or more individual nodes that share storage and are closely linked via a LAN. A distributed system is just physically separate computers networked together (no shared-storage requirement), peer-to-peer is a distributed computing model, and a multiprocessor is a single machine with several processors."
+    },
+    {
+      "id": "os_ch1_0017",
+      "q": "A _____ system has well-defined, fixed time constraints.",
+      "t": [
+        "2",
+        "Final 2022 - Q4"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "distributed"
+        },
+        {
+          "i": "2",
+          "x": "single-processor"
+        },
+        {
+          "i": "3",
+          "x": "multiprocessor"
+        },
+        {
+          "i": "4",
+          "x": "real-time"
+        }
+      ],
+      "a": "4",
+      "e": "A <b>real-time system</b> has well-defined, fixed time constraints: processing must be done within them or the system fails. Embedded systems almost always run real-time operating systems (e.g., medical imaging, industrial control)."
+    },
+    {
+      "id": "os_ch1_0018",
+      "q": "In _____, when a running process waits for an I/O operation, the operating system selects another for execution.",
+      "t": [
+        "2",
+        "Final 2020 - Q2"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "real-time system"
+        },
+        {
+          "i": "2",
+          "x": "Storage system"
+        },
+        {
+          "i": "3",
+          "x": "I/O bound systems"
+        },
+        {
+          "i": "4",
+          "x": "Multi-programmed systems"
+        }
+      ],
+      "a": "4",
+      "e": "In <b>multiprogrammed systems</b>, several jobs are kept in main memory and the CPU is always executing one of them. If the running job needs to wait for I/O, the OS picks another job to start or continue execution, which removes CPU idle time. This requires I/O routines, CPU scheduling, memory management, and resource allocation. The other options are not systems with this behavior ('I/O-bound' describes a type of process, not a system)."
+    },
+    {
+      "id": "os_ch1_0019",
+      "q": "In _____, the CPU executes multiple jobs by switching among them so frequently.",
+      "t": [
+        "2",
+        "Final 2020 - Q3"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "multiprogramming"
+        },
+        {
+          "i": "2",
+          "x": "time sharing"
+        },
+        {
+          "i": "3",
+          "x": "boot loader"
+        },
+        {
+          "i": "4",
+          "x": "CPU scheduling"
+        }
+      ],
+      "a": "2",
+      "e": "A <b>time-sharing</b> (multitasking) system is an interactive extension of multiprogramming where the CPU switches between jobs so frequently that the user can interact with each program while it is running (response time must be minimal). Multiprogramming itself only switches when a job waits for I/O, a boot loader starts the system, and CPU scheduling is the selection mechanism, not the system type."
+    },
+    {
+      "id": "os_ch1_0020",
+      "q": "A _____ receives requests from client systems, executes actions on the server, and sends results to clients.",
+      "t": [
+        "2",
+        "Final 2020 - Q4"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "multicore system"
+        },
+        {
+          "i": "2",
+          "x": "file-server system"
+        },
+        {
+          "i": "3",
+          "x": "real-time system"
+        },
+        {
+          "i": "4",
+          "x": "compute-server system"
+        }
+      ],
+      "a": "4",
+      "e": "In client-server computing, a server can be a file-server or a compute-server. A <b>compute-server</b> receives client requests, executes actions, and returns the results. A file-server instead allows clients to create, update, read, and delete files."
+    },
+    {
+      "id": "os_ch1_0021",
+      "q": "The _____ is responsible for moving the data between its local buffer storage and the I/O device that it controls.",
+      "t": [
+        "2",
+        "Final 2020 - Q5"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "system bus"
+        },
+        {
+          "i": "2",
+          "x": "device controller"
+        },
+        {
+          "i": "3",
+          "x": "processor"
+        },
+        {
+          "i": "4",
+          "x": "disk"
+        }
+      ],
+      "a": "2",
+      "e": "Each device controller controls a specific type of device and has a local buffer storage and a set of registers. The <b>device controller</b> moves data between the peripheral device and its local buffer, then generates an interrupt to inform the device driver. The system bus only connects components, and the CPU (processor) does not move the data itself in this scheme."
+    },
+    {
+      "id": "os_ch1_0022",
+      "q": "The _____ is a segment of code that determines what action should be taken when an interrupt occurs.",
+      "t": [
+        "2",
+        "Final 2020 - Q6"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "trap"
+        },
+        {
+          "i": "2",
+          "x": "interrupt vector"
+        },
+        {
+          "i": "3",
+          "x": "interrupt signal"
+        },
+        {
+          "i": "4",
+          "x": "interrupt service routine"
+        }
+      ],
+      "a": "4",
+      "e": "Each interrupt has a corresponding <b>interrupt service routine</b> (ISR, also called interrupt handler): the code that determines what action to take and must be executed when the interrupt occurs. The interrupt vector is only the table that stores the ISR addresses, the interrupt signal is the event notification, and a trap is a software-generated interrupt."
+    },
+    {
+      "id": "os_ch1_0023",
+      "q": "In the dual mode operation, user processes execute in _____.",
+      "t": [
+        "2",
+        "Final 2020 - Q7"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "privileged mode"
+        },
+        {
+          "i": "2",
+          "x": "kernel mode"
+        },
+        {
+          "i": "3",
+          "x": "user mode"
+        },
+        {
+          "i": "4",
+          "x": "free mode"
+        }
+      ],
+      "a": "3",
+      "e": "User-defined code must execute in <b>user mode</b> (mode bit = 1). Only the operating system executes in kernel mode (= supervisor = system = privileged mode, mode bit = 0). Kernel mode and privileged mode are the same mode, and 'free mode' does not exist."
+    }
+  ]
+}
