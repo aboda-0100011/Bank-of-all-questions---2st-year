@@ -1,0 +1,1082 @@
+{
+  "qs": [
+    {
+      "id": "dsa4_0001",
+      "q": "Which limitation of a <b>singly linked list</b> is solved by using a <b>doubly linked list</b>?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Inserting a node at the head is inefficient because all existing nodes must be moved"
+        },
+        {
+          "i": "2",
+          "x": "Deleting the tail node is inefficient because its preceding node cannot be found directly"
+        },
+        {
+          "i": "3",
+          "x": "Traversing from the head toward the tail is impossible because nodes have no next references"
+        },
+        {
+          "i": "4",
+          "x": "Accessing the first node is inefficient because the whole list must be scanned first"
+        }
+      ],
+      "a": "2",
+      "e": "In a singly linked list each node knows only its successor, so removing the tail (or an interior node) requires finding the <b>preceding node</b> by walking from the head. A doubly linked list stores a <b>prev</b> reference in every node, which removes this asymmetry."
+    },
+    {
+      "id": "dsa4_0002",
+      "q": "A doubly linked list uses <b>header</b> and <b>trailer</b> sentinel nodes. Which statement is true when the list is <u>empty</u>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The header's next reference points to the trailer, and the trailer's prev reference points to the header"
+        },
+        {
+          "i": "2",
+          "x": "The header and trailer do not exist until the first element is inserted into the list"
+        },
+        {
+          "i": "3",
+          "x": "The header's next reference and the trailer's prev reference are both empty references"
+        },
+        {
+          "i": "4",
+          "x": "The header's next reference points to itself, and the trailer's prev reference points to itself"
+        }
+      ],
+      "a": "1",
+      "e": "Sentinels always exist: they only mark the two ends of the list and never store user elements. An empty list is simply <mark>header ↔ trailer</mark> with size 0."
+    },
+    {
+      "id": "dsa4_0003",
+      "q": "A doubly linked list with sentinels holds:\n`header` ↔ `JFK` ↔ `PVD` ↔ `SFO` ↔ `trailer`\nThe element `BWI` is inserted as the new <b>first</b> element (right after the header). After the insertion, which pair gives the <b>prev</b> and <b>next</b> nodes of `BWI`?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "prev: `header`, next: `trailer`"
+        },
+        {
+          "i": "2",
+          "x": "prev: `JFK`, next: `PVD`"
+        },
+        {
+          "i": "3",
+          "x": "prev: `header`, next: `JFK`"
+        },
+        {
+          "i": "4",
+          "x": "prev: `trailer`, next: `JFK`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Find the two neighbors of the new node: predecessor = `header`, successor = `JFK` (the old first node).",
+        "Create `BWI` with prev = `header` and next = `JFK`.",
+        "Update the neighbors: `header`.next = `BWI` and `JFK`.prev = `BWI`.",
+        "<mark>New list: header ↔ BWI ↔ JFK ↔ PVD ↔ SFO ↔ trailer (BWI has prev header, next JFK)</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0004",
+      "q": "A doubly linked list with sentinels holds:\n`header` ↔ `BWI` ↔ `JFK` ↔ `PVD` ↔ `SFO` ↔ `trailer`\nThe element `PVD` is removed. Which two references must be <u>changed</u> so that its neighbors bypass it?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "next of `BWI` and prev of `JFK`"
+        },
+        {
+          "i": "2",
+          "x": "next of `PVD` and prev of `PVD`"
+        },
+        {
+          "i": "3",
+          "x": "next of `SFO` and prev of `trailer`"
+        },
+        {
+          "i": "4",
+          "x": "next of `JFK` and prev of `SFO`"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "Identify the neighbors of `PVD`: predecessor = `JFK` (its prev) and successor = `SFO` (its next).",
+        "Make the predecessor skip the node: `JFK`.next = `SFO`.",
+        "Make the successor skip the node: `SFO`.prev = `JFK`.",
+        "`header`, `BWI` and `trailer` are untouched, and the size decreases by 1.",
+        "<mark>List after removal: header ↔ BWI ↔ JFK ↔ SFO ↔ trailer</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0005",
+      "q": "A deque is implemented with a doubly linked list that has header and trailer sentinels. Where is the new node placed by <b>insert_last</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Between the header sentinel and the first real node"
+        },
+        {
+          "i": "2",
+          "x": "After the trailer sentinel, as a new final node"
+        },
+        {
+          "i": "3",
+          "x": "Between the last real node and the trailer sentinel"
+        },
+        {
+          "i": "4",
+          "x": "Between the first and the second real nodes"
+        }
+      ],
+      "a": "3",
+      "e": "<b>insert_last</b> inserts between the node just before the trailer and the trailer itself, so no traversal is needed. <b>insert_first</b> mirrors this by inserting right after the header."
+    },
+    {
+      "id": "dsa4_0006",
+      "q": "Which statement correctly distinguishes a <b>priority queue</b> from an ordinary FIFO queue?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A priority queue removes the item with the minimum key, regardless of insertion order"
+        },
+        {
+          "i": "2",
+          "x": "A priority queue removes the item that was inserted last, regardless of its key"
+        },
+        {
+          "i": "3",
+          "x": "A priority queue removes the item with the maximum key, regardless of insertion order"
+        },
+        {
+          "i": "4",
+          "x": "A priority queue rejects new insertions after the first removal has taken place"
+        }
+      ],
+      "a": "1",
+      "e": "A FIFO queue serves the oldest element first. A priority queue serves the element with <b>first priority</b>, i.e., the <b>minimum key</b>, no matter when it was added (key 1 is served before key 2)."
+    },
+    {
+      "id": "dsa4_0007",
+      "q": "An initially empty priority queue `P` receives: `P.add(5,A)`, `P.add(9,C)`, `P.add(3,B)`, `P.add(7,D)`.\nWhat does `P.min()` return, and what happens to that item?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Returns `(3,B)`; the item is removed from `P`"
+        },
+        {
+          "i": "2",
+          "x": "Returns `(3,B)`; the item stays in `P`"
+        },
+        {
+          "i": "3",
+          "x": "Returns `(5,A)`; the item stays in `P`"
+        },
+        {
+          "i": "4",
+          "x": "Returns `(9,C)`; the item is removed from `P`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Order the items by key: `(3,B)`, `(5,A)`, `(7,D)`, `(9,C)`.",
+        "`min()` returns the (key, value) tuple with the minimum key, which is `(3,B)`.",
+        "`min()` does <u>not</u> remove the item, so `P` is unchanged (unlike `remove_min()`).",
+        "<mark>Returns (3,B) and the item stays in P</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0008",
+      "q": "An empty priority queue `P` receives: `P.add(5,A)`, `P.add(9,C)`, `P.add(3,B)`, `P.add(7,D)`. Then `P.remove_min()` is called four times. Which sequence of tuples is returned?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`(5,A)`, `(9,C)`, `(3,B)`, `(7,D)`"
+        },
+        {
+          "i": "2",
+          "x": "`(3,B)`, `(7,D)`, `(5,A)`, `(9,C)`"
+        },
+        {
+          "i": "3",
+          "x": "`(3,B)`, `(5,A)`, `(7,D)`, `(9,C)`"
+        },
+        {
+          "i": "4",
+          "x": "`(9,C)`, `(7,D)`, `(5,A)`, `(3,B)`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "`remove_min()` always removes the item with the <u>minimum</u> key, not the first inserted one.",
+        "The keys in the queue are 3, 5, 7, 9.",
+        "The four calls therefore return `(3,B)`, then `(5,A)`, then `(7,D)`, then `(9,C)`.",
+        "<mark>Sequence: (3,B), (5,A), (7,D), (9,C)</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0009",
+      "q": "An empty priority queue `P` receives: `P.add(5,A)`, `P.add(9,C)`, `P.add(3,B)`, `P.add(7,D)`. Then `P.remove_min()` is called <b>twice</b>. What do `len(P)` and the next `P.min()` return?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`2` and `(7,D)`"
+        },
+        {
+          "i": "2",
+          "x": "`2` and `(5,A)`"
+        },
+        {
+          "i": "3",
+          "x": "`4` and `(7,D)`"
+        },
+        {
+          "i": "4",
+          "x": "`3` and `(5,A)`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Items sorted by key: `(3,B)`, `(5,A)`, `(7,D)`, `(9,C)`.",
+        "The first `remove_min()` returns `(3,B)`; the second returns `(5,A)`.",
+        "Remaining items: `(7,D)` and `(9,C)`, so `len(P)` is 2.",
+        "`min()` returns the smallest remaining key without removing it: `(7,D)`.",
+        "<mark>len(P) = 2 and P.min() = (7,D)</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0010",
+      "q": "All items of a priority queue `P` have been removed with `remove_min()`, so `P` is now empty. What do `P.is_empty()` and one more `P.remove_min()` give?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`False`, and an error"
+        },
+        {
+          "i": "2",
+          "x": "`True`, and `None`"
+        },
+        {
+          "i": "3",
+          "x": "`True`, and an error"
+        },
+        {
+          "i": "4",
+          "x": "`False`, and `None`"
+        }
+      ],
+      "a": "3",
+      "e": "Once the last item is removed the queue is empty, so <b>is_empty()</b> returns True. Calling <b>remove_min()</b> on an empty priority queue is not allowed and gives an <mark>error</mark>."
+    },
+    {
+      "id": "dsa4_0011",
+      "q": "A priority queue of size n is implemented with an <b>unsorted</b> doubly linked list. Which pair of operations takes <b>O(n)</b> worst-case time?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`add` and `min`"
+        },
+        {
+          "i": "2",
+          "x": "`add` and `remove_min`"
+        },
+        {
+          "i": "3",
+          "x": "`len` and `is_empty`"
+        },
+        {
+          "i": "4",
+          "x": "`min` and `remove_min`"
+        }
+      ],
+      "a": "4",
+      "e": "<b>add</b> just appends the new item at the end of the list in O(1). But <b>min</b> and <b>remove_min</b> must inspect all entries to find the minimum key, so both take <mark>O(n)</mark>."
+    },
+    {
+      "id": "dsa4_0012",
+      "q": "A priority queue of size n is implemented with a list kept <b>sorted</b> by nondecreasing keys (a doubly linked list). Which operation takes <b>O(n)</b> worst-case time?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`min`"
+        },
+        {
+          "i": "2",
+          "x": "`remove_min`"
+        },
+        {
+          "i": "3",
+          "x": "`add`"
+        },
+        {
+          "i": "4",
+          "x": "`is_empty`"
+        }
+      ],
+      "a": "3",
+      "e": "The smallest key is always at the front, so <b>min</b> and <b>remove_min</b> take O(1). But <b>add</b> must scan the list to find the correct position for the new item, which takes <mark>O(n)</mark> in the worst case."
+    },
+    {
+      "id": "dsa4_0013",
+      "q": "An application performs <b>n</b> add operations and then a <u>single</u> remove_min. Using the worst-case costs of the two list-based priority queues, which implementation is better and why?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Sorted list: remove_min costs O(1), which outweighs the cost of the adds"
+        },
+        {
+          "i": "2",
+          "x": "Both are equal: each implementation has exactly one O(n) operation"
+        },
+        {
+          "i": "3",
+          "x": "Unsorted list: each add costs O(n) and remove_min costs O(1), so O(n²) total"
+        },
+        {
+          "i": "4",
+          "x": "Unsorted list: n adds cost O(1) each and one remove_min costs O(n), so O(n) total"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "Unsorted list: `add` is O(1) and `remove_min` is O(n).",
+        "Cost of the workload: $n \\times O(1) + O(n) = O(n)$.",
+        "Sorted list: `add` is O(n) (scan for the position) and `remove_min` is O(1).",
+        "Cost of the workload: $n \\times O(n) + O(1) = O(n^2)$.",
+        "<mark>The unsorted list is better: O(n) total instead of O(n²)</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0014",
+      "q": "A binary heap is a binary tree that satisfies which <b>two</b> properties?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Heap-order property and full binary tree property"
+        },
+        {
+          "i": "2",
+          "x": "Heap-order property and complete binary tree property"
+        },
+        {
+          "i": "3",
+          "x": "Search-order property and complete binary tree property"
+        },
+        {
+          "i": "4",
+          "x": "Heap-order property and perfect binary tree property"
+        }
+      ],
+      "a": "2",
+      "e": "A heap needs the <b>heap-order property</b> (for a min-heap, every key is at least as large as its parent's key) and the <b>complete binary tree property</b> (all levels full except possibly the last, which is filled from the left). It is <u>not</u> required to be full or perfect."
+    },
+    {
+      "id": "dsa4_0015",
+      "q": "In a <b>min-heap</b>, which statement is true for every position p other than the root?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The key at `p` is greater than the keys of both of its children"
+        },
+        {
+          "i": "2",
+          "x": "The key at `p` is less than or equal to the key at its parent"
+        },
+        {
+          "i": "3",
+          "x": "The key at `p` is less than the key at its sibling"
+        },
+        {
+          "i": "4",
+          "x": "The key at `p` is greater than or equal to the key at its parent"
+        }
+      ],
+      "a": "4",
+      "e": "The heap-order property of a min-heap is $k_p \\ge k_{parent}$. Keys never decrease going downward, so the <mark>minimum key is always at the root</mark>. Nothing is required between siblings."
+    },
+    {
+      "id": "dsa4_0016",
+      "q": "A heap stores <b>10</b> entries. How many entries are on its <b>last level</b> (level 3, with the root at level 0)?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`4`"
+        },
+        {
+          "i": "2",
+          "x": "`7`"
+        },
+        {
+          "i": "3",
+          "x": "`3`"
+        },
+        {
+          "i": "4",
+          "x": "`2`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "A heap is a <b>complete</b> tree: level $i$ holds $2^i$ nodes for every level except possibly the last.",
+        "Levels 0, 1, 2 are full: $1 + 2 + 4 = 7$ entries.",
+        "Remaining entries: $10 - 7 = 3$.",
+        "<mark>3 entries sit on level 3, in the leftmost positions</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0017",
+      "q": "A heap stores <b>n = 20</b> entries. What is its height (counted in edges, root at level 0)?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`4`"
+        },
+        {
+          "i": "2",
+          "x": "`3`"
+        },
+        {
+          "i": "3",
+          "x": "`5`"
+        },
+        {
+          "i": "4",
+          "x": "`19`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "A heap with n entries has height $h = \\lfloor \\log_2 n \\rfloor$.",
+        "$\\log_2 20 \\approx 4.32$.",
+        "Taking the floor gives 4.",
+        "Check: levels 0 to 3 hold $1+2+4+8 = 15$ entries, so the other 5 entries go on level 4.",
+        "<mark>Height = 4</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0018",
+      "q": "A <b>min-heap</b> (keys only) with 13 entries is given as parent → left child, right child:\n`4` → `5`, `6`\n`5` → `15`, `9`\n`6` → `7`, `20`\n`15` → `16`, `25`\n`9` → `14`, `12`\n`7` → `11`, `13`\nAll other nodes are leaves.\nA new entry with key `2` is added. Where is the new node <b>first placed</b> (before any swap)?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "As the left child of `16`"
+        },
+        {
+          "i": "2",
+          "x": "As the right child of `13`"
+        },
+        {
+          "i": "3",
+          "x": "As the right child of `20`"
+        },
+        {
+          "i": "4",
+          "x": "As the left child of `20`"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "To keep the tree complete, the new node goes just beyond the rightmost node of the bottom level.",
+        "Level 3 already holds `16`, `25`, `14`, `12`, `11`, `13` (the children of `15`, `9`, `7`).",
+        "The next free position belongs to `20`, and the leftmost one is its left child.",
+        "<mark>The new node is the left child of 20</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0019",
+      "q": "A <b>min-heap</b> (keys only) with 13 entries is given as parent → left child, right child:\n`4` → `5`, `6`\n`5` → `15`, `9`\n`6` → `7`, `20`\n`15` → `16`, `25`\n`9` → `14`, `12`\n`7` → `11`, `13`\nAll other nodes are leaves.\nA new entry with key `2` is added and up-heap bubbling is performed. How many swaps occur?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`3`"
+        },
+        {
+          "i": "2",
+          "x": "`2`"
+        },
+        {
+          "i": "3",
+          "x": "`4`"
+        },
+        {
+          "i": "4",
+          "x": "`1`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "The new node `2` is placed as the left child of `20`.",
+        "`2` is smaller than its parent `20`, so swap (swap 1).",
+        "`2` is smaller than its new parent `6`, so swap (swap 2).",
+        "`2` is smaller than its new parent `4` (the root), so swap (swap 3). Now `2` is the root and the process stops.",
+        "<mark>3 swaps (equal to the height of the heap)</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0020",
+      "q": "A <b>min-heap</b> (keys only) with 13 entries is given as parent → left child, right child:\n`4` → `5`, `6`\n`5` → `15`, `9`\n`6` → `7`, `20`\n`15` → `16`, `25`\n`9` → `14`, `12`\n`7` → `11`, `13`\nAll other nodes are leaves.\nA new entry with key `2` is added and up-heap bubbling finishes. Which keys are the left and right children of the <b>root</b>?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "left child `5`, right child `4`"
+        },
+        {
+          "i": "2",
+          "x": "left child `4`, right child `5`"
+        },
+        {
+          "i": "3",
+          "x": "left child `5`, right child `6`"
+        },
+        {
+          "i": "4",
+          "x": "left child `4`, right child `6`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Insert `2` as the left child of `20`.",
+        "Swap with `20`: `2` is now the right child of `6`, and `20` is its left child.",
+        "Swap with `6`: `2` is now the right child of `4`, and `6` moves down.",
+        "Swap with `4`: `2` becomes the root, and `4` takes the right-child position.",
+        "The left child `5` was never touched.",
+        "<mark>Root 2 has left child 5 and right child 4</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0021",
+      "q": "Consider this <b>min-heap</b> (keys only) given as parent → left child, right child:\n`3` → `8`, `5`\n`8` → `12`, `10`\n`5` → `9` (left child only)\nAll other nodes are leaves.\nThe key `4` is inserted and up-heap bubbling is performed. What are the children of the node holding `4` in the final heap?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "left child `5`, right child `9`"
+        },
+        {
+          "i": "2",
+          "x": "left child `12`, right child `10`"
+        },
+        {
+          "i": "3",
+          "x": "left child `9`, right child `5`"
+        },
+        {
+          "i": "4",
+          "x": "left child `9`, right child `3`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "The heap has 6 entries, so the new node takes the next free position: the right child of `5`.",
+        "Compare `4` with its parent `5`: `4` is smaller, so swap. Now `4` sits where `5` was, and `5` becomes its right child.",
+        "Compare `4` with its new parent `3`: `4` is not smaller, so stop.",
+        "<mark>The node 4 has left child 9 and right child 5</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0022",
+      "q": "In a heap-based priority queue, why is the item at the <b>last position</b> copied to the root during <b>remove_min</b>, instead of simply deleting the root node?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The last item always holds the second-smallest key, so it is the correct new root"
+        },
+        {
+          "i": "2",
+          "x": "Removing the root would leave two disconnected subtrees, while removing the last leaf keeps the tree complete"
+        },
+        {
+          "i": "3",
+          "x": "The last item is always smaller than both children of the root, so no swaps are needed afterwards"
+        },
+        {
+          "i": "4",
+          "x": "The last item must be removed first so that the heap-order property is never violated"
+        }
+      ],
+      "a": "2",
+      "e": "The minimum key is stored at the root, and deleting the root directly would split the tree into two subtrees. Deleting the <b>last leaf</b> keeps the tree <b>complete</b>, and its item is copied to the root; down-heap bubbling then restores the heap-order property."
+    },
+    {
+      "id": "dsa4_0023",
+      "q": "A <b>min-heap</b> (keys only) with 13 entries is given as parent → left child, right child:\n`4` → `5`, `6`\n`5` → `15`, `9`\n`6` → `7`, `20`\n`15` → `16`, `25`\n`9` → `14`, `12`\n`7` → `11`, `13`\nAll other nodes are leaves.\n`remove_min` is performed. Which key is copied to the root in the <b>first step</b> (before down-heap bubbling)?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`5`"
+        },
+        {
+          "i": "2",
+          "x": "`25`"
+        },
+        {
+          "i": "3",
+          "x": "`20`"
+        },
+        {
+          "i": "4",
+          "x": "`13`"
+        }
+      ],
+      "a": "4",
+      "e": "The item at the <b>last position</b> (the rightmost node at the bottom level) replaces the removed root. Here the bottom level ends with `13`, the right child of `7`, so <mark>13 is copied to the root</mark> and that leaf is deleted."
+    },
+    {
+      "id": "dsa4_0024",
+      "q": "A <b>min-heap</b> (keys only) with 13 entries is given as parent → left child, right child:\n`4` → `5`, `6`\n`5` → `15`, `9`\n`6` → `7`, `20`\n`15` → `16`, `25`\n`9` → `14`, `12`\n`7` → `11`, `13`\nAll other nodes are leaves.\n`remove_min` is performed. How many swaps does down-heap bubbling make, and with which keys (in order)?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "3 swaps: with `5`, then `15`, then `16`"
+        },
+        {
+          "i": "2",
+          "x": "3 swaps: with `5`, then `9`, then `12`"
+        },
+        {
+          "i": "3",
+          "x": "2 swaps: with `5`, then `9`"
+        },
+        {
+          "i": "4",
+          "x": "3 swaps: with `6`, then `7`, then `11`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Remove the root `4`, copy the last item `13` to the root, and delete the last leaf (12 entries remain).",
+        "`13` has children `5` and `6`. The <u>smaller</u> child is `5`, and `13` is larger, so swap (swap 1).",
+        "`13` now has children `15` and `9`. The smaller child is `9`, so swap (swap 2).",
+        "`13` now has children `14` and `12`. The smaller child is `12`, so swap (swap 3).",
+        "`13` now has no children, so the process stops.",
+        "<mark>3 swaps: with 5, then 9, then 12</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0025",
+      "q": "A <b>min-heap</b> (keys only) with 13 entries is given as parent → left child, right child:\n`4` → `5`, `6`\n`5` → `15`, `9`\n`6` → `7`, `20`\n`15` → `16`, `25`\n`9` → `14`, `12`\n`7` → `11`, `13`\nAll other nodes are leaves.\n`remove_min` is performed and down-heap bubbling finishes. In the final heap, which keys are the left and right children of the <b>root</b>?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "left child `6`, right child `9`"
+        },
+        {
+          "i": "2",
+          "x": "left child `13`, right child `6`"
+        },
+        {
+          "i": "3",
+          "x": "left child `9`, right child `6`"
+        },
+        {
+          "i": "4",
+          "x": "left child `9`, right child `7`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Copy the last item `13` to the root and delete the last leaf.",
+        "Down-heap: `13` swaps with the smaller child `5`, so `5` becomes the root.",
+        "`13` then swaps with `9` (smaller than `15`), so `9` becomes the left child of the root, and then with `12`.",
+        "The right child `6` of the root is never touched.",
+        "<mark>Final root 5 with left child 9 and right child 6</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0026",
+      "q": "A <b>min-heap</b> (keys only) has just had the last item `10` copied to its root during `remove_min`. It is given as parent → left child, right child:\n`10` → `4`, `5`\n`4` → `6`, `8`\nAll other nodes are leaves.\nAfter down-heap bubbling, which node is the <b>parent</b> of `10`?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`6`"
+        },
+        {
+          "i": "2",
+          "x": "`4`"
+        },
+        {
+          "i": "3",
+          "x": "`5`"
+        },
+        {
+          "i": "4",
+          "x": "`8`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Root `10` has children `4` and `5`. The smaller child is `4`, so swap: `4` becomes the root.",
+        "`10` is now the left child of `4`, with children `6` and `8`. The smaller child is `6`, and `10` is larger, so swap again.",
+        "`10` is now a leaf, so the process stops.",
+        "<mark>The parent of 10 is 6</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0027",
+      "q": "A heap is stored in an array (index 0 is the root):\n`[110, 98, 85, 58, 17, 27, 78, 12, 34]`\nWhich element is the <b>left child</b> of `98`?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`17`"
+        },
+        {
+          "i": "2",
+          "x": "`58`"
+        },
+        {
+          "i": "3",
+          "x": "`85`"
+        },
+        {
+          "i": "4",
+          "x": "`27`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "`98` is stored at index 1.",
+        "$\\text{leftChildIndex} = 2 \\times 1 + 1 = 3$.",
+        "<mark>Index 3 holds 58</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0028",
+      "q": "A heap is stored in an array (index 0 is the root):\n`[110, 98, 85, 58, 17, 27, 78, 12, 34]`\nWhich element is the <b>parent</b> of `78`?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`98`"
+        },
+        {
+          "i": "2",
+          "x": "`110`"
+        },
+        {
+          "i": "3",
+          "x": "`85`"
+        },
+        {
+          "i": "4",
+          "x": "`27`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "`78` is stored at index 6.",
+        "$\\text{parentIndex} = \\lfloor (6 - 1)/2 \\rfloor = \\lfloor 2.5 \\rfloor = 2$.",
+        "<mark>Index 2 holds 85</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0029",
+      "q": "In an array-based heap (index 0 is the root), a node is stored at index `4`. At which indexes are its <b>left</b> and <b>right</b> children?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`8` and `9`"
+        },
+        {
+          "i": "2",
+          "x": "`10` and `11`"
+        },
+        {
+          "i": "3",
+          "x": "`5` and `6`"
+        },
+        {
+          "i": "4",
+          "x": "`9` and `10`"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "With index 0 as the root, $\\text{leftChildIndex} = 2 \\times \\text{parentIndex} + 1$.",
+        "$\\text{rightChildIndex} = 2 \\times \\text{parentIndex} + 2$.",
+        "For parent index 4: left $= 2 \\times 4 + 1 = 9$ and right $= 2 \\times 4 + 2 = 10$.",
+        "<mark>The children are at indexes 9 and 10</mark>"
+      ]
+    },
+    {
+      "id": "dsa4_0030",
+      "q": "Which row gives the running times of a priority queue implemented with a <b>binary heap</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "add O(log n), remove_min O(log n), min O(log n)"
+        },
+        {
+          "i": "2",
+          "x": "add O(log n), remove_min O(log n), min O(1)"
+        },
+        {
+          "i": "3",
+          "x": "add O(1), remove_min O(n), min O(n)"
+        },
+        {
+          "i": "4",
+          "x": "add O(n), remove_min O(1), min O(1)"
+        }
+      ],
+      "a": "2",
+      "e": "In a heap, <b>add</b> and <b>remove_min</b> only swap along one root-to-leaf path (at most the height, about log n), and <b>min</b> just reads the root in O(1). (For an array-based heap add and remove_min are amortized because of occasional resizing.) Row 3 is the unsorted list and row 4 is the sorted list."
+    },
+    {
+      "id": "dsa4_0031",
+      "q": "In a heap-based priority queue, the worst-case number of swaps performed by <b>add</b> (up-heap bubbling) is bounded by what?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The number of leaves of the heap"
+        },
+        {
+          "i": "2",
+          "x": "The total number of entries n"
+        },
+        {
+          "i": "3",
+          "x": "The height of the heap, about log n"
+        },
+        {
+          "i": "4",
+          "x": "A constant that does not depend on n"
+        }
+      ],
+      "a": "3",
+      "e": "The new entry can move up at most one level per swap, from the bottom level to the root, so the number of swaps is at most the <b>height</b> of the heap, $\\lfloor \\log_2 n \\rfloor$. This is why <b>add</b> runs in <mark>O(log n)</mark>."
+    },
+    {
+      "id": "dsa4_0032",
+      "q": "A heap with <b>12</b> entries is stored in an array (index 0 is the root). At which index is the <b>last position</b>?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`12`"
+        },
+        {
+          "i": "2",
+          "x": "`11`"
+        },
+        {
+          "i": "3",
+          "x": "`6`"
+        },
+        {
+          "i": "4",
+          "x": "`13`"
+        }
+      ],
+      "a": "2",
+      "e": "Indexes start at 0, so a heap of n entries occupies indexes 0 to n - 1. The last position is at index $n - 1 = 12 - 1 = $ <mark>11</mark>."
+    },
+    {
+      "id": "dsa4_0033",
+      "q": "During down-heap bubbling in a <b>min-heap</b>, the current node p has a left child but <u>no</u> right child. Which child is compared with p?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Neither child, because the process stops immediately"
+        },
+        {
+          "i": "2",
+          "x": "The parent of p, because the swap goes upward"
+        },
+        {
+          "i": "3",
+          "x": "The sibling of p, because it has the smaller key"
+        },
+        {
+          "i": "4",
+          "x": "The left child, because it is the only child of p"
+        }
+      ],
+      "a": "4",
+      "e": "If p has no right child, the child c to compare is simply the <b>left child</b>. If p has both children, c is the child with the smaller key. p is swapped with c when p's key is larger than c's key."
+    },
+    {
+      "id": "dsa4_0034",
+      "q": "In the priority queue operation `P.add(k, v)`, what does the <b>key</b> `k` determine?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The position of the item in insertion order, which fixes its removal turn"
+        },
+        {
+          "i": "2",
+          "x": "The value stored with the item, which is returned by `len(P)`"
+        },
+        {
+          "i": "3",
+          "x": "The priority of the item: the item with the minimum key is removed first"
+        },
+        {
+          "i": "4",
+          "x": "The maximum number of items that `P` is allowed to hold"
+        }
+      ],
+      "a": "3",
+      "e": "The user designates the priority of an element through its <b>key</b>. The element with the minimum key is the next one removed (key 1 has priority over key 2), while `v` is just the associated value."
+    },
+    {
+      "id": "dsa4_0035",
+      "q": "Why is an <b>array</b> especially suitable for storing a heap?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A heap is a complete tree, so nodes fill the array without gaps and relatives are found by index arithmetic"
+        },
+        {
+          "i": "2",
+          "x": "A heap is a sorted structure, so its array stays in order and remove_min never needs any swaps"
+        },
+        {
+          "i": "3",
+          "x": "A heap is a full tree, so each node has either zero or two children and parent links are unnecessary"
+        },
+        {
+          "i": "4",
+          "x": "A heap needs random access, so a linked structure would make the heap-order property impossible"
+        }
+      ],
+      "a": "1",
+      "e": "A <b>complete</b> binary tree has no gaps, so its nodes map to consecutive array indexes level by level. Children and parents are then computed with formulas (such as $2j + 1$ and $\\lfloor (j-1)/2 \\rfloor$) with no pointers needed."
+    }
+  ]
+}
