@@ -1,0 +1,199 @@
+{
+  "qs": [
+    {
+      "id": "web4_0001",
+      "q": "What is <b>Bootstrap</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A free front-end framework for faster and easier web development"},
+        {"i": "2", "x": "A paid back-end framework for building database-driven web servers"},
+        {"i": "3", "x": "A free server-side language for processing data sent from forms"},
+        {"i": "4", "x": "A browser extension that makes web pages load faster for visitors"}
+      ],
+      "a": "1",
+      "e": "Bootstrap is a free front-end framework (HTML, CSS, and JavaScript) for developing responsive, mobile-first websites faster and more easily."
+    },
+    {
+      "id": "web4_0002",
+      "q": "Which statement best describes what Bootstrap provides?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Server scripts for forms, buttons and tables, plus optional database plugins"},
+        {"i": "2", "x": "Design templates for typography, forms, buttons and tables, plus mandatory JavaScript plugins"},
+        {"i": "3", "x": "Design templates for typography, forms, buttons and tables, plus optional JavaScript plugins"},
+        {"i": "4", "x": "Design templates for desktop pages only, plus optional JavaScript plugins"}
+      ],
+      "a": "3",
+      "e": "Bootstrap includes HTML- and CSS-based design templates for typography, forms, buttons, tables, images and more, and it also offers <u>optional</u> JavaScript plugins. It also makes it easy to create responsive designs."
+    },
+    {
+      "id": "web4_0003",
+      "q": "What does <b>responsive web design</b> mean?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Building sites that load faster by compressing all of their images"},
+        {"i": "2", "x": "Building sites that automatically adjust to look good on all devices"},
+        {"i": "3", "x": "Building sites that respond only to mouse clicks and key presses"},
+        {"i": "4", "x": "Building separate versions of a site for each device manufacturer"}
+      ],
+      "a": "2",
+      "e": "Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops."
+    },
+    {
+      "id": "web4_0004",
+      "q": "A team with only <u>basic</u> HTML and CSS knowledge must build a site that works in Chrome, Firefox, Edge, Safari and Opera. Which two advantages of Bootstrap help them most?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Mobile-first approach and responsive features"},
+        {"i": "2", "x": "Easy to use and mobile-first approach"},
+        {"i": "3", "x": "Responsive features and browser compatibility"},
+        {"i": "4", "x": "Easy to use and browser compatibility"}
+      ],
+      "a": "4",
+      "e": "<b>Easy to use</b>: anybody with just basic knowledge of HTML and CSS can start using Bootstrap. <b>Browser compatibility</b>: Bootstrap is compatible with all modern browsers (Chrome, Firefox, Internet Explorer, Edge, Safari, and Opera)."
+    },
+    {
+      "id": "web4_0005",
+      "q": "Which option correctly matches an advantage of Bootstrap with its description?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Responsive features — the CSS adjusts to phones, tablets and desktops"},
+        {"i": "2", "x": "Mobile-first approach — the CSS adjusts to phones, tablets and desktops"},
+        {"i": "3", "x": "Browser compatibility — anybody with basic HTML and CSS can start using it"},
+        {"i": "4", "x": "Easy to use — mobile-first styles are part of the core framework"}
+      ],
+      "a": "1",
+      "e": "<b>Responsive features</b>: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops. <b>Mobile-first approach</b>: mobile-first styles are part of the core framework. <b>Easy to use</b> refers to basic HTML and CSS knowledge being enough, and <b>browser compatibility</b> refers to working in all modern browsers."
+    },
+    {
+      "id": "web4_0006",
+      "q": "Which statement about <b>Bootstrap 5</b> is correct according to the lecture?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It is the oldest version, kept for older browsers with fewer components"},
+        {"i": "2", "x": "It is the newest version, but it supports only one major browser and platform"},
+        {"i": "3", "x": "It is the newest version, with new components, faster style sheets and more responsiveness"},
+        {"i": "4", "x": "It is the newest version, but it removes responsive design to run faster"}
+      ],
+      "a": "3",
+      "e": "Bootstrap 5 is the newest version, with new components, faster style sheets, and more responsiveness. It supports the latest, stable releases of all major browsers and platforms."
+    },
+    {
+      "id": "web4_0007",
+      "q": "What is the main difference between Bootstrap 5 and Bootstrap 3 &amp; 4?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Bootstrap 5 uses jQuery instead of plain JavaScript"},
+        {"i": "2", "x": "Bootstrap 5 uses plain JavaScript instead of jQuery"},
+        {"i": "3", "x": "Bootstrap 5 drops HTML templates and keeps only CSS files"},
+        {"i": "4", "x": "Bootstrap 5 works only on desktops and not on phones"}
+      ],
+      "a": "2",
+      "e": "The main difference stated in the lecture is that Bootstrap 5 switched to JavaScript instead of jQuery, while Bootstrap 3 and 4 depend on jQuery."
+    },
+    {
+      "id": "web4_0008",
+      "q": "According to the lecture, what is true about the <b>mobile-first approach</b> in Bootstrap 3?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Mobile-first styles are an optional add-on that is installed separately"},
+        {"i": "2", "x": "Mobile-first styles work only when Bootstrap is used through a CDN"},
+        {"i": "3", "x": "Mobile-first styles are part of the core framework itself"},
+        {"i": "4", "x": "Mobile-first styles apply only to tablets and not to phones"}
+      ],
+      "a": "3",
+      "e": "In Bootstrap 3, mobile-first styles are part of the core framework — they do not need a separate add-on."
+    },
+    {
+      "id": "web4_0009",
+      "q": "Which two ways does the lecture give for starting to use Bootstrap on your own website?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Buy a license from getbootstrap.com, or include it from a CDN"},
+        {"i": "2", "x": "Download it from getbootstrap.com, or include it from a CDN"},
+        {"i": "3", "x": "Download it from getbootstrap.com, or write it from scratch in CSS"},
+        {"i": "4", "x": "Copy it from a browser's cache, or include it from a CDN"}
+      ],
+      "a": "2",
+      "e": "Bootstrap is completely free. You can either download it from getbootstrap.com and link the files in your HTML, or include it from a CDN."
+    },
+    {
+      "id": "web4_0010",
+      "q": "What does <b>CDN</b> stand for, and why is it used to include Bootstrap?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Content Display Network — it is the quickest way to get started"},
+        {"i": "2", "x": "Content Delivery Network — it requires downloading all files first"},
+        {"i": "3", "x": "Content Delivery Network — it is the quickest way to get started"},
+        {"i": "4", "x": "Code Distribution Node — it is the quickest way to get started"}
+      ],
+      "a": "3",
+      "e": "CDN means Content Delivery Network. Including Bootstrap through a CDN is the quickest way to get started, because you only copy the CSS link and the JavaScript script tag from the official Bootstrap documentation instead of downloading files."
+    },
+    {
+      "id": "web4_0011",
+      "q": "When including Bootstrap through a CDN, where should the <b>CSS link</b> and the <b>JavaScript bundle</b> be placed?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Both the CSS link and the JavaScript bundle in the `<head>`"},
+        {"i": "2", "x": "CSS link before the closing `</body>`; JavaScript bundle in the `<head>`"},
+        {"i": "3", "x": "Both the CSS link and the JavaScript bundle before the closing `</body>`"},
+        {"i": "4", "x": "CSS link in the `<head>`; JavaScript bundle before the closing `</body>`"}
+      ],
+      "a": "4",
+      "e": "Copy the CSS `<link>` into the `<head>`, and the JavaScript bundle (including Popper.js) `<script>` tag before the closing `</body>` tag, as given in the official Bootstrap documentation."
+    },
+    {
+      "id": "web4_0012",
+      "q": "Study the CDN example:\n```html\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\">\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script>\n```\nWhat is the role of these three lines?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The `<link>` loads jQuery, and the two `<script>` tags load Bootstrap's CSS and JavaScript"},
+        {"i": "2", "x": "The `<link>` loads Bootstrap's CSS, and the two `<script>` tags load jQuery and Bootstrap's JavaScript"},
+        {"i": "3", "x": "The `<link>` loads Bootstrap's JavaScript, and the two `<script>` tags load jQuery and Bootstrap's CSS"},
+        {"i": "4", "x": "The `<link>` and the first `<script>` load Bootstrap's CSS, and the last `<script>` loads jQuery"}
+      ],
+      "a": "2",
+      "e": "The `<link>` tag points to `bootstrap.min.css` (the styles). The first `<script>` loads jQuery, and the last `<script>` loads Bootstrap's JavaScript file `bootstrap.min.js`."
+    },
+    {
+      "id": "web4_0013",
+      "q": "The lecture's CDN example loads <b>jQuery</b> before `bootstrap.min.js` (version 3.4.1). Which statement explains why this is needed?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "jQuery is needed only to make the layout responsive on small phones"},
+        {"i": "2", "x": "jQuery is required for every Bootstrap version, including Bootstrap 5"},
+        {"i": "3", "x": "Bootstrap 3 relies on jQuery, which Bootstrap 5 replaced with plain JavaScript"},
+        {"i": "4", "x": "Bootstrap 3 relies on jQuery, and Bootstrap 5 also needs it for its CSS files"}
+      ],
+      "a": "3",
+      "e": "The lecture says Bootstrap 5 switched to JavaScript instead of jQuery, which means Bootstrap 3 (the version used in the example, 3.4.1) depends on jQuery. That is why the jQuery script is included before `bootstrap.min.js`."
+    },
+    {
+      "id": "web4_0014",
+      "q": "A developer downloads Bootstrap from getbootstrap.com instead of using a CDN. What must be done next to use it in a page?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Nothing, because the browser detects the downloaded files automatically"},
+        {"i": "2", "x": "Convert the downloaded files into a CDN link before using them"},
+        {"i": "3", "x": "Rename the downloaded files to `.html` so the page can load them"},
+        {"i": "4", "x": "Link the downloaded Bootstrap files in the HTML page"}
+      ],
+      "a": "4",
+      "e": "The second way to use Bootstrap is to download its files from getbootstrap.com and <u>link them</u> in your HTML page, just like any other CSS and JavaScript files."
+    },
+    {
+      "id": "web4_0015",
+      "q": "The same Bootstrap page looks good on a small phone and on a large desktop, without building separate versions. Which feature is mainly responsible?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Its optional JavaScript plugins, which download a different page for each device"},
+        {"i": "2", "x": "Its responsive CSS, which adjusts the layout to the screen size"},
+        {"i": "3", "x": "Its CDN, which detects the device and replaces the HTML file"},
+        {"i": "4", "x": "Its download package, which contains one page per device type"}
+      ],
+      "a": "2",
+      "e": "Bootstrap's responsive CSS adjusts automatically to phones, tablets, and desktops. This is what responsive web design means: one site that looks good on all devices."
+    }
+  ]
+}

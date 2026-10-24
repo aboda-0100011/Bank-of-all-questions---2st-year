@@ -1,0 +1,494 @@
+{
+  "qs": [
+    {
+      "id": "web5_0001",
+      "q": "Study the script:\n```js\nvar today = new Date();\nvar hourNow = today.getHours();\nvar greeting;\n\nif (hourNow > 18) {\n  greeting = 'Good evening';\n} else if (hourNow > 12) {\n  greeting = 'Good afternoon';\n} else if (hourNow > 0) {\n  greeting = 'Good morning';\n} else {\n  greeting = 'Welcome';\n}\n\ndocument.write(greeting);\n```\nWhat is written on the page when `hourNow` is exactly `12`?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`Good evening`"},
+        {"i": "2", "x": "`Good afternoon`"},
+        {"i": "3", "x": "`Good morning`"},
+        {"i": "4", "x": "`Welcome`"}
+      ],
+      "a": "3",
+      "e": [
+        "`12 > 18` is false, so the first branch is skipped.",
+        "`12 > 12` is also false (12 is <u>not</u> greater than 12), so the second branch is skipped.",
+        "`12 > 0` is true, so `greeting` becomes `'Good morning'`.",
+        "<mark>The page shows Good morning.</mark>"
+      ],
+      "ref": "Slide 3"
+    },
+    {
+      "id": "web5_0002",
+      "q": "Which option correctly matches each layer of a web page with its file type?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Content — `.css`, Presentation — `.html`, Behavior — `.js`"},
+        {"i": "2", "x": "Content — `.html`, Presentation — `.css`, Behavior — `.js`"},
+        {"i": "3", "x": "Content — `.html`, Presentation — `.js`, Behavior — `.css`"},
+        {"i": "4", "x": "Content — `.js`, Presentation — `.css`, Behavior — `.html`"}
+      ],
+      "a": "2",
+      "e": "It is preferred to keep the three languages in separate files: <b>content</b> in `.html` files, <b>presentation</b> in `.css` files, and <b>behavior</b> in `.js` files.",
+      "ref": "Slide 4"
+    },
+    {
+      "id": "web5_0003",
+      "q": "Study the page:\n```html\n<head>\n<script>\nfunction myFunction() {\n  document.getElementById(\"demo\").innerHTML = \"Paragraph changed.\";\n}\n</script>\n</head>\n<body>\n<p id=\"demo\">A Paragraph</p>\n<button type=\"button\" onclick=\"myFunction()\">Try it</button>\n</body>\n```\nWhen does the paragraph text change to <b>Paragraph changed.</b>?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "When the page finishes loading, because the function is in the `<head>`"},
+        {"i": "2", "x": "When the user clicks the button, because `onclick` calls `myFunction()`"},
+        {"i": "3", "x": "When the user moves the mouse over the paragraph"},
+        {"i": "4", "x": "Immediately when the script is read, because functions run when defined"}
+      ],
+      "a": "2",
+      "e": "The code inside `myFunction()` runs only when the function is called. Here the button's `onclick` event handler calls it, so the text changes when the user clicks <i>Try it</i>. Defining a function in the `<head>` does not run it.",
+      "ref": "Slide 6"
+    },
+    {
+      "id": "web5_0004",
+      "q": "Which line correctly links the external JavaScript file <b>myScript.js</b> to an HTML page?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`<script src=\"myScript.js\"></script>`"},
+        {"i": "2", "x": "`<script href=\"myScript.js\"></script>`"},
+        {"i": "3", "x": "`<link src=\"myScript.js\"></link>`"},
+        {"i": "4", "x": "`<js src=\"myScript.js\"></js>`"}
+      ],
+      "a": "1",
+      "e": "An external script is linked by putting the file name in the `src` attribute of a `<script>` tag. JavaScript files use the `.js` extension, and the reference can be placed in the `<head>` or the `<body>`.",
+      "ref": "Slide 7"
+    },
+    {
+      "id": "web5_0005",
+      "q": "Which option correctly matches a JavaScript keyword with its description?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`let` — marks a block of statements to run in a loop"},
+        {"i": "2", "x": "`try` — exits a function"},
+        {"i": "3", "x": "`const` — declares a block constant"},
+        {"i": "4", "x": "`return` — implements error handling for a block of statements"}
+      ],
+      "a": "3",
+      "e": "`const` declares a block constant. `let` declares a block variable, `for` marks a block of statements to run in a loop, `return` exits a function, and `try` implements error handling.",
+      "ref": "Slide 9"
+    },
+    {
+      "id": "web5_0006",
+      "q": "Which of the following is a <u>valid</u> JavaScript variable name?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`2price`"},
+        {"i": "2", "x": "`my-price`"},
+        {"i": "3", "x": "`let`"},
+        {"i": "4", "x": "`$price_2`"}
+      ],
+      "a": "4",
+      "e": "Names can contain letters, digits, underscores and dollar signs, may begin with a letter, `$` or `_`, and cannot be reserved words. `2price` starts with a digit, `my-price` contains a hyphen, and `let` is a keyword.",
+      "ref": "Slide 10"
+    },
+    {
+      "id": "web5_0007",
+      "q": "Study the code:\n```js\nfunction greet() {\n  let a = 'hello';\n  if (a == 'hello') {\n    let b = 'world';\n    console.log(a + ' ' + b);\n  }\n  console.log(a + ' ' + b);\n}\ngreet();\n```\nWhat happens at the <u>second</u> `console.log`?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "It prints `hello world`, because `b` is visible in the whole function"},
+        {"i": "2", "x": "It prints `hello undefined`, because `b` exists but has no value"},
+        {"i": "3", "x": "It raises an error, because `b` is not accessible outside its `if` block"},
+        {"i": "4", "x": "It prints `hello`, because the missing variable is simply ignored"}
+      ],
+      "a": "3",
+      "e": [
+        "`a` is declared with `let` inside the function, so it can be used anywhere inside `greet()`.",
+        "`b` is declared with `let` inside the `if` block, so it can be accessed <u>only</u> inside that block.",
+        "The first `console.log` is inside the block, so it prints `hello world`.",
+        "<mark>The second `console.log` is outside the block, so using `b` there causes an error.</mark>"
+      ],
+      "ref": "Slide 11"
+    },
+    {
+      "id": "web5_0008",
+      "q": "Let `x = 2`. What is the value of `x` after these statements?\n```js\nx **= 3;\nx %= 5;\n```",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`1`"},
+        {"i": "2", "x": "`3`"},
+        {"i": "3", "x": "`4`"},
+        {"i": "4", "x": "`8`"}
+      ],
+      "a": "2",
+      "e": [
+        "`x **= 3` means `x = x ** 3` (exponentiation), so `x = 2 ** 3 = 8`.",
+        "`x %= 5` means `x = x % 5` (the remainder of the division), so `x = 8 % 5 = 3`.",
+        "<mark>x = 3</mark>"
+      ],
+      "ref": "Slides 12-13"
+    },
+    {
+      "id": "web5_0009",
+      "q": "Let `let x = 5;` (a number). Which expression evaluates to <b>true</b>?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "`x === \"5\"`"},
+        {"i": "2", "x": "`x !== 5`"},
+        {"i": "3", "x": "`x === 6 - 2`"},
+        {"i": "4", "x": "`x !== \"5\"`"}
+      ],
+      "a": "4",
+      "e": "`===` is true only when both value and type are equal, and `!==` is true when the value <i>or</i> the type is different. Here `x` is the number `5` while `\"5\"` is a string, so `x !== \"5\"` is true. `x === \"5\"` is false (different type), `x !== 5` is false (same value and type), and `x === 6 - 2` compares 5 with 4.",
+      "ref": "Slide 14"
+    },
+    {
+      "id": "web5_0010",
+      "q": "Study the function:\n```js\nfunction toCelsius(fahrenheit) {\n  return (5/9) * (fahrenheit - 32);\n}\ndocument.getElementById(\"demo\").innerHTML = toCelsius(77);\n```\nWhat value is displayed?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`25`"},
+        {"i": "2", "x": "`45`"},
+        {"i": "3", "x": "`77`"},
+        {"i": "4", "x": "`5`"}
+      ],
+      "a": "1",
+      "e": [
+        "Call `toCelsius(77)`: the parameter `fahrenheit` is `77`.",
+        "Evaluate the parentheses: `77 - 32 = 45`.",
+        "Multiply: `(5/9) * 45 = 25`.",
+        "<mark>The page displays 25.</mark>"
+      ],
+      "ref": "Slide 16"
+    },
+    {
+      "id": "web5_0011",
+      "q": "Which statement about <b>local variables</b> in JavaScript is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "They remain in memory after the function completes and can be reused by other code"},
+        {"i": "2", "x": "They can be accessed from outside the function that declares them"},
+        {"i": "3", "x": "They are created when the function starts and deleted when it completes"},
+        {"i": "4", "x": "Two different functions cannot use the same local variable name"}
+      ],
+      "a": "3",
+      "e": "Variables declared inside a function are <b>local</b> to it: they are created when the function starts, can only be accessed inside it, and are deleted when it completes. Because they are local, different functions can use variables with the same name.",
+      "ref": "Slide 17"
+    },
+    {
+      "id": "web5_0012",
+      "q": "Study the object:\n```js\nconst person = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n  id: 5566,\n  fullName: function() {\n    return this.firstName + \" \" + this.lastName;\n  }\n};\n```\nWhat does `person.fullName()` return, and what does `this` refer to?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`undefined`; `this` cannot be used inside an object"},
+        {"i": "2", "x": "`John Doe`; `this` is the `fullName` function that owns `person`"},
+        {"i": "3", "x": "`John Doe`; `this` is the `person` object that owns `fullName`"},
+        {"i": "4", "x": "`5566`; `this` refers to the `id` property of `person`"}
+      ],
+      "a": "3",
+      "e": "`fullName` is a <b>method</b>: a function stored in a property. Inside it, `this` refers to the <b>owner</b> of the function, the `person` object, so `this.firstName` is `\"John\"` and `this.lastName` is `\"Doe\"`. The call returns <mark>John Doe</mark>.",
+      "ref": "Slide 20"
+    },
+    {
+      "id": "web5_0013",
+      "q": "In the example below, what is `onclick`?\n```html\n<input type=\"button\" onclick=\"sayHello()\" value=\"Say Hello\" />\n```",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "An event handler attribute that runs `sayHello()` when the button is clicked"},
+        {"i": "2", "x": "A JavaScript keyword that declares the function `sayHello()` for the button"},
+        {"i": "3", "x": "A regular expression modifier that matches the text `Say Hello` in the button"},
+        {"i": "4", "x": "An operator that compares the button's value with the result of `sayHello()`"}
+      ],
+      "a": "1",
+      "e": "HTML allows <b>event handler attributes</b> that attach JavaScript code to elements. When the event (here a click) happens on the button, the browser executes `sayHello()`.",
+      "ref": "Slide 22"
+    },
+    {
+      "id": "web5_0014",
+      "q": "Which option matches <u>both</u> events with the correct situation?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`onmouseover` — the user moves the mouse away from an element; `onchange` — an element has been changed"},
+        {"i": "2", "x": "`onmouseout` — the user moves the mouse over an element; `onkeydown` — the browser has finished loading the page"},
+        {"i": "3", "x": "`onload` — the browser has finished loading the page; `onkeydown` — the user pushes a keyboard key"},
+        {"i": "4", "x": "`onclick` — an element has been changed; `onmouseout` — the user clicks an HTML element"}
+      ],
+      "a": "3",
+      "e": "`onload`: the browser has finished loading the page. `onkeydown`: the user pushes a keyboard key. Other common events: `onclick` (the user clicks an element), `onmouseover` (the mouse moves over an element), `onmouseout` (the mouse moves away), and `onchange` (an element has been changed).",
+      "ref": "Slide 23"
+    },
+    {
+      "id": "web5_0015",
+      "q": "Given `let str = \"Apple, Banana, Kiwi\";`, which statement about `str.slice(7, 13)` and `str.substr(7, 6)` is correct?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`slice` returns `Banana`, but `substr` returns `Banana,` because it counts one extra character"},
+        {"i": "2", "x": "Both return `Banana`: the second parameter is a length in `slice` and an end position in `substr`"},
+        {"i": "3", "x": "`slice` returns `Banana, Kiwi`, but `substr` returns `Banana` because its length is 6"},
+        {"i": "4", "x": "Both return `Banana`: the second parameter is an end position in `slice` and a length in `substr`"}
+      ],
+      "a": "4",
+      "e": [
+        "Count from index 0: `Apple` takes indexes 0–4, the comma is 5, and the space is 6, so `B` is at index `7`.",
+        "`slice(7, 13)` extracts from index 7 up to (but not including) index 13 → `Banana`.",
+        "`substr(7, 6)` starts at index 7 and extracts <u>6 characters</u> → `Banana`.",
+        "<mark>Both give Banana: slice(start, end) versus substr(start, length).</mark>"
+      ],
+      "ref": "Slide 25"
+    },
+    {
+      "id": "web5_0016",
+      "q": "Given `let text = \"Please visit Microsoft!\";`, which statement replaces <b>Microsoft</b> with <b>W3Schools</b> even though the pattern is written in upper case (`MICROSOFT`)?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`text.replace(\"MICROSOFT\", \"W3Schools\")`"},
+        {"i": "2", "x": "`text.replace(/MICROSOFT/i, \"W3Schools\")`"},
+        {"i": "3", "x": "`text.replace(/MICROSOFT/g, \"W3Schools\")`"},
+        {"i": "4", "x": "`text.replace(/MICROSOFT/m, \"W3Schools\")`"}
+      ],
+      "a": "2",
+      "e": "`replace()` is case sensitive, so a plain string or a `/g` pattern written as `MICROSOFT` does not match `Microsoft`. The `/i` flag performs case-insensitive matching. The `/g` flag finds all matches (still case sensitive), and `/m` is for multiline matching.",
+      "ref": "Slide 26"
+    },
+    {
+      "id": "web5_0017",
+      "q": "Given `let str = \"Please locate where 'locate' occurs!\";`, what do `str.indexOf(\"locate\")` and `str.lastIndexOf(\"locate\")` return?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`21` and `7`"},
+        {"i": "2", "x": "`8` and `22`"},
+        {"i": "3", "x": "`7` and `-1`"},
+        {"i": "4", "x": "`7` and `21`"}
+      ],
+      "a": "4",
+      "e": [
+        "Count from index 0: `Please` takes indexes 0–5 and the space is index 6, so the first `locate` starts at index `7`.",
+        "`indexOf()` returns the position of the <u>first</u> occurrence → `7`.",
+        "The first `locate` ends at index 12, then come a space (13), `where` (14–18), a space (19), and the quote `'` (20), so the second `locate` starts at index `21`.",
+        "`lastIndexOf()` returns the position of the <u>last</u> occurrence → `21`.",
+        "<mark>7 and 21</mark>"
+      ],
+      "ref": "Slide 28"
+    },
+    {
+      "id": "web5_0018",
+      "q": "Which statement correctly compares `indexOf()` and `search()`?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "`search()` supports regular expressions, not a start position; `indexOf()` is the opposite"},
+        {"i": "2", "x": "`indexOf()` supports regular expressions, not a start position; `search()` is the opposite"},
+        {"i": "3", "x": "Both accept regular expressions as search values, but only `indexOf()` accepts a start position"},
+        {"i": "4", "x": "Both accept a start position as a second argument, but only `search()` accepts regular expressions"}
+      ],
+      "a": "1",
+      "e": "`search()` can use powerful search values (regular expressions) but cannot take a second start-position argument. `indexOf()` can take a start position but cannot use regular expressions. This is why the two methods are <u>not</u> equal.",
+      "ref": "Slide 29"
+    },
+    {
+      "id": "web5_0019",
+      "q": "What does `\"Hello World\".search(/WORLD/i)` return?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`0`"},
+        {"i": "2", "x": "`6`"},
+        {"i": "3", "x": "`-1`"},
+        {"i": "4", "x": "`5`"}
+      ],
+      "a": "2",
+      "e": [
+        "The `/i` modifier performs case-insensitive matching, so `WORLD` matches `World`.",
+        "`search()` returns the position of the match, counted from 0.",
+        "`Hello` occupies indexes 0–4 and the space is index 5, so `World` starts at index `6`.",
+        "<mark>The result is 6.</mark>"
+      ],
+      "ref": "Slide 43"
+    },
+    {
+      "id": "web5_0020",
+      "q": "Given `let text = \"The rain in SPAIN stays mainly in the plain\";`, how many matches are returned by `text.match(/ain/g)`?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`3`"},
+        {"i": "2", "x": "`4`"},
+        {"i": "3", "x": "`2`"},
+        {"i": "4", "x": "`1`"}
+      ],
+      "a": "1",
+      "e": [
+        "`match()` with a regular expression returns the matches as an Array, and the `/g` flag finds <u>all</u> matches instead of stopping after the first.",
+        "Without `/i`, matching is case sensitive, so `AIN` inside `SPAIN` does <u>not</u> match.",
+        "The matches come from `rain`, `mainly`, and `plain`, each giving `ain`.",
+        "<mark>3 matches.</mark>"
+      ],
+      "ref": "Slide 29"
+    },
+    {
+      "id": "web5_0021",
+      "q": "Which statement correctly creates an array named <b>cars</b> holding `\"Saab\"`, `\"Volvo\"`, and `\"BMW\"` using the `new` keyword?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`const cars = new Array[\"Saab\", \"Volvo\", \"BMW\"];`"},
+        {"i": "2", "x": "`const cars = new Array{\"Saab\", \"Volvo\", \"BMW\"};`"},
+        {"i": "3", "x": "`const cars = Array.new(\"Saab\", \"Volvo\", \"BMW\");`"},
+        {"i": "4", "x": "`const cars = new Array(\"Saab\", \"Volvo\", \"BMW\");`"}
+      ],
+      "a": "4",
+      "e": "An array can be created with a literal `[...]` or with `new Array(\"Saab\", \"Volvo\", \"BMW\")`: the values go between parentheses, separated by commas. The other forms do not create the array correctly.",
+      "ref": "Slide 30"
+    },
+    {
+      "id": "web5_0022",
+      "q": "Given `const fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];`, what do `fruits.length` and `fruits[fruits.length - 1]` return?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`3` and `\"Mango\"`"},
+        {"i": "2", "x": "`4` and `\"Mango\"`"},
+        {"i": "3", "x": "`4` and `\"Apple\"`"},
+        {"i": "4", "x": "`4` and `undefined`"}
+      ],
+      "a": "2",
+      "e": [
+        "`length` returns the number of array elements → `4`.",
+        "Indexes start at 0, so the last element has index `length - 1 = 3`.",
+        "`fruits[3]` is `\"Mango\"` (`fruits[4]` would be `undefined`, because there is no fifth element).",
+        "<mark>4 and \"Mango\"</mark>"
+      ],
+      "ref": "Slide 32"
+    },
+    {
+      "id": "web5_0023",
+      "q": "Study the code:\n```js\nconst fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];\nlet x = fruits.pop();\nlet y = fruits.push(\"Kiwi\");\n```\nWhat are the values of `x` and `y`?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`x` is `\"Mango\"` and `y` is `5`"},
+        {"i": "2", "x": "`x` is `\"Banana\"` and `y` is `4`"},
+        {"i": "3", "x": "`x` is `\"Mango\"` and `y` is `\"Kiwi\"`"},
+        {"i": "4", "x": "`x` is `\"Mango\"` and `y` is `4`"}
+      ],
+      "a": "4",
+      "e": [
+        "`pop()` removes the <u>last</u> element and returns the value that was popped out, so `x` is `\"Mango\"`.",
+        "The array is now `[\"Banana\", \"Orange\", \"Apple\"]` (length 3).",
+        "`push(\"Kiwi\")` adds the element at the end and returns the <u>new array length</u>, so `y` is `3 + 1 = 4`.",
+        "<mark>x = \"Mango\" and y = 4</mark>"
+      ],
+      "ref": "Slide 34"
+    },
+    {
+      "id": "web5_0024",
+      "q": "Study the code:\n```js\nconst fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];\nfruits.shift();\nfruits.unshift(\"Lemon\");\nfruits[fruits.length] = \"Kiwi\";\n```\nWhat does `fruits` contain at the end?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`[\"Lemon\", \"Banana\", \"Orange\", \"Apple\", \"Kiwi\"]`"},
+        {"i": "2", "x": "`[\"Orange\", \"Apple\", \"Mango\", \"Lemon\", \"Kiwi\"]`"},
+        {"i": "3", "x": "`[\"Lemon\", \"Orange\", \"Apple\", \"Mango\", \"Kiwi\"]`"},
+        {"i": "4", "x": "`[\"Lemon\", \"Orange\", \"Apple\", \"Mango\"]`"}
+      ],
+      "a": "3",
+      "e": [
+        "`shift()` removes the <u>first</u> element and shifts the others to a lower index: `[\"Orange\", \"Apple\", \"Mango\"]`.",
+        "`unshift(\"Lemon\")` adds an element at the <u>beginning</u> and keeps the older ones: `[\"Lemon\", \"Orange\", \"Apple\", \"Mango\"]`.",
+        "`fruits.length` is now `4`, so `fruits[fruits.length] = \"Kiwi\"` appends `\"Kiwi\"` at index 4.",
+        "<mark>[\"Lemon\", \"Orange\", \"Apple\", \"Mango\", \"Kiwi\"]</mark>"
+      ],
+      "ref": "Slide 35"
+    },
+    {
+      "id": "web5_0025",
+      "q": "Which Number method formats a number with a specific number of digits to the <u>right</u> of the decimal point?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`toPrecision()`"},
+        {"i": "2", "x": "`toExponential()`"},
+        {"i": "3", "x": "`valueOf()`"},
+        {"i": "4", "x": "`toFixed()`"}
+      ],
+      "a": "4",
+      "e": "`toFixed()` formats a number with a specific number of digits to the right of the decimal. `toPrecision()` defines how many <i>total</i> digits to display, `toExponential()` forces exponential notation, and `valueOf()` returns the number's value.",
+      "ref": "Slide 36"
+    },
+    {
+      "id": "web5_0026",
+      "q": "What does `d.getTime()` return in the following code?\n```js\nconst d = new Date();\ndocument.getElementById(\"demo\").innerHTML = d.getTime();\n```",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "The current time of day as hours and minutes"},
+        {"i": "2", "x": "The number of milliseconds since January 1, 1970"},
+        {"i": "3", "x": "The day of the week as a number from 0 to 6"},
+        {"i": "4", "x": "The number of seconds since the page finished loading"}
+      ],
+      "a": "2",
+      "e": "`getTime()` returns the numeric value of the date as the number of milliseconds since January 1, 1970, 00:00:00 UTC — the starting point of JavaScript's internal clock. The day of the week comes from `getDay()`, and the hours from `getHours()`.",
+      "ref": "Slide 40"
+    },
+    {
+      "id": "web5_0027",
+      "q": "What does `Math.max(3, 9, 4) + Math.sqrt(16)` evaluate to?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`13`"},
+        {"i": "2", "x": "`7`"},
+        {"i": "3", "x": "`25`"},
+        {"i": "4", "x": "`19`"}
+      ],
+      "a": "1",
+      "e": [
+        "`Math.max(3, 9, 4)` returns the largest of the numbers → `9`.",
+        "`Math.sqrt(16)` returns the square root of 16 → `4`.",
+        "<mark>9 + 4 = 13</mark>"
+      ],
+      "ref": "Slide 42"
+    },
+    {
+      "id": "web5_0028",
+      "q": "Study the code:\n```js\nlet text = \"\\nIs th\\nis it?\";\nlet result = text.match(/^is/m);\n```\nWhat does `result` contain?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "A match for `Is` at the start of the second line"},
+        {"i": "2", "x": "A match for `is` at the start of the third line"},
+        {"i": "3", "x": "Two matches: `Is` and `is`, one on each line"},
+        {"i": "4", "x": "No match, because `^` only matches at the start of the whole string"}
+      ],
+      "a": "2",
+      "e": [
+        "The string has three lines: an empty line, `Is th`, and `is it?`.",
+        "`^` matches the start of a <u>line</u> when the `/m` (multiline) modifier is used.",
+        "Matching is case sensitive (there is no `/i`), so `Is th` does <u>not</u> match `is`.",
+        "Only the third line `is it?` starts with `is`.",
+        "<mark>result contains is.</mark>"
+      ],
+      "ref": "Slide 44"
+    },
+    {
+      "id": "web5_0029",
+      "q": "Study the code:\n```js\nlet text = \"HELLO, LOOK AT YOU!\";\nlet result = text.search(/\\bLO/);\n```\nWhat is the value of `result`?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`0`"},
+        {"i": "2", "x": "`3`"},
+        {"i": "3", "x": "`7`"},
+        {"i": "4", "x": "`-1`"}
+      ],
+      "a": "3",
+      "e": [
+        "`\\bLO` finds `LO` at the <u>beginning</u> of a word (`\\b` is a word boundary).",
+        "`HELLO` contains `LO` at index 3, but it is in the middle of the word, so it does not match.",
+        "Counting from 0: `HELLO,` takes indexes 0–5 and the space is index 6, so `LOOK` starts at index `7`.",
+        "`search()` returns the position of the match → <mark>7</mark>."
+      ],
+      "ref": "Slide 46"
+    },
+    {
+      "id": "web5_0030",
+      "q": "Which regular expression performs a <b>global</b> search for an `l` followed by <u>zero or more</u> `o` characters?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`/lo+/g`"},
+        {"i": "2", "x": "`/lo?/g`"},
+        {"i": "3", "x": "`/l(o)/g`"},
+        {"i": "4", "x": "`/lo*/g`"}
+      ],
+      "a": "4",
+      "e": "In regular expressions `n*` matches zero or more occurrences of `n`, so `lo*` matches `l`, `lo`, `loo`, and so on. `lo+` needs at least one `o`, `lo?` allows zero or one `o`, and `l(o)` requires exactly one `o`. The `/g` flag makes the search global.",
+      "ref": "Slide 46"
+    }
+  ]
+}

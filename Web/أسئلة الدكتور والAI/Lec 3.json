@@ -1,1 +1,410 @@
-{"qs": []}
+{
+  "qs": [
+    {
+      "id": "web3_0001",
+      "q": "The <b>Quiz</b> page shows four buildings arranged in two rows and two columns. Each cell holds a picture, a bold title, and a caption, and everything must stay inside <u>one</u> page. Which HTML element is the most suitable for building this layout?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`<table>`"},
+        {"i": "2", "x": "`<frameset>`"},
+        {"i": "3", "x": "`<select>`"},
+        {"i": "4", "x": "`<textarea>`"}
+      ],
+      "a": "1",
+      "e": "A <b>table</b> arranges content in rows (`<tr>`) and cells (`<td>`), and each cell can hold an image, bold text, and a caption. Four cells in two rows give the required 2 × 2 grid in a single page, whereas `<frameset>` splits the window into separate pages."
+    },
+    {
+      "id": "web3_0002",
+      "q": "Which statement about the `<form>` element is correct?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It can contain only form controls, so paragraphs and headings are not allowed"},
+        {"i": "2", "x": "It can contain paragraphs and headings, and also other nested `<form>` elements"},
+        {"i": "3", "x": "It can contain paragraphs and headings, but not another `<form>` element"},
+        {"i": "4", "x": "It can contain frames and framesets, but not text boxes or buttons"}
+      ],
+      "a": "3",
+      "e": "A `<form>` is a combination of form controls (text boxes, select boxes, checkboxes, radio buttons, buttons), and it can also contain other markup such as paragraphs and headings. It must <u>not</u> contain another `<form>` element."
+    },
+    {
+      "id": "web3_0003",
+      "q": "Which option correctly describes the `action` and `onsubmit` attributes of the `<form>` element?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`action` selects the HTTP method to use; `onsubmit` gives the form a unique identifier"},
+        {"i": "2", "x": "`action` is the URL of the page that handles requests; `onsubmit` runs code before sending"},
+        {"i": "3", "x": "`action` runs code before the data is sent; `onsubmit` is the URL of the page that handles requests"},
+        {"i": "4", "x": "`action` gives the form a unique identifier; `onsubmit` selects the HTTP method to use"}
+      ],
+      "a": "2",
+      "e": "The value of `action` is the URL of the page on the Web server that handles the request. The `onsubmit` attribute provides something to run <u>before</u> the data is sent, to ensure the quality and accuracy of the submitted data. The HTTP method is set by `method`, and the unique identifier by `id`/`name`."
+    },
+    {
+      "id": "web3_0004",
+      "q": "A login form is submitted and the address bar shows:\n```\nwww.example.com/login.asp?txtUsername=ahmed+&pwdPassword=123456\n```\nWhich <b>method</b> was used, and what does this show?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`get` — the form data is appended to the URL, so the password is visible"},
+        {"i": "2", "x": "`post` — the form data is appended to the URL, so the password is visible"},
+        {"i": "3", "x": "`get` — the form data is sent hidden from the URL, so the password is protected"},
+        {"i": "4", "x": "`post` — the form data is sent hidden from the URL, so the password is protected"}
+      ],
+      "a": "1",
+      "e": "With `method=\"get\"` the browser appends the form data to the URL, so every value (including the password) appears in the address bar. With `method=\"post\"` the data is not shown in the URL, which stays just `www.example.com/login.asp`."
+    },
+    {
+      "id": "web3_0005",
+      "q": "Study the code:\n```html\n<input type=\"text\" name=\"txtSearch\" value=\"Search for\" size=\"20\" maxlength=\"64\" />\n```\nWhich attribute makes the text <b>Search for</b> appear inside the box when the page first loads?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`name`"},
+        {"i": "2", "x": "`value`"},
+        {"i": "3", "x": "`size`"},
+        {"i": "4", "x": "`maxlength`"}
+      ],
+      "a": "2",
+      "e": "The `value` attribute sets the initial content of the text box. `name` identifies the control when the data is sent, `size` sets the visible width (20), and `maxlength` limits the number of characters (64)."
+    },
+    {
+      "id": "web3_0006",
+      "q": "In the login form, the user types a password and the box shows `●●●●●●●●`. Which input <b>type</b> produces this behavior?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`text`"},
+        {"i": "2", "x": "`reset`"},
+        {"i": "3", "x": "`password`"},
+        {"i": "4", "x": "`image`"}
+      ],
+      "a": "3",
+      "e": "`type=\"password\"` masks the typed characters with dots, whereas `type=\"text\"` would display them as plain text. `reset` and `image` are button-like controls, not text-entry boxes."
+    },
+    {
+      "id": "web3_0007",
+      "q": "A form contains these three controls:\n```html\n<input type=\"submit\" value=\"Submit\" />\n<input type=\"reset\" value=\"Clear form\" />\n<input type=\"button\" value=\"Calculate\" onclick=\"calculate()\" />\n```\nWhich description of their behavior is correct?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Submit empties the fields, Clear form sends the data, Calculate runs `calculate()` when clicked"},
+        {"i": "2", "x": "Submit sends the data, Clear form runs `calculate()`, Calculate empties the fields when clicked"},
+        {"i": "3", "x": "Submit runs `calculate()`, Clear form sends the data, Calculate empties the fields when clicked"},
+        {"i": "4", "x": "Submit sends the data, Clear form empties the fields, Calculate runs `calculate()` when clicked"}
+      ],
+      "a": "4",
+      "e": "`type=\"submit\"` sends the form data to the server, `type=\"reset\"` clears the form back to its initial state, and `type=\"button\"` does nothing by itself — here its `onclick` event handler runs the `calculate()` function."
+    },
+    {
+      "id": "web3_0008",
+      "q": "A form asks: <i>Which of the following skills do you possess? Select all that apply.</i> (HTML, XHTML, CSS, JavaScript, ASP, PHP). Which control type fits this question?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`radio`"},
+        {"i": "2", "x": "`password`"},
+        {"i": "3", "x": "`checkbox`"},
+        {"i": "4", "x": "`reset`"}
+      ],
+      "a": "3",
+      "e": "<b>Checkboxes</b> are used when there are multiple selections at a time, as in this example. <b>Radio buttons</b> are used when only one selection is needed."
+    },
+    {
+      "id": "web3_0009",
+      "q": "In the flight-booking form, three radio buttons share the same name:\n```html\n<input type=\"radio\" name=\"radClass\" value=\"First\" /> First class\n<input type=\"radio\" name=\"radClass\" value=\"Business\" /> Business class\n<input type=\"radio\" name=\"radClass\" value=\"Economy\" /> Economy class\n```\nWhat is the effect of this?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "The visitor can select several classes at the same time, and all selected values are sent"},
+        {"i": "2", "x": "The visitor can select only one class, and its value is the one sent with `radClass`"},
+        {"i": "3", "x": "The visitor must select all three classes before the form can be submitted"},
+        {"i": "4", "x": "The visitor can select one class, but the browser sends all three values anyway"}
+      ],
+      "a": "2",
+      "e": "Radio buttons are used when only <u>one</u> selection is needed. Because they share the same `name`, they form one group: choosing one deselects the others, and only the chosen value (for example `Business`) is sent."
+    },
+    {
+      "id": "web3_0010",
+      "q": "Given the code below, what does the attribute `size=\"6\"` do?\n```html\n<select size=\"6\" name=\"selDay\">\n  <option value=\"Mon\">Monday</option>\n  <option value=\"Tue\">Tuesday</option>\n  <!-- ... up to Sunday (7 options) -->\n</select>\n```",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "It limits the visitor to choosing at most six options"},
+        {"i": "2", "x": "It makes each option name six characters long"},
+        {"i": "3", "x": "It displays six options at a time in the list box"},
+        {"i": "4", "x": "It starts the list from the sixth option, Saturday"}
+      ],
+      "a": "3",
+      "e": "`size` sets the number of visible rows of the list box. With seven options and `size=\"6\"`, six days (Monday to Saturday) are visible at once, and the remaining option is reached by scrolling."
+    },
+    {
+      "id": "web3_0011",
+      "q": "A feedback form needs a <b>Comments</b> box that is several lines tall and whose size is set with `rows` and `cols`. Which element should be used?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`<textarea>`"},
+        {"i": "2", "x": "`<input type=\"text\">`"},
+        {"i": "3", "x": "`<select>`"},
+        {"i": "4", "x": "`<button>`"}
+      ],
+      "a": "1",
+      "e": "`<textarea name=\"\" rows=\"\" cols=\"\">` creates a multi-line text box, and `rows` and `cols` set its height and width. A text-type `<input>` is only a single-line box."
+    },
+    {
+      "id": "web3_0012",
+      "q": "Three controls have these tab orders: `A` has `tabindex=\"3\"`, `B` has `tabindex=\"1\"`, and `C` has `tabindex=\"2\"`. In which order do they receive focus when the user presses <kbd>Tab</kbd> repeatedly?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A, then B, then C"},
+        {"i": "2", "x": "A, then C, then B"},
+        {"i": "3", "x": "C, then B, then A"},
+        {"i": "4", "x": "B, then C, then A"}
+      ],
+      "a": "4",
+      "e": [
+        "The `tabindex` attribute controls the order in which elements gain focus.",
+        "Pressing <kbd>Tab</kbd> moves the focus to the element with the next highest tabbing order.",
+        "Sorting by value: B (1), C (2), A (3).",
+        "<mark>Focus order: B, then C, then A</mark> (and <kbd>Shift</kbd>+<kbd>Tab</kbd> moves the focus in reverse order)."
+      ]
+    },
+    {
+      "id": "web3_0013",
+      "q": "What does the following code create?\n```html\n<frameset rows=\"150, *, 200\">\n  <frame src=\"form4.html\" />\n  <frame src=\"form5.html\" />\n  <frame src=\"form6.html\" />\n</frameset>\n```",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Three columns: the left is 150, the right is 200, and the middle fills the rest"},
+        {"i": "2", "x": "Three rows: the top is 150, the bottom is 200, and the middle fills the rest"},
+        {"i": "3", "x": "Three rows of equal height, because the sizes are ignored when `*` is used"},
+        {"i": "4", "x": "Two rows of 150 and 200, and the third page is hidden from the visitor"}
+      ],
+      "a": "2",
+      "e": "`rows` splits the window horizontally, so each value describes one row. `150` and `200` are fixed sizes, and `*` takes all the remaining space. Each `<frame>` loads a separate page into its row."
+    },
+    {
+      "id": "web3_0014",
+      "q": "Study the nested frameset:\n```html\n<frameset rows=\"30%, 40%, *\">\n  <frame src=\"form1.html\" />\n  <frameset cols=\"*, 400, *\">\n    <frame src=\"form2.html\" />\n    <frame src=\"form3.html\" />\n    <frame src=\"form4.html\" />\n  </frameset>\n  <frame src=\"form5.html\" />\n</frameset>\n```\nHow many panes does the browser window show, and how are they arranged?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "Five panes: three side by side in the top row, then one in the middle row and one at the bottom"},
+        {"i": "2", "x": "Five panes: all arranged one under another in a single column of five rows"},
+        {"i": "3", "x": "Five panes: one on top, three side by side in the middle row, and one at the bottom"},
+        {"i": "4", "x": "Three panes: one on top, one in the middle, and one at the bottom"}
+      ],
+      "a": "3",
+      "e": [
+        "The outer `<frameset rows=...>` divides the window into three rows (30%, 40%, and the rest).",
+        "The first row holds `form1.html` and the third row holds `form5.html`.",
+        "The second row holds an inner `<frameset cols=...>`, which splits that row into three columns.",
+        "<mark>Total: 5 panes — 1 on top, 3 side by side in the middle, 1 at the bottom.</mark>",
+        "Nesting is needed because one `<frameset>` works with either `rows` or `cols`, not both together."
+      ]
+    },
+    {
+      "id": "web3_0015",
+      "q": "A frame must display a page from a <b>different website</b>, not only pages of the current site (<b>Linked Frames</b>). Which tag is used to create the link?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "The anchor tag `<a>` with the `href` attribute"},
+        {"i": "2", "x": "The link tag `<link>` with the `rel` attribute"},
+        {"i": "3", "x": "The image tag `<img>` with the `src` attribute"},
+        {"i": "4", "x": "The form tag `<form>` with the `action` attribute"}
+      ],
+      "a": "1",
+      "e": "In linked frames, the anchor tag with `href` (`<a href=\"...\">`) is used to link the page, as in the navigation frame containing the links Wrox Press, Google, Microsoft, and BBC News."
+    },
+    {
+      "id": "web3_0016",
+      "q": "In the rule `h2 { font-style : italic }`, what do `h2` and `font-style` represent respectively?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "Declaration and property"},
+        {"i": "2", "x": "Selector and property"},
+        {"i": "3", "x": "Selector and value"},
+        {"i": "4", "x": "Property and value"}
+      ],
+      "a": "2",
+      "e": "A CSS rule has two parts: a <b>selector</b> (what to modify, here `h2`) and a <b>declaration</b> (how to modify it, here `font-style : italic`). The declaration itself has a <b>property</b> (`font-style`) and a <b>value</b> (`italic`)."
+    },
+    {
+      "id": "web3_0017",
+      "q": "Which rule applies the same color to <u>both</u> `h1` and `h2` headings?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`h1 h2 { color: blue }`"},
+        {"i": "2", "x": "`h1; h2 { color: blue }`"},
+        {"i": "3", "x": "`h1 . h2 { color: blue }`"},
+        {"i": "4", "x": "`h1, h2 { color: blue }`"}
+      ],
+      "a": "4",
+      "e": "A <b>comma</b> separates the elements to which one rule applies, so `h1, h2 { color: blue }` styles both headings. A space (`h1 h2`) creates a contextual selector instead, and a semicolon separates properties, not selectors."
+    },
+    {
+      "id": "web3_0018",
+      "q": "Which option correctly matches each way of adding CSS with the part of the site it affects?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Inline: all documents; Embedded: only one element; External: only the document it appears in"},
+        {"i": "2", "x": "Inline: only the document it appears in; Embedded: all linked documents; External: only one element"},
+        {"i": "3", "x": "Inline: only one element; Embedded: only the document it appears in; External: all documents linked to it"},
+        {"i": "4", "x": "Inline: only one element; Embedded: all linked documents; External: only the document it appears in"}
+      ],
+      "a": "3",
+      "e": "<b>Inline</b> styles are written in the line where the style is needed and affect only that element. <b>Embedded</b> styles sit in the `<head>` of the page and affect only that document. <b>External</b> (linked) style sheets affect every document they are attached to."
+    },
+    {
+      "id": "web3_0019",
+      "q": "Where is an <b>embedded (internal)</b> style sheet written, and with which tags?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "In the `<head>` section, between `<style>` and `</style>`"},
+        {"i": "2", "x": "In the `<head>` section, between `<link>` and `</link>`"},
+        {"i": "3", "x": "In the `<body>` section, between `<script>` and `</script>`"},
+        {"i": "4", "x": "In the `<head>` section, between `<css>` and `</css>`"}
+      ],
+      "a": "1",
+      "e": "Embedded style rules are grouped with the `<STYLE> ... </STYLE>` tag pair inside the `<head>` of the HTML page. `<link>` is used to reference an external file instead, and `<script>` is for JavaScript."
+    },
+    {
+      "id": "web3_0020",
+      "q": "Which is the correct way to give the whole page a yellow background using an <b>inline style</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`<body style=\"background-color=yellow\">`"},
+        {"i": "2", "x": "`<body style=\"background-color:yellow\">`"},
+        {"i": "3", "x": "`<body style=\"color-background:yellow\">`"},
+        {"i": "4", "x": "`<body class=\"background-color:yellow\">`"}
+      ],
+      "a": "2",
+      "e": "The inline syntax is `<TAG STYLE=\"PROPERTY : VALUE\">`. A colon (not `=`) separates the property `background-color` from its value, and the attribute must be `style`, not `class`."
+    },
+    {
+      "id": "web3_0021",
+      "q": "What is the effect of this rule on every paragraph?\n```css\nP { font-family: Arial; font-style: italic; font-weight: bold;\n    color: red; font-size: 18pt }\n```",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Arial font, bold text only, red text color, size 18pt"},
+        {"i": "2", "x": "Italic and bold text, red text color, size 18pt, in the default font"},
+        {"i": "3", "x": "Arial font, italic and bold text, red background, size 18pt"},
+        {"i": "4", "x": "Arial font, italic and bold text, red text color, size 18pt"}
+      ],
+      "a": "4",
+      "e": "Each declaration sets one property: `font-family` gives Arial, `font-style` gives italic, `font-weight` gives bold, `color` gives red <u>text</u>, and `font-size` gives 18pt. Changing the background would need `background-color`."
+    },
+    {
+      "id": "web3_0022",
+      "q": "Which rule makes the text of <u>all</u> paragraphs bold?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`p { font-style: bold; }`"},
+        {"i": "2", "x": "`p { text-weight: bold; }`"},
+        {"i": "3", "x": "`p { font-weight: bold; }`"},
+        {"i": "4", "x": "`.p { font-weight: bold; }`"}
+      ],
+      "a": "3",
+      "e": "`font-weight` controls how thick the text is, so `p { font-weight: bold; }` styles every paragraph. `font-style` is for italic or normal style, `text-weight` is not a CSS property, and `.p` would select elements with class `p` instead of `<p>` elements."
+    },
+    {
+      "id": "web3_0023",
+      "q": "Which rule makes the text of all paragraphs <b>red</b> on a <b>yellow</b> background?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`p { color: red; background-color: yellow; }`"},
+        {"i": "2", "x": "`p { color: yellow; background-color: red; }`"},
+        {"i": "3", "x": "`p { color: red, background-color: yellow; }`"},
+        {"i": "4", "x": "`p { color: red: background-color: yellow; }`"}
+      ],
+      "a": "1",
+      "e": "`color` sets the text color and `background-color` sets the color behind it. Declarations are separated by a <u>semicolon</u>, not by a comma or a colon, so only the first option is correct."
+    },
+    {
+      "id": "web3_0024",
+      "q": "A designer wants to change <u>only</u> the color of an element's border. Which property should be used?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`border-style`"},
+        {"i": "2", "x": "`border-color`"},
+        {"i": "3", "x": "`border-width`"},
+        {"i": "4", "x": "`margin`"}
+      ],
+      "a": "2",
+      "e": "The Border properties are `border-style`, `border-width`, and `border-color`; the last one sets the color. `margin` is a different box property that controls the space outside the border."
+    },
+    {
+      "id": "web3_0025",
+      "q": "Which property from the <b>Text Properties</b> group is used to change the capitalization of text, for example to make the first letter of every word a capital letter?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`text-indent`"},
+        {"i": "2", "x": "`text-align`"},
+        {"i": "3", "x": "`letter-spacing`"},
+        {"i": "4", "x": "`text-transform`"}
+      ],
+      "a": "4",
+      "e": "`text-transform` controls the case of text; for example `text-transform: capitalize` makes the first letter of each word a capital letter. `text-indent` indents the first line, `text-align` aligns the text, and `letter-spacing` changes the space between characters."
+    },
+    {
+      "id": "web3_0026",
+      "q": "Which option correctly describes the selector used to style <u>one unique</u> element?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "A class selector, written with `#` and matched to the `class` attribute"},
+        {"i": "2", "x": "A class selector, written with `.` and matched to the `id` attribute"},
+        {"i": "3", "x": "An ID selector, written with `#` and matched to the `id` attribute"},
+        {"i": "4", "x": "An ID selector, written with `.` and matched to the `id` attribute"}
+      ],
+      "a": "3",
+      "e": "<b>ID selectors</b> start with the hash symbol `#` and match the element's `id` attribute, which names a single element uniquely. <b>Class selectors</b> start with a dot `.` and match the `class` attribute."
+    },
+    {
+      "id": "web3_0027",
+      "q": "Given the code below, which description of the rendered page is correct?\n```html\n<style>\n  #note   { color: blue }\n  #syntax { color: red }\n</style>\n<h1 id=\"syntax\">Mansoura University</h1>\n<h1>Default</h1>\n<h2 id=\"note\">Faculty of Computer & Information Sciences</h2>\n```",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "The first heading is red, the second keeps the default color, and the third is blue"},
+        {"i": "2", "x": "The first heading is blue, the second keeps the default color, and the third is red"},
+        {"i": "3", "x": "The first and second headings are red, and the third is blue"},
+        {"i": "4", "x": "The first heading is red, and the second and third headings are blue"}
+      ],
+      "a": "1",
+      "e": [
+        "`#syntax` matches the element with `id=\"syntax\"`, so the first `<h1>` is red.",
+        "The second `<h1>` has no `id`, so no rule matches it and it keeps the default style.",
+        "`#note` matches the `<h2>` with `id=\"note\"`, so it is blue.",
+        "<mark>Red, default, blue.</mark>"
+      ]
+    },
+    {
+      "id": "web3_0028",
+      "q": "Given the code below, which statement is correct?\n```html\n<style>\n  .note   { color: blue }\n  #syntax { color: red }\n</style>\n<h1 id=\"syntax\">Mansoura University</h1>\n<h1>Default</h1>\n<h2 class=\"note\">Faculty of Computer & Information Sciences</h2>\n```",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`.note` styles the `<h2>` through its id, and `#syntax` styles the first `<h1>` through its class"},
+        {"i": "2", "x": "`.note` styles the `<h2>` through its class, and `#syntax` styles the first `<h1>` through its id"},
+        {"i": "3", "x": "`.note` styles the first `<h1>` through its id, and `#syntax` styles the `<h2>` through its class"},
+        {"i": "4", "x": "`.note` styles every heading, and `#syntax` styles only the second `<h1>`"}
+      ],
+      "a": "2",
+      "e": "Class selectors (`.note`) match elements by their `class` attribute, and ID selectors (`#syntax`) match by `id`. Here the `<h2 class=\"note\">` is blue, the `<h1 id=\"syntax\">` is red, and the plain `<h1>` stays in the default style."
+    },
+    {
+      "id": "web3_0029",
+      "q": "In this page, why does the ordered list appear <b>magenta</b> while the unordered list appears <b>white</b>?\n```html\n<style>\n  Body { color: magenta; background: black }\n  UL   { color: white }\n</style>\n<body>\n  <ul><li>Apples</li><li>Bananas</li></ul>\n  <ol><li>Apples</li><li>Bananas</li></ol>\n</body>\n```",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`UL` inherits the color of `Body`, while the `OL` rule overrides the inherited color"},
+        {"i": "2", "x": "Both lists inherit the color of `Body`, and the `UL` rule is ignored"},
+        {"i": "3", "x": "Neither list inherits from `Body`, because each list needs its own color rule"},
+        {"i": "4", "x": "`OL` inherits the color of `Body`, while the `UL` rule overrides the inherited color"}
+      ],
+      "a": "4",
+      "e": "Elements inside `<body>` inherit its style by default, so the `<ol>` (which has no rule of its own) is magenta. Since the unordered list needs a different setting, the `UL` rule overrides the inherited color and makes it white."
+    },
+    {
+      "id": "web3_0030",
+      "q": "Which option correctly connects an external style sheet <b>1.css</b> to an HTML page?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`<style rel=\"stylesheet\" type=\"text/css\" src=\"1.css\"/>` inside `<head>`"},
+        {"i": "2", "x": "`<link rel=\"stylesheet\" type=\"text/css\" src=\"1.css\"/>` inside `<head>`"},
+        {"i": "3", "x": "`<link rel=\"stylesheet\" type=\"text/css\" href=\"1.css\"/>` inside `<head>`"},
+        {"i": "4", "x": "`<script rel=\"stylesheet\" type=\"text/css\" href=\"1.css\"/>` inside `<head>`"}
+      ],
+      "a": "3",
+      "e": "An external CSS file is referenced with `<link>` in the `<head>` of each HTML page, using `rel=\"stylesheet\"`, `type=\"text/css\"` and `href=\"1.css\"`. `<style>` is for embedded rules, `<script>` is for JavaScript, and the file name goes in `href`, not `src`."
+    }
+  ]
+}
