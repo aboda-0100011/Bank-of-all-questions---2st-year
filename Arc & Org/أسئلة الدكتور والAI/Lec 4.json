@@ -1,0 +1,759 @@
+{
+  "qs": [
+    {
+      "id": "Arc4_0001",
+      "q": "What is the result of the binary addition `1 + 1 + 1` (two operand bits plus an incoming carry)?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Sum bit `1` with a carry of `1`"},
+        {"i": "2", "x": "Sum bit `0` with a carry of `1`"},
+        {"i": "3", "x": "Sum bit `1` with a carry of `0`"},
+        {"i": "4", "x": "Sum bit `0` with a carry of `0`"}
+      ],
+      "a": "1",
+      "e": "In decimal, $1 + 1 + 1 = 3$, and $3 = 11_2$. So the sum bit is <b>1</b> and the carry is <b>1</b>. <mark>`1 + 1 + 1 = 1` carry `1`</mark>"
+    },
+    {
+      "id": "Arc4_0002",
+      "q": "Add the binary numbers `1011` and `101`. What is the result?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`10000`"},
+        {"i": "2", "x": "`10010`"},
+        {"i": "3", "x": "`1111`"},
+        {"i": "4", "x": "`10100`"}
+      ],
+      "a": "1",
+      "e": [
+        "Align the numbers on the right, padding the shorter one with a leading zero: `1011` and `0101`.",
+        "Column 0: $1 + 1 = 0$, carry `1`.",
+        "Column 1: $1 + 0 + 1 = 0$, carry `1`.",
+        "Column 2: $0 + 1 + 1 = 0$, carry `1`.",
+        "Column 3: $1 + 0 + 1 = 0$, carry `1`.",
+        "The final carry `1` becomes the leftmost bit: <mark>`10000`</mark>.",
+        "Check in decimal: $11 + 5 = 16 = 10000_2$."
+      ]
+    },
+    {
+      "id": "Arc4_0003",
+      "q": "Add the binary numbers `10001` and `11101`. What is the result?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`101110`"},
+        {"i": "2", "x": "`101100`"},
+        {"i": "3", "x": "`100110`"},
+        {"i": "4", "x": "`110110`"}
+      ],
+      "a": "1",
+      "e": [
+        "Write the numbers in columns: `10001` and `11101`.",
+        "Column 0: $1 + 1 = 0$, carry `1`.",
+        "Column 1: $0 + 0 + 1 = 1$, carry `0`.",
+        "Column 2: $0 + 1 = 1$, carry `0`.",
+        "Column 3: $0 + 1 = 1$, carry `0`.",
+        "Column 4: $1 + 1 = 0$, carry `1`.",
+        "The final carry `1` becomes the leftmost bit, so the result is <mark>`101110`</mark>.",
+        "Check in decimal: $17 + 29 = 46 = 101110_2$."
+      ]
+    },
+    {
+      "id": "Arc4_0004",
+      "q": "Add the binary numbers `10111` and `110001`. What is the result?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`1001000`"},
+        {"i": "2", "x": "`1000100`"},
+        {"i": "3", "x": "`1010000`"},
+        {"i": "4", "x": "`1001010`"}
+      ],
+      "a": "1",
+      "e": [
+        "Align on the right and pad the shorter number: `010111` and `110001`.",
+        "Column 0: $1 + 1 = 0$, carry `1`.",
+        "Column 1: $1 + 0 + 1 = 0$, carry `1`.",
+        "Column 2: $1 + 0 + 1 = 0$, carry `1`.",
+        "Column 3: $0 + 0 + 1 = 1$, carry `0`.",
+        "Column 4: $1 + 1 = 0$, carry `1`.",
+        "Column 5: $0 + 1 + 1 = 0$, carry `1`.",
+        "The final carry `1` becomes the leftmost bit, so the result is <mark>`1001000`</mark>.",
+        "Check in decimal: $23 + 49 = 72 = 1001000_2$."
+      ]
+    },
+    {
+      "id": "Arc4_0005",
+      "q": "Add the unsigned binary numbers `10110` and `01101`. Which result is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`100011`"},
+        {"i": "2", "x": "`100111`"},
+        {"i": "3", "x": "`100001`"},
+        {"i": "4", "x": "`100101`"}
+      ],
+      "a": "1",
+      "e": [
+        "Write the numbers in columns: `10110` and `01101`.",
+        "Column 0: $0 + 1 = 1$, carry `0`.",
+        "Column 1: $1 + 0 = 1$, carry `0`.",
+        "Column 2: $1 + 1 = 0$, carry `1`.",
+        "Column 3: $0 + 1 + 1 = 0$, carry `1`.",
+        "Column 4: $1 + 0 + 1 = 0$, carry `1`.",
+        "The final carry `1` becomes the leftmost bit: <mark>`100011`</mark>.",
+        "Check in decimal: $22 + 13 = 35 = 100011_2$."
+      ]
+    },
+    {
+      "id": "Arc4_0006",
+      "q": "In 4-bit two's complement (bit weights `-8 4 2 1`), add `0011` (+3) and `0011` (+3). What is the result?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`0110` (+6)"},
+        {"i": "2", "x": "`1100` (−4)"},
+        {"i": "3", "x": "`0101` (+5)"},
+        {"i": "4", "x": "`1010` (−6)"}
+      ],
+      "a": "1",
+      "e": [
+        "Add column by column: `0011 + 0011`.",
+        "Column 0: $1 + 1 = 0$, carry `1`.",
+        "Column 1: $1 + 1 + 1 = 1$, carry `1`.",
+        "Column 2: $0 + 0 + 1 = 1$, carry `0`.",
+        "Column 3: $0 + 0 = 0$, so the result is `0110`.",
+        "Using the weights `-8 4 2 1`: $4 + 2 = +6$.",
+        "Two positive numbers gave a positive result, so there is no overflow. <mark>`0110` = +6</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0007",
+      "q": "In 4-bit two's complement, add `1101` (−3) and `1101` (−3). After discarding the carry-out, what 4-bit result is obtained?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`1010` (−6)"},
+        {"i": "2", "x": "`0110` (+6)"},
+        {"i": "3", "x": "`1011` (−5)"},
+        {"i": "4", "x": "`0101` (+5)"}
+      ],
+      "a": "1",
+      "e": [
+        "Add column by column: `1101 + 1101`.",
+        "Column 0: $1 + 1 = 0$, carry `1`.",
+        "Column 1: $0 + 0 + 1 = 1$, carry `0`.",
+        "Column 2: $1 + 1 = 0$, carry `1`.",
+        "Column 3: $1 + 1 + 1 = 1$, carry `1`.",
+        "The full sum is `11010`; discarding the carry-out leaves the 4-bit result `1010`.",
+        "Using the weights `-8 4 2 1`: $-8 + 2 = -6$.",
+        "Two negative numbers gave a negative result, so the answer is correct. <mark>`1010` = −6</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0008",
+      "q": "In 4-bit two's complement, add `0101` (+5) and `0101` (+5). Which statement describes the outcome?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`1010` = −6, an overflow occurred"},
+        {"i": "2", "x": "`1010` = −6, the result is correct"},
+        {"i": "3", "x": "`0110` = +6, an overflow occurred"},
+        {"i": "4", "x": "`0110` = +6, the result is correct"}
+      ],
+      "a": "1",
+      "e": [
+        "Add column by column: `0101 + 0101`.",
+        "Column 0: $1 + 1 = 0$, carry `1`.",
+        "Column 1: $0 + 0 + 1 = 1$, carry `0`.",
+        "Column 2: $1 + 1 = 0$, carry `1`.",
+        "Column 3: $0 + 0 + 1 = 1$, carry `0`. The result is `1010`.",
+        "Using the weights `-8 4 2 1`: $-8 + 2 = -6$.",
+        "Adding two <b>positive</b> numbers produced a <b>negative</b> result, so <mark>overflow occurred</mark> (the true sum $+10$ does not fit in 4 bits)."
+      ]
+    },
+    {
+      "id": "Arc4_0009",
+      "q": "In 4-bit two's complement, add `1011` (−5) and `1011` (−5). Which statement describes the outcome?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`0110` = +6, an overflow occurred"},
+        {"i": "2", "x": "`0110` = +6, the result is correct"},
+        {"i": "3", "x": "`1010` = −6, an overflow occurred"},
+        {"i": "4", "x": "`1010` = −6, the result is correct"}
+      ],
+      "a": "1",
+      "e": [
+        "Add column by column: `1011 + 1011`.",
+        "Column 0: $1 + 1 = 0$, carry `1`.",
+        "Column 1: $1 + 1 + 1 = 1$, carry `1`.",
+        "Column 2: $0 + 0 + 1 = 1$, carry `0`.",
+        "Column 3: $1 + 1 = 0$, carry `1`.",
+        "The full sum is `10110`; discarding the carry-out leaves `0110` = +6.",
+        "Adding two <b>negative</b> numbers produced a <b>positive</b> result, so <mark>overflow occurred</mark> (the true sum $-10$ does not fit in 4 bits)."
+      ]
+    },
+    {
+      "id": "Arc4_0010",
+      "q": "Overflow can <u>never</u> occur when a positive number is added to a negative number. Why?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "The exact sum always lies between the two operands, so it stays within the representable range"},
+        {"i": "2", "x": "The sign bits of the two operands cancel each other, so no carry can be generated"},
+        {"i": "3", "x": "The carry into the sign bit is always `0` when the operands have opposite signs"},
+        {"i": "4", "x": "The adder ignores the sign bit whenever the operands have different signs"}
+      ],
+      "a": "1",
+      "e": [
+        "A positive operand $p \\ge 0$ and a negative operand $n < 0$ give a sum $p + n$.",
+        "This sum satisfies $n \\le p + n \\le p$, so it lies between the two operands.",
+        "Both operands are already representable, so any number between them is representable too.",
+        "<mark>Therefore the result can never fall outside the range, and no overflow is possible.</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0011",
+      "q": "Which of the following 4-bit two's complement additions produces an <b>overflow</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`0011 + 0100`"},
+        {"i": "2", "x": "`1110 + 0011`"},
+        {"i": "3", "x": "`1100 + 1101`"},
+        {"i": "4", "x": "`0100 + 0100`"}
+      ],
+      "a": "4",
+      "e": [
+        "`0011 + 0100 = 0111`: $+3 + 4 = +7$, a positive result, no overflow.",
+        "`1110 + 0011 = 10001`, keep 4 bits `0001`: $-2 + 3 = +1$. The operands have opposite signs, so no overflow.",
+        "`1100 + 1101 = 11001`, keep 4 bits `1001`: $-4 + (-3) = -7$, a negative result, no overflow.",
+        "`0100 + 0100 = 1000`: $+4 + 4$ gives $-8$ (negative). Two positives gave a negative, so <mark>overflow occurs</mark>."
+      ]
+    },
+    {
+      "id": "Arc4_0012",
+      "q": "Add the 4-bit two's complement numbers `0110` and `0011`. Comparing the carry into the MSB (c-in) with the carry out of the MSB (c-out), what does the carry rule conclude?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "c-in = `1`, c-out = `0`; they differ, so overflow occurs"},
+        {"i": "2", "x": "c-in = `1`, c-out = `1`; they match, so no overflow occurs"},
+        {"i": "3", "x": "c-in = `0`, c-out = `1`; they differ, so overflow occurs"},
+        {"i": "4", "x": "c-in = `0`, c-out = `0`; they match, so no overflow occurs"}
+      ],
+      "a": "1",
+      "e": [
+        "Add column by column: `0110 + 0011`.",
+        "Column 0: $0 + 1 = 1$, carry `0`.",
+        "Column 1: $1 + 1 = 0$, carry `1`.",
+        "Column 2: $1 + 0 + 1 = 0$, carry `1`. This carry goes <b>into</b> the MSB, so c-in = `1`.",
+        "Column 3 (MSB): $0 + 0 + 1 = 1$, carry `0`. So c-out = `0`.",
+        "The result is `1001` = −7, but $6 + 3 = 9$.",
+        "Rule: if c-in and c-out are different, overflow occurs. <mark>c-in = 1 ≠ c-out = 0, so overflow occurs.</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0013",
+      "q": "Using the 4-bit weights `-8 4 2 1`, what is the decimal value of `1011`?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "−5"},
+        {"i": "2", "x": "+11"},
+        {"i": "3", "x": "−3"},
+        {"i": "4", "x": "−11"}
+      ],
+      "a": "1",
+      "e": [
+        "The leftmost bit has weight $-8$; the other bits have weights $4, 2, 1$.",
+        "`1011` has bits set at weights $-8$, $2$ and $1$.",
+        "$-8 + 2 + 1 = -5$. <mark>The value is −5.</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0014",
+      "q": "In the condition code register, when is the <b>N</b> bit set?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "When the most significant bit of the result is `1`"},
+        {"i": "2", "x": "When all the bits of the result are `0`"},
+        {"i": "3", "x": "When the operation produces a carry out of the MSB"},
+        {"i": "4", "x": "When the operation produces an overflow"}
+      ],
+      "a": "1",
+      "e": "The <b>N</b> (negative) bit is set when the result is negative, i.e. when its MSB equals `1`. The other options describe the Z bit, the C bit and the V bit respectively."
+    },
+    {
+      "id": "Arc4_0015",
+      "q": "In the block diagram of an n-bit adder, which value is stored in the <b>C</b> bit of the condition register?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The carry out of the most significant bit, $c_n$"},
+        {"i": "2", "x": "The carry into the most significant bit, $c_{n-1}$"},
+        {"i": "3", "x": "The carry into the least significant bit, $c_0$"},
+        {"i": "4", "x": "The sign bit of the first argument, $a_{n-1}$"}
+      ],
+      "a": "1",
+      "e": "The adder adds two <i>n</i>-bit arguments and produces an <i>n</i>-bit result. The carry produced by the last (most significant) column, $c_n$, is stored in the <b>C</b> bit. <mark>C = $c_n$</mark>"
+    },
+    {
+      "id": "Arc4_0016",
+      "q": "Which statement about the condition code register bits N, Z, V and C is correct?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Some instructions leave one or more of these bits unchanged"},
+        {"i": "2", "x": "Every instruction updates all four of these bits each time"},
+        {"i": "3", "x": "The Z bit is set only when the result of the operation is positive"},
+        {"i": "4", "x": "The C bit is always cleared whenever the V bit is set"}
+      ],
+      "a": "1",
+      "e": [
+        "The lecture notes that <b>not all instructions</b> change the CCR bits.",
+        "Z is set when the result is zero (all bits `0`), not when it is positive.",
+        "C and V are independent: an addition can set both (for example `10101100 + 10001010`)."
+      ]
+    },
+    {
+      "id": "Arc4_0017",
+      "q": "Add the two 8-bit two's complement numbers `10101100` and `10001010`. What are the condition code bits in the order <b>NZVC</b>?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`0011`"},
+        {"i": "2", "x": "`0001`"},
+        {"i": "3", "x": "`1001`"},
+        {"i": "4", "x": "`0010`"}
+      ],
+      "a": "1",
+      "e": [
+        "Add column by column from the right: `10101100 + 10001010`.",
+        "Bit 0: $0 + 0 = 0$. Bit 1: $0 + 1 = 1$. Bit 2: $1 + 0 = 1$.",
+        "Bit 3: $1 + 1 = 0$, carry `1`. Bit 4: $0 + 0 + 1 = 1$.",
+        "Bit 5: $1 + 0 = 1$. Bit 6: $0 + 0 = 0$, carry `0` into the MSB, so c-in = `0`.",
+        "Bit 7: $1 + 1 = 0$, carry `1`, so c-out = `1`. The full sum is `1 00110110`.",
+        "<b>N</b> = `0` because the MSB of the result `00110110` is `0`.",
+        "<b>Z</b> = `0` because the result is not all zeros.",
+        "<b>V</b> = `1` because c-in (`0`) ≠ c-out (`1`). Check: two negatives ($-84$ and $-118$) gave a positive result.",
+        "<b>C</b> = `1` because there is a carry out of the MSB.",
+        "<mark>NZVC = `0011`</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0018",
+      "q": "Add the 8-bit two's complement numbers `01111111` and `00000001`. What are the condition code bits in the order <b>NZVC</b>?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "`1010`"},
+        {"i": "2", "x": "`1000`"},
+        {"i": "3", "x": "`0010`"},
+        {"i": "4", "x": "`1011`"}
+      ],
+      "a": "1",
+      "e": [
+        "Add: `01111111 + 00000001`. The carry ripples through bits 0 to 6.",
+        "Bit 0: $1 + 1 = 0$, carry `1`. Bits 1 to 6: $1 + 0 + 1 = 0$, carry `1` each.",
+        "Bit 7 (MSB): $0 + 0 + 1 = 1$, carry `0`. The result is `10000000`.",
+        "<b>N</b> = `1` because the MSB of the result is `1`.",
+        "<b>Z</b> = `0` because the result is not all zeros.",
+        "<b>V</b> = `1` because c-in (`1`) ≠ c-out (`0`). Check: $+127 + 1$ gave a negative result.",
+        "<b>C</b> = `0` because there is no carry out of the MSB.",
+        "<mark>NZVC = `1010`</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0019",
+      "q": "Add the 4-bit two's complement numbers `0101` (+5) and `1011` (−5). What are the condition code bits in the order <b>NZVC</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`0101`"},
+        {"i": "2", "x": "`0100`"},
+        {"i": "3", "x": "`0111`"},
+        {"i": "4", "x": "`1100`"}
+      ],
+      "a": "1",
+      "e": [
+        "Add column by column: `0101 + 1011`.",
+        "Column 0: $1 + 1 = 0$, carry `1`. Column 1: $0 + 1 + 1 = 0$, carry `1`.",
+        "Column 2: $1 + 0 + 1 = 0$, carry `1` into the MSB, so c-in = `1`.",
+        "Column 3: $0 + 1 + 1 = 0$, carry `1`, so c-out = `1`. The result is `0000`.",
+        "<b>N</b> = `0` (MSB is `0`). <b>Z</b> = `1` (all bits are `0`).",
+        "<b>V</b> = `0` because c-in = c-out = `1`. <b>C</b> = `1` because there is a carry out.",
+        "<mark>NZVC = `0101`</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0020",
+      "q": "Add the two U2 (two's complement) numbers `0110` and `100` as 4-bit numbers with an incoming carry of `0`. The shorter number must first be extended to 4 bits. What are the condition code bits in the order <b>NZVC</b>?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`0001`"},
+        {"i": "2", "x": "`0011`"},
+        {"i": "3", "x": "`1001`"},
+        {"i": "4", "x": "`0101`"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign-extend `100` to 4 bits by copying its MSB: `100` → `1100` (the value $-4$ is preserved).",
+        "Add `0110 + 1100` with an incoming carry of `0`.",
+        "Column 0: $0 + 0 = 0$. Column 1: $1 + 0 = 1$.",
+        "Column 2: $1 + 1 = 0$, carry `1` into the MSB, so c-in = `1`.",
+        "Column 3: $0 + 1 + 1 = 0$, carry `1`, so c-out = `1`. The 4-bit result is `0010`.",
+        "<b>N</b> = `0` (MSB is `0`). <b>Z</b> = `0` (result is not zero).",
+        "<b>V</b> = `0` because c-in = c-out = `1`. <b>C</b> = `1` because there is a carry out.",
+        "<mark>NZVC = `0001`</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0021",
+      "q": "Which pair of condition code bits can <u>never</u> both be `1` after an operation?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "N and Z"},
+        {"i": "2", "x": "C and V"},
+        {"i": "3", "x": "N and V"},
+        {"i": "4", "x": "Z and C"}
+      ],
+      "a": "1",
+      "e": [
+        "N = `1` requires the MSB of the result to be `1`.",
+        "Z = `1` requires <b>all</b> bits of the result to be `0`, including the MSB.",
+        "These two requirements contradict each other, so <mark>N and Z can never both be `1`</mark>.",
+        "The other pairs can coexist: Z and C (`0101 + 1011`), C and V (`10101100 + 10001010`), N and V (`01111111 + 00000001`)."
+      ]
+    },
+    {
+      "id": "Arc4_0022",
+      "q": "An 8-bit register holds `00000101`. How can its value be multiplied by 4 using shifts?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Shift left by 2 positions, giving `00010100`"},
+        {"i": "2", "x": "Shift left by 1 position, giving `00001010`"},
+        {"i": "3", "x": "Shift right by 2 positions, giving `00000001`"},
+        {"i": "4", "x": "Shift left by 4 positions, giving `01010000`"}
+      ],
+      "a": "1",
+      "e": [
+        "Each left shift doubles the number, so multiplying by $4 = 2^2$ needs <b>two</b> left shifts.",
+        "`00000101` → `00001010` → `00010100`.",
+        "<mark>`00010100` = 20 = 5 × 4</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0023",
+      "q": "Multiply `011` by `010` using binary multiplication. What is the product?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`110`"},
+        {"i": "2", "x": "`1100`"},
+        {"i": "3", "x": "`101`"},
+        {"i": "4", "x": "`011`"}
+      ],
+      "a": "1",
+      "e": [
+        "The multiplier `010` has a single `1`, at bit position 1.",
+        "The partial product for the `1` bit is `011` shifted left by 1 position: `110`. The partial product for each `0` bit is `000`.",
+        "Add the partial products: `000 + 110 = 110`.",
+        "<mark>`110` = 6</mark>, which matches $3 \\times 2 = 6$ (one left shift doubles the number)."
+      ]
+    },
+    {
+      "id": "Arc4_0024",
+      "q": "Multiply `011` by `100` using binary multiplication. What is the product?",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`1100`"},
+        {"i": "2", "x": "`110`"},
+        {"i": "3", "x": "`1001`"},
+        {"i": "4", "x": "`101`"}
+      ],
+      "a": "1",
+      "e": [
+        "The multiplier `100` has a single `1`, at bit position 2.",
+        "The partial product for that bit is `011` shifted left by 2 positions: `1100`. The other partial products are `000`.",
+        "Add the partial products: <mark>`1100`</mark>.",
+        "Check: $3 \\times 4 = 12 = 1100_2$ (two left shifts multiply by $2^2 = 4$)."
+      ]
+    },
+    {
+      "id": "Arc4_0025",
+      "q": "In 3-bit two's complement, multiplying `101` (−3) by `011` (+3) with unextended partial products gives `001111` (+15) instead of −9. What is the cause of this error?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "The partial products were not sign-extended to the full width of the product"},
+        {"i": "2", "x": "The multiplier `011` is positive, so it must be converted to negative first"},
+        {"i": "3", "x": "The product of two 3-bit numbers must always be exactly 3 bits long"},
+        {"i": "4", "x": "The partial products were added with an incorrect incoming carry"}
+      ],
+      "a": "1",
+      "e": [
+        "In two's complement the multiplicand must be <b>sign-extended</b> to the product width (here 6 bits).",
+        "Extend `101` to 6 bits: `111101` (still $-3$).",
+        "Multiplier `011` has bits 0 and 1 set: partial products `111101` and `111010` (`111101` shifted left by 1, kept to 6 bits).",
+        "Add: `111101 + 111010 = 1 110111`. Keeping 6 bits gives `110111`.",
+        "`110111` = $-32 + 16 + 4 + 2 + 1 = -9$. <mark>With sign extension the product is −9, as expected.</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0026",
+      "q": "Sign-extend the 3-bit two's complement number `101` to 6 bits. What is the result?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`111101`"},
+        {"i": "2", "x": "`000101`"},
+        {"i": "3", "x": "`101000`"},
+        {"i": "4", "x": "`101101`"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign extension copies the MSB into every new leftmost bit.",
+        "The MSB of `101` is `1`, so add three `1` bits on the left: `111101`.",
+        "Value check: `101` = $-4 + 1 = -3$ and `111101` = $-32 + 16 + 8 + 4 + 1 = -3$. <mark>The value is preserved.</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0027",
+      "q": "Multiply the 4-bit two's complement numbers `1110` (−2) and `0011` (+3), keeping an 8-bit product. What is the result?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`11111010`"},
+        {"i": "2", "x": "`00000110`"},
+        {"i": "3", "x": "`11111100`"},
+        {"i": "4", "x": "`11110110`"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign-extend both numbers to 8 bits: `1110` → `11111110` (−2) and `0011` → `00000011` (+3).",
+        "The multiplier has bits 0 and 1 set, so there are two partial products.",
+        "Bit 0: `11111110`. Bit 1: `11111110` shifted left by 1, kept to 8 bits: `11111100`.",
+        "Add: `11111110 + 11111100 = 1 11111010`. Stop after 8 bits: `11111010`.",
+        "`11111010` = $-128 + 64 + 32 + 16 + 8 + 2 = -6$. <mark>$(-2) \\times 3 = -6$</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0028",
+      "q": "Multiply the 4-bit two's complement numbers `0111` (+7) and `0110` (+6), keeping an 8-bit product. What is the result?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`00101010`"},
+        {"i": "2", "x": "`00010101`"},
+        {"i": "3", "x": "`00101110`"},
+        {"i": "4", "x": "`00111010`"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign-extend both numbers to 8 bits: `00000111` (+7) and `00000110` (+6).",
+        "The multiplier `00000110` has bits 1 and 2 set, so there are two non-zero partial products.",
+        "Bit 1: `00000111` shifted left by 1 = `00001110` (14). Bit 2: shifted left by 2 = `00011100` (28).",
+        "Add: `00001110 + 00011100 = 00101010`.",
+        "<mark>`00101010` = 42</mark>, which matches $7 \\times 6 = 42$."
+      ]
+    },
+    {
+      "id": "Arc4_0029",
+      "q": "Multiply the 4-bit two's complement numbers `1001` (−7) and `1010` (−6), keeping an 8-bit product. What is the result?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`00101010`"},
+        {"i": "2", "x": "`11010110`"},
+        {"i": "3", "x": "`00101110`"},
+        {"i": "4", "x": "`11010010`"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign-extend both numbers to 8 bits: `1001` → `11111001` (−7) and `1010` → `11111010` (−6).",
+        "The multiplier `11111010` has bits 1, 3, 4, 5, 6 and 7 set, so there are six partial products (each kept to 8 bits).",
+        "Bit 1: `11110010`. Bit 3: `11001000`. Bit 4: `10010000`.",
+        "Bit 5: `00100000`. Bit 6: `01000000`. Bit 7: `10000000`.",
+        "Add them all: $242 + 200 + 144 + 32 + 64 + 128 = 810$. Stop after 8 bits: $810 \\bmod 256 = 42$, i.e. `00101010`.",
+        "<mark>`00101010` = +42</mark>, which matches $(-7) \\times (-6) = +42$."
+      ]
+    },
+    {
+      "id": "Arc4_0030",
+      "q": "Multiply the 4-bit two's complement numbers `0111` (+7) and `1010` (−6), keeping an 8-bit product. What is the result?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`11010110`"},
+        {"i": "2", "x": "`00101010`"},
+        {"i": "3", "x": "`11010010`"},
+        {"i": "4", "x": "`11001110`"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign-extend both numbers to 8 bits: `00000111` (+7) and `11111010` (−6).",
+        "The multiplier `11111010` has bits 1, 3, 4, 5, 6 and 7 set, so there are six partial products (each kept to 8 bits).",
+        "Bit 1: `00001110` (14). Bit 3: `00111000` (56). Bit 4: `01110000` (112).",
+        "Bit 5: `11100000` (224). Bit 6: `11000000` (192). Bit 7: `10000000` (128).",
+        "Add them all: $14 + 56 + 112 + 224 + 192 + 128 = 726$. Stop after 8 bits: $726 \\bmod 256 = 214$, i.e. `11010110`.",
+        "`11010110` = $-128 + 64 + 16 + 4 + 2 = -42$. <mark>$7 \\times (-6) = -42$</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0031",
+      "q": "Multiply the 4-bit two's complement numbers `1010` (−6) and `0111` (+7), keeping an 8-bit product. What is the result?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`11010110`"},
+        {"i": "2", "x": "`00101010`"},
+        {"i": "3", "x": "`11101010`"},
+        {"i": "4", "x": "`11010100`"}
+      ],
+      "a": "1",
+      "e": [
+        "Sign-extend `1010` to 8 bits: `11111010` (−6). The multiplier `0111` is positive, so it extends to `00000111`.",
+        "Only bits 0, 1 and 2 of the multiplier are set, so there are just three partial products.",
+        "Bit 0: `11111010`. Bit 1: `11110100`. Bit 2: `11101000`.",
+        "Add them: $250 + 244 + 232 = 726$. Stop after 8 bits: $726 \\bmod 256 = 214$, i.e. `11010110`.",
+        "<mark>`11010110` = −42</mark>, the same result as $7 \\times (-6)$ but with fewer partial products."
+      ]
+    },
+    {
+      "id": "Arc4_0032",
+      "q": "When multiplying two's complement numbers by hand, where one operand is positive and the other negative, which operand does the lecture recommend using as the <b>multiplier</b> where possible?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The positive operand"},
+        {"i": "2", "x": "The negative operand"},
+        {"i": "3", "x": "The operand with more bits"},
+        {"i": "4", "x": "The operand written first"}
+      ],
+      "a": "1",
+      "e": "The lecture's tip for hand calculation is to multiply by the <b>positive</b> value where possible. For example, compute $(-6) \\times 7$ with `0111` as the multiplier instead of $7 \\times (-6)$, which gives the same result `11010110`."
+    },
+    {
+      "id": "Arc4_0033",
+      "q": "The 6-bit integer <b>L</b> in the U2 code is `010011`. Calculate $-L \\times 2$, add 1 to it, and present the result in <b>eight-bit</b> format. What is the result?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`11011011`"},
+        {"i": "2", "x": "`11011010`"},
+        {"i": "3", "x": "`00100101`"},
+        {"i": "4", "x": "`11011100`"}
+      ],
+      "a": "1",
+      "e": [
+        "Find $-L$: invert the bits of `010011` to get `101100`, then add 1 to get `101101` (= −19).",
+        "Sign-extend $-L$ to 8 bits: `101101` → `11101101`.",
+        "Multiply by 2 with one left shift: `11101101` → `11011010` (= −38).",
+        "Add 1: `11011010 + 1 = 11011011`.",
+        "<mark>`11011011` = −37</mark>, which matches $-19 \\times 2 + 1 = -37$."
+      ]
+    },
+    {
+      "id": "Arc4_0034",
+      "q": "Starting from `1000`, shifting right once gives `0100` and shifting right twice gives `0010`. What arithmetic operation does each right shift perform?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "It divides the number by 2"},
+        {"i": "2", "x": "It multiplies the number by 2"},
+        {"i": "3", "x": "It subtracts 2 from the number"},
+        {"i": "4", "x": "It negates the number"}
+      ],
+      "a": "1",
+      "e": [
+        "`1000` = 8, `0100` = 4, `0010` = 2.",
+        "Each right shift halves the number: $8 \\to 4 \\to 2$.",
+        "<mark>Each right shift divides the number by 2</mark>, so two right shifts divide by $2^2 = 4$."
+      ]
+    },
+    {
+      "id": "Arc4_0035",
+      "q": "Using binary long division, divide `1001` by `11`. What is the quotient?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`11`"},
+        {"i": "2", "x": "`10`"},
+        {"i": "3", "x": "`101`"},
+        {"i": "4", "x": "`111`"}
+      ],
+      "a": "1",
+      "e": [
+        "Set up $11 \\overline{)1001}$ and take the dividend bits one at a time.",
+        "Take `1`: can `11` fit in `1`? No, so the quotient bit is `0`.",
+        "Take `10`: can `11` fit in `10`? No, so the quotient bit is `0`.",
+        "Take `100`: can `11` fit in `100`? Yes, so the quotient bit is `1`. Subtract: $100 - 11 = 1$.",
+        "Bring down the last bit to make `11`: `11` fits once, so the quotient bit is `1`. Subtract: $11 - 11 = 0$.",
+        "The quotient bits are `0011` with remainder `0`. <mark>Quotient = `11` = 3</mark>, which matches $9 \\div 3 = 3$."
+      ]
+    },
+    {
+      "id": "Arc4_0036",
+      "q": "Using binary long division, divide `1011` by `100`. What are the quotient and the remainder?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Quotient `10`, remainder `11`"},
+        {"i": "2", "x": "Quotient `11`, remainder `10`"},
+        {"i": "3", "x": "Quotient `10`, remainder `1`"},
+        {"i": "4", "x": "Quotient `100`, remainder `11`"}
+      ],
+      "a": "1",
+      "e": [
+        "Set up $100 \\overline{)1011}$ and take the dividend bits one at a time.",
+        "Take `1`: `100` does not fit, so the quotient bit is `0`.",
+        "Take `10`: `100` does not fit, so the quotient bit is `0`.",
+        "Take `101`: `100` fits once, so the quotient bit is `1`. Subtract: $101 - 100 = 1$.",
+        "Bring down the last bit to make `11`: `100` does not fit, so the quotient bit is `0` and the remainder is `11`.",
+        "<mark>Quotient = `0010` = 2, remainder = `11` = 3</mark>, which matches $11 = 2 \\times 4 + 3$."
+      ]
+    },
+    {
+      "id": "Arc4_0037",
+      "q": "A signed two's complement number is divided by 2 using a right shift. Which shift type must be used so that the <b>sign</b> of a negative number is kept?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Arithmetic shift"},
+        {"i": "2", "x": "Logical shift"},
+        {"i": "3", "x": "Cyclic shift"},
+        {"i": "4", "x": "Cyclic shift through C"}
+      ],
+      "a": "1",
+      "e": [
+        "An <b>arithmetic</b> shift preserves the sign bit, so a negative number stays negative. For example, `1100` (−4) becomes `1110` (−2).",
+        "A logical shift fills with `0`, which would turn a negative number into a positive one.",
+        "Cyclic shifts rotate bits around the register instead of dividing the number by 2."
+      ]
+    },
+    {
+      "id": "Arc4_0038",
+      "q": "A 4-bit register holds `1001`. What is its value after one <b>cyclic</b> (rotate) shift left?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`0011`"},
+        {"i": "2", "x": "`0010`"},
+        {"i": "3", "x": "`1100`"},
+        {"i": "4", "x": "`1001`"}
+      ],
+      "a": "1",
+      "e": [
+        "Shift every bit one position to the left: `1001` → `001_`.",
+        "In a cyclic shift the bit that leaves the MSB (`1`) wraps around into the LSB.",
+        "<mark>The result is `0011`.</mark> A logical shift left would give `0010` instead, and `1100` would be a rotate to the right."
+      ]
+    },
+    {
+      "id": "Arc4_0039",
+      "q": "The 4-bit register holds `0111`. Before the shift, the condition bits are C = 1 and V = 1. After a <b>logical shift left (LSL)</b>, what are the register value and the bits C and V?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`1110`, C = 0, V = 0"},
+        {"i": "2", "x": "`1110`, C = 1, V = 1"},
+        {"i": "3", "x": "`1110`, C = 0, V = 1"},
+        {"i": "4", "x": "`1110`, C = 1, V = 0"}
+      ],
+      "a": "1",
+      "e": [
+        "Shift all bits left by one position and fill the LSB with `0`: `0111` → `1110`.",
+        "C receives the bit shifted out of the MSB, which is `0`, so C = `0`.",
+        "For a logical shift, V is `0` in the lecture's solution.",
+        "<mark>`0111` --(LSL)--> `1110`, C = 0, V = 0</mark>"
+      ]
+    },
+    {
+      "id": "Arc4_0040",
+      "q": "A 4-bit register holds `1001` and C = 0. After one <b>cyclic shift left through the carry (C)</b>, what are the register value and C?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "`0010`, C = 1"},
+        {"i": "2", "x": "`0011`, C = 0"},
+        {"i": "3", "x": "`0011`, C = 1"},
+        {"i": "4", "x": "`0010`, C = 0"}
+      ],
+      "a": "1",
+      "e": [
+        "In a cyclic shift through C, the carry bit acts as an extra bit in the rotation loop.",
+        "The old MSB (`1`) moves into C, so the new C = `1`.",
+        "The old C (`0`) moves into the LSB, and the other bits shift left: `1001` → `001` followed by `0` = `0010`.",
+        "<mark>Register = `0010`, C = 1</mark>"
+      ]
+    }
+  ]
+}
