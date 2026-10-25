@@ -1,0 +1,430 @@
+{
+  "qs": [
+    {
+      "id": "dsa6_0001",
+      "q": "Which statement best defines an <b>algorithm</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A well-defined computational procedure that takes a set of values as input and produces a set of values as output"},
+        {"i": "2", "x": "A programming language construct that stores a set of values and returns the largest one among them"},
+        {"i": "3", "x": "A hardware component that executes machine instructions and produces output for a given input"},
+        {"i": "4", "x": "A written program in a specific language that must be compiled before producing any output"}
+      ],
+      "a": "1",
+      "e": "An algorithm is a well-defined computational procedure (a sequence of computational steps) that transforms the <b>input</b> into the <b>output</b>. It can be described in natural language, pseudo-code or diagrams, so it is <u>not</u> tied to a programming language."
+    },
+    {
+      "id": "dsa6_0002",
+      "q": "When is an algorithm said to be <b>correct</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "When it runs faster than every other algorithm for the same problem"},
+        {"i": "2", "x": "When it halts with the correct output for every input instance"},
+        {"i": "3", "x": "When it produces the correct output for at least one typical input instance"},
+        {"i": "4", "x": "When it uses a constant amount of memory for every input instance"}
+      ],
+      "a": "2",
+      "e": "An algorithm is <b>correct</b> if, for <u>every</u> input instance, it halts with the correct output. A correct algorithm is then said to solve the given computational problem. Speed and memory are efficiency questions, not correctness."
+    },
+    {
+      "id": "dsa6_0003",
+      "q": "In the main steps of problem solving, which step comes <b>immediately after</b> Algorithm analysis?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Implementation"},
+        {"i": "2", "x": "Testing"},
+        {"i": "3", "x": "Algorithm design"},
+        {"i": "4", "x": "Maintenance"}
+      ],
+      "a": "3",
+      "e": "The order is: problem definition, algorithm analysis, <mark>algorithm design</mark>, implementation, testing, maintenance."
+    },
+    {
+      "id": "dsa6_0004",
+      "q": "Integrating user feedback, fixing bugs and ensuring compatibility across different versions belong to which step of problem solving?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Testing"},
+        {"i": "2", "x": "Implementation"},
+        {"i": "3", "x": "Algorithm analysis"},
+        {"i": "4", "x": "Maintenance"}
+      ],
+      "a": "4",
+      "e": "These activities happen after the solution is delivered and used, which is the <mark>Maintenance</mark> step (the last one). Testing happens before delivery."
+    },
+    {
+      "id": "dsa6_0005",
+      "q": "What is the main benefit of analyzing several candidate algorithms for the same problem?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Guaranteeing that every candidate algorithm produces correct output"},
+        {"i": "2", "x": "Identifying the most efficient algorithm and discarding inferior ones"},
+        {"i": "3", "x": "Making implementation and testing unnecessary for the chosen algorithm"},
+        {"i": "4", "x": "Making every candidate algorithm independent of the size of its input"}
+      ],
+      "a": "2",
+      "e": "Algorithm analysis predicts the resources an algorithm needs (most often computation time). Comparing candidates lets us pick the <b>most efficient</b> one and discard several inferior algorithms. It does not prove correctness and does not replace implementation or testing."
+    },
+    {
+      "id": "dsa6_0006",
+      "q": "Which algorithm-design criterion requires the algorithm to stop after a finite number of steps, even if that number is very large?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Definiteness"},
+        {"i": "2", "x": "Effectiveness"},
+        {"i": "3", "x": "Finiteness"},
+        {"i": "4", "x": "Generality"}
+      ],
+      "a": "3",
+      "e": "<b>Finiteness</b> means the algorithm has to stop after a finite (possibly very large) number of steps. Definiteness is about the clarity of each instruction, effectiveness about instructions being basic and feasible, and generality about solving a class of problems."
+    },
+    {
+      "id": "dsa6_0007",
+      "q": "An algorithm contains an instruction that can be interpreted in two different ways. Which design criterion is violated?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Finiteness"},
+        {"i": "2", "x": "Generality"},
+        {"i": "3", "x": "Effectiveness"},
+        {"i": "4", "x": "Definiteness"}
+      ],
+      "a": "4",
+      "e": "<b>Definiteness</b> requires each instruction to be clear and precise, so it can have only one meaning. An ambiguous instruction violates it."
+    },
+    {
+      "id": "dsa6_0008",
+      "q": "Which option correctly describes the <b>Input</b> and <b>Output</b> criteria of an algorithm?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Zero or more input quantities and one or more output quantities"},
+        {"i": "2", "x": "One or more input quantities and zero or more output quantities"},
+        {"i": "3", "x": "Exactly one input quantity and exactly one output quantity"},
+        {"i": "4", "x": "Zero or more input quantities and zero or more output quantities"}
+      ],
+      "a": "1",
+      "e": "An algorithm may take <b>zero or more</b> externally produced inputs, but it must produce <b>at least one</b> output (otherwise it would be useless)."
+    },
+    {
+      "id": "dsa6_0009",
+      "q": "What is meant by the <b>space complexity</b> of an algorithm?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The time the algorithm needs to run to completion"},
+        {"i": "2", "x": "The number of instructions written in the algorithm description"},
+        {"i": "3", "x": "The amount of disk space occupied by the program source code"},
+        {"i": "4", "x": "The amount of memory required by the algorithm to run to completion"}
+      ],
+      "a": "4",
+      "e": "Space complexity is the amount of memory an algorithm needs to run to completion. The time needed to run is <b>time complexity</b>."
+    },
+    {
+      "id": "dsa6_0010",
+      "q": "Which item is part of the <b>variable part</b> of space complexity?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The memory used to load the actual data, such as 2 GB of text versus 1 MB of text"},
+        {"i": "2", "x": "The memory used to store the name of the data collection"},
+        {"i": "3", "x": "The memory used by a counter variable that is the same for any problem size"},
+        {"i": "4", "x": "The memory used to store a constant value defined in the algorithm"}
+      ],
+      "a": "1",
+      "e": "The <b>variable part</b> is the space whose size depends on the size of the problem, such as the actual data. The other items have the same size for any problem size, so they belong to the <b>fixed part</b>."
+    },
+    {
+      "id": "dsa6_0011",
+      "q": "In the formula S(P) = c + S(instance characteristics), what does the constant `c` represent?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The variable part, whose size depends on the size of the problem"},
+        {"i": "2", "x": "The fixed part, which is independent of the size of the problem"},
+        {"i": "3", "x": "The running time of the algorithm for the worst-case input"},
+        {"i": "4", "x": "The size of the output produced by the algorithm only"}
+      ],
+      "a": "2",
+      "e": "$S(P) = c + S(\\text{instance characteristics})$: the constant <b>c</b> is the <b>fixed part</b> (space independent of the problem size), and the second term is the variable part."
+    },
+    {
+      "id": "dsa6_0012",
+      "q": "Following the lecture, how is the space complexity of `arrayMax(A, n)` classified, where the algorithm uses the variables `n`, `A`, `i` and `Max`?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Linear, because the loop runs n - 1 times"},
+        {"i": "2", "x": "Logarithmic, because the loop index is halved each time"},
+        {"i": "3", "x": "Quadratic, because both A and i are used together"},
+        {"i": "4", "x": "Constant, because it needs one location each for n, A, i and Max"}
+      ],
+      "a": "4",
+      "e": [
+        "The algorithm uses only four variables: one for `n`, one for `A`, one for `i` and one for `Max`.",
+        "The number of variables does not change with the size of the problem.",
+        "<mark>Space complexity is constant</mark>"
+      ]
+    },
+    {
+      "id": "dsa6_0013",
+      "q": "Why is time complexity often considered more important than space complexity?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Programs never need more than a fixed amount of memory in practice"},
+        {"i": "2", "x": "Time can be reduced to zero by adding more memory to the computer"},
+        {"i": "3", "x": "Available space keeps growing, whereas running time is still a problem"},
+        {"i": "4", "x": "Space complexity can always be calculated exactly, unlike time complexity"}
+      ],
+      "a": "3",
+      "e": "The lecture explains that the space available tends to be larger and larger, but time is still a problem for everyone, so the running time of an algorithm is an important issue."
+    },
+    {
+      "id": "dsa6_0014",
+      "q": "Why do we typically measure algorithms by their <b>worst-case</b> running time?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The average case is always identical to the worst case for every input"},
+        {"i": "2", "x": "The worst case is the only one that grows with the size of the input"},
+        {"i": "3", "x": "It is easier to analyze and guarantees the algorithm never takes longer"},
+        {"i": "4", "x": "The best case can never be reached by any input in practice"}
+      ],
+      "a": "3",
+      "e": "The average running time is difficult to determine, while the worst case is easier to analyze and gives an <b>upper bound</b>: a guarantee that the algorithm will never take longer. This is crucial for applications such as finance and robotics."
+    },
+    {
+      "id": "dsa6_0015",
+      "q": "A program is run on seven inputs, with these running times in ms: `A = 5`, `B = 3.2`, `C = 3.9`, `D = 5`, `E = 2.4`, `F = 4.2`, `G = 2.9`. Which inputs give the <b>worst case</b> and the <b>best case</b>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Worst case: E; best case: A and D"},
+        {"i": "2", "x": "Worst case: A and D; best case: G"},
+        {"i": "3", "x": "Worst case: A and D; best case: E"},
+        {"i": "4", "x": "Worst case: F; best case: E"}
+      ],
+      "a": "3",
+      "e": [
+        "The worst case is the <u>largest</u> running time: 5 ms, which is reached by both `A` and `D`.",
+        "The best case is the <u>smallest</u> running time: 2.4 ms, which is reached by `E`.",
+        "<mark>Worst case: A and D; best case: E</mark>"
+      ]
+    },
+    {
+      "id": "dsa6_0016",
+      "q": "A program contains an if-then statement that may or may not be executed depending on the input. What does this imply about its running time?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It is the same for all inputs of the same size, so it is constant"},
+        {"i": "2", "x": "It varies with the input, so the running time is variable"},
+        {"i": "3", "x": "It cannot be analyzed, because the statement may be skipped"},
+        {"i": "4", "x": "It always equals the best-case running time of the program"}
+      ],
+      "a": "2",
+      "e": "If a statement may execute or not, the amount of work depends on the input, which gives a <b>variable running time</b>. That is why we study best, average and worst cases, and usually use the worst case."
+    },
+    {
+      "id": "dsa6_0017",
+      "q": "Which pairing of a problem and the natural measure of its input size is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Sorting: the number of bits in each item to be sorted"},
+        {"i": "2", "x": "Multiplying two integers: the total number of bits needed to represent them"},
+        {"i": "3", "x": "Graph problems: only the number of vertices in the graph"},
+        {"i": "4", "x": "Sorting: the largest value among the items to be sorted"}
+      ],
+      "a": "2",
+      "e": "For sorting, the natural input size is the <b>number of items</b>. For multiplying two integers it is the <b>total number of bits</b> needed to represent the input. For a graph it is the numbers of <b>vertices and edges</b>."
+    },
+    {
+      "id": "dsa6_0018",
+      "q": "How is the <b>running time</b> of an algorithm on a particular input defined?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The number of seconds measured on one particular computer"},
+        {"i": "2", "x": "The number of lines contained in the written program"},
+        {"i": "3", "x": "The amount of memory used while the program is running"},
+        {"i": "4", "x": "The number of primitive operations or steps executed"}
+      ],
+      "a": "4",
+      "e": "The running time on a particular input is the number of <b>primitive operations (steps)</b> executed. The notion of a step is defined to be as <b>machine-independent</b> as possible, so seconds on one computer are not used."
+    },
+    {
+      "id": "dsa6_0019",
+      "q": "Algorithm A takes `5,000n` steps and algorithm B takes `⌈1.1^n⌉` steps for an input of n elements. Which conclusion is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "B is faster for n = 10, but A stays feasible for large n while B does not"},
+        {"i": "2", "x": "B is faster for every n, because its function looks simpler than A's"},
+        {"i": "3", "x": "A is faster for every n, because 5,000n is a linear function of n"},
+        {"i": "4", "x": "They have equal growth, because both functions increase as n increases"}
+      ],
+      "a": "1",
+      "e": [
+        "For $n = 10$: A needs $5000 \\times 10 = 50{,}000$ steps, while B needs only $\\lceil 1.1^{10} \\rceil = 3$ steps, so B seems superior.",
+        "For $n = 1000$: A needs $5{,}000{,}000$ steps, while B needs about $2.5 \\times 10^{41}$ steps.",
+        "So B cannot be used for large inputs while A is still feasible: what matters is the <b>growth</b> of the complexity function.",
+        "<mark>B wins for small n, but A is the feasible one for large n</mark>"
+      ]
+    },
+    {
+      "id": "dsa6_0020",
+      "q": "Which condition defines <b>f(x) is O(g(x))</b> for positive functions f and g?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`f(x) ≥ C·g(x)` whenever `x > k`, for some constants C and k"},
+        {"i": "2", "x": "`f(x) = C·g(x)` whenever `x > k`, for some constants C and k"},
+        {"i": "3", "x": "`f(x) ≤ C·g(x)` whenever `x > k`, for some constants C and k"},
+        {"i": "4", "x": "`f(x) ≤ C·g(x)` for every x, whatever the value of the constant C"}
+      ],
+      "a": "3",
+      "e": "f(x) is O(g(x)) if there exist constants C and k such that $f(x) \\le C \\cdot g(x)$ whenever $x > k$. It is fine if the inequality fails for $x \\le k$, because only large x matters. Equality or \"at least\" would not give an <b>upper</b> bound."
+    },
+    {
+      "id": "dsa6_0021",
+      "q": "What does it tell us when f(x) is O(g(x))?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "f grows at least as fast as g for large values of x"},
+        {"i": "2", "x": "f does not grow faster than g for large values of x"},
+        {"i": "3", "x": "f(x) is smaller than g(x) for every value of x"},
+        {"i": "4", "x": "f and g have exactly the same value for large values of x"}
+      ],
+      "a": "2",
+      "e": "Big-O establishes an <b>upper boundary</b> for the growth of f(x) for large x: f does not grow faster than g. It says nothing about small x, and the constant C is accepted because C does not grow with x."
+    },
+    {
+      "id": "dsa6_0022",
+      "q": "To show that f(x) = x² + 2x + 1 is O(x²), which pair of constants satisfies `f(x) ≤ C·x²` for all `x > k`?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "`C = 2` and `k = 1`"},
+        {"i": "2", "x": "`C = 4` and `k = 1`"},
+        {"i": "3", "x": "`C = 1` and `k = 0`"},
+        {"i": "4", "x": "`C = 3` and `k = 0`"}
+      ],
+      "a": "2",
+      "e": [
+        "For $x > 1$ we have $1 \\le x^2$ and $2x \\le 2x^2$.",
+        "So $x^2 + 2x + 1 \\le x^2 + 2x^2 + x^2 = 4x^2$.",
+        "Hence $f(x) \\le 4x^2$ whenever $x > 1$, so $C = 4$ and $k = 1$ work.",
+        "The other pairs fail: with $C = 2$ and $x = 2$ we get $9 > 8$; with $C = 1$ and $x = 1$ we get $4 > 1$; with $C = 3$ and $x = 0.5$ we get $2.25 > 0.75$.",
+        "<mark>f(x) is O(x²) with C = 4 and k = 1</mark>"
+      ]
+    },
+    {
+      "id": "dsa6_0023",
+      "q": "f(x) = x² + 2x + 1 is O(x²). Is it also O(x³)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Yes, since x³ also bounds f, but we always report the smallest simple function g"},
+        {"i": "2", "x": "No, since f(x) can only be O(x²) and cannot be O of any other function"},
+        {"i": "3", "x": "No, since x³ grows faster than f and so it cannot serve as an upper bound"},
+        {"i": "4", "x": "Yes, and O(x³) is the preferred answer because it is the larger bound"}
+      ],
+      "a": "1",
+      "e": "Since x³ grows faster than x², it also grows faster than f(x), so f is O(x³) too. But the bound is useful only if it is tight, so we always have to find the <b>smallest</b> simple function g(x) for which f(x) is O(g(x)): here <mark>O(x²)</mark>."
+    },
+    {
+      "id": "dsa6_0024",
+      "q": "Which list orders the complexity classes from <b>slowest to fastest</b> growth?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "O(1), O(n), O(log n), O(n log n), O(n²), O(2ⁿ)"},
+        {"i": "2", "x": "O(1), O(log n), O(n), O(n²), O(n log n), O(2ⁿ)"},
+        {"i": "3", "x": "O(1), O(log n), O(n), O(n log n), O(2ⁿ), O(n²)"},
+        {"i": "4", "x": "O(1), O(log n), O(n), O(n log n), O(n²), O(2ⁿ)"}
+      ],
+      "a": "4",
+      "e": "From slowest to fastest growth: constant O(1), logarithmic O(log n), linear O(n), linearithmic O(n log n), quadratic O(n²), cubic O(n³), exponential O(2ⁿ), factorial O(n!)."
+    },
+    {
+      "id": "dsa6_0025",
+      "q": "A problem whose best algorithm needs exponential worst-case time, such as O(2ⁿ), is called:",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Tractable"},
+        {"i": "2", "x": "Intractable"},
+        {"i": "3", "x": "Unsolvable"},
+        {"i": "4", "x": "Linearithmic"}
+      ],
+      "a": "2",
+      "e": "A problem solvable with <b>polynomial</b> worst-case complexity is <b>tractable</b>; problems of higher complexity (such as exponential) are <b>intractable</b>. <b>Unsolvable</b> problems are those that no algorithm can solve at all."
+    },
+    {
+      "id": "dsa6_0026",
+      "q": "f(x) = 5x⁴ + 3x² + 7 is O(?). Choose the smallest correct simple function.",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`O(x²)`"},
+        {"i": "2", "x": "`O(x⁷)`"},
+        {"i": "3", "x": "`O(x⁴)`"},
+        {"i": "4", "x": "`O(x¹²)`"}
+      ],
+      "a": "3",
+      "e": "For any polynomial $a_n x^n + \\dots + a_0$, the function is $O(x^n)$: the highest power dominates and constants are ignored. Here the highest power is 4, so f is <mark>O(x⁴)</mark>."
+    },
+    {
+      "id": "dsa6_0027",
+      "q": "f₁(n) is O(n²) and f₂(n) is O(n log n). What is the tightest big-O bound of the <b>sum</b> f₁(n) + f₂(n)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`O(n log n)`"},
+        {"i": "2", "x": "`O(n² log n)`"},
+        {"i": "3", "x": "`O(n³ log n)`"},
+        {"i": "4", "x": "`O(n²)`"}
+      ],
+      "a": "4",
+      "e": [
+        "Sum rule: if f₁ is O(g₁) and f₂ is O(g₂), then f₁ + f₂ is $O(\\max(g_1, g_2))$.",
+        "$\\max(n^2, n \\log n) = n^2$, since $n^2$ grows faster.",
+        "<mark>f₁ + f₂ is O(n²)</mark>"
+      ]
+    },
+    {
+      "id": "dsa6_0028",
+      "q": "f₁(x) is O(x) and f₂(x) is O(x log x). What is the tightest big-O bound of the <b>product</b> f₁(x)·f₂(x)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`O(x log x)`"},
+        {"i": "2", "x": "`O(x²)`"},
+        {"i": "3", "x": "`O(x² log x)`"},
+        {"i": "4", "x": "`O(x log² x)`"}
+      ],
+      "a": "3",
+      "e": [
+        "Product rule: if f₁ is O(g₁) and f₂ is O(g₂), then f₁·f₂ is $O(g_1 \\cdot g_2)$.",
+        "$g_1 \\cdot g_2 = x \\cdot x \\log x = x^2 \\log x$.",
+        "<mark>f₁·f₂ is O(x² log x)</mark>"
+      ]
+    },
+    {
+      "id": "dsa6_0029",
+      "q": "The algorithm `who_knows` takes n numbers and, for every pair `(i, j)` with `i < j`, compares `|aᵢ - aⱼ|` with `m` and updates `m` when the difference is larger (starting from `m = 0`). What does it compute, and what is its time complexity?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "The minimum difference between any two numbers; O(n²)"},
+        {"i": "2", "x": "The maximum difference between any two numbers; O(n)"},
+        {"i": "3", "x": "The sum of all differences between pairs of numbers; O(n)"},
+        {"i": "4", "x": "The maximum difference between any two numbers; O(n²)"}
+      ],
+      "a": "4",
+      "e": [
+        "`m` is replaced only when a larger difference is found, so at the end <b>m is the maximum difference</b> between any two numbers.",
+        "The outer loop runs for $i = 1 \\dots n-1$ and the inner loop compares `aᵢ` with the remaining elements.",
+        "Number of comparisons: $(n-1) + (n-2) + \\dots + 1 = \\frac{n(n-1)}{2} = 0.5n^2 - 0.5n$.",
+        "The dominant term is $n^2$, so the time complexity is <mark>O(n²)</mark>."
+      ]
+    },
+    {
+      "id": "dsa6_0030",
+      "q": "The algorithm `max_diff` solves the same problem as `who_knows` in a single pass, keeping a running minimum and a running maximum and finally computing `m = max - min`. According to the lecture, how many comparisons does it make and what is its complexity?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "n(n - 1)/2 comparisons; O(n²)"},
+        {"i": "2", "x": "2n - 2 comparisons; O(n²)"},
+        {"i": "3", "x": "2n - 2 comparisons; O(n)"},
+        {"i": "4", "x": "n log n comparisons; O(n log n)"}
+      ],
+      "a": "3",
+      "e": [
+        "The loop runs from $i = 2$ to $n$, so it executes $n - 1$ times, and each iteration makes up to two comparisons (with `min` and with `max`).",
+        "Total number of comparisons: $2(n - 1) = 2n - 2$.",
+        "$2n - 2$ grows linearly with $n$, so the time complexity is <mark>O(n)</mark>, much better than the O(n²) of `who_knows`."
+      ]
+    }
+  ]
+}

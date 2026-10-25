@@ -1,0 +1,170 @@
+{
+  "qs": [
+    {
+      "id": "dsa6_0001",
+      "q": "What does <b>Big-O notation</b> ($O$) represent in computational complexity?",
+      "t": ["2", "3", "2025/26 Credits Q12", "2025 Jan (M2) Q34"],
+      "c": [
+        {"i": "1", "x": "Lower bound"},
+        {"i": "2", "x": "Upper bound"},
+        {"i": "3", "x": "Tight (exact) bound"},
+        {"i": "4", "x": "Average case"}
+      ],
+      "a": "2",
+      "e": [
+        "Definition from the lecture: $f(x)$ is $O(g(x))$ if there are constants $C$ and $k$ such that $f(x) \\le C \\cdot g(x)$ whenever $x > k$.",
+        "This means that $f$ does not grow faster than $g$: the idea of big-O is to establish an <b>upper boundary</b> for the growth of $f(x)$ for large $x$.",
+        "It is not a lower bound, because it never says the function grows at least that fast. It is not an exact (tight) bound, because $g$ may be much larger than $f$ (for example, $f(x)$ that is $O(x^2)$ is also $O(x^3)$). And it is not the average case, because the average running time is difficult to determine and big-O is mainly used with the worst case.",
+        "The 2025 January exam asked the same idea as 'What is the primary purpose of Big-O notation?', whose answer is 'to describe the upper bound of an algorithm's running time' (not the exact execution time, not memory usage, not a lower bound)."
+      ]
+    },
+    {
+      "id": "dsa6_0002",
+      "q": "<b>Worst case</b> analysis is referred to as",
+      "t": ["2", "2020 MCQ Q9"],
+      "c": [
+        {"i": "1", "x": "Big O"},
+        {"i": "2", "x": "Big Theta"},
+        {"i": "3", "x": "Big Omega"},
+        {"i": "4", "x": "Big Gamma"}
+      ],
+      "a": "1",
+      "e": [
+        "The worst-case running time of an algorithm gives an <b>upper bound</b> on the running time for any input, which guarantees that the algorithm will never take any longer.",
+        "Big-O notation is the notation that establishes an upper boundary for the growth of a function, so it is the one used to express worst-case complexity.",
+        "The other names are not the notation used in this lecture for the worst case."
+      ]
+    },
+    {
+      "id": "dsa6_0003",
+      "q": "<b>True or False:</b> In algorithm complexity analysis, we must know the case that causes the maximum number of operations to be executed.",
+      "t": ["2", "3", "2022 (A) Q1-10", "2024 (B) Q1-14"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "The running time of an algorithm varies with the input, and the average running time is difficult to determine.",
+        "So we typically measure algorithms by their <b>worst case</b>, which is the input that makes the algorithm execute the maximum number of primitive operations (steps).",
+        "The worst-case running time is an upper bound for any input and gives a guarantee that the algorithm will never take any longer. It is also easier to analyze and crucial for applications such as finance and robotics.",
+        "So the statement is True."
+      ]
+    },
+    {
+      "id": "dsa6_0004",
+      "q": "<b>True or False:</b> In this course, we focused on <b>Space Complexity</b> in algorithm analysis.",
+      "t": ["2", "2024 (B) Q1-15"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "The lecture states that time complexity is often more important than space complexity: the available space tends to be larger and larger, while time is still a problem for all of us.",
+        "That is why the lecture stresses that the running time of algorithms is an important issue, and the analysis focuses on how the number of steps grows with the input size.",
+        "So the focus was on time complexity, not space complexity, and the statement is False."
+      ]
+    },
+    {
+      "id": "dsa6_0005",
+      "q": "The execution time of an algorithm depends on the",
+      "t": ["2", "2020 MCQ Q5"],
+      "c": [
+        {"i": "1", "x": "Amount of data"},
+        {"i": "2", "x": "Type of hardware"},
+        {"i": "3", "x": "Programming language used"},
+        {"i": "4", "x": "All of the above"}
+      ],
+      "a": "4",
+      "e": [
+        "The amount of data matters: the running time of an algorithm varies with the inputs and typically grows with the size of the input.",
+        "The measured time also depends on the machine and the language/implementation. This is exactly why the lecture defines running time as the number of primitive operations (steps) and says the notion of a step should be as machine-independent as possible.",
+        "Since all three factors affect the execution time, the answer is 'All of the above'."
+      ]
+    },
+    {
+      "id": "dsa6_0006",
+      "q": "The term used for $O(\\log n)$ complexity in English is:",
+      "t": ["2", "2025/26 Credits Q14"],
+      "c": [
+        {"i": "1", "x": "Linear"},
+        {"i": "2", "x": "Quadratic"},
+        {"i": "3", "x": "Logarithmic"},
+        {"i": "4", "x": "Constant"}
+      ],
+      "a": "3",
+      "e": [
+        "The lecture lists the common complexity classes from slowest to fastest growth: $O(1)$ Constant, $O(\\log n)$ <b>Logarithmic</b>, $O(n)$ Linear, $O(n \\log n)$ Linearithmic, $O(n^2)$ Quadratic, $O(n^3)$ Cubic, $O(2^n)$ Exponential, $O(n!)$ Factorial.",
+        "So $O(\\log n)$ is called Logarithmic."
+      ]
+    },
+    {
+      "id": "dsa6_0007",
+      "q": "What is the complexity of a loop that runs from 1 to $n$ (`for i in range(n)`)?",
+      "t": ["2", "2025/26 Credits Q5"],
+      "c": [
+        {"i": "1", "x": "$O(1)$"},
+        {"i": "2", "x": "$O(n)$"},
+        {"i": "3", "x": "$O(n^2)$"},
+        {"i": "4", "x": "$O(\\log n)$"}
+      ],
+      "a": "2",
+      "e": [
+        "The running time is the number of primitive steps executed, expressed as a function of the input size $n$.",
+        "The loop body executes exactly $n$ times and each execution costs a constant amount of work, so the number of steps grows linearly with $n$.",
+        "This matches the lecture's max_diff example, a single loop over the input with about $2n - 2$ comparisons, whose time complexity is $O(n)$ (constants are dropped)."
+      ]
+    },
+    {
+      "id": "dsa6_0008",
+      "q": "What is the time complexity of the following code snippet?\n```python\nfor i in range(10):\n    print(i)\n```",
+      "t": ["2", "2025/26 Credits Q8"],
+      "c": [
+        {"i": "1", "x": "$O(1)$"},
+        {"i": "2", "x": "$O(n)$"},
+        {"i": "3", "x": "$O(n^2)$"},
+        {"i": "4", "x": "$O(\\log n)$"}
+      ],
+      "a": "1",
+      "e": [
+        "The loop always runs exactly 10 times, whatever the size of the input, because 10 is a fixed number and not related to $n$.",
+        "The number of steps does not grow with the input size, so the running time is constant: $O(1)$ (Constant)."
+      ]
+    },
+    {
+      "id": "dsa6_0009",
+      "q": "What is the complexity of nested loops, where both loops go up to $n$?",
+      "t": ["2", "2025/26 Credits Q29"],
+      "c": [
+        {"i": "1", "x": "$O(n)$"},
+        {"i": "2", "x": "$O(n^2)$"},
+        {"i": "3", "x": "$O(\\log n)$"},
+        {"i": "4", "x": "$O(n \\log n)$"}
+      ],
+      "a": "2",
+      "e": [
+        "For each of the $n$ iterations of the outer loop, the inner loop runs up to $n$ times, so the body executes about $n \\times n = n^2$ times (the product rule: if $f_1$ is $O(g_1)$ and $f_2$ is $O(g_2)$ then $f_1 f_2$ is $O(g_1 g_2)$).",
+        "Similar to the lecture's who_knows example: the inner loop starts at $i + 1$, so the number of comparisons is $(n-1) + (n-2) + \\dots + 1 = n(n-1)/2 = 0.5n^2 - 0.5n$, which is $O(n^2)$ (Quadratic).",
+        "The same quadratic growth results when both loops simply go up to $n$."
+      ]
+    },
+    {
+      "id": "dsa6_0010",
+      "q": "The process of translating an algorithm into a computer program is:",
+      "t": ["2", "2025/26 Credits Q35"],
+      "c": [
+        {"i": "1", "x": "Abstraction"},
+        {"i": "2", "x": "Programming"},
+        {"i": "3", "x": "Data Structuring"},
+        {"i": "4", "x": "Analysis"}
+      ],
+      "a": "2",
+      "e": [
+        "The problem-solving steps in the lecture are: problem definition, algorithm analysis, algorithm design, implementation, testing, maintenance.",
+        "In the implementation step we decide on the programming language (C++, C#, Java, Python, ...) and write clean, well documented code that realizes the designed algorithm, which is programming.",
+        "Analysis only predicts the resources (time or memory) an algorithm needs, and abstraction means hiding implementation details."
+      ]
+    }
+  ]
+}
