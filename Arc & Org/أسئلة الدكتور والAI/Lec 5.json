@@ -1,0 +1,569 @@
+{
+  "qs": [
+    {
+      "id": "Arc5_0001",
+      "q": "Which of the following statements describes <b>Computer Architecture</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The operational units and their interconnections that realize the specification"},
+        {"i": "2", "x": "The attributes visible to the programmer that directly affect logical program execution"},
+        {"i": "3", "x": "The hardware technology details that are chosen after the design is fixed"},
+        {"i": "4", "x": "The performance characteristics revealed by how the units are connected"}
+      ],
+      "a": "2",
+      "e": "Computer Architecture is the set of attributes <b>visible to the programmer</b> (instruction set, data-type sizes, I/O mechanisms, memory addressing) that directly affect the logical execution of a program. Option 1 describes <b>Organization</b>. <mark>Answer: attributes visible to the programmer.</mark>"
+    },
+    {
+      "id": "Arc5_0002",
+      "q": "Which of the following is an <b>architectural</b> attribute (not an organizational one)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The physical layout of the chips inside the processor"},
+        {"i": "2", "x": "The speed at which a given processor model runs instructions"},
+        {"i": "3", "x": "The hardware circuits that realize the control unit"},
+        {"i": "4", "x": "The memory addressing techniques supported by the machine"}
+      ],
+      "a": "4",
+      "e": "Architecture attributes are: instruction set, number of bits used to represent data types, I/O mechanisms, and <b>memory addressing techniques</b>. The other options describe how the architecture is realized (organization) and its performance. <mark>Answer: memory addressing techniques.</mark>"
+    },
+    {
+      "id": "Arc5_0003",
+      "q": "Two processors of the Intel x86 family run exactly the same programs, but their internal designs and speeds are different. What does this show?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The architecture can change while the organization stays the same"},
+        {"i": "2", "x": "Both the architecture and the organization must change in every new model"},
+        {"i": "3", "x": "The organization can change while the architecture stays the same"},
+        {"i": "4", "x": "The organization is fixed first and the architecture is decided afterwards"}
+      ],
+      "a": "3",
+      "e": "All Intel x86 processors share the same basic <b>architecture</b> (programs run unchanged), yet their <b>organization</b> differs. Organization is decided <u>after</u> the architecture is fixed, so it can be changed without changing the architecture. <mark>Answer: organization changes, architecture stays.</mark>"
+    },
+    {
+      "id": "Arc5_0004",
+      "q": "Which row correctly compares Computer Architecture with Computer Organization?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Architecture describes what the computer does; Organization describes how it does it"},
+        {"i": "2", "x": "Architecture describes how the computer does it; Organization describes what it does"},
+        {"i": "3", "x": "Architecture is decided after the organization; Organization is fixed first"},
+        {"i": "4", "x": "Architecture reveals computer performance; Organization indicates computer hardware"}
+      ],
+      "a": "1",
+      "e": "Architecture = the programmer's abstract view (<b>what</b> the computer does), fixed first and indicating the hardware. Organization = the realization of that architecture (<b>how</b> it does it), decided after the architecture and revealing performance. <mark>Answer: option 1.</mark>"
+    },
+    {
+      "id": "Arc5_0005",
+      "q": "In his 1945 report <i>First Draft of a Report on the EDVAC</i>, Von Neumann organized the computer system into which four main parts?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Central processing unit, cache memory, main memory, and system buses"},
+        {"i": "2", "x": "Central control unit, register file, memory, and input/output buses"},
+        {"i": "3", "x": "Central arithmetical unit, central control unit, memory, and input/output devices"},
+        {"i": "4", "x": "Central arithmetical unit, accumulator, memory, and bus controller"}
+      ],
+      "a": "3",
+      "e": "The four parts are the <b>Central Arithmetical unit (CA)</b>, the <b>Central Control unit (CU)</b>, <b>Memory (M)</b>, and <b>Input/Output devices (I/O)</b>. <mark>Answer: CA, CU, Memory, I/O.</mark>"
+    },
+    {
+      "id": "Arc5_0006",
+      "q": "Why can the <b>IAS</b> machine be called the father of all modern computers?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It was among the first computers to store both program and data in memory"},
+        {"i": "2", "x": "It was the first computer to take its input and output on punch cards"},
+        {"i": "3", "x": "It was the first computer to replace vacuum tubes with transistors"},
+        {"i": "4", "x": "It was the first computer built entirely from integrated circuits on chips"}
+      ],
+      "a": "1",
+      "e": "IAS was one of the first computers that kept <b>both the program and the data in the computer's memory</b> (the stored-program concept), and it was the prototype for the IBM family of computers. <mark>Answer: it stored program and data in memory.</mark>"
+    },
+    {
+      "id": "Arc5_0007",
+      "q": "Why did Von Neumann leave the ENIAC design team and take part in developing the EDVAC?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "He wanted a larger electronic memory for storing tabular functions and constants"},
+        {"i": "2", "x": "He wanted to follow the engineering view of the creators rather than the logical view"},
+        {"i": "3", "x": "He wanted to replace punch-card input and output with a direct keyboard interface"},
+        {"i": "4", "x": "His interest was the logical structure, unlike the engineering view of ENIAC's creators"}
+      ],
+      "a": "4",
+      "e": "Von Neumann's main interest was the <b>logical structure and mathematical description</b> of the new technology, while the ENIAC creators had an engineering view. This difference in point of view motivated him to leave ENIAC and join EDVAC. <mark>Answer: option 4.</mark>"
+    },
+    {
+      "id": "Arc5_0008",
+      "q": "Microprocessor A processes 64 bits in a single instruction, while microprocessor B processes 32 bits in a single instruction. Which microprocessor characteristic differs between them?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Instruction set"},
+        {"i": "2", "x": "Bandwidth"},
+        {"i": "3", "x": "Clock speed"},
+        {"i": "4", "x": "Cache size"}
+      ],
+      "a": "2",
+      "e": "The three characteristics that differentiate microprocessors are <b>instruction set</b> (instructions it can execute), <b>bandwidth</b> (number of bits processed in a single instruction), and <b>clock speed</b> (in MHz, determines how many instructions per second). <mark>Answer: bandwidth.</mark>"
+    },
+    {
+      "id": "Arc5_0009",
+      "q": "Which IAS register contains the address of the <u>next instruction pair</u> to be fetched from memory?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Memory Address Register (MAR)"},
+        {"i": "2", "x": "Instruction Register (IR)"},
+        {"i": "3", "x": "Instruction Buffer Register (IBR)"},
+        {"i": "4", "x": "Program Counter (PC)"}
+      ],
+      "a": "4",
+      "e": "The <b>PC</b> holds the address of the next instruction pair to be fetched. The MAR holds the address of the word being read or written, the IR holds the 8-bit opcode being executed, and the IBR holds the right-hand instruction temporarily. <mark>Answer: PC.</mark>"
+    },
+    {
+      "id": "Arc5_0010",
+      "q": "A word fetched from memory contains two instructions. Which register is employed to hold the <u>right-hand</u> instruction temporarily while the left-hand instruction is executed?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Memory Buffer Register (MBR)"},
+        {"i": "2", "x": "Instruction Buffer Register (IBR)"},
+        {"i": "3", "x": "Instruction Register (IR)"},
+        {"i": "4", "x": "Multiplier Quotient (MQ)"}
+      ],
+      "a": "2",
+      "e": "The <b>IBR</b> temporarily holds the right-hand instruction of a word. Later, its opcode moves to the IR and its address field moves to the MAR, so no new memory access is needed. <mark>Answer: IBR.</mark>"
+    },
+    {
+      "id": "Arc5_0011",
+      "q": "An IAS memory word has 40 bits. Each instruction is 20 bits and contains an 8-bit opcode. How many instructions are stored in one word, and how many bits are in the address field of one instruction?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "2 instructions per word; 12-bit address field"},
+        {"i": "2", "x": "2 instructions per word; 8-bit address field"},
+        {"i": "3", "x": "1 instruction per word; 12-bit address field"},
+        {"i": "4", "x": "4 instructions per word; 12-bit address field"}
+      ],
+      "a": "1",
+      "e": [
+        "Instructions per word = word size / instruction size = $40 / 20 = 2$ (a left-hand and a right-hand instruction).",
+        "Each 20-bit instruction has an 8-bit opcode.",
+        "Address field = $20 - 8 = 12$ bits.",
+        "<mark>Answer: 2 instructions per word, 12-bit address field.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0012",
+      "q": "The CPU must write a word into memory location 100. Which register roles are used for this transfer?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The PC holds the address and the IBR holds the word"},
+        {"i": "2", "x": "The MBR holds the address and the MAR holds the word"},
+        {"i": "3", "x": "The MAR holds the address and the MBR holds the word"},
+        {"i": "4", "x": "The IR holds the address and the AC holds the word"}
+      ],
+      "a": "3",
+      "e": "The <b>MAR</b> specifies the address in memory of the word to be written or read, and the <b>MBR</b> contains the word to be stored in memory (or the word received from memory). <mark>Answer: MAR = address, MBR = data.</mark>"
+    },
+    {
+      "id": "Arc5_0013",
+      "q": "The IAS multiplies a number in memory by the number in the MQ using `AC, MQ ← M(x) x MQ`. Where is the product placed?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Most-significant part in the MQ and least-significant part in the AC"},
+        {"i": "2", "x": "Most-significant part in the AC and least-significant part in the MQ"},
+        {"i": "3", "x": "The whole product in the AC, while the MQ keeps its old value"},
+        {"i": "4", "x": "The whole product in the MBR, while the AC and MQ are cleared"}
+      ],
+      "a": "2",
+      "e": "The product of two 40-bit numbers is too long for one register, so it is split: the <b>most-significant</b> bits go to the <b>AC</b> and the <b>least-significant</b> bits go to the <b>MQ</b>. <mark>Answer: AC = most significant, MQ = least significant.</mark>"
+    },
+    {
+      "id": "Arc5_0014",
+      "q": "The IAS executes `MQ, AC ← AC / M(x)`. After the instruction, where are the quotient and the remainder?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Quotient in the AC and remainder in the MQ"},
+        {"i": "2", "x": "Both quotient and remainder in the MQ"},
+        {"i": "3", "x": "Quotient in the MBR and remainder in the AC"},
+        {"i": "4", "x": "Quotient in the MQ and remainder in the AC"}
+      ],
+      "a": "4",
+      "e": "The number in the AC is divided by the number at location x. The <b>quotient</b> is placed in the <b>MQ</b> and the <b>remainder</b> is left in the <b>AC</b>. <mark>Answer: quotient in MQ, remainder in AC.</mark>"
+    },
+    {
+      "id": "Arc5_0015",
+      "q": "The IAS Selectron memory has up to 1024 words, and each word is 40 bits. What is the total memory capacity in bits?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "40,960 bits"},
+        {"i": "2", "x": "20,480 bits"},
+        {"i": "3", "x": "81,920 bits"},
+        {"i": "4", "x": "4,096 bits"}
+      ],
+      "a": "1",
+      "e": [
+        "Number of words = $1024$, each word has $40$ bits.",
+        "Total bits = $1024 \\times 40 = 40960$ bits.",
+        "(Check: $20480$ would use 20-bit words, which is the size of one <u>instruction</u>, not a word.)",
+        "<mark>Answer: 40,960 bits.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0016",
+      "q": "In the IAS <b>fetch cycle</b>, what is loaded into the IR and the MAR?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The address of the next instruction into the IR and its opcode into the MAR"},
+        {"i": "2", "x": "The whole 40-bit word into the IR and the PC value into the MAR"},
+        {"i": "3", "x": "The opcode of the next instruction into the IR and its address into the MAR"},
+        {"i": "4", "x": "The operand of the instruction into the IR and the result into the MAR"}
+      ],
+      "a": "3",
+      "e": "During the fetch cycle, the <b>op-code</b> of the next instruction is loaded into the <b>IR</b> and its <b>address</b> is loaded into the <b>MAR</b>. The instruction comes either from the IBR or from memory through the MBR. <mark>Answer: opcode to IR, address to MAR.</mark>"
+    },
+    {
+      "id": "Arc5_0017",
+      "q": "The left-hand instruction of a word has just finished, and the next instruction is the right-hand one already stored in the IBR. What happens in the fetch step?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The PC is copied into the MAR and the same word is read again from memory"},
+        {"i": "2", "x": "The opcode and address are taken from the IBR into the IR and the MAR, with no memory access"},
+        {"i": "3", "x": "A new word is loaded into the MBR and the left-hand instruction is executed again"},
+        {"i": "4", "x": "The IBR is cleared and the PC is used to read the next word from memory"}
+      ],
+      "a": "2",
+      "e": "When the next instruction is already in the IBR, <b>no memory access is required</b>: the opcode `IBR(0:7)` goes to the IR and the address `IBR(8:19)` goes to the MAR. <mark>Answer: take them directly from the IBR.</mark>"
+    },
+    {
+      "id": "Arc5_0018",
+      "q": "The right-hand instruction is saved in the 20-bit IBR (bits `0:19`). Which transfer correctly moves its opcode and address?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "`IR ← IBR(0:7)` and `MAR ← IBR(8:19)`"},
+        {"i": "2", "x": "`IR ← IBR(0:11)` and `MAR ← IBR(12:19)`"},
+        {"i": "3", "x": "`IR ← IBR(8:19)` and `MAR ← IBR(0:7)`"},
+        {"i": "4", "x": "`IR ← IBR(0:19)` and `MAR ← PC`"}
+      ],
+      "a": "1",
+      "e": [
+        "The opcode is <b>8 bits</b>, so it occupies the first 8 bits of the instruction: `IBR(0:7)`.",
+        "The address field is the remaining $20 - 8 = 12$ bits: `IBR(8:19)`.",
+        "The IR receives the opcode and the MAR receives the address.",
+        "<mark>Answer: IR ← IBR(0:7), MAR ← IBR(8:19).</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0019",
+      "q": "How are the instructions executed by the IAS classified?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Load, Store, and Input/Output (device transfer operations)"},
+        {"i": "2", "x": "Fetch, Decode, and Execute (the stages of the cycle)"},
+        {"i": "3", "x": "Arithmetic, Logical, and Shift (including rotation operations)"},
+        {"i": "4", "x": "Move, ALU, and Control (conditional and unconditional branching)"}
+      ],
+      "a": "4",
+      "e": "IAS instructions are classified into three types: <b>Move</b>, <b>ALU</b>, and <b>Control</b> (unconditional and conditional branching). <mark>Answer: Move, ALU, Control.</mark>"
+    },
+    {
+      "id": "Arc5_0020",
+      "q": "To which IAS instruction type does `If AC >= 0, then PC ← M(x, 0:19)` belong?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Move"},
+        {"i": "2", "x": "ALU"},
+        {"i": "3", "x": "Control (conditional branching)"},
+        {"i": "4", "x": "Control (unconditional branching)"}
+      ],
+      "a": "3",
+      "e": "The instruction changes the PC (the flow of execution) <u>only if</u> the condition `AC >= 0` is true, so it is a <b>Control</b> instruction with <b>conditional</b> branching. <mark>Answer: Control (conditional branching).</mark>"
+    },
+    {
+      "id": "Arc5_0021",
+      "q": "What is the effect of the IAS instruction `M(x, 8:19) ← AC(28:39)`?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "It overwrites the opcode of the left-hand instruction at x with the right 12 bits of the AC"},
+        {"i": "2", "x": "It overwrites the address field of the left-hand instruction at x with the right 12 bits of the AC"},
+        {"i": "3", "x": "It overwrites the address field of the right-hand instruction at x with the right 12 bits of the AC"},
+        {"i": "4", "x": "It copies the complete 40-bit AC into the left half of the word at location x"}
+      ],
+      "a": "2",
+      "e": [
+        "Bits `8:19` of a word are the <b>address field</b> (12 bits) of the <b>left-hand</b> instruction, because bits `0:7` are its opcode.",
+        "`AC(28:39)` are the right-hand 12 bits of the AC.",
+        "So the instruction replaces the address field of the left-hand instruction at x with those 12 bits (it modifies an instruction address).",
+        "<mark>Answer: it overwrites the left-hand instruction's address field.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0022",
+      "q": "Assume `AC = 5` and `M(x) = 3`. What is the value of the AC after `AC ← M(x)`, and after `AC ← AC + M(x)` (each executed separately starting from `AC = 5`)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "8 and then 8"},
+        {"i": "2", "x": "3 and then 3"},
+        {"i": "3", "x": "8 and then 3"},
+        {"i": "4", "x": "3 and then 8"}
+      ],
+      "a": "4",
+      "e": [
+        "`AC ← M(x)` <u>clears</u> the AC and then adds the number at x: $AC = 0 + 3 = 3$.",
+        "`AC ← AC + M(x)` adds the number at x to the current AC: $AC = 5 + 3 = 8$.",
+        "<mark>Answer: 3 and then 8.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0023",
+      "q": "The AC contains `0` when the IAS executes `If AC >= 0, then PC ← M(x, 20:39)`. What happens next?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Control moves to the right-hand instruction of the pair in M(x)"},
+        {"i": "2", "x": "Control moves to the left-hand instruction of the pair in M(x)"},
+        {"i": "3", "x": "Execution continues normally because the AC is not greater than zero"},
+        {"i": "4", "x": "The AC is cleared and the program halts at this instruction"}
+      ],
+      "a": "1",
+      "e": [
+        "The condition is `AC >= 0`, and $0 \\ge 0$ is true, so the branch <u>is</u> taken.",
+        "Bits `20:39` of M(x) are the <b>right-hand</b> instruction of the pair.",
+        "<mark>Answer: control moves to the right-hand instruction at M(x).</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0024",
+      "q": "Which list gives the parts that the <b>bus model</b> considers in a computer?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "ALU, control unit, registers, and cache"},
+        {"i": "2", "x": "CPU, memory, DMA controller, and clock"},
+        {"i": "3", "x": "CPU, memory, input/output (I/O), and system bus"},
+        {"i": "4", "x": "CPU, ALU, memory, and address bus"}
+      ],
+      "a": "3",
+      "e": "The bus model considers the computer as a <b>CPU</b> (ALU and control unit combined into one functional unit), <b>Memory</b>, <b>Input/Output (I/O)</b>, and the <b>System Bus</b> that connects them. <mark>Answer: CPU, memory, I/O, system bus.</mark>"
+    },
+    {
+      "id": "Arc5_0025",
+      "q": "During a <b>Direct Memory Access (DMA)</b> transfer, which device is the bus master and which is the slave?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Master: CPU; Slave: memory"},
+        {"i": "2", "x": "Master: I/O module; Slave: memory"},
+        {"i": "3", "x": "Master: memory; Slave: I/O module"},
+        {"i": "4", "x": "Master: coprocessor; Slave: CPU"}
+      ],
+      "a": "2",
+      "e": "In DMA, the <b>I/O</b> module controls the transfer directly with memory without the CPU, so the I/O is the <b>master</b> and the memory is the <b>slave</b>. (CPU master / memory slave is the case of fetching instructions or data.) <mark>Answer: I/O master, memory slave.</mark>"
+    },
+    {
+      "id": "Arc5_0026",
+      "q": "Which option lists the classification of buses by <u>timing</u>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Synchronous, semi-synchronous, and asynchronous"},
+        {"i": "2", "x": "Data bus, address bus, and control bus"},
+        {"i": "3", "x": "Dedicated and multiplexed"},
+        {"i": "4", "x": "Master, slave, and coprocessor"}
+      ],
+      "a": "1",
+      "e": "Buses are classified by <b>timing</b> (synchronous, semi-synchronous, asynchronous), by <b>data type</b> (data, address, control), and as <b>dedicated or multiplexed</b>. <mark>Answer: synchronous, semi-synchronous, asynchronous.</mark>"
+    },
+    {
+      "id": "Arc5_0027",
+      "q": "Which statement about a <b>synchronous bus</b> is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Master outputs become valid only on the falling edge of CLK"},
+        {"i": "2", "x": "Slave outputs for a read must be valid by the rising edge of CLK"},
+        {"i": "3", "x": "Both master and slave outputs are valid only while CLK stays at 0"},
+        {"i": "4", "x": "Master outputs are valid on the rising edge of CLK and stay valid through the falling edge"}
+      ],
+      "a": "4",
+      "e": "A synchronous bus has a clock (CLK) derived from the master system clock. <b>Master outputs</b> are valid on the <b>rising edge</b> and stay valid through the <b>falling edge</b>, while the <b>slave's read output</b> is valid by the <b>falling edge</b>. <mark>Answer: option 4.</mark>"
+    },
+    {
+      "id": "Arc5_0028",
+      "q": "A slave cannot supply data in time, so it asserts ACK late and the transaction takes extra clock cycles. What are these extra cycles called, and in which bus type do they occur?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Wait states, in an asynchronous bus"},
+        {"i": "2", "x": "Strobe cycles, in a semi-synchronous bus"},
+        {"i": "3", "x": "Wait states, in a semi-synchronous bus"},
+        {"i": "4", "x": "Handshake states, in a synchronous bus"}
+      ],
+      "a": "3",
+      "e": "In a <b>semi-synchronous</b> bus everything is synchronized to the bus clock, but transactions take a variable number of cycles. The slave asserts <b>ACK</b> when data is valid, and the extra cycles caused by a late ACK are called <b>wait states</b>. <mark>Answer: wait states, semi-synchronous bus.</mark>"
+    },
+    {
+      "id": "Arc5_0029",
+      "q": "Which option correctly describes the handshaking protocol of an <b>asynchronous bus</b>?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "STROBE goes slave to master and ACK goes master to slave, each read on the falling edge"},
+        {"i": "2", "x": "STROBE goes master to slave and is read by the slave on the falling edge; ACK goes slave to master and is read by the master on the falling edge"},
+        {"i": "3", "x": "STROBE goes master to slave and ACK goes slave to master, each read on the rising edge of CLK"},
+        {"i": "4", "x": "STROBE and ACK both go from master to slave and are sampled on the falling edge of CLK"}
+      ],
+      "a": "2",
+      "e": "An asynchronous bus has <b>no clock</b>; timing depends on control signal edges. <b>STROBE</b> is a master-to-slave signal (the slave reads on its falling edge) and <b>ACK</b> is a slave-to-master signal (the master reads on its falling edge). <mark>Answer: option 2.</mark>"
+    },
+    {
+      "id": "Arc5_0030",
+      "q": "A keyboard produces data at <u>irregular</u> intervals. Which bus timing is more suitable, and why?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "Synchronous, because its hardware is cheaper than that of an asynchronous bus"},
+        {"i": "2", "x": "Synchronous, because it needs no handshaking to detect when data is ready"},
+        {"i": "3", "x": "Asynchronous, because it has lower overhead and higher throughput than a synchronous bus"},
+        {"i": "4", "x": "Asynchronous, because it needs no synchronization and its set-up is faster"}
+      ],
+      "a": "4",
+      "e": "Asynchronous transmission is simple (no synchronization of both sides), cheap (less hardware), and has a fast set-up, so it suits messages generated at <b>irregular intervals</b> such as keyboard data entry. Its disadvantage is a <u>large</u> overhead, so options 1 and 3 are false. <mark>Answer: asynchronous, no synchronization needed and faster set-up.</mark>"
+    },
+    {
+      "id": "Arc5_0031",
+      "q": "The CPU reads a word from memory. Which bus carries the address, which carries the Memory Read signal, and which carries the returned data?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Address bus: address; control bus: Memory Read; data bus: data"},
+        {"i": "2", "x": "Data bus: address; address bus: Memory Read; control bus: data"},
+        {"i": "3", "x": "Control bus: address; data bus: Memory Read; address bus: data"},
+        {"i": "4", "x": "Address bus: address; data bus: Memory Read; control bus: data"}
+      ],
+      "a": "1",
+      "e": "The <b>address bus</b> identifies where the information is, the <b>control bus</b> carries control signals such as Memory Read and Memory Write, and the <b>data bus</b> carries the data exchanged between processor, memory and peripherals. <mark>Answer: address / control / data.</mark>"
+    },
+    {
+      "id": "Arc5_0032",
+      "q": "A system has a 32-bit <b>data bus</b>. Which statement is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It has 32 wires and is unidirectional from the CPU to memory"},
+        {"i": "2", "x": "It has 5 wires because $2^5 = 32$ and it is bi-directional"},
+        {"i": "3", "x": "It has 32 wires, each carrying one bit, and it is bi-directional"},
+        {"i": "4", "x": "It has 32 wires and it carries the addresses of the memory locations"}
+      ],
+      "a": "3",
+      "e": "The bus width is the number of wires, so a 32-bit data bus has <b>32 individual wires</b>, each carrying one bit. The data bus is <b>bi-directional</b> because data moves between the processor, memory and peripherals in both directions. <mark>Answer: 32 wires, bi-directional.</mark>"
+    },
+    {
+      "id": "Arc5_0033",
+      "q": "A memory has $64K$ words and each word is 8 bits. How many address lines and data lines are needed?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "16 address lines and 8 data lines"},
+        {"i": "2", "x": "8 address lines and 16 data lines"},
+        {"i": "3", "x": "64 address lines and 8 data lines"},
+        {"i": "4", "x": "10 address lines and 8 data lines"}
+      ],
+      "a": "1",
+      "e": [
+        "$64K = 64 \\times 2^{10} = 2^{6} \\times 2^{10} = 2^{16}$ words.",
+        "Address lines $= \\log_2(\\text{number of words}) = \\log_2 2^{16} = 16$.",
+        "Data lines = word width = $8$.",
+        "<mark>Answer: 16 address lines and 8 data lines.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0034",
+      "q": "A CPU has 24 address lines and a 32-bit data bus, and each address selects one 32-bit word. What is the maximum memory capacity?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "16 MB"},
+        {"i": "2", "x": "64 MB"},
+        {"i": "3", "x": "128 MB"},
+        {"i": "4", "x": "256 MB"}
+      ],
+      "a": "2",
+      "e": [
+        "Number of addressable words $= 2^{24} = 16M$ words.",
+        "Each word is $32$ bits $= 4$ bytes.",
+        "Capacity $= 2^{24} \\times 4 = 2^{26}$ bytes $= 2^{6} \\times 2^{20}$ bytes $= 64$ MB.",
+        "(16 MB would be the answer only if each address selected a single byte.)",
+        "<mark>Answer: 64 MB.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0035",
+      "q": "The PCI bus uses the same lines for data and addresses at different times. What is the main advantage of such a <b>multiplexed</b> bus?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Data and addresses can be transferred at the same time"},
+        {"i": "2", "x": "It removes the need for any control signals on the bus"},
+        {"i": "3", "x": "It has higher throughput because it has more dedicated lines"},
+        {"i": "4", "x": "It requires fewer lines, which helps when chips have limited pins"}
+      ],
+      "a": "4",
+      "e": "A <b>multiplexed</b> bus uses the same lines at different times for multiple purposes, so it requires <b>fewer lines</b>. This is useful because chips are limited in the number of pins that can be physically attached. <mark>Answer: fewer lines / fewer pins.</mark>"
+    },
+    {
+      "id": "Arc5_0036",
+      "q": "Which bus version supports transfer rates up to 480 Mbps and is also capable of supporting the older 1.0 and 1.1 devices and cables?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "USB 1.0"},
+        {"i": "2", "x": "USB 1.1 (full-speed)"},
+        {"i": "3", "x": "USB 2.0 (hi-speed)"},
+        {"i": "4", "x": "ISA (16-bit)"}
+      ],
+      "a": "3",
+      "e": "USB 1.0 and 1.1 transfer 12 Mbps (up to 127 devices). <b>USB 2.0</b>, known as hi-speed USB, supports up to <b>480 Mbps</b> and supports USB 1.0 and 1.1 devices and cables. <mark>Answer: USB 2.0.</mark>"
+    },
+    {
+      "id": "Arc5_0037",
+      "q": "An I/O module needs to take control of the system bus. Which control-bus signals are involved?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It asserts Bus grant and waits for Bus request before using the bus"},
+        {"i": "2", "x": "It asserts Bus request and waits for Bus grant before using the bus"},
+        {"i": "3", "x": "It asserts Interrupt request and waits for Transfer ACK before using the bus"},
+        {"i": "4", "x": "It asserts Reset and waits for Clock before using the bus"}
+      ],
+      "a": "2",
+      "e": "<b>Bus request</b> indicates that a module needs to gain control of the bus, and <b>Bus grant</b> indicates that the requesting module has been granted control. Interrupt request/ACK concern interrupts, and Reset initializes all modules. <mark>Answer: Bus request, then Bus grant.</mark>"
+    },
+    {
+      "id": "Arc5_0038",
+      "q": "Which option gives the correct order of the five steps of the fetch-execute cycle?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Instruction Fetch, Instruction Decode, Operand Fetch, Execution, Result Store"},
+        {"i": "2", "x": "Instruction Decode, Instruction Fetch, Operand Fetch, Execution, Result Store"},
+        {"i": "3", "x": "Instruction Fetch, Operand Fetch, Instruction Decode, Execution, Result Store"},
+        {"i": "4", "x": "Instruction Fetch, Instruction Decode, Execution, Operand Fetch, Result Store"}
+      ],
+      "a": "1",
+      "e": "The five steps are: <b>Instruction Fetch (IF)</b>, <b>Instruction Decode (ID)</b>, <b>Data/Operand Fetch (DF/OF)</b>, <b>Instruction Execution (EX)</b>, and <b>Result Return/Store (RR/ST)</b>. The operands must be fetched before execution. <mark>Answer: IF, ID, OF, EX, ST.</mark>"
+    },
+    {
+      "id": "Arc5_0039",
+      "q": "Which sequence correctly describes the <b>instruction fetch</b> step of the fetch-execute cycle?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`MAR ← IR`; send read signal; `MBR ← data from memory`; `PC ← MBR`"},
+        {"i": "2", "x": "`PC ← MAR`; send write signal; `MBR ← data from memory`; `IR ← MBR`"},
+        {"i": "3", "x": "`MAR ← PC`; send read signal; `IR ← data from memory`; `MBR ← IR`"},
+        {"i": "4", "x": "`MAR ← PC`; send read signal; `MBR ← data from memory`; `IR ← MBR`"}
+      ],
+      "a": "4",
+      "e": [
+        "The address of the next instruction is in the PC, so `MAR ← PC`.",
+        "A <u>read</u> signal is sent to memory.",
+        "The instruction arrives in the buffer register: `MBR ← data from memory`.",
+        "The instruction is then moved to the IR: `IR ← MBR`.",
+        "<mark>Answer: MAR ← PC; read; MBR ← memory; IR ← MBR.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5_0040",
+      "q": "A program is resident in RAM and is about to start running. Which register must be initialized first, and with what?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The IR, with the opcode of the first instruction"},
+        {"i": "2", "x": "The MAR, with the size of the program in words"},
+        {"i": "3", "x": "The PC, with the address of the first instruction"},
+        {"i": "4", "x": "The AC, with the value of the first operand"}
+      ],
+      "a": "3",
+      "e": "The fetch-execute cycle starts with `MAR ← PC`, so the <b>PC</b> must already hold the address of the <b>first instruction</b> of the program. The IR, MAR and MBR are then filled automatically by the fetch step. <mark>Answer: PC = address of the first instruction.</mark>"
+    }
+  ]
+}
