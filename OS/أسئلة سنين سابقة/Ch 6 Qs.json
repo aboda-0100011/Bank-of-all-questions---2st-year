@@ -1,0 +1,837 @@
+{
+  "qs": [
+    {
+      "id": "os_ch6_0001",
+      "q": "The _____ gives control of the CPU to the process selected by the CPU scheduler.",
+      "t": [
+        "2",
+        "Final 2020 - Q21"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "dispatcher"
+        },
+        {
+          "i": "2",
+          "x": "interrupt"
+        },
+        {
+          "i": "3",
+          "x": "loader"
+        },
+        {
+          "i": "4",
+          "x": "controller"
+        }
+      ],
+      "a": "1",
+      "e": "The <b>dispatcher</b> is the OS module that gives control of the CPU to the process selected by the scheduler. Its function involves switching context, switching to user mode, and jumping to the proper location in the process to resume it. The time it takes to stop one process and start another is the dispatch latency, so the dispatcher must be as fast as possible since it is invoked during every context switch. The scheduler only <i>selects</i> the process, it does not hand over the CPU. An interrupt is an event signal, and 'loader' and 'controller' are not the module that performs this job."
+    },
+    {
+      "id": "os_ch6_0002",
+      "q": "From the time of submission of a process to the time of completion, the interval is termed as _____.",
+      "t": [
+        "2",
+        "3",
+        "Final 2020 - Q22",
+        "Final 2022 - Q17"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "waiting time"
+        },
+        {
+          "i": "2",
+          "x": "turnaround time"
+        },
+        {
+          "i": "3",
+          "x": "response time"
+        },
+        {
+          "i": "4",
+          "x": "throughput"
+        }
+      ],
+      "a": "2",
+      "e": "<b>Turnaround time</b> is the time from submission (arrival) of a process to its completion: turnaround time = completion time - arrival time. Waiting time is the time spent in the ready queue (turnaround - burst), response time is the time from submission until the process first starts responding (start time - arrival time), and throughput is the number of processes completed per time unit."
+    },
+    {
+      "id": "os_ch6_0003",
+      "q": "The _____ scheduling algorithm is non-preemptive and may suffer from convoy effect.",
+      "t": [
+        "2",
+        "Final 2020 - Q23"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "FCFS"
+        },
+        {
+          "i": "2",
+          "x": "round robin"
+        },
+        {
+          "i": "3",
+          "x": "priority"
+        },
+        {
+          "i": "4",
+          "x": "SJF"
+        }
+      ],
+      "a": "1",
+      "e": "<b>FCFS</b> (First-Come First-Served) is a simple non-preemptive algorithm that uses a FIFO ready queue and always selects the process at the head of the queue. Its average waiting time is often long because of the <b>convoy effect</b>: short processes wait behind one big process that holds the CPU, which lowers CPU and device utilization. Round robin is preemptive (time quantum), and priority and SJF have preemptive versions and are not the algorithm the lecture ties to the convoy effect."
+    },
+    {
+      "id": "os_ch6_0004",
+      "q": "In _____ scheduling, when a process switches from waiting to ready state, the CPU scheduler may take a decision.",
+      "t": [
+        "2",
+        "Final 2020 - Q24"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "preemptive"
+        },
+        {
+          "i": "2",
+          "x": "non-preemptive"
+        },
+        {
+          "i": "3",
+          "x": "FCFS"
+        },
+        {
+          "i": "4",
+          "x": "active"
+        }
+      ],
+      "a": "1",
+      "e": "CPU-scheduling decisions can take place when a process terminates, switches from running to waiting, switches from running to ready, or switches from waiting to ready. In <b>non-preemptive</b> scheduling a decision is taken only when the running process completes its CPU burst (terminates or moves to an I/O burst), so a waiting-to-ready transition does not trigger a decision. In <b>preemptive</b> scheduling the scheduler may preempt the running process when another process becomes ready (e.g., one with higher priority or a shorter burst), so a decision may be taken when a process moves from waiting to ready. FCFS is an algorithm (non-preemptive), and 'active' is not a scheduling category."
+    },
+    {
+      "id": "os_ch6_0005",
+      "q": "Under the category of _____, Round-robin scheduling falls.",
+      "t": [
+        "2",
+        "Final 2022 - Q26"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Preemptive scheduling"
+        },
+        {
+          "i": "2",
+          "x": "Non-preemptive scheduling"
+        }
+      ],
+      "a": "1",
+      "e": "In Round Robin each process gets a small time quantum. When the quantum elapses, the running process is <b>preempted</b> (even though it has not finished its CPU burst) and added to the end of the ready queue, then the scheduler selects the process at the head of the queue. Forcing a running process to stop is exactly what preemptive scheduling means, whereas in non-preemptive scheduling no process can be forced to stop while it is running."
+    },
+    {
+      "id": "os_ch6_0006",
+      "q": "A problem encountered in multitasking when a process is always denied necessary resources is called _____.",
+      "t": [
+        "2",
+        "Final 2022 - Q27"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "deadlock"
+        },
+        {
+          "i": "2",
+          "x": "starvation"
+        },
+        {
+          "i": "3",
+          "x": "inversion"
+        },
+        {
+          "i": "4",
+          "x": "aging"
+        }
+      ],
+      "a": "2",
+      "e": "<b>Starvation</b> occurs when a process waits forever to execute because it is always denied the resources (CPU time) it needs. The lecture's main example is priority scheduling: the scheduler always selects high-priority processes, so a low-priority process may wait indefinitely. <b>Aging</b> is the <i>solution</i> (gradually increasing the priority of waiting processes), not the problem. Deadlock is a different situation in which processes wait for each other, and inversion is not the term for this problem."
+    },
+    {
+      "id": "os_ch6_0007",
+      "q": "What can be a disadvantage of Round Robin if the time quantum is too large?",
+      "t": [
+        "2",
+        "Final 2024 - Q18"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "increases response time"
+        },
+        {
+          "i": "2",
+          "x": "be similar to FCFS"
+        },
+        {
+          "i": "3",
+          "x": "more overhead"
+        },
+        {
+          "i": "4",
+          "x": "non-preemptive"
+        }
+      ],
+      "a": "2",
+      "e": "The lecture states that if the time quantum is extremely large, the RR scheduler <b>becomes an FCFS scheduler</b>, because every process finishes its burst before the quantum expires, so no preemption ever happens. 'More overhead' is the problem of an extremely <i>small</i> quantum (too many context switches). RR does not become non-preemptive by definition, and a longer response time is only a side effect of behaving like FCFS, while the direct effect described in the lecture is being similar to FCFS."
+    },
+    {
+      "id": "os_ch6_0008",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       12       1\nP2       3        5\nP3       9        2\nP4       2        6\nP5       1        3\n```\nUsing the preemptive version of Shortest Job First (SRTF), what is the exit time of process P2?",
+      "t": [
+        "2",
+        "Final 2024 - Q29"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "8"
+        },
+        {
+          "i": "2",
+          "x": "11"
+        },
+        {
+          "i": "3",
+          "x": "22"
+        },
+        {
+          "i": "4",
+          "x": "9"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "Preemptive SJF is SRTF: whenever a process arrives or the running one finishes, the CPU is given to the process with the shortest remaining burst time.",
+        "t = 0 to 1: no process has arrived yet, so the CPU is idle. P5 arrives at t = 1 and starts running.",
+        "t = 2: P4 (burst 6) arrives, but P5 has only 2 units left. t = 3: P2 (burst 5) arrives, but P5 has only 1 unit left. No preemption happens and P5 finishes at t = 4.",
+        "t = 4: the ready processes are P2 (5) and P4 (6). P2 is shorter, so it runs from 4 to 9 without being preempted (P3 arrives exactly at t = 9).",
+        "t = 9: P2 finishes. The ready processes are P4 (6) and P3 (2), so P3 runs from 9 to 11.",
+        "t = 11: only P4 is ready, so it starts. At t = 12, P1 (burst 1) arrives and 1 is less than the remaining time of P4 (5), so P4 is preempted. P1 runs from 12 to 13.",
+        "P4 then resumes and runs its remaining 5 units from 13 to 18.",
+        "Gantt chart: | idle 0-1 | P5 1-4 | P2 4-9 | P3 9-11 | P4 11-12 | P1 12-13 | P4 13-18 |",
+        "Exit times: P1 = 13, P2 = 9, P3 = 11, P4 = 18, P5 = 4. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P2 started at t = 4 and had 5 units remaining; no later arrival had a shorter remaining time, so it ran without interruption and exited at <b>t = 9</b>. (11 is the exit time of P3.)"
+      ]
+    },
+    {
+      "id": "os_ch6_0009",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       12       1\nP2       3        5\nP3       9        2\nP4       2        6\nP5       1        3\n```\nUsing the preemptive version of Shortest Job First (SRTF), what is the waiting time of process P5?",
+      "t": [
+        "2",
+        "Final 2024 - Q34"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "0"
+        },
+        {
+          "i": "2",
+          "x": "1"
+        },
+        {
+          "i": "3",
+          "x": "3"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Preemptive SJF is SRTF: whenever a process arrives or the running one finishes, the CPU is given to the process with the shortest remaining burst time.",
+        "t = 0 to 1: no process has arrived yet, so the CPU is idle. P5 arrives at t = 1 and starts running.",
+        "t = 2: P4 (burst 6) arrives, but P5 has only 2 units left. t = 3: P2 (burst 5) arrives, but P5 has only 1 unit left. No preemption happens and P5 finishes at t = 4.",
+        "t = 4: the ready processes are P2 (5) and P4 (6). P2 is shorter, so it runs from 4 to 9 without being preempted (P3 arrives exactly at t = 9).",
+        "t = 9: P2 finishes. The ready processes are P4 (6) and P3 (2), so P3 runs from 9 to 11.",
+        "t = 11: only P4 is ready, so it starts. At t = 12, P1 (burst 1) arrives and 1 is less than the remaining time of P4 (5), so P4 is preempted. P1 runs from 12 to 13.",
+        "P4 then resumes and runs its remaining 5 units from 13 to 18.",
+        "Gantt chart: | idle 0-1 | P5 1-4 | P2 4-9 | P3 9-11 | P4 11-12 | P1 12-13 | P4 13-18 |",
+        "Exit times: P1 = 13, P2 = 9, P3 = 11, P4 = 18, P5 = 4. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P5 arrived at t = 1 and started immediately, running to completion at t = 4.",
+        "Turnaround time of P5 = 4 - 1 = 3, and waiting time = turnaround - burst = 3 - 3 = <b>0</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0010",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       12       1\nP2       3        5\nP3       9        2\nP4       2        6\nP5       1        3\n```\nUsing the preemptive version of Shortest Job First (SRTF), what is the turnaround time of process P4?",
+      "t": [
+        "2",
+        "Final 2024 - Q30"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "3"
+        },
+        {
+          "i": "2",
+          "x": "9"
+        },
+        {
+          "i": "3",
+          "x": "19"
+        },
+        {
+          "i": "4",
+          "x": "16"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "Preemptive SJF is SRTF: whenever a process arrives or the running one finishes, the CPU is given to the process with the shortest remaining burst time.",
+        "t = 0 to 1: no process has arrived yet, so the CPU is idle. P5 arrives at t = 1 and starts running.",
+        "t = 2: P4 (burst 6) arrives, but P5 has only 2 units left. t = 3: P2 (burst 5) arrives, but P5 has only 1 unit left. No preemption happens and P5 finishes at t = 4.",
+        "t = 4: the ready processes are P2 (5) and P4 (6). P2 is shorter, so it runs from 4 to 9 without being preempted (P3 arrives exactly at t = 9).",
+        "t = 9: P2 finishes. The ready processes are P4 (6) and P3 (2), so P3 runs from 9 to 11.",
+        "t = 11: only P4 is ready, so it starts. At t = 12, P1 (burst 1) arrives and 1 is less than the remaining time of P4 (5), so P4 is preempted. P1 runs from 12 to 13.",
+        "P4 then resumes and runs its remaining 5 units from 13 to 18.",
+        "Gantt chart: | idle 0-1 | P5 1-4 | P2 4-9 | P3 9-11 | P4 11-12 | P1 12-13 | P4 13-18 |",
+        "Exit times: P1 = 13, P2 = 9, P3 = 11, P4 = 18, P5 = 4. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P4 arrived at t = 2 and exited at t = 18, so turnaround time = 18 - 2 = <b>16</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0011",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       12       1\nP2       3        5\nP3       9        2\nP4       2        6\nP5       1        3\n```\nUsing the preemptive version of Shortest Job First (SRTF), what is the average turnaround time?",
+      "t": [
+        "2",
+        "Final 2024 - Q31"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "4"
+        },
+        {
+          "i": "2",
+          "x": "5.6"
+        },
+        {
+          "i": "3",
+          "x": "8"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Preemptive SJF is SRTF: whenever a process arrives or the running one finishes, the CPU is given to the process with the shortest remaining burst time.",
+        "t = 0 to 1: no process has arrived yet, so the CPU is idle. P5 arrives at t = 1 and starts running.",
+        "t = 2: P4 (burst 6) arrives, but P5 has only 2 units left. t = 3: P2 (burst 5) arrives, but P5 has only 1 unit left. No preemption happens and P5 finishes at t = 4.",
+        "t = 4: the ready processes are P2 (5) and P4 (6). P2 is shorter, so it runs from 4 to 9 without being preempted (P3 arrives exactly at t = 9).",
+        "t = 9: P2 finishes. The ready processes are P4 (6) and P3 (2), so P3 runs from 9 to 11.",
+        "t = 11: only P4 is ready, so it starts. At t = 12, P1 (burst 1) arrives and 1 is less than the remaining time of P4 (5), so P4 is preempted. P1 runs from 12 to 13.",
+        "P4 then resumes and runs its remaining 5 units from 13 to 18.",
+        "Gantt chart: | idle 0-1 | P5 1-4 | P2 4-9 | P3 9-11 | P4 11-12 | P1 12-13 | P4 13-18 |",
+        "Exit times: P1 = 13, P2 = 9, P3 = 11, P4 = 18, P5 = 4. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "Turnaround times: P1 = 13 - 12 = 1, P2 = 9 - 3 = 6, P3 = 11 - 9 = 2, P4 = 18 - 2 = 16, P5 = 4 - 1 = 3.",
+        "Average = (1 + 6 + 2 + 16 + 3) / 5 = 28 / 5 = <b>5.6</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0012",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       12       1\nP2       3        5\nP3       9        2\nP4       2        6\nP5       1        3\n```\nUsing the preemptive version of Shortest Job First (SRTF), what is the response time of process P3?",
+      "t": [
+        "2",
+        "Final 2024 - Q32"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "0"
+        },
+        {
+          "i": "2",
+          "x": "1"
+        },
+        {
+          "i": "3",
+          "x": "3"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Preemptive SJF is SRTF: whenever a process arrives or the running one finishes, the CPU is given to the process with the shortest remaining burst time.",
+        "t = 0 to 1: no process has arrived yet, so the CPU is idle. P5 arrives at t = 1 and starts running.",
+        "t = 2: P4 (burst 6) arrives, but P5 has only 2 units left. t = 3: P2 (burst 5) arrives, but P5 has only 1 unit left. No preemption happens and P5 finishes at t = 4.",
+        "t = 4: the ready processes are P2 (5) and P4 (6). P2 is shorter, so it runs from 4 to 9 without being preempted (P3 arrives exactly at t = 9).",
+        "t = 9: P2 finishes. The ready processes are P4 (6) and P3 (2), so P3 runs from 9 to 11.",
+        "t = 11: only P4 is ready, so it starts. At t = 12, P1 (burst 1) arrives and 1 is less than the remaining time of P4 (5), so P4 is preempted. P1 runs from 12 to 13.",
+        "P4 then resumes and runs its remaining 5 units from 13 to 18.",
+        "Gantt chart: | idle 0-1 | P5 1-4 | P2 4-9 | P3 9-11 | P4 11-12 | P1 12-13 | P4 13-18 |",
+        "Exit times: P1 = 13, P2 = 9, P3 = 11, P4 = 18, P5 = 4. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P3 arrived at t = 9 and got the CPU immediately at t = 9, so response time = start time - arrival time = 9 - 9 = <b>0</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0013",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       12       1\nP2       3        5\nP3       9        2\nP4       2        6\nP5       1        3\n```\nUsing the preemptive version of Shortest Job First (SRTF), what is the exit time of process P4?",
+      "t": [
+        "2",
+        "Final 2024 - Q33"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "6"
+        },
+        {
+          "i": "2",
+          "x": "18"
+        },
+        {
+          "i": "3",
+          "x": "11"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Preemptive SJF is SRTF: whenever a process arrives or the running one finishes, the CPU is given to the process with the shortest remaining burst time.",
+        "t = 0 to 1: no process has arrived yet, so the CPU is idle. P5 arrives at t = 1 and starts running.",
+        "t = 2: P4 (burst 6) arrives, but P5 has only 2 units left. t = 3: P2 (burst 5) arrives, but P5 has only 1 unit left. No preemption happens and P5 finishes at t = 4.",
+        "t = 4: the ready processes are P2 (5) and P4 (6). P2 is shorter, so it runs from 4 to 9 without being preempted (P3 arrives exactly at t = 9).",
+        "t = 9: P2 finishes. The ready processes are P4 (6) and P3 (2), so P3 runs from 9 to 11.",
+        "t = 11: only P4 is ready, so it starts. At t = 12, P1 (burst 1) arrives and 1 is less than the remaining time of P4 (5), so P4 is preempted. P1 runs from 12 to 13.",
+        "P4 then resumes and runs its remaining 5 units from 13 to 18.",
+        "Gantt chart: | idle 0-1 | P5 1-4 | P2 4-9 | P3 9-11 | P4 11-12 | P1 12-13 | P4 13-18 |",
+        "Exit times: P1 = 13, P2 = 9, P3 = 11, P4 = 18, P5 = 4. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P4 ran from 11 to 12, was preempted by P1, and then finished its remaining 5 units from 13 to 18, so its exit time is <b>18</b>. (11 is when P4 first started.)"
+      ]
+    },
+    {
+      "id": "os_ch6_0014",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the turnaround time of P3?",
+      "t": [
+        "2",
+        "Final 2023 - Q28"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "2"
+        },
+        {
+          "i": "2",
+          "x": "6"
+        },
+        {
+          "i": "3",
+          "x": "18"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P3 arrived at t = 12 and exited at t = 18, so turnaround time = 18 - 12 = <b>6</b>. (18 is its exit time, not its turnaround time.)"
+      ]
+    },
+    {
+      "id": "os_ch6_0015",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the waiting time of P2?",
+      "t": [
+        "2",
+        "Final 2023 - Q29"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "4"
+        },
+        {
+          "i": "2",
+          "x": "10"
+        },
+        {
+          "i": "3",
+          "x": "12"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P2 arrived at t = 2 and exited at t = 12, so turnaround time = 12 - 2 = 10.",
+        "Waiting time = turnaround - burst = 10 - 6 = <b>4</b>. (10 is its turnaround time and 12 is its exit time.)"
+      ]
+    },
+    {
+      "id": "os_ch6_0016",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the waiting time of P4?",
+      "t": [
+        "2",
+        "Final 2023 - Q30"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "2"
+        },
+        {
+          "i": "2",
+          "x": "5"
+        },
+        {
+          "i": "3",
+          "x": "7"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P4 arrived at t = 13 and exited at t = 19, so turnaround time = 19 - 13 = 6.",
+        "Waiting time = 6 - 1 = <b>5</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0017",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the turnaround time of P5?",
+      "t": [
+        "2",
+        "Final 2023 - Q31"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "12"
+        },
+        {
+          "i": "2",
+          "x": "15"
+        },
+        {
+          "i": "3",
+          "x": "16"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P5 arrived at t = 0 and exited at t = 16, so turnaround time = 16 - 0 = <b>16</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0018",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the response time of P1?",
+      "t": [
+        "2",
+        "Final 2023 - Q32"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "3"
+        },
+        {
+          "i": "2",
+          "x": "5"
+        },
+        {
+          "i": "3",
+          "x": "7"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P1 arrived at t = 9 and first got the CPU at t = 12, so response time = 12 - 9 = <b>3</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0019",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the average waiting time?",
+      "t": [
+        "2",
+        "Final 2023 - Q33"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "5.4"
+        },
+        {
+          "i": "2",
+          "x": "4.8"
+        },
+        {
+          "i": "3",
+          "x": "6.2"
+        },
+        {
+          "i": "4",
+          "x": "5.8"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "Turnaround times: P1 = 20 - 9 = 11, P2 = 12 - 2 = 10, P3 = 18 - 12 = 6, P4 = 19 - 13 = 6, P5 = 16 - 0 = 16.",
+        "Waiting times (turnaround - burst): P1 = 11 - 4 = 7, P2 = 10 - 6 = 4, P3 = 6 - 2 = 4, P4 = 6 - 1 = 5, P5 = 16 - 7 = 9.",
+        "Average waiting time = (7 + 4 + 4 + 5 + 9) / 5 = 29 / 5 = <b>5.8</b>, which is none of the first three values."
+      ]
+    },
+    {
+      "id": "os_ch6_0020",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the average turnaround time?",
+      "t": [
+        "2",
+        "Final 2023 - Q34"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "6.3"
+        },
+        {
+          "i": "2",
+          "x": "9.8"
+        },
+        {
+          "i": "3",
+          "x": "12.4"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "Turnaround times: P1 = 11, P2 = 10, P3 = 6, P4 = 6, P5 = 16.",
+        "Average turnaround time = (11 + 10 + 6 + 6 + 16) / 5 = 49 / 5 = <b>9.8</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0021",
+      "q": "Consider the following 5 processes with their arrival and burst times:\n```\nProcess  Arrival  Burst\nP1       9        4\nP2       2        6\nP3       12       2\nP4       13       1\nP5       0        7\n```\nUsing Round Robin with time quantum = 3, what is the exit time of process P1?",
+      "t": [
+        "2",
+        "Final 2023 - Q35"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "15"
+        },
+        {
+          "i": "2",
+          "x": "19"
+        },
+        {
+          "i": "3",
+          "x": "20"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Round Robin gives each process at most 3 time units. A process that does not finish is preempted and added to the tail of the ready queue. When a new arrival and a preempted process reach the queue at the same moment, the new arrival is queued first (standard convention).",
+        "t = 0 to 3: P5 runs (remaining 4). P2 arrives at t = 2, so the queue is [P2, P5] at t = 3.",
+        "t = 3 to 6: P2 runs (remaining 3). t = 6 to 9: P5 runs (remaining 1). P1 arrives at t = 9, so the queue becomes [P2, P1, P5].",
+        "t = 9 to 12: P2 runs its last 3 units and finishes at t = 12. P3 arrives at t = 12, so the queue is [P1, P5, P3].",
+        "t = 12 to 15: P1 runs (remaining 1). P4 arrives at t = 13, so the queue is [P5, P3, P4, P1] at t = 15.",
+        "t = 15 to 16: P5 finishes. t = 16 to 18: P3 finishes. t = 18 to 19: P4 finishes. t = 19 to 20: P1 finishes.",
+        "Gantt chart: | P5 0-3 | P2 3-6 | P5 6-9 | P2 9-12 | P1 12-15 | P5 15-16 | P3 16-18 | P4 18-19 | P1 19-20 |",
+        "Exit times: P1 = 20, P2 = 12, P3 = 18, P4 = 19, P5 = 16. Turnaround = exit - arrival, Waiting = turnaround - burst, Response = first start - arrival.",
+        "P1 runs 12-15 (remaining 1), waits behind P5, P3 and P4, and finishes its last unit from 19 to 20, so its exit time is <b>20</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0022",
+      "q": "Consider the following 5 processes (a smaller priority number means a higher priority):\n```\nProcess  Burst  Arrival  Priority\nP0       4      0        1\nP1       3      0        2\nP2       7      6        1\nP3       4      11       3\nP4       2      12       2\n```\nUsing Preemptive Priority Scheduling, what is the exit time of process P1?",
+      "t": [
+        "2",
+        "Final 2022 - Q18"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "3"
+        },
+        {
+          "i": "2",
+          "x": "6"
+        },
+        {
+          "i": "3",
+          "x": "7"
+        },
+        {
+          "i": "4",
+          "x": "14"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "In priority scheduling the CPU is given to the process with the highest priority (here, the smallest priority number); equal priorities are served in FCFS order.",
+        "Preemptive: t = 0 to 4: P0 (priority 1) runs and finishes at t = 4 (P1 has a lower priority).",
+        "t = 4 to 6: P1 runs. At t = 6, P2 arrives with priority 1, which is higher than P1's priority 2, so P1 is preempted (remaining 1).",
+        "t = 6 to 13: P2 runs to completion. P3 (priority 3) arrives at 11 and P4 (priority 2) arrives at 12, but neither is higher than P2's priority 1.",
+        "t = 13: P1 (priority 2, remaining 1) and P4 (priority 2) have equal priority, so FCFS order applies and P1 (older) runs from 13 to 14. Then P4 runs 14-16 and P3 runs 16-20.",
+        "Gantt chart: | P0 0-4 | P1 4-6 | P2 6-13 | P1 13-14 | P4 14-16 | P3 16-20 |",
+        "P1 was preempted at t = 6 and resumed only at t = 13, finishing its last unit at <b>t = 14</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0023",
+      "q": "Consider the following 5 processes (a smaller priority number means a higher priority):\n```\nProcess  Burst  Arrival  Priority\nP0       4      0        1\nP1       3      0        2\nP2       7      6        1\nP3       4      11       3\nP4       2      12       2\n```\nUsing Non-Preemptive Priority Scheduling, what is the exit time of process P1?",
+      "t": [
+        "2",
+        "Final 2022 - Q19"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "3"
+        },
+        {
+          "i": "2",
+          "x": "6"
+        },
+        {
+          "i": "3",
+          "x": "7"
+        },
+        {
+          "i": "4",
+          "x": "14"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "In priority scheduling the CPU is given to the process with the highest priority (here, the smallest priority number); equal priorities are served in FCFS order.",
+        "Non-preemptive: a process that gets the CPU keeps it until its burst ends. P0 runs 0-4, then P1 (priority 2) runs 4-7 without interruption even though P2 (priority 1) arrives at t = 6.",
+        "t = 7: P2 (priority 1) is the highest priority ready process and runs 7-14. At t = 14, P4 (priority 2) runs 14-16, and P3 (priority 3) runs 16-20.",
+        "Gantt chart: | P0 0-4 | P1 4-7 | P2 7-14 | P4 14-16 | P3 16-20 |",
+        "P1 starts at t = 4 and runs its full burst of 3 units without interruption, so its exit time is <b>7</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0024",
+      "q": "Consider the following 5 processes (a smaller priority number means a higher priority):\n```\nProcess  Burst  Arrival  Priority\nP0       4      0        1\nP1       3      0        2\nP2       7      6        1\nP3       4      11       3\nP4       2      12       2\n```\nUsing Preemptive Priority Scheduling, what is the average waiting time?",
+      "t": [
+        "2",
+        "Final 2022 - Q20"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "3.6"
+        },
+        {
+          "i": "2",
+          "x": "4.5"
+        },
+        {
+          "i": "3",
+          "x": "1"
+        },
+        {
+          "i": "4",
+          "x": "24"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "In priority scheduling the CPU is given to the process with the highest priority (here, the smallest priority number); equal priorities are served in FCFS order.",
+        "Preemptive: t = 0 to 4: P0 (priority 1) runs and finishes at t = 4 (P1 has a lower priority).",
+        "t = 4 to 6: P1 runs. At t = 6, P2 arrives with priority 1, which is higher than P1's priority 2, so P1 is preempted (remaining 1).",
+        "t = 6 to 13: P2 runs to completion. P3 (priority 3) arrives at 11 and P4 (priority 2) arrives at 12, but neither is higher than P2's priority 1.",
+        "t = 13: P1 (priority 2, remaining 1) and P4 (priority 2) have equal priority, so FCFS order applies and P1 (older) runs from 13 to 14. Then P4 runs 14-16 and P3 runs 16-20.",
+        "Gantt chart: | P0 0-4 | P1 4-6 | P2 6-13 | P1 13-14 | P4 14-16 | P3 16-20 |",
+        "Exit times: P0 = 4, P1 = 14, P2 = 13, P3 = 20, P4 = 16. Turnaround = exit - arrival: P0 = 4, P1 = 14, P2 = 7, P3 = 9, P4 = 4.",
+        "Waiting = turnaround - burst: P0 = 0, P1 = 11, P2 = 0, P3 = 5, P4 = 2.",
+        "Average waiting time = (0 + 11 + 0 + 5 + 2) / 5 = 18 / 5 = <b>3.6</b>."
+      ]
+    },
+    {
+      "id": "os_ch6_0025",
+      "q": "Consider the following 5 processes (a smaller priority number means a higher priority):\n```\nProcess  Burst  Arrival  Priority\nP0       4      0        1\nP1       3      0        2\nP2       7      6        1\nP3       4      11       3\nP4       2      12       2\n```\nUsing Non-Preemptive Priority Scheduling, what is the waiting time of process P1?",
+      "t": [
+        "2",
+        "Final 2022 - Q21"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "0"
+        },
+        {
+          "i": "2",
+          "x": "4"
+        },
+        {
+          "i": "3",
+          "x": "11"
+        },
+        {
+          "i": "4",
+          "x": "13"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "In priority scheduling the CPU is given to the process with the highest priority (here, the smallest priority number); equal priorities are served in FCFS order.",
+        "Non-preemptive: a process that gets the CPU keeps it until its burst ends. P0 runs 0-4, then P1 (priority 2) runs 4-7 without interruption even though P2 (priority 1) arrives at t = 6.",
+        "t = 7: P2 (priority 1) is the highest priority ready process and runs 7-14. At t = 14, P4 (priority 2) runs 14-16, and P3 (priority 3) runs 16-20.",
+        "Gantt chart: | P0 0-4 | P1 4-7 | P2 7-14 | P4 14-16 | P3 16-20 |",
+        "P1 arrived at t = 0 and exited at t = 7, so turnaround time = 7 and waiting time = 7 - 3 = <b>4</b>. (11 is P1's waiting time in the preemptive version.)"
+      ]
+    }
+  ]
+}
