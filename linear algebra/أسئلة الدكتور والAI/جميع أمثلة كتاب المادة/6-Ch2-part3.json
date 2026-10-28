@@ -1,0 +1,925 @@
+{
+  "qs": [
+    {
+      "id": "linear_ch2p3_0001",
+      "q": "Let\n$$A=\\begin{bmatrix} 1 & 2 & 0 \\\\ 3 & 6 & 5 \\\\ 2 & 0 & 0 \\end{bmatrix}$$\nUse the formula $A^{-1}=\\dfrac{1}{\\det(A)}\\mathrm{adj}(A)$ to find $A^{-1}$.",
+      "t": [
+        "مثال",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\dfrac{1}{20}\\begin{bmatrix} 0 & 0 & 10 \\\\ 10 & 0 & -5 \\\\ -12 & 4 & 0 \\end{bmatrix}$"
+        },
+        {
+          "i": "2",
+          "x": "$\\dfrac{1}{20}\\begin{bmatrix} 0 & 10 & -12 \\\\ 0 & 0 & 4 \\\\ 10 & -5 & 0 \\end{bmatrix}$"
+        },
+        {
+          "i": "3",
+          "x": "$20\\begin{bmatrix} 0 & 0 & 10 \\\\ 10 & 0 & -5 \\\\ -12 & 4 & 0 \\end{bmatrix}$"
+        },
+        {
+          "i": "4",
+          "x": "$-\\dfrac{1}{20}\\begin{bmatrix} 0 & 0 & 10 \\\\ 10 & 0 & -5 \\\\ -12 & 4 & 0 \\end{bmatrix}$"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "نحسب $\\det(A)$ بالفك على الصف الثالث $(2,0,0)$: $\\det(A)=2\\cdot C_{31}=2\\cdot10=20\\neq0$ إذن $A$ قابلة للعكس.",
+        "من المثال السابق: $\\mathrm{adj}(A)=\\begin{bmatrix} 0 & 0 & 10 \\\\ 10 & 0 & -5 \\\\ -12 & 4 & 0 \\end{bmatrix}$.",
+        "نطبق الصيغة: $A^{-1}=\\dfrac{1}{20}\\begin{bmatrix} 0 & 0 & 10 \\\\ 10 & 0 & -5 \\\\ -12 & 4 & 0 \\end{bmatrix}$.",
+        "في صورة عناصر: $A^{-1}=\\begin{bmatrix} 0 & 0 & \\frac{1}{2} \\\\ \\frac{1}{2} & 0 & -\\frac{1}{4} \\\\ -\\frac{3}{5} & \\frac{1}{5} & 0 \\end{bmatrix}$.",
+        "تحقق: $A\\cdot\\mathrm{adj}(A)=20I$ ، أي أن $A\\cdot\\left(\\dfrac{1}{20}\\mathrm{adj}(A)\\right)=I$ ✓."
+      ],
+      "ref": "Ch2 §2.2 - Inverse via adjoint"
+    },
+    {
+      "id": "linear_ch2p3_0002",
+      "q": "Use Cramer's rule to solve the system:\n$$\\begin{aligned} x_1 - x_2 &= 4 \\\\ x_1 + x_2 &= 2 \\end{aligned}$$",
+      "t": [
+        "مثال",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$x_1=-1,\\ x_2=3$"
+        },
+        {
+          "i": "2",
+          "x": "$x_1=-3,\\ x_2=1$"
+        },
+        {
+          "i": "3",
+          "x": "$x_1=3,\\ x_2=1$"
+        },
+        {
+          "i": "4",
+          "x": "$x_1=3,\\ x_2=-1$"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "نكتب النظام على الصورة $Ax=b$:\n$$\\begin{bmatrix} 1 & -1 \\\\ 1 & 1 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix}=\\begin{bmatrix} 4 \\\\ 2 \\end{bmatrix}$$",
+        "نحسب $\\det(A)$: $\\begin{vmatrix} 1 & -1 \\\\ 1 & 1 \\end{vmatrix} = (1)(1) - (-1)(1) = 2$. بما أن $\\det(A)\\neq 0$ فقاعدة Cramer قابلة للتطبيق.",
+        "نستبدل العمود 1 في $A$ بالعمود $b$ فنحصل على $A_{1}=\\begin{bmatrix} 4 & -1 \\\\ 2 & 1 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 4 & -1 \\\\ 2 & 1 \\end{vmatrix} = (4)(1) - (-1)(2) = 6$.",
+        "نستبدل العمود 2 في $A$ بالعمود $b$ فنحصل على $A_{2}=\\begin{bmatrix} 1 & 4 \\\\ 1 & 2 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 1 & 4 \\\\ 1 & 2 \\end{vmatrix} = (1)(2) - (4)(1) = -2$.",
+        "$x_1=\\dfrac{\\det(A_{1})}{\\det(A)}=\\dfrac{6}{2}=3$.",
+        "$x_2=\\dfrac{\\det(A_{2})}{\\det(A)}=\\dfrac{-2}{2}=-1$.",
+        "تحقق بالتعويض في المعادلات: $(1)(3) + (-1)(-1) = 4$، $(1)(3) + (1)(-1) = 2$ وكلها تطابق الطرف الأيمن ✓.",
+        "الإجابة: $x_1=3,\\ x_2=-1$.",
+        "تنبيه: الكتاب كتب $A_3$ بدل $A_2$ ، وكتب $x_1=\\frac{6}{2}=6$ والصحيح $x_1=\\frac{6}{2}=3$."
+      ],
+      "ref": "Ch2 §2.2 - Example 8 (Cramer)"
+    },
+    {
+      "id": "linear_ch2p3_0003",
+      "q": "If\n$$A=\\begin{bmatrix} -1 & 5 \\\\ 4 & 4 \\end{bmatrix},\\quad k=3$$\nfind $\\det(kA)$ (and verify that it equals $k^n\\det(A)$).",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$-72$"
+        },
+        {
+          "i": "2",
+          "x": "$216$"
+        },
+        {
+          "i": "3",
+          "x": "$-648$"
+        },
+        {
+          "i": "4",
+          "x": "$-216$"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "المطلوب: $\\det(kA)$ حيث $n=2$ و $k=3$ ونتحقق من العلاقة $\\det(kA)=k^n\\det(A)$.",
+        "نحسب $\\det(A)$ أولًا:",
+        "$\\det(A)=\\begin{vmatrix} -1 & 5 \\\\ 4 & 4 \\end{vmatrix} = (-1)(4) - (5)(4) = -24$",
+        "نحسب $kA$ بضرب كل عناصر $A$ في $3$: $kA=\\begin{bmatrix} -3 & 15 \\\\ 12 & 12 \\end{bmatrix}$.",
+        "نحسب $\\det(kA)$ مباشرة:",
+        "$\\det(kA)=\\begin{vmatrix} -3 & 15 \\\\ 12 & 12 \\end{vmatrix} = (-3)(12) - (15)(12) = -216$",
+        "نتحقق بالعلاقة: $k^n\\det(A)=(3)^{2}\\cdot(-24)=9\\cdot(-24)=-216$ ✓ وتساوي القيمة المحسوبة مباشرة.",
+        "الإجابة: $\\det(kA)=-216$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 1"
+    },
+    {
+      "id": "linear_ch2p3_0004",
+      "q": "If\n$$A=\\begin{bmatrix} 2 & 2 \\\\ 5 & -2 \\end{bmatrix},\\quad k=-2$$\nfind $\\det(kA)$ (and verify that it equals $k^n\\det(A)$).",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$28$"
+        },
+        {
+          "i": "2",
+          "x": "$-56$"
+        },
+        {
+          "i": "3",
+          "x": "$56$"
+        },
+        {
+          "i": "4",
+          "x": "$112$"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "المطلوب: $\\det(kA)$ حيث $n=2$ و $k=-2$ ونتحقق من العلاقة $\\det(kA)=k^n\\det(A)$.",
+        "نحسب $\\det(A)$ أولًا:",
+        "$\\det(A)=\\begin{vmatrix} 2 & 2 \\\\ 5 & -2 \\end{vmatrix} = (2)(-2) - (2)(5) = -14$",
+        "نحسب $kA$ بضرب كل عناصر $A$ في $-2$: $kA=\\begin{bmatrix} -4 & -4 \\\\ -10 & 4 \\end{bmatrix}$.",
+        "نحسب $\\det(kA)$ مباشرة:",
+        "$\\det(kA)=\\begin{vmatrix} -4 & -4 \\\\ -10 & 4 \\end{vmatrix} = (-4)(4) - (-4)(-10) = -56$",
+        "نتحقق بالعلاقة: $k^n\\det(A)=(-2)^{2}\\cdot(-14)=4\\cdot(-14)=-56$ ✓ وتساوي القيمة المحسوبة مباشرة.",
+        "الإجابة: $\\det(kA)=-56$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 2"
+    },
+    {
+      "id": "linear_ch2p3_0005",
+      "q": "If\n$$A=\\begin{bmatrix} 1 & 0 & 3 \\\\ 3 & 2 & 1 \\\\ 2 & 4 & 5 \\end{bmatrix},\\quad k=-2$$\nfind $\\det(kA)$ (and verify that it equals $k^n\\det(A)$).",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$-60$"
+        },
+        {
+          "i": "2",
+          "x": "$240$"
+        },
+        {
+          "i": "3",
+          "x": "$480$"
+        },
+        {
+          "i": "4",
+          "x": "$-240$"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "المطلوب: $\\det(kA)$ حيث $n=3$ و $k=-2$ ونتحقق من العلاقة $\\det(kA)=k^n\\det(A)$.",
+        "نحسب $\\det(A)$ أولًا:",
+        "$\\det(A)=\\begin{vmatrix} 1 & 0 & 3 \\\\ 3 & 2 & 1 \\\\ 2 & 4 & 5 \\end{vmatrix} = [10 + 0 + 36] - [12 + 4 + 0] = 46 - (16) = 30$",
+        "نحسب $kA$ بضرب كل عناصر $A$ في $-2$: $kA=\\begin{bmatrix} -2 & 0 & -6 \\\\ -6 & -4 & -2 \\\\ -4 & -8 & -10 \\end{bmatrix}$.",
+        "نحسب $\\det(kA)$ مباشرة:",
+        "$\\det(kA)=\\begin{vmatrix} -2 & 0 & -6 \\\\ -6 & -4 & -2 \\\\ -4 & -8 & -10 \\end{vmatrix} = [(-80) + 0 + (-288)] - [(-96) + (-32) + 0] = -368 - (-128) = -240$",
+        "نتحقق بالعلاقة: $k^n\\det(A)=(-2)^{3}\\cdot(30)=-8\\cdot(30)=-240$ ✓ وتساوي القيمة المحسوبة مباشرة.",
+        "الإجابة: $\\det(kA)=-240$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 3"
+    },
+    {
+      "id": "linear_ch2p3_0006",
+      "q": "If\n$$A=\\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 2 & 3 \\\\ 0 & 1 & -2 \\end{bmatrix},\\quad k=3$$\nfind $\\det(kA)$ (and verify that it equals $k^n\\det(A)$).",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$-21$"
+        },
+        {
+          "i": "2",
+          "x": "$-189$"
+        },
+        {
+          "i": "3",
+          "x": "$189$"
+        },
+        {
+          "i": "4",
+          "x": "$-567$"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "المطلوب: $\\det(kA)$ حيث $n=3$ و $k=3$ ونتحقق من العلاقة $\\det(kA)=k^n\\det(A)$.",
+        "نحسب $\\det(A)$ أولًا:",
+        "$\\det(A)=\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & 2 & 3 \\\\ 0 & 1 & -2 \\end{vmatrix} = [(-4) + 0 + 0] - [0 + 3 + 0] = -4 - (3) = -7$",
+        "نحسب $kA$ بضرب كل عناصر $A$ في $3$: $kA=\\begin{bmatrix} 3 & 3 & 3 \\\\ 0 & 6 & 9 \\\\ 0 & 3 & -6 \\end{bmatrix}$.",
+        "نحسب $\\det(kA)$ مباشرة:",
+        "$\\det(kA)=\\begin{vmatrix} 3 & 3 & 3 \\\\ 0 & 6 & 9 \\\\ 0 & 3 & -6 \\end{vmatrix} = [(-108) + 0 + 0] - [0 + 81 + 0] = -108 - (81) = -189$",
+        "نتحقق بالعلاقة: $k^n\\det(A)=(3)^{3}\\cdot(-7)=27\\cdot(-7)=-189$ ✓ وتساوي القيمة المحسوبة مباشرة.",
+        "الإجابة: $\\det(kA)=-189$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 4"
+    },
+    {
+      "id": "linear_ch2p3_0007",
+      "q": "Let\n$$A=\\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix},\\quad B=\\begin{bmatrix} 1 & -1 \\\\ 1 & 2 \\end{bmatrix}$$\nCompute $\\det(AB)$ and verify that it equals $\\det(BA)$.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$6$"
+        },
+        {
+          "i": "2",
+          "x": "$-6$"
+        },
+        {
+          "i": "3",
+          "x": "$5$"
+        },
+        {
+          "i": "4",
+          "x": "$4$"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "نحسب $AB=\\begin{bmatrix} 3 & 3 \\\\ -1 & 1 \\end{bmatrix}$.",
+        "نحسب $BA=\\begin{bmatrix} 2 & 2 \\\\ -1 & 2 \\end{bmatrix}$.",
+        "$\\det(AB)=\\begin{vmatrix} 3 & 3 \\\\ -1 & 1 \\end{vmatrix} = (3)(1) - (3)(-1) = 6$.",
+        "$\\det(BA)=\\begin{vmatrix} 2 & 2 \\\\ -1 & 2 \\end{vmatrix} = (2)(2) - (2)(-1) = 6$.",
+        "تحقق بالنظرية $\\det(AB)=\\det(A)\\det(B)$: $\\det(A)=2$ و $\\det(B)=3$ وحاصل ضربهما $6$ ✓ ، وبما أن ضرب الأعداد تبادلي فإن $\\det(AB)=\\det(BA)$.",
+        "الإجابة: $\\det(AB)=\\det(BA)=6$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 5(i)"
+    },
+    {
+      "id": "linear_ch2p3_0008",
+      "q": "Let\n$$A=\\begin{bmatrix} -1 & 1 & 2 \\\\ 1 & 0 & -1 \\\\ -2 & 1 & 2 \\end{bmatrix},\\quad B=\\begin{bmatrix} 0 & 0 & -4 \\\\ 1 & 1 & 3 \\\\ 0 & 3 & -1 \\end{bmatrix}$$\nCompute $\\det(AB)$ and verify that it equals $\\det(BA)$.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$12$"
+        },
+        {
+          "i": "2",
+          "x": "$-11$"
+        },
+        {
+          "i": "3",
+          "x": "$2$"
+        },
+        {
+          "i": "4",
+          "x": "$-12$"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "نحسب $AB=\\begin{bmatrix} 1 & 7 & 5 \\\\ 0 & -3 & -3 \\\\ 1 & 7 & 9 \\end{bmatrix}$.",
+        "نحسب $BA=\\begin{bmatrix} 8 & -4 & -8 \\\\ -6 & 4 & 7 \\\\ 5 & -1 & -5 \\end{bmatrix}$.",
+        "$\\det(AB)$: $\\begin{vmatrix} 1 & 7 & 5 \\\\ 0 & -3 & -3 \\\\ 1 & 7 & 9 \\end{vmatrix} = [(-27) + (-21) + 0] - [(-15) + (-21) + 0] = -48 - (-36) = -12$.",
+        "$\\det(BA)$: $\\begin{vmatrix} 8 & -4 & -8 \\\\ -6 & 4 & 7 \\\\ 5 & -1 & -5 \\end{vmatrix} = [(-160) + (-140) + (-48)] - [(-160) + (-56) + (-120)] = -348 - (-336) = -12$.",
+        "تحقق بالنظرية $\\det(AB)=\\det(A)\\det(B)$: $\\det(A)=1$ و $\\det(B)=-12$ وحاصل ضربهما $-12$ ✓ ، وبما أن ضرب الأعداد تبادلي فإن $\\det(AB)=\\det(BA)$.",
+        "الإجابة: $\\det(AB)=\\det(BA)=-12$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 5(ii)"
+    },
+    {
+      "id": "linear_ch2p3_0009",
+      "q": "Use determinants to decide whether the following matrix is invertible:\n$$A=\\begin{bmatrix} 1 & 5 & 1 \\\\ -1 & -1 & 0 \\\\ 2 & 2 & 3 \\end{bmatrix}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=12$ and the matrix is not invertible"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=0$ and the matrix is not invertible"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=-12$ and the matrix is invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=12$ and the matrix is invertible"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "القاعدة: المصفوفة المربعة $A$ قابلة للعكس إذا وفقط إذا كان $\\det(A)\\neq 0$.",
+        "نتحقق بحساب المحدد بطريقة الأسهم:",
+        "نعيد كتابة العمودين الأول والثاني على يمين المصفوفة:\n$$\\begin{array}{ccc|cc} 1 & 5 & 1 & 1 & 5 \\\\ -1 & -1 & 0 & -1 & -1 \\\\ 2 & 2 & 3 & 2 & 2 \\end{array}$$",
+        "نضرب عناصر الأقطار الهابطة (من أعلى اليسار إلى أسفل اليمين) ونجمع النتائج: $(1)(-1)(3) + (5)(0)(2) + (1)(-1)(2) = (-3) + 0 + (-2) = -5$",
+        "نضرب عناصر الأقطار الصاعدة (من أسفل اليسار إلى أعلى اليمين) ونجمع النتائج: $(1)(-1)(2) + (1)(0)(2) + (5)(-1)(3) = (-2) + 0 + (-15) = -17$",
+        "المحدد = (مجموع الهابطة) − (مجموع الصاعدة) $= -5 - (-17) = 12$",
+        "بما أن $\\det(A)=12$ لا يساوي صفرًا، فإن المصفوفة <b>قابلة للعكس</b>."
+      ],
+      "ref": "Ch2 §2.2 - Ex 6(i)"
+    },
+    {
+      "id": "linear_ch2p3_0010",
+      "q": "Use determinants to decide whether the following matrix is invertible:\n$$A=\\begin{bmatrix} 1 & 0 & 2 \\\\ 0 & 3 & 2 \\\\ -2 & 0 & -4 \\end{bmatrix}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=0$ and the matrix is invertible"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=6$ and the matrix is invertible"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=0$ and the matrix is not invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=-6$ and the matrix is not invertible"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "القاعدة: المصفوفة المربعة $A$ قابلة للعكس إذا وفقط إذا كان $\\det(A)\\neq 0$.",
+        "نلاحظ أن الصف الثالث $(-2,0,-4)=-2\\times(1,0,2)$ أي هو مضاعف للصف الأول، فالصفان متناسبان وبالتالي $\\det(A)=0$ حسب النظرية.",
+        "نتحقق بحساب المحدد بطريقة الأسهم:",
+        "نعيد كتابة العمودين الأول والثاني على يمين المصفوفة:\n$$\\begin{array}{ccc|cc} 1 & 0 & 2 & 1 & 0 \\\\ 0 & 3 & 2 & 0 & 3 \\\\ -2 & 0 & -4 & -2 & 0 \\end{array}$$",
+        "نضرب عناصر الأقطار الهابطة (من أعلى اليسار إلى أسفل اليمين) ونجمع النتائج: $(1)(3)(-4) + (0)(2)(-2) + (2)(0)(0) = (-12) + 0 + 0 = -12$",
+        "نضرب عناصر الأقطار الصاعدة (من أسفل اليسار إلى أعلى اليمين) ونجمع النتائج: $(2)(3)(-2) + (1)(2)(0) + (0)(0)(-4) = (-12) + 0 + 0 = -12$",
+        "المحدد = (مجموع الهابطة) − (مجموع الصاعدة) $= -12 - (-12) = 0$",
+        "بما أن $\\det(A)=0$ يساوي صفرًا، فإن المصفوفة <b>غير قابلة للعكس</b>."
+      ],
+      "ref": "Ch2 §2.2 - Ex 6(ii)"
+    },
+    {
+      "id": "linear_ch2p3_0011",
+      "q": "Use determinants to decide whether the following matrix is invertible:\n$$A=\\begin{bmatrix} 2 & -1 & 5 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 2 \\end{bmatrix}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=4$ and the matrix is not invertible"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=0$ and the matrix is not invertible"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=-4$ and the matrix is invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=4$ and the matrix is invertible"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "القاعدة: المصفوفة المربعة $A$ قابلة للعكس إذا وفقط إذا كان $\\det(A)\\neq 0$.",
+        "المصفوفة مثلثية عليا، فالمحدد حاصل ضرب عناصر القطر: $(2)(1)(2)=4$.",
+        "نتحقق بحساب المحدد بطريقة الأسهم:",
+        "نعيد كتابة العمودين الأول والثاني على يمين المصفوفة:\n$$\\begin{array}{ccc|cc} 2 & -1 & 5 & 2 & -1 \\\\ 0 & 1 & -1 & 0 & 1 \\\\ 0 & 0 & 2 & 0 & 0 \\end{array}$$",
+        "نضرب عناصر الأقطار الهابطة (من أعلى اليسار إلى أسفل اليمين) ونجمع النتائج: $(2)(1)(2) + (-1)(-1)(0) + (5)(0)(0) = 4 + 0 + 0 = 4$",
+        "نضرب عناصر الأقطار الصاعدة (من أسفل اليسار إلى أعلى اليمين) ونجمع النتائج: $(5)(1)(0) + (2)(-1)(0) + (-1)(0)(2) = 0 + 0 + 0 = 0$",
+        "المحدد = (مجموع الهابطة) − (مجموع الصاعدة) $= 4 - (0) = 4$",
+        "بما أن $\\det(A)=4$ لا يساوي صفرًا، فإن المصفوفة <b>قابلة للعكس</b>."
+      ],
+      "ref": "Ch2 §2.2 - Ex 6(iii)"
+    },
+    {
+      "id": "linear_ch2p3_0012",
+      "q": "Use determinants to decide whether the following matrix is invertible:\n$$A=\\begin{bmatrix} -1 & 0 & 1 \\\\ 2 & 0 & 6 \\\\ 8 & 0 & 3 \\end{bmatrix}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=0$ and the matrix is invertible"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=6$ and the matrix is invertible"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=0$ and the matrix is not invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=-6$ and the matrix is not invertible"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "القاعدة: المصفوفة المربعة $A$ قابلة للعكس إذا وفقط إذا كان $\\det(A)\\neq 0$.",
+        "العمود الثاني كله أصفار، فحسب النظرية $\\det(A)=0$.",
+        "نتحقق بحساب المحدد بطريقة الأسهم:",
+        "نعيد كتابة العمودين الأول والثاني على يمين المصفوفة:\n$$\\begin{array}{ccc|cc} -1 & 0 & 1 & -1 & 0 \\\\ 2 & 0 & 6 & 2 & 0 \\\\ 8 & 0 & 3 & 8 & 0 \\end{array}$$",
+        "نضرب عناصر الأقطار الهابطة (من أعلى اليسار إلى أسفل اليمين) ونجمع النتائج: $(-1)(0)(3) + (0)(6)(8) + (1)(2)(0) = 0 + 0 + 0 = 0$",
+        "نضرب عناصر الأقطار الصاعدة (من أسفل اليسار إلى أعلى اليمين) ونجمع النتائج: $(1)(0)(8) + (-1)(6)(0) + (0)(2)(3) = 0 + 0 + 0 = 0$",
+        "المحدد = (مجموع الهابطة) − (مجموع الصاعدة) $= 0 - (0) = 0$",
+        "بما أن $\\det(A)=0$ يساوي صفرًا، فإن المصفوفة <b>غير قابلة للعكس</b>."
+      ],
+      "ref": "Ch2 §2.2 - Ex 6(iv)"
+    },
+    {
+      "id": "linear_ch2p3_0013",
+      "q": "Use determinants to decide whether the following matrix is invertible:\n$$A=\\begin{bmatrix} 1 & 2 & 0 \\\\ -2 & 1 & -1 \\\\ 3 & 1 & 6 \\end{bmatrix}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=25$ and the matrix is not invertible"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=0$ and the matrix is not invertible"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=-25$ and the matrix is invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=25$ and the matrix is invertible"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "القاعدة: المصفوفة المربعة $A$ قابلة للعكس إذا وفقط إذا كان $\\det(A)\\neq 0$.",
+        "نتحقق بحساب المحدد بطريقة الأسهم:",
+        "نعيد كتابة العمودين الأول والثاني على يمين المصفوفة:\n$$\\begin{array}{ccc|cc} 1 & 2 & 0 & 1 & 2 \\\\ -2 & 1 & -1 & -2 & 1 \\\\ 3 & 1 & 6 & 3 & 1 \\end{array}$$",
+        "نضرب عناصر الأقطار الهابطة (من أعلى اليسار إلى أسفل اليمين) ونجمع النتائج: $(1)(1)(6) + (2)(-1)(3) + (0)(-2)(1) = 6 + (-6) + 0 = 0$",
+        "نضرب عناصر الأقطار الصاعدة (من أسفل اليسار إلى أعلى اليمين) ونجمع النتائج: $(0)(1)(3) + (1)(-1)(1) + (2)(-2)(6) = 0 + (-1) + (-24) = -25$",
+        "المحدد = (مجموع الهابطة) − (مجموع الصاعدة) $= 0 - (-25) = 25$",
+        "بما أن $\\det(A)=25$ لا يساوي صفرًا، فإن المصفوفة <b>قابلة للعكس</b>."
+      ],
+      "ref": "Ch2 §2.2 - Ex 6(v)"
+    },
+    {
+      "id": "linear_ch2p3_0014",
+      "q": "Use determinants to decide whether the following matrix is invertible:\n$$A=\\begin{bmatrix} 1 & 0 & -1 \\\\ 2 & -1 & 4 \\\\ 1 & 1 & -1 \\end{bmatrix}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=-6$ and the matrix is not invertible"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=0$ and the matrix is not invertible"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=6$ and the matrix is invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=-6$ and the matrix is invertible"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "القاعدة: المصفوفة المربعة $A$ قابلة للعكس إذا وفقط إذا كان $\\det(A)\\neq 0$.",
+        "نتحقق بحساب المحدد بطريقة الأسهم:",
+        "نعيد كتابة العمودين الأول والثاني على يمين المصفوفة:\n$$\\begin{array}{ccc|cc} 1 & 0 & -1 & 1 & 0 \\\\ 2 & -1 & 4 & 2 & -1 \\\\ 1 & 1 & -1 & 1 & 1 \\end{array}$$",
+        "نضرب عناصر الأقطار الهابطة (من أعلى اليسار إلى أسفل اليمين) ونجمع النتائج: $(1)(-1)(-1) + (0)(4)(1) + (-1)(2)(1) = 1 + 0 + (-2) = -1$",
+        "نضرب عناصر الأقطار الصاعدة (من أسفل اليسار إلى أعلى اليمين) ونجمع النتائج: $(-1)(-1)(1) + (1)(4)(1) + (0)(2)(-1) = 1 + 4 + 0 = 5$",
+        "المحدد = (مجموع الهابطة) − (مجموع الصاعدة) $= -1 - (5) = -6$",
+        "بما أن $\\det(A)=-6$ لا يساوي صفرًا، فإن المصفوفة <b>قابلة للعكس</b>."
+      ],
+      "ref": "Ch2 §2.2 - Ex 6(vi)"
+    },
+    {
+      "id": "linear_ch2p3_0015",
+      "q": "Find the values of $k$ for which the matrix\n$$A=\\begin{bmatrix} k+2 & -2 \\\\ -2 & k-2 \\end{bmatrix}$$\nis invertible.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$k\\neq 2$ and $k\\neq -2$"
+        },
+        {
+          "i": "2",
+          "x": "$k\\neq 8$ and $k\\neq -8$"
+        },
+        {
+          "i": "3",
+          "x": "$k\\neq 8$ only"
+        },
+        {
+          "i": "4",
+          "x": "$k\\neq 2\\sqrt{2}$ and $k\\neq -2\\sqrt{2}$"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "$A$ قابلة للعكس إذا وفقط إذا $\\det(A)\\neq 0$.",
+        "$\\det(A)=(k+2)(k-2)-(-2)(-2)=k^2-4-4=k^2-8$.",
+        "نجد القيم التي تجعل المحدد صفرًا: $k^2-8=0$ أي $k=\\pm\\sqrt{8}=\\pm2\\sqrt{2}$.",
+        "إذن $A$ قابلة للعكس لكل $k$ ما عدا $k=2\\sqrt2$ و $k=-2\\sqrt2$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 7(i)"
+    },
+    {
+      "id": "linear_ch2p3_0016",
+      "q": "Find the values of $k$ for which the matrix\n$$A=\\begin{bmatrix} 0 & 0 & 4 \\\\ 0 & 1 & 6 \\\\ k & 3 & 2 \\end{bmatrix}$$\nis invertible.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$k\\neq 4$"
+        },
+        {
+          "i": "2",
+          "x": "$k\\neq 0$"
+        },
+        {
+          "i": "3",
+          "x": "$k=0$"
+        },
+        {
+          "i": "4",
+          "x": "$k\\neq -4$"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "نفك على امتداد الصف الأول $(0,0,4)$ لأن به صفرين: $\\det(A)=4\\cdot C_{13}$.",
+        "$C_{13}=(+1)M_{13}=\\begin{vmatrix} 0 & 1 \\\\ k & 3 \\end{vmatrix}=(0)(3)-(1)(k)=-k$.",
+        "إذن $\\det(A)=4(-k)=-4k$.",
+        "$A$ قابلة للعكس إذا $\\det(A)\\neq0$ أي $-4k\\neq 0$ أي $k\\neq 0$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 7(ii)"
+    },
+    {
+      "id": "linear_ch2p3_0017",
+      "q": "Find the values of $k$ for which the matrix\n$$A=\\begin{bmatrix} k & 2 \\\\ 2 & k \\end{bmatrix}$$\nis <b>not</b> invertible.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$k=4$ or $k=-4$"
+        },
+        {
+          "i": "2",
+          "x": "$k=2$ only"
+        },
+        {
+          "i": "3",
+          "x": "$k=2$ or $k=-2$"
+        },
+        {
+          "i": "4",
+          "x": "$k=0$"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "$A$ غير قابلة للعكس إذا وفقط إذا $\\det(A)=0$.",
+        "$\\det(A)=(k)(k)-(2)(2)=k^2-4$.",
+        "نحل $k^2-4=0$ أي $(k-2)(k+2)=0$.",
+        "إذن $k=2$ أو $k=-2$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 8(i)"
+    },
+    {
+      "id": "linear_ch2p3_0018",
+      "q": "Find the values of $k$ for which the matrix\n$$A=\\begin{bmatrix} 4 & 2 & 0 \\\\ k & -1 & 0 \\\\ 0 & 3 & 1 \\end{bmatrix}$$\nis <b>not</b> invertible.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$k=2$"
+        },
+        {
+          "i": "2",
+          "x": "$k=-\\dfrac{1}{2}$"
+        },
+        {
+          "i": "3",
+          "x": "$k=-2$"
+        },
+        {
+          "i": "4",
+          "x": "$k=4$"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "العمود الثالث $(0,0,1)^T$ به صفران، فنفك عليه: $\\det(A)=1\\cdot C_{33}$.",
+        "$C_{33}=(+1)M_{33}=\\begin{vmatrix} 4 & 2 \\\\ k & -1 \\end{vmatrix}=(4)(-1)-(2)(k)=-4-2k$.",
+        "$A$ غير قابلة للعكس إذا $\\det(A)=0$: $-4-2k=0$.",
+        "إذن $2k=-4$ أي $k=-2$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 8(ii)"
+    },
+    {
+      "id": "linear_ch2p3_0019",
+      "q": "Decide whether the matrix\n$$A=\\begin{bmatrix} 1 & 1 & 0 \\\\ -1 & -1 & 0 \\\\ 2 & 8 & 1 \\end{bmatrix}$$\nis invertible, and if so, find its inverse using the adjoint method.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=0$ ; the matrix is not invertible, so $A^{-1}$ does not exist"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=1$ ; invertible, and its inverse is $\\mathrm{adj}(A)$"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=-2$ ; invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=0$ ; but the matrix is invertible"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "صيغة المعكوس $A^{-1}=\\dfrac{1}{\\det(A)}\\mathrm{adj}(A)$ تتطلب أولًا $\\det(A)\\neq0$، لذلك نبدأ بحساب المحدد.",
+        "العمود الثالث $(0,0,1)^T$ به صفران، فنفك عليه: $\\det(A)=1\\cdot C_{33}$ و $C_{33}=+\\begin{vmatrix} 1 & 1 \\\\ -1 & -1 \\end{vmatrix}$.",
+        "$\\begin{vmatrix} 1 & 1 \\\\ -1 & -1 \\end{vmatrix}=(1)(-1)-(1)(-1)=-1+1=0$ إذن $\\det(A)=0$.",
+        "تأكيد: الصف الثاني $(-1,-1,0)=-1\\times(1,1,0)$ أي هو مضاعف للصف الأول، فالصفان متناسبان وهذا يعطي $\\det(A)=0$ أيضًا.",
+        "بما أن $\\det(A)=0$ فالمصفوفة <b>غير قابلة للعكس</b> ولا يمكن تطبيق صيغة الـ adjoint لأنها تتطلب القسمة على $\\det(A)=0$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 9(i)"
+    },
+    {
+      "id": "linear_ch2p3_0020",
+      "q": "Decide whether the matrix\n$$A=\\begin{bmatrix} 2 & 0 & 4 \\\\ 0 & 3 & 0 \\\\ -2 & 0 & -4 \\end{bmatrix}$$\nis invertible, and if so, find its inverse using the adjoint method.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=0$ ; the matrix is not invertible, so $A^{-1}$ does not exist"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=6$ ; invertible, and its inverse is $\\dfrac{1}{6}\\mathrm{adj}(A)$"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=-6$ ; invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=0$ ; but the matrix is invertible"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "نحسب $\\det(A)$ أولًا لأن صيغة المعكوس تقسم عليه.",
+        "الصف الثالث $(-2,0,-4)=-1\\times(2,0,4)$ أي هو مضاعف للصف الأول، فالصفان متناسبان وحسب النظرية $\\det(A)=0$.",
+        "للتحقق بالفك على الصف الثاني $(0,3,0)$: $\\det(A)=3\\cdot C_{22}$ و $C_{22}=+\\begin{vmatrix} 2 & 4 \\\\ -2 & -4 \\end{vmatrix}=(2)(-4)-(4)(-2)=-8+8=0$ إذن $\\det(A)=0$ ✓.",
+        "بما أن $\\det(A)=0$ فالمصفوفة <b>غير قابلة للعكس</b> ولا يمكن إيجاد $A^{-1}$ بطريقة الـ adjoint."
+      ],
+      "ref": "Ch2 §2.2 - Ex 9(ii)"
+    },
+    {
+      "id": "linear_ch2p3_0021",
+      "q": "Solve the following system using Cramer's rule (if possible):\n$$\\begin{aligned} 7x_1 - 2x_2 &= 3 \\\\ 3x_1 + x_2 &= 5 \\end{aligned}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$x_1=2,\\ x_2=1$"
+        },
+        {
+          "i": "2",
+          "x": "$x_1=1,\\ x_2=2$"
+        },
+        {
+          "i": "3",
+          "x": "$x_1=-1,\\ x_2=-2$"
+        },
+        {
+          "i": "4",
+          "x": "$x_1=1,\\ x_2=-2$"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "نكتب النظام على الصورة $Ax=b$:\n$$\\begin{bmatrix} 7 & -2 \\\\ 3 & 1 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix}=\\begin{bmatrix} 3 \\\\ 5 \\end{bmatrix}$$",
+        "نحسب $\\det(A)$: $\\begin{vmatrix} 7 & -2 \\\\ 3 & 1 \\end{vmatrix} = (7)(1) - (-2)(3) = 13$. بما أن $\\det(A)\\neq 0$ فقاعدة Cramer قابلة للتطبيق.",
+        "نستبدل العمود 1 في $A$ بالعمود $b$ فنحصل على $A_{1}=\\begin{bmatrix} 3 & -2 \\\\ 5 & 1 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 3 & -2 \\\\ 5 & 1 \\end{vmatrix} = (3)(1) - (-2)(5) = 13$.",
+        "نستبدل العمود 2 في $A$ بالعمود $b$ فنحصل على $A_{2}=\\begin{bmatrix} 7 & 3 \\\\ 3 & 5 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 7 & 3 \\\\ 3 & 5 \\end{vmatrix} = (7)(5) - (3)(3) = 26$.",
+        "$x_1=\\dfrac{\\det(A_{1})}{\\det(A)}=\\dfrac{13}{13}=1$.",
+        "$x_2=\\dfrac{\\det(A_{2})}{\\det(A)}=\\dfrac{26}{13}=2$.",
+        "تحقق بالتعويض في المعادلات: $(7)(1) + (-2)(2) = 3$، $(3)(1) + (1)(2) = 5$ وكلها تطابق الطرف الأيمن ✓.",
+        "الإجابة: $x_1=1,\\ x_2=2$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 10(i)"
+    },
+    {
+      "id": "linear_ch2p3_0022",
+      "q": "Solve the following system using Cramer's rule (if possible):\n$$\\begin{aligned} x + 5y &= 2 \\\\ x + y + 2z &= 3 \\\\ x + 5y + 2z &= 1 \\end{aligned}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$x=-\\frac{1}{2},\\ y=\\frac{9}{2},\\ z=-\\frac{1}{2}$"
+        },
+        {
+          "i": "2",
+          "x": "$x=-\\frac{9}{2},\\ y=\\frac{1}{2},\\ z=\\frac{1}{2}$"
+        },
+        {
+          "i": "3",
+          "x": "$x=\\frac{9}{2},\\ y=\\frac{1}{2},\\ z=\\frac{1}{2}$"
+        },
+        {
+          "i": "4",
+          "x": "$x=\\frac{9}{2},\\ y=-\\frac{1}{2},\\ z=-\\frac{1}{2}$"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "نكتب النظام على الصورة $Ax=b$:\n$$\\begin{bmatrix} 1 & 5 & 0 \\\\ 1 & 1 & 2 \\\\ 1 & 5 & 2 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix}=\\begin{bmatrix} 2 \\\\ 3 \\\\ 1 \\end{bmatrix}$$",
+        "نحسب $\\det(A)$: $\\begin{vmatrix} 1 & 5 & 0 \\\\ 1 & 1 & 2 \\\\ 1 & 5 & 2 \\end{vmatrix} = [2 + 10 + 0] - [0 + 10 + 10] = 12 - (20) = -8$. بما أن $\\det(A)\\neq 0$ فقاعدة Cramer قابلة للتطبيق.",
+        "نستبدل العمود 1 في $A$ بالعمود $b$ فنحصل على $A_{1}=\\begin{bmatrix} 2 & 5 & 0 \\\\ 3 & 1 & 2 \\\\ 1 & 5 & 2 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 2 & 5 & 0 \\\\ 3 & 1 & 2 \\\\ 1 & 5 & 2 \\end{vmatrix} = [4 + 10 + 0] - [0 + 20 + 30] = 14 - (50) = -36$.",
+        "نستبدل العمود 2 في $A$ بالعمود $b$ فنحصل على $A_{2}=\\begin{bmatrix} 1 & 2 & 0 \\\\ 1 & 3 & 2 \\\\ 1 & 1 & 2 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 1 & 2 & 0 \\\\ 1 & 3 & 2 \\\\ 1 & 1 & 2 \\end{vmatrix} = [6 + 4 + 0] - [0 + 2 + 4] = 10 - (6) = 4$.",
+        "نستبدل العمود 3 في $A$ بالعمود $b$ فنحصل على $A_{3}=\\begin{bmatrix} 1 & 5 & 2 \\\\ 1 & 1 & 3 \\\\ 1 & 5 & 1 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 1 & 5 & 2 \\\\ 1 & 1 & 3 \\\\ 1 & 5 & 1 \\end{vmatrix} = [1 + 15 + 10] - [2 + 15 + 5] = 26 - (22) = 4$.",
+        "$x=\\dfrac{\\det(A_{1})}{\\det(A)}=\\dfrac{-36}{-8}=\\frac{9}{2}$.",
+        "$y=\\dfrac{\\det(A_{2})}{\\det(A)}=\\dfrac{4}{-8}=-\\frac{1}{2}$.",
+        "$z=\\dfrac{\\det(A_{3})}{\\det(A)}=\\dfrac{4}{-8}=-\\frac{1}{2}$.",
+        "تحقق بالتعويض في المعادلات: $(1)(\\frac{9}{2}) + (5)(-\\frac{1}{2}) = 2$، $(1)(\\frac{9}{2}) + (1)(-\\frac{1}{2}) + (2)(-\\frac{1}{2}) = 3$، $(1)(\\frac{9}{2}) + (5)(-\\frac{1}{2}) + (2)(-\\frac{1}{2}) = 1$ وكلها تطابق الطرف الأيمن ✓.",
+        "الإجابة: $x=\\frac{9}{2},\\ y=-\\frac{1}{2},\\ z=-\\frac{1}{2}$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 10(ii)"
+    },
+    {
+      "id": "linear_ch2p3_0023",
+      "q": "Solve the following system using Cramer's rule (if possible):\n$$\\begin{aligned} x - 4y + z &= 6 \\\\ 4x - y + 2z &= -1 \\\\ 2x + 2y - 3z &= -20 \\end{aligned}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$x=-\\frac{61}{55},\\ y=-\\frac{144}{55},\\ z=\\frac{46}{11}$"
+        },
+        {
+          "i": "2",
+          "x": "$x=\\frac{144}{55},\\ y=\\frac{61}{55},\\ z=-\\frac{46}{11}$"
+        },
+        {
+          "i": "3",
+          "x": "$x=-\\frac{144}{55},\\ y=\\frac{61}{55},\\ z=-\\frac{46}{11}$"
+        },
+        {
+          "i": "4",
+          "x": "$x=-\\frac{144}{55},\\ y=-\\frac{61}{55},\\ z=\\frac{46}{11}$"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "نكتب النظام على الصورة $Ax=b$:\n$$\\begin{bmatrix} 1 & -4 & 1 \\\\ 4 & -1 & 2 \\\\ 2 & 2 & -3 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix}=\\begin{bmatrix} 6 \\\\ -1 \\\\ -20 \\end{bmatrix}$$",
+        "نحسب $\\det(A)$: $\\begin{vmatrix} 1 & -4 & 1 \\\\ 4 & -1 & 2 \\\\ 2 & 2 & -3 \\end{vmatrix} = [3 + (-16) + 8] - [(-2) + 4 + 48] = -5 - (50) = -55$. بما أن $\\det(A)\\neq 0$ فقاعدة Cramer قابلة للتطبيق.",
+        "نستبدل العمود 1 في $A$ بالعمود $b$ فنحصل على $A_{1}=\\begin{bmatrix} 6 & -4 & 1 \\\\ -1 & -1 & 2 \\\\ -20 & 2 & -3 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 6 & -4 & 1 \\\\ -1 & -1 & 2 \\\\ -20 & 2 & -3 \\end{vmatrix} = [18 + 160 + (-2)] - [20 + 24 + (-12)] = 176 - (32) = 144$.",
+        "نستبدل العمود 2 في $A$ بالعمود $b$ فنحصل على $A_{2}=\\begin{bmatrix} 1 & 6 & 1 \\\\ 4 & -1 & 2 \\\\ 2 & -20 & -3 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 1 & 6 & 1 \\\\ 4 & -1 & 2 \\\\ 2 & -20 & -3 \\end{vmatrix} = [3 + 24 + (-80)] - [(-2) + (-40) + (-72)] = -53 - (-114) = 61$.",
+        "نستبدل العمود 3 في $A$ بالعمود $b$ فنحصل على $A_{3}=\\begin{bmatrix} 1 & -4 & 6 \\\\ 4 & -1 & -1 \\\\ 2 & 2 & -20 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 1 & -4 & 6 \\\\ 4 & -1 & -1 \\\\ 2 & 2 & -20 \\end{vmatrix} = [20 + 8 + 48] - [(-12) + (-2) + 320] = 76 - (306) = -230$.",
+        "$x=\\dfrac{\\det(A_{1})}{\\det(A)}=\\dfrac{144}{-55}=-\\frac{144}{55}$.",
+        "$y=\\dfrac{\\det(A_{2})}{\\det(A)}=\\dfrac{61}{-55}=-\\frac{61}{55}$.",
+        "$z=\\dfrac{\\det(A_{3})}{\\det(A)}=\\dfrac{-230}{-55}=\\frac{46}{11}$.",
+        "تحقق بالتعويض في المعادلات: $(1)(-\\frac{144}{55}) + (-4)(-\\frac{61}{55}) + (1)(\\frac{46}{11}) = 6$، $(4)(-\\frac{144}{55}) + (-1)(-\\frac{61}{55}) + (2)(\\frac{46}{11}) = -1$، $(2)(-\\frac{144}{55}) + (2)(-\\frac{61}{55}) + (-3)(\\frac{46}{11}) = -20$ وكلها تطابق الطرف الأيمن ✓.",
+        "الإجابة: $x=-\\frac{144}{55},\\ y=-\\frac{61}{55},\\ z=\\frac{46}{11}$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 10(iii)"
+    },
+    {
+      "id": "linear_ch2p3_0024",
+      "q": "Solve the following system using Cramer's rule (if possible):\n$$\\begin{aligned} x_1 - 3x_2 + x_3 &= 4 \\\\ 2x_1 - x_2 &= -2 \\\\ 4x_1 - x_3 &= 0 \\end{aligned}$$",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$x_1=-18,\\ x_2=-10,\\ x_3=-40$"
+        },
+        {
+          "i": "2",
+          "x": "$x_1=10,\\ x_2=18,\\ x_3=40$"
+        },
+        {
+          "i": "3",
+          "x": "$x_1=-10,\\ x_2=-18,\\ x_3=-40$"
+        },
+        {
+          "i": "4",
+          "x": "$x_1=-10,\\ x_2=18,\\ x_3=40$"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "نكتب النظام على الصورة $Ax=b$:\n$$\\begin{bmatrix} 1 & -3 & 1 \\\\ 2 & -1 & 0 \\\\ 4 & 0 & -1 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix}=\\begin{bmatrix} 4 \\\\ -2 \\\\ 0 \\end{bmatrix}$$",
+        "نحسب $\\det(A)$: $\\begin{vmatrix} 1 & -3 & 1 \\\\ 2 & -1 & 0 \\\\ 4 & 0 & -1 \\end{vmatrix} = [1 + 0 + 0] - [(-4) + 0 + 6] = 1 - (2) = -1$. بما أن $\\det(A)\\neq 0$ فقاعدة Cramer قابلة للتطبيق.",
+        "نستبدل العمود 1 في $A$ بالعمود $b$ فنحصل على $A_{1}=\\begin{bmatrix} 4 & -3 & 1 \\\\ -2 & -1 & 0 \\\\ 0 & 0 & -1 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 4 & -3 & 1 \\\\ -2 & -1 & 0 \\\\ 0 & 0 & -1 \\end{vmatrix} = [4 + 0 + 0] - [0 + 0 + (-6)] = 4 - (-6) = 10$.",
+        "نستبدل العمود 2 في $A$ بالعمود $b$ فنحصل على $A_{2}=\\begin{bmatrix} 1 & 4 & 1 \\\\ 2 & -2 & 0 \\\\ 4 & 0 & -1 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 1 & 4 & 1 \\\\ 2 & -2 & 0 \\\\ 4 & 0 & -1 \\end{vmatrix} = [2 + 0 + 0] - [(-8) + 0 + (-8)] = 2 - (-16) = 18$.",
+        "نستبدل العمود 3 في $A$ بالعمود $b$ فنحصل على $A_{3}=\\begin{bmatrix} 1 & -3 & 4 \\\\ 2 & -1 & -2 \\\\ 4 & 0 & 0 \\end{bmatrix}$ ، ومحدده: $\\begin{vmatrix} 1 & -3 & 4 \\\\ 2 & -1 & -2 \\\\ 4 & 0 & 0 \\end{vmatrix} = [0 + 24 + 0] - [(-16) + 0 + 0] = 24 - (-16) = 40$.",
+        "$x_1=\\dfrac{\\det(A_{1})}{\\det(A)}=\\dfrac{10}{-1}=-10$.",
+        "$x_2=\\dfrac{\\det(A_{2})}{\\det(A)}=\\dfrac{18}{-1}=-18$.",
+        "$x_3=\\dfrac{\\det(A_{3})}{\\det(A)}=\\dfrac{40}{-1}=-40$.",
+        "تحقق بالتعويض في المعادلات: $(1)(-10) + (-3)(-18) + (1)(-40) = 4$، $(2)(-10) + (-1)(-18) = -2$، $(4)(-10) + (-1)(-40) = 0$ وكلها تطابق الطرف الأيمن ✓.",
+        "الإجابة: $x_1=-10,\\ x_2=-18,\\ x_3=-40$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 10(iv)"
+    },
+    {
+      "id": "linear_ch2p3_0025",
+      "q": "For the matrix\n$$A=\\begin{bmatrix} \\cos\\theta & \\sin\\theta & 0 \\\\ 0 & 0 & 1 \\\\ -\\sin\\theta & \\cos\\theta & 0 \\end{bmatrix}$$\ncompute $\\det(A)$, then determine whether $A$ is invertible for all values of $\\theta$.",
+      "t": [
+        "تمرين",
+        "Properties of Determinants"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "$\\det(A)=0$ for all $\\theta$, so $A$ is not invertible"
+        },
+        {
+          "i": "2",
+          "x": "$\\det(A)=-1$ for all $\\theta$, so $A$ is invertible for all values of $\\theta$"
+        },
+        {
+          "i": "3",
+          "x": "$\\det(A)=1$ for all $\\theta$, so $A$ is not invertible"
+        },
+        {
+          "i": "4",
+          "x": "$\\det(A)=\\cos 2\\theta$ , so $A$ is not invertible for some values of $\\theta$ only"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "الصف الثاني $(0,0,1)$ به صفران، فنفك عليه: $\\det(A)=1\\cdot C_{23}$ ، و $C_{23}=(-1)^{2+3}M_{23}=-M_{23}$.",
+        "نحذف الصف 2 والعمود 3: $M_{23}=\\begin{vmatrix} \\cos\\theta & \\sin\\theta \\\\ -\\sin\\theta & \\cos\\theta \\end{vmatrix}=\\cos^2\\theta+\\sin^2\\theta=1$.",
+        "إذن $C_{23}=-1$ و $\\det(A)=(1)(-1)=-1$.",
+        "بما أن $\\det(A)=-1\\neq 0$ لكل قيم $\\theta$ فإن $A$ قابلة للعكس دائمًا.",
+        "ملاحظة: نص التمرين في الكتاب يقول $A$ \"is not invertible\" وهذا يبدو خطأ مطبعيًا لأن المحدد $-1$ لا يساوي صفرًا أبدًا، فالمطلوب إثبات أن المصفوفة <b>قابلة للعكس</b> لكل $\\theta$."
+      ],
+      "ref": "Ch2 §2.2 - Ex 11"
+    }
+  ]
+}
