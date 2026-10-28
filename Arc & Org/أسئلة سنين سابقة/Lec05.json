@@ -1,0 +1,537 @@
+{
+  "qs": [
+    {
+      "id": "arc_0001",
+      "q": "Which of the following operations is/are performed by the <b>ALU</b>?",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Data manipulation only"},
+        {"i": "2", "x": "Data manipulation, exponential and square root"},
+        {"i": "3", "x": "Exponential only"},
+        {"i": "4", "x": "Square root only"}
+      ],
+      "a": "2",
+      "e": "In the lecture, von Neumann's Central Arithmetical unit (CA, the ancestor of the ALU) performs the four basic arithmetic operations (ADD, SUB, MULTIPLY, DIVIDE) and also roots, logarithms, trigonometric functions and their inverses. So the ALU handles data manipulation (arithmetic/logic) as well as exponential-type and square-root operations. Each single-operation option is incomplete because the ALU performs all of them (the original exam wording was 'All of the above').",
+      "ref": "2025 Q19, 2026 Q7"
+    },
+    {
+      "id": "arc_0002",
+      "q": "Which register is employed to hold the instruction/data coming from an I/O device?",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "CS"},
+        {"i": "2", "x": "I/OAR"},
+        {"i": "3", "x": "IMR"},
+        {"i": "4", "x": "I/OBR"}
+      ],
+      "a": "4",
+      "e": [
+        "In the fetch-execute cycle (operand fetch), memory accesses use MAR (address) and MBR (data).",
+        "For I/O accesses the lecture uses the I/O counterparts: I/O AR holds the address of the I/O operand, and I/O BR (I/OBR) holds the data coming from the input device (I/O BR ← data from input device).",
+        "So the register that holds what arrives from an I/O device is I/OBR. I/OAR only holds the address, CS is a code segment register, and IMR is not part of the lecture's register set."
+      ],
+      "ref": "2025 Q20, 2026 Q10"
+    },
+    {
+      "id": "arc_0003",
+      "q": "In an <b>asynchronous</b> bus using the STROBE signal, the slave reads on the falling edge of STROBE.",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "False"},
+        {"i": "2", "x": "True"}
+      ],
+      "a": "2",
+      "e": "An asynchronous bus has no clock; it uses a handshaking protocol. STROBE is the master-to-slave signal and the slave reads on its falling edge. ACK is the slave-to-master signal and the master reads on its falling edge. Therefore the statement is True.",
+      "ref": "2025 Q22, 2026 Q12"
+    },
+    {
+      "id": "arc_0004",
+      "q": "USB 2.0 is capable of supporting a transfer rate of up to 480 Mbps.",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": "USB versions in the lecture: USB 1.0 supports 127 devices at 12 Mbps; USB 1.1 (full-speed) supports 12 Mbps; USB 2.0 (hi-speed) supports up to 480 Mbps and is backward compatible with USB 1.0 and 1.1 devices and cables. So the statement is True.",
+      "ref": "2025 Q29, 2026 Q18"
+    },
+    {
+      "id": "arc_0005",
+      "q": "A small amount of storage available as part of a digital processor is called ______.",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "ROM"},
+        {"i": "2", "x": "RAM"},
+        {"i": "3", "x": "Registers"},
+        {"i": "4", "x": "Hard disk"}
+      ],
+      "a": "3",
+      "e": "The lecture describes the ALU/processor as containing storage locations called registers (AC, MQ, MBR, MAR, IR, IBR, PC ...). They are small, fast storage inside the processor itself. ROM and RAM are main-memory technologies and a hard disk is secondary storage, all outside the processor.",
+      "ref": "2025 Q35, 2026 Q22"
+    },
+    {
+      "id": "arc_0006",
+      "q": "Which register is employed to hold the least significant bits of the product as multiplication proceeds, and the quotient from division?",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Accumulator"},
+        {"i": "2", "x": "Instruction Register"},
+        {"i": "3", "x": "Multiplier Quotient (MQ)"},
+        {"i": "4", "x": "Stack Pointer"}
+      ],
+      "a": "3",
+      "e": "In the IAS, the Multiplier Quotient (MQ) temporarily holds operands and ALU results, holds the least-significant bits of the product as multiplication proceeds, and holds the quotient from division. The Accumulator holds the most-significant digits of the product (and the remainder after division), the IR holds the 8-bit opcode being executed, and the Stack Pointer is not an IAS register.",
+      "ref": "2025 Q40, 2026 Q26"
+    },
+    {
+      "id": "arc_0007",
+      "q": "In a 32-bit system (32 address lines), what is the maximum size of the addressable memory?",
+      "t": ["2", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "256 MB"},
+        {"i": "2", "x": "8 GB"},
+        {"i": "3", "x": "4 GB"},
+        {"i": "4", "x": "16 GB"}
+      ],
+      "a": "3",
+      "e": [
+        "The lecture states that the width of the address bus corresponds to the maximum addressing capacity of the bus: 2^lines.",
+        "With 32 address lines the capacity is $2^{32}$ locations.",
+        "$2^{32} = 2^{2} \\times 2^{30} = 4 \\times 1\\text{ G} = 4$ GB (byte-addressable memory).",
+        "256 MB = $2^{28}$, 8 GB = $2^{33}$ and 16 GB = $2^{34}$ need 28, 33 and 34 address lines respectively."
+      ]
+    },
+    {
+      "id": "arc_0008",
+      "q": "What is the purpose of the clock in a CPU?",
+      "t": ["2", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "To store data"},
+        {"i": "2", "x": "To handle input and output operations"},
+        {"i": "3", "x": "To manage memory access"},
+        {"i": "4", "x": "To generate timing signals for the CPU's operations"}
+      ],
+      "a": "4",
+      "e": "The lecture lists Clock among the control-bus signals: it is used to synchronize operations. A synchronous bus contains a clock that sends a sequence of 1s and 0s at timed intervals to synchronize bus operations, and the clock speed (MHz) determines how many instructions per second the processor can execute. Storing data is done by registers/memory, I/O is handled by I/O modules and memory access by the memory controller and control signals.",
+      "ref": "2026 Q35"
+    },
+    {
+      "id": "arc_0009",
+      "q": "What is the purpose of direct memory access (DMA) in a computer system?",
+      "t": ["2", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "To control access to shared memory"},
+        {"i": "2", "x": "To transfer data between I/O devices and memory without CPU intervention"},
+        {"i": "3", "x": "To manage memory fragmentation"},
+        {"i": "4", "x": "To execute instructions directly from memory"}
+      ],
+      "a": "2",
+      "e": "In the lecture's bus master/slave table, DMA is the case where an I/O device acts as the bus master and memory is the slave. Likewise, the PCI bus lets a peripheral take control of the bus and transfer data directly to another peripheral/memory, which is called DMA. Therefore DMA moves data between I/O and memory without the CPU performing the transfer. The other options describe unrelated memory-management or execution functions.",
+      "ref": "2026 Q36"
+    },
+    {
+      "id": "arc_0010",
+      "q": "A memory unit is specified as <b>8K × 16</b> (words × bits per word). How many address lines and data lines are needed?",
+      "t": ["2", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "16 address lines, 13 data lines"},
+        {"i": "2", "x": "14 address lines, 16 data lines"},
+        {"i": "3", "x": "13 address lines, 8 data lines"},
+        {"i": "4", "x": "13 address lines, 16 data lines"}
+      ],
+      "a": "4",
+      "e": [
+        "Address bus width gives the capacity 2^lines, and the data bus width equals the number of bits per word (one wire per bit).",
+        "Number of words: $8K = 2^{3} \\times 2^{10} = 2^{13}$, so 13 address lines.",
+        "Bits per word = 16, so 16 data lines.",
+        "Answer: 13 address lines and 16 data lines."
+      ],
+      "ref": "2026 Part 2 (a)"
+    },
+    {
+      "id": "arc_0011",
+      "q": "A memory unit is specified as <b>2G × 8</b> (words × bits per word). How many address lines and data lines are needed?",
+      "t": ["2", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "31 address lines, 8 data lines"},
+        {"i": "2", "x": "30 address lines, 8 data lines"},
+        {"i": "3", "x": "8 address lines, 31 data lines"},
+        {"i": "4", "x": "32 address lines, 8 data lines"}
+      ],
+      "a": "1",
+      "e": [
+        "Address lines are found from the number of words (2^lines) and data lines from the word width.",
+        "Number of words: $2G = 2^{1} \\times 2^{30} = 2^{31}$, so 31 address lines.",
+        "Bits per word = 8, so 8 data lines.",
+        "Answer: 31 address lines and 8 data lines."
+      ],
+      "ref": "2026 Part 2 (b)"
+    },
+    {
+      "id": "arc_0012",
+      "q": "A memory unit is specified as <b>16M × 32</b> (words × bits per word). How many address lines and data lines are needed?",
+      "t": ["2", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "32 address lines, 24 data lines"},
+        {"i": "2", "x": "24 address lines, 32 data lines"},
+        {"i": "3", "x": "23 address lines, 32 data lines"},
+        {"i": "4", "x": "24 address lines, 16 data lines"}
+      ],
+      "a": "2",
+      "e": [
+        "Use address lines = log2(number of words) and data lines = bits per word.",
+        "Number of words: $16M = 2^{4} \\times 2^{20} = 2^{24}$, so 24 address lines.",
+        "Bits per word = 32, so 32 data lines.",
+        "Answer: 24 address lines and 32 data lines."
+      ],
+      "ref": "2026 Part 2 (c)"
+    },
+    {
+      "id": "arc_0013",
+      "q": "A memory unit is specified as <b>256K × 64</b> (words × bits per word). How many address lines and data lines are needed?",
+      "t": ["2", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "18 address lines, 8 data lines"},
+        {"i": "2", "x": "20 address lines, 64 data lines"},
+        {"i": "3", "x": "18 address lines, 64 data lines"},
+        {"i": "4", "x": "64 address lines, 18 data lines"}
+      ],
+      "a": "3",
+      "e": [
+        "Address lines = log2(number of words); data lines = bits per word.",
+        "Number of words: $256K = 2^{8} \\times 2^{10} = 2^{18}$, so 18 address lines.",
+        "Bits per word = 64, so 64 data lines.",
+        "Answer: 18 address lines and 64 data lines."
+      ],
+      "ref": "2026 Part 2 (d)"
+    },
+    {
+      "id": "arc_0014",
+      "q": "The instruction being decoded is found in a register called ______.",
+      "t": ["2", "Exam 2020", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "PC"},
+        {"i": "2", "x": "MAR"},
+        {"i": "3", "x": "IR"},
+        {"i": "4", "x": "AC"}
+      ],
+      "a": "3",
+      "e": "In the fetch-execute cycle: MAR ← PC, MBR ← data from memory, then IR ← MBR. The control unit then decodes the instruction held in the Instruction Register (IR). The PC holds the address of the next instruction, the MAR holds an address and the AC holds ALU results.",
+      "ref": "2020 Q11"
+    },
+    {
+      "id": "arc_0015",
+      "q": "During the execution of a program, which register gets initialized first?",
+      "t": ["2", "Exam 2020", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "IR"},
+        {"i": "2", "x": "MAR"},
+        {"i": "3", "x": "AC"},
+        {"i": "4", "x": "PC"}
+      ],
+      "a": "4",
+      "e": [
+        "The PC contains the address of the next instruction to be fetched.",
+        "Before anything can be fetched, the PC must be loaded with the address of the program's first instruction.",
+        "Only then does the fetch begin: MAR ← PC, MBR ← memory, IR ← MBR.",
+        "So the PC is initialized first; IR, MAR and AC are filled later as a consequence."
+      ],
+      "ref": "2020 Q12"
+    },
+    {
+      "id": "arc_0016",
+      "q": "The two sub-cycles (phases) of the instruction cycle repeatedly performed by the IAS control unit are ______.",
+      "t": ["2", "Exam 2020", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "decoding and storage"},
+        {"i": "2", "x": "execution and storage"},
+        {"i": "3", "x": "fetch and processing"},
+        {"i": "4", "x": "fetch and execution"}
+      ],
+      "a": "4",
+      "e": [
+        "The lecture states that the IAS operates through the CU by performing an instruction cycle repetitively, consisting of two sub-cycles.",
+        "Fetch cycle: the opcode of the next instruction is loaded into IR and the address into MAR (from IBR or from memory through MBR).",
+        "Execute cycle: when the opcode is in IR, the control circuitry sends signals to move data or make the ALU perform the operation.",
+        "Hence the two phases are fetch and execution."
+      ],
+      "ref": "2020 Q26"
+    },
+    {
+      "id": "arc_0017",
+      "q": "<b>Computer architecture</b> describes <i>how</i> the computer does its operations.",
+      "t": ["2", "3", "Exam 2022", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": "Architecture is the abstract model / programmer's view (instructions, addressing modes, registers) and describes <b>what</b> the computer does. Organization is the realization of the architecture and describes <b>how</b> it does it. The statement swaps the two, so it is False.",
+      "ref": "2022 Q1.7, 2023 Q21"
+    },
+    {
+      "id": "arc_0018",
+      "q": "In the ______ step, the execution of an instruction may require reading data from memory or an I/O module.",
+      "t": ["2", "3", "Exam 2022", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Fetch instruction"},
+        {"i": "2", "x": "Interpret instruction"},
+        {"i": "3", "x": "Process data"},
+        {"i": "4", "x": "Fetch data"}
+      ],
+      "a": "4",
+      "e": [
+        "The fetch-execute cycle in the lecture includes Data Fetch (DF) / Operand Fetch (OF).",
+        "If the operand needs memory or I/O, the address is calculated, then MAR (or I/O AR) ← address of operand, a read signal is sent to memory or the input device, and MBR (or I/O BR) receives the data.",
+        "This is the Fetch data step. Fetch instruction brings the instruction itself, interpret (decode) only analyzes it, and process data is the execute step on already-available operands."
+      ],
+      "ref": "2022 Q1.12, 2023 Q9"
+    },
+    {
+      "id": "arc_0019",
+      "q": "Which register contains the address of a location in memory?",
+      "t": ["2", "3", "Exam 2022", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Memory buffer register"},
+        {"i": "2", "x": "Memory address register"},
+        {"i": "3", "x": "Instruction register"},
+        {"i": "4", "x": "Program counter"}
+      ],
+      "a": "2",
+      "e": "The Memory Address Register (MAR) specifies the address in memory of the word to be written from or read into the MBR. The MBR holds the data word, the IR holds the opcode being executed, and the PC holds the address of the next instruction (it is copied into the MAR during fetch).",
+      "ref": "2022 Q1.14, 2023 Q17"
+    },
+    {
+      "id": "arc_0020",
+      "q": "Which control-bus signal indicates that data from the addressed location is to be placed on the bus?",
+      "t": ["2", "3", "Exam 2022", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "I/O write"},
+        {"i": "2", "x": "Memory write"},
+        {"i": "3", "x": "I/O read"},
+        {"i": "4", "x": "Memory read"}
+      ],
+      "a": "4",
+      "e": [
+        "Memory Read: data from the addressed location is placed on the bus.",
+        "Memory Write: data on the bus is written into the addressed location.",
+        "I/O Read: data from the addressed I/O port is placed on the bus.",
+        "I/O Write: data on the bus is output to the addressed I/O port.",
+        "The question mentions an address location (memory), and data going from it onto the bus, so the answer is Memory read."
+      ],
+      "ref": "2022 Q1.17, 2023 Q3"
+    },
+    {
+      "id": "arc_0021",
+      "q": "The <b>address bus</b> indicates which device has permission to use the bus and for what purpose (reading or writing from memory or an I/O device).",
+      "t": ["2", "Exam 2022", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": "The address bus only identifies where the information is being sent (the memory/I/O location), and its width gives the addressing capacity 2^lines. Bus request, bus grant (permission to use the bus) and the read/write indications (Memory Read/Write, I/O Read/Write) are signals of the <b>control bus</b>. So the statement is False.",
+      "ref": "2022 Q1.20"
+    },
+    {
+      "id": "arc_0022",
+      "q": "Each line in the data bus carries only one byte.",
+      "t": ["2", "Exam 2022", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "False"},
+        {"i": "2", "x": "True"}
+      ],
+      "a": "1",
+      "e": "Bus width is the number of wires in the data bus, and each individual wire carries one <b>bit</b>, not a byte. For example, a 32-bit data bus has 32 individual wires, each carrying one bit of data. So the statement is False.",
+      "ref": "2022 Q1.24"
+    },
+    {
+      "id": "arc_0023",
+      "q": "The register that specifies the address in memory is ______.",
+      "t": ["2", "Exam 2022", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "MBR"},
+        {"i": "2", "x": "PC"},
+        {"i": "3", "x": "IR"},
+        {"i": "4", "x": "MAR"}
+      ],
+      "a": "4",
+      "e": "By the lecture's definition, the Memory Address Register (MAR) specifies the address in memory of the word to be written from or read into the MBR. The MBR holds the data itself, the PC holds the address of the next instruction and the IR holds the opcode being executed.",
+      "ref": "2022 Q2.1"
+    },
+    {
+      "id": "arc_0024",
+      "q": "Which of the following buses is <b>unidirectional</b>?",
+      "t": ["2", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Data bus"},
+        {"i": "2", "x": "Address bus"},
+        {"i": "3", "x": "Control bus"},
+        {"i": "4", "x": "System bus"}
+      ],
+      "a": "2",
+      "e": [
+        "The data bus is bi-directional: data flows in both directions between processor, memory and peripherals.",
+        "The address bus only carries addresses generated by the master (CPU) toward memory/I/O, so it is unidirectional (in the lecture's bus diagram the CPU only drives the address lines).",
+        "The control bus mixes signals in both directions (e.g. bus request from a module and bus grant from the CPU), and the system bus contains all three buses, so it is not unidirectional."
+      ],
+      "ref": "2023 Q6"
+    },
+    {
+      "id": "arc_0025",
+      "q": "Which register contains a word of data to be written to memory, or the word most recently read from memory?",
+      "t": ["2", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Program counter"},
+        {"i": "2", "x": "Instruction register"},
+        {"i": "3", "x": "Memory address register"},
+        {"i": "4", "x": "Memory buffer register"}
+      ],
+      "a": "4",
+      "e": "The Memory Buffer Register (MBR) contains the word to be stored in memory or sent to the I/O unit, or is used to receive a word from memory or from the I/O unit. The MAR only holds the address, the PC holds the next instruction's address and the IR holds the opcode.",
+      "ref": "2023 Q8"
+    },
+    {
+      "id": "arc_0026",
+      "q": "The register that refers to the next instruction to be fetched is ______.",
+      "t": ["2", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "MBR"},
+        {"i": "2", "x": "MAR"},
+        {"i": "3", "x": "PC"},
+        {"i": "4", "x": "IR"}
+      ],
+      "a": "3",
+      "e": [
+        "The Program Counter (PC) contains the address of the next instruction (pair, in the IAS) to be fetched from memory.",
+        "During fetch it is copied into the MAR (MAR ← PC) and afterwards updated (PC ← PC + size of current instruction).",
+        "The IR holds the instruction currently being executed, the MAR holds the address used for the memory access and the MBR holds the data transferred."
+      ],
+      "ref": "2023 Q25"
+    },
+    {
+      "id": "arc_0027",
+      "q": "Which of the following registers keeps track of the program instructions stored in memory?",
+      "t": ["2", "3", "Exam 2024", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Accumulator"},
+        {"i": "2", "x": "Address Register"},
+        {"i": "3", "x": "Program Counter"},
+        {"i": "4", "x": "Index Register"}
+      ],
+      "a": "3",
+      "e": "The Program Counter (PC) contains the address of the next instruction to be fetched, so it keeps track of where the program is in memory and advances through the instructions (PC ← PC + size of current instruction). The Accumulator holds ALU results/operands, and the other options are not used for sequencing instructions.",
+      "ref": "2024 Q3, 2025 Q11"
+    },
+    {
+      "id": "arc_0028",
+      "q": "Which register is employed to hold temporarily the <b>right-hand instruction</b> from a word in memory?",
+      "t": ["2", "3", "Exam 2024", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "IR"},
+        {"i": "2", "x": "MBR"},
+        {"i": "3", "x": "IMR"},
+        {"i": "4", "x": "IBR"}
+      ],
+      "a": "4",
+      "e": "An IAS memory word is 40 bits and holds two 20-bit instructions (left-hand and right-hand). The Instruction Buffer Register (IBR) temporarily holds the right-hand instruction of the word fetched, so that the next fetch can take it from the IBR without a memory access. The IR holds only the 8-bit opcode being executed and the MBR holds the whole 40-bit word.",
+      "ref": "2024 Q14, 2025 Q10"
+    },
+    {
+      "id": "arc_0029",
+      "q": "In which type of bus is set-up faster than other transmissions, making it well suited for applications where messages are generated at irregular intervals (e.g. keyboard data entry)?",
+      "t": ["2", "3", "Exam 2024", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Synchronous"},
+        {"i": "2", "x": "Semi-synchronous"},
+        {"i": "3", "x": "System"},
+        {"i": "4", "x": "Asynchronous"}
+      ],
+      "a": "4",
+      "e": "From the lecture's advantages of the asynchronous bus: it is simple (no need to synchronize both sides), cheap (less hardware) and its set-up is faster than other transmissions, so it suits applications with messages generated at irregular intervals, such as data entry from the keyboard. Synchronous buses rely on a common clock (lower overhead, higher throughput), and semi-synchronous buses use the clock but allow wait states.",
+      "ref": "2024 Q15, 2025 Q8"
+    },
+    {
+      "id": "arc_0030",
+      "q": "Processor bandwidth determines how many instructions per second the processor can execute.",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": "For microprocessors the lecture defines Bandwidth as the number of bits processed in a single instruction, while the <b>clock speed</b> (in MHz) is what determines how many instructions per second the processor can execute. The statement attributes the clock-speed role to bandwidth, so it is False.",
+      "ref": "2025 Q21"
+    },
+    {
+      "id": "arc_0031",
+      "q": "An asynchronous bus is slightly more complex and expensive than a synchronous bus.",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": "In the lecture's comparison table, the asynchronous bus is simple and cheap (it needs less hardware), while the <b>synchronous</b> bus is the one that is slightly more complex with more expensive hardware (but has lower overhead and greater throughput). The statement reverses them, so it is False.",
+      "ref": "2025 Q23"
+    },
+    {
+      "id": "arc_0032",
+      "q": "The data bus is bi-directional, so it allows data flow in both directions along the wires.",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "False"},
+        {"i": "2", "x": "True"}
+      ],
+      "a": "2",
+      "e": "The data bus exchanges data between the processor, memory and peripherals and is bi-directional: data can be read from memory/I/O to the CPU and written from the CPU to memory/I/O over the same wires. The statement is True.",
+      "ref": "2025 Q24"
+    },
+    {
+      "id": "arc_0033",
+      "q": "The control bus carries the signals relating to the control and co-ordination of the various activities across the computer.",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": "The lecture defines the control bus as carrying signals from the CU relating to control and co-ordination of activities across the computer, such as Memory Read/Write, I/O Read/Write, Transfer ACK, Bus request/grant, Interrupt request/ACK, Clock and Reset. The statement is True.",
+      "ref": "2025 Q30"
+    },
+    {
+      "id": "arc_0034",
+      "q": "In the IAS machine, the opcode part of an instruction is ______ bits.",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "12"},
+        {"i": "2", "x": "8"},
+        {"i": "3", "x": "10"},
+        {"i": "4", "x": "11"}
+      ],
+      "a": "2",
+      "e": [
+        "IAS machine-language instructions are 20 bits long, and a 40-bit word holds two of them.",
+        "The IAS instruction set has 22 instructions, each associated with an 8-bit opcode.",
+        "The remaining 12 bits of the instruction hold the memory address x (the 12 least-significant bits).",
+        "So the opcode is 8 bits; 12 is the size of the address field."
+      ],
+      "ref": "2025 Q33"
+    },
+    {
+      "id": "arc_0035",
+      "q": "Which of the following describes <i>what</i> the computer does?",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Data communication"},
+        {"i": "2", "x": "Computer hardware"},
+        {"i": "3", "x": "Computer organization"},
+        {"i": "4", "x": "Computer architecture"}
+      ],
+      "a": "4",
+      "e": "Computer architecture is the abstract model (the programmer's view: instruction set, addressing modes, registers) and describes <b>what</b> the computer does. Computer organization describes <b>how</b> it does it and reveals performance. Architecture is fixed first, and organization is decided afterwards.",
+      "ref": "2025 Q39"
+    }
+  ]
+}
