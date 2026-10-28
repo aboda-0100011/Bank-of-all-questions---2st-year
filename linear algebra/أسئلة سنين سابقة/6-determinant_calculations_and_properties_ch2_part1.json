@@ -1,0 +1,591 @@
+{
+ "qs": [
+  {
+   "id": "la6_0001",
+   "q": "If $A=\\begin{bmatrix}0&1\\\\1&2\\end{bmatrix}$ and $B=\\begin{bmatrix}-3&1\\\\1&-2\\end{bmatrix}$, then $\\det(A-B)=$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q33"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$5$"
+    },
+    {
+     "i": "2",
+     "x": "$12$"
+    },
+    {
+     "i": "3",
+     "x": "$0$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$A-B=\\begin{bmatrix}0-(-3)&1-1\\\\1-1&2-(-2)\\end{bmatrix}=\\begin{bmatrix}3&0\\\\0&4\\end{bmatrix}$.",
+    "$\\det(A-B)=3\\cdot4-0\\cdot0=12$.",
+    "Note that $\\det(A-B)\\neq\\det A-\\det B$: here $\\det A=-1$, $\\det B=5$, so $\\det A-\\det B=-6$."
+   ]
+  },
+  {
+   "id": "la6_0002",
+   "q": "If $A=\\begin{bmatrix}2&3\\\\1&3\\end{bmatrix}$, then $\\det(3A^{-1})=$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q35"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$1$"
+    },
+    {
+     "i": "2",
+     "x": "$3$"
+    },
+    {
+     "i": "3",
+     "x": "$6$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$\\det A=2\\cdot3-3\\cdot1=3$, so $\\det(A^{-1})=\\frac1{\\det A}=\\frac13$.",
+    "For an $n\\times n$ matrix, $\\det(kM)=k^n\\det M$. Here $n=2$, so $\\det(3A^{-1})=3^2\\det(A^{-1})$.",
+    "$\\det(3A^{-1})=9\\cdot\\frac13=3$."
+   ]
+  },
+  {
+   "id": "la6_0003",
+   "q": "If $A=\\begin{bmatrix}4&1\\\\3&1\\end{bmatrix}$ and $B=\\begin{bmatrix}3&2\\\\5&1\\end{bmatrix}$, then $\\det(2A-B)=$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q20"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$5$"
+    },
+    {
+     "i": "2",
+     "x": "$-6$"
+    },
+    {
+     "i": "3",
+     "x": "$4$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$2A=\\begin{bmatrix}8&2\\\\6&2\\end{bmatrix}$.",
+    "$2A-B=\\begin{bmatrix}8-3&2-2\\\\6-5&2-1\\end{bmatrix}=\\begin{bmatrix}5&0\\\\1&1\\end{bmatrix}$.",
+    "$\\det(2A-B)=5\\cdot1-0\\cdot1=5$."
+   ]
+  },
+  {
+   "id": "la6_0004",
+   "q": "If $A=\\begin{bmatrix}1&2\\\\2&5\\end{bmatrix}$, then $\\det(A)=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q20"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$3$"
+    },
+    {
+     "i": "2",
+     "x": "$-1$"
+    },
+    {
+     "i": "3",
+     "x": "$1$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "For a $2\\times2$ matrix, $\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc$.",
+    "$\\det A=1\\cdot5-2\\cdot2=5-4=1$."
+   ]
+  },
+  {
+   "id": "la6_0005",
+   "q": "If $A$ is a $2\\times2$ matrix and $\\det(A)=5$, then $\\det(3A)=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q15"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$30$"
+    },
+    {
+     "i": "2",
+     "x": "$45$"
+    },
+    {
+     "i": "3",
+     "x": "$25$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "For an $n\\times n$ matrix, $\\det(kA)=k^n\\det(A)$ (each of the $n$ rows has the common factor $k$).",
+    "Here $n=2$ and $k=3$: $\\det(3A)=3^2\\cdot5=9\\cdot5=45$.",
+    "The choice $30$ is the common mistake of multiplying by $k$ instead of $k^n$."
+   ]
+  },
+  {
+   "id": "la6_0006",
+   "q": "If $A$ is a $2\\times2$ matrix and $\\det(2A^T)=12$, then $\\det(A)=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q17"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$3$"
+    },
+    {
+     "i": "2",
+     "x": "$0.25$"
+    },
+    {
+     "i": "3",
+     "x": "$4$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$\\det(2A^T)=2^2\\det(A^T)=4\\det(A^T)$.",
+    "$\\det(A^T)=\\det(A)$, so $4\\det(A)=12$.",
+    "$\\det(A)=3$."
+   ]
+  },
+  {
+   "id": "la6_0007",
+   "q": "If $A$ is an invertible matrix and $\\det(A^{-1})=4$, then $\\det(A)=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q18"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$0.25$"
+    },
+    {
+     "i": "2",
+     "x": "$0.75$"
+    },
+    {
+     "i": "3",
+     "x": "$0.5$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "For an invertible matrix, $\\det(A^{-1})=\\frac1{\\det(A)}$ (from $\\det(A^{-1})\\det(A)=\\det(I)=1$).",
+    "So $\\frac1{\\det A}=4$, hence $\\det(A)=\\frac14=0.25$."
+   ]
+  },
+  {
+   "id": "la6_0008",
+   "q": "If $A$ is a square matrix, then $\\det(A^2)=$ ----",
+   "t": [
+    "2",
+    "3",
+    "Mar 2021 Q21",
+    "2024 P2 Q6"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$2\\det(A)$"
+    },
+    {
+     "i": "2",
+     "x": "$[\\det(A)]^2$"
+    },
+    {
+     "i": "3",
+     "x": "$\\det(A)$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "Use the product rule $\\det(AB)=\\det(A)\\det(B)$ with $B=A$.",
+    "$\\det(A^2)=\\det(A\\cdot A)=\\det(A)\\det(A)=[\\det(A)]^2$.",
+    "Note the difference from $\\det(2A)$, which equals $2^n\\det A$."
+   ]
+  },
+  {
+   "id": "la6_0009",
+   "q": "If $A_{2\\times2}$ is a matrix and $\\det(2A)=8$, then $\\det(A)=$ ----",
+   "t": [
+    "2",
+    "Jan 2022 Q3"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$2$"
+    },
+    {
+     "i": "2",
+     "x": "$6$"
+    },
+    {
+     "i": "3",
+     "x": "$4$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$\\det(2A)=2^2\\det(A)=4\\det(A)$ because $A$ is $2\\times2$.",
+    "$4\\det(A)=8\\Rightarrow\\det(A)=2$."
+   ]
+  },
+  {
+   "id": "la6_0010",
+   "q": "If $A_{2\\times2}$ is a matrix such that $\\det(A^{-1})=3$, then $\\det(A)=$ ----",
+   "t": [
+    "2",
+    "May 2023 P2 Q6"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$1/9$"
+    },
+    {
+     "i": "2",
+     "x": "$9$"
+    },
+    {
+     "i": "3",
+     "x": "$3/9$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$\\det(A^{-1})=\\frac1{\\det(A)}$, so $\\det(A)=\\frac1{\\det(A^{-1})}=\\frac13$.",
+    "$\\frac13=\\frac39$, which is choice (c). Choice (a) $\\frac19$ would be $\\det(A)^2$."
+   ]
+  },
+  {
+   "id": "la6_0011",
+   "q": "If $A_{4\\times4}$ is a matrix and $\\det(2A)=16$, then $\\det(A)=$ ----",
+   "t": [
+    "2",
+    "May 2023 P2 Q11"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$1$"
+    },
+    {
+     "i": "2",
+     "x": "$4$"
+    },
+    {
+     "i": "3",
+     "x": "$2$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$A$ is $4\\times4$, so $\\det(2A)=2^4\\det(A)=16\\det(A)$.",
+    "$16\\det(A)=16\\Rightarrow\\det(A)=1$."
+   ]
+  },
+  {
+   "id": "la6_0012",
+   "q": "If $A_{2\\times2}$ is a matrix, then $\\det(2A)^{-1}=$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q6"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$4[\\det(A^T)]^{-1}$"
+    },
+    {
+     "i": "2",
+     "x": "$(0.5)[\\det(A)]^{-1}$"
+    },
+    {
+     "i": "3",
+     "x": "$(0.25)[\\det(A^T)]^{-1}$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$\\det(2A)^{-1}=\\dfrac1{\\det(2A)}$ (the same value whether we invert the matrix first or the number).",
+    "$\\det(2A)=2^2\\det(A)=4\\det(A)$.",
+    "So $\\det(2A)^{-1}=\\dfrac1{4\\det(A)}=0.25\\,[\\det(A)]^{-1}$.",
+    "Since $\\det(A^T)=\\det(A)$, this equals $0.25\\,[\\det(A^T)]^{-1}$, choice (c)."
+   ]
+  },
+  {
+   "id": "la6_0013",
+   "q": "If $A_{n\\times n}$ is a matrix such that $\\det\\big((AA^T)^{-1}\\big)=1$, then $\\det(3A)=$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q16"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$1/3$"
+    },
+    {
+     "i": "2",
+     "x": "$9$"
+    },
+    {
+     "i": "3",
+     "x": "$1/9$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$\\det\\big((AA^T)^{-1}\\big)=\\dfrac1{\\det(AA^T)}=1\\Rightarrow\\det(AA^T)=1$.",
+    "$\\det(AA^T)=\\det(A)\\det(A^T)=[\\det(A)]^2=1$, so $\\det(A)=\\pm1$.",
+    "$\\det(3A)=3^n\\det(A)$. For a $2\\times2$ matrix this is $9\\det(A)=\\pm9$.",
+    "Among the given choices the only attainable value is $9$ (when $\\det A=1$), so the answer is (b)."
+   ]
+  },
+  {
+   "id": "la6_0014",
+   "q": "If $A$ and $B$ are invertible matrices have the same size, then $\\det\\big[((AB)^T)^{-1}\\big]=$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q17"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$\\det\\big[(A^{-1}B)^T\\big]$"
+    },
+    {
+     "i": "2",
+     "x": "$\\det\\big[(A^TB^{-1})^{-1}\\big]$"
+    },
+    {
+     "i": "3",
+     "x": "$\\det\\big[(B^{-1}A^{-1})^T\\big]$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "Left side: $\\det\\big[((AB)^T)^{-1}\\big]=\\dfrac1{\\det((AB)^T)}=\\dfrac1{\\det(A)\\det(B)}$.",
+    "(a): $\\det\\big[(A^{-1}B)^T\\big]=\\det(A^{-1})\\det(B)=\\dfrac{\\det B}{\\det A}$. Not equal.",
+    "(b): $\\det\\big[(A^TB^{-1})^{-1}\\big]=\\dfrac1{\\det(A)\\det(B^{-1})}=\\dfrac{\\det B}{\\det A}$. Not equal.",
+    "(c): $\\det\\big[(B^{-1}A^{-1})^T\\big]=\\det(B^{-1})\\det(A^{-1})=\\dfrac1{\\det(B)\\det(A)}$. Equal, so (c) is correct."
+   ]
+  },
+  {
+   "id": "la6_0015",
+   "q": "If $A_{2\\times2}$ is a matrix such that $\\det\\big((2A)^{-1}\\big)=1$, then $\\det(4A)=$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q17"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$1/2$"
+    },
+    {
+     "i": "2",
+     "x": "$4$"
+    },
+    {
+     "i": "3",
+     "x": "$1/4$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$\\det\\big((2A)^{-1}\\big)=\\dfrac1{\\det(2A)}=\\dfrac1{4\\det(A)}=1$, so $\\det(A)=\\frac14$.",
+    "$\\det(4A)=4^2\\det(A)=16\\cdot\\frac14=4$."
+   ]
+  },
+  {
+   "id": "la6_0016",
+   "q": "If $A$ is a $3\\times3$ matrix and $\\det(A)=2$, then $\\det(2A^{-1})=$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q15"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$8$"
+    },
+    {
+     "i": "2",
+     "x": "$4$"
+    },
+    {
+     "i": "3",
+     "x": "$0.25$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$A^{-1}$ is $3\\times3$ with $\\det(A^{-1})=\\frac1{\\det A}=\\frac12$.",
+    "$\\det(2A^{-1})=2^3\\det(A^{-1})=8\\cdot\\frac12=4$."
+   ]
+  },
+  {
+   "id": "la6_0017",
+   "q": "If $A=\\begin{bmatrix}b+1&2\\\\b&b-1\\end{bmatrix}$ and $\\det(A)=-2$, then $b$ ----",
+   "t": [
+    "2",
+    "2024 P2 Q1"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$<0$"
+    },
+    {
+     "i": "2",
+     "x": "$>0$"
+    },
+    {
+     "i": "3",
+     "x": "$=0$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$\\det(A)=(b+1)(b-1)-2b=b^2-1-2b$.",
+    "$b^2-2b-1=-2\\Rightarrow b^2-2b+1=0\\Rightarrow(b-1)^2=0$.",
+    "So $b=1$, which is positive."
+   ]
+  },
+  {
+   "id": "la6_0018",
+   "q": "If $A$ is an invertible matrix and $\\det(A^{-1})=2$, then $\\det(A^3)=$ ----",
+   "t": [
+    "2",
+    "2024 P2 Q3"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$0.25$"
+    },
+    {
+     "i": "2",
+     "x": "$0.75$"
+    },
+    {
+     "i": "3",
+     "x": "$0.125$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$\\det(A)=\\dfrac1{\\det(A^{-1})}=\\dfrac12$.",
+    "$\\det(A^3)=[\\det(A)]^3$ (repeated use of $\\det(AB)=\\det A\\det B$).",
+    "$\\det(A^3)=\\left(\\frac12\\right)^3=\\frac18=0.125$."
+   ]
+  },
+  {
+   "id": "la6_0019",
+   "q": "If $A$ and $B$ have the same size and $\\det(A)=\\det(B)\\neq0$, then $\\det(AB)$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q15"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$>0$"
+    },
+    {
+     "i": "2",
+     "x": "$<0$"
+    },
+    {
+     "i": "3",
+     "x": "may be equal zero"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$\\det(AB)=\\det(A)\\det(B)$.",
+    "Since $\\det(A)=\\det(B)$, this equals $[\\det(A)]^2$.",
+    "A nonzero real number squared is strictly positive, so $\\det(AB)>0$."
+   ]
+  },
+  {
+   "id": "la6_0020",
+   "q": "If $A$ and $B$ are two matrices such that $\\det(AB)=\\det(B^{-1})$, then ----",
+   "t": [
+    "2",
+    "Jan 2022 Q26"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$\\det(A)>0$"
+    },
+    {
+     "i": "2",
+     "x": "$\\det(A)=0$"
+    },
+    {
+     "i": "3",
+     "x": "$\\det(A)<0$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$B^{-1}$ exists, so $B$ is invertible and $\\det(B)\\neq0$.",
+    "$\\det(AB)=\\det(A)\\det(B)$ and $\\det(B^{-1})=\\dfrac1{\\det(B)}$.",
+    "So $\\det(A)\\det(B)=\\dfrac1{\\det(B)}\\Rightarrow\\det(A)=\\dfrac1{[\\det(B)]^2}$.",
+    "A positive number divided into $1$ is positive, so $\\det(A)>0$."
+   ]
+  },
+  {
+   "id": "la6_0021",
+   "q": "If $A$ and $B$ are two square matrices such that $\\det(AB)=\\dfrac1{\\det(B)}$, then ----",
+   "t": [
+    "2",
+    "May 2023 P2 Q7"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$\\det(A)=0$"
+    },
+    {
+     "i": "2",
+     "x": "$\\det(A)>0$"
+    },
+    {
+     "i": "3",
+     "x": "$\\det(A)<0$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "The right side is defined only if $\\det(B)\\neq0$.",
+    "$\\det(A)\\det(B)=\\dfrac1{\\det(B)}\\Rightarrow\\det(A)=\\dfrac1{[\\det(B)]^2}$.",
+    "This is strictly positive, so $\\det(A)>0$."
+   ]
+  }
+ ]
+}

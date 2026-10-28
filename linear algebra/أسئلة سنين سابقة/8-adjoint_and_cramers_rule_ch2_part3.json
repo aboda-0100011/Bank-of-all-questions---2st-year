@@ -1,0 +1,228 @@
+{
+ "qs": [
+  {
+   "id": "la8_0001",
+   "q": "If $A_{n\\times n}$ is an invertible matrix, then $\\det[\\operatorname{adj}(A)]=$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q19"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$\\det(A)$"
+    },
+    {
+     "i": "2",
+     "x": "$[\\det(A)]^n$"
+    },
+    {
+     "i": "3",
+     "x": "$[\\det(A)]^{n-1}$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "The adjoint formula gives $A\\,\\operatorname{adj}(A)=\\det(A)\\,I_n$.",
+    "Take determinants: $\\det(A)\\det[\\operatorname{adj}(A)]=\\det(\\det(A)\\,I_n)=[\\det(A)]^n$.",
+    "Since $A$ is invertible, $\\det(A)\\neq0$, and dividing gives $\\det[\\operatorname{adj}(A)]=[\\det(A)]^{n-1}$."
+   ]
+  },
+  {
+   "id": "la8_0002",
+   "q": "If $A_{2\\times2}$ is a matrix such that $\\det(A)=3$, then $\\det[\\operatorname{adj}(A)]=$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q16"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$3/9$"
+    },
+    {
+     "i": "2",
+     "x": "$9$"
+    },
+    {
+     "i": "3",
+     "x": "$3$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "For an $n\\times n$ invertible matrix, $\\det[\\operatorname{adj}(A)]=[\\det(A)]^{n-1}$.",
+    "With $n=2$: $\\det[\\operatorname{adj}(A)]=[\\det(A)]^{1}=3$."
+   ]
+  },
+  {
+   "id": "la8_0003",
+   "q": "If $A=\\begin{bmatrix}1&3\\\\2&4\\end{bmatrix}$, then $\\operatorname{adj}(A)=$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q19"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$\\begin{bmatrix}4&-3\\\\-2&1\\end{bmatrix}$"
+    },
+    {
+     "i": "2",
+     "x": "$\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix}$"
+    },
+    {
+     "i": "3",
+     "x": "$\\begin{bmatrix}-4&3\\\\2&-1\\end{bmatrix}$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "Cofactors: $C_{11}=4$, $C_{12}=-2$, $C_{21}=-3$, $C_{22}=1$.",
+    "Matrix of cofactors: $\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix}$.",
+    "The adjoint is the transpose of the cofactor matrix: $\\operatorname{adj}(A)=\\begin{bmatrix}4&-3\\\\-2&1\\end{bmatrix}$.",
+    "Shortcut for $2\\times2$: swap the diagonal entries and change the sign of the off-diagonal entries. Choice (b) is the cofactor matrix before transposing."
+   ]
+  },
+  {
+   "id": "la8_0004",
+   "q": "If $A$ is an invertible matrix, then $\\operatorname{adj}(A)$ ----",
+   "t": [
+    "2",
+    "Jan 2022 Q6"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is invertible"
+    },
+    {
+     "i": "2",
+     "x": "is not invertible"
+    },
+    {
+     "i": "3",
+     "x": "may be invertible"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "For an invertible matrix, $A^{-1}=\\dfrac1{\\det(A)}\\operatorname{adj}(A)$, so $\\operatorname{adj}(A)=\\det(A)\\,A^{-1}$.",
+    "$\\det(A)\\neq0$ is a nonzero scalar and $A^{-1}$ is invertible, so their product is invertible.",
+    "Equivalently $\\det[\\operatorname{adj}(A)]=[\\det(A)]^{n-1}\\neq0$."
+   ]
+  },
+  {
+   "id": "la8_0005",
+   "q": "If $A_{2\\times2}$ is a matrix such that $\\det(A^{-1})=3$, then $\\det[\\operatorname{adj}(A)]=$ ----",
+   "t": [
+    "2",
+    "Jan 2022 Q25"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$3/9$"
+    },
+    {
+     "i": "2",
+     "x": "$9$"
+    },
+    {
+     "i": "3",
+     "x": "$1/9$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$\\det(A)=\\dfrac1{\\det(A^{-1})}=\\dfrac13$.",
+    "For a $2\\times2$ matrix, $\\det[\\operatorname{adj}(A)]=[\\det(A)]^{2-1}=\\det(A)=\\frac13=\\frac39$.",
+    "Choice (c) $\\frac19$ is the common mistake of squaring $\\det(A)$."
+   ]
+  },
+  {
+   "id": "la8_0006",
+   "q": "If $A=\\begin{bmatrix}1&3\\\\2&4\\end{bmatrix}$, then $\\det(\\operatorname{adj}(A))=$ ----",
+   "t": [
+    "2",
+    "2024 P2 Q2"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$-2$"
+    },
+    {
+     "i": "2",
+     "x": "$2$"
+    },
+    {
+     "i": "3",
+     "x": "$-0.5$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$\\det(A)=1\\cdot4-3\\cdot2=-2$.",
+    "For a $2\\times2$ matrix, $\\det[\\operatorname{adj}(A)]=[\\det(A)]^{2-1}=-2$.",
+    "Check: $\\operatorname{adj}(A)=\\begin{bmatrix}4&-3\\\\-2&1\\end{bmatrix}$, whose determinant is $4-6=-2$."
+   ]
+  },
+  {
+   "id": "la8_0007",
+   "q": "If $A=\\begin{bmatrix}1&2&1\\\\4&8&4\\end{bmatrix}$ is an augmented matrix for a linear system, then this system can't be solved by ----",
+   "t": [
+    "2",
+    "Jan 2022 Q1"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "Gaussian elimination"
+    },
+    {
+     "i": "2",
+     "x": "Gauss-Jordan elimination"
+    },
+    {
+     "i": "3",
+     "x": "Cramer's rule"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "Cramer's rule needs a square system whose coefficient matrix has $\\det\\neq0$.",
+    "The coefficient matrix is $\\begin{bmatrix}1&2\\\\4&8\\end{bmatrix}$ with $\\det=8-8=0$, so Cramer's rule does not apply.",
+    "Gaussian and Gauss-Jordan elimination work for any system: $R_2\\to R_2-4R_1$ gives $[0\\ 0\\ |\\ 0]$, so the system has infinitely many solutions."
+   ]
+  },
+  {
+   "id": "la8_0008",
+   "q": "If $A=\\begin{bmatrix}3&2&c\\\\12&8&d\\end{bmatrix}$ is an augmented matrix for a linear system, this system can't be solved by ----",
+   "t": [
+    "2",
+    "May 2023 P2 Q8"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "Gaussian elimination"
+    },
+    {
+     "i": "2",
+     "x": "Gauss-Jordan elimination"
+    },
+    {
+     "i": "3",
+     "x": "Cramer's rule"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "The coefficient matrix is $\\begin{bmatrix}3&2\\\\12&8\\end{bmatrix}$ with $\\det=3\\cdot8-2\\cdot12=0$.",
+    "Cramer's rule requires $\\det\\neq0$, so it cannot be used.",
+    "Gaussian and Gauss-Jordan elimination can be applied to any system (the result is no solution or infinitely many, depending on $c,d$)."
+   ]
+  }
+ ]
+}

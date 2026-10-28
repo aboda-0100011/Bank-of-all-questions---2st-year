@@ -1,0 +1,449 @@
+{
+ "qs": [
+  {
+   "id": "la7_0001",
+   "q": "If $A_{n\\times n}$ and $\\det(A)\\neq0$, then the reduced row-echelon form of $A$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q4"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "may be $I_n$"
+    },
+    {
+     "i": "2",
+     "x": "is not $I_n$"
+    },
+    {
+     "i": "3",
+     "x": "is $I_n$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "By the equivalence theorem for an $n\\times n$ matrix: $\\det(A)\\neq0\\iff A$ is invertible $\\iff$ the reduced row-echelon form of $A$ is $I_n$.",
+    "So the reduced row-echelon form is always $I_n$."
+   ]
+  },
+  {
+   "id": "la7_0002",
+   "q": "If $A$ and $B$ are two square matrices such that $\\det(A)\\det(B)=1$, then ----",
+   "t": [
+    "2",
+    "Jan 2025 Q13"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A=B^{-1}$"
+    },
+    {
+     "i": "2",
+     "x": "$A\\neq B^{-1}$"
+    },
+    {
+     "i": "3",
+     "x": "$A$ may be equal $B^{-1}$"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$\\det(A)\\det(B)=\\det(AB)=1\\neq0$ only tells us that $AB$ is invertible. It does not force $AB=I$.",
+    "Example where $A=B^{-1}$: $A=B=I$.",
+    "Example where $A\\neq B^{-1}$: $A=I$, $B=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}$. Then $\\det A\\det B=1$, but $B^{-1}=\\begin{bmatrix}1&-1\\\\0&1\\end{bmatrix}\\neq A$.",
+    "Both cases occur, so $A$ may be equal to $B^{-1}$."
+   ]
+  },
+  {
+   "id": "la7_0003",
+   "q": "Let $A_{2\\times2}$ and $B_{2\\times2}$. If $\\det(A)=0$ and $\\det(B)=0$, then $AB$ ----",
+   "t": [
+    "2",
+    "Jan 2025 Q18"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "may be invertible"
+    },
+    {
+     "i": "2",
+     "x": "is not invertible"
+    },
+    {
+     "i": "3",
+     "x": "is invertible"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$\\det(AB)=\\det(A)\\det(B)=0\\cdot0=0$.",
+    "A matrix is invertible iff its determinant is nonzero, so $AB$ is not invertible."
+   ]
+  },
+  {
+   "id": "la7_0004",
+   "q": "$A$ is a square matrix. If the linear system $AX=b$ has only one solution, then $\\det(A)$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q14"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is equal to zero"
+    },
+    {
+     "i": "2",
+     "x": "is not equal to zero"
+    },
+    {
+     "i": "3",
+     "x": "may be equal to zero"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "By the equivalence theorem: $AX=b$ has exactly one solution $\\iff A$ is invertible $\\iff\\det(A)\\neq0$.",
+    "So $\\det(A)\\neq0$."
+   ]
+  },
+  {
+   "id": "la7_0005",
+   "q": "If $A$ is a square matrix such that $\\det(2A)\\neq0$, then $A$ ----",
+   "t": [
+    "2",
+    "Mar 2021 Q16"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is not invertible"
+    },
+    {
+     "i": "2",
+     "x": "is invertible"
+    },
+    {
+     "i": "3",
+     "x": "may be invertible"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$\\det(2A)=2^n\\det(A)$ where $n$ is the size of $A$.",
+    "$2^n\\det(A)\\neq0\\Rightarrow\\det(A)\\neq0$.",
+    "So $A$ is invertible."
+   ]
+  },
+  {
+   "id": "la7_0006",
+   "q": "If $\\det(A)=\\det(B)\\neq0$, then ----",
+   "t": [
+    "2",
+    "5",
+    "Mar 2021 Q22",
+    "Jan 2022 Q23",
+    "May 2023 P2 Q4",
+    "2024 P2 Q5"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A$ and $B$ are invertible matrices"
+    },
+    {
+     "i": "2",
+     "x": "$A=B$"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "A square matrix is invertible iff its determinant is nonzero. $\\det(A)=\\det(B)\\neq0$, so both $A$ and $B$ are invertible.",
+    "$A=B$ is not forced: take $A=I$ and $B=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}$. Both have determinant $1$ but $A\\neq B$.",
+    "(The original exam also listed a third choice, 'AB is invertible', which is also true because $\\det(AB)=\\det A\\det B\\neq0$. It was removed here so that only one choice is correct.)"
+   ]
+  },
+  {
+   "id": "la7_0007",
+   "q": "If $A_{3\\times3}$ is a matrix such that $AX=0$ has only one solution, then ----",
+   "t": [
+    "2",
+    "Jan 2022 Q2"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$\\det(A)\\le0$"
+    },
+    {
+     "i": "2",
+     "x": "$\\det(A)\\neq0$"
+    },
+    {
+     "i": "3",
+     "x": "$\\det(A)\\ge0$"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$AX=0$ always has the trivial solution $X=0$. If it is the only solution, then $A$ is invertible (equivalence theorem).",
+    "$A$ invertible $\\iff\\det(A)\\neq0$.",
+    "Choices (a) and (c) are wrong because they allow $\\det(A)=0$."
+   ]
+  },
+  {
+   "id": "la7_0008",
+   "q": "If $A$ and $B$ are two matrices such that $\\det(AB^{-1})\\neq0$, then ----",
+   "t": [
+    "2",
+    "Jan 2022 Q24"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A$ is invertible"
+    },
+    {
+     "i": "2",
+     "x": "$A$ is not invertible"
+    },
+    {
+     "i": "3",
+     "x": "$A$ is square and not invertible"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "$AB^{-1}$ has a determinant, so it is square, and $B^{-1}$ exists, so $B$ is square and invertible. Hence $A$ is square as well.",
+    "$\\det(AB^{-1})=\\det(A)\\det(B^{-1})=\\dfrac{\\det A}{\\det B}\\neq0\\Rightarrow\\det(A)\\neq0$.",
+    "So $A$ is invertible."
+   ]
+  },
+  {
+   "id": "la7_0009",
+   "q": "If $A$ and $B$ are two square matrices such that $\\det(AB^{-1})=\\dfrac1{\\det(B)}$, then ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q18"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A$ may be invertible"
+    },
+    {
+     "i": "2",
+     "x": "$A$ is not invertible"
+    },
+    {
+     "i": "3",
+     "x": "$A$ is invertible"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$\\det(AB^{-1})=\\det(A)\\det(B^{-1})=\\dfrac{\\det(A)}{\\det(B)}$.",
+    "So $\\dfrac{\\det(A)}{\\det(B)}=\\dfrac1{\\det(B)}$, and since $\\det(B)\\neq0$ ($B^{-1}$ exists), $\\det(A)=1$.",
+    "$\\det(A)=1\\neq0$, so $A$ is invertible."
+   ]
+  },
+  {
+   "id": "la7_0010",
+   "q": "If $A$ is a square matrix such that $\\det\\big((A^T)^{-1}\\big)\\neq0$, then $AA^T$ ----",
+   "t": [
+    "2",
+    "Credit Final 2025 Q36"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is not invertible"
+    },
+    {
+     "i": "2",
+     "x": "is invertible"
+    },
+    {
+     "i": "3",
+     "x": "may be invertible"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$(A^T)^{-1}$ exists, so $A^T$ is invertible and $\\det(A^T)\\neq0$.",
+    "$\\det(A)=\\det(A^T)\\neq0$.",
+    "$\\det(AA^T)=\\det(A)\\det(A^T)=[\\det(A)]^2\\neq0$, so $AA^T$ is invertible."
+   ]
+  },
+  {
+   "id": "la7_0011",
+   "q": "If $A$ and $B$ are two square matrices such that $\\det(AB)\\neq0$, then ----",
+   "t": [
+    "2",
+    "May 2023 P2 Q5"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "$A$ and $B$ are not invertible matrices"
+    },
+    {
+     "i": "2",
+     "x": "$A$ is not invertible and $B$ is invertible"
+    },
+    {
+     "i": "3",
+     "x": "$A^{-1}$ and $B^{-1}$ are invertible matrices"
+    }
+   ],
+   "a": "3",
+   "e": [
+    "$\\det(AB)=\\det(A)\\det(B)\\neq0$, so $\\det(A)\\neq0$ and $\\det(B)\\neq0$.",
+    "Therefore both $A$ and $B$ are invertible, so $A^{-1}$ and $B^{-1}$ exist.",
+    "The inverse of an invertible matrix is itself invertible, because $(A^{-1})^{-1}=A$. So (c) is correct."
+   ]
+  },
+  {
+   "id": "la7_0012",
+   "q": "If $A_{3\\times3}$ is a matrix such that $AX=0$ has infinity many solutions, then $\\det(A)$ is ----",
+   "t": [
+    "2",
+    "May 2023 P2 Q13"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "neither positive nor negative"
+    },
+    {
+     "i": "2",
+     "x": "negative number"
+    },
+    {
+     "i": "3",
+     "x": "positive number"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "Infinitely many solutions means there is a nontrivial solution, so $A$ is not invertible.",
+    "$A$ not invertible $\\iff\\det(A)=0$.",
+    "Zero is neither positive nor negative."
+   ]
+  },
+  {
+   "id": "la7_0013",
+   "q": "If $A$ is a square matrix and $\\det(A^T)\\neq0$, then the linear system $AX=0$ has ----",
+   "t": [
+    "2",
+    "2024 P1 Q3"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "one solution $\\neq0$"
+    },
+    {
+     "i": "2",
+     "x": "one solution $=0$"
+    },
+    {
+     "i": "3",
+     "x": "no solution"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$\\det(A)=\\det(A^T)\\neq0$, so $A$ is invertible.",
+    "For an invertible matrix, $AX=0$ has only the trivial solution $X=0$ (equivalence theorem).",
+    "A homogeneous system always has a solution, so 'no solution' is impossible, and the unique solution is $X=0$."
+   ]
+  },
+  {
+   "id": "la7_0014",
+   "q": "If $A$ is a square matrix such that $\\det(A^T)^2\\neq0$, then $A$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q14"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is not invertible"
+    },
+    {
+     "i": "2",
+     "x": "is invertible"
+    },
+    {
+     "i": "3",
+     "x": "may be invertible"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "$[\\det(A^T)]^2\\neq0\\Rightarrow\\det(A^T)\\neq0$ (also true if read as $\\det((A^T)^2)=[\\det A^T]^2$).",
+    "$\\det(A)=\\det(A^T)\\neq0$, so $A$ is invertible."
+   ]
+  },
+  {
+   "id": "la7_0015",
+   "q": "$A$ is a square matrix. If the linear system $AX=b$ has no solution, then $\\det(A)$ ----",
+   "t": [
+    "2",
+    "2024 P1 Q16"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is equal to zero"
+    },
+    {
+     "i": "2",
+     "x": "is not equal to zero"
+    },
+    {
+     "i": "3",
+     "x": "may be equal to zero"
+    }
+   ],
+   "a": "1",
+   "e": [
+    "If $\\det(A)\\neq0$, then $A$ is invertible and $AX=b$ has exactly one solution $X=A^{-1}b$ for every $b$.",
+    "The system has no solution, so this cannot happen.",
+    "Therefore $\\det(A)=0$."
+   ]
+  },
+  {
+   "id": "la7_0016",
+   "q": "If $A$ is a $2\\times2$ matrix and $\\det(2A^2+A)=12$, then $A$ ----",
+   "t": [
+    "2",
+    "2024 P2 Q4"
+   ],
+   "c": [
+    {
+     "i": "1",
+     "x": "is not invertible"
+    },
+    {
+     "i": "2",
+     "x": "is invertible"
+    },
+    {
+     "i": "3",
+     "x": "may be invertible"
+    }
+   ],
+   "a": "2",
+   "e": [
+    "Factor: $2A^2+A=A(2A+I)$.",
+    "$\\det(2A^2+A)=\\det(A)\\det(2A+I)=12\\neq0$.",
+    "A product of two numbers is nonzero only if both are nonzero, so $\\det(A)\\neq0$ and $A$ is invertible."
+   ]
+  }
+ ]
+}
