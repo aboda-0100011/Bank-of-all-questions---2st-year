@@ -97,7 +97,7 @@
         { "i": "C", "x": "$\\begin{bmatrix} -4 & 18 \\\\ 1 & 6 \\end{bmatrix}$" },
         { "i": "D", "x": "$\\begin{bmatrix} 16 & 18 \\\\ 1 & 9 \\end{bmatrix}$" }
       ],
-      "a": "B",
+      "a": "A",
       "e": [
         "أولاً نحسب $3A$:",
         "$$3A = \\begin{bmatrix} 6 & 18 \\\\ 3 & 12 \\end{bmatrix}$$",
