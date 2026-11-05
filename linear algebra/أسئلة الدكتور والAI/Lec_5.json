@@ -1,0 +1,684 @@
+{
+  "qs": [
+    {
+      "id": "LA5_0001",
+      "q": "Find the determinant of $A=\\begin{bmatrix}3&5\\\\6&7\\end{bmatrix}$.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$51$"},
+        {"i": "2", "x": "$-9$"},
+        {"i": "3", "x": "$9$"},
+        {"i": "4", "x": "$-51$"}
+      ],
+      "a": "2",
+      "e": [
+        "For a $2\\times2$ matrix use $|A|=a_{11}a_{22}-a_{12}a_{21}$.",
+        "$a_{11}a_{22}=3\\cdot7=21$ and $a_{12}a_{21}=5\\cdot6=30$.",
+        "$|A|=21-30=$ <mark>$-9$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0002",
+      "q": "Find the determinant of $B=\\begin{bmatrix}5&-1\\\\2&2\\end{bmatrix}$.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$8$"},
+        {"i": "2", "x": "$-12$"},
+        {"i": "3", "x": "$12$"},
+        {"i": "4", "x": "$10$"}
+      ],
+      "a": "3",
+      "e": [
+        "Use $|B|=b_{11}b_{22}-b_{12}b_{21}$.",
+        "$b_{11}b_{22}=5\\cdot2=10$ and $b_{12}b_{21}=(-1)(2)=-2$.",
+        "$|B|=10-(-2)=10+2=$ <mark>$12$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0003",
+      "q": "Which statement about the determinant of a matrix is correct?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "A matrix of the same size obtained from $A$"},
+        {"i": "2", "x": "A number defined for every rectangular matrix"},
+        {"i": "3", "x": "A real number assigned to a square matrix"},
+        {"i": "4", "x": "A vector formed from the rows of the matrix"}
+      ],
+      "a": "3",
+      "e": "The determinant is a <b>single number</b> (not a matrix) and it is defined <u>only</u> for <b>square</b> matrices."
+    },
+    {
+      "id": "LA5_0004",
+      "q": "Using the $2\\times2$ inverse formula $A^{-1}=\\frac{1}{\\det(A)}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$, find the inverse of $A=\\begin{bmatrix}2&1\\\\5&3\\end{bmatrix}$.",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}3&1\\\\5&2\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}2&-1\\\\-5&3\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}-3&1\\\\5&-2\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}3&-1\\\\-5&2\\end{bmatrix}$"}
+      ],
+      "a": "4",
+      "e": [
+        "$\\det(A)=ad-bc=(2)(3)-(1)(5)=6-5=1$, which is not zero, so $A$ is invertible.",
+        "Swap the diagonal entries and change the signs of the off-diagonal entries: $\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}=\\begin{bmatrix}3&-1\\\\-5&2\\end{bmatrix}$.",
+        "$A^{-1}=\\frac{1}{1}\\begin{bmatrix}3&-1\\\\-5&2\\end{bmatrix}=$ <mark>$\\begin{bmatrix}3&-1\\\\-5&2\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0005",
+      "q": "Which relation between the cofactor $C_{32}$ and the minor $M_{32}$ is correct?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "$C_{32}=-M_{32}$"},
+        {"i": "2", "x": "$C_{32}=M_{32}$"},
+        {"i": "3", "x": "$C_{32}=-M_{23}$"},
+        {"i": "4", "x": "$C_{32}=M_{23}$"}
+      ],
+      "a": "1",
+      "e": "$C_{ij}=(-1)^{i+j}M_{ij}$. Here $i+j=3+2=5$ is odd, so the sign is $-$ (checkerboard position $(3,2)$), giving <mark>$C_{32}=-M_{32}$</mark>."
+    },
+    {
+      "id": "LA5_0006",
+      "q": "Let $A=\\begin{bmatrix}1&-2&3\\\\6&7&-1\\\\-3&1&4\\end{bmatrix}$. Find the minor $M_{32}$.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$17$"},
+        {"i": "2", "x": "$19$"},
+        {"i": "3", "x": "$-17$"},
+        {"i": "4", "x": "$-19$"}
+      ],
+      "a": "4",
+      "e": [
+        "Delete row 3 and column 2 of $A$. The remaining submatrix is $\\begin{bmatrix}1&3\\\\6&-1\\end{bmatrix}$.",
+        "$M_{32}=(1)(-1)-(3)(6)=-1-18=$ <mark>$-19$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0007",
+      "q": "For the same matrix $A=\\begin{bmatrix}1&-2&3\\\\6&7&-1\\\\-3&1&4\\end{bmatrix}$, find the cofactor $C_{12}$.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$21$"},
+        {"i": "2", "x": "$-27$"},
+        {"i": "3", "x": "$-21$"},
+        {"i": "4", "x": "$27$"}
+      ],
+      "a": "3",
+      "e": [
+        "Delete row 1 and column 2: the submatrix is $\\begin{bmatrix}6&-1\\\\-3&4\\end{bmatrix}$.",
+        "$M_{12}=(6)(4)-(-1)(-3)=24-3=21$.",
+        "Position $(1,2)$ has sign $-$ in the checkerboard, so $C_{12}=-M_{12}=$ <mark>$-21$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0008",
+      "q": "Evaluate $\\det(A)$ for $A=\\begin{bmatrix}1&-2&3\\\\6&7&-1\\\\-3&1&4\\end{bmatrix}$ by cofactor expansion along the <u>first row</u>.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$68$"},
+        {"i": "2", "x": "$-10$"},
+        {"i": "3", "x": "$-152$"},
+        {"i": "4", "x": "$152$"}
+      ],
+      "a": "4",
+      "e": [
+        "Use $|A|=a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}$ with $a_{11}=1,\\ a_{12}=-2,\\ a_{13}=3$.",
+        "$M_{11}=\\begin{vmatrix}7&-1\\\\1&4\\end{vmatrix}=28+1=29$, so $C_{11}=+29$.",
+        "$M_{12}=\\begin{vmatrix}6&-1\\\\-3&4\\end{vmatrix}=24-3=21$, so $C_{12}=-21$.",
+        "$M_{13}=\\begin{vmatrix}6&7\\\\-3&1\\end{vmatrix}=6+21=27$, so $C_{13}=+27$.",
+        "$|A|=(1)(29)+(-2)(-21)+(3)(27)=29+42+81=$ <mark>$152$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0009",
+      "q": "For the same matrix $A=\\begin{bmatrix}1&-2&3\\\\6&7&-1\\\\-3&1&4\\end{bmatrix}$, what value do you get when expanding $\\det(A)$ along the <u>second row</u>?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$30$"},
+        {"i": "2", "x": "$142$"},
+        {"i": "3", "x": "$-30$"},
+        {"i": "4", "x": "$152$"}
+      ],
+      "a": "4",
+      "e": [
+        "Expansion along row 2: $|A|=a_{21}C_{21}+a_{22}C_{22}+a_{23}C_{23}$ with $a_{21}=6,\\ a_{22}=7,\\ a_{23}=-1$.",
+        "$M_{21}=\\begin{vmatrix}-2&3\\\\1&4\\end{vmatrix}=-8-3=-11$, so $C_{21}=-M_{21}=11$.",
+        "$M_{22}=\\begin{vmatrix}1&3\\\\-3&4\\end{vmatrix}=4+9=13$, so $C_{22}=+13$.",
+        "$M_{23}=\\begin{vmatrix}1&-2\\\\-3&1\\end{vmatrix}=1-6=-5$, so $C_{23}=-M_{23}=5$.",
+        "$|A|=6(11)+7(13)+(-1)(5)=66+91-5=$ <mark>$152$</mark>, the same value as the first-row expansion."
+      ]
+    },
+    {
+      "id": "LA5_0010",
+      "q": "Find $\\det(A)$ for $A=\\begin{bmatrix}1&0&0&-1\\\\3&1&2&2\\\\1&0&-2&1\\\\2&0&0&1\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$6$"},
+        {"i": "2", "x": "$-3$"},
+        {"i": "3", "x": "$-6$"},
+        {"i": "4", "x": "$3$"}
+      ],
+      "a": "3",
+      "e": [
+        "Column 2 has only one non-zero entry ($a_{22}=1$), so expand along column 2. The sign of position $(2,2)$ is $+$.",
+        "$|A|=(1)\\begin{vmatrix}1&0&-1\\\\1&-2&1\\\\2&0&1\\end{vmatrix}$.",
+        "In this $3\\times3$ determinant, column 2 again has only one non-zero entry ($-2$ at position $(2,2)$, sign $+$): $=(-2)\\begin{vmatrix}1&-1\\\\2&1\\end{vmatrix}$.",
+        "$\\begin{vmatrix}1&-1\\\\2&1\\end{vmatrix}=(1)(1)-(-1)(2)=1+2=3$.",
+        "$|A|=(-2)(3)=$ <mark>$-6$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0011",
+      "q": "Find $\\det(A)$ for $A=\\begin{bmatrix}3&0&0\\\\-2&-4&3\\\\5&4&-2\\end{bmatrix}$ by cofactor expansion along the first row.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$12$"},
+        {"i": "2", "x": "$-12$"},
+        {"i": "3", "x": "$60$"},
+        {"i": "4", "x": "$-4$"}
+      ],
+      "a": "2",
+      "e": [
+        "The first row is $(3,0,0)$, so only the first term survives: $\\det(A)=3\\,C_{11}+0\\cdot C_{12}+0\\cdot C_{13}$.",
+        "$C_{11}=+\\begin{vmatrix}-4&3\\\\4&-2\\end{vmatrix}=(-4)(-2)-(3)(4)=8-12=-4$.",
+        "$\\det(A)=3(-4)=$ <mark>$-12$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0012",
+      "q": "Let $A=\\begin{bmatrix}3&0&0\\\\-2&-4&3\\\\5&4&-2\\end{bmatrix}$. In the cofactor expansion along the <u>second column</u>, what is the value of the term $a_{32}C_{32}$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$36$"},
+        {"i": "2", "x": "$-9$"},
+        {"i": "3", "x": "$-36$"},
+        {"i": "4", "x": "$9$"}
+      ],
+      "a": "3",
+      "e": [
+        "$a_{32}=4$. Delete row 3 and column 2: the submatrix is $\\begin{bmatrix}3&0\\\\-2&3\\end{bmatrix}$.",
+        "$M_{32}=(3)(3)-(0)(-2)=9$.",
+        "Position $(3,2)$ has sign $-$, so $C_{32}=-9$.",
+        "$a_{32}C_{32}=(4)(-9)=$ <mark>$-36$</mark>",
+        "(Check: the other term is $a_{22}C_{22}=(-4)(+(-6))=24$, and $24-36=-12$, which agrees with the first-row expansion.)"
+      ]
+    },
+    {
+      "id": "LA5_0013",
+      "q": "Find $\\det(A)$ for $A=\\begin{bmatrix}1&0&0&0\\\\3&1&1&0\\\\1&0&-2&1\\\\2&0&0&1\\end{bmatrix}$ using the row or column with the <b>most zeros</b>.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$2$"},
+        {"i": "2", "x": "$0$"},
+        {"i": "3", "x": "$1$"},
+        {"i": "4", "x": "$-2$"}
+      ],
+      "a": "4",
+      "e": [
+        "Row 1 has three zeros, so expand along it: $\\det(A)=(1)\\begin{vmatrix}1&1&0\\\\0&-2&1\\\\0&0&1\\end{vmatrix}$ (sign of $(1,1)$ is $+$).",
+        "In the $3\\times3$ determinant, column 1 has two zeros, so expand along it: $=(1)\\begin{vmatrix}-2&1\\\\0&1\\end{vmatrix}$.",
+        "$\\begin{vmatrix}-2&1\\\\0&1\\end{vmatrix}=(-2)(1)-(1)(0)=-2$.",
+        "$\\det(A)=$ <mark>$-2$</mark> (the $3\\times3$ matrix is upper triangular, so this equals $1\\cdot(-2)\\cdot1$)."
+      ]
+    },
+    {
+      "id": "LA5_0014",
+      "q": "If $A$ is an $n\\times n$ triangular matrix (upper triangular, lower triangular, or diagonal), then $\\det(A)$ equals:",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$a_{11}+a_{22}+\\cdots+a_{nn}$"},
+        {"i": "2", "x": "$a_{11}a_{nn}$"},
+        {"i": "3", "x": "$a_{1n}a_{2,n-1}\\cdots a_{n1}$"},
+        {"i": "4", "x": "$a_{11}a_{22}\\cdots a_{nn}$"}
+      ],
+      "a": "4",
+      "e": "Repeated cofactor expansion along the first column (or row) leaves only the diagonal entries, so <mark>$\\det(A)=a_{11}a_{22}\\cdots a_{nn}$</mark>, the <b>product</b> of the main diagonal entries."
+    },
+    {
+      "id": "LA5_0015",
+      "q": "Find $\\det(A)$ for the lower triangular matrix $A=\\begin{bmatrix}2&0&0&0\\\\5&-1&0&0\\\\7&3&4&0\\\\1&9&6&3\\end{bmatrix}$.",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "$24$"},
+        {"i": "2", "x": "$-24$"},
+        {"i": "3", "x": "$8$"},
+        {"i": "4", "x": "$0$"}
+      ],
+      "a": "2",
+      "e": [
+        "$A$ is lower triangular, so $\\det(A)$ is the product of the main diagonal entries.",
+        "$\\det(A)=(2)(-1)(4)(3)=$ <mark>$-24$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0016",
+      "q": "Use the arrow technique to evaluate $\\begin{vmatrix}1&2&3\\\\-4&5&6\\\\7&-8&9\\end{vmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$240$"},
+        {"i": "2", "x": "$210$"},
+        {"i": "3", "x": "$-240$"},
+        {"i": "4", "x": "$225$"}
+      ],
+      "a": "1",
+      "e": [
+        "Recopy columns 1 and 2 to the right of the determinant.",
+        "Sum of the products along the rightward arrows: $(1)(5)(9)+(2)(6)(7)+(3)(-4)(-8)=45+84+96=225$.",
+        "Sum of the products along the leftward arrows: $(3)(5)(7)+(1)(6)(-8)+(2)(-4)(9)=105-48-72=-15$.",
+        "$\\det=225-(-15)=$ <mark>$240$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0017",
+      "q": "The arrow (recopy-columns) technique for evaluating determinants works for which matrices?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Every square matrix, whatever its order"},
+        {"i": "2", "x": "Square matrices of order two or three only"},
+        {"i": "3", "x": "Only triangular matrices of any order"},
+        {"i": "4", "x": "Square matrices of order at most four"}
+      ],
+      "a": "2",
+      "e": "The arrow technique works <u>only</u> for $2\\times2$ and $3\\times3$ determinants. For $4\\times4$ or larger use cofactor expansion (or row operations)."
+    },
+    {
+      "id": "LA5_0018",
+      "q": "Use the arrow technique to evaluate $\\begin{vmatrix}-1&2&1\\\\0&2&-2\\\\1&4&0\\end{vmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$14$"},
+        {"i": "2", "x": "$-14$"},
+        {"i": "3", "x": "$6$"},
+        {"i": "4", "x": "$-6$"}
+      ],
+      "a": "2",
+      "e": [
+        "Rightward arrows: $(-1)(2)(0)+(2)(-2)(1)+(1)(0)(4)=0-4+0=-4$.",
+        "Leftward arrows: $(1)(2)(1)+(-1)(-2)(4)+(2)(0)(0)=2+8+0=10$.",
+        "$\\det=-4-10=$ <mark>$-14$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0019",
+      "q": "Find all values of $\\mu$ for which $\\begin{vmatrix}\\mu-1&4\\\\1&\\mu+2\\end{vmatrix}=0$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\mu=-2$ or $\\mu=3$"},
+        {"i": "2", "x": "$\\mu=1$ or $\\mu=-2$"},
+        {"i": "3", "x": "$\\mu=2$ or $\\mu=-3$"},
+        {"i": "4", "x": "$\\mu=6$ or $\\mu=-1$"}
+      ],
+      "a": "3",
+      "e": [
+        "Expand the $2\\times2$ determinant: $(\\mu-1)(\\mu+2)-(4)(1)=0$.",
+        "$\\mu^2+\\mu-2-4=\\mu^2+\\mu-6=0$.",
+        "Factor: $(\\mu+3)(\\mu-2)=0$.",
+        "<mark>$\\mu=2$ or $\\mu=-3$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0020",
+      "q": "Find all values of $\\mu$ for which $\\begin{vmatrix}\\mu-4&0&0\\\\0&\\mu-1&3\\\\0&2&\\mu\\end{vmatrix}=0$.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\mu=4,\\ \\mu=-3,\\ \\mu=2$"},
+        {"i": "2", "x": "$\\mu=4,\\ \\mu=3,\\ \\mu=-2$"},
+        {"i": "3", "x": "$\\mu=-4,\\ \\mu=3,\\ \\mu=-2$"},
+        {"i": "4", "x": "$\\mu=4,\\ \\mu=1,\\ \\mu=-2$"}
+      ],
+      "a": "2",
+      "e": [
+        "Expand along the first row (only the first entry is non-zero): $(\\mu-4)\\begin{vmatrix}\\mu-1&3\\\\2&\\mu\\end{vmatrix}=0$.",
+        "$\\begin{vmatrix}\\mu-1&3\\\\2&\\mu\\end{vmatrix}=(\\mu-1)\\mu-6=\\mu^2-\\mu-6=(\\mu-3)(\\mu+2)$.",
+        "So $(\\mu-4)(\\mu-3)(\\mu+2)=0$.",
+        "<mark>$\\mu=4,\\ 3,\\ -2$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0021",
+      "q": "Compute $\\det(F)$ for $F=\\begin{bmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{bmatrix}$.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$0$"},
+        {"i": "2", "x": "$\\cos2\\theta$"},
+        {"i": "3", "x": "$1$"},
+        {"i": "4", "x": "$-1$"}
+      ],
+      "a": "3",
+      "e": [
+        "$\\det(F)=(\\cos\\theta)(\\cos\\theta)-(-\\sin\\theta)(\\sin\\theta)$.",
+        "$=\\cos^2\\theta+\\sin^2\\theta$.",
+        "Using the identity $\\cos^2\\theta+\\sin^2\\theta=1$: <mark>$\\det(F)=1$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0022",
+      "q": "Evaluate $\\det\\begin{bmatrix}-1&4&2\\\\1&0&-3\\\\2&0&4\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$40$"},
+        {"i": "2", "x": "$-24$"},
+        {"i": "3", "x": "$-16$"},
+        {"i": "4", "x": "$-40$"}
+      ],
+      "a": "4",
+      "e": [
+        "Column 2 contains two zeros, so expand along column 2: only $a_{12}=4$ contributes.",
+        "$C_{12}=-\\begin{vmatrix}1&-3\\\\2&4\\end{vmatrix}=-[(1)(4)-(-3)(2)]=-(4+6)=-10$ (sign of $(1,2)$ is $-$).",
+        "$\\det=a_{12}C_{12}=(4)(-10)=$ <mark>$-40$</mark>",
+        "(Check with the arrow technique: $[0-24+0]-[0+(-16)\\cdot(-1)\\cdot(-1)+0]$ gives the same value, $-24-16=-40$.)"
+      ]
+    },
+    {
+      "id": "LA5_0023",
+      "q": "Find $\\operatorname{adj}(A)$ for $A=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}4&-3\\\\-2&1\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}-4&2\\\\3&-1\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}1&-2\\\\-3&4\\end{bmatrix}$"}
+      ],
+      "a": "3",
+      "e": [
+        "Cofactors: $C_{11}=+4,\\ C_{12}=-3,\\ C_{21}=-2,\\ C_{22}=+1$.",
+        "Matrix of cofactors: $C=\\begin{bmatrix}4&-3\\\\-2&1\\end{bmatrix}$.",
+        "The adjoint is the <b>transpose</b> of the cofactor matrix: <mark>$\\operatorname{adj}(A)=C^{T}=\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0024",
+      "q": "For $A=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$, use $A^{-1}=\\frac{1}{\\det(A)}\\operatorname{adj}(A)$ to find the entry in row 2, column 1 of $A^{-1}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$-\\frac{3}{2}$"},
+        {"i": "2", "x": "$\\frac{3}{2}$"},
+        {"i": "3", "x": "$-2$"},
+        {"i": "4", "x": "$1$"}
+      ],
+      "a": "2",
+      "e": [
+        "$\\det(A)=(1)(4)-(2)(3)=-2$.",
+        "$\\operatorname{adj}(A)=\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix}$.",
+        "$A^{-1}=\\frac{1}{-2}\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix}=\\begin{bmatrix}-2&1\\\\\\frac{3}{2}&-\\frac{1}{2}\\end{bmatrix}$.",
+        "The $(2,1)$ entry is <mark>$\\frac{3}{2}$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0025",
+      "q": "What is the adjoint of a square matrix $A$?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The cofactor matrix itself"},
+        {"i": "2", "x": "The transpose of the minor matrix"},
+        {"i": "3", "x": "The inverse of the cofactor matrix"},
+        {"i": "4", "x": "The transpose of the cofactor matrix"}
+      ],
+      "a": "4",
+      "e": "If $C=[C_{ij}]$ is the matrix of cofactors of $A$, then <mark>$\\operatorname{adj}(A)=C^{T}$</mark>. Minors alone (without the checkerboard signs) are <u>not</u> enough."
+    },
+    {
+      "id": "LA5_0026",
+      "q": "Find $\\det(A)$ for $A=\\begin{bmatrix}1&2&0\\\\3&6&5\\\\2&0&0\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$10$"},
+        {"i": "2", "x": "$0$"},
+        {"i": "3", "x": "$-20$"},
+        {"i": "4", "x": "$20$"}
+      ],
+      "a": "4",
+      "e": [
+        "Row 3 is $(2,0,0)$, so expand along row 3: $\\det(A)=2\\,C_{31}$.",
+        "$C_{31}=+\\begin{vmatrix}2&0\\\\6&5\\end{vmatrix}=10-0=10$ (sign of $(3,1)$ is $+$).",
+        "$\\det(A)=2\\cdot10=$ <mark>$20$</mark>",
+        "(Check with row 1: $1\\cdot C_{11}+2\\cdot C_{12}+0=0+2(10)+0=20$.)"
+      ]
+    },
+    {
+      "id": "LA5_0027",
+      "q": "If the entries of one row of $A$ are multiplied by the corresponding cofactors of a <u>different</u> row and the products are added, the result is always:",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\det(A)$"},
+        {"i": "2", "x": "$0$"},
+        {"i": "3", "x": "$1$"},
+        {"i": "4", "x": "$2\\det(A)$"}
+      ],
+      "a": "2",
+      "e": [
+        "This is the key fact behind the adjoint formula. Example: for $A=\\begin{bmatrix}1&2&0\\\\3&6&5\\\\2&0&0\\end{bmatrix}$ (with $C_{21}=0,\\ C_{22}=0,\\ C_{23}=4$), row 1 times the cofactors of row 2 gives $1(0)+2(0)+0(4)=0$.",
+        "The same holds for columns. The sum is <mark>$0$</mark>, while the same row with its <u>own</u> cofactors gives $\\det(A)$."
+      ]
+    },
+    {
+      "id": "LA5_0028",
+      "q": "Find $\\operatorname{adj}(A)$ for $A=\\begin{bmatrix}1&2&0\\\\3&6&5\\\\2&0&0\\end{bmatrix}$.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}0&10&-12\\\\0&0&4\\\\10&-5&0\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}0&0&10\\\\-10&0&5\\\\12&-4&0\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}0&0&10\\\\10&0&-5\\\\-12&4&0\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}0&0&-10\\\\10&0&-5\\\\12&-4&0\\end{bmatrix}$"}
+      ],
+      "a": "3",
+      "e": [
+        "$C_{11}=\\begin{vmatrix}6&5\\\\0&0\\end{vmatrix}=0,\\quad C_{12}=-\\begin{vmatrix}3&5\\\\2&0\\end{vmatrix}=-(0-10)=10,\\quad C_{13}=\\begin{vmatrix}3&6\\\\2&0\\end{vmatrix}=-12$.",
+        "$C_{21}=-\\begin{vmatrix}2&0\\\\0&0\\end{vmatrix}=0,\\quad C_{22}=\\begin{vmatrix}1&0\\\\2&0\\end{vmatrix}=0,\\quad C_{23}=-\\begin{vmatrix}1&2\\\\2&0\\end{vmatrix}=-(0-4)=4$.",
+        "$C_{31}=\\begin{vmatrix}2&0\\\\6&5\\end{vmatrix}=10,\\quad C_{32}=-\\begin{vmatrix}1&0\\\\3&5\\end{vmatrix}=-5,\\quad C_{33}=\\begin{vmatrix}1&2\\\\3&6\\end{vmatrix}=0$.",
+        "Cofactor matrix: $C=\\begin{bmatrix}0&10&-12\\\\0&0&4\\\\10&-5&0\\end{bmatrix}$.",
+        "Transpose it: <mark>$\\operatorname{adj}(A)=C^{T}=\\begin{bmatrix}0&0&10\\\\10&0&-5\\\\-12&4&0\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0029",
+      "q": "To solve the system $x_1+2x_2+3x_3=9,\\ 2x_1-x_2+x_3=8,\\ 3x_1-x_3=3$ by matrix inversion, find $\\det(A)$ of the coefficient matrix $A=\\begin{bmatrix}1&2&3\\\\2&-1&1\\\\3&0&-1\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$20$"},
+        {"i": "2", "x": "$-20$"},
+        {"i": "3", "x": "$10$"},
+        {"i": "4", "x": "$0$"}
+      ],
+      "a": "1",
+      "e": [
+        "Expand along column 2, which has a zero ($a_{32}=0$): $\\det(A)=2C_{12}+(-1)C_{22}+0\\cdot C_{32}$.",
+        "$C_{12}=-\\begin{vmatrix}2&1\\\\3&-1\\end{vmatrix}=-(-2-3)=5$.",
+        "$C_{22}=+\\begin{vmatrix}1&3\\\\3&-1\\end{vmatrix}=-1-9=-10$.",
+        "$\\det(A)=2(5)+(-1)(-10)+0=10+10=$ <mark>$20$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0030",
+      "q": "For $A=\\begin{bmatrix}1&2&3\\\\2&-1&1\\\\3&0&-1\\end{bmatrix}$ the matrix of cofactors is $C=\\begin{bmatrix}1&5&3\\\\2&-10&6\\\\5&5&-5\\end{bmatrix}$. Which matrix is $\\operatorname{adj}(A)$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\begin{bmatrix}1&2&5\\\\5&10&5\\\\3&6&-5\\end{bmatrix}$"},
+        {"i": "2", "x": "$\\begin{bmatrix}1&5&3\\\\2&-10&6\\\\5&5&-5\\end{bmatrix}$"},
+        {"i": "3", "x": "$\\begin{bmatrix}-1&-2&-5\\\\-5&10&-5\\\\-3&-6&5\\end{bmatrix}$"},
+        {"i": "4", "x": "$\\begin{bmatrix}1&2&5\\\\5&-10&5\\\\3&6&-5\\end{bmatrix}$"}
+      ],
+      "a": "4",
+      "e": [
+        "The adjoint is the transpose of the cofactor matrix: rows of $C$ become columns.",
+        "Row 1 of $C$ $(1,5,3)$ becomes column 1; row 2 $(2,-10,6)$ becomes column 2; row 3 $(5,5,-5)$ becomes column 3.",
+        "<mark>$\\operatorname{adj}(A)=\\begin{bmatrix}1&2&5\\\\5&-10&5\\\\3&6&-5\\end{bmatrix}$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0031",
+      "q": "Solve $x_1+2x_2+3x_3=9,\\ 2x_1-x_2+x_3=8,\\ 3x_1-x_3=3$ using $X=A^{-1}b$, where $A^{-1}=\\frac{1}{20}\\begin{bmatrix}1&2&5\\\\5&-10&5\\\\3&6&-5\\end{bmatrix}$ and $b=\\begin{bmatrix}9\\\\8\\\\3\\end{bmatrix}$.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$x_1=-1,\\ x_2=2,\\ x_3=3$"},
+        {"i": "2", "x": "$x_1=2,\\ x_2=-1,\\ x_3=3$"},
+        {"i": "3", "x": "$x_1=2,\\ x_2=1,\\ x_3=3$"},
+        {"i": "4", "x": "$x_1=3,\\ x_2=-1,\\ x_3=2$"}
+      ],
+      "a": "2",
+      "e": [
+        "$x_1=\\frac{1}{20}(1\\cdot9+2\\cdot8+5\\cdot3)=\\frac{1}{20}(9+16+15)=\\frac{40}{20}=2$.",
+        "$x_2=\\frac{1}{20}(5\\cdot9-10\\cdot8+5\\cdot3)=\\frac{1}{20}(45-80+15)=\\frac{-20}{20}=-1$.",
+        "$x_3=\\frac{1}{20}(3\\cdot9+6\\cdot8-5\\cdot3)=\\frac{1}{20}(27+48-15)=\\frac{60}{20}=3$.",
+        "Check in the equations: $2-2+9=9$, $4+1+3=8$, $6-3=3$. All correct.",
+        "<mark>$x_1=2,\\ x_2=-1,\\ x_3=3$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0032",
+      "q": "Use Cramer's rule for the system $x_1+2x_2+3x_3=9,\\ 2x_1-x_2+x_3=8,\\ 3x_1-x_3=3$ (here $\\det(A)=20$). Find $x_1$, where $A_1=\\begin{bmatrix}9&2&3\\\\8&-1&1\\\\3&0&-1\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$40$"},
+        {"i": "2", "x": "$-2$"},
+        {"i": "3", "x": "$\\frac{1}{2}$"},
+        {"i": "4", "x": "$2$"}
+      ],
+      "a": "4",
+      "e": [
+        "$A_1$ is $A$ with column 1 replaced by $b$. Expand $\\det(A_1)$ along column 2 (it contains a zero).",
+        "$C_{12}=-\\begin{vmatrix}8&1\\\\3&-1\\end{vmatrix}=-(-8-3)=11$ and $C_{22}=\\begin{vmatrix}9&3\\\\3&-1\\end{vmatrix}=-9-9=-18$.",
+        "$\\det(A_1)=2(11)+(-1)(-18)+0=22+18=40$.",
+        "$x_1=\\frac{\\det(A_1)}{\\det(A)}=\\frac{40}{20}=$ <mark>$2$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0033",
+      "q": "In the same system (with $\\det(A)=20$), find $x_2$ using $A_2=\\begin{bmatrix}1&9&3\\\\2&8&1\\\\3&3&-1\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$-1$"},
+        {"i": "2", "x": "$1$"},
+        {"i": "3", "x": "$-20$"},
+        {"i": "4", "x": "$-\\frac{1}{2}$"}
+      ],
+      "a": "1",
+      "e": [
+        "$A_2$ is $A$ with column 2 replaced by $b$. Expand along row 1.",
+        "$\\det(A_2)=1\\begin{vmatrix}8&1\\\\3&-1\\end{vmatrix}-9\\begin{vmatrix}2&1\\\\3&-1\\end{vmatrix}+3\\begin{vmatrix}2&8\\\\3&3\\end{vmatrix}$.",
+        "$=1(-8-3)-9(-2-3)+3(6-24)=-11+45-54=-20$.",
+        "$x_2=\\frac{-20}{20}=$ <mark>$-1$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0034",
+      "q": "In the same system (with $\\det(A)=20$), find $x_3$ using $A_3=\\begin{bmatrix}1&2&9\\\\2&-1&8\\\\3&0&3\\end{bmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$60$"},
+        {"i": "2", "x": "$-3$"},
+        {"i": "3", "x": "$3$"},
+        {"i": "4", "x": "$\\frac{1}{3}$"}
+      ],
+      "a": "3",
+      "e": [
+        "$A_3$ is $A$ with column 3 replaced by $b$. Expand along column 2 (it contains a zero).",
+        "$C_{12}=-\\begin{vmatrix}2&8\\\\3&3\\end{vmatrix}=-(6-24)=18$ and $C_{22}=\\begin{vmatrix}1&9\\\\3&3\\end{vmatrix}=3-27=-24$.",
+        "$\\det(A_3)=2(18)+(-1)(-24)+0=36+24=60$.",
+        "$x_3=\\frac{60}{20}=$ <mark>$3$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0035",
+      "q": "Use Cramer's rule to solve $x_1-x_2=4,\\ x_1+x_2=2$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$x_1=6,\\ x_2=-1$"},
+        {"i": "2", "x": "$x_1=3,\\ x_2=1$"},
+        {"i": "3", "x": "$x_1=-1,\\ x_2=3$"},
+        {"i": "4", "x": "$x_1=3,\\ x_2=-1$"}
+      ],
+      "a": "4",
+      "e": [
+        "$A=\\begin{bmatrix}1&-1\\\\1&1\\end{bmatrix}$, so $\\det(A)=1+1=2\\neq0$ and Cramer's rule applies.",
+        "$A_1=\\begin{bmatrix}4&-1\\\\2&1\\end{bmatrix}$, so $\\det(A_1)=4+2=6$ and $x_1=\\frac{6}{2}=3$.",
+        "$A_2=\\begin{bmatrix}1&4\\\\1&2\\end{bmatrix}$, so $\\det(A_2)=2-4=-2$ and $x_2=\\frac{-2}{2}=-1$.",
+        "Check: $3-(-1)=4$ and $3+(-1)=2$.",
+        "<mark>$x_1=3,\\ x_2=-1$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0036",
+      "q": "Use Cramer's rule to solve $2x+y=5,\\ x-y=1$. What is $(x,y)$?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$(2,1)$"},
+        {"i": "2", "x": "$(1,2)$"},
+        {"i": "3", "x": "$(3,-1)$"},
+        {"i": "4", "x": "$(2,-1)$"}
+      ],
+      "a": "1",
+      "e": [
+        "$A=\\begin{bmatrix}2&1\\\\1&-1\\end{bmatrix}$, so $\\det(A)=-2-1=-3\\neq0$.",
+        "$A_x=\\begin{bmatrix}5&1\\\\1&-1\\end{bmatrix}$, so $\\det(A_x)=-5-1=-6$ and $x=\\frac{-6}{-3}=2$.",
+        "$A_y=\\begin{bmatrix}2&5\\\\1&1\\end{bmatrix}$, so $\\det(A_y)=2-5=-3$ and $y=\\frac{-3}{-3}=1$.",
+        "Check: $2(2)+1=5$ and $2-1=1$.",
+        "<mark>$(x,y)=(2,1)$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0037",
+      "q": "Cramer's rule can be applied to the system $A\\mathbf{x}=\\mathbf{b}$ <u>only</u> when:",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "$A$ is square and $\\det(A)=0$"},
+        {"i": "2", "x": "$A$ is square and $\\det(A)\\neq0$"},
+        {"i": "3", "x": "$A$ is square and $\\mathbf{b}=\\mathbf{0}$"},
+        {"i": "4", "x": "$A$ is any matrix with $\\det(A)\\neq0$"}
+      ],
+      "a": "2",
+      "e": "Cramer's rule needs $n$ equations in $n$ unknowns (square $A$) <u>and</u> $\\det(A)\\neq0$, because $x_j=\\frac{\\det(A_j)}{\\det(A)}$. Then the system has a unique solution."
+    },
+    {
+      "id": "LA5_0038",
+      "q": "Let $A=\\begin{bmatrix}2&0&0\\\\1&4&0\\\\3&5&-5\\end{bmatrix}$. Find $\\det(A^{-1})$.",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$-\\frac{1}{40}$"},
+        {"i": "2", "x": "$\\frac{1}{40}$"},
+        {"i": "3", "x": "$-40$"},
+        {"i": "4", "x": "$\\frac{1}{11}$"}
+      ],
+      "a": "1",
+      "e": [
+        "$A$ is lower triangular, so $\\det(A)=(2)(4)(-5)=-40\\neq0$ and $A$ is invertible.",
+        "$\\det(A^{-1})=\\frac{1}{\\det(A)}=\\frac{1}{a_{11}a_{22}a_{33}}=\\frac{1}{2}\\cdot\\frac{1}{4}\\cdot\\frac{1}{-5}$.",
+        "<mark>$\\det(A^{-1})=-\\frac{1}{40}$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0039",
+      "q": "If $A$ is a $3\\times3$ invertible matrix with $\\det(A)=2$, then $A\\cdot\\operatorname{adj}(A)$ equals:",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\frac{1}{2}I$"},
+        {"i": "2", "x": "$I$"},
+        {"i": "3", "x": "$2I$"},
+        {"i": "4", "x": "$8I$"}
+      ],
+      "a": "3",
+      "e": [
+        "From $A^{-1}=\\frac{1}{\\det(A)}\\operatorname{adj}(A)$ we get $\\operatorname{adj}(A)=\\det(A)\\,A^{-1}$.",
+        "So $A\\cdot\\operatorname{adj}(A)=\\det(A)\\,A A^{-1}=\\det(A)\\,I=$ <mark>$2I$</mark>"
+      ]
+    },
+    {
+      "id": "LA5_0040",
+      "q": "Let $A=\\begin{bmatrix}1&2&0\\\\3&6&5\\\\2&0&0\\end{bmatrix}$, with $\\det(A)=20$ and $C_{13}=-12,\\ C_{31}=10$. What is the entry in row 3, column 1 of $A^{-1}$?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\frac{1}{2}$"},
+        {"i": "2", "x": "$-\\frac{1}{2}$"},
+        {"i": "3", "x": "$\\frac{3}{5}$"},
+        {"i": "4", "x": "$-\\frac{3}{5}$"}
+      ],
+      "a": "4",
+      "e": [
+        "$A^{-1}=\\frac{1}{\\det(A)}\\operatorname{adj}(A)$, and $\\operatorname{adj}(A)$ is the <u>transpose</u> of the cofactor matrix.",
+        "So $\\operatorname{adj}(A)_{31}=C_{13}$ (indices are swapped), not $C_{31}$.",
+        "$(A^{-1})_{31}=\\frac{C_{13}}{20}=\\frac{-12}{20}=$ <mark>$-\\frac{3}{5}$</mark>",
+        "(Using $C_{31}=10$ by mistake would give $\\frac{1}{2}$.)"
+      ]
+    }
+  ]
+}
