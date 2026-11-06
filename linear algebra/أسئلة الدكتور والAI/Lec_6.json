@@ -1,0 +1,669 @@
+{
+  "qs": [
+    {
+      "id": "LA6_0001",
+      "q": "If $A$ is a $3\\times3$ matrix and $\\det(A)=6$, find $\\det(4A)$.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$96$"},
+        {"i": "2", "x": "$384$"},
+        {"i": "3", "x": "$24$"},
+        {"i": "4", "x": "$1536$"}
+      ],
+      "a": "2",
+      "e": [
+        "Use $\\det(kA)=k^{n}\\det(A)$ for an $n\\times n$ matrix. Here $n=3$ and $k=4$.",
+        "$k^{n}=4^{3}=64$.",
+        "$\\det(4A)=64\\times6=$ <mark>$384$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0002",
+      "q": "If $A$ is a $3\\times3$ matrix and $\\det(A)=6$, find $\\det(3A^{T})$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$54$"},
+        {"i": "2", "x": "$18$"},
+        {"i": "3", "x": "$162$"},
+        {"i": "4", "x": "$486$"}
+      ],
+      "a": "3",
+      "e": [
+        "$\\det(A^{T})=\\det(A)=6$.",
+        "$\\det(3A^{T})=3^{3}\\det(A^{T})=27\\times6=$ <mark>$162$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0003",
+      "q": "If $A$ is a $2\\times2$ matrix and $\\det(3A^{T})=36$, find $\\det(A)$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$12$"},
+        {"i": "2", "x": "$6$"},
+        {"i": "3", "x": "$324$"},
+        {"i": "4", "x": "$4$"}
+      ],
+      "a": "4",
+      "e": [
+        "$\\det(3A^{T})=3^{2}\\det(A^{T})=9\\det(A^{T})$.",
+        "Since $\\det(A^{T})=\\det(A)$, we get $9\\det(A)=36$.",
+        "$\\det(A)=\\frac{36}{9}=$ <mark>$4$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0004",
+      "q": "If $A$ is a $2\\times2$ matrix and $\\det(3A^{-1})=27$, find $\\det(4A^{T})$.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\frac{4}{3}$"},
+        {"i": "2", "x": "$\\frac{16}{3}$"},
+        {"i": "3", "x": "$48$"},
+        {"i": "4", "x": "$\\frac{1}{3}$"}
+      ],
+      "a": "2",
+      "e": [
+        "$\\det(3A^{-1})=3^{2}\\det(A^{-1})=\\frac{9}{\\det(A)}$.",
+        "$\\frac{9}{\\det(A)}=27\\Rightarrow\\det(A)=\\frac{9}{27}=\\frac{1}{3}$.",
+        "$\\det(4A^{T})=4^{2}\\det(A^{T})=16\\det(A)=16\\cdot\\frac{1}{3}=$ <mark>$\\frac{16}{3}$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0005",
+      "q": "If $A$ and $B$ are two square matrices of the same size such that $\\det(AB^{T})=4$, then $\\det(BA^{T})=$",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$4$"},
+        {"i": "2", "x": "$0.25$"},
+        {"i": "3", "x": "$-4$"},
+        {"i": "4", "x": "$16$"}
+      ],
+      "a": "1",
+      "e": [
+        "$\\det(AB^{T})=\\det(A)\\det(B^{T})=\\det(A)\\det(B)=4$.",
+        "$\\det(BA^{T})=\\det(B)\\det(A^{T})=\\det(B)\\det(A)$.",
+        "The two products are equal, so <mark>$\\det(BA^{T})=4$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0006",
+      "q": "If $A$ is a $3\\times3$ matrix and $\\det(A)=3$, then $\\det(3A^{-1})=$",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$3$"},
+        {"i": "2", "x": "$27$"},
+        {"i": "3", "x": "$9$"},
+        {"i": "4", "x": "$81$"}
+      ],
+      "a": "3",
+      "e": [
+        "$\\det(3A^{-1})=3^{3}\\det(A^{-1})=27\\cdot\\frac{1}{\\det(A)}$.",
+        "$=27\\cdot\\frac{1}{3}=$ <mark>$9$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0007",
+      "q": "If $A$ is a $3\\times3$ invertible matrix and $\\det(A)=5$, find $\\det(\\operatorname{adj}(A))$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$125$"},
+        {"i": "2", "x": "$25$"},
+        {"i": "3", "x": "$5$"},
+        {"i": "4", "x": "$15$"}
+      ],
+      "a": "2",
+      "e": [
+        "Use $\\det(\\operatorname{adj}(A))=(\\det(A))^{n-1}$ with $n=3$.",
+        "$\\det(\\operatorname{adj}(A))=5^{3-1}=5^{2}=$ <mark>$25$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0008",
+      "q": "If $A$ is a square matrix such that $A\\mathbf{x}=\\mathbf{0}$ has exactly one solution, then $\\det(A)$ is:",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "not a negative number"},
+        {"i": "2", "x": "not a positive number"},
+        {"i": "3", "x": "equal to one"},
+        {"i": "4", "x": "not equal to zero"}
+      ],
+      "a": "4",
+      "e": "If $A\\mathbf{x}=\\mathbf{0}$ has only the trivial solution, then $A$ is invertible, so <mark>$\\det(A)\\neq0$</mark>. The determinant can still be positive or negative."
+    },
+    {
+      "id": "LA6_0009",
+      "q": "If $A$ is a $2\\times2$ matrix and $\\det(A)=\\frac{1}{\\det(A^{T})}$, then $\\det(A)=$",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$\\pm1$"},
+        {"i": "2", "x": "$\\pm2$"},
+        {"i": "3", "x": "$\\pm3$"},
+        {"i": "4", "x": "$0$"}
+      ],
+      "a": "1",
+      "e": [
+        "$\\det(A^{T})=\\det(A)$, so the condition becomes $\\det(A)=\\frac{1}{\\det(A)}$.",
+        "$(\\det(A))^{2}=1$.",
+        "<mark>$\\det(A)=\\pm1$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0010",
+      "q": "The matrix $\\begin{bmatrix}a&2&1\\\\12&8&4\\end{bmatrix}$ is the augmented matrix of a linear system, and the system <u>cannot</u> be solved by Cramer's rule. Find $a$.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$2$"},
+        {"i": "2", "x": "$4$"},
+        {"i": "3", "x": "$3$"},
+        {"i": "4", "x": "$1$"}
+      ],
+      "a": "3",
+      "e": [
+        "The coefficient matrix is the first two columns: $A=\\begin{bmatrix}a&2\\\\12&8\\end{bmatrix}$ (the last column is $\\mathbf{b}$).",
+        "Cramer's rule fails exactly when $\\det(A)=0$.",
+        "$\\det(A)=8a-24=0$.",
+        "<mark>$a=3$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0011",
+      "q": "If $A$ and $B$ are invertible matrices of the same size, then $\\det\\left((AB)^{-1}\\right)=$",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\det\\left[\\left(\\left(A^{-1}B\\right)^{T}\\right)^{-1}\\right]$"},
+        {"i": "2", "x": "$\\det\\left[\\left(\\left(A^{T}B^{T}\\right)^{T}\\right)^{-1}\\right]$"},
+        {"i": "3", "x": "$\\det(A^{T})\\det(B^{T})^{-1}$"},
+        {"i": "4", "x": "$\\det(A^{-1})\\det(B)$"}
+      ],
+      "a": "2",
+      "e": [
+        "$\\det\\left((AB)^{-1}\\right)=\\frac{1}{\\det(A)\\det(B)}$.",
+        "Option 2: $(A^{T}B^{T})^{T}=BA$, so the expression is $\\det\\left((BA)^{-1}\\right)=\\frac{1}{\\det(B)\\det(A)}$, which matches.",
+        "Option 1 gives $\\frac{1}{\\det(A^{-1})\\det(B)}=\\frac{\\det(A)}{\\det(B)}$, option 3 gives $\\frac{\\det(A)}{\\det(B)}$, and option 4 gives $\\frac{\\det(B)}{\\det(A)}$. None of these equals $\\frac{1}{\\det(A)\\det(B)}$ in general.",
+        "<mark>Option 2</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0012",
+      "q": "If $\\det(AA^{T})\\neq0$, then $A$:",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "is not invertible"},
+        {"i": "2", "x": "may be invertible"},
+        {"i": "3", "x": "is invertible"},
+        {"i": "4", "x": "has a zero row"}
+      ],
+      "a": "3",
+      "e": [
+        "$\\det(AA^{T})=\\det(A)\\det(A^{T})=(\\det(A))^{2}\\neq0$.",
+        "Hence $\\det(A)\\neq0$, so <mark>$A$ is invertible</mark>."
+      ]
+    },
+    {
+      "id": "LA6_0013",
+      "q": "If $A$ and $B$ are square matrices such that $\\det(A^{T}B^{T})=1$, then:",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$A$ may be invertible and $B$ is invertible"},
+        {"i": "2", "x": "$A$ is invertible and $B$ may be invertible"},
+        {"i": "3", "x": "$A$ and $B$ are both not invertible"},
+        {"i": "4", "x": "$A$ and $B$ are invertible matrices"}
+      ],
+      "a": "4",
+      "e": [
+        "$\\det(A^{T}B^{T})=\\det(A^{T})\\det(B^{T})=\\det(A)\\det(B)=1$.",
+        "A product equal to $1$ means neither factor is zero: $\\det(A)\\neq0$ and $\\det(B)\\neq0$.",
+        "<mark>Both $A$ and $B$ are invertible.</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0014",
+      "q": "If $A$ and $B$ are matrices such that $\\det(AB)=\\frac{1}{\\det(B)}$, then $|\\det(BA)|=$",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\frac{1}{\\det(A)}$"},
+        {"i": "2", "x": "$\\det(A)$"},
+        {"i": "3", "x": "$\\sqrt{\\det(A)}$"},
+        {"i": "4", "x": "$\\frac{1}{\\sqrt{\\det(A)}}$"}
+      ],
+      "a": "3",
+      "e": [
+        "$\\det(BA)=\\det(B)\\det(A)=\\det(AB)=\\frac{1}{\\det(B)}$.",
+        "From $\\det(A)\\det(B)=\\frac{1}{\\det(B)}$ we get $\\det(A)=\\frac{1}{(\\det(B))^{2}}$, so $|\\det(B)|=\\frac{1}{\\sqrt{\\det(A)}}$.",
+        "$|\\det(BA)|=\\frac{1}{|\\det(B)|}=$ <mark>$\\sqrt{\\det(A)}$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0015",
+      "q": "If $A$ and $B$ are invertible matrices such that $\\det(A^{T}B^{-1})=\\det(A)$, then:",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\det(B)<1$"},
+        {"i": "2", "x": "$\\det(B)>1$"},
+        {"i": "3", "x": "$\\det(B)=-1$"},
+        {"i": "4", "x": "$\\det(B)=1$"}
+      ],
+      "a": "4",
+      "e": [
+        "$\\det(A^{T}B^{-1})=\\det(A^{T})\\det(B^{-1})=\\frac{\\det(A)}{\\det(B)}$.",
+        "So $\\frac{\\det(A)}{\\det(B)}=\\det(A)$. Since $A$ is invertible, $\\det(A)\\neq0$, and we can divide by it.",
+        "<mark>$\\det(B)=1$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0016",
+      "q": "If $A$ is a square matrix such that $A\\mathbf{x}=\\mathbf{b}$ has exactly one solution, then $\\det(A)$:",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "is equal to zero"},
+        {"i": "2", "x": "may be equal to zero"},
+        {"i": "3", "x": "is not equal to zero"},
+        {"i": "4", "x": "is equal to one"}
+      ],
+      "a": "3",
+      "e": "A unique solution of $A\\mathbf{x}=\\mathbf{b}$ means $A$ is invertible, so <mark>$\\det(A)\\neq0$</mark>."
+    },
+    {
+      "id": "LA6_0017",
+      "q": "If $A$ is a $2\\times2$ matrix and $\\det(A)=5$, then $\\det(3A)=$",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$30$"},
+        {"i": "2", "x": "$15$"},
+        {"i": "3", "x": "$25$"},
+        {"i": "4", "x": "$45$"}
+      ],
+      "a": "4",
+      "e": [
+        "$\\det(3A)=3^{2}\\det(A)$ because $A$ is $2\\times2$.",
+        "$=9\\times5=$ <mark>$45$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0018",
+      "q": "Let $A=\\begin{bmatrix}3&1\\\\2&1\\end{bmatrix}$ and $B=\\begin{bmatrix}-1&3\\\\5&8\\end{bmatrix}$. Find $\\det(AB)$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$-23$"},
+        {"i": "2", "x": "$23$"},
+        {"i": "3", "x": "$-5$"},
+        {"i": "4", "x": "$5$"}
+      ],
+      "a": "1",
+      "e": [
+        "$AB=\\begin{bmatrix}3(-1)+1(5)&3(3)+1(8)\\\\2(-1)+1(5)&2(3)+1(8)\\end{bmatrix}=\\begin{bmatrix}2&17\\\\3&14\\end{bmatrix}$.",
+        "$\\det(AB)=(2)(14)-(17)(3)=28-51=-23$.",
+        "Check: $\\det(A)=3-2=1$ and $\\det(B)=-8-15=-23$, so $\\det(A)\\det(B)=$ <mark>$-23$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0019",
+      "q": "Let $A=\\begin{bmatrix}1&2\\\\2&5\\end{bmatrix}$ and $B=\\begin{bmatrix}3&1\\\\1&3\\end{bmatrix}$. Find $\\det(A+B)-\\left[\\det(A)+\\det(B)\\right]$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$0$"},
+        {"i": "2", "x": "$9$"},
+        {"i": "3", "x": "$14$"},
+        {"i": "4", "x": "$23$"}
+      ],
+      "a": "3",
+      "e": [
+        "$\\det(A)=5-4=1$ and $\\det(B)=9-1=8$, so $\\det(A)+\\det(B)=9$.",
+        "$A+B=\\begin{bmatrix}4&3\\\\3&8\\end{bmatrix}$, so $\\det(A+B)=32-9=23$.",
+        "$23-9=$ <mark>$14$</mark>. Since this is not $0$, $\\det(A+B)\\neq\\det(A)+\\det(B)$ in general."
+      ]
+    },
+    {
+      "id": "LA6_0020",
+      "q": "Let $A=\\begin{bmatrix}3&1\\\\1&1\\end{bmatrix}$. Find $\\det(A^{-1})$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$2$"},
+        {"i": "2", "x": "$\\frac{1}{2}$"},
+        {"i": "3", "x": "$\\frac{3}{4}$"},
+        {"i": "4", "x": "$-\\frac{1}{2}$"}
+      ],
+      "a": "2",
+      "e": [
+        "$\\det(A)=3-1=2$.",
+        "$A^{-1}=\\frac{1}{2}\\begin{bmatrix}1&-1\\\\-1&3\\end{bmatrix}=\\begin{bmatrix}\\frac{1}{2}&-\\frac{1}{2}\\\\-\\frac{1}{2}&\\frac{3}{2}\\end{bmatrix}$.",
+        "$\\det(A^{-1})=\\frac{3}{4}-\\frac{1}{4}=$ <mark>$\\frac{1}{2}$</mark>, which equals $\\frac{1}{\\det(A)}$."
+      ]
+    },
+    {
+      "id": "LA6_0021",
+      "q": "Evaluate $\\begin{vmatrix}2&7&-3&8&3\\\\0&-3&7&5&1\\\\0&0&6&7&6\\\\0&0&0&9&8\\\\0&0&0&0&4\\end{vmatrix}$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$1296$"},
+        {"i": "2", "x": "$-324$"},
+        {"i": "3", "x": "$-1296$"},
+        {"i": "4", "x": "$18$"}
+      ],
+      "a": "3",
+      "e": [
+        "The matrix is upper triangular, so the determinant is the product of the main diagonal entries.",
+        "$(2)(-3)(6)(9)(4)$: $2\\cdot(-3)=-6$, $-6\\cdot6=-36$, $-36\\cdot9=-324$, $-324\\cdot4=$ <mark>$-1296$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0022",
+      "q": "Find $\\det(A)$ for $A=\\begin{bmatrix}1&2&3\\\\1&0&1\\\\2&4&6\\end{bmatrix}$ without a long calculation.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$2$"},
+        {"i": "2", "x": "$12$"},
+        {"i": "3", "x": "$-6$"},
+        {"i": "4", "x": "$0$"}
+      ],
+      "a": "4",
+      "e": [
+        "Row 3 equals $2\\times$ row 1: $(2,4,6)=2(1,2,3)$, so two rows are <b>proportional</b>.",
+        "A matrix with two proportional rows has determinant <mark>$0$</mark>."
+      ]
+    },
+    {
+      "id": "LA6_0023",
+      "q": "Let $A=\\begin{bmatrix}-1&5\\\\4&4\\end{bmatrix}$ and $k=3$. Find $\\det(kA)$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$-72$"},
+        {"i": "2", "x": "$-216$"},
+        {"i": "3", "x": "$216$"},
+        {"i": "4", "x": "$-24$"}
+      ],
+      "a": "2",
+      "e": [
+        "$\\det(A)=(-1)(4)-(5)(4)=-4-20=-24$.",
+        "$\\det(kA)=k^{2}\\det(A)=9\\cdot(-24)=$ <mark>$-216$</mark>",
+        "Check directly: $3A=\\begin{bmatrix}-3&15\\\\12&12\\end{bmatrix}$ and $\\det(3A)=-36-180=-216$."
+      ]
+    },
+    {
+      "id": "LA6_0024",
+      "q": "Let $A=\\begin{bmatrix}1&2\\\\-1&0\\end{bmatrix}$ and $B=\\begin{bmatrix}1&-1\\\\1&2\\end{bmatrix}$. What is the common value of $\\det(AB)$ and $\\det(BA)$?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$5$"},
+        {"i": "2", "x": "$2$"},
+        {"i": "3", "x": "$-6$"},
+        {"i": "4", "x": "$6$"}
+      ],
+      "a": "4",
+      "e": [
+        "$AB=\\begin{bmatrix}1+2&-1+4\\\\-1&1\\end{bmatrix}=\\begin{bmatrix}3&3\\\\-1&1\\end{bmatrix}$, so $\\det(AB)=3+3=6$.",
+        "$BA=\\begin{bmatrix}1-1&2+0\\\\-1-2&-2+0\\end{bmatrix}=\\begin{bmatrix}0&2\\\\-3&-2\\end{bmatrix}$, so $\\det(BA)=0+6=6$.",
+        "Also $\\det(A)\\det(B)=(2)(3)=$ <mark>$6$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0025",
+      "q": "Use determinants to decide whether $A=\\begin{bmatrix}-1&0&1\\\\2&0&6\\\\8&0&3\\end{bmatrix}$ is invertible.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "Invertible, since it has no zero row"},
+        {"i": "2", "x": "Not invertible, since it has a zero column"},
+        {"i": "3", "x": "Invertible, since $\\det(A)=-1$"},
+        {"i": "4", "x": "Not invertible, since $\\det(A)=-1$"}
+      ],
+      "a": "2",
+      "e": [
+        "Column 2 is a column of zeros, so expanding along it gives $\\det(A)=0\\cdot C_{12}+0\\cdot C_{22}+0\\cdot C_{32}=0$.",
+        "A matrix is invertible <u>only</u> if $\\det(A)\\neq0$, so <mark>$A$ is not invertible</mark>."
+      ]
+    },
+    {
+      "id": "LA6_0026",
+      "q": "For which values of $k$ is $A=\\begin{bmatrix}k+2&-2\\\\-2&k-2\\end{bmatrix}$ invertible?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$k\\neq\\pm2$"},
+        {"i": "2", "x": "$k\\neq0$"},
+        {"i": "3", "x": "$k\\neq\\pm4$"},
+        {"i": "4", "x": "$k\\neq\\pm2\\sqrt{2}$"}
+      ],
+      "a": "4",
+      "e": [
+        "$A$ is invertible exactly when $\\det(A)\\neq0$.",
+        "$\\det(A)=(k+2)(k-2)-(-2)(-2)=k^{2}-4-4=k^{2}-8$.",
+        "$k^{2}-8=0$ gives $k=\\pm2\\sqrt{2}$.",
+        "<mark>$A$ is invertible for $k\\neq\\pm2\\sqrt{2}$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0027",
+      "q": "Find the value of $k$ for which $A=\\begin{bmatrix}4&2&0\\\\k&-1&0\\\\0&3&1\\end{bmatrix}$ is <u>not</u> invertible.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$k=2$"},
+        {"i": "2", "x": "$k=-4$"},
+        {"i": "3", "x": "$k=-2$"},
+        {"i": "4", "x": "$k=-\\frac{1}{2}$"}
+      ],
+      "a": "3",
+      "e": [
+        "$A$ is not invertible exactly when $\\det(A)=0$.",
+        "Expand along column 3 (two zeros): $\\det(A)=1\\cdot C_{33}=+\\begin{vmatrix}4&2\\\\k&-1\\end{vmatrix}$.",
+        "$=(4)(-1)-(2)(k)=-4-2k$.",
+        "$-4-2k=0$ gives <mark>$k=-2$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0028",
+      "q": "Decide whether $A=\\begin{bmatrix}1&1&0\\\\-1&-1&0\\\\2&8&1\\end{bmatrix}$ is invertible.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "Invertible, since $\\det(A)=1$"},
+        {"i": "2", "x": "Invertible, since $\\det(A)=8$"},
+        {"i": "3", "x": "Not invertible, since $\\det(A)=0$"},
+        {"i": "4", "x": "Invertible, since $\\det(A)=-1$"}
+      ],
+      "a": "3",
+      "e": [
+        "Expand along column 3 (two zeros): $\\det(A)=1\\cdot C_{33}=+\\begin{vmatrix}1&1\\\\-1&-1\\end{vmatrix}$.",
+        "$=(1)(-1)-(1)(-1)=-1+1=0$.",
+        "(Equivalently, row 2 is $-1\\times$ row 1, so two rows are proportional.)",
+        "<mark>$\\det(A)=0$, so $A$ is not invertible.</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0029",
+      "q": "Solve $7x_1-2x_2=3,\\ 3x_1+x_2=5$ by Cramer's rule. Find $x_2$.",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "$1$"},
+        {"i": "2", "x": "$26$"},
+        {"i": "3", "x": "$2$"},
+        {"i": "4", "x": "$-2$"}
+      ],
+      "a": "3",
+      "e": [
+        "$A=\\begin{bmatrix}7&-2\\\\3&1\\end{bmatrix}$, so $\\det(A)=7+6=13\\neq0$.",
+        "$A_2=\\begin{bmatrix}7&3\\\\3&5\\end{bmatrix}$, so $\\det(A_2)=35-9=26$.",
+        "$x_2=\\frac{26}{13}=$ <mark>$2$</mark>",
+        "(Also $A_1=\\begin{bmatrix}3&-2\\\\5&1\\end{bmatrix}$ gives $\\det(A_1)=3+10=13$ and $x_1=1$. Check: $7-4=3$ and $3+2=5$.)"
+      ]
+    },
+    {
+      "id": "LA6_0030",
+      "q": "Solve $x_1-3x_2+x_3=4,\\ 2x_1-x_2=-2,\\ 4x_1-x_3=0$ by Cramer's rule. Find $x_3$.",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$40$"},
+        {"i": "2", "x": "$-10$"},
+        {"i": "3", "x": "$-40$"},
+        {"i": "4", "x": "$-18$"}
+      ],
+      "a": "3",
+      "e": [
+        "$A=\\begin{bmatrix}1&-3&1\\\\2&-1&0\\\\4&0&-1\\end{bmatrix}$. Expand along column 3: $\\det(A)=1\\cdot C_{13}+(-1)\\cdot C_{33}$.",
+        "$C_{13}=+\\begin{vmatrix}2&-1\\\\4&0\\end{vmatrix}=0+4=4$ and $C_{33}=+\\begin{vmatrix}1&-3\\\\2&-1\\end{vmatrix}=-1+6=5$.",
+        "$\\det(A)=4-5=-1\\neq0$.",
+        "$A_3=\\begin{bmatrix}1&-3&4\\\\2&-1&-2\\\\4&0&0\\end{bmatrix}$. Expand along row 3: $\\det(A_3)=4\\cdot C_{31}=4\\begin{vmatrix}-3&4\\\\-1&-2\\end{vmatrix}=4(6+4)=40$.",
+        "$x_3=\\frac{40}{-1}=$ <mark>$-40$</mark>",
+        "(Check with the other unknowns: $x_1=-10$, $x_2=-18$, $x_3=-40$ gives $-10+54-40=4$, $-20+18=-2$, and $-40+40=0$.)"
+      ]
+    },
+    {
+      "id": "LA6_0031",
+      "q": "Let $A=\\begin{bmatrix}\\cos\\theta&\\sin\\theta&0\\\\0&0&1\\\\-\\sin\\theta&\\cos\\theta&0\\end{bmatrix}$. What is $\\det(A)$?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "$0$ for every $\\theta$"},
+        {"i": "2", "x": "$1$ for every $\\theta$"},
+        {"i": "3", "x": "$-1$ for every $\\theta$"},
+        {"i": "4", "x": "$\\cos2\\theta$"}
+      ],
+      "a": "3",
+      "e": [
+        "Row 2 is $(0,0,1)$, so expand along row 2: $\\det(A)=1\\cdot C_{23}$.",
+        "$C_{23}=(-1)^{2+3}\\begin{vmatrix}\\cos\\theta&\\sin\\theta\\\\-\\sin\\theta&\\cos\\theta\\end{vmatrix}=-(\\cos^{2}\\theta+\\sin^{2}\\theta)=-1$.",
+        "<mark>$\\det(A)=-1\\neq0$ for every $\\theta$</mark>, so $A$ is invertible for all $\\theta$."
+      ]
+    },
+    {
+      "id": "LA6_0032",
+      "q": "Let $A=\\begin{bmatrix}3&1\\\\0&1\\end{bmatrix}$ and $B=\\begin{bmatrix}-1&3\\\\0&1\\end{bmatrix}$. Find $\\det(AB)$.",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "$3$"},
+        {"i": "2", "x": "$-3$"},
+        {"i": "3", "x": "$-1$"},
+        {"i": "4", "x": "$1$"}
+      ],
+      "a": "2",
+      "e": [
+        "$AB=\\begin{bmatrix}-3&10\\\\0&1\\end{bmatrix}$, so $\\det(AB)=(-3)(1)-(10)(0)=-3$.",
+        "Check: $\\det(A)=3$ and $\\det(B)=-1$, so $\\det(A)\\det(B)=$ <mark>$-3$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0033",
+      "q": "$A$ is a $3\\times3$ matrix with $\\det(A)=5$. Matrix $B$ is obtained from $A$ by interchanging rows 1 and 2, and then multiplying row 3 by $3$. Find $\\det(B)$.",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$15$"},
+        {"i": "2", "x": "$-5$"},
+        {"i": "3", "x": "$-45$"},
+        {"i": "4", "x": "$-15$"}
+      ],
+      "a": "4",
+      "e": [
+        "Interchanging two rows changes the sign: the determinant becomes $-5$.",
+        "Multiplying <u>one</u> row by $3$ multiplies the determinant by $3$ (not $3^{3}$): $-5\\times3=$ <mark>$-15$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0034",
+      "q": "$A$ is a $3\\times3$ matrix with $\\det(A)=7$. Matrix $B$ is obtained from $A$ by adding $3\\times$ (row 1) to row 2, and then interchanging rows 2 and 3. Find $\\det(B)$.",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$-7$"},
+        {"i": "2", "x": "$7$"},
+        {"i": "3", "x": "$-21$"},
+        {"i": "4", "x": "$21$"}
+      ],
+      "a": "1",
+      "e": [
+        "Adding a multiple of one row to another row does <u>not</u> change the determinant: it is still $7$.",
+        "Interchanging two rows reverses the sign: <mark>$\\det(B)=-7$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0035",
+      "q": "If $A$ is a $4\\times4$ matrix with $\\det(A)=2$, then $\\det(\\operatorname{adj}(A))=$",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$16$"},
+        {"i": "2", "x": "$4$"},
+        {"i": "3", "x": "$8$"},
+        {"i": "4", "x": "$2$"}
+      ],
+      "a": "3",
+      "e": [
+        "Use $\\det(\\operatorname{adj}(A))=(\\det(A))^{n-1}$ with $n=4$.",
+        "$=2^{3}=$ <mark>$8$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0036",
+      "q": "$A$ and $B$ are $3\\times3$ matrices with $\\det(A)=-2$, $\\det(B)=4$, and $B$ is invertible. Find $\\det(A^{2}B^{-1})$.",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "$-\\frac{1}{2}$"},
+        {"i": "2", "x": "$1$"},
+        {"i": "3", "x": "$4$"},
+        {"i": "4", "x": "$-1$"}
+      ],
+      "a": "2",
+      "e": [
+        "$\\det(A^{2}B^{-1})=\\det(A)\\det(A)\\det(B^{-1})=\\frac{(\\det(A))^{2}}{\\det(B)}$.",
+        "$=\\frac{(-2)^{2}}{4}=\\frac{4}{4}=$ <mark>$1$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0037",
+      "q": "$A$ and $B$ are $3\\times3$ matrices with $\\det(A)=2$ and $\\det(B)=-3$. Find $\\det(2AB^{T})$.",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "$-12$"},
+        {"i": "2", "x": "$48$"},
+        {"i": "3", "x": "$-48$"},
+        {"i": "4", "x": "$-6$"}
+      ],
+      "a": "3",
+      "e": [
+        "The scalar $2$ multiplies all three rows, so $\\det(2AB^{T})=2^{3}\\det(AB^{T})$.",
+        "$\\det(AB^{T})=\\det(A)\\det(B^{T})=\\det(A)\\det(B)=(2)(-3)=-6$.",
+        "$\\det(2AB^{T})=8\\times(-6)=$ <mark>$-48$</mark>"
+      ]
+    },
+    {
+      "id": "LA6_0038",
+      "q": "For an $n\\times n$ matrix $A$, which statement is <u>NOT</u> equivalent to \"$A$ is invertible\"?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "$A\\mathbf{x}=\\mathbf{0}$ has only the trivial solution"},
+        {"i": "2", "x": "$A\\mathbf{x}=\\mathbf{0}$ has infinitely many solutions"},
+        {"i": "3", "x": "The reduced row echelon form of $A$ is $I_{n}$"},
+        {"i": "4", "x": "$A\\mathbf{x}=\\mathbf{b}$ has exactly one solution for every $\\mathbf{b}$"}
+      ],
+      "a": "2",
+      "e": "Invertibility is equivalent to: only the trivial solution of $A\\mathbf{x}=\\mathbf{0}$, RREF equal to $I_{n}$, a unique solution of $A\\mathbf{x}=\\mathbf{b}$ for every $\\mathbf{b}$, and $\\det(A)\\neq0$. Infinitely many solutions of $A\\mathbf{x}=\\mathbf{0}$ means $A$ is <u>not</u> invertible."
+    },
+    {
+      "id": "LA6_0039",
+      "q": "For which value of $k$ is $A=\\begin{bmatrix}1&2&3\\\\4&5&6\\\\7&8&k\\end{bmatrix}$ <u>not</u> invertible?",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "$k=6$"},
+        {"i": "2", "x": "$k=9$"},
+        {"i": "3", "x": "$k=3$"},
+        {"i": "4", "x": "$k=-9$"}
+      ],
+      "a": "2",
+      "e": [
+        "$A$ is not invertible exactly when $\\det(A)=0$. Expand along row 1.",
+        "$\\det(A)=1\\begin{vmatrix}5&6\\\\8&k\\end{vmatrix}-2\\begin{vmatrix}4&6\\\\7&k\\end{vmatrix}+3\\begin{vmatrix}4&5\\\\7&8\\end{vmatrix}$.",
+        "$=(5k-48)-2(4k-42)+3(32-35)=5k-48-8k+84-9=-3k+27$.",
+        "$-3k+27=0$ gives <mark>$k=9$</mark>",
+        "(Check: for $k=9$, row 3 $=2\\cdot$ row 2 $-$ row 1, so the rows are dependent.)"
+      ]
+    },
+    {
+      "id": "LA6_0040",
+      "q": "If $A$ and $B$ are invertible $n\\times n$ matrices, then $\\det(A^{-1}BA)=$",
+      "t": ["1", "hard"],
+      "c": [
+        {"i": "1", "x": "$\\det(A)\\det(B)$"},
+        {"i": "2", "x": "$\\frac{1}{\\det(B)}$"},
+        {"i": "3", "x": "$\\det(B)$"},
+        {"i": "4", "x": "$(\\det(A))^{2}\\det(B)$"}
+      ],
+      "a": "3",
+      "e": [
+        "$\\det(A^{-1}BA)=\\det(A^{-1})\\det(B)\\det(A)$.",
+        "$=\\frac{1}{\\det(A)}\\cdot\\det(B)\\cdot\\det(A)=$ <mark>$\\det(B)$</mark>"
+      ]
+    }
+  ]
+}
