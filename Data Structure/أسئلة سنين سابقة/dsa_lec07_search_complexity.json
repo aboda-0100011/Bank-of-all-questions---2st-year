@@ -1,0 +1,270 @@
+{
+  "qs": [
+    {
+      "id": "dsa7_0001",
+      "q": "The <b>Omega</b> notation ($\\Omega$) is used to describe:\n\n<i>[Note: the options of this question were reconstructed, because the extracted exam text of its options is corrupted; the question stem is the original.]</i>",
+      "t": ["2", "3", "2025/26 Credits Q1", "2020 T/F Q22"],
+      "c": [
+        {"i": "1", "x": "The minimum time (asymptotic lower bound)"},
+        {"i": "2", "x": "The maximum time (asymptotic upper bound)"},
+        {"i": "3", "x": "The exact time (asymptotic tight bound)"},
+        {"i": "4", "x": "The space complexity"}
+      ],
+      "a": "1",
+      "e": [
+        "The lecture summarizes the three notations: O-notation gives an asymptotic <b>upper</b> bound, $\\Omega$-notation gives an asymptotic <b>lower</b> bound, and $\\Theta$-notation gives an asymptotic <b>tight</b> bound of a function.",
+        "Formally, $f(n)$ is $\\Omega(g(n))$ if there are a constant $c > 0$ and an integer constant $n_0 \\ge 1$ such that $f(n) \\ge c \\cdot g(n)$ for $n \\ge n_0$, i.e. $f(n)$ is asymptotically greater than or equal to $g(n)$.",
+        "So Big-Omega describes the lower bound on the running time. The maximum time is the upper bound (Big-O), and the exact (tight) bound is Big-Theta.",
+        "The 2020 exam asked the same fact as the True/False statement 'Big Omega calculates lower bound on running time of an algorithm', which is True."
+      ]
+    },
+    {
+      "id": "dsa7_0002",
+      "q": "<b>True or False:</b> In asymptotic analysis, algorithm performance is analyzed in terms of input size",
+      "t": ["2", "2020 T/F Q15"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "The asymptotic analysis of an algorithm determines the running time in big-Oh notation.",
+        "To perform it, we find the worst-case number of primitive operations executed <b>as a function of the input size</b>, and then express this function with big-Oh notation.",
+        "So performance is analyzed in terms of the input size, and the statement is True."
+      ]
+    },
+    {
+      "id": "dsa7_0003",
+      "q": "<b>True or False:</b> Insert an item in Python List, sometimes can be $O(1)$ and sometimes can be $O(n)$",
+      "t": ["2", "2024 (B) Q1-6"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "A Python list is implemented using an array, so it follows the array complexities in the lecture.",
+        "Insert at the end is $O(1)$ (when there is enough capacity), because no element has to move.",
+        "Insert at the beginning is $O(n)$, because all the existing elements must be shifted one place to make room.",
+        "Since the cost depends on the position of the insertion, it is sometimes $O(1)$ and sometimes $O(n)$, and the statement is True."
+      ]
+    },
+    {
+      "id": "dsa7_0004",
+      "q": "The process of selecting particular information from a collection of data based on specific criteria",
+      "t": ["2", "3", "2020 MCQ Q7", "2024 (B) Q2-17"],
+      "c": [
+        {"i": "1", "x": "Sorting"},
+        {"i": "2", "x": "Searching"},
+        {"i": "3", "x": "Mining"},
+        {"i": "4", "x": "Artifact"}
+      ],
+      "a": "2",
+      "e": [
+        "Searching is one of the most fundamental operations in computer science: a search algorithm determines whether a particular element exists in a collection of data and, if it exists, locates its position.",
+        "The element is looked for using a target value called the search key $K$.",
+        "Sorting arranges the elements in an order instead of selecting one of them, and mining and artifact are not searching operations.",
+        "The 2020 exam asked the same question with the options searching, sorting, mining and all."
+      ]
+    },
+    {
+      "id": "dsa7_0005",
+      "q": "Popular types searching techniques:\n\n<i>[Note: the options 'a & b' and 'None of these' were rewritten as full text, because they depend on the option order, which is shuffled.]</i>",
+      "t": ["2", "2023 (A) Q2-22"],
+      "c": [
+        {"i": "1", "x": "Sequential search only"},
+        {"i": "2", "x": "Binary search only"},
+        {"i": "3", "x": "Both sequential search and binary search"},
+        {"i": "4", "x": "Neither of them"}
+      ],
+      "a": "3",
+      "e": [
+        "The lecture classifies searching algorithms into types: sequential search (elements are examined one after another, e.g. linear search) and divide-and-conquer search (the search space is repeatedly divided into smaller parts, e.g. binary search).",
+        "Both of them are popular searching techniques, so the answer is 'both'."
+      ]
+    },
+    {
+      "id": "dsa7_0006",
+      "q": "Searching can done based on\n\n<i>[Note: the option 'None of these' was removed, because it depends on the option order, which is shuffled.]</i>",
+      "t": ["2", "2023 (A) Q2-21"],
+      "c": [
+        {"i": "1", "x": "Object"},
+        {"i": "2", "x": "Graphs"},
+        {"i": "3", "x": "Key field"}
+      ],
+      "a": "3",
+      "e": [
+        "In the searching problem we are given a collection of elements $A$ and a target value called the <b>search key</b> $K$, and we determine whether $K \\in A$ and where it is located.",
+        "So the search is performed by comparing the search key (the key field) with the elements of the collection.",
+        "An object as a whole and graphs are not the basis on which the lecture's searching is carried out."
+      ]
+    },
+    {
+      "id": "dsa7_0007",
+      "q": "Only implemented if searching is done on a very large size of data?\n\n<i>[Note: the option 'None of these' was removed, because it depends on the option order, which is shuffled.]</i>",
+      "t": ["2", "2023 (A) Q2-24"],
+      "c": [
+        {"i": "1", "x": "External search"},
+        {"i": "2", "x": "Internal search"},
+        {"i": "3", "x": "ADTS"}
+      ],
+      "a": "1",
+      "e": [
+        "In an external search the data is stored in secondary storage such as disks, for example when searching very large databases and files.",
+        "External searching often uses specialized data structures such as B-Trees, B+ Trees and hash indexes.",
+        "In an internal search all the data being searched is stored in main memory (for example, searching an array or a linked list).",
+        "ADTS (abstract data types) describe how data is organized and used, they are not a type of search."
+      ]
+    },
+    {
+      "id": "dsa7_0008",
+      "q": "Sequential search is considered a\n\n<i>[Note: the options 'a & b' and 'None of these' were rewritten/removed, because they depend on the option order, which is shuffled.]</i>",
+      "t": ["2", "2023 (A) Q2-25"],
+      "c": [
+        {"i": "1", "x": "Internal search only"},
+        {"i": "2", "x": "External search only"},
+        {"i": "3", "x": "Both internal and external search"}
+      ],
+      "a": "3",
+      "e": [
+        "The lecture classifies searching algorithms according to several independent criteria.",
+        "Sequential vs divide-and-conquer describes how the elements are examined (one after another for sequential search).",
+        "Internal vs external describes where the data is stored (main memory vs secondary storage such as disks).",
+        "Since these criteria are independent, examining elements one after another can be done on data in memory (an array or a linked list) as well as on data stored on disk, so sequential search can be both internal and external."
+      ]
+    },
+    {
+      "id": "dsa7_0009",
+      "q": "Iterates over a sequence, item by item, until the specific item is found or the list is exhausted",
+      "t": ["2", "3", "2020 MCQ Q8", "2024 (B) Q2-16"],
+      "c": [
+        {"i": "1", "x": "Linear Search"},
+        {"i": "2", "x": "Binary Search"},
+        {"i": "3", "x": "Merge Search"},
+        {"i": "4", "x": "Quick Search"}
+      ],
+      "a": "1",
+      "e": [
+        "Linear Search, also called Sequential Search, examines the elements of a collection sequentially from the beginning until the target element is found or the end of the collection is reached.",
+        "Binary Search instead repeatedly divides a sorted search interval into two parts and keeps only one half.",
+        "Merge search and quick search are not among the searching algorithms of the lecture.",
+        "The 2020 exam asked the same question with the options linear search, binary search, merge search and all."
+      ]
+    },
+    {
+      "id": "dsa7_0010",
+      "q": "<b>True or False:</b> In linear search problem, the best case occurs when X is present at the last location.",
+      "t": ["2", "4", "2020 T/F Q21", "2023 (A) Q1-7", "2024 (B) Q1-4"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": [
+        "In linear search the best case is when the target is the <b>first</b> element: only one comparison is required, $T_{best}(n) = 1$, which is $O(1)$.",
+        "The last location is the worst case, where about $n$ elements are examined, $T_{worst}(n) = n$, which is $O(n)$.",
+        "So the statement is False. The 2023 exam asked the same statement with 'the middle location' (also False)."
+      ]
+    },
+    {
+      "id": "dsa7_0011",
+      "q": "<b>True or False:</b> For linear search, the worst case happens when the element to be searched is not present in the array.",
+      "t": ["2", "2020 T/F Q17"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "The worst case of linear search is when the target is the last element or is not present at all.",
+        "In either case about $n$ elements are examined, so $T_{worst}(n) = n$ and the complexity is $O(n)$.",
+        "So the statement is True."
+      ]
+    },
+    {
+      "id": "dsa7_0012",
+      "q": "Sequential search is ____ compared to other searching techniques.\n\n<i>[Note: the option 'All of these' was removed, because it depends on the option order, which is shuffled.]</i>",
+      "t": ["2", "2023 (A) Q2-26"],
+      "c": [
+        {"i": "1", "x": "High efficiency"},
+        {"i": "2", "x": "Average efficiency"},
+        {"i": "3", "x": "Low efficiency"}
+      ],
+      "a": "3",
+      "e": [
+        "The main disadvantage of linear (sequential) search is its poor scalability: for $n$ elements the worst-case number of comparisons is $n$, so it is $O(n)$ and becomes expensive for a very large dataset.",
+        "Binary search, in contrast, is $O(\\log n)$ (on sorted data), so it has a major advantage over linear search for large datasets.",
+        "Therefore sequential search has low efficiency compared with other searching techniques (its advantages are simplicity and not needing sorted data)."
+      ]
+    },
+    {
+      "id": "dsa7_0013",
+      "q": "What is the primary advantage of using Binary Search over Linear Search?",
+      "t": ["2", "2025 Jan (M2) Q18"],
+      "c": [
+        {"i": "1", "x": "It iterates over every element."},
+        {"i": "2", "x": "It has $O(n)$ complexity in the best case."},
+        {"i": "3", "x": "It uses a recursive approach."},
+        {"i": "4", "x": "It has a time complexity of $O(\\log n)$."}
+      ],
+      "a": "4",
+      "e": [
+        "Binary search divides the search space by about 2 at every comparison ($n$, $n/2$, $n/4$, ... , $n/2^k$) and stops when $n/2^k \\le 1$, i.e. $k \\ge \\log_2 n$, so its time is $O(\\log n)$.",
+        "Linear search is $O(n)$ in the average and worst cases, which is why binary search has the major advantage on large sorted datasets.",
+        "Iterating over every element describes linear search, binary search has $O(1)$ (not $O(n)$) in the best case, and recursion is only one possible way to write it (it can be iterative too), so it is not its advantage."
+      ]
+    },
+    {
+      "id": "dsa7_0014",
+      "q": "A Binary Search algorithm has a time complexity of:",
+      "t": ["2", "2025/26 Credits Q13"],
+      "c": [
+        {"i": "1", "x": "$O(n)$"},
+        {"i": "2", "x": "$O(n^2)$"},
+        {"i": "3", "x": "$O(\\log n)$"},
+        {"i": "4", "x": "$O(1)$"}
+      ],
+      "a": "3",
+      "e": [
+        "After $k$ comparisons the remaining search space is $n / 2^k$.",
+        "The search terminates when $n / 2^k \\le 1$, so $n \\le 2^k$ and $k \\ge \\log_2 n$.",
+        "Hence $T(n) = O(\\log n)$ (in the average and worst cases; the best case, when the target is the middle element, is $O(1)$).",
+        "The same result comes from the recurrence $T(n) = T(n/2) + c$, which expands to $T(n/2^k) + kc$ with $k = \\log_2 n$."
+      ]
+    },
+    {
+      "id": "dsa7_0015",
+      "q": "<b>True or False:</b> In Big Theta, we must know (predict) cases distribution",
+      "t": ["2", "4", "2020 T/F Q19", "2023 (A) Q1-9", "2024 (B) Q1-7", "شرح شفهي"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "Big-Theta is the asymptotic tight bound: $f(n)$ is $\\Theta(g(n))$ when it is bounded both above by $c_2 \\cdot g(n)$ and below by $c_1 \\cdot g(n)$ for $n \\ge n_0$. In the course it is the notation used for the <b>average case</b>.",
+        "The average case cannot be computed without knowing how the possible inputs are distributed, i.e. how likely each case is.",
+        "The lecture's linear search analysis shows this: the average number of comparisons $\\frac{1+2+\\dots+n}{n} = \\frac{n+1}{2}$ is obtained only by assuming that the target is equally likely to occur at any position.",
+        "So in Big Theta we must know (predict) the distribution of the cases, and the statement is True. This one was asked three times (2020, 2023, 2024).",
+        "Note: the link between Big Theta and the average case is not written on the slides (they only give the tight-bound definition), it is the course's usual convention as asked in the exams."
+      ]
+    },
+    {
+      "id": "dsa7_0016",
+      "q": "<b>True or False:</b> In Big Omega, we must know the case that causes <u>minimum number</u> of operations to be executed",
+      "t": ["2", "3", "2023 (A) Q1-8", "2024 (B) Q1-5", "شرح شفهي"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "1",
+      "e": [
+        "Big-Omega is the asymptotic <b>lower</b> bound: $f(n) \\ge c \\cdot g(n)$ for $n \\ge n_0$. In the course it is the notation used for the <b>best case</b>.",
+        "A lower bound on the running time is set by the input for which the algorithm executes the <b>minimum</b> number of operations.",
+        "Example from the lecture: in linear search the best case is when the target is the first element, so only one comparison is needed, $T_{best}(n) = 1$.",
+        "The case that causes the <b>maximum</b> number of operations is the worst case, which is used with Big-O (the upper bound). So the 2024 exam version of this statement, which says 'maximum number of operations' for Big Omega, is False, while the 'minimum' version above is True.",
+        "Note: the link between Big Omega and the best case is not written on the slides (they only give the lower-bound definition), it is the course's usual convention as asked in the exams."
+      ]
+    }
+  ]
+}

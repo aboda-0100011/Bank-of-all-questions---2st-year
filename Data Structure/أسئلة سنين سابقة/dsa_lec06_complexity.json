@@ -5,10 +5,10 @@
       "q": "What does <b>Big-O notation</b> ($O$) represent in computational complexity?",
       "t": ["2", "3", "2025/26 Credits Q12", "2025 Jan (M2) Q34"],
       "c": [
-        {"i": "1", "x": "Lower bound"},
-        {"i": "2", "x": "Upper bound"},
-        {"i": "3", "x": "Tight (exact) bound"},
-        {"i": "4", "x": "Average case"}
+        {"i": "1", "x": "Lower Bound"},
+        {"i": "2", "x": "Upper Bound"},
+        {"i": "3", "x": "Tight Bound"},
+        {"i": "4", "x": "Average Case"}
       ],
       "a": "2",
       "e": [
@@ -37,8 +37,8 @@
     },
     {
       "id": "dsa6_0003",
-      "q": "<b>True or False:</b> In algorithm complexity analysis, we must know the case that causes the maximum number of operations to be executed.",
-      "t": ["2", "3", "2022 (A) Q1-10", "2024 (B) Q1-14"],
+      "q": "<b>True or False:</b> In Algorithm complexity analysis, we must know the case that causes the maximum number of operations to be executed.",
+      "t": ["2", "3", "2023 (A) Q1-10", "2024 (B) Q1-14"],
       "c": [
         {"i": "1", "x": "True"},
         {"i": "2", "x": "False"}
@@ -53,7 +53,7 @@
     },
     {
       "id": "dsa6_0004",
-      "q": "<b>True or False:</b> In this course, we focused on <b>Space Complexity</b> in algorithm analysis.",
+      "q": "<b>True or False:</b> In this course, we focused on <b>( Space Complexity )</b> in Algorithm Analysis",
       "t": ["2", "2024 (B) Q1-15"],
       "c": [
         {"i": "1", "x": "True"},
@@ -68,19 +68,19 @@
     },
     {
       "id": "dsa6_0005",
-      "q": "The execution time of an algorithm depends on the",
+      "q": "Execution time of an algorithm depends on the\n\n<i>[Note: the option 'All' was reworded to 'All of these' so that it stays meaningful when the options are shuffled.]</i>",
       "t": ["2", "2020 MCQ Q5"],
       "c": [
         {"i": "1", "x": "Amount of data"},
-        {"i": "2", "x": "Type of hardware"},
-        {"i": "3", "x": "Programming language used"},
-        {"i": "4", "x": "All of the above"}
+        {"i": "2", "x": "Type of HW"},
+        {"i": "3", "x": "PL used"},
+        {"i": "4", "x": "All of these"}
       ],
       "a": "4",
       "e": [
         "The amount of data matters: the running time of an algorithm varies with the inputs and typically grows with the size of the input.",
         "The measured time also depends on the machine and the language/implementation. This is exactly why the lecture defines running time as the number of primitive operations (steps) and says the notion of a step should be as machine-independent as possible.",
-        "Since all three factors affect the execution time, the answer is 'All of the above'."
+        "Since all three factors affect the execution time, the answer is 'All of these' (HW = hardware, PL = programming language)."
       ]
     },
     {
