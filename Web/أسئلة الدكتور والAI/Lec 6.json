@@ -1,0 +1,469 @@
+{
+  "qs": [
+    {
+      "id": "web6_0001",
+      "q": "Which statement about the <b>HTML DOM</b> is correct?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The server creates it before sending the page, as a list of text lines"},
+        {"i": "2", "x": "The browser creates it when the page is loaded, as a tree of objects"},
+        {"i": "3", "x": "The browser creates it only after JavaScript runs, as a tree of objects"},
+        {"i": "4", "x": "The developer creates it manually, as a tree of CSS rules"}
+      ],
+      "a": "2",
+      "e": "When a web page is loaded, the browser creates a Document Object Model of the page, constructed as a tree of objects (document, elements, attributes, and text). JavaScript can then access and change all the elements of the document.",
+      "ref": "Slide 3"
+    },
+    {
+      "id": "web6_0002",
+      "q": "In the statement below, which part is a <b>method</b> and which is a <b>property</b>?\n```js\ndocument.getElementById(\"demo\").innerHTML = \"Hello World!\";\n```",
+      "t": ["0", "easy"],
+      "c": [
+        {"i": "1", "x": "`innerHTML` is a method and `getElementById` is a property"},
+        {"i": "2", "x": "Both `getElementById` and `innerHTML` are methods"},
+        {"i": "3", "x": "Both `getElementById` and `innerHTML` are properties"},
+        {"i": "4", "x": "`getElementById` is a method and `innerHTML` is a property"}
+      ],
+      "a": "4",
+      "e": "Methods are actions you can perform, while properties are values you can set or change. `getElementById(\"demo\")` is an action that finds the element, and `innerHTML` is a value (the content) that is assigned.",
+      "ref": "Slide 4"
+    },
+    {
+      "id": "web6_0003",
+      "q": "You need <u>all</u> the elements that share the same class name. Which DOM method should you call?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`document.getElementById()`"},
+        {"i": "2", "x": "`document.getElementsByTagName()`"},
+        {"i": "3", "x": "`document.getElementsByClassName()`"},
+        {"i": "4", "x": "`document.createElement()`"}
+      ],
+      "a": "3",
+      "e": "`getElementById` finds one element by its id, `getElementsByTagName` finds elements by tag name, and `getElementsByClassName` finds elements by class name. `createElement` creates an element instead of finding one.",
+      "ref": "Slide 6"
+    },
+    {
+      "id": "web6_0004",
+      "q": "Which statement changes the text color of the element with id `p2` to blue?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`document.getElementById(\"p2\").color = \"blue\";`"},
+        {"i": "2", "x": "`document.getElementById(\"p2\").style.color = \"blue\";`"},
+        {"i": "3", "x": "`document.getElementById(\"p2\").innerHTML.color = \"blue\";`"},
+        {"i": "4", "x": "`document.getElementById(\"p2\").style = \"color\";`"}
+      ],
+      "a": "2",
+      "e": "To change the style of an HTML element, use `element.style.property = new style`. Here the element is found with `getElementById(\"p2\")`, and the property is `style.color`.",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "web6_0005",
+      "q": "Which pair of methods is used, <u>in this order</u>, to create a new HTML element and then add it to the page?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`createElement()`, then `removeChild()`"},
+        {"i": "2", "x": "`write()`, then `removeChild()`"},
+        {"i": "3", "x": "`appendChild()`, then `createElement()`"},
+        {"i": "4", "x": "`createElement()`, then `appendChild()`"}
+      ],
+      "a": "4",
+      "e": "`document.createElement(element)` creates an HTML element, and `appendChild(element)` adds it. `removeChild` removes an element, and `write` writes text into the HTML output stream.",
+      "ref": "Slide 7"
+    },
+    {
+      "id": "web6_0006",
+      "q": "Study the code:\n```js\nvar age = 15;\nif (age > 18) { document.write(\"Qualifies for driving\"); }\nelse { document.write(\"Does not qualify for driving\"); }\n```\nWhat is written when `age` is `15`, and what would be written if `age` were exactly `18`?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`Qualifies for driving` in both cases"},
+        {"i": "2", "x": "`Does not qualify for driving` in both cases"},
+        {"i": "3", "x": "`Does not qualify for driving` for 15, and `Qualifies for driving` for 18"},
+        {"i": "4", "x": "`Qualifies for driving` for 15, and `Does not qualify for driving` for 18"}
+      ],
+      "a": "2",
+      "e": [
+        "`15 > 18` is false, so the `else` block runs: Does not qualify for driving.",
+        "`18 > 18` is also false (the operator is `>`, not `>=`), so the `else` block runs again.",
+        "<mark>Both cases write: Does not qualify for driving.</mark>"
+      ],
+      "ref": "Slide 9"
+    },
+    {
+      "id": "web6_0007",
+      "q": "Study the code:\n```js\nvar grade = 'C';\ndocument.write(\"Entering \");\nswitch (grade) {\n  case 'B': document.write(\"Pretty good \"); break;\n  case 'C': document.write(\"Passed \"); break;\n  case 'D': document.write(\"Not so good \"); break;\n  default: document.write(\"Unknown grade \");\n}\ndocument.write(\"Exiting\");\n```\nWhat is the output?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`Entering Passed Not so good Exiting`"},
+        {"i": "2", "x": "`Entering Unknown grade Exiting`"},
+        {"i": "3", "x": "`Entering Passed Exiting`"},
+        {"i": "4", "x": "`Entering Pretty good Passed Exiting`"}
+      ],
+      "a": "3",
+      "e": [
+        "The first `document.write` prints `Entering`.",
+        "`grade` is `'C'`, so execution jumps to `case 'C'` and prints `Passed`.",
+        "The `break` statement exits the switch block, so `Not so good` and `Unknown grade` are skipped.",
+        "The last `document.write` prints `Exiting`.",
+        "<mark>Output: Entering Passed Exiting</mark>"
+      ],
+      "ref": "Slide 10"
+    },
+    {
+      "id": "web6_0008",
+      "q": "Two loops each start with `n = 10` and use the condition `n < 5`:\n```js\nwhile (n < 5) { document.write(n); n++; }\n\ndo { document.write(n); n++; } while (n < 5);\n```\nWhich statement is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Neither loop writes anything, because the condition is false from the start"},
+        {"i": "2", "x": "Both loops write `10`, because the condition is checked after the first pass"},
+        {"i": "3", "x": "The `while` loop writes `10` once, and the `do...while` loop writes nothing"},
+        {"i": "4", "x": "The `while` loop writes nothing, and the `do...while` loop writes `10` once"}
+      ],
+      "a": "4",
+      "e": "`while` checks the condition <u>before</u> each pass, so with `n = 10` its body never runs. `do...while` checks the condition at the <u>end</u>, so its body always runs at least once: it writes `10`, then `n` becomes 11 and the loop stops.",
+      "ref": "Slide 12"
+    },
+    {
+      "id": "web6_0009",
+      "q": "How many times does the body of this loop run?\n```js\nfor (i = 2; i < 10; i += 3) { /* body */ }\n```",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`2`"},
+        {"i": "2", "x": "`4`"},
+        {"i": "3", "x": "`3`"},
+        {"i": "4", "x": "`8`"}
+      ],
+      "a": "3",
+      "e": [
+        "Initialization: `i = 2`.",
+        "Pass 1: `2 < 10` is true, the body runs, then `i` becomes 5.",
+        "Pass 2: `5 < 10` is true, the body runs, then `i` becomes 8.",
+        "Pass 3: `8 < 10` is true, the body runs, then `i` becomes 11.",
+        "`11 < 10` is false, so the loop stops.",
+        "<mark>The body runs 3 times.</mark>"
+      ],
+      "ref": "Slide 13"
+    },
+    {
+      "id": "web6_0010",
+      "q": "What does a `for...in` loop iterate over?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The properties of an object"},
+        {"i": "2", "x": "The numbers from 0 up to a given limit"},
+        {"i": "3", "x": "The statements inside a code block"},
+        {"i": "4", "x": "The values returned by a dialog box"}
+      ],
+      "a": "1",
+      "e": "The `for...in` loop is used to loop through an object's properties, as in the lecture's example that lists the properties of the `navigator` object.",
+      "ref": "Slide 14"
+    },
+    {
+      "id": "web6_0011",
+      "q": "Which numbers are written by this code?\n```js\nvar x = 1;\nwhile (x < 20) {\n  if (x == 5) { break; }\n  x = x + 1;\n  document.write(x + \" \");\n}\n```",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`1 2 3 4`"},
+        {"i": "2", "x": "`2 3 4`"},
+        {"i": "3", "x": "`1 2 3 4 5`"},
+        {"i": "4", "x": "`2 3 4 5`"}
+      ],
+      "a": "4",
+      "e": [
+        "`x = 1`: it is not 5, so `x` becomes 2 and `2` is written.",
+        "Likewise `3`, `4`, and `5` are written as `x` becomes 3, 4, and 5.",
+        "Now `x == 5` is true, so `break` exits the loop immediately, <u>before</u> anything else is written.",
+        "<mark>Written: 2 3 4 5</mark>"
+      ],
+      "ref": "Slide 15"
+    },
+    {
+      "id": "web6_0012",
+      "q": "Which statement describes the output of this code?\n```js\nvar x = 1;\nwhile (x < 10) {\n  x = x + 1;\n  if (x == 5) { continue; }\n  document.write(x + \" \");\n}\n```",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`5` is skipped, and eight numbers are written"},
+        {"i": "2", "x": "`5` is skipped, and nine numbers are written"},
+        {"i": "3", "x": "`5` is skipped and the loop stops there, with three numbers written"},
+        {"i": "4", "x": "`1` is skipped, and eight numbers are written"}
+      ],
+      "a": "1",
+      "e": [
+        "`x` is incremented first, so the body sees the values 2 up to 10.",
+        "When `x` becomes 5, `continue` skips the rest of the body, so `5` is not written, and the flow goes straight back to the check `x < 10`.",
+        "Written: 2, 3, 4, 6, 7, 8, 9, 10.",
+        "<mark>5 is skipped, and 8 numbers are written.</mark>"
+      ],
+      "ref": "Slide 16"
+    },
+    {
+      "id": "web6_0013",
+      "q": "How many times is `x` written by this code?\n```js\nouterloop:\nfor (var i = 0; i < 5; i++) {\n  innerloop:\n  for (var j = 0; j < 5; j++) {\n    if (j > 3) break;\n    if (i == 2) break innerloop;\n    if (i == 4) break outerloop;\n    document.write(\"x\");\n  }\n}\n```",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`16` times"},
+        {"i": "2", "x": "`12` times"},
+        {"i": "3", "x": "`20` times"},
+        {"i": "4", "x": "`8` times"}
+      ],
+      "a": "2",
+      "e": [
+        "For `i = 0`: `j` runs 0 to 3 and writes 4 times (`j = 4` triggers `break`).",
+        "For `i = 1`: the same, 4 more writes.",
+        "For `i = 2`: at `j = 0`, `break innerloop` exits the inner loop, so nothing is written.",
+        "For `i = 3`: 4 writes again.",
+        "For `i = 4`: at `j = 0`, `break outerloop` quits the outer loop completely.",
+        "<mark>Total: 4 + 4 + 0 + 4 = 12 writes.</mark>"
+      ],
+      "ref": "Slide 18"
+    },
+    {
+      "id": "web6_0014",
+      "q": "Which statement redirects the visitor to another page using JavaScript on the client side?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "`window.location = \"https://www.example.com\";`"},
+        {"i": "2", "x": "`window.redirect = \"https://www.example.com\";`"},
+        {"i": "3", "x": "`document.write(\"https://www.example.com\");`"},
+        {"i": "4", "x": "`navigator.location = \"https://www.example.com\";`"}
+      ],
+      "a": "1",
+      "e": "Client-side page redirection is done by assigning the new address to `window.location`, as in the lecture's `Redirect()` function.",
+      "ref": "Slide 20"
+    },
+    {
+      "id": "web6_0015",
+      "q": "A page contains `setTimeout('Redirect()', 10000);`. Which statement is correct?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`Redirect()` is called every 10000 seconds"},
+        {"i": "2", "x": "`Redirect()` is called 10000 times, once every second"},
+        {"i": "3", "x": "`Redirect()` is called once after 10000 milliseconds, which is 10 seconds"},
+        {"i": "4", "x": "`Redirect()` is called once after 10000 seconds"}
+      ],
+      "a": "3",
+      "e": "`setTimeout(function, duration)` calls the function after `duration` milliseconds. 10000 ms equals 10 seconds, which matches the page message \"You will be redirected to main page in 10 sec.\"",
+      "ref": "Slide 21"
+    },
+    {
+      "id": "web6_0016",
+      "q": "Which option correctly matches each JavaScript dialog box with its purpose?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`alert()` shows a warning message; `confirm()` asks for confirmation (true/false); `prompt()` gets input from the user"},
+        {"i": "2", "x": "`alert()` gets input from the user; `confirm()` shows a warning message; `prompt()` asks for confirmation (true/false)"},
+        {"i": "3", "x": "`alert()` asks for confirmation (true/false); `confirm()` gets input from the user; `prompt()` shows a warning message"},
+        {"i": "4", "x": "`alert()` shows a warning message; `confirm()` gets input from the user; `prompt()` asks for confirmation (true/false)"}
+      ],
+      "a": "1",
+      "e": "The three dialog boxes are used to raise an alert, to get confirmation on an input, or to get input from the user: `alert()`, `confirm()`, and `prompt()` respectively.",
+      "ref": "Slides 22-24"
+    },
+    {
+      "id": "web6_0017",
+      "q": "In this function, the user clicks <b>Cancel</b>:\n```js\nfunction getConfirmation() {\n  var retVal = confirm(\"Do you want to continue ?\");\n  if (retVal == true) { document.write(\"User wants to continue!\"); return true; }\n  else { document.write(\"User does not want to continue!\"); return false; }\n}\n```\nWhat happens?",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "`retVal` is `true`, so `User wants to continue!` is written and `true` is returned"},
+        {"i": "2", "x": "`retVal` is `false`, so `User wants to continue!` is written and `false` is returned"},
+        {"i": "3", "x": "`retVal` is `null`, so nothing is written and the function returns nothing"},
+        {"i": "4", "x": "`retVal` is `false`, so `User does not want to continue!` is written and `false` is returned"}
+      ],
+      "a": "4",
+      "e": "`confirm()` returns `true` when the user accepts and `false` when the user cancels. With Cancel, `retVal == true` is false, so the `else` block writes `User does not want to continue!` and returns `false`.",
+      "ref": "Slide 23"
+    },
+    {
+      "id": "web6_0018",
+      "q": "What happens when this script runs?\n```js\n\"use strict\";\nx = 3.14;\n```",
+      "t": ["0", "medium"],
+      "c": [
+        {"i": "1", "x": "It raises an error, because `x` is not declared"},
+        {"i": "2", "x": "It creates a global variable `x` with the value `3.14`"},
+        {"i": "3", "x": "It creates a local variable `x`, because strict mode is declared at the top"},
+        {"i": "4", "x": "It runs normally, because strict mode applies only inside functions"}
+      ],
+      "a": "1",
+      "e": "Declared at the beginning of a script, `\"use strict\";` has global scope, so all the code runs in strict mode. Using a variable without declaring it is not allowed in strict mode, so `x = 3.14` causes an error.",
+      "ref": "Slide 26"
+    },
+    {
+      "id": "web6_0019",
+      "q": "Which of the following is <u>not allowed</u> in strict mode?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Using a variable that was declared with `var`"},
+        {"i": "2", "x": "Writing a method inside a class"},
+        {"i": "3", "x": "Passing two different parameter names to a function"},
+        {"i": "4", "x": "Deleting a function"}
+      ],
+      "a": "4",
+      "e": "Strict mode does not allow undeclared variables or objects, deleting a variable, object, or function, duplicating a parameter name, octal numbers and escapes, and writing to read-only or get-only properties. The other options are ordinary, allowed code.",
+      "ref": "Slide 27"
+    },
+    {
+      "id": "web6_0020",
+      "q": "Why do older versions of JavaScript simply ignore the `\"use strict\"` directive instead of failing?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Because it is a literal expression, not a statement"},
+        {"i": "2", "x": "Because it is a keyword that older versions already know"},
+        {"i": "3", "x": "Because it is written as a comment on its own line"},
+        {"i": "4", "x": "Because it only works inside the `<head>` of the page"}
+      ],
+      "a": "1",
+      "e": "`\"use strict\"` is not a statement but a literal expression, so versions of JavaScript before ECMAScript 5 ignore it.",
+      "ref": "Slide 25"
+    },
+    {
+      "id": "web6_0021",
+      "q": "Which statement about a JavaScript <b>class</b> is correct?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It is an object itself, and it should always include a `constructor()` method"},
+        {"i": "2", "x": "It is a template for objects, and it must not include methods other than `constructor()`"},
+        {"i": "3", "x": "It is a template for objects, and it should always include a `constructor()` method"},
+        {"i": "4", "x": "It is a template for objects, and it is created with the `function` keyword"}
+      ],
+      "a": "3",
+      "e": "A class is created with the `class` keyword. It is <u>not</u> an object but a template for JavaScript objects. Always add a `constructor()` method, then any number of other methods.",
+      "ref": "Slide 28"
+    },
+    {
+      "id": "web6_0022",
+      "q": "Study the class:\n```js\nclass Car {\n  constructor(name, year) { this.name = name; this.year = year; }\n  age() { return new Date().getFullYear() - this.year; }\n}\n```\nIf the current year is 2030, what does `new Car(\"Audi\", 2019).age()` return?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`2019`"},
+        {"i": "2", "x": "`2030`"},
+        {"i": "3", "x": "`4049`"},
+        {"i": "4", "x": "`11`"}
+      ],
+      "a": "4",
+      "e": [
+        "`new Car(\"Audi\", 2019)` stores `2019` in `this.year`.",
+        "`new Date().getFullYear()` returns the current year, `2030`.",
+        "`2030 - 2019 = 11`.",
+        "<mark>11</mark>"
+      ],
+      "ref": "Slide 30"
+    },
+    {
+      "id": "web6_0023",
+      "q": "Study the code:\n```js\nclass Car {\n  constructor(brand) { this.carname = brand; }\n  present() { return 'I have a ' + this.carname; }\n}\nclass Model extends Car {\n  constructor(brand, mod) { super(brand); this.model = mod; }\n  show() { return this.present() + ', it is a ' + this.model; }\n}\nnew Model(\"Ford\", \"Mustang\").show();\n```\nWhat does the last line return?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "`I have a Mustang, it is a Ford`"},
+        {"i": "2", "x": "`I have a undefined, it is a Mustang`"},
+        {"i": "3", "x": "`I have a Ford, it is a Mustang`"},
+        {"i": "4", "x": "`it is a Mustang`"}
+      ],
+      "a": "3",
+      "e": [
+        "`new Model(\"Ford\", \"Mustang\")` runs the `Model` constructor.",
+        "`super(brand)` calls the parent (`Car`) constructor, so `this.carname` becomes `\"Ford\"`; then `this.model` becomes `\"Mustang\"`.",
+        "`show()` calls `this.present()`, which `Model` inherits from `Car`, and it returns `\"I have a Ford\"`.",
+        "`show()` then appends `\", it is a Mustang\"`.",
+        "<mark>I have a Ford, it is a Mustang</mark>"
+      ],
+      "ref": "Slide 31"
+    },
+    {
+      "id": "web6_0024",
+      "q": "What is the role of `super(brand)` inside the constructor of a class that uses `extends`?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It creates a copy of the child class, to be used later as a new template"},
+        {"i": "2", "x": "It declares the parent class and tells the browser to hoist it to the top"},
+        {"i": "3", "x": "It removes the parent class so that only the child class remains in memory"},
+        {"i": "4", "x": "It calls the parent's constructor and gives access to the parent's members"}
+      ],
+      "a": "4",
+      "e": "The `super()` method refers to the parent class. Calling it in the constructor calls the parent's constructor and gives the child class access to the parent's properties and methods.",
+      "ref": "Slide 32"
+    },
+    {
+      "id": "web6_0025",
+      "q": "A script creates an object with `new Car(\"Ford\")` on its first line, and the `class Car { ... }` declaration appears <u>later</u> in the script. What happens?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It works, because class declarations are hoisted like functions"},
+        {"i": "2", "x": "It works, but the object is created without calling the constructor"},
+        {"i": "3", "x": "It raises an error, because class declarations are not hoisted"},
+        {"i": "4", "x": "It raises an error only if the class has a method named `constructor()`"}
+      ],
+      "a": "3",
+      "e": "Unlike functions and other JavaScript declarations, class declarations are <u>not hoisted</u>, so a class must be declared before it is used.",
+      "ref": "Slide 32"
+    },
+    {
+      "id": "web6_0026",
+      "q": "Which option correctly describes the timer functions used in animations?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`setTimeout(f, d)` calls `f` once after `d` ms; `setInterval(f, d)` calls `f` every `d` ms"},
+        {"i": "2", "x": "`setTimeout(f, d)` calls `f` every `d` ms; `setInterval(f, d)` calls `f` once after `d` ms"},
+        {"i": "3", "x": "`setTimeout(f, d)` calls `f` once after `d` ms; `setInterval(f, d)` clears a timer set by `setTimeout()`"},
+        {"i": "4", "x": "`setTimeout(f, d)` clears the timer; `setInterval(f, d)` calls `f` once after `d` ms"}
+      ],
+      "a": "1",
+      "e": "`setTimeout(function, duration)` calls the function after `duration` milliseconds from now, `setInterval(function, duration)` calls it after every `duration` milliseconds, and `clearTimeout()` clears a timer set by `setTimeout()`.",
+      "ref": "Slide 34"
+    },
+    {
+      "id": "web6_0027",
+      "q": "After this block runs, which statement is true?\n```js\n{\n  let x = 2;\n  var y = 2;\n}\n```",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "Both `x` and `y` can be used outside the block"},
+        {"i": "2", "x": "Neither `x` nor `y` can be used outside the block"},
+        {"i": "3", "x": "`x` can be used outside the block, but `y` cannot"},
+        {"i": "4", "x": "`y` can be used outside the block, but `x` cannot"}
+      ],
+      "a": "4",
+      "e": "`let` and `const` provide <b>block scope</b>, so `x` cannot be accessed from outside the `{ }` block. Variables declared with `var` do <u>not</u> have block scope, so `y` can still be used outside the block.",
+      "ref": "Slide 44"
+    },
+    {
+      "id": "web6_0028",
+      "q": "Study the code:\n```js\nmyFunction();\nfunction myFunction() { carName = \"Volvo\"; }\n```\nCan code after the call use `carName`, and why?",
+      "t": ["0", "hard"],
+      "c": [
+        {"i": "1", "x": "Yes, because assigning to an undeclared variable makes it a global variable"},
+        {"i": "2", "x": "No, because every variable assigned inside a function is local to it"},
+        {"i": "3", "x": "No, because `carName` was never declared with `var`, `let`, or `const`"},
+        {"i": "4", "x": "Yes, but only inside other functions, never in the main script"}
+      ],
+      "a": "1",
+      "e": "If you assign a value to a variable that has not been declared, it automatically becomes a <b>global</b> variable, even when the assignment happens inside a function. Global variables can be accessed from anywhere in the program (in strict mode, however, this assignment would cause an error).",
+      "ref": "Slide 46"
+    },
+    {
+      "id": "web6_0029",
+      "q": "Which is the <b>shortest</b> valid arrow-function version of `hello = function(val) { return \"Hello \" + val; }`?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`hello = val => return \"Hello \" + val;`"},
+        {"i": "2", "x": "`hello = val -> \"Hello \" + val;`"},
+        {"i": "3", "x": "`hello = => \"Hello \" + val;`"},
+        {"i": "4", "x": "`hello = val => \"Hello \" + val;`"}
+      ],
+      "a": "4",
+      "e": "If the function has only one statement that returns a value, the brackets and the `return` keyword can be removed. With only one parameter, the parentheses can be skipped too. The arrow is `=>` (not `->`), and `return` cannot stay once the brackets are removed.",
+      "ref": "Slides 47-48"
+    },
+    {
+      "id": "web6_0030",
+      "q": "Which standard JavaScript statement does the same job as `myText = $(\"#id02\").text();`?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "`myText = document.getElementById(\"#id02\").textContent;`"},
+        {"i": "2", "x": "`myText = document.getElementsByClassName(\"id02\").textContent;`"},
+        {"i": "3", "x": "`myText = document.getElementById(\"id02\").textContent;`"},
+        {"i": "4", "x": "`myText = document.getElementsByTagName(\"id02\").textContent;`"}
+      ],
+      "a": "3",
+      "e": "jQuery's `$(\"#id02\")` selects the element with id `id02`, and `.text()` gets its inner text. In standard JavaScript, that is `getElementById(\"id02\")` (the id is written without `#`) followed by `textContent`.",
+      "ref": "Slide 51"
+    }
+  ]
+}
