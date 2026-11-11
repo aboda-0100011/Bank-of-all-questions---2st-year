@@ -3,126 +3,115 @@
     {
       "id": "dsa7_0001",
       "q": "A block contains a fixed number of consecutive <b>simple statements</b> (only basic operations, no loops and no function calls). Whatever the input size n is, what is the time complexity of the block?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "`O(n)`"},
-        {"i": "2", "x": "`O(log n)`"},
-        {"i": "3", "x": "`O(1)`"},
-        {"i": "4", "x": "`O(n²)`"}
+        {
+          "i": "1",
+          "x": "`O(n)`"
+        },
+        {
+          "i": "2",
+          "x": "`O(log n)`"
+        },
+        {
+          "i": "3",
+          "x": "`O(1)`"
+        },
+        {
+          "i": "4",
+          "x": "`O(n²)`"
+        }
       ],
       "a": "3",
       "e": "For a sequence of statements the total time is the <b>sum</b> of the times of the statements. If every statement is simple (constant time) and their number is fixed, the sum of constants is a constant: <mark>O(1)</mark>."
     },
     {
       "id": "dsa7_0002",
-      "q": "Which description matches how an <b>asymptotic analysis</b> of an algorithm is performed?",
-      "t": ["1", "easy"],
-      "c": [
-        {"i": "1", "x": "Measure the running time in seconds on several different computers and then take their average"},
-        {"i": "2", "x": "Find the worst-case number of primitive operations as a function of input size, then express it in big-Oh"},
-        {"i": "3", "x": "Count the lines of code in the algorithm and express that count in big-Oh notation"},
-        {"i": "4", "x": "Find the best-case number of primitive operations as a function of input size, then use big-Theta"}
-      ],
-      "a": "2",
-      "e": "Asymptotic analysis has two steps: (1) find the <b>worst-case</b> number of primitive operations as a function of the input size, (2) express this function with <b>big-Oh</b> notation. It does not depend on a particular computer or on the code length."
-    },
-    {
-      "id": "dsa7_0003",
-      "q": "Which option correctly matches each notation with the kind of bound it provides?",
-      "t": ["1", "easy"],
-      "c": [
-        {"i": "1", "x": "O: asymptotic upper bound; Ω: asymptotic lower bound; Θ: asymptotic tight bound"},
-        {"i": "2", "x": "O: asymptotic lower bound; Ω: asymptotic upper bound; Θ: asymptotic tight bound"},
-        {"i": "3", "x": "O: asymptotic tight bound; Ω: asymptotic lower bound; Θ: asymptotic upper bound"},
-        {"i": "4", "x": "O: asymptotic upper bound; Ω: asymptotic tight bound; Θ: asymptotic lower bound"}
-      ],
-      "a": "1",
-      "e": "<b>O</b> (big-Oh) means f is asymptotically less than or equal to g (<b>upper</b> bound). <b>Ω</b> (big-Omega) means greater than or equal (<b>lower</b> bound). <b>Θ</b> (big-Theta) means asymptotically equal (<b>tight</b> bound)."
-    },
-    {
-      "id": "dsa7_0004",
-      "q": "Given `A = [10, 25, 7, 18, 30, 12]` and zero-based indexing, what should a search algorithm report for the search key `K = 18` and for `K = 50`?",
-      "t": ["1", "easy"],
-      "c": [
-        {"i": "1", "x": "Index 4 for `K = 18`; not found for `K = 50`"},
-        {"i": "2", "x": "Index 3 for `K = 18`; not found for `K = 50`"},
-        {"i": "3", "x": "Index 3 for `K = 18`; index 6 for `K = 50`"},
-        {"i": "4", "x": "Index 18 for `K = 18`; not found for `K = 50`"}
-      ],
-      "a": "2",
-      "e": [
-        "The elements are at indexes: `10`→0, `25`→1, `7`→2, `18`→3, `30`→4, `12`→5.",
-        "So `K = 18` is found at <b>index 3</b>.",
-        "`50` does not occur in `A`, so the algorithm must indicate that the element <b>does not exist</b> (for example by returning -1).",
-        "<mark>Index 3 for K = 18; not found for K = 50</mark>"
-      ]
-    },
-    {
-      "id": "dsa7_0005",
-      "q": "Linear search is used to find `K = 31` in `A = [15, 7, 22, 9, 31, 4, 18]` (zero-based indexing). How many comparisons are made and what index is returned?",
-      "t": ["1", "easy"],
-      "c": [
-        {"i": "1", "x": "4 comparisons; index 4"},
-        {"i": "2", "x": "5 comparisons; index 5"},
-        {"i": "3", "x": "7 comparisons; index 4"},
-        {"i": "4", "x": "5 comparisons; index 4"}
-      ],
-      "a": "4",
-      "e": [
-        "Linear search checks the elements one after another from the beginning: `15`, `7`, `22`, `9`, `31`.",
-        "That is 5 comparisons, and the search stops immediately when `31` is found (the remaining elements are not examined).",
-        "`31` is stored at index 4.",
-        "<mark>5 comparisons; index 4</mark>. In the worst case linear search needs n comparisons, so its worst-case complexity is O(n)."
-      ]
-    },
-    {
-      "id": "dsa7_0006",
       "q": "In an if-then-else statement, block 1 takes `O(n²)` time and block 2 takes `O(n log n)` time. What is the <b>worst-case</b> complexity of the whole statement?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "`O(n log n)`"},
-        {"i": "2", "x": "`O(n³ log n)`"},
-        {"i": "3", "x": "`O(n)`"},
-        {"i": "4", "x": "`O(n²)`"}
+        {
+          "i": "1",
+          "x": "`O(n log n)`"
+        },
+        {
+          "i": "2",
+          "x": "`O(n³ log n)`"
+        },
+        {
+          "i": "3",
+          "x": "`O(n)`"
+        },
+        {
+          "i": "4",
+          "x": "`O(n²)`"
+        }
       ],
       "a": "4",
       "e": "Only <u>one</u> of the two blocks executes, so the worst-case time is the slower of the two: $\\max(O(n^2), O(n \\log n)) = $ <mark>O(n²)</mark>. The times are not multiplied."
     },
     {
-      "id": "dsa7_0007",
-      "q": "For an array of n elements with sufficient capacity, which operation takes <b>O(n)</b> time because the existing elements must be shifted?",
-      "t": ["1", "easy"],
+      "id": "dsa7_0003",
+      "q": "A loop runs `n` times. In each iteration, if a condition holds a block of `O(1)` time executes, otherwise a block of `O(n)` time executes. What is the <b>worst-case</b> complexity of the loop?",
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "Access by index"},
-        {"i": "2", "x": "Insert at the end"},
-        {"i": "3", "x": "Insert at the beginning"},
-        {"i": "4", "x": "Delete from the end"}
+        {
+          "i": "1",
+          "x": "`O(n)`"
+        },
+        {
+          "i": "2",
+          "x": "`O(n log n)`"
+        },
+        {
+          "i": "3",
+          "x": "`O(n²)`"
+        },
+        {
+          "i": "4",
+          "x": "`O(n³)`"
+        }
       ],
       "a": "3",
-      "e": "Inserting at the beginning requires moving every existing element one position to the right to make room, which is <mark>O(n)</mark>. Access by index, insertion at the end (with enough capacity) and deletion from the end are O(1)."
+      "e": [
+        "Inside one iteration, the if-then-else costs the slower block: $\\max(O(1), O(n)) = O(n)$.",
+        "The loop repeats this $n$ times: $n \\times O(n)$.",
+        "<mark>O(n²)</mark>"
+      ]
     },
     {
-      "id": "dsa7_0008",
-      "q": "Which statement about <b>linear search</b> is correct?",
-      "t": ["1", "easy"],
-      "c": [
-        {"i": "1", "x": "It works on unsorted data, on arrays and linked lists, with O(1) extra space"},
-        {"i": "2", "x": "It requires the data to be sorted, but it needs only O(1) extra space"},
-        {"i": "3", "x": "It needs random access to the middle element, so it cannot work on linked lists"},
-        {"i": "4", "x": "It needs O(n) extra space because every visited element must be stored"}
-      ],
-      "a": "1",
-      "e": "Linear search simply examines the elements one by one, so it does <u>not</u> need sorted data or random access, works with arrays and linked lists, and needs only a few extra variables: <b>S(n) = O(1)</b>."
-    },
-    {
-      "id": "dsa7_0009",
+      "id": "dsa7_0004",
       "q": "An outer loop runs `n` times. In every iteration it runs an inner loop of `m` iterations (`m` is independent of `n`), and the inner body takes `O(1)`. What is the overall complexity?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "`O(n + m)`"},
-        {"i": "2", "x": "`O(n · m)`"},
-        {"i": "3", "x": "`O(max(n, m))`"},
-        {"i": "4", "x": "`O(n²)`"}
+        {
+          "i": "1",
+          "x": "`O(n + m)`"
+        },
+        {
+          "i": "2",
+          "x": "`O(n · m)`"
+        },
+        {
+          "i": "3",
+          "x": "`O(max(n, m))`"
+        },
+        {
+          "i": "4",
+          "x": "`O(n²)`"
+        }
       ],
       "a": "2",
       "e": [
@@ -133,14 +122,29 @@
       ]
     },
     {
-      "id": "dsa7_0010",
+      "id": "dsa7_0005",
       "q": "In the following structure, how many times does the innermost statement execute when `n = 10`?\n`for i = 1 to n`\n`    for j = 1 to i`\n`        statement`",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "`45`"},
-        {"i": "2", "x": "`100`"},
-        {"i": "3", "x": "`55`"},
-        {"i": "4", "x": "`50`"}
+        {
+          "i": "1",
+          "x": "`45`"
+        },
+        {
+          "i": "2",
+          "x": "`100`"
+        },
+        {
+          "i": "3",
+          "x": "`55`"
+        },
+        {
+          "i": "4",
+          "x": "`50`"
+        }
       ],
       "a": "3",
       "e": [
@@ -151,14 +155,29 @@
       ]
     },
     {
-      "id": "dsa7_0011",
+      "id": "dsa7_0006",
       "q": "A loop starts with `i = 1` and repeats `while i < 64`, doubling `i` after every iteration (`i = i * 2`). How many iterations are executed?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "`7`"},
-        {"i": "2", "x": "`32`"},
-        {"i": "3", "x": "`5`"},
-        {"i": "4", "x": "`6`"}
+        {
+          "i": "1",
+          "x": "`7`"
+        },
+        {
+          "i": "2",
+          "x": "`32`"
+        },
+        {
+          "i": "3",
+          "x": "`5`"
+        },
+        {
+          "i": "4",
+          "x": "`6`"
+        }
       ],
       "a": "4",
       "e": [
@@ -169,177 +188,29 @@
       ]
     },
     {
-      "id": "dsa7_0012",
-      "q": "Which definition corresponds to <b>f(n) is Θ(g(n))</b>?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "`f(n) ≤ c·g(n)` for all `n ≥ n₀`, for some constant `c > 0`"},
-        {"i": "2", "x": "`f(n) ≥ c·g(n)` for all `n ≥ n₀`, for some constant `c > 0`"},
-        {"i": "3", "x": "`c₁·g(n) ≤ f(n) ≤ c₂·g(n)` for all `n ≥ n₀`, for some constants `c₁, c₂ > 0`"},
-        {"i": "4", "x": "`f(n) = g(n)` for all `n ≥ n₀`"}
-      ],
-      "a": "3",
-      "e": "Big-Theta needs <u>both</u> a lower and an upper bound: there are constants $c_1, c_2 > 0$ and $n_0 \\ge 1$ with $c_1 g(n) \\le f(n) \\le c_2 g(n)$ for $n \\ge n_0$. Option 1 is the big-Oh definition and option 2 is big-Omega."
-    },
-    {
-      "id": "dsa7_0013",
-      "q": "Which statement about f(n) = 3n + 2 is correct?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "`f(n)` is `Θ(n²)`"},
-        {"i": "2", "x": "`f(n)` is `Θ(n)`"},
-        {"i": "3", "x": "`f(n)` is `Ω(n²)`"},
-        {"i": "4", "x": "`f(n)` is `Θ(log n)`"}
-      ],
-      "a": "2",
-      "e": [
-        "For $n \\ge 1$ we have $3n \\le 3n + 2 \\le 5n$ (because $2 \\le 2n$).",
-        "So with $c_1 = 3$, $c_2 = 5$ and $n_0 = 1$, the Θ definition holds for $g(n) = n$.",
-        "`n²` grows faster than `3n + 2`, so f is not Ω(n²) nor Θ(n²), and `log n` grows slower, so f is not Θ(log n).",
-        "<mark>f(n) is Θ(n)</mark>"
-      ]
-    },
-    {
-      "id": "dsa7_0014",
-      "q": "If `f(n) = O(g(n))`, which statement must also be true?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "`g(n) = O(f(n))`"},
-        {"i": "2", "x": "`f(n) = Ω(g(n))`"},
-        {"i": "3", "x": "`f(n) = Θ(g(n))`"},
-        {"i": "4", "x": "`g(n) = Ω(f(n))`"}
-      ],
-      "a": "4",
-      "e": "<b>f(n) = O(g(n)) if and only if g(n) = Ω(f(n))</b>: if g is an upper bound of f, then f is a lower bound of g. The other statements are not guaranteed (for example n = O(n²), but n² is not O(n)), and only Θ is symmetric."
-    },
-    {
-      "id": "dsa7_0015",
-      "q": "Is `2ⁿ⁺¹ = O(2ⁿ)`?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "Yes, because 2ⁿ⁺¹ = 2·2ⁿ, so the definition holds with C = 2"},
-        {"i": "2", "x": "No, because the exponent n + 1 grows faster than the exponent n"},
-        {"i": "3", "x": "No, because 2ⁿ⁺¹ is always larger than 2ⁿ for every value of n"},
-        {"i": "4", "x": "Yes, because big-O ignores every term that contains an exponent"}
-      ],
-      "a": "1",
-      "e": [
-        "Rewrite: $2^{n+1} = 2 \\cdot 2^n$.",
-        "Choose $C = 2$: $2^{n+1} \\le 2 \\cdot 2^n$ for every $n$ (with any $k$).",
-        "A constant factor does not change the order of growth, so the statement holds.",
-        "<mark>Yes, 2ⁿ⁺¹ is O(2ⁿ)</mark>"
-      ]
-    },
-    {
-      "id": "dsa7_0016",
-      "q": "Which of the following is an example of an <b>external search</b>?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "Searching an array that is stored entirely in main memory"},
-        {"i": "2", "x": "Searching a very large database stored on disk with B-Trees"},
-        {"i": "3", "x": "Searching a linked list that is stored in main memory"},
-        {"i": "4", "x": "Searching a small sorted array that has been loaded in memory"}
-      ],
-      "a": "2",
-      "e": "In an <b>internal search</b> all the data is in main memory (arrays, linked lists). In an <b>external search</b> the data is on secondary storage such as disks (large databases and files), and it uses specialized structures such as B-Trees, B+ Trees and hash indexes."
-    },
-    {
-      "id": "dsa7_0017",
-      "q": "Which search algorithm does <u>not</u> require sorted data and has <b>O(1) average</b> time but <b>O(n) worst-case</b> time?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "Linear Search"},
-        {"i": "2", "x": "Hash Search"},
-        {"i": "3", "x": "Interpolation Search"},
-        {"i": "4", "x": "Jump Search"}
-      ],
-      "a": "2",
-      "e": "<b>Hash Search</b> works on unsorted data with O(1) average and O(n) worst-case time. Linear search is O(n) on average, while interpolation search (worst case O(n)) and jump search both require sorted data."
-    },
-    {
-      "id": "dsa7_0018",
-      "q": "A linear search is performed on an array of 99 elements. The target is present and equally likely to be at any position. What is the average number of comparisons?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "`49`"},
-        {"i": "2", "x": "`99`"},
-        {"i": "3", "x": "`50`"},
-        {"i": "4", "x": "`100`"}
-      ],
-      "a": "3",
-      "e": [
-        "If the target is at position $p$, linear search makes $p$ comparisons, so the average is $\\frac{1 + 2 + \\dots + n}{n}$.",
-        "Using $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$, the average is $\\frac{n+1}{2}$.",
-        "For $n = 99$: $\\frac{99 + 1}{2} = 50$.",
-        "<mark>50 comparisons</mark> (still O(n))"
-      ]
-    },
-    {
-      "id": "dsa7_0019",
-      "q": "Binary search needs only O(log n) comparisons, yet applying it directly to a <b>linked list</b> gives no practical advantage. Why?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "A linked list is always unsorted, so binary search can never be applied to it"},
-        {"i": "2", "x": "It cannot reach the middle node directly, so getting there requires traversing many nodes"},
-        {"i": "3", "x": "A linked list needs more than log n comparisons to decide whether a key exists"},
-        {"i": "4", "x": "Binary search must modify the stored nodes, which a linked list does not allow"}
-      ],
-      "a": "2",
-      "e": "Binary search relies on <b>random access</b> to the middle element (an array reaches A[mid] in O(1)). A linked list has no direct access, so reaching the middle needs traversing many nodes, which cancels the benefit of the few comparisons."
-    },
-    {
-      "id": "dsa7_0020",
-      "q": "The running time of binary search satisfies `T(n) = T(n/2) + c`, with only <u>one</u> recursive term. Why is there no second term for the other half?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "Both halves are searched, but in parallel, so only one term is counted"},
-        {"i": "2", "x": "The other half is searched later, but its cost is always constant"},
-        {"i": "3", "x": "Only one half can contain the target, so the other half is discarded and never searched"},
-        {"i": "4", "x": "Each comparison halves the array, which is why the constant c vanishes"}
-      ],
-      "a": "3",
-      "e": "After comparing `K` with `A[mid]`, the sorted order tells us which half can contain the target, and the other half is discarded. Binary search does <u>not</u> solve both subproblems, so only $T(n/2)$ appears, plus the constant work $c$ of one comparison."
-    },
-    {
-      "id": "dsa7_0021",
-      "q": "Which choice of search algorithm is correctly justified?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "A linked list of 100,000 elements: binary search, since log n comparisons beats n comparisons in practice"},
-        {"i": "2", "x": "A small unsorted list of 20 elements: binary search, since it does not require sorted data"},
-        {"i": "3", "x": "An unsorted array searched only once: binary search, since it is always faster than linear search"},
-        {"i": "4", "x": "A sorted array of 10 million elements: binary search, since random access and sorted order allow halving"}
-      ],
-      "a": "4",
-      "e": "Binary search needs <b>sorted data</b> and <b>random access</b>. A sorted array of 10 million elements satisfies both, so about log n steps beat n. For the other cases: binary search <u>does</u> require sorted data (option 2), cannot jump to the middle of a linked list (option 1), and cannot be used on unsorted data without sorting first (option 3), so linear search suits those."
-    },
-    {
-      "id": "dsa7_0022",
-      "q": "Binary search (with `mid = ⌊(low + high)/2⌋`) looks for `K = 45` in `A = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]` (indexes 0 to 10). Which sequence of examined `mid` positions is correct?",
-      "t": ["1", "medium"],
-      "c": [
-        {"i": "1", "x": "5, then 7, then 8 (found at index 8)"},
-        {"i": "2", "x": "5, then 8 (found at index 8)"},
-        {"i": "3", "x": "4, then 7, then 9 (not found)"},
-        {"i": "4", "x": "5, then 9, then 8 (found at index 8)"}
-      ],
-      "a": "2",
-      "e": [
-        "Start: `low = 0`, `high = 10`, so `mid = ⌊(0 + 10)/2⌋ = 5` and `A[5] = 30`.",
-        "`45 > 30`, so discard the left half: `low = 6`, `high = 10`.",
-        "Now `mid = ⌊(6 + 10)/2⌋ = 8` and `A[8] = 45`, which equals the key.",
-        "<mark>mids: 5, then 8 (found at index 8, after 2 comparisons)</mark>. The worst-case complexity is O(log n)."
-      ]
-    },
-    {
-      "id": "dsa7_0023",
+      "id": "dsa7_0007",
       "q": "In the structure below, how many times is `operation()` executed when `n = 256`?\n`i = 1`\n`while i < n`\n`    j = 1`\n`    while j < n`\n`        operation()`\n`        j = j * 2`\n`    i = i * 2`",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "`16`"},
-        {"i": "2", "x": "`64`"},
-        {"i": "3", "x": "`256`"},
-        {"i": "4", "x": "`8`"}
+        {
+          "i": "1",
+          "x": "`16`"
+        },
+        {
+          "i": "2",
+          "x": "`64`"
+        },
+        {
+          "i": "3",
+          "x": "`256`"
+        },
+        {
+          "i": "4",
+          "x": "`8`"
+        }
       ],
       "a": "2",
       "e": [
@@ -350,14 +221,29 @@
       ]
     },
     {
-      "id": "dsa7_0024",
+      "id": "dsa7_0008",
       "q": "A loop runs `j` from 1 to `n` and calls a procedure `g(j)` in each iteration, where `g(k)` takes time proportional to `k`. What is the overall complexity?",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "`O(n)`"},
-        {"i": "2", "x": "`O(n log n)`"},
-        {"i": "3", "x": "`O(n²)`"},
-        {"i": "4", "x": "`O(n³)`"}
+        {
+          "i": "1",
+          "x": "`O(n)`"
+        },
+        {
+          "i": "2",
+          "x": "`O(n log n)`"
+        },
+        {
+          "i": "3",
+          "x": "`O(n²)`"
+        },
+        {
+          "i": "4",
+          "x": "`O(n³)`"
+        }
       ],
       "a": "3",
       "e": [
@@ -367,14 +253,207 @@
       ]
     },
     {
-      "id": "dsa7_0025",
-      "q": "Is `2²ⁿ = O(2ⁿ)`?",
-      "t": ["1", "hard"],
+      "id": "dsa7_0009",
+      "q": "Which description matches how an <b>asymptotic analysis</b> of an algorithm is performed?",
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Yes, because 2²ⁿ = 2·2ⁿ, so the definition holds with C = 2"},
-        {"i": "2", "x": "Yes, because doubling the exponent only doubles the value of the function"},
-        {"i": "3", "x": "No, because 2²ⁿ = (2ⁿ)², so 2²ⁿ / 2ⁿ = 2ⁿ grows without bound"},
-        {"i": "4", "x": "No, because 2²ⁿ is smaller than 2ⁿ for all large values of n"}
+        {
+          "i": "1",
+          "x": "Measure the running time in seconds on several different computers and then take their average"
+        },
+        {
+          "i": "2",
+          "x": "Find the worst-case number of primitive operations as a function of input size, then express it in big-Oh"
+        },
+        {
+          "i": "3",
+          "x": "Count the lines of code in the algorithm and express that count in big-Oh notation"
+        },
+        {
+          "i": "4",
+          "x": "Find the best-case number of primitive operations as a function of input size, then use big-Theta"
+        }
+      ],
+      "a": "2",
+      "e": "Asymptotic analysis has two steps: (1) find the <b>worst-case</b> number of primitive operations as a function of the input size, (2) express this function with <b>big-Oh</b> notation. It does not depend on a particular computer or on the code length."
+    },
+    {
+      "id": "dsa7_0010",
+      "q": "Which option correctly matches each notation with the kind of bound it provides?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "O: asymptotic upper bound; Ω: asymptotic lower bound; Θ: asymptotic tight bound"
+        },
+        {
+          "i": "2",
+          "x": "O: asymptotic lower bound; Ω: asymptotic upper bound; Θ: asymptotic tight bound"
+        },
+        {
+          "i": "3",
+          "x": "O: asymptotic tight bound; Ω: asymptotic lower bound; Θ: asymptotic upper bound"
+        },
+        {
+          "i": "4",
+          "x": "O: asymptotic upper bound; Ω: asymptotic tight bound; Θ: asymptotic lower bound"
+        }
+      ],
+      "a": "1",
+      "e": "<b>O</b> (big-Oh) means f is asymptotically less than or equal to g (<b>upper</b> bound). <b>Ω</b> (big-Omega) means greater than or equal (<b>lower</b> bound). <b>Θ</b> (big-Theta) means asymptotically equal (<b>tight</b> bound)."
+    },
+    {
+      "id": "dsa7_0011",
+      "q": "Which definition corresponds to <b>f(n) is Θ(g(n))</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`f(n) ≤ c·g(n)` for all `n ≥ n₀`, for some constant `c > 0`"
+        },
+        {
+          "i": "2",
+          "x": "`f(n) ≥ c·g(n)` for all `n ≥ n₀`, for some constant `c > 0`"
+        },
+        {
+          "i": "3",
+          "x": "`c₁·g(n) ≤ f(n) ≤ c₂·g(n)` for all `n ≥ n₀`, for some constants `c₁, c₂ > 0`"
+        },
+        {
+          "i": "4",
+          "x": "`f(n) = g(n)` for all `n ≥ n₀`"
+        }
+      ],
+      "a": "3",
+      "e": "Big-Theta needs <u>both</u> a lower and an upper bound: there are constants $c_1, c_2 > 0$ and $n_0 \\ge 1$ with $c_1 g(n) \\le f(n) \\le c_2 g(n)$ for $n \\ge n_0$. Option 1 is the big-Oh definition and option 2 is big-Omega."
+    },
+    {
+      "id": "dsa7_0012",
+      "q": "Which statement about f(n) = 3n + 2 is correct?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`f(n)` is `Θ(n²)`"
+        },
+        {
+          "i": "2",
+          "x": "`f(n)` is `Θ(n)`"
+        },
+        {
+          "i": "3",
+          "x": "`f(n)` is `Ω(n²)`"
+        },
+        {
+          "i": "4",
+          "x": "`f(n)` is `Θ(log n)`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "For $n \\ge 1$ we have $3n \\le 3n + 2 \\le 5n$ (because $2 \\le 2n$).",
+        "So with $c_1 = 3$, $c_2 = 5$ and $n_0 = 1$, the Θ definition holds for $g(n) = n$.",
+        "`n²` grows faster than `3n + 2`, so f is not Ω(n²) nor Θ(n²), and `log n` grows slower, so f is not Θ(log n).",
+        "<mark>f(n) is Θ(n)</mark>"
+      ]
+    },
+    {
+      "id": "dsa7_0013",
+      "q": "If `f(n) = O(g(n))`, which statement must also be true?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`g(n) = O(f(n))`"
+        },
+        {
+          "i": "2",
+          "x": "`f(n) = Ω(g(n))`"
+        },
+        {
+          "i": "3",
+          "x": "`f(n) = Θ(g(n))`"
+        },
+        {
+          "i": "4",
+          "x": "`g(n) = Ω(f(n))`"
+        }
+      ],
+      "a": "4",
+      "e": "<b>f(n) = O(g(n)) if and only if g(n) = Ω(f(n))</b>: if g is an upper bound of f, then f is a lower bound of g. The other statements are not guaranteed (for example n = O(n²), but n² is not O(n)), and only Θ is symmetric."
+    },
+    {
+      "id": "dsa7_0014",
+      "q": "Is `2ⁿ⁺¹ = O(2ⁿ)`?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Yes, because 2ⁿ⁺¹ = 2·2ⁿ, so the definition holds with C = 2"
+        },
+        {
+          "i": "2",
+          "x": "No, because the exponent n + 1 grows faster than the exponent n"
+        },
+        {
+          "i": "3",
+          "x": "No, because 2ⁿ⁺¹ is always larger than 2ⁿ for every value of n"
+        },
+        {
+          "i": "4",
+          "x": "Yes, because big-O ignores every term that contains an exponent"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Rewrite: $2^{n+1} = 2 \\cdot 2^n$.",
+        "Choose $C = 2$: $2^{n+1} \\le 2 \\cdot 2^n$ for every $n$ (with any $k$).",
+        "A constant factor does not change the order of growth, so the statement holds.",
+        "<mark>Yes, 2ⁿ⁺¹ is O(2ⁿ)</mark>"
+      ]
+    },
+    {
+      "id": "dsa7_0015",
+      "q": "Is `2²ⁿ = O(2ⁿ)`?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Yes, because 2²ⁿ = 2·2ⁿ, so the definition holds with C = 2"
+        },
+        {
+          "i": "2",
+          "x": "Yes, because doubling the exponent only doubles the value of the function"
+        },
+        {
+          "i": "3",
+          "x": "No, because 2²ⁿ = (2ⁿ)², so 2²ⁿ / 2ⁿ = 2ⁿ grows without bound"
+        },
+        {
+          "i": "4",
+          "x": "No, because 2²ⁿ is smaller than 2ⁿ for all large values of n"
+        }
       ],
       "a": "3",
       "e": [
@@ -385,14 +464,29 @@
       ]
     },
     {
-      "id": "dsa7_0026",
+      "id": "dsa7_0016",
       "q": "An algorithm works in two phases on an array `A` of `n` elements.\nPhase 1: one loop of `n` iterations adds every `A[i]` to `sum`.\nPhase 2: two nested loops (`i` from 0 to `n-1`, `j` from 0 to `n-1`) compare `A[i]` with `A[j]` and increment `count` when `A[i] > A[j]`.\nThe algorithm then returns `sum`. What is its time complexity?",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "`O(n)`"},
-        {"i": "2", "x": "`O(n log n)`"},
-        {"i": "3", "x": "`O(n³)`"},
-        {"i": "4", "x": "`O(n²)`"}
+        {
+          "i": "1",
+          "x": "`O(n)`"
+        },
+        {
+          "i": "2",
+          "x": "`O(n log n)`"
+        },
+        {
+          "i": "3",
+          "x": "`O(n³)`"
+        },
+        {
+          "i": "4",
+          "x": "`O(n²)`"
+        }
       ],
       "a": "4",
       "e": [
@@ -403,31 +497,29 @@
       ]
     },
     {
-      "id": "dsa7_0027",
-      "q": "A loop runs `n` times. In each iteration, if a condition holds a block of `O(1)` time executes, otherwise a block of `O(n)` time executes. What is the <b>worst-case</b> complexity of the loop?",
-      "t": ["1", "hard"],
-      "c": [
-        {"i": "1", "x": "`O(n)`"},
-        {"i": "2", "x": "`O(n log n)`"},
-        {"i": "3", "x": "`O(n²)`"},
-        {"i": "4", "x": "`O(n³)`"}
-      ],
-      "a": "3",
-      "e": [
-        "Inside one iteration, the if-then-else costs the slower block: $\\max(O(1), O(n)) = O(n)$.",
-        "The loop repeats this $n$ times: $n \\times O(n)$.",
-        "<mark>O(n²)</mark>"
-      ]
-    },
-    {
-      "id": "dsa7_0028",
+      "id": "dsa7_0017",
       "q": "In this structure the body takes `O(1)`: `i` takes the values 1, 3, 5, ... while `i < n`; for each `i`, `j` takes the values n, n-2, n-4, ... while `j > i`. What is the time complexity?",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "c": [
-        {"i": "1", "x": "`O(n log n)`"},
-        {"i": "2", "x": "`O(n)`"},
-        {"i": "3", "x": "`O(n³)`"},
-        {"i": "4", "x": "`O(n²)`"}
+        {
+          "i": "1",
+          "x": "`O(n log n)`"
+        },
+        {
+          "i": "2",
+          "x": "`O(n)`"
+        },
+        {
+          "i": "3",
+          "x": "`O(n³)`"
+        },
+        {
+          "i": "4",
+          "x": "`O(n²)`"
+        }
       ],
       "a": "4",
       "e": [
@@ -438,14 +530,334 @@
       ]
     },
     {
-      "id": "dsa7_0029",
-      "q": "The size of a sorted array doubles from 1,000 to 2,000 elements. How does the <b>worst-case</b> number of comparisons change for linear search and for binary search?",
-      "t": ["1", "hard"],
+      "id": "dsa7_0018",
+      "q": "For an array of n elements with sufficient capacity, which operation takes <b>O(n)</b> time because the existing elements must be shifted?",
+      "t": [
+        "1",
+        "easy"
+      ],
       "c": [
-        {"i": "1", "x": "Both algorithms need about twice as many comparisons"},
-        {"i": "2", "x": "Linear search needs about one more comparison; binary search needs about twice as many"},
-        {"i": "3", "x": "Both algorithms need about one more comparison"},
-        {"i": "4", "x": "Linear search needs about twice as many; binary search needs about one more comparison"}
+        {
+          "i": "1",
+          "x": "Access by index"
+        },
+        {
+          "i": "2",
+          "x": "Insert at the end"
+        },
+        {
+          "i": "3",
+          "x": "Insert at the beginning"
+        },
+        {
+          "i": "4",
+          "x": "Delete from the end"
+        }
+      ],
+      "a": "3",
+      "e": "Inserting at the beginning requires moving every existing element one position to the right to make room, which is <mark>O(n)</mark>. Access by index, insertion at the end (with enough capacity) and deletion from the end are O(1)."
+    },
+    {
+      "id": "dsa7_0019",
+      "q": "Given `A = [10, 25, 7, 18, 30, 12]` and zero-based indexing, what should a search algorithm report for the search key `K = 18` and for `K = 50`?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Index 4 for `K = 18`; not found for `K = 50`"
+        },
+        {
+          "i": "2",
+          "x": "Index 3 for `K = 18`; not found for `K = 50`"
+        },
+        {
+          "i": "3",
+          "x": "Index 3 for `K = 18`; index 6 for `K = 50`"
+        },
+        {
+          "i": "4",
+          "x": "Index 18 for `K = 18`; not found for `K = 50`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "The elements are at indexes: `10`→0, `25`→1, `7`→2, `18`→3, `30`→4, `12`→5.",
+        "So `K = 18` is found at <b>index 3</b>.",
+        "`50` does not occur in `A`, so the algorithm must indicate that the element <b>does not exist</b> (for example by returning -1).",
+        "<mark>Index 3 for K = 18; not found for K = 50</mark>"
+      ]
+    },
+    {
+      "id": "dsa7_0020",
+      "q": "Which of the following is an example of an <b>external search</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Searching an array that is stored entirely in main memory"
+        },
+        {
+          "i": "2",
+          "x": "Searching a very large database stored on disk with B-Trees"
+        },
+        {
+          "i": "3",
+          "x": "Searching a linked list that is stored in main memory"
+        },
+        {
+          "i": "4",
+          "x": "Searching a small sorted array that has been loaded in memory"
+        }
+      ],
+      "a": "2",
+      "e": "In an <b>internal search</b> all the data is in main memory (arrays, linked lists). In an <b>external search</b> the data is on secondary storage such as disks (large databases and files), and it uses specialized structures such as B-Trees, B+ Trees and hash indexes."
+    },
+    {
+      "id": "dsa7_0021",
+      "q": "Which search algorithm does <u>not</u> require sorted data and has <b>O(1) average</b> time but <b>O(n) worst-case</b> time?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Linear Search"
+        },
+        {
+          "i": "2",
+          "x": "Hash Search"
+        },
+        {
+          "i": "3",
+          "x": "Interpolation Search"
+        },
+        {
+          "i": "4",
+          "x": "Jump Search"
+        }
+      ],
+      "a": "2",
+      "e": "<b>Hash Search</b> works on unsorted data with O(1) average and O(n) worst-case time. Linear search is O(n) on average, while interpolation search (worst case O(n)) and jump search both require sorted data."
+    },
+    {
+      "id": "dsa7_0022",
+      "q": "Linear search is used to find `K = 31` in `A = [15, 7, 22, 9, 31, 4, 18]` (zero-based indexing). How many comparisons are made and what index is returned?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "4 comparisons; index 4"
+        },
+        {
+          "i": "2",
+          "x": "5 comparisons; index 5"
+        },
+        {
+          "i": "3",
+          "x": "7 comparisons; index 4"
+        },
+        {
+          "i": "4",
+          "x": "5 comparisons; index 4"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "Linear search checks the elements one after another from the beginning: `15`, `7`, `22`, `9`, `31`.",
+        "That is 5 comparisons, and the search stops immediately when `31` is found (the remaining elements are not examined).",
+        "`31` is stored at index 4.",
+        "<mark>5 comparisons; index 4</mark>. In the worst case linear search needs n comparisons, so its worst-case complexity is O(n)."
+      ]
+    },
+    {
+      "id": "dsa7_0023",
+      "q": "Which statement about <b>linear search</b> is correct?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It works on unsorted data, on arrays and linked lists, with O(1) extra space"
+        },
+        {
+          "i": "2",
+          "x": "It requires the data to be sorted, but it needs only O(1) extra space"
+        },
+        {
+          "i": "3",
+          "x": "It needs random access to the middle element, so it cannot work on linked lists"
+        },
+        {
+          "i": "4",
+          "x": "It needs O(n) extra space because every visited element must be stored"
+        }
+      ],
+      "a": "1",
+      "e": "Linear search simply examines the elements one by one, so it does <u>not</u> need sorted data or random access, works with arrays and linked lists, and needs only a few extra variables: <b>S(n) = O(1)</b>."
+    },
+    {
+      "id": "dsa7_0024",
+      "q": "A linear search is performed on an array of 99 elements. The target is present and equally likely to be at any position. What is the average number of comparisons?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`49`"
+        },
+        {
+          "i": "2",
+          "x": "`99`"
+        },
+        {
+          "i": "3",
+          "x": "`50`"
+        },
+        {
+          "i": "4",
+          "x": "`100`"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "If the target is at position $p$, linear search makes $p$ comparisons, so the average is $\\frac{1 + 2 + \\dots + n}{n}$.",
+        "Using $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$, the average is $\\frac{n+1}{2}$.",
+        "For $n = 99$: $\\frac{99 + 1}{2} = 50$.",
+        "<mark>50 comparisons</mark> (still O(n))"
+      ]
+    },
+    {
+      "id": "dsa7_0025",
+      "q": "Binary search (with `mid = ⌊(low + high)/2⌋`) looks for `K = 45` in `A = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]` (indexes 0 to 10). Which sequence of examined `mid` positions is correct?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "5, then 7, then 8 (found at index 8)"
+        },
+        {
+          "i": "2",
+          "x": "5, then 8 (found at index 8)"
+        },
+        {
+          "i": "3",
+          "x": "4, then 7, then 9 (not found)"
+        },
+        {
+          "i": "4",
+          "x": "5, then 9, then 8 (found at index 8)"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Start: `low = 0`, `high = 10`, so `mid = ⌊(0 + 10)/2⌋ = 5` and `A[5] = 30`.",
+        "`45 > 30`, so discard the left half: `low = 6`, `high = 10`.",
+        "Now `mid = ⌊(6 + 10)/2⌋ = 8` and `A[8] = 45`, which equals the key.",
+        "<mark>mids: 5, then 8 (found at index 8, after 2 comparisons)</mark>. The worst-case complexity is O(log n)."
+      ]
+    },
+    {
+      "id": "dsa7_0026",
+      "q": "A student applies binary search (`mid = ⌊(low + high)/2⌋`, discarding the left half when `K < A[mid]`) to the <u>unsorted</u> array `A = [8, 3, 15, 1, 9]` to find `K = 3`. What happens?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It finds 3 at index 1 after two comparisons"
+        },
+        {
+          "i": "2",
+          "x": "It reports not found, even though 3 is in the array"
+        },
+        {
+          "i": "3",
+          "x": "It finds 3 at index 1 after one comparison"
+        },
+        {
+          "i": "4",
+          "x": "It never stops, because the search interval never shrinks"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "Start: `low = 0`, `high = 4`, `mid = 2`, `A[2] = 15`. Since `3 < 15`, the algorithm keeps the left part: `high = 1`.",
+        "Now `mid = ⌊(0 + 1)/2⌋ = 0` and `A[0] = 8`. Since `3 < 8`, it keeps the left part again: `high = -1`.",
+        "Now `low > high`, so the search stops and reports that the key does not exist, although `3` is at index 1.",
+        "<mark>Binary search requires sorted data; on unsorted data it may miss existing elements</mark>"
+      ]
+    },
+    {
+      "id": "dsa7_0027",
+      "q": "The running time of binary search satisfies `T(n) = T(n/2) + c`, with only <u>one</u> recursive term. Why is there no second term for the other half?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Both halves are searched, but in parallel, so only one term is counted"
+        },
+        {
+          "i": "2",
+          "x": "The other half is searched later, but its cost is always constant"
+        },
+        {
+          "i": "3",
+          "x": "Only one half can contain the target, so the other half is discarded and never searched"
+        },
+        {
+          "i": "4",
+          "x": "Each comparison halves the array, which is why the constant c vanishes"
+        }
+      ],
+      "a": "3",
+      "e": "After comparing `K` with `A[mid]`, the sorted order tells us which half can contain the target, and the other half is discarded. Binary search does <u>not</u> solve both subproblems, so only $T(n/2)$ appears, plus the constant work $c$ of one comparison."
+    },
+    {
+      "id": "dsa7_0028",
+      "q": "The size of a sorted array doubles from 1,000 to 2,000 elements. How does the <b>worst-case</b> number of comparisons change for linear search and for binary search?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Both algorithms need about twice as many comparisons"
+        },
+        {
+          "i": "2",
+          "x": "Linear search needs about one more comparison; binary search needs about twice as many"
+        },
+        {
+          "i": "3",
+          "x": "Both algorithms need about one more comparison"
+        },
+        {
+          "i": "4",
+          "x": "Linear search needs about twice as many; binary search needs about one more comparison"
+        }
       ],
       "a": "4",
       "e": [
@@ -456,22 +868,60 @@
       ]
     },
     {
-      "id": "dsa7_0030",
-      "q": "A student applies binary search (`mid = ⌊(low + high)/2⌋`, discarding the left half when `K < A[mid]`) to the <u>unsorted</u> array `A = [8, 3, 15, 1, 9]` to find `K = 3`. What happens?",
-      "t": ["1", "hard"],
+      "id": "dsa7_0029",
+      "q": "Binary search needs only O(log n) comparisons, yet applying it directly to a <b>linked list</b> gives no practical advantage. Why?",
+      "t": [
+        "1",
+        "medium"
+      ],
       "c": [
-        {"i": "1", "x": "It finds 3 at index 1 after two comparisons"},
-        {"i": "2", "x": "It reports not found, even though 3 is in the array"},
-        {"i": "3", "x": "It finds 3 at index 1 after one comparison"},
-        {"i": "4", "x": "It never stops, because the search interval never shrinks"}
+        {
+          "i": "1",
+          "x": "A linked list is always unsorted, so binary search can never be applied to it"
+        },
+        {
+          "i": "2",
+          "x": "It cannot reach the middle node directly, so getting there requires traversing many nodes"
+        },
+        {
+          "i": "3",
+          "x": "A linked list needs more than log n comparisons to decide whether a key exists"
+        },
+        {
+          "i": "4",
+          "x": "Binary search must modify the stored nodes, which a linked list does not allow"
+        }
       ],
       "a": "2",
-      "e": [
-        "Start: `low = 0`, `high = 4`, `mid = 2`, `A[2] = 15`. Since `3 < 15`, the algorithm keeps the left part: `high = 1`.",
-        "Now `mid = ⌊(0 + 1)/2⌋ = 0` and `A[0] = 8`. Since `3 < 8`, it keeps the left part again: `high = -1`.",
-        "Now `low > high`, so the search stops and reports that the key does not exist, although `3` is at index 1.",
-        "<mark>Binary search requires sorted data; on unsorted data it may miss existing elements</mark>"
-      ]
+      "e": "Binary search relies on <b>random access</b> to the middle element (an array reaches A[mid] in O(1)). A linked list has no direct access, so reaching the middle needs traversing many nodes, which cancels the benefit of the few comparisons."
+    },
+    {
+      "id": "dsa7_0030",
+      "q": "Which choice of search algorithm is correctly justified?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A linked list of 100,000 elements: binary search, since log n comparisons beats n comparisons in practice"
+        },
+        {
+          "i": "2",
+          "x": "A small unsorted list of 20 elements: binary search, since it does not require sorted data"
+        },
+        {
+          "i": "3",
+          "x": "An unsorted array searched only once: binary search, since it is always faster than linear search"
+        },
+        {
+          "i": "4",
+          "x": "A sorted array of 10 million elements: binary search, since random access and sorted order allow halving"
+        }
+      ],
+      "a": "4",
+      "e": "Binary search needs <b>sorted data</b> and <b>random access</b>. A sorted array of 10 million elements satisfies both, so about log n steps beat n. For the other cases: binary search <u>does</u> require sorted data (option 2), cannot jump to the middle of a linked list (option 1), and cannot be used on unsorted data without sorting first (option 3), so linear search suits those."
     }
   ]
 }
