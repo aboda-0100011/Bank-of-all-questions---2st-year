@@ -1,0 +1,1188 @@
+{
+  "qs": [
+    {
+      "id": "OS4_0001",
+      "q": "Which of the following is <u>not</u> shared among the threads of the same process?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The code section of the process"
+        },
+        {
+          "i": "2",
+          "x": "The data section of the process"
+        },
+        {
+          "i": "3",
+          "x": "The stack used for function calls"
+        },
+        {
+          "i": "4",
+          "x": "The resources held by the process"
+        }
+      ],
+      "a": "3",
+      "e": "Threads of one process share the code section, data section, and resources. Each thread has its own stack (along with its own thread ID, PC, and register set). <mark>The stack is not shared.</mark>",
+      "ref": "Slides 3-4"
+    },
+    {
+      "id": "OS4_0002",
+      "q": "Which set of components is <b>private to each thread</b> of a multithreaded process?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Thread ID, PC, register set, and data section"
+        },
+        {
+          "i": "2",
+          "x": "PC, stack, code section, and open resources"
+        },
+        {
+          "i": "3",
+          "x": "Thread ID, PC, register set, and stack"
+        },
+        {
+          "i": "4",
+          "x": "Register set, stack, code section, and data section"
+        }
+      ],
+      "a": "3",
+      "e": "A thread comprises a thread ID, a PC, a register set, and a stack. The code section, data section, and resources are shared by all threads of the process. <mark>Thread ID, PC, register set, and stack.</mark>",
+      "ref": "Slides 3-4"
+    },
+    {
+      "id": "OS4_0003",
+      "q": "In a word processor, one thread handles typing while another thread waits for a slow disk operation. The user can keep typing even though the second thread is blocked. Which benefit of multithreading does this illustrate?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Responsiveness"
+        },
+        {
+          "i": "2",
+          "x": "Resource sharing"
+        },
+        {
+          "i": "3",
+          "x": "Economy"
+        },
+        {
+          "i": "4",
+          "x": "Scalability"
+        }
+      ],
+      "a": "1",
+      "e": "A blocked thread does not block the whole process, so the other thread keeps serving the user. <mark>This is responsiveness.</mark>",
+      "ref": "Slide 6"
+    },
+    {
+      "id": "OS4_0004",
+      "q": "Why is creating a thread generally <b>less costly</b> than creating a new process?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A new thread is always run on a dedicated core, so no scheduling work is needed"
+        },
+        {
+          "i": "2",
+          "x": "A new thread is created only in user space, so the kernel is never involved"
+        },
+        {
+          "i": "3",
+          "x": "A new thread needs its own code and data copies, but these are smaller than a process's"
+        },
+        {
+          "i": "4",
+          "x": "A new thread shares the code, data, and resources of its process instead of duplicating them"
+        }
+      ],
+      "a": "4",
+      "e": "Threads share the code section, data section, and resources of their process, so less has to be allocated at creation. <mark>This is the economy benefit.</mark>",
+      "ref": "Slide 6"
+    },
+    {
+      "id": "OS4_0005",
+      "q": "A multithreaded application runs faster on a multiprocessor machine than on a single-processor machine. Which benefit does this describe?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Economy, because fewer threads are created per request"
+        },
+        {
+          "i": "2",
+          "x": "Scalability, because threads can run in parallel on different processors"
+        },
+        {
+          "i": "3",
+          "x": "Responsiveness, because a blocked thread does not block the process"
+        },
+        {
+          "i": "4",
+          "x": "Resource sharing, because threads share the memory of the process"
+        }
+      ],
+      "a": "2",
+      "e": "Multiple threads of one process can execute in parallel on separate processors or cores. <mark>This is scalability.</mark>",
+      "ref": "Slide 6"
+    },
+    {
+      "id": "OS4_0006",
+      "q": "What is the basic unit of CPU utilization?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A process"
+        },
+        {
+          "i": "2",
+          "x": "A thread"
+        },
+        {
+          "i": "3",
+          "x": "A code section"
+        },
+        {
+          "i": "4",
+          "x": "A register set"
+        }
+      ],
+      "a": "2",
+      "e": "A thread is a single sequence of execution and is the basic unit of CPU utilization. <mark>A thread.</mark>",
+      "ref": "Slide 3"
+    },
+    {
+      "id": "OS4_0007",
+      "q": "A team analyzes an application to find which parts of it are independent and can run concurrently on separate cores. Which multi-core programming challenge are they addressing?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Identifying tasks"
+        },
+        {
+          "i": "2",
+          "x": "Balance"
+        },
+        {
+          "i": "3",
+          "x": "Data splitting"
+        },
+        {
+          "i": "4",
+          "x": "Data dependency"
+        }
+      ],
+      "a": "1",
+      "e": "Identifying tasks means dividing the program into separate tasks that can run in parallel. <mark>Identifying tasks.</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS4_0008",
+      "q": "After parallelizing a program, one core performs 90% of the total work while the other three cores are mostly idle. Which challenge was <u>not</u> handled properly?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Testing and debugging"
+        },
+        {
+          "i": "2",
+          "x": "Data dependency"
+        },
+        {
+          "i": "3",
+          "x": "Balance"
+        },
+        {
+          "i": "4",
+          "x": "Data splitting"
+        }
+      ],
+      "a": "3",
+      "e": "Balance requires that parallel tasks perform roughly equal work of equal value. Here the work is concentrated on one core. <mark>Balance.</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS4_0009",
+      "q": "Task B needs a value that is produced by Task A, so the two tasks cannot safely run at the same time without coordination. Which challenge does this describe?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Balance"
+        },
+        {
+          "i": "2",
+          "x": "Data dependency"
+        },
+        {
+          "i": "3",
+          "x": "Identifying tasks"
+        },
+        {
+          "i": "4",
+          "x": "Data splitting"
+        }
+      ],
+      "a": "2",
+      "e": "Data dependency means one task depends on data produced by another, so the dependencies must be examined and the execution coordinated. <mark>Data dependency.</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS4_0010",
+      "q": "Why is testing and debugging a multithreaded program on a multi-core system considered more difficult than for a single-threaded program?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The program has many possible execution paths, so a bug may appear only in some of them"
+        },
+        {
+          "i": "2",
+          "x": "The program uses more memory, so debugging tools cannot track all its variables"
+        },
+        {
+          "i": "3",
+          "x": "The program runs more slowly, so errors take longer to reproduce in every run"
+        },
+        {
+          "i": "4",
+          "x": "The program has more code, so each core must be tested with a separate compiler"
+        }
+      ],
+      "a": "1",
+      "e": "Concurrent threads can interleave in many different ways, producing many execution paths to test. <mark>Many execution paths.</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS4_0011",
+      "q": "A program must divide a large data set so that each core processes a separate part of it. Which challenge is this?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Data dependency"
+        },
+        {
+          "i": "2",
+          "x": "Balance"
+        },
+        {
+          "i": "3",
+          "x": "Data splitting"
+        },
+        {
+          "i": "4",
+          "x": "Identifying tasks"
+        }
+      ],
+      "a": "3",
+      "e": "Data splitting means dividing the data between tasks that run on separate cores. <mark>Data splitting.</mark>",
+      "ref": "Slide 8"
+    },
+    {
+      "id": "OS4_0012",
+      "q": "A program sums a large array by splitting it into four equal parts, and each of four cores sums one part. Which type of parallelism is used?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Task parallelism"
+        },
+        {
+          "i": "2",
+          "x": "Data parallelism"
+        },
+        {
+          "i": "3",
+          "x": "Fork-join parallelism"
+        },
+        {
+          "i": "4",
+          "x": "Pipeline parallelism"
+        }
+      ],
+      "a": "2",
+      "e": "The same operation is applied to different subsets of the data on different cores. <mark>Data parallelism.</mark>",
+      "ref": "Slide 10"
+    },
+    {
+      "id": "OS4_0013",
+      "q": "Four cores work on the same data set, but each core performs a <u>different</u> operation (for example, sum, minimum, maximum, and average). Which type of parallelism is this?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Data parallelism"
+        },
+        {
+          "i": "2",
+          "x": "Thread cancellation"
+        },
+        {
+          "i": "3",
+          "x": "Task parallelism"
+        },
+        {
+          "i": "4",
+          "x": "Implicit parallelism"
+        }
+      ],
+      "a": "3",
+      "e": "Distinct tasks are distributed across the cores, rather than distinct portions of the data. <mark>Task parallelism.</mark>",
+      "ref": "Slide 11"
+    },
+    {
+      "id": "OS4_0014",
+      "q": "Which statement correctly distinguishes data parallelism from task parallelism?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Data parallelism distributes data across cores, while task parallelism distributes tasks across cores"
+        },
+        {
+          "i": "2",
+          "x": "Data parallelism distributes tasks across cores, while task parallelism distributes data across cores"
+        },
+        {
+          "i": "3",
+          "x": "Data parallelism needs multiple cores, while task parallelism needs only a single core"
+        },
+        {
+          "i": "4",
+          "x": "Data parallelism uses kernel threads, while task parallelism uses only user threads"
+        }
+      ],
+      "a": "1",
+      "e": "Data parallelism distributes data across multiple cores; task parallelism distributes tasks across multiple cores. <mark>Option 1.</mark>",
+      "ref": "Slides 10-11"
+    },
+    {
+      "id": "OS4_0015",
+      "q": "Which statement about <b>user threads</b> is correct?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "They are created and scheduled directly by the OS kernel"
+        },
+        {
+          "i": "2",
+          "x": "They are managed without OS support, typically by a thread library"
+        },
+        {
+          "i": "3",
+          "x": "They are supported only on systems that have multiple cores"
+        },
+        {
+          "i": "4",
+          "x": "They are managed by the OS but run only in user space"
+        }
+      ],
+      "a": "2",
+      "e": "User threads are managed without OS support, while kernel threads are supported and managed directly by the OS. <mark>Managed without OS support.</mark>",
+      "ref": "Slide 13"
+    },
+    {
+      "id": "OS4_0016",
+      "q": "Which statement about <b>kernel threads</b> is correct?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "They are supported and managed directly by the operating system"
+        },
+        {
+          "i": "2",
+          "x": "They are managed by a library without any help from the OS"
+        },
+        {
+          "i": "3",
+          "x": "They are available only in older operating systems"
+        },
+        {
+          "i": "4",
+          "x": "They can be used only by the OS and never by applications"
+        }
+      ],
+      "a": "1",
+      "e": "Kernel threads are managed directly by the OS, and most modern operating systems (e.g., Windows and Linux) support them. <mark>Option 1.</mark>",
+      "ref": "Slide 13"
+    },
+    {
+      "id": "OS4_0017",
+      "q": "In the <b>many-to-one</b> model, what limits how threads use the kernel?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Each user thread must first create its own kernel thread"
+        },
+        {
+          "i": "2",
+          "x": "Only a fixed number of kernel threads can be created"
+        },
+        {
+          "i": "3",
+          "x": "Kernel threads can serve only user threads of one core"
+        },
+        {
+          "i": "4",
+          "x": "Only one user thread can access the kernel at a time"
+        }
+      ],
+      "a": "4",
+      "e": "Many user threads are mapped to a single kernel thread, so only one of them can access the kernel at a time. <mark>One user thread at a time.</mark>",
+      "ref": "Slide 14"
+    },
+    {
+      "id": "OS4_0018",
+      "q": "A process uses the many-to-one model and has 8 user threads on a machine with 4 cores. What is the maximum number of its threads that can run in parallel?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`1`"
+        },
+        {
+          "i": "2",
+          "x": "`4`"
+        },
+        {
+          "i": "3",
+          "x": "`8`"
+        },
+        {
+          "i": "4",
+          "x": "`12`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "In the many-to-one model, all user threads map to a single kernel thread.",
+        "Only one kernel thread exists for the process, so only one core can execute it at a time.",
+        "The extra cores cannot be used by this process's threads. <mark>Maximum = 1 thread.</mark>"
+      ],
+      "ref": "Slide 14"
+    },
+    {
+      "id": "OS4_0019",
+      "q": "In the many-to-one model, what happens when one user thread makes a <b>blocking system call</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Only that thread blocks, and the other threads continue running"
+        },
+        {
+          "i": "2",
+          "x": "The OS creates a new kernel thread to serve the other threads"
+        },
+        {
+          "i": "3",
+          "x": "The entire process blocks, because there is a single kernel thread"
+        },
+        {
+          "i": "4",
+          "x": "The blocked thread is moved to another core automatically"
+        }
+      ],
+      "a": "3",
+      "e": "All user threads share one kernel thread, so a blocking call blocks the whole process. <mark>The entire process blocks.</mark>",
+      "ref": "Slide 14"
+    },
+    {
+      "id": "OS4_0020",
+      "q": "Why does the <b>one-to-one</b> model allow other threads to continue when one thread makes a blocking system call?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The thread library switches to another thread before the call is made"
+        },
+        {
+          "i": "2",
+          "x": "Each user thread has its own kernel thread, so another thread can run"
+        },
+        {
+          "i": "3",
+          "x": "The blocking call is converted to a non-blocking call by the kernel"
+        },
+        {
+          "i": "4",
+          "x": "All user threads share a pool of kernel threads that is never empty"
+        }
+      ],
+      "a": "2",
+      "e": "The OS creates one kernel thread per user thread, so when one blocks, the kernel can schedule the others. <mark>Each user thread has its own kernel thread.</mark>",
+      "ref": "Slide 15"
+    },
+    {
+      "id": "OS4_0021",
+      "q": "What is the main <u>drawback</u> of the one-to-one model?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Threads cannot run in parallel on multi-core systems"
+        },
+        {
+          "i": "2",
+          "x": "Only one thread can access the kernel at a time"
+        },
+        {
+          "i": "3",
+          "x": "A kernel thread is created per user thread, which can burden performance"
+        },
+        {
+          "i": "4",
+          "x": "A blocking system call blocks every thread of the process"
+        }
+      ],
+      "a": "3",
+      "e": "Creating a kernel thread for every user thread can burden system performance. <mark>Option 3.</mark>",
+      "ref": "Slide 15"
+    },
+    {
+      "id": "OS4_0022",
+      "q": "In the <b>many-to-many</b> model, how does the number of kernel threads relate to the number of user threads?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It is always greater than the number of user threads"
+        },
+        {
+          "i": "2",
+          "x": "It is always exactly one, regardless of user threads"
+        },
+        {
+          "i": "3",
+          "x": "It is always exactly equal to the number of user threads"
+        },
+        {
+          "i": "4",
+          "x": "It is less than or equal to the number of user threads"
+        }
+      ],
+      "a": "4",
+      "e": "The OS creates a set of kernel threads whose count is less than or equal to the number of user threads. <mark>Less than or equal.</mark>",
+      "ref": "Slide 16"
+    },
+    {
+      "id": "OS4_0023",
+      "q": "Which pair of drawbacks does the many-to-many model <b>avoid</b>?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "No parallelism on multi-core systems (many-to-one) and one kernel thread per user thread (one-to-one)"
+        },
+        {
+          "i": "2",
+          "x": "No parallelism on multi-core systems (one-to-one) and one kernel thread per user thread (many-to-one)"
+        },
+        {
+          "i": "3",
+          "x": "Process-wide blocking (one-to-one) and limited kernel access to a single thread (many-to-one)"
+        },
+        {
+          "i": "4",
+          "x": "Process-wide blocking (one-to-one) and the need for a thread library (many-to-one)"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Many-to-one drawback: threads cannot run in parallel on multi-core systems.",
+        "One-to-one drawback: a kernel thread is created for every user thread, which can burden performance.",
+        "Many-to-many allows parallel execution and uses a limited set of kernel threads. <mark>Option 1.</mark>"
+      ],
+      "ref": "Slides 14-17"
+    },
+    {
+      "id": "OS4_0024",
+      "q": "Most operating systems use the one-to-one model even though many-to-many is more flexible. Which reasons explain this?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Many-to-many cannot run threads in parallel, and one-to-one has no overhead at all"
+        },
+        {
+          "i": "2",
+          "x": "Many-to-many is difficult to implement, and modern multicore systems do not need to limit kernel threads"
+        },
+        {
+          "i": "3",
+          "x": "Many-to-many blocks the process on system calls, and one-to-one needs no kernel support"
+        },
+        {
+          "i": "4",
+          "x": "Many-to-many is difficult to implement, and one-to-one threads are managed only in user space"
+        }
+      ],
+      "a": "2",
+      "e": "In practice, many-to-many is difficult to implement, and on modern multicore systems there is no need to limit the number of kernel threads. <mark>Option 2.</mark>",
+      "ref": "Slide 18"
+    },
+    {
+      "id": "OS4_0025",
+      "q": "How do <b>modern concurrency libraries</b> typically handle threads?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Developers create each kernel thread, and the library maps it to one user thread"
+        },
+        {
+          "i": "2",
+          "x": "Developers identify tasks, and the library maps them to kernel threads (many-to-many)"
+        },
+        {
+          "i": "3",
+          "x": "Developers assign a process to each task, and the library schedules the processes"
+        },
+        {
+          "i": "4",
+          "x": "Developers identify tasks, and the library runs all of them on one kernel thread"
+        }
+      ],
+      "a": "2",
+      "e": "Modern concurrency libraries use the many-to-many model: developers identify tasks and the library maps them to kernel threads. <mark>Option 2.</mark>",
+      "ref": "Slide 18"
+    },
+    {
+      "id": "OS4_0026",
+      "q": "An application needs 1000 user threads that can run in parallel on a multicore system, but the designers do not want to create 1000 kernel threads. Which model fits best?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Many-to-one"
+        },
+        {
+          "i": "2",
+          "x": "One-to-one"
+        },
+        {
+          "i": "3",
+          "x": "Single-threaded model"
+        },
+        {
+          "i": "4",
+          "x": "Many-to-many"
+        }
+      ],
+      "a": "4",
+      "e": [
+        "Many-to-one would limit the process to a single kernel thread, so there would be no parallelism.",
+        "One-to-one would create 1000 kernel threads, which is what the designers want to avoid.",
+        "Many-to-many maps the user threads to a smaller set of kernel threads while still allowing parallel execution. <mark>Many-to-many.</mark>"
+      ],
+      "ref": "Slides 16-17"
+    },
+    {
+      "id": "OS4_0027",
+      "q": "In <b>explicit threading</b>, a server creates a new thread for every client request. What is a drawback of this approach?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Requests cannot be served concurrently"
+        },
+        {
+          "i": "2",
+          "x": "Each new request requires creating a new thread, which adds overhead"
+        },
+        {
+          "i": "3",
+          "x": "The thread is kept alive forever after finishing its work"
+        },
+        {
+          "i": "4",
+          "x": "The server cannot listen for further requests while a thread runs"
+        }
+      ],
+      "a": "2",
+      "e": "The thread is discarded after finishing, so each new request pays the cost of creating a new thread. <mark>Creation overhead for every request.</mark>",
+      "ref": "Slide 20"
+    },
+    {
+      "id": "OS4_0028",
+      "q": "Why can creating a thread per request be dangerous when a server receives a very large number of simultaneous requests?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The number of threads has no upper bound, so system resources can be exhausted"
+        },
+        {
+          "i": "2",
+          "x": "The number of threads is fixed, so later requests are silently dropped"
+        },
+        {
+          "i": "3",
+          "x": "The threads cannot share the data section, so every request needs its own copy"
+        },
+        {
+          "i": "4",
+          "x": "The threads must run one after another, so response time grows linearly"
+        }
+      ],
+      "a": "1",
+      "e": "Explicit threading places no upper bound on thread creation, so too many concurrent threads can exhaust system resources. <mark>Resource exhaustion.</mark>",
+      "ref": "Slide 20"
+    },
+    {
+      "id": "OS4_0029",
+      "q": "Which statement best describes <b>implicit threading</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The programmer creates and manages every thread, while the library only schedules them"
+        },
+        {
+          "i": "2",
+          "x": "The programmer identifies tasks, and run-time libraries create and manage the threads"
+        },
+        {
+          "i": "3",
+          "x": "The OS automatically converts a single-threaded program into a multithreaded one"
+        },
+        {
+          "i": "4",
+          "x": "The programmer identifies threads, and each thread is mapped to one process"
+        }
+      ],
+      "a": "2",
+      "e": "In implicit threading, programmers identify tasks (written as functions) that can run in parallel, and run-time libraries create and manage the threads. <mark>Option 2.</mark>",
+      "ref": "Slide 21"
+    },
+    {
+      "id": "OS4_0030",
+      "q": "A web server handles many <u>independent</u> client requests, while a divide-and-conquer algorithm splits a problem into <u>cooperating</u> subtasks whose results must be combined. Which implicit threading approaches fit each case, respectively?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Fork-join for the web server, thread pool for the algorithm"
+        },
+        {
+          "i": "2",
+          "x": "Thread pool for both the web server and the algorithm"
+        },
+        {
+          "i": "3",
+          "x": "Thread pool for the web server, fork-join for the algorithm"
+        },
+        {
+          "i": "4",
+          "x": "Fork-join for both the web server and the algorithm"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "A thread pool works well for asynchronous (independent) tasks such as separate client requests.",
+        "Fork-join works well for synchronous (cooperating) tasks whose results are combined.",
+        "<mark>Web server: thread pool; algorithm: fork-join.</mark>"
+      ],
+      "ref": "Slides 21-23"
+    },
+    {
+      "id": "OS4_0031",
+      "q": "In a thread pool, what happens when a request arrives and <u>no</u> thread in the pool is free?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The request is rejected and the client must resend it"
+        },
+        {
+          "i": "2",
+          "x": "A new thread is always created immediately to serve it"
+        },
+        {
+          "i": "3",
+          "x": "The task is queued until a thread becomes free"
+        },
+        {
+          "i": "4",
+          "x": "The request is served by the main server thread itself"
+        }
+      ],
+      "a": "3",
+      "e": "If the pool has no available thread, the task waits in a queue until a thread becomes free. <mark>The task is queued.</mark>",
+      "ref": "Slide 22"
+    },
+    {
+      "id": "OS4_0032",
+      "q": "In a thread pool, what happens to a thread after it finishes serving a request?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It is destroyed to free system resources"
+        },
+        {
+          "i": "2",
+          "x": "It returns to the pool to serve another request"
+        },
+        {
+          "i": "3",
+          "x": "It waits for the client to close the connection"
+        },
+        {
+          "i": "4",
+          "x": "It is converted into the main server thread"
+        }
+      ],
+      "a": "2",
+      "e": "Once a thread completes its request, it returns to the pool so it can be reused. <mark>It returns to the pool.</mark>",
+      "ref": "Slide 22"
+    },
+    {
+      "id": "OS4_0033",
+      "q": "Which two benefits do thread pools offer?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Serving with an existing thread is faster than creating one, and the number of threads is limited"
+        },
+        {
+          "i": "2",
+          "x": "Serving with an existing thread is faster than creating one, and every task gets its own core"
+        },
+        {
+          "i": "3",
+          "x": "Serving with a new thread is more reliable, and the number of threads is unlimited"
+        },
+        {
+          "i": "4",
+          "x": "Serving with a new thread is more isolated, and the number of threads is limited"
+        }
+      ],
+      "a": "1",
+      "e": "Using an existing thread avoids the creation overhead, and limiting the pool size prevents exhausting system resources. <mark>Option 1.</mark>",
+      "ref": "Slide 22"
+    },
+    {
+      "id": "OS4_0034",
+      "q": "What distinguishes a <b>dynamic</b> thread pool from a fixed one?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It can adjust the number of threads in the pool as needed"
+        },
+        {
+          "i": "2",
+          "x": "It creates a new thread for every incoming request"
+        },
+        {
+          "i": "3",
+          "x": "It allows threads to change the tasks they were created for"
+        },
+        {
+          "i": "4",
+          "x": "It removes the queue and rejects requests when all threads are busy"
+        }
+      ],
+      "a": "1",
+      "e": "A dynamic thread pool can adjust the number of threads in the pool. <mark>It adjusts the pool size.</mark>",
+      "ref": "Slide 22"
+    },
+    {
+      "id": "OS4_0035",
+      "q": "Which is the correct order of steps performed by the parent thread in <b>traditional fork-join</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Wait for children, fork children, then join and combine results"
+        },
+        {
+          "i": "2",
+          "x": "Fork children, join and combine results, then wait for children"
+        },
+        {
+          "i": "3",
+          "x": "Fork children, wait for children to terminate, then join and combine results"
+        },
+        {
+          "i": "4",
+          "x": "Join and combine results, fork children, then wait for children to terminate"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "The parent forks (creates) one or more child threads.",
+        "It waits for the children to terminate.",
+        "It joins them and combines their results. <mark>Fork, wait, join.</mark>"
+      ],
+      "ref": "Slide 23"
+    },
+    {
+      "id": "OS4_0036",
+      "q": "How does <b>implicit fork-join</b> differ from traditional fork-join?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Threads are created by the programmer, and the library only combines the results"
+        },
+        {
+          "i": "2",
+          "x": "Parallel tasks are designated, and a library creates the threads and assigns tasks to them"
+        },
+        {
+          "i": "3",
+          "x": "Child tasks run asynchronously, so the parent never waits for their results"
+        },
+        {
+          "i": "4",
+          "x": "Parallel tasks are designated, and the OS creates one process for each task"
+        }
+      ],
+      "a": "2",
+      "e": "In implicit fork-join, threads are not constructed by the programmer; parallel tasks are designated and a library manages thread creation and task assignment. It is a synchronous version of the thread pool. <mark>Option 2.</mark>",
+      "ref": "Slide 23"
+    },
+    {
+      "id": "OS4_0037",
+      "q": "What does <b>thread cancellation</b> refer to?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Terminating a thread after it has completed all of its work"
+        },
+        {
+          "i": "2",
+          "x": "Terminating a thread before it has completed"
+        },
+        {
+          "i": "3",
+          "x": "Returning a thread to the thread pool for later reuse"
+        },
+        {
+          "i": "4",
+          "x": "Converting a user thread into a kernel thread"
+        }
+      ],
+      "a": "2",
+      "e": "Thread cancellation refers to terminating a thread before it has completed. <mark>Terminating a thread early.</mark>",
+      "ref": "Slide 25"
+    },
+    {
+      "id": "OS4_0038",
+      "q": "In <b>deferred cancellation</b>, how is the target thread terminated?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Another thread terminates it immediately, wherever it is executing"
+        },
+        {
+          "i": "2",
+          "x": "The OS terminates it only after all other threads have finished"
+        },
+        {
+          "i": "3",
+          "x": "The target thread periodically checks whether it should terminate"
+        },
+        {
+          "i": "4",
+          "x": "The target thread terminates when its parent process terminates"
+        }
+      ],
+      "a": "3",
+      "e": "With deferred cancellation, the target thread periodically checks whether it should terminate. <mark>It checks periodically.</mark>",
+      "ref": "Slide 25"
+    },
+    {
+      "id": "OS4_0039",
+      "q": "Which statement correctly describes <b>asynchronous cancellation</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "The target thread checks periodically and then terminates itself"
+        },
+        {
+          "i": "2",
+          "x": "One thread immediately terminates the target thread"
+        },
+        {
+          "i": "3",
+          "x": "The target thread finishes its work and is then cancelled"
+        },
+        {
+          "i": "4",
+          "x": "The cancellation request is queued until the pool is empty"
+        }
+      ],
+      "a": "2",
+      "e": "In asynchronous cancellation, one thread immediately terminates the target thread. <mark>Immediate termination.</mark>",
+      "ref": "Slide 25"
+    },
+    {
+      "id": "OS4_0040",
+      "q": "A thread is in the middle of an operation that must be completed cleanly before it stops. Which cancellation approach is more suitable, and why?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Asynchronous, because the target is terminated immediately at any point"
+        },
+        {
+          "i": "2",
+          "x": "Asynchronous, because the target can terminate itself in an orderly fashion"
+        },
+        {
+          "i": "3",
+          "x": "Deferred, because the target can terminate itself in an orderly fashion"
+        },
+        {
+          "i": "4",
+          "x": "Deferred, because the target is terminated immediately at any point"
+        }
+      ],
+      "a": "3",
+      "e": [
+        "Deferred cancellation lets the target thread check periodically whether it should terminate.",
+        "This allows it to finish or clean up what it is doing and terminate itself in an orderly fashion.",
+        "<mark>Deferred cancellation.</mark>"
+      ],
+      "ref": "Slide 25"
+    }
+  ]
+}
