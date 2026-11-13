@@ -1,0 +1,896 @@
+{
+  "qs": [
+    {
+      "id": "web7_0001",
+      "q": "What is the value returned by `fruits.get(\"apples\")` and `fruits.size` after executing the following <b>JavaScript Map</b> code?\n```js\nconst fruits = new Map([\n  [\"apples\", 500],\n  [\"bananas\", 300],\n  [\"oranges\", 200]\n]);\nfruits.set(\"apples\", 200);\n```",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`500` and `3`"
+        },
+        {
+          "i": "2",
+          "x": "`200` and `3`"
+        },
+        {
+          "i": "3",
+          "x": "`200` and `4`"
+        },
+        {
+          "i": "4",
+          "x": "`500` and `4`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "The `fruits` <b>Map</b> is initialized with three key-value pairs: `\"apples\"` (`500`), `\"bananas\"` (`300`), and `\"oranges\"` (`200`).",
+        "Calling `fruits.set(\"apples\", 200)` updates the existing value of the key `\"apples\"` rather than adding a fourth entry.",
+        "Therefore, `fruits.get(\"apples\")` returns <mark>`200`</mark> and `fruits.size` remains <mark>`3`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0002",
+      "q": "What is stored in the `text` variable after running the following <b>forEach()</b> loop on the `fruits` Map?\n```js\nconst fruits = new Map([[\"apples\", 500], [\"bananas\", 300]]);\nlet text = \"\";\nfruits.forEach(function(value, key) {\n  text += key + \" = \" + value + \"; \";\n});\n```",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`\"apples = 500; bananas = 300; \"`"
+        },
+        {
+          "i": "2",
+          "x": "`\"500 = apples; 300 = bananas; \"`"
+        },
+        {
+          "i": "3",
+          "x": "`\"bananas = 300; apples = 500; \"`"
+        },
+        {
+          "i": "4",
+          "x": "`\"apples = undefined; bananas = undefined; \"`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "The <b>Map</b> `forEach()` method invokes the callback with arguments in the order `(value, key)` while preserving the original insertion order.",
+        "In the first iteration, `value` is `500` and `key` is `\"apples\"`, appending `\"apples = 500; \"`.",
+        "In the second iteration, `value` is `300` and `key` is `\"bananas\"`, resulting in <mark>`\"apples = 500; bananas = 300; \"`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0003",
+      "q": "What is the final value of `total` after iterating through the <b>Map</b> values in the code below?\n```js\nconst fruits = new Map([\n  [\"apples\", 500],\n  [\"bananas\", 300],\n  [\"oranges\", 200]\n]);\nlet total = 0;\nfor (const x of fruits.values()) {\n  total += x;\n}\n```",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`1000`"
+        },
+        {
+          "i": "2",
+          "x": "`\"0500300200\"`"
+        },
+        {
+          "i": "3",
+          "x": "`\"0applesbananasoranges\"`"
+        },
+        {
+          "i": "4",
+          "x": "`NaN`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "The `fruits.values()` method returns an iterator containing <u>only</u> the numeric values `[500, 300, 200]` in insertion order.",
+        "Starting from `total = 0`, each iteration adds the current numeric value: `0 + 500 = 500`, `500 + 300 = 800`, and `800 + 200 = 1000`.",
+        "Thus, the final value of `total` is <mark>`1000`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0004",
+      "q": "When using <b>objects as keys</b> in a JavaScript Map as shown below, what do `fruits.get(\"apples\")` and `fruits.get(apples)` return respectively?\n```js\nconst apples = { name: \"Apples\" };\nconst fruits = new Map();\nfruits.set(apples, 500);\n```",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`500` and `500`"
+        },
+        {
+          "i": "2",
+          "x": "`undefined` and `500`"
+        },
+        {
+          "i": "3",
+          "x": "`500` and `undefined`"
+        },
+        {
+          "i": "4",
+          "x": "`undefined` and `undefined`"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "In this <b>Map</b>, the key stored is the object reference `apples`, <u>not</u> the string literal `\"apples\"`.",
+        "Calling `fruits.get(\"apples\")` searches for a string key that does not exist in the Map, so it returns `undefined`.",
+        "Calling `fruits.get(apples)` passes the exact object key reference, so the two calls return <mark>`undefined` and `500`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0005",
+      "q": "Given the following code using <b>Map.groupBy()</b>, which fruit objects are stored inside the array returned by `result.get(\"low\")`?\n```js\nconst fruits = [\n  { name: \"apples\", quantity: 300 },\n  { name: \"bananas\", quantity: 500 },\n  { name: \"oranges\", quantity: 200 },\n  { name: \"kiwi\", quantity: 150 }\n];\nfunction myCallback({ quantity }) {\n  return quantity > 200 ? \"ok\" : \"low\";\n}\nconst result = Map.groupBy(fruits, myCallback);\n```",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Only `kiwi` (`150`)"
+        },
+        {
+          "i": "2",
+          "x": "Both `oranges` (`200`) and `kiwi` (`150`)"
+        },
+        {
+          "i": "3",
+          "x": "Both `apples` (`300`) and `bananas` (`500`)"
+        },
+        {
+          "i": "4",
+          "x": "Both `apples` (`300`) and `oranges` (`200`)"
+        }
+      ],
+      "a": "2",
+      "e": [
+        "The callback checks the strict condition `quantity > 200` for each element in the `fruits` array.",
+        "For `apples` (`300`) and `bananas` (`500`), `quantity > 200` is `true`, so they are grouped under the `\"ok\"` key.",
+        "For `oranges` (`200`) and `kiwi` (`150`), `quantity > 200` is `false`, so `result.get(\"low\")` contains <mark>both `oranges` (`200`) and `kiwi` (`150`)</mark>."
+      ]
+    },
+    {
+      "id": "web7_0006",
+      "q": "In the following <b>JavaScript animation</b> code, what causes the movement of the `#animate` element to stop?\n```js\nfunction myMove() {\n  let id = null;\n  const elem = document.getElementById(\"animate\");\n  let pos = 0;\n  id = setInterval(frame, 5);\n  function frame() {\n    if (pos == 350) {\n      clearInterval(id);\n    } else {\n      pos++;\n      elem.style.top = pos + \"px\";\n      elem.style.left = pos + \"px\";\n    }\n  }\n}\n```",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Calling `clearInterval(id)` when `pos` reaches `350`"
+        },
+        {
+          "i": "2",
+          "x": "Calling `setInterval(frame, 5)` after `5` milliseconds"
+        },
+        {
+          "i": "3",
+          "x": "Setting `elem.style.top` and `elem.style.left` to `0px`"
+        },
+        {
+          "i": "4",
+          "x": "Initializing the timer variable `id` to `null` at start"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "The `setInterval(frame, 5)` function repeatedly executes `frame()` every `5` milliseconds, incrementing `pos` by `1` each time.",
+        "When `pos == 350` evaluates to `true`, the `if` branch executes instead of incrementing `pos` further.",
+        "Thus, the animation stops by <mark>calling `clearInterval(id)` when `pos` reaches `350`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0007",
+      "q": "In the validation function below, if the user enters `\"15\"` into `#demo`, what will be the content of `#p01` and the value of `#demo` after `myFunction()` finishes?\n```js\nfunction myFunction() {\n  const message = document.getElementById(\"p01\");\n  message.innerHTML = \"\";\n  let x = document.getElementById(\"demo\").value;\n  try {\n    if (x == \"\") throw \"is empty\";\n    if (isNaN(x)) throw \"is not a number\";\n    x = Number(x);\n    if (x > 10) throw \"is too high\";\n    if (x < 5) throw \"is too low\";\n  } catch (err) {\n    message.innerHTML = \"Error: \" + err + \".\";\n  } finally {\n    document.getElementById(\"demo\").value = \"\";\n  }\n}\n```",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`#p01` displays `\"Error: is too high.\"` and `#demo` becomes `\"\"`"
+        },
+        {
+          "i": "2",
+          "x": "`#p01` displays `\"Error: is too high.\"` and `#demo` remains `\"15\"`"
+        },
+        {
+          "i": "3",
+          "x": "`#p01` remains `\"\"` and `#demo` becomes `\"\"`"
+        },
+        {
+          "i": "4",
+          "x": "`#p01` displays `\"is too high\"` and `#demo` remains `\"15\"`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "The input `\"15\"` is non-empty and numeric, so `x` is converted to the number `15`.",
+        "Since `15 > 10` is `true`, `throw \"is too high\"` transfers control to `catch (err)`, setting `message.innerHTML` to `\"Error: is too high.\"`.",
+        "Next, the `finally` block always executes and clears the input, so <mark>`#p01` displays `\"Error: is too high.\"` and `#demo` becomes `\"\"`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0008",
+      "q": "Consider the following <b>block scope</b> code snippet. Which statement accurately describes accessing `x` and `y` outside the `{ }` block?\n```js\n{\n  let x = 2;\n  var y = 2;\n}\n```",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`x` cannot be accessed outside the block, whereas `y` can be accessed"
+        },
+        {
+          "i": "2",
+          "x": "`y` cannot be accessed outside the block, whereas `x` can be accessed"
+        },
+        {
+          "i": "3",
+          "x": "Both `x` and `y` can be accessed normally outside the block"
+        },
+        {
+          "i": "4",
+          "x": "Neither `x` nor `y` can be accessed outside the block"
+        }
+      ],
+      "a": "1",
+      "e": "Variables declared with `let` have <b>Block Scope</b> and are restricted to the `{ }` block, whereas variables declared with `var` do <u>not</u> have block scope, meaning <mark>`x` cannot be accessed outside the block, whereas `y` can be accessed</mark>."
+    },
+    {
+      "id": "web7_0009",
+      "q": "What happens to the variable `carName` when `myFunction()` is called in the following code?\n```js\nmyFunction();\n\nfunction myFunction() {\n  carName = \"Volvo\";\n}\n```",
+      "t": [
+        "0",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`carName` automatically becomes a global variable accessible outside `myFunction()`"
+        },
+        {
+          "i": "2",
+          "x": "`carName` is restricted to function scope and deleted when `myFunction()` finishes"
+        },
+        {
+          "i": "3",
+          "x": "`carName` is restricted to block scope and cannot be read outside the curly braces"
+        },
+        {
+          "i": "4",
+          "x": "`carName` causes a syntax error at interpret time before `myFunction()` runs"
+        }
+      ],
+      "a": "1",
+      "e": "Assigning a value to an undeclared variable (`carName = \"Volvo\"`) inside a function makes <mark>`carName` automatically become a global variable accessible outside `myFunction()`</mark>."
+    },
+    {
+      "id": "web7_0010",
+      "q": "Which of the following represents the shortest valid <b>ES6 arrow function</b> equivalent to the function below?\n```js\nhello = function(val) {\n  return \"Hello \" + val;\n};\n```",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`hello = val => \"Hello \" + val;`"
+        },
+        {
+          "i": "2",
+          "x": "`hello = => \"Hello \" + val;`"
+        },
+        {
+          "i": "3",
+          "x": "`hello = val => { \"Hello \" + val };`"
+        },
+        {
+          "i": "4",
+          "x": "`hello = (val) => return \"Hello \" + val;`"
+        }
+      ],
+      "a": "1",
+      "e": "When an <b>arrow function</b> has <u>only</u> one parameter and a single statement that returns a value, you can omit the parameter parentheses, the curly brackets, and the `return` keyword: <mark>`hello = val => \"Hello \" + val;`</mark>."
+    },
+    {
+      "id": "web7_0011",
+      "q": "Which pair of statements correctly finds the HTML element with `id=\"id01\"` in both <b>jQuery</b> and standard <b>JavaScript</b>?",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "jQuery: `$(\"#id01\")` | JavaScript: `document.getElementById(\"id01\")`"
+        },
+        {
+          "i": "2",
+          "x": "jQuery: `$(\"id01\")` | JavaScript: `document.getElementById(\"#id01\")`"
+        },
+        {
+          "i": "3",
+          "x": "jQuery: `$(\".id01\")` | JavaScript: `document.getElementById(\"id01\")`"
+        },
+        {
+          "i": "4",
+          "x": "jQuery: `$(\"#id01\")` | JavaScript: `document.getElement(\"#id01\")`"
+        }
+      ],
+      "a": "1",
+      "e": "To select an element by ID, <b>jQuery</b> uses the CSS `#` selector prefix inside `$()`, while standard <b>JavaScript</b> passes the raw ID string to `getElementById()`: <mark>jQuery: `$(\"#id01\")` | JavaScript: `document.getElementById(\"id01\")`</mark>."
+    },
+    {
+      "id": "web7_0012",
+      "q": "How do you retrieve the inner text content of an HTML element with `id=\"02\"` using <b>jQuery</b> versus standard <b>JavaScript</b>?",
+      "t": [
+        "0",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "jQuery: `$(\"#02\").text()` | JavaScript: `document.getElementById(\"02\").textContent`"
+        },
+        {
+          "i": "2",
+          "x": "jQuery: `$(\"#02\").textContent` | JavaScript: `document.getElementById(\"02\").text()`"
+        },
+        {
+          "i": "3",
+          "x": "jQuery: `$(\"#02\").value()` | JavaScript: `document.getElementById(\"02\").innerHTML()`"
+        },
+        {
+          "i": "4",
+          "x": "jQuery: `$(\"02\").text()` | JavaScript: `document.getElementById(\"#02\").textContent`"
+        }
+      ],
+      "a": "1",
+      "e": "In <b>jQuery</b>, the `.text()` method retrieves the element's text content, whereas in standard <b>JavaScript</b>, the `.textContent` property is used: <mark>jQuery: `$(\"#02\").text()` | JavaScript: `document.getElementById(\"02\").textContent`</mark>."
+    },
+    {
+      "id": "web7_0013",
+      "q": "Which of the following is a core characteristic of a <b>JavaScript Map</b> regarding its keys and iteration order?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Keys can be of any data type and their original insertion order is preserved"
+        },
+        {
+          "i": "2",
+          "x": "Keys are restricted to strings and are sorted alphabetically during iteration"
+        },
+        {
+          "i": "3",
+          "x": "Keys can be of any data type but iteration order is randomized for performance"
+        },
+        {
+          "i": "4",
+          "x": "Keys are restricted to primitive values and preserve insertion order"
+        }
+      ],
+      "a": "1",
+      "e": "A <b>JavaScript Map</b> allows keys of any type (strings, numbers, objects, etc.) and always remembers the original insertion order during iteration: <mark>keys can be of any data type and their original insertion order is preserved</mark>."
+    },
+    {
+      "id": "web7_0014",
+      "q": "What are the values of `r1`, `r2`, and ` m.size` after executing the following <b>Map</b> operations?\n```js\nconst m = new Map([[\"a\", 10], [\"b\", 20], [\"c\", 30]]);\nm.delete(\"b\");\nconst r1 = m.has(\"b\");\nm.clear();\nconst r2 = m.has(\"a\");\n```",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`r1 = false`, `r2 = false`, and `m.size = 0`"
+        },
+        {
+          "i": "2",
+          "x": "`r1 = true`, `r2 = false`, and `m.size = 0`"
+        },
+        {
+          "i": "3",
+          "x": "`r1 = false`, `r2 = true`, and `m.size = 2`"
+        },
+        {
+          "i": "4",
+          "x": "`r1 = false`, `r2 = false`, and `m.size = 2`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Initially, `m` has 3 entries; calling `m.delete(\"b\")` removes the key `\"b\"`, so `m.has(\"b\")` sets `r1` to `false`.",
+        "Calling `m.clear()` removes all remaining elements (`\"a\"` and `\"c\"`) from the Map.",
+        "Consequently, `m.has(\"a\")` sets `r2` to `false` and the final state is <mark>`r1 = false`, `r2 = false`, and `m.size = 0`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0015",
+      "q": "What is the exact value of `text` after iterating over `fruits.entries()` in the code below?\n```js\nconst fruits = new Map([\n  [\"apples\", 500],\n  [\"bananas\", 300]\n]);\nlet text = \"\";\nfor (const x of fruits.entries()) {\n  text += x + \"|\";\n}\n```",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`\"apples,500|bananas,300|\"`"
+        },
+        {
+          "i": "2",
+          "x": "`\"apples=500|bananas=300|\"`"
+        },
+        {
+          "i": "3",
+          "x": "`\"apples|bananas|\"`"
+        },
+        {
+          "i": "4",
+          "x": "`\"500|300|\"`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "The `fruits.entries()` method returns an iterator of `[key, value]` pairs: `[\"apples\", 500]` followed by `[\"bananas\", 300]`.",
+        "When each `[key, value]` array `x` is concatenated with a string (`text += x + \"|\"`), JavaScript converts the array to comma-separated text (`\"apples,500\"`).",
+        "After both iterations, `text` equals <mark>`\"apples,500|bananas,300|\"`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0016",
+      "q": "What does the following code produce when iterating with `fruits.keys()`?\n```js\nconst fruits = new Map([\n  [\"apples\", 500],\n  [\"bananas\", 300],\n  [\"oranges\", 200]\n]);\nfruits.set(\"bananas\", 900);\nlet text = \"\";\nfor (const x of fruits.keys()) {\n  text += x + \"-\";\n}\n```",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`\"apples-bananas-oranges-\"`"
+        },
+        {
+          "i": "2",
+          "x": "`\"apples-oranges-bananas-\"`"
+        },
+        {
+          "i": "3",
+          "x": "`\"500-900-200-\"`"
+        },
+        {
+          "i": "4",
+          "x": "`\"apples-bananas-oranges-bananas-\"`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Updating `\"bananas\"` with `fruits.set(\"bananas\", 900)` modifies its value to `900` without duplicating the key or altering the original insertion order.",
+        "The `fruits.keys()` iterator yields the keys in their original insertion sequence: `\"apples\"`, `\"bananas\"`, and `\"oranges\"`.",
+        "Therefore, `text` becomes <mark>`\"apples-bananas-oranges-\"`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0017",
+      "q": "What happens when two separate object literals with identical properties are used as keys in a <b>Map</b>?\n```js\nconst item1 = { name: \"Apples\" };\nconst item2 = { name: \"Apples\" };\nconst map = new Map();\nmap.set(item1, 500);\nmap.set(item2, 300);\n```",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`map.size` is `2`, and `map.get(item1)` returns `500`"
+        },
+        {
+          "i": "2",
+          "x": "`map.size` is `1`, and `map.get(item1)` returns `300`"
+        },
+        {
+          "i": "3",
+          "x": "`map.size` is `2`, and `map.get(item1)` returns `300`"
+        },
+        {
+          "i": "4",
+          "x": "`map.size` is `1`, and `map.get(item2)` returns `undefined`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "In JavaScript, `item1` and `item2` are two distinct object instances in memory even though they have identical property values.",
+        "Adding both objects to `map` creates two separate entries rather than overwriting the first entry.",
+        "Therefore, <mark>`map.size` is `2`, and `map.get(item1)` returns `500`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0018",
+      "q": "Which statement accurately describes the return value and side effects of the <b>Map.groupBy()</b> method?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It returns a new Map mapping each group key to an Array of elements without modifying the original iterable"
+        },
+        {
+          "i": "2",
+          "x": "It modifies the original array in place by sorting elements into sub-arrays based on the callback"
+        },
+        {
+          "i": "3",
+          "x": "It returns a plain JavaScript Object mapping each group key to the count of matching elements"
+        },
+        {
+          "i": "4",
+          "x": "It returns a new Array of Maps where each Map contains a single key-value pair from the iterable"
+        }
+      ],
+      "a": "1",
+      "e": "The `Map.groupBy()` method does <u>not</u> change the original object and <mark>returns a new Map mapping each group key to an Array of elements without modifying the original iterable</mark>."
+    },
+    {
+      "id": "web7_0019",
+      "q": "What is the main difference between `setTimeout(fn, 100)` and `setInterval(fn, 100)` in <b>JavaScript animation</b>?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`setTimeout` calls `fn` once after `100` ms, whereas `setInterval` calls `fn` repeatedly every `100` ms"
+        },
+        {
+          "i": "2",
+          "x": "`setTimeout` calls `fn` repeatedly every `100` ms, whereas `setInterval` pauses execution for `100` ms"
+        },
+        {
+          "i": "3",
+          "x": "`setTimeout` measures duration in seconds, whereas `setInterval` measures duration in milliseconds"
+        },
+        {
+          "i": "4",
+          "x": "`setTimeout` stops an active timer, whereas `setInterval` starts a single delayed function call"
+        }
+      ],
+      "a": "1",
+      "e": "In JavaScript timers, <mark>`setTimeout` calls `fn` once after `100` ms, whereas `setInterval` calls `fn` repeatedly every `100` ms</mark>."
+    },
+    {
+      "id": "web7_0020",
+      "q": "When building an HTML animation in JavaScript where an inner element `#animate` moves inside an outer `#container` element, how should their CSS `position` properties be configured?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`#container` should have `position: relative` and `#animate` should have `position: absolute`"
+        },
+        {
+          "i": "2",
+          "x": "`#container` should have `position: absolute` and `#animate` should have `position: relative`"
+        },
+        {
+          "i": "3",
+          "x": "Both `#container` and `#animate` should be created with `position: relative`"
+        },
+        {
+          "i": "4",
+          "x": "Both `#container` and `#animate` should be created with `position: static`"
+        }
+      ],
+      "a": "1",
+      "e": "All animations should be relative to a container element, so <mark>`#container` should have `position: relative` and `#animate` should have `position: absolute`</mark>."
+    },
+    {
+      "id": "web7_0021",
+      "q": "In the standard animation example where `#container` is `400px` by `400px` and `#animate` is `50px` by `50px`, why does the `frame()` function stop when `pos == 350` instead of `pos == 400`?",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Because `top` and `left` position the top-left corner of `#animate`, so `350px + 50px` reaches the `400px` boundary"
+        },
+        {
+          "i": "2",
+          "x": "Because `setInterval(frame, 5)` automatically subtracts `50px` (`5` ms times `10`) from the container size"
+        },
+        {
+          "i": "3",
+          "x": "Because CSS `position: absolute` adds a default `50px` margin around the container element"
+        },
+        {
+          "i": "4",
+          "x": "Because JavaScript DOM style coordinates cannot exceed `350px` without throwing a runtime exception"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "The `#container` has a width and height of `400px`, while the moving `#animate` box has a width and height of `50px`.",
+        "The `elem.style.top` and `elem.style.left` properties offset the top-left corner of `#animate` relative to `#container`.",
+        "At `pos = 350`, the bottom-right edge of `#animate` is at `350 + 50 = 400px`, so <mark>`350px + 50px` reaches the `400px` boundary</mark>."
+      ]
+    },
+    {
+      "id": "web7_0022",
+      "q": "Which function is used to cancel a timer that was created by `setTimeout()` before it executes?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`clearTimeout(setTimeout_variable)`"
+        },
+        {
+          "i": "2",
+          "x": "`stopTimeout(setTimeout_variable)`"
+        },
+        {
+          "i": "3",
+          "x": "`resetTimeout(setTimeout_variable)`"
+        },
+        {
+          "i": "4",
+          "x": "`deleteTimeout(setTimeout_variable)`"
+        }
+      ],
+      "a": "1",
+      "e": "JavaScript provides <mark>`clearTimeout(setTimeout_variable)`</mark> to clear any timer set by the `setTimeout()` function."
+    },
+    {
+      "id": "web7_0023",
+      "q": "In JavaScript, when do <b>Syntax Errors</b> and <b>Runtime Errors</b> occur respectively?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Syntax errors occur at interpret time, whereas runtime errors occur during execution"
+        },
+        {
+          "i": "2",
+          "x": "Syntax errors occur during execution, whereas runtime errors occur at interpret time"
+        },
+        {
+          "i": "3",
+          "x": "Both syntax errors and runtime errors occur only after the script finishes execution"
+        },
+        {
+          "i": "4",
+          "x": "Syntax errors occur inside `catch` blocks, whereas runtime errors occur inside `finally` blocks"
+        }
+      ],
+      "a": "1",
+      "e": "In JavaScript, parsing errors happen before execution begins while exceptions happen while the program is running: <mark>syntax errors occur at interpret time, whereas runtime errors occur during execution</mark>."
+    },
+    {
+      "id": "web7_0024",
+      "q": "If a script has valid syntax but attempts to call a method that does <u>not</u> exist while running, what type of error occurs and can it be caught by `try...catch`?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A Runtime Error (exception), which can be caught by `try...catch`"
+        },
+        {
+          "i": "2",
+          "x": "A Syntax Error (parsing error), which can be caught by `try...catch`"
+        },
+        {
+          "i": "3",
+          "x": "A Logical Error, which can be caught automatically by `try...catch`"
+        },
+        {
+          "i": "4",
+          "x": "A Runtime Error (exception), which cannot be caught by `try...catch`"
+        }
+      ],
+      "a": "1",
+      "e": "Calling a non-existent method during execution triggers <mark>a Runtime Error (exception), which can be caught by `try...catch`</mark>."
+    },
+    {
+      "id": "web7_0025",
+      "q": "Which types of errors <u>cannot</u> be caught by a JavaScript `try...catch` construct?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "Syntax errors and logical errors"
+        },
+        {
+          "i": "2",
+          "x": "Runtime exceptions and programmer-generated exceptions"
+        },
+        {
+          "i": "3",
+          "x": "Custom errors thrown using the `throw` statement"
+        },
+        {
+          "i": "4",
+          "x": "Errors where a numeric variable is compared in a `try` block"
+        }
+      ],
+      "a": "1",
+      "e": "A `try...catch` block can catch runtime and programmer-generated (`throw`) exceptions, but it cannot catch <mark>syntax errors and logical errors</mark>."
+    },
+    {
+      "id": "web7_0026",
+      "q": "Which of the following data types can be thrown as an exception using the JavaScript <b>throw</b> statement?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "A `String`, a `Number`, a `Boolean`, or an `Object`"
+        },
+        {
+          "i": "2",
+          "x": "Only an `Error` object instance created with `new Error()`"
+        },
+        {
+          "i": "3",
+          "x": "Only a `String` literal describing the error message"
+        },
+        {
+          "i": "4",
+          "x": "Only a `Number` representing an error status code"
+        }
+      ],
+      "a": "1",
+      "e": "In JavaScript, the exception thrown by a `throw` statement can be <mark>a `String`, a `Number`, a `Boolean`, or an `Object`</mark>."
+    },
+    {
+      "id": "web7_0027",
+      "q": "What is the value of `log` after executing the following `try...catch...finally` block?\n```js\nlet log = \"\";\ntry {\n  log += \"T\";\n  throw 404;\n  log += \"A\";\n} catch (err) {\n  log += err;\n} finally {\n  log += \"F\";\n}\n```",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "`\"T404F\"`"
+        },
+        {
+          "i": "2",
+          "x": "`\"TA404F\"`"
+        },
+        {
+          "i": "3",
+          "x": "`\"T404\"`"
+        },
+        {
+          "i": "4",
+          "x": "`\"TF\"`"
+        }
+      ],
+      "a": "1",
+      "e": [
+        "Inside `try`, `log += \"T\"` appends `\"T\"`, and then `throw 404` immediately jumps to `catch (err)`, skipping `log += \"A\"`.",
+        "Inside `catch (err)`, `err` holds `404`, so `log += err` updates `log` to `\"T404\"`.",
+        "Finally, the `finally` block executes unconditionally and appends `\"F\"`, producing <mark>`\"T404F\"`</mark>."
+      ]
+    },
+    {
+      "id": "web7_0028",
+      "q": "How do variables declared with `var`, `let`, and `const` behave when they are declared <b>inside a function</b>?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "All three have function scope and cannot be accessed from outside the function"
+        },
+        {
+          "i": "2",
+          "x": "Variables declared with `var` become global, while `let` and `const` stay local"
+        },
+        {
+          "i": "3",
+          "x": "All three persist in memory permanently even after the function finishes execution"
+        },
+        {
+          "i": "4",
+          "x": "Variables declared with `let` and `const` can be accessed outside the function"
+        }
+      ],
+      "a": "1",
+      "e": "Each function creates a new scope where `var`, `let`, and `const` behave similarly: <mark>all three have function scope and cannot be accessed from outside the function</mark>."
+    },
+    {
+      "id": "web7_0029",
+      "q": "What is the result of calling `calc(4, 3)` with the following <b>arrow function</b>?\n```js\nconst calc = (a, b) => a * b;\n```",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "It returns `12` because a single expression without `{}` is implicitly returned"
+        },
+        {
+          "i": "2",
+          "x": "It returns `undefined` because the `return` keyword is omitted"
+        },
+        {
+          "i": "3",
+          "x": "It throws a syntax error because multiple parameters cannot use `=>`"
+        },
+        {
+          "i": "4",
+          "x": "It returns `\"4 * 3\"` as a string because curly brackets are omitted"
+        }
+      ],
+      "a": "1",
+      "e": "In an <b>arrow function</b> with a single expression and no curly braces, the expression's value is returned automatically: <mark>it returns `12` because a single expression without `{}` is implicitly returned</mark>."
+    },
+    {
+      "id": "web7_0030",
+      "q": "Why was <b>jQuery</b> originally created in 2006, and why did standard <b>JavaScript</b> replace many of its utilities after 2009?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "c": [
+        {
+          "i": "1",
+          "x": "jQuery was created to handle browser incompatibilities and simplify DOM/events/animations, which JavaScript Version 5 (2009) largely solved natively"
+        },
+        {
+          "i": "2",
+          "x": "jQuery was created to introduce block scope (`let`/`const`), which JavaScript Version 5 (2009) replaced with the `var` keyword"
+        },
+        {
+          "i": "3",
+          "x": "jQuery was created to compile JavaScript at build time, which JavaScript Version 5 (2009) replaced with `try...catch` blocks"
+        },
+        {
+          "i": "4",
+          "x": "jQuery was created to store key-value pairs in Maps, which JavaScript Version 5 (2009) replaced with `Map.groupBy()`"
+        }
+      ],
+      "a": "1",
+      "e": "Created by John Resig in 2006, <mark>jQuery was created to handle browser incompatibilities and simplify DOM/events/animations, which JavaScript Version 5 (2009) largely solved natively</mark>."
+    }
+  ]
+}
