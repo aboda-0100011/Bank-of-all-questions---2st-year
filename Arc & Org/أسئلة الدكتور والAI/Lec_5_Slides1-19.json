@@ -1,0 +1,183 @@
+{
+  "qs": [
+    {
+      "id": "Arc5N1_0001",
+      "q": "Which of the following statements describes <b>Computer Architecture</b>?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The operational units and their interconnections that realize the specification"},
+        {"i": "2", "x": "The attributes visible to the programmer that directly affect logical program execution"},
+        {"i": "3", "x": "The hardware technology details that are chosen after the design is fixed"},
+        {"i": "4", "x": "The performance characteristics revealed by how the units are connected"}
+      ],
+      "a": "2",
+      "e": "Computer Architecture is the set of attributes <b>visible to the programmer</b> (instruction set, data-type sizes, I/O mechanisms, memory addressing) that directly affect the logical execution of a program. Option 1 describes <b>Organization</b>. <mark>Answer: attributes visible to the programmer.</mark>"
+    },
+    {
+      "id": "Arc5N1_0002",
+      "q": "Which of the following is an <b>architectural</b> attribute (not an organizational one)?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The physical layout of the chips inside the processor"},
+        {"i": "2", "x": "The speed at which a given processor model runs instructions"},
+        {"i": "3", "x": "The hardware circuits that realize the control unit"},
+        {"i": "4", "x": "The memory addressing techniques supported by the machine"}
+      ],
+      "a": "4",
+      "e": "Architecture attributes are: instruction set, number of bits used to represent data types, I/O mechanisms, and <b>memory addressing techniques</b>. The other options describe how the architecture is realized (organization) and its performance. <mark>Answer: memory addressing techniques.</mark>"
+    },
+    {
+      "id": "Arc5N1_0003",
+      "q": "Two processors of the Intel x86 family run exactly the same programs, but their internal designs and speeds are different. What does this show?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The architecture can change while the organization stays the same"},
+        {"i": "2", "x": "Both the architecture and the organization must change in every new model"},
+        {"i": "3", "x": "The organization can change while the architecture stays the same"},
+        {"i": "4", "x": "The organization is fixed first and the architecture is decided afterwards"}
+      ],
+      "a": "3",
+      "e": "All Intel x86 processors share the same basic <b>architecture</b> (programs run unchanged), yet their <b>organization</b> differs. Organization is decided <u>after</u> the architecture is fixed, so it can be changed without changing the architecture. <mark>Answer: organization changes, architecture stays.</mark>"
+    },
+    {
+      "id": "Arc5N1_0004",
+      "q": "Which row correctly compares Computer Architecture with Computer Organization?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Architecture describes what the computer does; Organization describes how it does it"},
+        {"i": "2", "x": "Architecture describes how the computer does it; Organization describes what it does"},
+        {"i": "3", "x": "Architecture is decided after the organization; Organization is fixed first"},
+        {"i": "4", "x": "Architecture reveals computer performance; Organization indicates computer hardware"}
+      ],
+      "a": "1",
+      "e": "Architecture = the programmer's abstract view (<b>what</b> the computer does), fixed first and indicating the hardware. Organization = the realization of that architecture (<b>how</b> it does it), decided after the architecture and revealing performance. <mark>Answer: option 1.</mark>"
+    },
+    {
+      "id": "Arc5N1_0005",
+      "q": "In his 1945 report <i>First Draft of a Report on the EDVAC</i>, Von Neumann organized the computer system into which four main parts?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Central processing unit, cache memory, main memory, and system buses"},
+        {"i": "2", "x": "Central control unit, register file, memory, and input/output buses"},
+        {"i": "3", "x": "Central arithmetical unit, central control unit, memory, and input/output devices"},
+        {"i": "4", "x": "Central arithmetical unit, accumulator, memory, and bus controller"}
+      ],
+      "a": "3",
+      "e": "The four parts are the <b>Central Arithmetical unit (CA)</b>, the <b>Central Control unit (CU)</b>, <b>Memory (M)</b>, and <b>Input/Output devices (I/O)</b>. <mark>Answer: CA, CU, Memory, I/O.</mark>"
+    },
+    {
+      "id": "Arc5N1_0006",
+      "q": "Why can the <b>IAS</b> machine be called the father of all modern computers?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "It was among the first computers to store both program and data in memory"},
+        {"i": "2", "x": "It was the first computer to take its input and output on punch cards"},
+        {"i": "3", "x": "It was the first computer to replace vacuum tubes with transistors"},
+        {"i": "4", "x": "It was the first computer built entirely from integrated circuits on chips"}
+      ],
+      "a": "1",
+      "e": "IAS was one of the first computers that kept <b>both the program and the data in the computer's memory</b> (the stored-program concept), and it was the prototype for the IBM family of computers. <mark>Answer: it stored program and data in memory.</mark>"
+    },
+    {
+      "id": "Arc5N1_0007",
+      "q": "Why did Von Neumann leave the ENIAC design team and take part in developing the EDVAC?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "He wanted a larger electronic memory for storing tabular functions and constants"},
+        {"i": "2", "x": "He wanted to follow the engineering view of the creators rather than the logical view"},
+        {"i": "3", "x": "He wanted to replace punch-card input and output with a direct keyboard interface"},
+        {"i": "4", "x": "His interest was the logical structure, unlike the engineering view of ENIAC's creators"}
+      ],
+      "a": "4",
+      "e": "Von Neumann's main interest was the <b>logical structure and mathematical description</b> of the new technology, while the ENIAC creators had an engineering view. This difference in point of view motivated him to leave ENIAC and join EDVAC. <mark>Answer: option 4.</mark>"
+    },
+    {
+      "id": "Arc5N1_0008",
+      "q": "Which IAS register contains the address of the <u>next instruction pair</u> to be fetched from memory?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "Memory Address Register (MAR)"},
+        {"i": "2", "x": "Instruction Register (IR)"},
+        {"i": "3", "x": "Instruction Buffer Register (IBR)"},
+        {"i": "4", "x": "Program Counter (PC)"}
+      ],
+      "a": "4",
+      "e": "The <b>PC</b> holds the address of the next instruction pair to be fetched. The MAR holds the address of the word being read or written, the IR holds the 8-bit opcode being executed, and the IBR holds the right-hand instruction temporarily. <mark>Answer: PC.</mark>"
+    },
+    {
+      "id": "Arc5N1_0009",
+      "q": "A word fetched from memory contains two instructions. Which register is employed to hold the <u>right-hand</u> instruction temporarily while the left-hand instruction is executed?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "Memory Buffer Register (MBR)"},
+        {"i": "2", "x": "Instruction Buffer Register (IBR)"},
+        {"i": "3", "x": "Instruction Register (IR)"},
+        {"i": "4", "x": "Multiplier Quotient (MQ)"}
+      ],
+      "a": "2",
+      "e": "The <b>IBR</b> temporarily holds the right-hand instruction of a word. Later, its opcode moves to the IR and its address field moves to the MAR, so no new memory access is needed. <mark>Answer: IBR.</mark>"
+    },
+    {
+      "id": "Arc5N1_0010",
+      "q": "An IAS memory word has 40 bits. Each instruction is 20 bits and contains an 8-bit opcode. How many instructions are stored in one word, and how many bits are in the address field of one instruction?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "2 instructions per word; 12-bit address field"},
+        {"i": "2", "x": "2 instructions per word; 8-bit address field"},
+        {"i": "3", "x": "1 instruction per word; 12-bit address field"},
+        {"i": "4", "x": "4 instructions per word; 12-bit address field"}
+      ],
+      "a": "1",
+      "e": [
+        "Instructions per word = word size / instruction size = $40 / 20 = 2$ (a left-hand and a right-hand instruction).",
+        "Each 20-bit instruction has an 8-bit opcode.",
+        "Address field = $20 - 8 = 12$ bits.",
+        "<mark>Answer: 2 instructions per word, 12-bit address field.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5N1_0011",
+      "q": "The CPU must write a word into memory location 100. Which register roles are used for this transfer?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "The PC holds the address and the IBR holds the word"},
+        {"i": "2", "x": "The MBR holds the address and the MAR holds the word"},
+        {"i": "3", "x": "The MAR holds the address and the MBR holds the word"},
+        {"i": "4", "x": "The IR holds the address and the AC holds the word"}
+      ],
+      "a": "3",
+      "e": "The <b>MAR</b> specifies the address in memory of the word to be written or read, and the <b>MBR</b> contains the word to be stored in memory (or the word received from memory). <mark>Answer: MAR = address, MBR = data.</mark>"
+    },
+    {
+      "id": "Arc5N1_0012",
+      "q": "The IAS Selectron memory has up to 1024 words, and each word is 40 bits. What is the total memory capacity in bits?",
+      "t": ["1", "easy"],
+      "c": [
+        {"i": "1", "x": "40,960 bits"},
+        {"i": "2", "x": "20,480 bits"},
+        {"i": "3", "x": "81,920 bits"},
+        {"i": "4", "x": "4,096 bits"}
+      ],
+      "a": "1",
+      "e": [
+        "Number of words = $1024$, each word has $40$ bits.",
+        "Total bits = $1024 \\times 40 = 40960$ bits.",
+        "(Check: $20480$ would use 20-bit words, which is the size of one <u>instruction</u>, not a word.)",
+        "<mark>Answer: 40,960 bits.</mark>"
+      ]
+    },
+    {
+      "id": "Arc5N1_0013",
+      "q": "A program is resident in RAM and is about to start running. Which register must be initialized first, and with what?",
+      "t": ["1", "medium"],
+      "c": [
+        {"i": "1", "x": "The IR, with the opcode of the first instruction"},
+        {"i": "2", "x": "The MAR, with the size of the program in words"},
+        {"i": "3", "x": "The PC, with the address of the first instruction"},
+        {"i": "4", "x": "The AC, with the value of the first operand"}
+      ],
+      "a": "3",
+      "e": "The fetch-execute cycle starts with `MAR ← PC`, so the <b>PC</b> must already hold the address of the <b>first instruction</b> of the program. The IR, MAR and MBR are then filled automatically by the fetch step. <mark>Answer: PC = address of the first instruction.</mark>"
+    }
+  ]
+}

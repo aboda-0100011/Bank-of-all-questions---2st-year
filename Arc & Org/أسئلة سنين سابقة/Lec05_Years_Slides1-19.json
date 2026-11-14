@@ -1,0 +1,212 @@
+{
+  "qs": [
+    {
+      "id": "Arc5Y1_0001",
+      "q": "Which of the following operations is/are performed by the <b>ALU</b>?",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Data manipulation only"},
+        {"i": "2", "x": "Data manipulation, exponential and square root"},
+        {"i": "3", "x": "Exponential only"},
+        {"i": "4", "x": "Square root only"}
+      ],
+      "a": "2",
+      "e": "In the lecture, von Neumann's Central Arithmetical unit (CA, the ancestor of the ALU) performs the four basic arithmetic operations (ADD, SUB, MULTIPLY, DIVIDE) and also roots, logarithms, trigonometric functions and their inverses. So the ALU handles data manipulation (arithmetic/logic) as well as exponential-type and square-root operations. Each single-operation option is incomplete because the ALU performs all of them (the original exam wording was 'All of the above').",
+      "ref": "2025 Q19, 2026 Q7"
+    },
+    {
+      "id": "Arc5Y1_0002",
+      "q": "A small amount of storage available as part of a digital processor is called ______.",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "ROM"},
+        {"i": "2", "x": "RAM"},
+        {"i": "3", "x": "Registers"},
+        {"i": "4", "x": "Hard disk"}
+      ],
+      "a": "3",
+      "e": "The lecture describes the ALU/processor as containing storage locations called registers (AC, MQ, MBR, MAR, IR, IBR, PC ...). They are small, fast storage inside the processor itself. ROM and RAM are main-memory technologies and a hard disk is secondary storage, all outside the processor.",
+      "ref": "2025 Q35, 2026 Q22"
+    },
+    {
+      "id": "Arc5Y1_0003",
+      "q": "Which register is employed to hold the least significant bits of the product as multiplication proceeds, and the quotient from division?",
+      "t": ["2", "3", "Exam 2025", "Exam 2026", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Accumulator"},
+        {"i": "2", "x": "Instruction Register"},
+        {"i": "3", "x": "Multiplier Quotient (MQ)"},
+        {"i": "4", "x": "Stack Pointer"}
+      ],
+      "a": "3",
+      "e": "In the IAS, the Multiplier Quotient (MQ) temporarily holds operands and ALU results, holds the least-significant bits of the product as multiplication proceeds, and holds the quotient from division. The Accumulator holds the most-significant digits of the product (and the remainder after division), the IR holds the 8-bit opcode being executed, and the Stack Pointer is not an IAS register.",
+      "ref": "2025 Q40, 2026 Q26"
+    },
+    {
+      "id": "Arc5Y1_0004",
+      "q": "The instruction being decoded is found in a register called ______.",
+      "t": ["2", "Exam 2020", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "PC"},
+        {"i": "2", "x": "MAR"},
+        {"i": "3", "x": "IR"},
+        {"i": "4", "x": "AC"}
+      ],
+      "a": "3",
+      "e": "In the fetch-execute cycle: MAR ← PC, MBR ← data from memory, then IR ← MBR. The control unit then decodes the instruction held in the Instruction Register (IR). The PC holds the address of the next instruction, the MAR holds an address and the AC holds ALU results.",
+      "ref": "2020 Q11"
+    },
+    {
+      "id": "Arc5Y1_0005",
+      "q": "During the execution of a program, which register gets initialized first?",
+      "t": ["2", "Exam 2020", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "IR"},
+        {"i": "2", "x": "MAR"},
+        {"i": "3", "x": "AC"},
+        {"i": "4", "x": "PC"}
+      ],
+      "a": "4",
+      "e": [
+        "The PC contains the address of the next instruction to be fetched.",
+        "Before anything can be fetched, the PC must be loaded with the address of the program's first instruction.",
+        "Only then does the fetch begin: MAR ← PC, MBR ← memory, IR ← MBR.",
+        "So the PC is initialized first; IR, MAR and AC are filled later as a consequence."
+      ],
+      "ref": "2020 Q12"
+    },
+    {
+      "id": "Arc5Y1_0006",
+      "q": "<b>Computer architecture</b> describes <i>how</i> the computer does its operations.",
+      "t": ["2", "3", "Exam 2022", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "True"},
+        {"i": "2", "x": "False"}
+      ],
+      "a": "2",
+      "e": "Architecture is the abstract model / programmer's view (instructions, addressing modes, registers) and describes <b>what</b> the computer does. Organization is the realization of the architecture and describes <b>how</b> it does it. The statement swaps the two, so it is False.",
+      "ref": "2022 Q1.7, 2023 Q21"
+    },
+    {
+      "id": "Arc5Y1_0007",
+      "q": "Which register contains the address of a location in memory?",
+      "t": ["2", "3", "Exam 2022", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Memory buffer register"},
+        {"i": "2", "x": "Memory address register"},
+        {"i": "3", "x": "Instruction register"},
+        {"i": "4", "x": "Program counter"}
+      ],
+      "a": "2",
+      "e": "The Memory Address Register (MAR) specifies the address in memory of the word to be written from or read into the MBR. The MBR holds the data word, the IR holds the opcode being executed, and the PC holds the address of the next instruction (it is copied into the MAR during fetch).",
+      "ref": "2022 Q1.14, 2023 Q17"
+    },
+    {
+      "id": "Arc5Y1_0008",
+      "q": "The register that specifies the address in memory is ______.",
+      "t": ["2", "Exam 2022", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "MBR"},
+        {"i": "2", "x": "PC"},
+        {"i": "3", "x": "IR"},
+        {"i": "4", "x": "MAR"}
+      ],
+      "a": "4",
+      "e": "By the lecture's definition, the Memory Address Register (MAR) specifies the address in memory of the word to be written from or read into the MBR. The MBR holds the data itself, the PC holds the address of the next instruction and the IR holds the opcode being executed.",
+      "ref": "2022 Q2.1"
+    },
+    {
+      "id": "Arc5Y1_0009",
+      "q": "Which register contains a word of data to be written to memory, or the word most recently read from memory?",
+      "t": ["2", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Program counter"},
+        {"i": "2", "x": "Instruction register"},
+        {"i": "3", "x": "Memory address register"},
+        {"i": "4", "x": "Memory buffer register"}
+      ],
+      "a": "4",
+      "e": "The Memory Buffer Register (MBR) contains the word to be stored in memory or sent to the I/O unit, or is used to receive a word from memory or from the I/O unit. The MAR only holds the address, the PC holds the next instruction's address and the IR holds the opcode.",
+      "ref": "2023 Q8"
+    },
+    {
+      "id": "Arc5Y1_0010",
+      "q": "The register that refers to the next instruction to be fetched is ______.",
+      "t": ["2", "Exam 2023", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "MBR"},
+        {"i": "2", "x": "MAR"},
+        {"i": "3", "x": "PC"},
+        {"i": "4", "x": "IR"}
+      ],
+      "a": "3",
+      "e": [
+        "The Program Counter (PC) contains the address of the next instruction (pair, in the IAS) to be fetched from memory.",
+        "During fetch it is copied into the MAR (MAR ← PC) and afterwards updated (PC ← PC + size of current instruction).",
+        "The IR holds the instruction currently being executed, the MAR holds the address used for the memory access and the MBR holds the data transferred."
+      ],
+      "ref": "2023 Q25"
+    },
+    {
+      "id": "Arc5Y1_0011",
+      "q": "Which of the following registers keeps track of the program instructions stored in memory?",
+      "t": ["2", "3", "Exam 2024", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Accumulator"},
+        {"i": "2", "x": "Address Register"},
+        {"i": "3", "x": "Program Counter"},
+        {"i": "4", "x": "Index Register"}
+      ],
+      "a": "3",
+      "e": "The Program Counter (PC) contains the address of the next instruction to be fetched, so it keeps track of where the program is in memory and advances through the instructions (PC ← PC + size of current instruction). The Accumulator holds ALU results/operands, and the other options are not used for sequencing instructions.",
+      "ref": "2024 Q3, 2025 Q11"
+    },
+    {
+      "id": "Arc5Y1_0012",
+      "q": "Which register is employed to hold temporarily the <b>right-hand instruction</b> from a word in memory?",
+      "t": ["2", "3", "Exam 2024", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "IR"},
+        {"i": "2", "x": "MBR"},
+        {"i": "3", "x": "IMR"},
+        {"i": "4", "x": "IBR"}
+      ],
+      "a": "4",
+      "e": "An IAS memory word is 40 bits and holds two 20-bit instructions (left-hand and right-hand). The Instruction Buffer Register (IBR) temporarily holds the right-hand instruction of the word fetched, so that the next fetch can take it from the IBR without a memory access. The IR holds only the 8-bit opcode being executed and the MBR holds the whole 40-bit word.",
+      "ref": "2024 Q14, 2025 Q10"
+    },
+    {
+      "id": "Arc5Y1_0013",
+      "q": "In the IAS machine, the opcode part of an instruction is ______ bits.",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "12"},
+        {"i": "2", "x": "8"},
+        {"i": "3", "x": "10"},
+        {"i": "4", "x": "11"}
+      ],
+      "a": "2",
+      "e": [
+        "IAS machine-language instructions are 20 bits long, and a 40-bit word holds two of them.",
+        "The IAS instruction set has 22 instructions, each associated with an 8-bit opcode.",
+        "The remaining 12 bits of the instruction hold the memory address x (the 12 least-significant bits).",
+        "So the opcode is 8 bits; 12 is the size of the address field."
+      ],
+      "ref": "2025 Q33"
+    },
+    {
+      "id": "Arc5Y1_0014",
+      "q": "Which of the following describes <i>what</i> the computer does?",
+      "t": ["2", "Exam 2025", "Lecture 5"],
+      "c": [
+        {"i": "1", "x": "Data communication"},
+        {"i": "2", "x": "Computer hardware"},
+        {"i": "3", "x": "Computer organization"},
+        {"i": "4", "x": "Computer architecture"}
+      ],
+      "a": "4",
+      "e": "Computer architecture is the abstract model (the programmer's view: instruction set, addressing modes, registers) and describes <b>what</b> the computer does. Computer organization describes <b>how</b> it does it and reveals performance. Architecture is fixed first, and organization is decided afterwards.",
+      "ref": "2025 Q39"
+    }
+  ]
+}
